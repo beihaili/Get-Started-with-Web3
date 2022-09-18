@@ -29,22 +29,28 @@
 
 ### 第一步：安装`Metamask`浏览器插件
 用`Chorme`浏览器访问[Metamask官网](https://metamask.io/)，点击`Get Chrome Extension`，然后点击`Add to Chrome`，即可安装`Metamask`浏览器插件。
+
 ![](./img/01_02.png)
+
 ![](./img/01_03.png)
 
 ### 第二步：创建`Metamask`账户
 点击`Metamask`浏览器插件，点击`开始使用`点击`我同意`点击`创建钱包`，设置密码后即可创建`Metamask`账户。
+
 ![](./img/01_04.png)
 
 
 
 ### 第三步：备份`Metamask`账户
 第一次创建账户默认会进行备份，推荐找个僻静地方抄到纸上，或者存到1password等密码管理工具中，如果选择复制助记词到电脑上最好进行加密存储。
+
 ![](./img/01_06.jpg)
 
 ### 大功告成
 恭喜你，你已经拥有了一个`Web3`身份。我们来熟悉一下`Metamask`的界面。
+
 ![](./img/01_05.png)
+
 + 最上面的`Ethereum Mainnet`是网络选择，默认选择`Ethereum Mainnet`
 + `0x...`是你的`Metamask`账户地址
 + `0 ETH`是你的`Metamask`账户余额
