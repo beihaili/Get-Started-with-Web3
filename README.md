@@ -12,10 +12,10 @@
 
 ----
 ## 快速入门
-**第01讲：获得第一个Web3身份** [文章](https://github.com/AmazingAng/WTFSolidity/blob/main/01_HelloWeb3/readme.md)
+**第01讲：获得第一个Web3身份** [文章](https://github.com/beihaili/Get-Started-with-Web3/tree/main/01_FirstWeb3Identity/readme.md)
 
-**第02讲：发送第一笔Web3交易** [文章](https://github.com/AmazingAng/WTFSolidity/blob/main/01_HelloWeb3/readme.md)
+**第02讲：发送第一笔Web3交易** [文章](https://github.com/beihaili/Get-Started-with-Web3/tree/main/02_FirstWeb3Transaction/readme.md)
 
-**第03讲：使用Web3的第一个DApp** [文章](https://github.com/AmazingAng/WTFSolidity/blob/main/01_HelloWeb3/readme.md)
+**第03讲：使用Web3的第一个DApp** [文章](https://github.com/beihaili/Get-Started-with-Web3/tree/main/03_FirstWeb3Dapp/readme.md)
 
 ## 进阶学习
