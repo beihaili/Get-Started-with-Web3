@@ -6,7 +6,7 @@
 
 北航区块链协会DAO推特： [@BHBA_DAO](https://twitter.com/BHBA_DAO)
 
-进入微信交流群请填表： [表格链接](https:)
+进入微信交流群请填表： [表格链接](https://forms.gle/QMBwL6LwZyQew1tX8)
 
 文章开源在github： [github.com/beihai1337/GetStartedWithWeb3](https://github.com/beihai1337/GetStartedWithWeb3)
 
