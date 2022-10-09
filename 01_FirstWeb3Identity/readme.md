@@ -11,7 +11,7 @@
 
 文章开源在github： [github.com/beihai1337/GetStartedWithWeb3](https://github.com/beihai1337/GetStartedWithWeb3)
 
-----
+---
 
 ## Web3简述
 `Web3`是一个开放的网络，任何人都可以在上面建立自己的应用，而不需要依赖于任何中心化的服务。就技术而言，`Web3`是基于区块链技术的去中心化网络。另一种更符合现状的说法是在web2网站上加上小狐狸钱包`Metamask`这个网站就变成了`Web3`网站😂。
