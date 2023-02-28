@@ -25,11 +25,11 @@
 
 ## 协会研究报告
 
-**研究报告01：BSC 链上的攻击：为何发生及其潜在的危害** [文章](https://github.com/beihaili/Get-Started-with-Web3/tree/main/Search01_BscAttack/.BSC-attack_cn）
+**研究报告01：BSC 链上的攻击：为何发生及其潜在的危害** [文章](https://bhbadao.github.io/BSC-attack_cn.html)
 
 ## Web3面试相关
 
-**面试题库** [文章](https://github.com/beihaili/Get-Started-with-Web3/tree/main/InerviewQuestionBank/readme.md）
+**面试题库** [文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/InerviewQuestionBank/README.md)
 
 ## Star History
 
