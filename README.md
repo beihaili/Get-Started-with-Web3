@@ -12,13 +12,24 @@
 
 ----
 ## 快速入门
+
 **第01讲：获得第一个Web3身份** [文章](https://github.com/beihaili/Get-Started-with-Web3/tree/main/01_FirstWeb3Identity/readme.md)
 
 **第02讲：发送第一笔Web3交易** [文章](https://github.com/beihaili/Get-Started-with-Web3/tree/main/02_FirstWeb3Transaction/readme.md)
 
-**第03讲：使用Web3的第一个DApp** 
+**第03讲：使用Web3的第一个DApp** [文章](https://github.com/beihaili/Get-Started-with-Web3/tree/main/03_FirstWeb3Dapp/readme.md)
 
 ## 进阶学习
+
+**第04讲：Solidity入门** [文章](）
+
+## 协会研究报告
+
+**研究报告01：BSC 链上的攻击：为何发生及其潜在的危害** [文章](https://github.com/beihaili/Get-Started-with-Web3/tree/main/Search01_BscAttack/.BSC-attack_cn）
+
+## Web3面试相关
+
+**面试题库** [文章](https://github.com/beihaili/Get-Started-with-Web3/tree/main/InerviewQuestionBank/readme.md）
 
 ## Star History
 
