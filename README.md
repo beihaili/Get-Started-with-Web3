@@ -19,3 +19,7 @@
 **第03讲：使用Web3的第一个DApp** 
 
 ## 进阶学习
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=beihaili/Get-Started-with-Web3&type=Date)](https://star-history.com/#beihaili/Get-Started-with-Web3&Date)
