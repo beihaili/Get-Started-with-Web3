@@ -13,11 +13,11 @@
 ----
 ### 1.Web3初体验(01_GetStartedWithWeb3)
 
-**第01讲：获得第一个Web3身份** [文章](https://github.com/beihaili/Get-Started-with-Web3/tree/main/01_GetStartedWithWeb3/01_FirstWeb3Identity/readme.md)
+**第01讲：获得第一个Web3身份** [文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/01_GetStartedWithWeb3/01_FirstWeb3Identity/README.MD)
 
-**第02讲：发送第一笔Web3交易** [文章](https://github.com/beihaili/Get-Started-with-Web3/tree/main/01_GetStartedWithWeb3/02_FirstWeb3Transaction/readme.md)
+**第02讲：发送第一笔Web3交易** [文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/01_GetStartedWithWeb3/02_FirstWeb3Transaction/README.MD)
 
-**第03讲：使用Web3的第一个DApp** [文章](https://github.com/beihaili/Get-Started-with-Web3/tree/main/01_GetStartedWithWeb3/03_FirstWeb3Dapp/readme.md)
+**第03讲：使用Web3的第一个DApp** [文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/01_GetStartedWithWeb3/03_FirstWeb3Dapp/README.MD)
 
 ### 我们的研究报告（OurResearch）
 
@@ -27,7 +27,6 @@
 
 **面试题库** [文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/InerviewQuestionBank/README.md)
 
-## Star History
 ---
 以下正在抓紧完善中，敬请期待：
 
@@ -41,4 +40,5 @@
 
 ### 6.NFT入门(06_GetStartedWithNFT)
 
+## Star History
 [![Star History Chart](https://api.star-history.com/svg?repos=beihaili/Get-Started-with-Web3&type=Date)](https://star-history.com/#beihaili/Get-Started-with-Web3&Date)
