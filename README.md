@@ -25,7 +25,7 @@
 
 ### Web3工作机会（Web3WorkOpportunity）
 
-**面试题库** [文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/InerviewQuestionBank/README.md)
+**工作机会和面试技巧** [文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/Web3WorkOpportunities/README.md)
 
 ---
 以下正在抓紧完善中，敬请期待：
