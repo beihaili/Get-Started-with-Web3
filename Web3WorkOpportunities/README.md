@@ -44,11 +44,6 @@
 + 简评：工作比较少，可远程，没有实习
 
 # 面试资料
-## 中文问答
-+ 描述一笔交易上链的过程
-+ 介绍以太坊分层架构
-+ POS和POW的区别
-
 ## 英文问答
 + Q:what is foundary?
 + A:Foundry is a comprehensive suite of tools for building and deploying decentralized applications (dApps) on the Ethereum blockchain.
