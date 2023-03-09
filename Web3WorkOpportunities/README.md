@@ -16,38 +16,47 @@
 # Web3大厂工作实习机会
 + Alchemy 
 https://boards.greenhouse.io/alchemy
+
 简评：无远程工作机会，无实习，地点在美国
 
 + Uniswap
 https://boards.greenhouse.io/uniswaplabs
+
 简评:无实习，地点在美国，申请工作需要有美国工作资格
 
 + Aave
 https://jobs.eu.lever.co/aave
+
 简评：观感不错，在英国，有远程机会，无实习
 
 + Openzeppalin
 https://www.openzeppelin.com/jobs
+
 简评：观感不错，地点在美国，有远程机会，无实习
 
 + Consensusys
-简评:观感不错，地点在美国，有远程机会，无实习
 https://consensys.net/open-roles/
 
+简评:观感不错，地点在美国，有远程机会，无实习
+
 + Paradigm
-简评:观感不错，工作很多，有远程机会，有实习（市场方向），fellowship活动有点意思，地点在美国，年龄限制23岁以下
 https://www.paradigm.xyz/opportunities
+
+简评:观感不错，工作很多，有远程机会，有实习（市场方向），fellowship活动有点意思，地点在美国，年龄限制23岁以下
 
 + Sui
 https://jobs.sui.io/jobs
+
 简评：观感不错，地点在美国，有远程机会，有实习（密码学博士生），很不错
 
 + Apotos
 https://boards.greenhouse.io/aptoslabs
+
 简评：观感不错，地点在美国，有远程机会，没有实习
 
 + Curve
 https://classic.curve.fi/careers
+
 简评：工作比较少，可远程，没有实习
 
 # 面试资料
