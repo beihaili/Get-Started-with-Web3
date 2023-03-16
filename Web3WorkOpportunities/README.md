@@ -13,7 +13,7 @@
 文章开源在github： [github.com/beihai1337/GetStartedWithWeb3](https://github.com/beihai1337/GetStartedWithWeb3)
 
 ---
-# Web3大厂工作实习机会
+# Web3大厂工作机会
 
 ### Alchemy 
 + 网址：https://boards.greenhouse.io/alchemy

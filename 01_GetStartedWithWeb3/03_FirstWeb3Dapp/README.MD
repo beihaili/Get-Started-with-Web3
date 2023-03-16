@@ -40,14 +40,17 @@ Dapp是`Decentralized Application`的缩写，中文翻译为去中心化应用�
 
 这里以[Uniswap](https://uniswap.org/)为例，介绍如何使用Web3的第一个DApp。
 
-1. 打开[Uniswap](https://app.uniswap.org/#/swap)，点击`Metamask`选择`Görli测试网络`。
-2. 点击`Connect to a wallet`，选择`Metamask`，然后点击`Connect`。
-3. 点击`Select a token`，选择`ETH`，然后点击`Select`。
-4. 点击`Select a token`，选择`BTC`，然后点击`Select`。
-4. 输入希望交换的金额`0.1`，然后点击`Swap`。
-5. 点击`Confirm Swap`，然后点击`Swap`。这时交易已经被提交到以太坊网络中，等待被打包。
-6. 点击`View on Etherscan`，然后点击`View`。
-7. 交易成功上链，可以在[以太坊区块浏览器](https://goerli.etherscan.io/)中查询到交易的执行结果。
+1. 打开[Uniswap](https://app.uniswap.org/#/swap)，点击`Metamask`选择`Görli测试网络`。点击`Connect to a wallet`，选择`Metamask`，然后点击`Connect`。
+<div align="center"> <img src="./img/1.png" width = 400 /> </div>
+2. 点击`Select a token`，选择`ETH`，然后点击`Select`。点击`Select a token`，选择`USDC`，然后点击`Select`。
+p.s.现在`Görli测试网络`上的ETH通过[layerzero跨链桥](https://testnetbridge.com/)可以兑换真ETH，所以测试网ETH价格很高hhh。
+<div align="center"> <img src="./img/2.png" width = 400 /> </div>
+3. 输入希望交换的金额`0.0001`，然后点击`Swap`。点击`Confirm Swap`，然后点击`Swap`。
+<div align="center"> <img src="./img/3.png" width = 400 /> </div>
+4. 这时交易已经被提交到以太坊网络中，等待被打包。点击`View on Etherscan`，然后点击`View`。
+<div align="center"> <img src="./img/4.png" width = 800 /> </div>
+5. 交易成功上链，可以在[以太坊区块浏览器](https://goerli.etherscan.io/)中查询到交易的执行结果。
+<div align="center"> <img src="./img/5.png" width = 800 /> </div>
 
 ## 总结
 本文介绍了如何使用Web3的第一个DApp，即使用Uniswap交换`Görli测试网络`的以太币和比特币。这里使用的是Görli测试网络，因此交易费用非常低，可以随意尝试。如果你想在主网上交易，可以使用以太坊网络，但是交易费用会比较高，因此需要谨慎操作。Dapp的流程中的第1-5步在本文中略去了，实际上它们也很重要，将在后续的进阶学习中介绍。现在，你可以作为用户参与到几乎所有的区块链Dapp应用了，恭喜！🎉🎉🎉好玩归好玩，还是要继续学习哦。下一篇文章我们将进入进阶学习。

@@ -24,11 +24,11 @@
 
 首先我们要选择一个合适的测试网络方便发送交易，由于测试网络可以免费领取代币，又不会占用主网宝贵的资源所以我们选择测试网络进行第一笔交易的发送。打开小狐狸钱包，点击右上角的网络信息。
 
-![](./img/01.jpg)
+<div align="center"> <img src="./img/01.jpg" width = 600 /> </div>
 
 选择测试网络，如果跳转到设置页面就在设置页面中打开测试网络选项。
 
-![](./img/02.jpg)
+<div align="center"> <img src="./img/02.jpg" width = 600 /> </div>
 
 选择`Goerli`测试网络.
 
@@ -36,31 +36,31 @@
 
 下一步我们去[goerlifaucet.com](https://goerlifaucet.com/)领取测试代币。登录网站，填入我们的的钱包地址，点击`Send me ETH1`按钮，等待一会就可以收到测试代币了。
 
-![](./img/03.jpg)
+<div align="center"> <img src="./img/03.jpg" width = 600 /> </div>
 
 点击后可以看到水龙头发送代币的交易信息。
 
-![](./img/04.jpg)
+<div align="center"> <img src="./img/04.jpg" width = 600 /> </div>
 
 回到钱包中我们可以看到代币余额变化了。
 
-![](./img/05.jpg)
+<div align="center"> <img src="./img/05.jpg" width = 600 /> </div>
 
 ### 3. 发送交易
 
 点击小狐狸钱包的`发送`按钮可以看到发送交易的页面，填入接收地址，这里我们方便起见写入发送地址。
 
-![](./img/07.jpg)
+<div align="center"> <img src="./img/07.jpg" width = 600 /> </div>
 
 点击确定后来到发送界面，选择发送资产类型，数额，`gas`费用。
 
-![](./img/06.jpg)
+<div align="center"> <img src="./img/06.jpg" width = 600 /> </div>
 
 `gas`费用可以根据需要选择低中高三种类型，也可以自定义`gas`费用，`gas`费用越高交易被打包的优先级越高，但是`gas`费用越高，交易的执行成本也越高。
 
-![](./img/08.jpg)
+<div align="center"> <img src="./img/08.jpg" width = 600 /> </div>
 
-![](./img/09.jpg)
+<div align="center"> <img src="./img/09.jpg" width = 600 /> </div>
 
 最后点击发送按钮，发送交易。
 
@@ -68,15 +68,15 @@
 
 发送交易后点击活动即可查询发出的交易。
 
-![](./img/10.jpg)
+<div align="center"> <img src="./img/10.jpg" width = 600 /> </div>
 
 目前交易显示待处理说明交易已经发送出去但是还没有被验证节点打包上链。
 
-![](./img/11.jpg)
+<div align="center"> <img src="./img/11.jpg" width = 600 /> </div>
 
 点击交易可以查看交易详情，交易详情中点击在区块链浏览器上查看可以看到更多信息。
 
-![](./img/12.jpg)
+<div align="center"> <img src="./img/12.jpg" width = 600 /> </div>
 
 在浏览器中可以看到
 + 交易哈希
@@ -97,7 +97,7 @@
 + `other attributes`
 + `input data`
 
-![](./img/13.jpg)
+<div align="center"> <img src="./img/13.jpg" width = 600 /> </div>
 
 ## 总结
 本文介绍了如何使用小狐狸钱包发送一笔最简单的转账交易。交易是我们接触区块链最直接的方式，通常交易的参数和调用方法都在区块链项目的前端中写好，用户只需签署交易即可，非常简单。恭喜你完成了第一笔交易，你现在可以在10分钟内给国外的朋友转账了😄下一节我们将介绍如何与Dapp交互。
