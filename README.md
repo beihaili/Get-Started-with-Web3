@@ -19,6 +19,10 @@
 
 **第03讲：使用Web3的第一个DApp** [文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/01_GetStartedWithWeb3/03_FirstWeb3Dapp/README.MD)
 
+### 2.区块链金融入门(04_GetStartedWithDeFi)
+
+**区块链金融入门路径和资源** [文章](https://github.com/beihaili/Get-Started-with-Web3/tree/main/04_GetStartedWithDeFi)
+
 ### 我们的研究报告（OurResearch）
 
 **研究报告01：BSC 链上的攻击：为何发生及其潜在的危害** [文章](https://bhbadao.github.io/BSC-attack_cn.html)
