@@ -11,6 +11,19 @@
 文章开源在github： [github.com/beihai1337/GetStartedWithWeb3](https://github.com/beihai1337/GetStartedWithWeb3)
 
 ----
+
+### 0.如何入门区块链？
+
+本仓库将从以下几个方面入手，由浅入深，帮助大家快速入门区块链，学习Web3的基础知识，以及Web3的应用。
+
+1. 体验Web3
+2. 学习Web3的基础，区块链
+3. 学习Web3的基础，智能合约
+4. 学习Web3应用，去中心化金融和MEV
+5. 学习Web3应用，去中心化组织
+6. 学习Web3应用，NFT
+7. 学习Web3安全，攻击和防御
+
 ### 1.Web3初体验(01_GetStartedWithWeb3)
 
 **第01讲：获得第一个Web3身份** [文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/01_GetStartedWithWeb3/01_FirstWeb3Identity/README.MD)

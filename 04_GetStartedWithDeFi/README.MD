@@ -29,7 +29,15 @@
 + 学习体会：要了解清楚DeFi，深入学习一个项目是很有必要的。Uniswap V2作为DeFi中最成功最简单的项目之一，其设计原理是值得学习的。Uniswap V2的代码量不大，可以很快的理解其设计原理。Uniswap V2的代码地址：https://github.com/Uniswap/v2-core
 
 ### 进阶
-1. 学习[MEV101](./MEV101.pdf)，了解区块链上的MEV（矿工可提取价值），深入学习DeFi项目设计及原理
+
+1. 深入学习[Uniswap V3](https://github.com/Uniswap/v3-core)，了解新一代去中心化交易所的设计与实现。
++ 学习时间：1-2周
++ 学习基础：Uniswap V2
++ 难度：★★★★☆
++ 学习体会：Uniswap V3是Uniswap V2的升级版，其设计原理与Uniswap V2有很大的不同。可以着重了解Uniswap V3的tick设计和虚拟流动性概念。
++ 更多学习资源：[官方博客]（https://uniswap.org/blog/uniswap-v3/） [v3白皮书]（https://uniswap.org/whitepaper-v3.pdf） [v3分析博客]（https://www.jianshu.com/p/c2adfb478b7f）
+
+2. 学习[MEV101](./MEV101.pdf)，了解区块链上的MEV（矿工可提取价值），深入学习DeFi项目设计及原理
 + 学习时间：3-5周
 + 学习基础：DeFi入门
 + 难度：★★★★☆
