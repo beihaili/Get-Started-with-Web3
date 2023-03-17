@@ -35,7 +35,7 @@
 + 学习基础：Uniswap V2
 + 难度：★★★★☆
 + 学习体会：Uniswap V3是Uniswap V2的升级版，其设计原理与Uniswap V2有很大的不同。可以着重了解Uniswap V3的tick设计和虚拟流动性概念。
-+ 更多学习资源：[官方博客]（https://uniswap.org/blog/uniswap-v3/） [v3白皮书]（https://uniswap.org/whitepaper-v3.pdf） [v3分析博客]（https://www.jianshu.com/p/c2adfb478b7f）
++ 更多学习资源：[官方博客](https://uniswap.org/blog/uniswap-v3/) [v3白皮书](https://uniswap.org/whitepaper-v3.pdf) [v3分析博客](https://www.jianshu.com/p/c2adfb478b7f)
 
 2. 学习[MEV101](./MEV101.pdf)，了解区块链上的MEV（矿工可提取价值），深入学习DeFi项目设计及原理
 + 学习时间：3-5周
