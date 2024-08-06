@@ -23,6 +23,8 @@
 5. 学习Web3应用，去中心化组织
 6. 学习Web3应用，NFT
 7. 学习Web3安全，攻击和防御
+8. 比特币Ordinals序数理论
+
 
 ### 1.Web3初体验(01_GetStartedWithWeb3)
 
