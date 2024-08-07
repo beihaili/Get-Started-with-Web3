@@ -38,3 +38,8 @@ coingecko是一个数字资产行情网站，可以查看数字资产的价格�
 ### 1. [defillama](https://defillama.com/)
 Defillama是一个Defi项目聚合网站，可以查看Defi项目的TVL、收益率等信息。Defillama也提供了一个API，可以通过API获取Defi项目的数据。
 
+### 2. [debank](https://debank.com/)
+debank是一个Defi项目聚合网站，可以查看Defi项目的TVL、收益率等信息。debank也提供了一个API，可以通过API获取Defi项目的数据。
+
+### 3. [gnosis safe](https://safe.global/)
+gnosis safe是一个Defi项目，可以创建多签钱包，进行defi交互保护数字资产安全。
