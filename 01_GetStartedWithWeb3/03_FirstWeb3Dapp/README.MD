@@ -8,7 +8,7 @@
 
 北航区块链协会DAO推特： [@BHBA_DAO](https://twitter.com/BHBA_DAO)
 
-进入微信交流群请填表： [表格链接](https:)
+进入微信交流群请填表： [表格链接](https://forms.gle/QMBwL6LwZyQew1tX8)
 
 文章开源在github： [github.com/beihai1337/GetStartedWithWeb3](https://github.com/beihai1337/GetStartedWithWeb3)
 
@@ -54,6 +54,3 @@ p.s.现在`Görli测试网络`上的ETH通过[layerzero跨链桥](https://testne
 
 ## 总结
 本文介绍了如何使用Web3的第一个DApp，即使用Uniswap交换`Görli测试网络`的以太币和比特币。这里使用的是Görli测试网络，因此交易费用非常低，可以随意尝试。如果你想在主网上交易，可以使用以太坊网络，但是交易费用会比较高，因此需要谨慎操作。Dapp的流程中的第1-5步在本文中略去了，实际上它们也很重要，将在后续的进阶学习中介绍。现在，你可以作为用户参与到几乎所有的区块链Dapp应用了，恭喜！🎉🎉🎉好玩归好玩，还是要继续学习哦。下一篇文章我们将进入进阶学习。
-
-
-

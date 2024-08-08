@@ -8,7 +8,7 @@
 
 北航区块链协会DAO推特： [@BHBA_DAO](https://twitter.com/BHBA_DAO)
 
-进入微信交流群请填表： [表格链接](https:)
+进入微信交流群请填表： [表格链接](https://forms.gle/QMBwL6LwZyQew1tX8)
 
 文章开源在github： [github.com/beihai1337/GetStartedWithWeb3](https://github.com/beihai1337/GetStartedWithWeb3)
 
@@ -44,7 +44,6 @@
 点击`Metamask`浏览器插件，点击`开始使用`点击`我同意`点击`创建钱包`，设置密码后即可创建`Metamask`账户。
 
 <div align="center"> <img src="./img/4.png" width = 600 /> </div>
-
 
 
 ### 第三步：备份`Metamask`账户

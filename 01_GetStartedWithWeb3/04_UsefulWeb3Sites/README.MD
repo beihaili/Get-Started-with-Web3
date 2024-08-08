@@ -25,21 +25,28 @@ PolyScan是一个波场区块链浏览器，可以查看区块链上的交易记
 ### 3. [xxxscan](https://xxxscan.com/)
 几乎所有的公链都有对应的xxxscan浏览器，大家可以举一反三自己查找。
 
+### 4. [mempool](https://mempool.space/)
+mempool是一个比特币区块链浏览器，可以查看比特币区块链上的交易记录、合约地址、代币信息等。mempool也提供了一个API，可以通过API获取比特币区块链上的数据。
+
 ## 二、数字资产行情网站
 
 ### 1. [CoinMarketCap](https://coinmarketcap.com/)
 CoinMarketCap是一个数字资产行情网站，可以查看数字资产的价格、市值、交易量等信息。CoinMarketCap也提供了一个API，可以通过API获取数字资产的数据。
 
-### 2. [coingecko](https://www.coingecko.com/)
+### 2. [Coingecko](https://www.coingecko.com/)
 coingecko是一个数字资产行情网站，可以查看数字资产的价格、市值、交易量等信息。coingecko也提供了一个API，可以通过API获取数字资产的数据。
 
 ### 三、Defi
 
 ### 1. [defillama](https://defillama.com/)
-Defillama是一个Defi项目聚合网站，可以查看Defi项目的TVL、收益率等信息。Defillama也提供了一个API，可以通过API获取Defi项目的数据。
 
-### 2. [debank](https://debank.com/)
-debank是一个Defi项目聚合网站，可以查看Defi项目的TVL、收益率等信息。debank也提供了一个API，可以通过API获取Defi项目的数据。
+# 一些靠谱的交易所网站
 
-### 3. [gnosis safe](https://safe.global/)
-gnosis safe是一个Defi项目，可以创建多签钱包，进行defi交互保护数字资产安全。
+### 1. [Binance](https://www.binance.com/)
+Binance是一个全球领先的数字资产交易平台，提供比特币、以太坊、BNB等数字资产的交易服务。Binance也提供了一个API，可以通过API获取数字资产的数据。
+注册Binance的时候欢迎用我的推荐码有手续费优惠：[推荐码](https://www.binance.info/activity/referral-entry/CPA?ref=CPA_00EZI5X6IS)
+
+### 2. [OKX](https://www.okx.com/)
+OKX是一个全球领先的数字资产交易平台，提供比特币、以太坊、OKB等数字资产的交易服务。OKX也提供了一个API，可以通过API获取数字资产的数据。
+注册OKX的时候欢迎用我的推荐码有手续费优惠：[推荐码](https://cnouyi.studio/join/7133496)
+
