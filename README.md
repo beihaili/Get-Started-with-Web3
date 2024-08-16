@@ -16,8 +16,8 @@
 
 本仓库将从以下几个方面入手，由浅入深，帮助大家快速入门区块链，学习Web3的基础知识，以及Web3的应用。
 
-1. 体验Web3
-2. 学习Web3的基础，区块链
+1. 第一课快速体验上手Web3：Web3初体验(01_GetStartedWithWeb3)
+2. 第二课：学习web3行业的基础比特币()
 3. 学习Web3的基础，智能合约
 4. 学习Web3应用，去中心化金融和MEV
 5. 学习Web3应用，去中心化组织
@@ -34,7 +34,13 @@
 
 **第03讲：使用Web3的第一个DApp** [文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/01_GetStartedWithWeb3/03_FirstWeb3Dapp/README.MD)
 
-### 2.区块链金融入门(04_GetStartedWithDeFi)
+**第04讲：体验Web3的实用网站** [文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/01_GetStartedWithWeb3/04_UsefulWeb3Sites/README.MD)
+
+### 2.学习比特币(02_GetStartedWithBitcoin)
+
+**第01讲：获得第一个Web3身份** [文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/01_GetStartedWithWeb3/01_FirstWeb3Identity/README.MD)
+
+### 3.区块链金融入门(04_GetStartedWithDeFi)
 
 **区块链金融入门路径和资源** [文章](https://github.com/beihaili/Get-Started-with-Web3/tree/main/04_GetStartedWithDeFi)
 
@@ -48,8 +54,6 @@
 
 ---
 以下正在抓紧完善中，敬请期待：
-
-### 2.区块链入门(02_GetStartedWithBlockchain)
 
 ### 3.智能合约入门(03_GetStartedWithSmartContract)
 
