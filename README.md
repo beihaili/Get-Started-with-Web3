@@ -36,10 +36,15 @@
 
 **第01讲：比特币介绍** [文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/02_GetStartedWithBitcoin/01_Overview/README.MD)
 
-### 3.区块链金融入门(04_GetStartedWithDeFi)
+**第02讲：比特币钱包** [文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/02_GetStartedWithBitcoin/02_BitcoinWallet/README.MD)
+
+### 3.学习以太坊(03_GetStartedWithEthereum)
+
+### 4.区块链金融入门(04_GetStartedWithDeFi)
 
 **第01讲：区块链金融入门路径和资源** [文章](https://github.com/beihaili/Get-Started-with-Web3/tree/main/04_GetStartedWithDeFi)
 
+### 5.
 ### 我们的研究报告（OurResearch）
 
 **研究报告01：BSC 链上的攻击：为何发生及其潜在的危害** [文章](https://bhbadao.github.io/BSC-attack_cn.html)
