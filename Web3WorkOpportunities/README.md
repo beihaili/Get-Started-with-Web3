@@ -10,7 +10,7 @@
 
 进入微信交流群请填表： [表格链接](https:)
 
-文章开源在github： [github.com/beihai1337/GetStartedWithWeb3](https://github.com/beihai1337/GetStartedWithWeb3)
+文章开源在github： [https://github.com/beihaili/Get-Started-with-Web3](https://github.com/beihaili/Get-Started-with-Web3)
 
 ---
 # Web3大厂工作机会
