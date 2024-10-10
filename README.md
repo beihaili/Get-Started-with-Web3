@@ -16,12 +16,6 @@
 
 本仓库将从以下几个方面入手，由浅入深，帮助大家快速入门区块链，学习Web3的基础知识，以及Web3的应用。
 
-**1.Web3初体验(01_GetStartedWithWeb3)**
-
-**2.学习比特币(02_GetStartedWithBitcoin)**
-
-**3.区块链金融入门(04_GetStartedWithDeFi)**
-
 ### 1.Web3初体验(01_GetStartedWithWeb3)
 
 **第01讲：获得第一个Web3身份** [文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/01_GetStartedWithWeb3/01_FirstWeb3Identity/README.MD)
@@ -48,8 +42,7 @@
 
 **第01讲：区块链金融入门路径和资源** [文章](https://github.com/beihaili/Get-Started-with-Web3/tree/main/04_GetStartedWithDeFi)
 
-### 5.
-###我们的研究报告（OurResearch）
+### 我们的研究报告（OurResearch）
 
 **研究报告01：BSC 链上的攻击：为何发生及其潜在的危害** [文章](https://bhbadao.github.io/BSC-attack_cn.html)
 
@@ -60,11 +53,9 @@
 ---
 以下正在抓紧完善中，敬请期待：
 
-### 4.去中心化金融入门(04_GetStartedWithDeFi)
+### 去中心化组织基础入门(05_GetStartedWithDAO)
 
-### 5.去中心化组织基础入门(05_GetStartedWithDAO)
-
-### 6.NFT入门(06_GetStartedWithNFT)
+### NFT入门(06_GetStartedWithNFT)
 
 ## Star History
 [![Star History Chart](https://api.star-history.com/svg?repos=beihaili/Get-Started-with-Web3&type=Date)](https://star-history.com/#beihaili/Get-Started-with-Web3&Date)
