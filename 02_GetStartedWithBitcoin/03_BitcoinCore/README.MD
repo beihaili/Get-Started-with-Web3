@@ -133,9 +133,12 @@
 ## 比特币全节点的未来
 比特币全节点是比特币网络的信任基础，它们通过验证所有交易和区块来确保网络的安全性和去中心化。随着比特币网络的发展，全节点的角色将变得更加重要。未来，全节点可能会集成更多的功能，如智能合约执行、隐私保护等，以满足不断增长的业务需求。
 
-
-
-
+## 参考
++ [比特币核心文档](https://bitcoin.org/en/developer-reference#bitcoin-core)
++ [比特币核心源码](https://github.com/bitcoin/bitcoin)
++ [比特币白皮书](https://bitcoin.org/bitcoin.pdf)
++ [比特币开发者指南](https://bitcoin.org/en/developer-guide)
++ [运行比特币全节点](https://yishi.io/how-to-run-bitcoin-full-node/)
 
 
 
