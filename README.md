@@ -36,7 +36,7 @@
 
 ### 3.学习以太坊(03_GetStartedWithEthereum) 
 
-**第01讲：以太坊介绍** [文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/03_GetStartedWithEthereum/01_Overview/README.MD)
+**第01讲：以太坊介绍** [文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/03_GetStartedWithEtherum/01_Overview/README.MD)
 
 ### 4.区块链金融入门(04_GetStartedWithDeFi)
 
