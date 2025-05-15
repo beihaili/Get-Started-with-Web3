@@ -2,7 +2,7 @@
 ---
 自学入门`Web3`不是一件容易的事，作为一个刚刚入门Web3的新人，梳理一下最简单直观的`Web3`小白入门教程。整合开源社区优质资源，为大家从入门到精通web3指路。每周更新1-3讲.git
 
-欢迎关注我的推特：[@beihai1337](https://twitter.com/beihai1337)
+欢迎关注我的推特：[@bhbtc1337](https://twitter.com/bhbtc1337)
 
 北航区块链协会DAO推特： [@BHBA_DAO](https://twitter.com/BHBA_DAO)
 
