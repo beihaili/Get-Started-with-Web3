@@ -12,6 +12,8 @@
 
 文章开源在 GitHub：[Get-Started-with-Web3](https://github.com/beihaili/Get-Started-with-Web3)
 
+购买BTC/ETH/USDT 等加密货币推荐 [币安](https://www.binance.com/zh-CN)[注册链接](https://accounts.marketwebb.me/register?ref=39797374)
+
 ---
 
 ## 0. 如何入门区块链？
@@ -20,13 +22,13 @@
 
 ## 1. Web3 初体验（01_GetStartedWithWeb3）
 
-**第 01 讲：获得第一个 Web3 身份** [查看文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/01_GetStartedWithWeb3/01_FirstWeb3Identity/README.MD)
+**第 01 讲：获得第一个 Web3 身份** [查看文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/01_Web3QuickStart/01_FirstWeb3Identity/README.MD)
 
-**第 02 讲：发送第一笔 Web3 交易** [查看文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/01_GetStartedWithWeb3/02_FirstWeb3Transaction/README.MD)
+**第 02 讲：发送第一笔 Web3 交易** [查看文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/01_Web3QuickStart/02_FirstWeb3Transaction/README.MD)
 
-**第 03 讲：使用 Web3 的第一个 DApp** [查看文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/01_GetStartedWithWeb3/03_FirstWeb3Dapp/README.MD)
+**第 03 讲：使用 Web3 的第一个 DApp** [查看文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/01_Web3QuickStart/03_FirstWeb3Dapp/README.MD)
 
-**第 04 讲：体验 Web3 的实用网站** [查看文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/01_GetStartedWithWeb3/04_UsefulWeb3Sites/README.MD)
+**第 04 讲：体验 Web3 的实用网站** [查看文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/01_Web3QuickStart/04_UsefulWeb3Sites/README.MD)
 
 ## 2. 学习比特币（02_GetStartedWithBitcoin）
 
@@ -35,6 +37,8 @@
 **第 02 讲：比特币钱包** [查看文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/02_GetStartedWithBitcoin/02_BitcoinWallet/README.MD)
 
 **第 03 讲：比特币节点** [查看文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/02_GetStartedWithBitcoin/03_BitcoinCore/README.MD)
+
+**第 04 讲：比特币RPC接口应用开发** [查看文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/02_GetStartedWithBitcoin/04_BitcoinRPC/README.MD)
 
 ## 3. 学习以太坊（03_GetStartedWithEthereum）
 
