@@ -1,0 +1,17 @@
+{
+  "name": "getstartedwithweb3",
+  "version": "1.0.0",
+  "description": "---",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gitbook-plugin-expandable-chapters": "^0.2.0",
+    "gitbook-plugin-github": "^3.0.0",
+    "gitbook-plugin-search-plus": "^1.0.4-alpha-3"
+  }
+}

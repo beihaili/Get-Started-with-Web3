@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>区块详情 - 比特币区块链浏览器</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .search-form {
+            display: flex;
+        }
+        .search-form input {
+            padding: 8px;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+        }
+        .search-form button {
+            padding: 8px 15px;
+            background-color: #f7931a;
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        .block-info {
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .tx-list {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .tx-list table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .tx-list th, .tx-list td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .tx-list th {
+            background-color: #f2f2f2;
+        }
+        a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .info-row {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .info-label {
+            font-weight: bold;
+            width: 150px;
+        }
+        .info-value {
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>区块详情</h1>
+        <form class="search-form" action="/search" method="get">
+            <input type="text" name="q" placeholder="搜索区块高度、区块哈希或交易ID">
+            <button type="submit">搜索</button>
+        </form>
+    </header>
+
+    <div class="block-info">
+        <div class="info-row">
+            <div class="info-label">区块高度:</div>
+            <div class="info-value">{{ block.height }}</div>
+        </div>
+        <div class="info-row">
+            <div class="info-label">区块哈希:</div>
+            <div class="info-value">{{ block.hash }}</div>
+        </div>
+        <div class="info-row">
+            <div class="info-label">前一区块:</div>
+            <div class="info-value">
+                {% if block.previousblockhash %}
+                <a href="/block/{{ block.previousblockhash }}">{{ block.previousblockhash }}</a>
+                {% else %}
+                无 (创世区块)
+                {% endif %}
+            </div>
+        </div>
+        <div class="info-row">
+            <div class="info-label">下一区块:</div>
+            <div class="info-value">
+                {% if block.nextblockhash %}
+                <a href="/block/{{ block.nextblockhash }}">{{ block.nextblockhash }}</a>
+                {% else %}
+                无 (最新区块)
+                {% endif %}
+            </div>
+        </div>
+        <div class="info-row">
+            <div class="info-label">确认数:</div>
+            <div class="info-value">{{ block.confirmations }}</div>
+        </div>
+        <div class="info-row">
+            <div class="info-label">时间:</div>
+            <div class="info-value">{{ block.time|timestamp_to_date }}</div>
+        </div>
+        <div class="info-row">
+            <div class="info-label">难度:</div>
+            <div class="info-value">{{ block.difficulty }}</div>
+        </div>
+        <div class="info-row">
+            <div class="info-label">Merkle Root:</div>
+            <div class="info-value">{{ block.merkleroot }}</div>
+        </div>
+        <div class="info-row">
+            <div class="info-label">Nonce:</div>
+            <div class="info-value">{{ block.nonce }}</div>
+        </div>
+        <div class="info-row">
+            <div class="info-label">版本:</div>
+            <div class="info-value">{{ block.version }}</div>
+        </div>
+    </div>
+
+    <div class="tx-list">
+        <h2>交易列表 ({{ block.tx|length }})</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>交易ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for txid in block.tx %}
+                <tr>
+                    <td><a href="/tx/{{ txid }}">{{ txid }}</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    
+    <p><a href="/">返回首页</a></p>
+</body>
+</html>

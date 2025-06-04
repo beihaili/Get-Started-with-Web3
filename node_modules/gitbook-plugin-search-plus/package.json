@@ -1,0 +1,42 @@
+{
+  "name": "gitbook-plugin-search-plus",
+  "version": "1.0.4-alpha-3",
+  "description": "gitbook powerful search plugin",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd examples&&npm install&&npm start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "add": "git add -A",
+    "standard": "standard --fix assets/search.js, index.js",
+    "pages:build": "cd examples&&npm install&&npm run build",
+    "pages:push": "git subtree --prefix=examples push pages gh-pages"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lwdgit/gitbook-plugin-search-plus.git"
+  },
+  "engines": {
+    "gitbook": ">=3.0.0"
+  },
+  "dependencies": {
+    "html-entities": "1.2.0"
+  },
+  "devDependencies": {
+    "pre-commit": "^1.2.2",
+    "standard": "^9.0.2"
+  },
+  "pre-commit": {
+    "run": [
+      "standard",
+      "pages:build",
+      "add"
+    ],
+    "silent": true
+  },
+  "author": "lwdgit",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/lwdgit/gitbook-plugin-search-plus/issues"
+  },
+  "homepage": "https://github.com/lwdgit/gitbook-plugin-search-plus#readme"
+}
