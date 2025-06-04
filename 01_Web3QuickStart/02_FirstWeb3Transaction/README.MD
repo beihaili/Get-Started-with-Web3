@@ -2,7 +2,7 @@
 
 ---
 
-自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1-3 讲。
+自学入门 `Web3` 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 `Web3` 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1-3 讲。
 
 欢迎关注我的推特：[@bhbtc1337](https://twitter.com/bhbtc1337)
 
@@ -11,6 +11,8 @@
 进入微信交流群请填表：[表格链接](https://forms.gle/QMBwL6LwZyQew1tX8)
 
 文章开源在 GitHub：[Get-Started-with-Web3](https://github.com/beihaili/Get-Started-with-Web3)
+
+购买BTC/ETH/USDT 等加密货币推荐 [币安](https://www.binance.com/zh-CN)[注册链接](https://accounts.marketwebb.me/register?ref=39797374)
 
 ---
 

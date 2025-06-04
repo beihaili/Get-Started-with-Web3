@@ -18,7 +18,7 @@
 
 ## 前言：通过代码连接比特币世界
 
-在前面的章节中，我们学习了如何运行比特币全节点，以及如何使用比特币核心客户端。然而，作为开发者，我们通常需要通过代码来与比特币区块链交互，实现自动化操作和自定义功能。比特币核心提供了强大的RPC接口，允许我们通过编程方式与节点通信，这正是本章将要探讨的内容。
+在前面的章节中，我们学习了如何运行比特币全节点，以及如何使用比特币核心客户端。然而，作为开发者，我们通常需要通过代码来与比特币区块链交互，实现自动化操作和自定义功能。本章将探讨两种访问比特币区块链的方法：通过本地节点的RPC接口和通过第三方服务提供商如QuikNode。
 
 ## 1. 比特币RPC接口基础
 
@@ -241,7 +241,7 @@ func main() {
 
 这是一个简单的区块链浏览器Web应用，使用Flask框架实现。它允许您浏览区块链上的区块和交易信息，并提供搜索功能。
 
-![区块链浏览器主界面](./img/浏览器主界面.jpg)
+![区块链浏览器主界面](./blockchain_explorer/img/浏览器主界面.jpg)
 
 区块链浏览器的主要功能包括：
 - 显示区块链的基本信息（区块高度、难度、同步进度等）
@@ -371,7 +371,7 @@ if __name__ == '__main__':
     app.run(debug=True)
 ```
 
-![区块链浏览器区块详情](./img/浏览器区块详情.jpg)
+![区块链浏览器区块详情](./blockchain_explorer/img/浏览器区块详情.jpg)
 
 要运行此应用，您需要创建以下目录结构：
 
@@ -398,6 +398,149 @@ python blockchain_explorer.py
 ### 5.2 交易监控工具
 
 这是一个监控特定比特币地址交易的脚本，当检测到新交易时会自动提醒：
+
+### 5.2 交易监控工具
+
+我们提供了一个基于mempool.space API的比特币地址监控工具，可以监控任意比特币地址的交易活动。完整代码位于 `address_monitor/address_monitor.py`。
+
+该工具的主要功能：
+- 监控指定比特币地址的所有交易
+- 当检测到新交易时发出提醒
+- 显示交易金额、时间和区块链浏览器链接
+
+使用方法：
+
+```bash
+# 安装依赖
+pip install requests
+
+# 运行脚本，监控指定地址
+python address_monitor/address_monitor.py 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa
+
+# 指定检查间隔
+python address_monitor/address_monitor.py 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa -i 30
+```
+
+使用方法：
+
+```bash
+# 安装依赖
+pip install requests
+
+# 运行脚本，监控指定地址
+python address_monitor.py 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa
+
+# 指定检查间隔
+python address_monitor.py 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa -i 30
+```
+
+## 6. 使用第三方RPC服务提供商
+
+运行全节点需要大量的存储空间（超过660GB）和同步时间。对于开发者而言，使用第三方RPC服务提供商如QuikNode是一个实用的替代方案，尤其是在开发和测试阶段。
+
+### 6.1 第三方RPC服务的优势
+
++ **无需同步区块链**：立即开始开发，无需等待区块链同步
++ **无需大量存储空间**：不需要在本地存储完整的区块链数据
++ **高可用性**：专业服务提供商通常提供高可用性和冗余节点
++ **专业维护**：节点由专业团队维护，确保最新的安全补丁和更新
+
+### 6.2 常见的比特币RPC服务提供商
+
+1. **QuikNode** - https://quiknode.io/
+2. **BlockCypher** - https://www.blockcypher.com/
+3. **Infura** (比特币支持) - https://infura.io/
+4. **GetBlock** - https://getblock.io/
+5. **NOWNodes** - https://nownodes.io/
+
+### 6.3 使用QuikNode的比特币RPC服务
+
+#### 6.3.1 创建QuikNode账户和节点
+
+1. 访问 [QuikNode官网](https://quiknode.io/) 并注册账户
+2. 在控制面板中，选择"Create Endpoint"
+3. 选择比特币网络（主网或测试网）
+4. 选择合适的套餐（包括免费试用选项）
+
+#### 6.3.2 使用Python连接QuikNode
+
+与传统的比特币节点RPC不同，QuikNode URL不需要在URL中包含用户名和密码，身份验证通过API密钥（已包含在URL中）完成。使用requests库直接发送HTTP请求是更灵活的解决方案：
+
+```python
+# 示例代码 (完整代码见 quiknode_examples/quiknode_client.py)
+import requests
+
+class BitcoinRPC:
+    def __init__(self, url):
+        self.url = url
+        self.id_counter = 0
+
+    def call(self, method, params=None):
+        # 发送JSON-RPC请求到QuikNode端点
+        # ...省略实现细节...
+
+# 使用示例
+quiknode_url = "https://example.quiknode.pro/your-api-key/"
+rpc = BitcoinRPC(quiknode_url)
+
+# 获取区块链信息
+blockchain_info = rpc.call("getblockchaininfo")
+print("当前区块高度:", blockchain_info['blocks'])
+```
+
+#### 6.3.3 使用Node.js连接QuikNode
+
+```javascript
+// 示例代码 (完整代码见 quiknode_examples/nodejs_client.js)
+const axios = require('axios');
+
+class BitcoinRPC {
+  constructor(url) {
+    this.url = url;
+    this.idCounter = 0;
+  }
+
+  async call(method, params = []) {
+    // 发送JSON-RPC请求到QuikNode端点
+    // ...省略实现细节...
+  }
+}
+
+// 使用示例
+async function main() {
+  const quiknodeUrl = 'https://example.quiknode.pro/your-api-key/';
+  const rpc = new BitcoinRPC(quiknodeUrl);
+
+  try {
+    // 获取区块链信息
+    const blockchainInfo = await rpc.call('getblockchaininfo');
+    console.log('当前区块高度:', blockchainInfo.blocks);
+    
+    // 获取最新区块哈希
+    const bestBlockHash = await rpc.call('getbestblockhash');
+    console.log('最新区块哈希:', bestBlockHash);
+  } catch (error) {
+    console.error('发生错误:', error);
+  }
+}
+```
+
+### 6.4 比较本地节点与第三方RPC服务
+
+| 特性 | 本地节点 | 第三方RPC服务 |
+|---------|----------|---------------|
+| 完全自主性 | ✅ 完全控制 | ❌ 依赖第三方 |
+| 需要存储空间 | ❌ 660GB+ | ✅ 无需本地存储 |
+| 初始设置时间 | ❌ 数天至数周 | ✅ 立即可用 |
+| 维护成本 | ❌ 需要自行维护 | ✅ 无需维护 |
+| 话费 | ✅ 只有硬件和电费成本 | ❌ 需要月费/年费 |
+| 隐私保护 | ✅ 数据在本地 | ❌ 通过第三方访问 |
+| 性能与可靠性 | 取决于硬件性能 | ✅ 专业级服务保障 |
+
+**建议**：
+- 开发和测试阶段：使用第三方RPC服务
+- 生产环境：如果注重隐私和自主性，考虑运行自己的节点
+- 混合方案：使用自己的节点作为主要访问点，第三方服务作为备用
 
 ```python
 #!/usr/bin/env python3
@@ -516,6 +659,7 @@ if __name__ == "__main__":
     main()
 ```
 
+我们还提供了一个基于本地节点 RPC 接口的比特币地址监控工具，该工具可以检测你所运行的比特币节点中指定地址的交易活动。完整代码位于 `address_monitor/rpc_address_monitor.py`。
 使用方法：
 
 ```bash
@@ -523,10 +667,10 @@ if __name__ == "__main__":
 pip install python-bitcoinrpc
 
 # 运行监控工具
-python transaction_monitor.py <比特币地址>
+python address_monitor/rpc_address_monitor.py <比特币地址>
 
 # 自定义检查间隔（例如30秒）
-python transaction_monitor.py <比特币地址> --interval 30
+python address_monitor/rpc_address_monitor.py <比特币地址> --interval 30
 ```
 
 运行示例：
@@ -558,80 +702,34 @@ Ctrl+C 退出监控
 ### 6.1 批量处理交易
 下面是一个批量创建和发送交易的示例：
 
+完整代码请查看 `advanced_examples/batch_transactions.py`。
+
 ```python
+# 示例代码摘要
 from bitcoinrpc.authproxy import AuthServiceProxy
-import time
 
 def batch_send_transactions(outputs_list, fee_rate=10):
-    """
-    批量创建和发送交易
-    
-    参数:
-    outputs_list: 收款地址和金额的列表，格式为 [{'address': '...', 'amount': 0.001}, ...]
-    fee_rate: 费率（satoshi/byte）
-    """
-    rpc = AuthServiceProxy("http://your_username:your_password@127.0.0.1:8332")
+    # 连接到比特币节点
+    rpc = AuthServiceProxy("http://beihaili:your_password@127.0.0.1:8332")
     
     # 检查钱包余额
     balance = rpc.getbalance()
     total_to_send = sum(output['amount'] for output in outputs_list)
     
-    print(f"钱包余额: {balance} BTC")
-    print(f"需要发送: {total_to_send} BTC")
-    
-    if balance < total_to_send:
-        print("错误: 余额不足")
-        return
-    
     # 创建批量交易
-    txids = []
     for output in outputs_list:
-        try:
-            # 创建原始交易
-            outputs = {output['address']: output['amount']}
-            rawtx = rpc.createrawtransaction([], outputs)
-            
-            # 资金注入
-            funded_tx = rpc.fundrawtransaction(rawtx, {'feeRate': fee_rate})
-            
-            # 签名交易
-            signed_tx = rpc.signrawtransactionwithwallet(funded_tx['hex'])
-            
-            # 广播交易
-            txid = rpc.sendrawtransaction(signed_tx['hex'])
-            txids.append(txid)
-            
-            print(f"交易已发送: {txid}")
-            print(f"  收款地址: {output['address']}")
-            print(f"  金额: {output['amount']} BTC")
-            
-            # 短暂等待以避免节点过载
-            time.sleep(1)
-            
-        except Exception as e:
-            print(f"交易失败: {e}")
-    
-    print(f"批量处理完成，成功发送 {len(txids)}/{len(outputs_list)} 笔交易")
-    return txids
-
-# 使用示例
-if __name__ == "__main__":
-    # 定义要发送的交易列表
-    outputs = [
-        {'address': 'address1', 'amount': 0.001},
-        {'address': 'address2', 'amount': 0.002},
-        {'address': 'address3', 'amount': 0.003}
-    ]
-    
-    # 执行批量发送
-    batch_send_transactions(outputs)
+        # 创建原始交易，资金注入，签名并广播
+        # ...省略详细实现...
 ```
 
 ### 6.2 与其他系统集成
 
 这是一个将比特币RPC与Web服务集成的Express.js应用示例：
 
+完整代码请查看 `advanced_examples/express_api_server.js`。
+
 ```javascript
+// 示例代码摘要
 const express = require('express');
 const Client = require('bitcoin-core');
 const bodyParser = require('body-parser');
@@ -643,76 +741,24 @@ app.use(bodyParser.json());
 const bitcoinClient = new Client({
   host: '127.0.0.1',
   port: 8332,
-  username: 'your_username',
+  username: 'beihaili',  // 使用用户实际用户名
   password: 'your_password'
 });
 
-// 获取区块链信息
+// API端点示例
 app.get('/api/blockchain/info', async (req, res) => {
-  try {
-    const info = await bitcoinClient.getBlockchainInfo();
-    res.json(info);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
+  // 获取区块链信息
 });
 
-// 获取特定区块信息
 app.get('/api/block/:hash', async (req, res) => {
-  try {
-    const block = await bitcoinClient.getBlock(req.params.hash);
-    res.json(block);
-  } catch (error) {
-    res.status(404).json({ error: 'Block not found' });
-  }
+  // 获取特定区块信息
 });
 
-// 获取钱包余额
 app.get('/api/wallet/balance', async (req, res) => {
-  try {
-    const balance = await bitcoinClient.getBalance();
-    res.json({ balance });
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
+  // 获取钱包余额
 });
 
-// 创建新地址
-app.post('/api/wallet/address', async (req, res) => {
-  try {
-    const label = req.body.label || '';
-    const address = await bitcoinClient.getNewAddress(label);
-    res.json({ address });
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
-
-// 发送比特币
-app.post('/api/wallet/send', async (req, res) => {
-  try {
-    const { address, amount } = req.body;
-    
-    if (!address || !amount) {
-      return res.status(400).json({ error: 'Address and amount are required' });
-    }
-    
-    const txid = await bitcoinClient.sendToAddress(address, parseFloat(amount));
-    res.json({ 
-      txid,
-      address,
-      amount
-    });
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
-
-// 启动服务器
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Bitcoin RPC API server running on port ${PORT}`);
-});
+// 等更多端点...
 ```
 
 ## 7. 安全与性能最佳实践
@@ -904,54 +950,34 @@ print(f"是否已完成同步: {'是' if is_synced else '否'}")
 
 处理大量交易或区块数据时，可能导致内存使用过高：
 
+完整代码请查看 `performance_tips/batch_processing.py`
+
 ```python
-# 分批处理大量数据
+# 分批处理大量数据示例
 def process_large_dataset(start_item, total_items, batch_size=100):
     results = []
     
     for offset in range(0, total_items, batch_size):
-        end = min(offset + batch_size, total_items)
-        print(f"处理项目 {start_item + offset} 到 {start_item + end - 1}")
-        
-        # 处理当前批次
-        batch = process_batch(start_item + offset, start_item + end)
-        results.extend(batch)
-        
-        # 主动释放内存
-        import gc
-        gc.collect()
-    
-    return results
+        # 处理当前批次并释放内存
+        # ...省略详细实现...
 ```
 
 3. **处理错误响应**
 
 优雅地处理RPC错误：
 
+完整代码请查看 `performance_tips/safe_rpc_calls.py`
+
 ```python
 def safe_rpc_call(rpc_func, *args, max_retries=3, retry_delay=2):
     """安全地调用RPC函数，处理常见错误"""
-    import time
-    
     retries = 0
     while retries < max_retries:
         try:
-            return rpc_func(*args)
+            return rpc_func(*args)  # 尝试调用RPC函数
         except Exception as e:
-            error_str = str(e)
-            
-            # 检查是否为临时错误
-            if "timeout" in error_str or "connection" in error_str:
-                retries += 1
-                wait_time = retry_delay * retries
-                print(f"RPC调用失败，将在{wait_time}秒后重试: {e}")
-                time.sleep(wait_time)
-            else:
-                # 永久性错误，不再重试
-                print(f"RPC调用出现永久性错误: {e}")
-                raise
-    
-    raise Exception(f"达到最大重试次数({max_retries})后依然失败")
+            # 判断错误类型并决定是否重试
+            # ...省略详细实现...
 ```
 
 ## 参考

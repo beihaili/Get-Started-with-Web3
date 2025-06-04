@@ -12,6 +12,8 @@
 
 文章开源在 GitHub：[Get-Started-with-Web3](https://github.com/beihaili/Get-Started-with-Web3)
 
+购买BTC/ETH/USDT 等加密货币推荐 [币安](https://www.binance.com/zh-CN)[注册链接](https://accounts.marketwebb.me/register?ref=39797374)
+
 ---
 
 ## 前言：原则说明
@@ -84,5 +86,3 @@
 ## 总结
 
 这些原则可以帮助你在 Web3 世界中更好地保护自己，降低风险，提高收益。Web3 世界充满机遇也充满风险，希望这些原则能够帮助你在这个新世界中更好地生存和发展。
-
-记住，没有绝对正确的原则，重要的是找到适合自己的原则并坚持执行。
