@@ -1,5 +1,11 @@
 # Get Started With Web3
 
+[![GitHub stars](https://img.shields.io/github/stars/beihaili/Get-Started-with-Web3)](https://github.com/beihaili/Get-Started-with-Web3/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/beihaili/Get-Started-with-Web3)](https://github.com/beihaili/Get-Started-with-Web3/network/members)
+[![GitHub issues](https://img.shields.io/github/issues/beihaili/Get-Started-with-Web3)](https://github.com/beihaili/Get-Started-with-Web3/issues)
+[![GitHub license](https://img.shields.io/github/license/beihaili/Get-Started-with-Web3)](https://github.com/beihaili/Get-Started-with-Web3/blob/main/LICENSE)
+[![Contributors](https://img.shields.io/github/contributors/beihaili/Get-Started-with-Web3)](https://github.com/beihaili/Get-Started-with-Web3/graphs/contributors)
+
 ---
 
 自学入门 `Web3` 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 `Web3` 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1-3 讲。
@@ -70,6 +76,58 @@
 
 ### NFT 入门（06_GetStartedWithNFT）
 
+## 贡献者
+
+感谢所有为这个项目做出贡献的人！
+
+<a href="https://github.com/beihaili/Get-Started-with-Web3/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=beihaili/Get-Started-with-Web3" />
+</a>
+
+<!-- 由 contrib.rocks 提供支持 -->
+
+## 如何贡献
+
+我们欢迎并感谢任何形式的贡献，无论是修复错别字、改进文档、添加新内容还是提出建议。以下是参与贡献的步骤：
+
+1. Fork 这个仓库
+2. 创建你的特性分支 (`git checkout -b feature/amazing-contribution`)
+3. 提交你的更改 (`git commit -m 'Add some amazing contribution'`)
+4. 推送到分支 (`git push origin feature/amazing-contribution`)
+5. 开启一个 Pull Request
+
+### 贡献指南
+
+- **内容贡献**：如果你想添加新的学习资源、教程或指南，请确保内容准确、清晰且对初学者友好。
+- **代码示例**：提供的代码示例应该简洁、易懂，并尽可能包含注释。
+- **文档改进**：欢迎修复文档中的错误或提出改进建议。
+- **翻译**：帮助我们将内容翻译成其他语言，让更多人受益。
+
+### 行为准则
+
+参与贡献即表示您同意遵守我们的行为准则：
+
+- 尊重所有参与者，不论经验水平、性别、性取向、残疾、种族或宗教信仰。
+- 使用友好和包容的语言。
+- 接受建设性批评，并把社区最佳利益放在首位。
+- 在讨论中保持专业和尊重。
+
+## 联系我们
+
+如果你有任何问题、建议或反馈，可以通过以下方式与我们联系：
+
+- **GitHub Issues**: [提交问题](https://github.com/beihaili/Get-Started-with-Web3/issues)
+- **Twitter**: [@bhbtc1337](https://twitter.com/bhbtc1337)
+- **微信交流群**: [填表加入](https://forms.gle/QMBwL6LwZyQew1tX8)
+
+## 许可证
+
+本项目采用 [MIT 许可证](https://github.com/beihaili/Get-Started-with-Web3/blob/main/LICENSE)。
+
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=beihaili/Get-Started-with-Web3&type=Date)](https://star-history.com/#beihaili/Get-Started-with-Web3&Date)
+
+---
+
+<p align="center">由 ❤️ 的区块链爱好者们共同开发和维护</p>
