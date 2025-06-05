@@ -61,14 +61,31 @@
 浏览器插件钱包是最方便的热钱包之一，非常适合日常使用。以下是创建浏览器插件钱包的步骤：
 
 1. **选择钱包插件**：推荐使用广泛使用和开源的钱包插件，如 [Unisat](https://unisat.io/)。
+首页如下所示：
+<div align="center"> <img src="./img/1.png" width = 600 /> </div>
 
 2. **安装插件**：访问插件的官方网站，按照提示将其安装到浏览器中。
+首页上点击右上角的connect，会让你选择连接一个钱包，选择unisat wallet，或者直接选择首页中的wallet选项下载，是一样的效果。
+<div align="center"> <img src="./img/2.png" width = 600 /> </div>
+点击第四项下载浏览器扩展程序：
+<div align="center"> <img src="./img/3.png" width = 600 /> </div>
+点击右上角的添加至chrome：
+<div align="center"> <img src="./img/4.png" width = 600 /> </div>
+耐心等待下载和安装。
+<div align="center"> <img src="./img/5.png" width = 600 /> </div>
 
 3. **创建新钱包**：安装后，打开插件并选择"创建新钱包"。根据提示设置一个强密码，并妥善保存钱包的助记词。
+安装完成后，运行插件会弹窗提示：
+<div align="center"> <img src="./img/6.png" width = 600 /> </div>
+创建钱包后会让你设置一个密码，这个密码是用来在这个机器上查询私钥的。
 
 4. **备份助记词**：助记词是恢复钱包的唯一途径，必须妥善保管，确保其不会丢失或泄露。
+第一步备份完成助记词之后，第二步会让你选择钱包地址：
+<div align="center"> <img src="./img/7.png" width = 600 /> </div>
+不同的地址应对不同的使用场景，交易手续费也不同。可以先选择默认的第一个地址类型，交易费用较低。但是对于一些特殊的场景，如ordinals协议类型的交易，需要使用taproot地址，这个后续可以在钱包设置中灵活修改。
 
 5. **开始使用**：创建完成后，你可以使用钱包生成比特币地址，接收和发送比特币。
+<div align="center"> <img src="./img/8.png" width = 600 /> </div>
 
 ### 旧手机自制冷钱包
 
