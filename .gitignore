@@ -1,3 +1,4 @@
+# 被忽略的目录
 02_GetStartedWithBitcoin/04_BitcoinJ/
 03_GetStartedWithSmartContract
 05_GetStartedWithDAO
@@ -6,9 +7,31 @@
 # GitBook 相关文件
 _book/
 node_modules/
+**/node_modules/
 gitbook/
 gitbook-temp/
 *.log
+*.epub
+*.mobi
+*.pdf
 
-# 其他临时文件
+# 编辑器和IDE相关文件
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime*
+.project
+.settings/
+
+# 操作系统相关文件
 .DS_Store
+**/.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# 临时文件
+*.tmp
+*.temp
+.cache/

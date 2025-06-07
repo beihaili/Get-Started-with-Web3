@@ -56,7 +56,7 @@
 
 ## 5. 我们的研究报告（OurResearch）
 
-**研究报告 01：BSC 链上的攻击：为何发生及其潜在的危害** [查看文章](/OurResearch/Search01_BscAttack/README.md)
+**研究报告 01：BSC 链上的攻击：为何发生及其潜在的危害** [查看文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/OurResearch/Search01_BscAttack/README.md)
 
 ## 6. Web3 工作机会（Web3WorkOpportunity）
 
