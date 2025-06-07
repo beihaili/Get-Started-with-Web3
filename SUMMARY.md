@@ -22,6 +22,7 @@
 
 ## Web3 思考
 * [Web3 原则](Web3Thoughts/01_Principles/README.MD)
+* [为什么区块链是必须的？《主权个人》读书笔记](Web3Thoughts/02_WhyBlockchainIsNecessary/README.MD)
 
 ## Web3 工作机会
 * [Web3 工作机会](Web3WorkOpportunities/README.md)

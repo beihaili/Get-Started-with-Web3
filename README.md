@@ -62,9 +62,13 @@
 
 **工作机会和面试技巧** [查看文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/Web3WorkOpportunities/README.md)
 
-## 7. 我的 Web3 思考（Web3Thoughts）
+## 7. Web3 思考集合（Web3Thoughts）
 
-**我的原则** [查看文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/Web3Thoughts/01_Principles/README.MD)
+**我的原则--北海** [查看文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/Web3Thoughts/01_Principles/README.MD)
+
+**为什么区块链是必须的？《主权个人》读书笔记--** [查看文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/Web3Thoughts/02_WhyBlockchainIsNecessary/README.MD)
+
+
 
 ---
 
@@ -96,7 +100,7 @@
 感谢所有为这个项目做出贡献的人！
 
 <a href="https://github.com/beihaili/Get-Started-with-Web3/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=beihaili/Get-Started-with-Web3" />
+  <img src="https://contrib.rocks/image?repo=beihaili/Get-Started-with-Web3&t=1717826094" />
 </a>
 
 <!-- 由 contrib.rocks 提供支持 -->
