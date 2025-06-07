@@ -56,7 +56,7 @@
 
 ## 5. 我们的研究报告（OurResearch）
 
-**研究报告 01：BSC 链上的攻击：为何发生及其潜在的危害** [查看文章](https://bhbadao.github.io/BSC-attack_cn.html)
+**研究报告 01：BSC 链上的攻击：为何发生及其潜在的危害** [查看文章](/OurResearch/Search01_BscAttack/README.md)
 
 ## 6. Web3 工作机会（Web3WorkOpportunity）
 
@@ -73,8 +73,6 @@
 以下正在抓紧完善中，敬请期待：
 
 ### 去中心化组织基础入门（05_GetStartedWithDAO）
-
-### NFT 入门（06_GetStartedWithNFT）
 
 ## 📢 加入我们的开源社区！
 

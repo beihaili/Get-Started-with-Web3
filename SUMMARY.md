@@ -26,3 +26,6 @@
 ## Web3 工作机会
 * [Web3 工作机会](Web3WorkOpportunities/README.md)
 
+## 我们的研究报告
+* [BSC 链上的攻击：为何发生及其潜在的危害](OurResearch/Search01_BscAttack/README.md)
+
