@@ -7,6 +7,7 @@
 * [进行你的第一笔 Web3 交易](01_Web3QuickStart/02_FirstWeb3Transaction/README.MD)
 * [构建你的第一个 Web3 DApp](01_Web3QuickStart/03_FirstWeb3Dapp/README.MD)
 * [有用的 Web3 站点](01_Web3QuickStart/04_UsefulWeb3Sites/README.MD)
+* [发行你的第一个代币](01_Web3QuickStart/05_LaunchYourFirstToken/README.MD)
 
 ## 比特币入门
 * [比特币概述](02_GetStartedWithBitcoin/01_Overview/README.MD)

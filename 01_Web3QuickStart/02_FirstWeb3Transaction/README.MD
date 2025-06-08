@@ -1,20 +1,36 @@
-# Get Started With Web3: 发送第一笔 Web3 交易
+# 发送第一笔 Web3 交易
 
----
+![status](https://img.shields.io/badge/状态-已完成-success)
+![author](https://img.shields.io/badge/作者-beihaili-blue)
+![date](https://img.shields.io/badge/日期-2025--06-orange)
+![difficulty](https://img.shields.io/badge/难度-初级-brightgreen)
 
-自学入门 `Web3` 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 `Web3` 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1-3 讲。
+> 💡 自学入门 `Web3` 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 `Web3` 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1-3 讲。
+> 
+> 欢迎关注我的推特：[@bhbtc1337](https://twitter.com/bhbtc1337)
+> 
+> 北航区块链协会 DAO 推特：[@BHBA_DAO](https://twitter.com/BHBA_DAO)
+> 
+> 进入微信交流群请填表：[表格链接](https://forms.gle/QMBwL6LwZyQew1tX8)
+> 
+> 文章开源在 GitHub：[Get-Started-with-Web3](https://github.com/beihaili/Get-Started-with-Web3)
+> 
+> 购买BTC/ETH/USDT 等加密货币推荐 [币安](https://www.binance.com/zh-CN)[注册链接](https://accounts.marketwebb.me/register?ref=39797374)
 
-欢迎关注我的推特：[@bhbtc1337](https://twitter.com/bhbtc1337)
+## 目录
 
-北航区块链协会 DAO 推特：[@BHBA_DAO](https://twitter.com/BHBA_DAO)
+- [前言](#前言)
+- [交易是什么](#交易是什么)
+- [0 成本在测试网上发出第一笔交易](#0-成本在测试网上发出第一笔交易)
+- [（选做）在主网上发出第一笔交易](#选做在主网上发出第一笔交易)
+- [常见问题](#常见问题)
+- [总结](#总结)
 
-进入微信交流群请填表：[表格链接](https://forms.gle/QMBwL6LwZyQew1tX8)
+## 前言
 
-文章开源在 GitHub：[Get-Started-with-Web3](https://github.com/beihaili/Get-Started-with-Web3)
+还记得第一次用手机转账给朋友的经历吗？那种成功完成操作的成就感是始终让人难忘的。今天，我们将在Web3世界中体验更加有意义的一步——第一笔区块链交易。
 
-购买BTC/ETH/USDT 等加密货币推荐 [币安](https://www.binance.com/zh-CN)[注册链接](https://accounts.marketwebb.me/register?ref=39797374)
-
----
+与传统银行交易不同，Web3交易不需要任何中间人，不需要等待周末或者节假日，更不需要担心国际汇款的高额手续费。今天，我将一步步带你完成你人生中第一笔Web3交易，体验区块链技术带来的全新金融可能性！
 
 ## 交易是什么
 
@@ -113,6 +129,41 @@ gas 费用可以根据需要选择低中高三种类型，也可以自定义 gas
 
 P.S. 可以通过推荐链接注册 OKX 账号，有手续费优惠 [OKX 注册](https://cnouyi.studio/join/7133496)
 
+## 常见问题
+
+#### ❓ 为什么我需要支付Gas费用？
+
+Gas费用是区块链网络的“燃料”，用于补偿矿工或验证者的计算资源消耗。想象成是你要送一封快递，必须支付邮费才能将快递送到目的地。不同的是，Gas费用会因网络拥堵程度而浮动变化。
+
+#### ❓ 交易没有被确认，我该怎么办？
+
+这种情况通常是因为Gas费用设置过低或网络拥堵。你可以：
+
+1. 等待——有时网络拥堵会自行缓解
+2. 如果钱包支持，可以尝试“加速Gas”或“取消交易”功能
+3. 下次尝试设置更高的Gas费用
+
+#### ❓ 测试网和主网有什么区别？
+
+主要区别如下：
+
+1. **价值**：测试网上的代币没有实际价值，而主网代币有真实的经济价值
+2. **安全性**：主网有更多的节点和更强的安全保障
+3. **可获得性**：测试网代币可以免费获取，主网代币需要购买
+4. **用途**：测试网用于开发和测试，主网用于实际交易
+
 ## 总结
 
-本文介绍了如何使用小狐狸钱包发送一笔最简单的转账交易。交易是我们接触区块链最直接的方式，通常交易的参数和调用方法都在区块链项目的前端中写好，用户只需签署交易即可，非常简单。恭喜你完成了第一笔交易，你现在可以在 10 分钟内给国外的朋友转账了😄下一节我们将介绍如何与 Dapp 交互。
+今天，你成功完成了人生中第一笔Web3交易！这看似只是一个简单的操作，却代表着全新金融世界的大门向你打开了。想一想，你现在可以在几分钟内将资产发送给地球上任何角落的人，不受中心化机构的限制，不需要漏出你的个人信息，不需要为跨国付款支付高额手续费。
+
+交易是我们接触区块链最直接的方式，也是Web3世界中最基础的功能。随着你继续探索，你将很快发现这只是开始——DeFi、NFT、DAOs等更多激动人心的可能性正等待着你去探索。
+
+在下一课中，我们将介绍如何与去中心化应用（Dapps）进行交互，打开Web3更多的可能性。做好准备，旅程才刚刚开始！
+
+---
+
+<div align="center">
+<a href="https://github.com/beihaili/Get-Started-with-Web3">🏠 返回主页</a> | 
+<a href="https://twitter.com/bhbtc1337">🐦 关注作者</a> | 
+<a href="https://forms.gle/QMBwL6LwZyQew1tX8">📝 加入交流群</a>
+</div>
