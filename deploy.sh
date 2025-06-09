@@ -40,17 +40,15 @@ echo "👉 创建临时目录..."
 TEMP_DIR=$(mktemp -d)
 cp -R _book/* "$TEMP_DIR/"
 
-# 切换到gh-pages分支
-echo "👉 切换到gh-pages分支..."
-git checkout gh-pages
+# 创建一个新的临时分支，基于当前main分支
+echo "👆 创建临时分支..."
+TEMP_BRANCH="temp-gh-pages-$(date +%s)"
+git checkout -b $TEMP_BRANCH
 
-# 拉取最新的gh-pages分支
-echo "👉 拉取最新的gh-pages分支..."
-git pull origin gh-pages
-
-# 清空当前目录（保留.git）
-echo "👉 清理分支内容..."
-find . -maxdepth 1 ! -name '.git' ! -name '.' ! -name '..' -exec rm -rf {} \;
+# 清空当前目录（除了.git文件夹）
+echo "👆 清理临时分支..."
+git rm -rf .
+git clean -fdx
 
 # 复制构建内容
 echo "👉 复制新构建的内容..."
@@ -65,17 +63,18 @@ COMMIT_MSG="Update GitHub Pages site $(date)"
 echo "👉 提交更改：$COMMIT_MSG"
 git commit -m "$COMMIT_MSG"
 
-# 推送到GitHub
-echo "👉 推送到GitHub..."
-git push origin gh-pages
+# 强制推送到GitHub
+echo "👆 强制推送到gh-pages分支..."
+git push -f origin $TEMP_BRANCH:gh-pages
 
 # 清理临时目录
 echo "👉 清理临时目录..."
 rm -rf "$TEMP_DIR"
 
-# 切回原始分支
-echo "👉 切回$CURRENT_BRANCH分支..."
+# 删除临时分支并切回原始分支
+echo "👆 切回$CURRENT_BRANCH分支..."
 git checkout "$CURRENT_BRANCH"
+git branch -D $TEMP_BRANCH
 
 echo "✅ 完成！GitHub Pages站点已更新。"
 echo "🌐 网站将在几分钟后可在此访问："
