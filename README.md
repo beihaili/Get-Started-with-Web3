@@ -36,7 +36,7 @@
 
 **第 04 讲：体验 Web3 的实用网站** [查看文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/01_Web3QuickStart/04_UsefulWeb3Sites/README.MD)
 
-**第 05 讲：发行你的第一个代币** [查看文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/01_Web3QuickStart/05_LaunchYourFirstToken/README.MD)
+**第 05 讲：推出你的第一个meme币** [查看文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/01_Web3QuickStart/05_LaunchYourFirstToken/README.MD)
 
 ## 2. 学习比特币（02_GetStartedWithBitcoin）
 
