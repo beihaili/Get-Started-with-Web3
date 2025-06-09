@@ -1,11 +1,11 @@
-# 如何在 Pump.fun 上发行你的第一个 Solana 代币
+# 如何在 Pump.fun 上发行你的第一个 meme币
 
 ![status](https://img.shields.io/badge/状态-已完成-success)
 ![author](https://img.shields.io/badge/作者-beihaili-blue)
 ![date](https://img.shields.io/badge/日期-2025--06-orange)
 ![difficulty](https://img.shields.io/badge/难度-初级-brightgreen)
 
-> 💡 本教程将指导您如何在 Solana 链上通过 Pump.fun 平台快速发行自己的第一个代币，无需编写任何代码。整个过程只需几分钟即可完成，是 Web3 新手入门的绝佳实践。
+> 💡 本教程将指导您如何在 Solana 链上通过 Pump.fun 平台快速发行自己的第一个meme币，无需编写任何代码。整个过程只需几分钟即可完成，是 Web3 新手入门的绝佳实践。
 
 ## 目录
 
@@ -32,7 +32,7 @@ Pump.fun 平台的独特之处在于：
 | 实时交易 | 发行后立即可交易，无需等待 |
 | 社区互动 | 内置评论和社交功能 |
 
-### 为什么选择在 Solana 上发币？
+### 为什么选择在 Solana 上发meme？
 
 ⚡ Solana 区块链具有以下优势：
 - 超高交易速度（每秒处理数千笔交易）
@@ -50,7 +50,7 @@ Pump.fun 平台的独特之处在于：
    
    > 🔔 Phantom是最流行的Solana钱包之一，提供了友好的用户界面和安全特性
    
-2. **SOL 代币**：至少 0.03 SOL（用于支付发行费用和首次购买）
+2. **SOL**：至少 0.03 SOL（用于支付发行费用和首次购买）
 3. **代币创意**：包括名称、符号、描述和图像
 
 ### 创建 Phantom 钱包（如果您还没有）
@@ -111,7 +111,7 @@ Pump.fun 平台的独特之处在于：
 
 <div align="center"> <img src="./img/提前购买.jpg" width = 500 /> </div>
 
-3. 建议购买一些初始代币（例如 0.2 SOL），这样您将持有自己发行代币的一部分
+3. 建议购买一些初始meme币（例如 0.2 SOL），这样您将持有自己发行meme币的一部分
 4. 确认交易详情，包括：
    - 发行费用（约 0.02 SOL）
    - 初始购买金额（如有）
