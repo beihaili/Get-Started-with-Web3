@@ -216,8 +216,6 @@ BSC与COSMOS生态系统的交互日益密切，尤其是通过IBC(区块链间�
 
 ### 加入我们
 
-[关注推特 @BHBA_DAO](https://twitter.com/BHBA_DAO)
-
 [加入微信交流群](https://forms.gle/QMBwL6LwZyQew1tX8)
 
 [参与开源贡献](https://github.com/beihaili/Get-Started-with-Web3/)

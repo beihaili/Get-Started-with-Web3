@@ -9,7 +9,6 @@
 > 
 > 欢迎关注我的推特：[@bhbtc1337](https://twitter.com/bhbtc1337)
 > 
-> 北航区块链协会 DAO 推特：[@BHBA_DAO](https://twitter.com/BHBA_DAO)
 > 
 > 进入微信交流群请填表：[表格链接](https://forms.gle/QMBwL6LwZyQew1tX8)
 > 
