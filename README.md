@@ -68,7 +68,7 @@
 
 **为什么区块链是必须的？《主权个人》读书笔记--** [查看文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/Web3Thoughts/02_WhyBlockchainIsNecessary/README.MD)
 
-
+**区块链彩蛋解读指南：b10c...eb5d 玩了哪些「梗」？** [查看文章](https://github.com/beihaili/Get-Started-with-Web3/blob/main/Web3Thoughts/03_TheCoolestTransactionOnBitcoin/README.MD)
 
 ---
 
