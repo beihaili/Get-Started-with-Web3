@@ -9,6 +9,9 @@
 * [有用的 Web3 站点](01_Web3QuickStart/04_UsefulWeb3Sites/README.MD)
 * [发行你的第一个代币](01_Web3QuickStart/05_LaunchYourFirstToken/README.MD)
 
+## 比特币那些事儿
+* [00 引子](比特币那些事儿/00_引子.md)
+
 ## 比特币入门
 * [比特币概述](02_GetStartedWithBitcoin/01_Overview/README.MD)
 * [比特币钱包](02_GetStartedWithBitcoin/02_BitcoinWallet/README.MD)
