@@ -46,6 +46,8 @@
 
 [**第 04 讲：创世纪 — 2008时机成熟**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/比特币那些事儿/04_创世纪：2008时机成熟.md)
 
+[**第 05 讲：创世纪 — 中本聪创世**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/比特币那些事儿/05_创世纪：中本聪创世.md)
+
 ## 1. Web3 快速入门
 
 [**第 01 讲：创建你的第一个 Web3 身份**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/01_Web3QuickStart/01_FirstWeb3Identity/README.MD)
