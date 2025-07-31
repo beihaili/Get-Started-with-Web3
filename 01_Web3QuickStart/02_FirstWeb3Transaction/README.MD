@@ -47,11 +47,11 @@
 
 <div align="center"> <img src="./img/02.jpg" width = 600 /> </div>
 
-选择 Goerli 测试网络。
+选择 Sepolia 测试网络。
 
 ### 2. 领取测试代币
 
-下一步我们去 [Goerli 水龙头](https://goerlifaucet.com/) 领取测试代币。登录网站，填入我们的的钱包地址，点击 Send me ETH 按钮，等待一会就可以收到测试代币了。
+下一步我们去 [Sepolia 水龙头](https://www.alchemy.com/faucets/ethereum-sepolia) 领取测试代币。登录网站，填入我们的的钱包地址，点击 Send me ETH 按钮，等待一会就可以收到测试代币了。
 
 <div align="center"> <img src="./img/03.jpg" width = 600 /> </div>
 
