@@ -22,7 +22,11 @@
 * [比特币钱包](GetStartedWithBitcoin/02_BitcoinWallet/README.MD)
 * [比特币核心](GetStartedWithBitcoin/03_BitcoinCore/README.MD)
 * [比特币 RPC](GetStartedWithBitcoin/04_BitcoinRPC/README.MD)
-* [比特币UTXO归集与低费率转账](GetStartedWithBitcoin/05_BitcoinUTXOConsolidator/README.MD)
+* [比特币UTXO归集与低费率转账](GetStartedWithBitcoin/05_BitcoinLowFeeBroadcast/README.MD)
+
+## 其它学习资源整理
+* [以太坊学习指南](其它学习资源整理/Etherum/README.MD)
+* [DeFi学习指南](其它学习资源整理/DeFi/README.MD)
 
 ## Web3 思考
 * [Web3 原则](Web3Thoughts/01_Principles/README.MD)
