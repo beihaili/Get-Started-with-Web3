@@ -74,9 +74,9 @@
 
 ## 3. 其它学习资源
 
-[**以太坊学习资源**](https://github.com/beihaili/Get-Started-with-Web3/tree/main/其它学习资源整理/Etherum)
+[**以太坊学习指南**](https://github.com/beihaili/Get-Started-with-Web3/tree/main/其它学习资源整理/Etherum)
 
-[**DeFi 学习资源**](https://github.com/beihaili/Get-Started-with-Web3/tree/main/其它学习资源整理/DeFi)
+[**DeFi学习指南**](https://github.com/beihaili/Get-Started-with-Web3/tree/main/其它学习资源整理/DeFi)
 
 ## 5. Web3 思考集合
 

@@ -1,4 +1,4 @@
-# DeFi (去中心化金融) 完整学习指南
+# DeFi (去中心化金融) 学习指南
 
 ![status](https://img.shields.io/badge/状态-持续更新-blue)
 ![author](https://img.shields.io/badge/作者-beihaili-blue)
