@@ -70,7 +70,7 @@
 
 [**第 04 讲：比特币 RPC 应用开发**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/GetStartedWithBitcoin/04_BitcoinRPC/README.MD)
 
-[**第 05 讲：比特币 UTXO 归集与低费率转账**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/GetStartedWithBitcoin/05_BitcoinUTXOConsolidator/README.MD)
+[**第 05 讲：比特币低费率广播工具**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/GetStartedWithBitcoin/05_BitcoinUTXOConsolidator/README.MD)
 
 ## 3. 其它学习资源
 
@@ -101,6 +101,8 @@
 > **Web3的世界需要你的声音和智慧！**
 
 无论你是区块链专家还是刚入门的新人，我们都欢迎你的贡献！这个项目旨在成为社区共同创建的知识库，集思广益，共同成长。
+
+进入微信交流群请填表：[表格链接](https://forms.gle/QMBwL6LwZyQew1tX8)
 
 ### 为什么要贡献？
 
