@@ -50,35 +50,33 @@
 
 ## 1. Web3 快速入门
 
-[**第 01 讲：创建你的第一个 Web3 身份**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/01_Web3QuickStart/01_FirstWeb3Identity/README.MD)
+[**第 01 讲：创建你的第一个 Web3 身份**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/Web3QuickStart/01_FirstWeb3Identity/README.MD)
 
-[**第 02 讲：进行你的第一笔 Web3 交易**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/01_Web3QuickStart/02_FirstWeb3Transaction/README.MD)
+[**第 02 讲：进行你的第一笔 Web3 交易**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/Web3QuickStart/02_FirstWeb3Transaction/README.MD)
 
-[**第 03 讲：构建你的第一个 Web3 DApp**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/01_Web3QuickStart/03_FirstWeb3Dapp/README.MD)
+[**第 03 讲：构建你的第一个 Web3 DApp**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/Web3QuickStart/03_FirstWeb3Dapp/README.MD)
 
-[**第 04 讲：有用的 Web3 站点**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/01_Web3QuickStart/04_UsefulWeb3Sites/README.MD)
+[**第 04 讲：有用的 Web3 站点**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/Web3QuickStart/04_UsefulWeb3Sites/README.MD)
 
-[**第 05 讲：发行你的第一个代币**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/01_Web3QuickStart/05_LaunchYourFirstToken/README.MD)
+[**第 05 讲：发行你的第一个代币**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/Web3QuickStart/05_LaunchYourFirstToken/README.MD)
 
 ## 2. 比特币技术入门
 
-[**第 01 讲：比特币概述**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/02_GetStartedWithBitcoin/01_Overview/README.MD)
+[**第 01 讲：比特币概述**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/GetStartedWithBitcoin/01_Overview/README.MD)
 
-[**第 02 讲：比特币钱包**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/02_GetStartedWithBitcoin/02_BitcoinWallet/README.MD)
+[**第 02 讲：比特币钱包**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/GetStartedWithBitcoin/02_BitcoinWallet/README.MD)
 
-[**第 03 讲：比特币核心节点**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/02_GetStartedWithBitcoin/03_BitcoinCore/README.MD)
+[**第 03 讲：比特币核心节点**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/GetStartedWithBitcoin/03_BitcoinCore/README.MD)
 
-[**第 04 讲：比特币 RPC 应用开发**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/02_GetStartedWithBitcoin/04_BitcoinRPC/README.MD)
+[**第 04 讲：比特币 RPC 应用开发**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/GetStartedWithBitcoin/04_BitcoinRPC/README.MD)
 
-[**第 05 讲：比特币 UTXO 归集与低费率转账**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/02_GetStartedWithBitcoin/05_BitcoinUTXOConsolidator/README.MD)
+[**第 05 讲：比特币 UTXO 归集与低费率转账**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/GetStartedWithBitcoin/05_BitcoinUTXOConsolidator/README.MD)
 
-## 3. 以太坊入门
+## 3. 其它学习资源
 
-[**第 01 讲：以太坊概述**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/03_GetStartedWithEtherum/01_Overview/README.MD)
+[**以太坊学习资源**](https://github.com/beihaili/Get-Started-with-Web3/tree/main/其它学习资源整理/Etherum)
 
-## 4. DeFi 入门
-
-[**第 01 讲：DeFi 入门路径和资源**](https://github.com/beihaili/Get-Started-with-Web3/tree/main/04_GetStartedWithDeFi)
+[**DeFi 学习资源**](https://github.com/beihaili/Get-Started-with-Web3/tree/main/其它学习资源整理/DeFi)
 
 ## 5. Web3 思考集合
 
