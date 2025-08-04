@@ -70,7 +70,13 @@
 
 [**第 04 讲：比特币 RPC 应用开发**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/GetStartedWithBitcoin/04_BitcoinRPC/README.MD)
 
-[**第 05 讲：比特币低费率广播工具**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/GetStartedWithBitcoin/05_BitcoinUTXOConsolidator/README.MD)
+[**第 05 讲：【实践】比特币低费率广播工具**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/GetStartedWithBitcoin/05_BitcoinLowFeeBroadcast/README.MD)
+
+[**第 06 讲：比特币交易基础**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/GetStartedWithBitcoin/06_BitcoinTx/README.MD)
+
+[**第 07 讲：比特币交易进阶**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/GetStartedWithBitcoin/07_BitcoinTxAdvanced/README.MD)
+
+[**第 08 讲：比特币扩容与治理**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/GetStartedWithBitcoin/08_BitcoinGovernance/README.MD)
 
 ## 3. 其它学习资源
 

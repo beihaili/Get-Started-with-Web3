@@ -23,6 +23,9 @@
 * [比特币核心](GetStartedWithBitcoin/03_BitcoinCore/README.MD)
 * [比特币 RPC](GetStartedWithBitcoin/04_BitcoinRPC/README.MD)
 * [比特币UTXO归集与低费率转账](GetStartedWithBitcoin/05_BitcoinLowFeeBroadcast/README.MD)
+* [比特币交易基础](GetStartedWithBitcoin/06_BitcoinTx/README.MD)
+* [比特币交易进阶](GetStartedWithBitcoin/07_BitcoinTxAdvanced/README.MD)
+* [比特币扩容与治理](GetStartedWithBitcoin/08_BitcoinGovernance/README.MD)
 
 ## 其它学习资源整理
 * [以太坊学习指南](其它学习资源整理/Etherum/README.MD)
