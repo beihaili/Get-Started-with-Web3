@@ -8,6 +8,7 @@
 * [构建你的第一个 Web3 DApp](Web3QuickStart/03_FirstWeb3Dapp/README.MD)
 * [有用的 Web3 站点](Web3QuickStart/04_UsefulWeb3Sites/README.MD)
 * [发行你的第一个代币](Web3QuickStart/05_LaunchYourFirstToken/README.MD)
+* [Web3安全防护与防骗指南](Web3QuickStart/06_Web3Security/README.MD)
 
 ## 比特币那些事儿
 * [00 引子：一束照进现实的理想之光](比特币那些事儿/00_引子：一束照进现实的理想之光.md)
