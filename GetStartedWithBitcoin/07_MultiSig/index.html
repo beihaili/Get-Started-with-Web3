@@ -1,0 +1,1214 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>多重签名交易 · Get Started with Web3</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.3">
+        <meta name="author" content="beihaili">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../08_SegWit/" />
+    
+    
+    <link rel="prev" href="../06_BitcoinTx/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Web3 快速入门</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../Web3QuickStart/01_FirstWeb3Identity/">
+            
+                <a href="../../Web3QuickStart/01_FirstWeb3Identity/">
+            
+                    
+                    创建你的第一个 Web3 身份
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../Web3QuickStart/02_FirstWeb3Transaction/">
+            
+                <a href="../../Web3QuickStart/02_FirstWeb3Transaction/">
+            
+                    
+                    进行你的第一笔 Web3 交易
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../Web3QuickStart/03_FirstWeb3Dapp/">
+            
+                <a href="../../Web3QuickStart/03_FirstWeb3Dapp/">
+            
+                    
+                    构建你的第一个 Web3 DApp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../Web3QuickStart/04_UsefulWeb3Sites/">
+            
+                <a href="../../Web3QuickStart/04_UsefulWeb3Sites/">
+            
+                    
+                    有用的 Web3 站点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../Web3QuickStart/05_LaunchYourFirstToken/">
+            
+                <a href="../../Web3QuickStart/05_LaunchYourFirstToken/">
+            
+                    
+                    发行你的第一个代币
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../../Web3QuickStart/06_Web3Security/">
+            
+                <a href="../../Web3QuickStart/06_Web3Security/">
+            
+                    
+                    Web3安全防护与防骗指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">比特币那些事儿</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../比特币那些事儿/00_引子：一束照进现实的理想之光.html">
+            
+                <a href="../../比特币那些事儿/00_引子：一束照进现实的理想之光.html">
+            
+                    
+                    00 引子：一束照进现实的理想之光
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../比特币那些事儿/01_创世纪：哈耶克的预言.html">
+            
+                <a href="../../比特币那些事儿/01_创世纪：哈耶克的预言.html">
+            
+                    
+                    01 创世纪：哈耶克的预言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../比特币那些事儿/02_创世纪：乔姆的孤独方舟.html">
+            
+                <a href="../../比特币那些事儿/02_创世纪：乔姆的孤独方舟.html">
+            
+                    
+                    02 创世纪：乔姆的孤独方舟
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../../比特币那些事儿/03_创世纪：密码朋克的技术拼图.html">
+            
+                <a href="../../比特币那些事儿/03_创世纪：密码朋克的技术拼图.html">
+            
+                    
+                    03 创世纪：密码朋克的技术拼图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../../比特币那些事儿/04_创世纪：2008时机成熟.html">
+            
+                <a href="../../比特币那些事儿/04_创世纪：2008时机成熟.html">
+            
+                    
+                    04 创世纪：2008时机成熟
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../../比特币那些事儿/05_创世纪：中本聪创世.html">
+            
+                <a href="../../比特币那些事儿/05_创世纪：中本聪创世.html">
+            
+                    
+                    05 创世纪：中本聪创世
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../../比特币那些事儿/06_初出茅庐：第一个信徒.html">
+            
+                <a href="../../比特币那些事儿/06_初出茅庐：第一个信徒.html">
+            
+                    
+                    06 初出茅庐：第一个信徒
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="../../比特币那些事儿/07_初出茅庐：社区与工具.html">
+            
+                <a href="../../比特币那些事儿/07_初出茅庐：社区与工具.html">
+            
+                    
+                    07 初出茅庐：社区与工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="../../比特币那些事儿/08_初出茅庐：价值发现.html">
+            
+                <a href="../../比特币那些事儿/08_初出茅庐：价值发现.html">
+            
+                    
+                    08 初出茅庐：价值发现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">比特币入门</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../01_Overview/">
+            
+                <a href="../01_Overview/">
+            
+                    
+                    比特币概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../02_BitcoinWallet/">
+            
+                <a href="../02_BitcoinWallet/">
+            
+                    
+                    比特币钱包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../03_BitcoinCore/">
+            
+                <a href="../03_BitcoinCore/">
+            
+                    
+                    比特币核心
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../04_BitcoinRPC/">
+            
+                <a href="../04_BitcoinRPC/">
+            
+                    
+                    比特币 RPC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../05_BitcoinLowFeeBroadcast/">
+            
+                <a href="../05_BitcoinLowFeeBroadcast/">
+            
+                    
+                    比特币UTXO归集与低费率转账
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../06_BitcoinTx/">
+            
+                <a href="../06_BitcoinTx/">
+            
+                    
+                    比特币交易基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.7" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    多重签名交易
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="../08_SegWit/">
+            
+                <a href="../08_SegWit/">
+            
+                    
+                    隔离见证(SegWit)技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="../09_Taproot/">
+            
+                <a href="../09_Taproot/">
+            
+                    
+                    Taproot升级详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="../10_Ordinals/">
+            
+                <a href="../10_Ordinals/">
+            
+                    
+                    Ordinals与Inscriptions技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.11" data-path="../11_AdvancedTransactions/">
+            
+                <a href="../11_AdvancedTransactions/">
+            
+                    
+                    高级交易应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.12" data-path="../12_BitcoinGovernance/">
+            
+                <a href="../12_BitcoinGovernance/">
+            
+                    
+                    比特币扩容与治理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其它学习资源整理</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../其它学习资源整理/Etherum/">
+            
+                <a href="../../其它学习资源整理/Etherum/">
+            
+                    
+                    以太坊学习指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../其它学习资源整理/DeFi/">
+            
+                <a href="../../其它学习资源整理/DeFi/">
+            
+                    
+                    DeFi学习指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Web3 思考</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../Web3Thoughts/01_Principles/">
+            
+                <a href="../../Web3Thoughts/01_Principles/">
+            
+                    
+                    Web3 原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../../Web3Thoughts/02_WhyBlockchainIsNecessary/">
+            
+                <a href="../../Web3Thoughts/02_WhyBlockchainIsNecessary/">
+            
+                    
+                    为什么区块链是必须的？《主权个人》读书笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../../Web3Thoughts/03_TheCoolestTransactionOnBitcoin/">
+            
+                <a href="../../Web3Thoughts/03_TheCoolestTransactionOnBitcoin/">
+            
+                    
+                    区块链彩蛋解读指南：b10c...eb5d 玩了哪些「梗」？
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Web3 工作机会</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../Web3WorkOpportunities/">
+            
+                <a href="../../Web3WorkOpportunities/">
+            
+                    
+                    Web3 工作机会
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">我们的研究报告</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../OurResearch/Search01_BscAttack/">
+            
+                <a href="../../OurResearch/Search01_BscAttack/">
+            
+                    
+                    BSC 链上的攻击：为何发生及其潜在的危害
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >多重签名交易</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="多重签名交易">多重签名交易</h1>
+<p><img src="https://img.shields.io/badge/状态-已完成-success" alt="status"></img>
+<img src="https://img.shields.io/badge/作者-beihaili-blue" alt="author"></img>
+<img src="https://img.shields.io/badge/日期-2025--06-orange" alt="date"></img>
+<img src="https://img.shields.io/badge/难度-中级-yellow" alt="difficulty"></img></p>
+<blockquote>
+<p>💡 自学入门 <code>Web3</code> 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 <code>Web3</code> 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1-3 讲。</p>
+<p>欢迎关注我的推特：<a href="https://twitter.com/bhbtc1337" target="_blank">@bhbtc1337</a></p>
+<p>进入微信交流群请填表：<a href="https://forms.gle/QMBwL6LwZyQew1tX8" target="_blank">表格链接</a></p>
+<p>文章开源在 GitHub：<a href="https://github.com/beihaili/Get-Started-with-Web3" target="_blank">Get-Started-with-Web3</a></p>
+<p>购买BTC/ETH/USDT 等加密货币推荐 <a href="https://www.binance.com/zh-CN" target="_blank">币安</a><a href="https://accounts.marketwebb.me/register?ref=39797374" target="_blank">注册链接</a></p>
+</blockquote>
+<h2 id="目录">目录</h2>
+<ul>
+<li><a href="#前言">前言</a></li>
+<li><a href="#多重签名基础概念">多重签名基础概念</a></li>
+<li><a href="#多重签名技术原理">多重签名技术原理</a></li>
+<li><a href="#p2sh多重签名">P2SH多重签名</a></li>
+<li><a href="#企业级应用场景">企业级应用场景</a></li>
+<li><a href="#实战演练创建多签钱包">实战演练：创建多签钱包</a></li>
+<li><a href="#常见问题">常见问题</a></li>
+<li><a href="#结语">结语</a></li>
+</ul>
+<h2 id="前言">前言</h2>
+<p>在前一章《比特币交易基础》中，我们学习了比特币交易的基本组成、UTXO模型和P2PKH交易。现在，我们将深入探讨比特币交易系统的一个重要功能：多重签名（MultiSig）。</p>
+<p>多重签名是比特币技术发展的重要里程碑，它不仅增强了安全性，还为企业和机构提供了更灵活的资金管理方案。本章将详细讲解多重签名的原理、实现方式和实际应用。</p>
+<h2 id="多重签名基础概念">多重签名基础概念</h2>
+<h3 id="什么是多重签名？">什么是多重签名？</h3>
+<p>多重签名（MultiSig）是一种需要多个私钥签名才能花费资金的机制，类似于银行的联合账户或公司的财务审批流程。</p>
+<h3 id="🔑-不同交易类型的签名要求">🔑 不同交易类型的签名要求</h3>
+<h4 id="p2pkh（付款给公钥哈希）--单签名交易">P2PKH（付款给公钥哈希）- 单签名交易</h4>
+<pre><code>之前交易输出: OP_DUP OP_HASH160 &lt;Alice的公钥哈希&gt; OP_EQUALVERIFY OP_CHECKSIG
+当前交易输入: &lt;Alice的签名&gt; &lt;Alice的公钥&gt;
+</code></pre><ul>
+<li>✅ <strong>只需要1个签名</strong>：因为之前交易指定"付款给Alice的公钥哈希"</li>
+<li>🔓 <strong>解锁条件</strong>：提供正确的公钥和对应的私钥签名即可</li>
+<li>👤 <strong>使用场景</strong>：个人钱包之间的转账</li>
+</ul>
+<h4 id="多重签名交易---需要多个签名">多重签名交易 - 需要多个签名</h4>
+<pre><code>之前交易输出: OP_2 &lt;公钥1&gt; &lt;公钥2&gt; &lt;公钥3&gt; OP_3 OP_CHECKMULTISIG (2-of-3多签)
+当前交易输入: OP_0 &lt;签名1&gt; &lt;签名2&gt; &lt;赎回脚本&gt;
+</code></pre><ul>
+<li>⚠️ <strong>需要多个签名</strong>：因为之前交易设定了"需要3个公钥中的任意2个签名"</li>
+<li>🔓 <strong>解锁条件</strong>：必须提供足够数量的有效签名</li>
+<li>🏢 <strong>使用场景</strong>：企业资金管理、托管服务、增强安全性</li>
+</ul>
+<h4 id="为什么签名要求不同？">为什么签名要求不同？</h4>
+<table>
+<thead>
+<tr>
+<th>交易类型</th>
+<th>之前交易的锁定条件</th>
+<th>解锁所需签名</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P2PKH</td>
+<td>付款给单个公钥哈希</td>
+<td>1个签名</td>
+<td>资金归单人所有</td>
+</tr>
+<tr>
+<td>2-of-3多签</td>
+<td>需要3个公钥中的2个</td>
+<td>2个签名</td>
+<td>资金需要多方共同控制</td>
+</tr>
+<tr>
+<td>3-of-5多签</td>
+<td>需要5个公钥中的3个</td>
+<td>3个签名</td>
+<td>更高的安全要求</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>💡 <strong>关键理解</strong>：签名要求由<strong>之前交易的输出脚本</strong>决定，不是任意选择的！</p>
+</blockquote>
+<h3 id="🌟-形象化理解">🌟 形象化理解</h3>
+<p>想象比特币就像一个智能保险箱：</p>
+<p><strong>普通保险箱（P2PKH）</strong>：</p>
+<pre><code>📦 之前有人给Alice发了一个保险箱，上面写着："只有Alice的钥匙能打开"
+🔑 现在Alice要用这个保险箱里的钱，只需要用她的钥匙（私钥签名）即可
+</code></pre><p><strong>多重签名保险箱（MultiSig）</strong>：</p>
+<pre><code>📦 之前有人给公司发了一个保险箱，上面写着："需要CEO、CFO、CTO中任意2人的钥匙才能打开"
+🔑🔑 现在公司要用这个保险箱里的钱，必须有2个人同时用钥匙（2个私钥签名）
+</code></pre><p><strong>重点</strong>：保险箱的开锁规则是<strong>发送者在创建保险箱时就设定好的</strong>，接收者必须按照规则来解锁！</p>
+<h2 id="多重签名技术原理">多重签名技术原理</h2>
+<h3 id="🐛-深入理解：为什么多签需要-op0？">🐛 深入理解：为什么多签需要 OP_0？</h3>
+<p>这是比特币历史上一个著名的技术债务！</p>
+<p><strong>📖 历史背景</strong></p>
+<p>当中本聪最初实现多重签名验证时，犯了一个小错误：</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// 比特币源码中的多签验证逻辑（简化版）</span>
+bool <span class="hljs-title class_">CheckMultiSig</span>() {
+    <span class="hljs-comment">// ... 验证签名逻辑 ...</span>
+
+    <span class="hljs-comment">// 🐛 这里有个bug：会多pop一个元素</span>
+    stack.<span class="hljs-title function_">pop</span>();  <span class="hljs-comment">// 本来不应该有这一行</span>
+
+    <span class="hljs-comment">// 验证结果</span>
+    <span class="hljs-keyword">return</span> isValid;
+}
+</code></pre>
+<p><strong>🛠️ 解决方案：添加 OP_0</strong></p>
+<p>为了补偿这个多出来的pop操作，必须在堆栈顶部放一个"垫片"：</p>
+<pre><code>实际需要的堆栈：
+[OP_0] [签名2] [签名1] [公钥1] [公钥2] [公钥3] [2] [3] [OP_CHECKMULTISIG]
+ ↑
+ 这个OP_0就是"垫片"，会被bug多pop掉
+</code></pre><p><strong>🤔 为什么不修复这个bug？</strong></p>
+<ol>
+<li><strong>向后兼容性</strong>：修复会导致所有历史多签交易失效</li>
+<li><strong>共识规则</strong>：所有节点必须保持相同的验证逻辑  </li>
+<li><strong>历史成本</strong>：修复的风险远大于收益</li>
+</ol>
+<blockquote>
+<p>💭 <strong>有趣的事实</strong>：这个 OP_0 至今仍存在于每一笔多重签名交易中，成为比特币历史的永久印记！</p>
+</blockquote>
+<h3 id="多重签名交易示例">多重签名交易示例</h3>
+<h4 id="例子1：多重签名交易输入">例子1：多重签名交易输入</h4>
+<pre><code class="lang-json">{
+  <span class="hljs-string">"txid"</span>: <span class="hljs-string">"b2c3d4e5f6a7...（省略）"</span>,
+  <span class="hljs-string">"vout"</span>: <span class="hljs-number">1</span>,
+  <span class="hljs-string">"scriptSig"</span>: {
+    <span class="hljs-string">"asm"</span>: <span class="hljs-string">"OP_0 3045022100a1b2c3...（签名1） 3044022067c8d9...（签名2）"</span>,
+    <span class="hljs-string">"hex"</span>: <span class="hljs-string">"00483045022100a1b2c3...473044022067c8d9..."</span>
+  },
+  <span class="hljs-string">"sequence"</span>: <span class="hljs-number">4294967295</span>
+}
+</code></pre>
+<p><strong>分析</strong>：</p>
+<ul>
+<li><code>OP_0</code>：多重签名的特殊要求（Bitcoin的一个已知bug，需要额外的0）</li>
+<li>包含两个数字签名，满足2-of-3多签要求</li>
+<li>这笔输入对应的之前交易规定了需要3个公钥中的2个签名</li>
+</ul>
+<h2 id="p2sh多重签名">P2SH多重签名</h2>
+<h3 id="p2sh输出（支持复杂脚本）">P2SH输出（支持复杂脚本）</h3>
+<pre><code class="lang-json">{
+  <span class="hljs-string">"value"</span>: <span class="hljs-number">0.05000000</span>,
+  <span class="hljs-string">"n"</span>: <span class="hljs-number">1</span>,
+  <span class="hljs-string">"scriptPubKey"</span>: {
+    <span class="hljs-string">"asm"</span>: <span class="hljs-string">"OP_HASH160 1234567890abcdef...（20字节脚本哈希） OP_EQUAL"</span>,
+    <span class="hljs-string">"hex"</span>: <span class="hljs-string">"a9141234567890abcdef...87"</span>,
+    <span class="hljs-string">"type"</span>: <span class="hljs-string">"scripthash"</span>,
+    <span class="hljs-string">"address"</span>: <span class="hljs-string">"3AnNyxwqnDUP7r3jKFaLWcqwYBdXjTPoBe"</span>
+  }
+}
+</code></pre>
+<p><strong>分析</strong>：</p>
+<ul>
+<li>地址以<code>3</code>开头的P2SH地址</li>
+<li>可以包含多重签名、时间锁等复杂条件</li>
+<li>脚本哈希隐藏了真实的复杂脚本，提高隐私性</li>
+</ul>
+<h3 id="p2sh-vs-原生多签">P2SH vs 原生多签</h3>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>原生多签</th>
+<th>P2SH多签</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>地址格式</strong></td>
+<td>1开头</td>
+<td>3开头</td>
+</tr>
+<tr>
+<td><strong>脚本可见性</strong></td>
+<td>脚本完全暴露</td>
+<td>脚本哈希隐藏</td>
+</tr>
+<tr>
+<td><strong>隐私性</strong></td>
+<td>较差</td>
+<td>较好</td>
+</tr>
+<tr>
+<td><strong>兼容性</strong></td>
+<td>所有节点支持</td>
+<td>需要P2SH支持</td>
+</tr>
+<tr>
+<td><strong>费用</strong></td>
+<td>较高</td>
+<td>较低</td>
+</tr>
+</tbody>
+</table>
+<h2 id="企业级应用场景">企业级应用场景</h2>
+<h3 id="1-企业资金管理">1. 企业资金管理</h3>
+<pre><code>典型配置：3-of-5多签
+参与者：
+- CEO（主要决策者）
+- CFO（财务负责人）
+- CTO（技术负责人）
+- 董事会成员A
+- 董事会成员B
+
+使用场景：
+- 大额资金转移需要3人同意
+- 防止单点故障
+- 增强安全性
+</code></pre><h3 id="2-托管服务">2. 托管服务</h3>
+<pre><code>典型配置：2-of-3多签
+参与者：
+- 用户（资金所有者）
+- 托管服务商
+- 第三方仲裁者
+
+使用场景：
+- 用户保留部分控制权
+- 托管服务商提供专业管理
+- 第三方在争议时介入
+</code></pre><h3 id="3-家庭财务管理">3. 家庭财务管理</h3>
+<pre><code>典型配置：2-of-2多签
+参与者：
+- 配偶A
+- 配偶B
+
+使用场景：
+- 共同管理家庭资金
+- 需要双方同意才能花费
+- 增强家庭财务安全
+</code></pre><h3 id="4-冷钱包备份">4. 冷钱包备份</h3>
+<pre><code>典型配置：2-of-3多签
+参与者：
+- 主钱包
+- 备份钱包A
+- 备份钱包B
+
+使用场景：
+- 防止单点故障
+- 多重备份保护
+- 灾难恢复
+</code></pre><h2 id="实战演练：创建多签钱包">实战演练：创建多签钱包</h2>
+<h3 id="创建多重签名地址">创建多重签名地址</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> requests
+<span class="hljs-keyword">import</span> json
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">bitcoin_rpc</span>(<span class="hljs-params">method, params=[]</span>):
+    url = <span class="hljs-string">"http://localhost:8332"</span>
+    headers = {<span class="hljs-string">'content-type'</span>: <span class="hljs-string">'application/json'</span>}
+
+    payload = {
+        <span class="hljs-string">"method"</span>: method,
+        <span class="hljs-string">"params"</span>: params,
+        <span class="hljs-string">"jsonrpc"</span>: <span class="hljs-string">"2.0"</span>,
+        <span class="hljs-string">"id"</span>: <span class="hljs-number">0</span>,
+    }
+
+    response = requests.post(url, data=json.dumps(payload), headers=headers, auth=(<span class="hljs-string">'user'</span>, <span class="hljs-string">'password'</span>))
+    <span class="hljs-keyword">return</span> response.json()
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">create_multisig_address</span>():
+    <span class="hljs-comment"># 1. 生成公钥（示例）</span>
+    pubkeys = [
+        <span class="hljs-string">"03a1b2c3d4e5f6..."</span>,  <span class="hljs-comment"># 公钥1</span>
+        <span class="hljs-string">"03b1c2d3e4f5a6..."</span>,  <span class="hljs-comment"># 公钥2</span>
+        <span class="hljs-string">"03c1d2e3f4a5b6..."</span>   <span class="hljs-comment"># 公钥3</span>
+    ]
+
+    <span class="hljs-comment"># 2. 创建2-of-3多签地址</span>
+    result = bitcoin_rpc(<span class="hljs-string">"createmultisig"</span>, [<span class="hljs-number">2</span>, pubkeys])
+
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">f"多签地址: <span class="hljs-subst">{result[<span class="hljs-string">'result'</span>][<span class="hljs-string">'address'</span>]}</span>"</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">f"赎回脚本: <span class="hljs-subst">{result[<span class="hljs-string">'result'</span>][<span class="hljs-string">'redeemScript'</span>]}</span>"</span>)
+
+    <span class="hljs-keyword">return</span> result[<span class="hljs-string">'result'</span>]
+
+<span class="hljs-comment"># 执行创建多签地址</span>
+multisig_info = create_multisig_address()
+</code></pre>
+<h3 id="多签交易签名流程">多签交易签名流程</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">sign_multisig_transaction</span>(<span class="hljs-params">raw_tx, private_keys, redeem_script</span>):
+    <span class="hljs-string">"""
+    对多签交易进行签名
+    """</span>
+
+    <span class="hljs-comment"># 1. 使用第一个私钥签名</span>
+    signed_tx1 = bitcoin_rpc(<span class="hljs-string">"signrawtransaction"</span>, [raw_tx, [{<span class="hljs-string">"txid"</span>: <span class="hljs-string">"prev_txid"</span>, <span class="hljs-string">"vout"</span>: <span class="hljs-number">0</span>, <span class="hljs-string">"scriptPubKey"</span>: <span class="hljs-string">"script"</span>, <span class="hljs-string">"redeemScript"</span>: redeem_script}], [private_keys[<span class="hljs-number">0</span>]]])
+
+    <span class="hljs-comment"># 2. 使用第二个私钥签名</span>
+    signed_tx2 = bitcoin_rpc(<span class="hljs-string">"signrawtransaction"</span>, [signed_tx1[<span class="hljs-string">'result'</span>][<span class="hljs-string">'hex'</span>], [{<span class="hljs-string">"txid"</span>: <span class="hljs-string">"prev_txid"</span>, <span class="hljs-string">"vout"</span>: <span class="hljs-number">0</span>, <span class="hljs-string">"scriptPubKey"</span>: <span class="hljs-string">"script"</span>, <span class="hljs-string">"redeemScript"</span>: redeem_script}], [private_keys[<span class="hljs-number">1</span>]]])
+
+    <span class="hljs-keyword">return</span> signed_tx2[<span class="hljs-string">'result'</span>][<span class="hljs-string">'hex'</span>]
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">broadcast_multisig_transaction</span>(<span class="hljs-params">signed_tx</span>):
+    <span class="hljs-string">"""
+    广播多签交易
+    """</span>
+
+    result = bitcoin_rpc(<span class="hljs-string">"sendrawtransaction"</span>, [signed_tx])
+    <span class="hljs-keyword">return</span> result[<span class="hljs-string">'result'</span>]
+</code></pre>
+<h3 id="多签钱包管理工具">多签钱包管理工具</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MultiSigWallet</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, pubkeys, required_signatures</span>):
+        <span class="hljs-variable language_">self</span>.pubkeys = pubkeys
+        <span class="hljs-variable language_">self</span>.required_signatures = required_signatures
+        <span class="hljs-variable language_">self</span>.address = <span class="hljs-literal">None</span>
+        <span class="hljs-variable language_">self</span>.redeem_script = <span class="hljs-literal">None</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">create_wallet</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-string">"""创建多签钱包"""</span>
+        result = bitcoin_rpc(<span class="hljs-string">"createmultisig"</span>, [<span class="hljs-variable language_">self</span>.required_signatures, <span class="hljs-variable language_">self</span>.pubkeys])
+        <span class="hljs-variable language_">self</span>.address = result[<span class="hljs-string">'result'</span>][<span class="hljs-string">'address'</span>]
+        <span class="hljs-variable language_">self</span>.redeem_script = result[<span class="hljs-string">'result'</span>][<span class="hljs-string">'redeemScript'</span>]
+        <span class="hljs-keyword">return</span> <span class="hljs-variable language_">self</span>.address
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">create_transaction</span>(<span class="hljs-params">self, outputs</span>):
+        <span class="hljs-string">"""创建多签交易"""</span>
+        inputs = [{<span class="hljs-string">"txid"</span>: <span class="hljs-string">"previous_utxo"</span>, <span class="hljs-string">"vout"</span>: <span class="hljs-number">0</span>}]
+        raw_tx = bitcoin_rpc(<span class="hljs-string">"createrawtransaction"</span>, [inputs, outputs])
+        <span class="hljs-keyword">return</span> raw_tx[<span class="hljs-string">'result'</span>]
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">sign_transaction</span>(<span class="hljs-params">self, raw_tx, private_key</span>):
+        <span class="hljs-string">"""签名交易"""</span>
+        <span class="hljs-comment"># 实现签名逻辑</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">broadcast_transaction</span>(<span class="hljs-params">self, signed_tx</span>):
+        <span class="hljs-string">"""广播交易"""</span>
+        <span class="hljs-keyword">return</span> bitcoin_rpc(<span class="hljs-string">"sendrawtransaction"</span>, [signed_tx])
+
+<span class="hljs-comment"># 使用示例</span>
+pubkeys = [<span class="hljs-string">"pubkey1"</span>, <span class="hljs-string">"pubkey2"</span>, <span class="hljs-string">"pubkey3"</span>]
+wallet = MultiSigWallet(pubkeys, <span class="hljs-number">2</span>)
+address = wallet.create_wallet()
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f"多签地址: <span class="hljs-subst">{address}</span>"</span>)
+</code></pre>
+<h2 id="常见问题">常见问题</h2>
+<h3 id="❓-多重签名的安全性如何？">❓ 多重签名的安全性如何？</h3>
+<p>多重签名比单签名更安全：</p>
+<pre><code>安全性对比：
+
+单签名风险：
+- 私钥丢失 → 资金永久丢失
+- 私钥泄露 → 资金被盗
+
+2-of-3多签安全性：
+- 1个私钥丢失 → 仍可用其他2个
+- 1个私钥泄露 → 攻击者仍需另1个私钥
+- 需要攻击者同时获得2个私钥才能盗取资金
+</code></pre><h3 id="❓-如何选择合适的多签配置？">❓ 如何选择合适的多签配置？</h3>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>推荐配置</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>个人备份</td>
+<td>2-of-2</td>
+<td>简单有效</td>
+</tr>
+<tr>
+<td>家庭财务</td>
+<td>2-of-2</td>
+<td>需要双方同意</td>
+</tr>
+<tr>
+<td>企业资金</td>
+<td>2-of-3 或 3-of-5</td>
+<td>平衡安全性和便利性</td>
+</tr>
+<tr>
+<td>托管服务</td>
+<td>2-of-3</td>
+<td>用户+服务商+仲裁者</td>
+</tr>
+<tr>
+<td>高安全性</td>
+<td>3-of-5 或 4-of-7</td>
+<td>更高的安全要求</td>
+</tr>
+</tbody>
+</table>
+<h3 id="❓-多签交易的费用如何计算？">❓ 多签交易的费用如何计算？</h3>
+<p>多签交易费用通常比单签交易高：</p>
+<pre><code>费用对比：
+- 单签交易：~225字节
+- 2-of-3多签：~400字节
+- 3-of-5多签：~500字节
+
+费用增加原因：
+- 需要更多签名数据
+- 赎回脚本占用空间
+- 验证逻辑更复杂
+</code></pre><h3 id="❓-如何恢复多签钱包？">❓ 如何恢复多签钱包？</h3>
+<p>多签钱包恢复需要：</p>
+<ol>
+<li><p><strong>收集必要信息</strong>：</p>
+<ul>
+<li>赎回脚本</li>
+<li>足够的私钥</li>
+<li>交易历史</li>
+</ul>
+</li>
+<li><p><strong>重建钱包</strong>：</p>
+<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">recover_multisig_wallet</span>(<span class="hljs-params">redeem_script, private_keys</span>):
+    <span class="hljs-comment"># 使用赎回脚本和私钥重建钱包</span>
+    <span class="hljs-keyword">pass</span>
+</code></pre>
+</li>
+<li><p><strong>验证资金</strong>：</p>
+<ul>
+<li>检查UTXO状态</li>
+<li>验证签名权限</li>
+</ul>
+</li>
+</ol>
+<h3 id="❓-多签钱包的隐私性如何？">❓ 多签钱包的隐私性如何？</h3>
+<p>多签钱包的隐私性：</p>
+<p><strong>优势</strong>：</p>
+<ul>
+<li>地址格式统一（P2SH）</li>
+<li>脚本哈希隐藏真实逻辑</li>
+</ul>
+<p><strong>劣势</strong>：</p>
+<ul>
+<li>交易大小较大，容易被识别</li>
+<li>签名数量暴露多签配置</li>
+</ul>
+<p><strong>改进方案</strong>：</p>
+<ul>
+<li>使用Taproot多签（下一章介绍）</li>
+<li>混合使用不同地址类型</li>
+</ul>
+<h2 id="结语">结语</h2>
+<p>通过本章的学习，你已经掌握了多重签名交易的核心概念和技术原理：</p>
+<ul>
+<li><strong>基础概念</strong>：理解了多签的本质和优势</li>
+<li><strong>技术原理</strong>：深入了解了多签的技术实现</li>
+<li><strong>应用场景</strong>：学会了如何选择合适的多签配置</li>
+<li><strong>实战操作</strong>：掌握了创建和管理多签钱包的方法</li>
+</ul>
+<p>多重签名是比特币技术发展的重要里程碑，它不仅增强了安全性，还为企业和机构提供了更灵活的资金管理方案。</p>
+<p>在下一章《隔离见证(SegWit)技术》中，我们将学习比特币的另一个重要升级：SegWit技术，它如何解决交易延展性问题并提升网络效率。</p>
+<blockquote>
+<p>🌟 <strong>多重签名的意义</strong>：多签技术体现了比特币的一个重要理念：通过技术手段实现去中心化的信任机制，让多方协作变得安全可靠。</p>
+</blockquote>
+<hr></hr>
+<div align="center">
+<a href="https://github.com/beihaili/Get-Started-with-Web3" target="_blank">🏠 返回主页</a> | 
+<a href="https://twitter.com/bhbtc1337" target="_blank">🐦 关注作者</a> | 
+<a href="https://forms.gle/QMBwL6LwZyQew1tX8" target="_blank">📝 加入交流群</a>
+</div>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../06_BitcoinTx/" class="navigation navigation-prev " aria-label="Previous page: 比特币交易基础">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../08_SegWit/" class="navigation navigation-next " aria-label="Next page: 隔离见证(SegWit)技术">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"多重签名交易","level":"4.7","depth":1,"next":{"title":"隔离见证(SegWit)技术","level":"4.8","depth":1,"path":"GetStartedWithBitcoin/08_SegWit/README.MD","ref":"GetStartedWithBitcoin/08_SegWit/README.MD","articles":[]},"previous":{"title":"比特币交易基础","level":"4.6","depth":1,"path":"GetStartedWithBitcoin/06_BitcoinTx/README.MD","ref":"GetStartedWithBitcoin/06_BitcoinTx/README.MD","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"beihaili","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Get Started with Web3","language":"zh-hans","gitbook":"*","description":"Web3、区块链和加密货币入门指南"},"file":{"path":"GetStartedWithBitcoin/07_MultiSig/README.MD","mtime":"2025-08-10T08:27:26.722Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-08-11T03:11:53.773Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

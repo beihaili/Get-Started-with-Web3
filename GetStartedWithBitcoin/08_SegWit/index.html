@@ -1,0 +1,1165 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>隔离见证(SegWit)技术 · Get Started with Web3</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.3">
+        <meta name="author" content="beihaili">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../09_Taproot/" />
+    
+    
+    <link rel="prev" href="../07_MultiSig/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Web3 快速入门</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../Web3QuickStart/01_FirstWeb3Identity/">
+            
+                <a href="../../Web3QuickStart/01_FirstWeb3Identity/">
+            
+                    
+                    创建你的第一个 Web3 身份
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../Web3QuickStart/02_FirstWeb3Transaction/">
+            
+                <a href="../../Web3QuickStart/02_FirstWeb3Transaction/">
+            
+                    
+                    进行你的第一笔 Web3 交易
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../Web3QuickStart/03_FirstWeb3Dapp/">
+            
+                <a href="../../Web3QuickStart/03_FirstWeb3Dapp/">
+            
+                    
+                    构建你的第一个 Web3 DApp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../Web3QuickStart/04_UsefulWeb3Sites/">
+            
+                <a href="../../Web3QuickStart/04_UsefulWeb3Sites/">
+            
+                    
+                    有用的 Web3 站点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../Web3QuickStart/05_LaunchYourFirstToken/">
+            
+                <a href="../../Web3QuickStart/05_LaunchYourFirstToken/">
+            
+                    
+                    发行你的第一个代币
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../../Web3QuickStart/06_Web3Security/">
+            
+                <a href="../../Web3QuickStart/06_Web3Security/">
+            
+                    
+                    Web3安全防护与防骗指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">比特币那些事儿</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../比特币那些事儿/00_引子：一束照进现实的理想之光.html">
+            
+                <a href="../../比特币那些事儿/00_引子：一束照进现实的理想之光.html">
+            
+                    
+                    00 引子：一束照进现实的理想之光
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../比特币那些事儿/01_创世纪：哈耶克的预言.html">
+            
+                <a href="../../比特币那些事儿/01_创世纪：哈耶克的预言.html">
+            
+                    
+                    01 创世纪：哈耶克的预言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../比特币那些事儿/02_创世纪：乔姆的孤独方舟.html">
+            
+                <a href="../../比特币那些事儿/02_创世纪：乔姆的孤独方舟.html">
+            
+                    
+                    02 创世纪：乔姆的孤独方舟
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../../比特币那些事儿/03_创世纪：密码朋克的技术拼图.html">
+            
+                <a href="../../比特币那些事儿/03_创世纪：密码朋克的技术拼图.html">
+            
+                    
+                    03 创世纪：密码朋克的技术拼图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../../比特币那些事儿/04_创世纪：2008时机成熟.html">
+            
+                <a href="../../比特币那些事儿/04_创世纪：2008时机成熟.html">
+            
+                    
+                    04 创世纪：2008时机成熟
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../../比特币那些事儿/05_创世纪：中本聪创世.html">
+            
+                <a href="../../比特币那些事儿/05_创世纪：中本聪创世.html">
+            
+                    
+                    05 创世纪：中本聪创世
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../../比特币那些事儿/06_初出茅庐：第一个信徒.html">
+            
+                <a href="../../比特币那些事儿/06_初出茅庐：第一个信徒.html">
+            
+                    
+                    06 初出茅庐：第一个信徒
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="../../比特币那些事儿/07_初出茅庐：社区与工具.html">
+            
+                <a href="../../比特币那些事儿/07_初出茅庐：社区与工具.html">
+            
+                    
+                    07 初出茅庐：社区与工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="../../比特币那些事儿/08_初出茅庐：价值发现.html">
+            
+                <a href="../../比特币那些事儿/08_初出茅庐：价值发现.html">
+            
+                    
+                    08 初出茅庐：价值发现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">比特币入门</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../01_Overview/">
+            
+                <a href="../01_Overview/">
+            
+                    
+                    比特币概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../02_BitcoinWallet/">
+            
+                <a href="../02_BitcoinWallet/">
+            
+                    
+                    比特币钱包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../03_BitcoinCore/">
+            
+                <a href="../03_BitcoinCore/">
+            
+                    
+                    比特币核心
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../04_BitcoinRPC/">
+            
+                <a href="../04_BitcoinRPC/">
+            
+                    
+                    比特币 RPC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../05_BitcoinLowFeeBroadcast/">
+            
+                <a href="../05_BitcoinLowFeeBroadcast/">
+            
+                    
+                    比特币UTXO归集与低费率转账
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../06_BitcoinTx/">
+            
+                <a href="../06_BitcoinTx/">
+            
+                    
+                    比特币交易基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../07_MultiSig/">
+            
+                <a href="../07_MultiSig/">
+            
+                    
+                    多重签名交易
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    隔离见证(SegWit)技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="../09_Taproot/">
+            
+                <a href="../09_Taproot/">
+            
+                    
+                    Taproot升级详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="../10_Ordinals/">
+            
+                <a href="../10_Ordinals/">
+            
+                    
+                    Ordinals与Inscriptions技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.11" data-path="../11_AdvancedTransactions/">
+            
+                <a href="../11_AdvancedTransactions/">
+            
+                    
+                    高级交易应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.12" data-path="../12_BitcoinGovernance/">
+            
+                <a href="../12_BitcoinGovernance/">
+            
+                    
+                    比特币扩容与治理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其它学习资源整理</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../其它学习资源整理/Etherum/">
+            
+                <a href="../../其它学习资源整理/Etherum/">
+            
+                    
+                    以太坊学习指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../其它学习资源整理/DeFi/">
+            
+                <a href="../../其它学习资源整理/DeFi/">
+            
+                    
+                    DeFi学习指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Web3 思考</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../Web3Thoughts/01_Principles/">
+            
+                <a href="../../Web3Thoughts/01_Principles/">
+            
+                    
+                    Web3 原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../../Web3Thoughts/02_WhyBlockchainIsNecessary/">
+            
+                <a href="../../Web3Thoughts/02_WhyBlockchainIsNecessary/">
+            
+                    
+                    为什么区块链是必须的？《主权个人》读书笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../../Web3Thoughts/03_TheCoolestTransactionOnBitcoin/">
+            
+                <a href="../../Web3Thoughts/03_TheCoolestTransactionOnBitcoin/">
+            
+                    
+                    区块链彩蛋解读指南：b10c...eb5d 玩了哪些「梗」？
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Web3 工作机会</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../Web3WorkOpportunities/">
+            
+                <a href="../../Web3WorkOpportunities/">
+            
+                    
+                    Web3 工作机会
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">我们的研究报告</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../OurResearch/Search01_BscAttack/">
+            
+                <a href="../../OurResearch/Search01_BscAttack/">
+            
+                    
+                    BSC 链上的攻击：为何发生及其潜在的危害
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >隔离见证(SegWit)技术</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="隔离见证segwit技术">隔离见证(SegWit)技术</h1>
+<p><img src="https://img.shields.io/badge/状态-已完成-success" alt="status"></img>
+<img src="https://img.shields.io/badge/作者-beihaili-blue" alt="author"></img>
+<img src="https://img.shields.io/badge/日期-2025--06-orange" alt="date"></img>
+<img src="https://img.shields.io/badge/难度-中级-yellow" alt="difficulty"></img></p>
+<blockquote>
+<p>💡 自学入门 <code>Web3</code> 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 <code>Web3</code> 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1-3 讲。</p>
+<p>欢迎关注我的推特：<a href="https://twitter.com/bhbtc1337" target="_blank">@bhbtc1337</a></p>
+<p>进入微信交流群请填表：<a href="https://forms.gle/QMBwL6LwZyQew1tX8" target="_blank">表格链接</a></p>
+<p>文章开源在 GitHub：<a href="https://github.com/beihaili/Get-Started-with-Web3" target="_blank">Get-Started-with-Web3</a></p>
+<p>购买BTC/ETH/USDT 等加密货币推荐 <a href="https://www.binance.com/zh-CN" target="_blank">币安</a><a href="https://accounts.marketwebb.me/register?ref=39797374" target="_blank">注册链接</a></p>
+</blockquote>
+<h2 id="目录">目录</h2>
+<ul>
+<li><a href="#前言">前言</a></li>
+<li><a href="#segwit基础概念">SegWit基础概念</a></li>
+<li><a href="#segwit技术原理详解">SegWit技术原理详解</a></li>
+<li><a href="#交易延展性解决">交易延展性解决</a></li>
+<li><a href="#费用优化机制">费用优化机制</a></li>
+<li><a href="#区块容量提升">区块容量提升</a></li>
+<li><a href="#兼容性与升级">兼容性与升级</a></li>
+<li><a href="#实战演练segwit交易">实战演练：SegWit交易</a></li>
+<li><a href="#常见问题">常见问题</a></li>
+<li><a href="#结语">结语</a></li>
+</ul>
+<h2 id="前言">前言</h2>
+<p>在前一章《多重签名交易》中，我们学习了比特币的多重签名技术，了解了如何通过多签增强安全性和实现企业级应用。现在，我们将深入探讨比特币技术发展史上的另一个重要里程碑：隔离见证（SegWit）技术。</p>
+<p>SegWit是比特币在2017年实施的重要升级，它不仅解决了交易延展性问题，还提升了网络效率，为后续的Taproot升级奠定了基础。本章将详细讲解SegWit的技术原理、优势和应用。</p>
+<h2 id="segwit基础概念">SegWit基础概念</h2>
+<h3 id="segwit-是什么？">SegWit 是什么？</h3>
+<p>隔离见证是比特币历史上最重要的升级之一！让我们用简单易懂的方式来理解它：</p>
+<h4 id="📋-什么是见证（witness）？">📋 什么是"见证"（Witness）？</h4>
+<p>在比特币交易中，"见证"就是<strong>证明你有权花费比特币的数据</strong>，主要包括：</p>
+<ul>
+<li>数字签名</li>
+<li>公钥</li>
+<li>其他验证脚本</li>
+</ul>
+<h4 id="🔄-segwit前后对比">🔄 SegWit前后对比</h4>
+<p><strong>传统交易结构</strong>：</p>
+<pre><code>交易 = {
+  输入: [
+    {
+      txid: "上一笔交易ID",
+      vout: 输出索引,
+      scriptSig: "签名 + 公钥 + 其他证明数据",  ← 见证数据在这里
+      sequence: 序列号
+    }
+  ],
+  输出: [...],
+  其他元数据: {...}
+}
+</code></pre><p><strong>SegWit交易结构</strong>：</p>
+<pre><code>交易 = {
+  输入: [
+    {
+      txid: "上一笔交易ID", 
+      vout: 输出索引,
+      scriptSig: "简化的引用信息",           ← 大大缩小了
+      sequence: 序列号
+    }
+  ],
+  输出: [...],
+  其他元数据: {...},
+  witness: [                                  ← 见证数据被"隔离"到这里
+    ["签名", "公钥", "其他证明数据"]
+  ]
+}
+</code></pre><h3 id="🎯-隔离的核心思想">🎯 "隔离"的核心思想</h3>
+<p>⚠️ <strong>重要澄清</strong>：witness数据依然完全存储在区块链上！</p>
+<p>想象一个包裹：</p>
+<pre><code>传统方式：
+📦 [商品 + 发票 + 签名收据 + 身份证明] 
+   ↑ 所有东西混在一起，包裹很重
+
+SegWit方式：
+📦 [商品 + 发票] + 📋 [签名收据 + 身份证明]
+   ↑ 主体包裹     ↑ 单独的证明文件
+   很轻            可选携带
+
+📮 但是！两个包裹都会一起邮寄！没有任何东西丢失！
+</code></pre><h2 id="segwit技术原理详解">SegWit技术原理详解</h2>
+<h3 id="🔧-技术优势详解">🔧 技术优势详解</h3>
+<h4 id="1-解决交易延展性（transaction-malleability）">1. 解决交易延展性（Transaction Malleability）</h4>
+<pre><code>传统交易ID计算：
+txid = hash(整个交易数据，包括签名)
+
+问题：签名可以被第三方修改（不影响有效性，但改变txid）
+
+SegWit交易ID计算：
+txid = hash(交易数据，不包括witness)  ← 签名被排除在外
+
+结果：txid变得稳定，无法被恶意修改
+</code></pre><h4 id="2-增加区块容量">2. 增加区块容量</h4>
+<p><strong>🚨 核心变化：不再按"大小"限制，改为按"权重"限制</strong></p>
+<pre><code>Bitcoin升级前的规则：
+区块最大限制 = 1,000,000 字节
+
+Bitcoin升级后的规则：  
+区块最大限制 = 4,000,000 权重单位  ← 规则改了！
+
+权重计算公式：
+权重 = (基础交易数据 × 4) + (witness数据 × 1)
+</code></pre><h4 id="3-降低交易费用">3. 降低交易费用</h4>
+<pre><code>费用计算方式改变：
+
+传统：
+费用 = 字节数 × 费率
+
+SegWit：
+费用 = 权重单位 × 费率
+权重 = 基础数据×4 + witness数据×1  ← witness数据更便宜
+</code></pre><h3 id="📊-具体计算例子">📊 具体计算例子</h3>
+<p>假设一笔简单的转账交易：</p>
+<pre><code>传统交易：
+┌─────────────────────────────────┐
+│  基础数据：118字节              │
+│  签名数据：107字节              │
+│  总大小：225字节                │
+│  占用空间：225字节              │
+└─────────────────────────────────┘
+
+SegWit交易：
+┌─────────────────────────────────┐
+│  基础数据：118字节              │  ← 权重：118 × 4 = 472
+│  witness数据：107字节           │  ← 权重：107 × 1 = 107  
+│  总大小：225字节（没变！）      │
+│  总权重：472 + 107 = 579单位    │
+└─────────────────────────────────┘
+</code></pre><h3 id="🔍-区块容量的魔法">🔍 区块容量的"魔法"</h3>
+<pre><code>传统区块（1MB限制）：
+能装交易数 = 1,000,000字节 ÷ 225字节/交易 ≈ 4,444笔交易
+
+SegWit区块（4M权重限制）：
+能装交易数 = 4,000,000权重 ÷ 579权重/交易 ≈ 6,907笔交易
+
+提升 = 6,907 ÷ 4,444 ≈ 55%的容量增长！
+</code></pre><h2 id="交易延展性解决">交易延展性解决</h2>
+<h3 id="🐛-什么是交易延展性？">🐛 什么是交易延展性？</h3>
+<p>交易延展性是指第三方可以在不改变交易有效性的情况下，修改交易的ID。</p>
+<h4 id="传统交易的问题">传统交易的问题</h4>
+<pre><code>原始交易：
+txid = hash(version + inputs + outputs + locktime + 签名)
+
+攻击者可以：
+1. 修改签名的DER编码格式（保持有效性）
+2. 改变txid
+3. 导致依赖txid的应用出现问题
+</code></pre><h4 id="segwit的解决方案">SegWit的解决方案</h4>
+<pre><code>SegWit交易：
+txid = hash(version + inputs + outputs + locktime)
+      ↑ 签名被排除在外！
+
+结果：
+✅ txid变得稳定
+✅ 无法被恶意修改
+✅ 为闪电网络等Layer 2解决方案奠定基础
+</code></pre><h3 id="🔍-实际影响">🔍 实际影响</h3>
+<p><strong>闪电网络依赖</strong>：</p>
+<pre><code>闪电网络需要稳定的交易ID来：
+- 跟踪通道状态
+- 处理争议
+- 确保资金安全
+
+没有SegWit，闪电网络无法安全运行！
+</code></pre><h2 id="费用优化机制">费用优化机制</h2>
+<h3 id="💰-费用计算变化">💰 费用计算变化</h3>
+<h4 id="传统费用计算">传统费用计算</h4>
+<pre><code>费用 = 交易字节数 × 费率
+例如：225字节 × 10 sat/byte = 2,250 sat
+</code></pre><h4 id="segwit费用计算">SegWit费用计算</h4>
+<pre><code>费用 = 交易权重 × 费率
+权重 = 基础数据×4 + witness数据×1
+
+例如：
+基础数据：118字节 × 4 = 472权重
+witness数据：107字节 × 1 = 107权重
+总权重：579权重
+费用：579权重 × 10 sat/weight = 5,790 sat
+</code></pre><h3 id="📈-费用节省效果">📈 费用节省效果</h3>
+<pre><code>不同类型交易的节省效果：
+
+单签交易：
+传统：225字节
+SegWit：579权重 ≈ 145字节等效
+节省：约35%
+
+2-of-3多签：
+传统：400字节
+SegWit：1,200权重 ≈ 300字节等效
+节省：约25%
+
+3-of-5多签：
+传统：500字节
+SegWit：1,500权重 ≈ 375字节等效
+节省：约25%
+</code></pre><h2 id="区块容量提升">区块容量提升</h2>
+<h3 id="📊-容量提升机制">📊 容量提升机制</h3>
+<h4 id="权重系统详解">权重系统详解</h4>
+<pre><code>权重计算规则：
+- 基础交易数据：每字节 = 4权重
+- Witness数据：每字节 = 1权重
+- 区块限制：4,000,000权重
+
+实际容量计算：
+4,000,000权重 ÷ 4 = 1,000,000字节（基础数据）
++ 额外的witness数据空间
+= 实际容量 &gt; 1MB
+</code></pre><h4 id="实际容量提升">实际容量提升</h4>
+<pre><code>理论最大容量：
+- 如果所有交易都是SegWit：约4MB
+- 实际使用中：约1.7-2MB
+
+实际提升：
+- 从1MB提升到1.7-2MB
+- 约70-100%的容量增长
+</code></pre><h3 id="🎯-为什么不是4倍？">🎯 为什么不是4倍？</h3>
+<pre><code>限制因素：
+1. 不是所有交易都使用SegWit
+2. 多签交易仍有大量witness数据
+3. 实际使用中的混合情况
+
+现实情况：
+- 2024年SegWit采用率：约80%
+- 实际容量提升：约70-100%
+</code></pre><h2 id="兼容性与升级">兼容性与升级</h2>
+<h3 id="⚠️-兼容性考虑">⚠️ 兼容性考虑</h3>
+<pre><code>向后兼容：
+✅ 老节点可以验证SegWit交易（作为"任何人可花费"）
+✅ SegWit节点可以验证传统交易
+✅ 混合使用没问题
+
+升级策略：
+软分叉 → 不强制升级，渐进采用
+</code></pre><h3 id="🔄-升级路径">🔄 升级路径</h3>
+<h4 id="软分叉机制">软分叉机制</h4>
+<pre><code>软分叉特点：
+- 向后兼容
+- 老节点仍能验证新交易
+- 渐进式升级
+- 不会导致网络分裂
+</code></pre><h4 id="采用时间线">采用时间线</h4>
+<pre><code>2017年8月：SegWit激活
+2017-2018：早期采用
+2019-2020：主流钱包支持
+2021-2024：广泛采用（80%+）
+</code></pre><h2 id="实战演练：segwit交易">实战演练：SegWit交易</h2>
+<h3 id="segwit交易示例">SegWit交易示例</h3>
+<pre><code class="lang-json">{
+  <span class="hljs-string">"txid"</span>: <span class="hljs-string">"c3d4e5f6a7b8...（省略）"</span>,
+  <span class="hljs-string">"vout"</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-string">"scriptSig"</span>: {
+    <span class="hljs-string">"asm"</span>: <span class="hljs-string">"OP_PUSHBYTES_22 0014a1b2c3d4e5f6..."</span>,
+    <span class="hljs-string">"hex"</span>: <span class="hljs-string">"160014a1b2c3d4e5f6..."</span>
+  },
+  <span class="hljs-string">"witness"</span>: [
+    <span class="hljs-string">"3045022100d1e2f3a4b5c6...（签名）"</span>,
+    <span class="hljs-string">"0279be667ef9dcbb...（公钥）"</span>
+  ],
+  <span class="hljs-string">"sequence"</span>: <span class="hljs-number">4294967293</span>
+}
+</code></pre>
+<p><strong>分析</strong>：</p>
+<ul>
+<li><code>scriptSig</code>只包含SegWit程序的引用（更节省空间）</li>
+<li>真正的签名和公钥在<code>witness</code>字段中（隔离见证）</li>
+<li><code>sequence</code>值<code>4294967293</code>表示支持RBF（交易替换）</li>
+<li>这种格式可以降低交易费用</li>
+</ul>
+<h3 id="创建segwit地址">创建SegWit地址</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> requests
+<span class="hljs-keyword">import</span> json
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">bitcoin_rpc</span>(<span class="hljs-params">method, params=[]</span>):
+    url = <span class="hljs-string">"http://localhost:8332"</span>
+    headers = {<span class="hljs-string">'content-type'</span>: <span class="hljs-string">'application/json'</span>}
+
+    payload = {
+        <span class="hljs-string">"method"</span>: method,
+        <span class="hljs-string">"params"</span>: params,
+        <span class="hljs-string">"jsonrpc"</span>: <span class="hljs-string">"2.0"</span>,
+        <span class="hljs-string">"id"</span>: <span class="hljs-number">0</span>,
+    }
+
+    response = requests.post(url, data=json.dumps(payload), headers=headers, auth=(<span class="hljs-string">'user'</span>, <span class="hljs-string">'password'</span>))
+    <span class="hljs-keyword">return</span> response.json()
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">create_segwit_address</span>():
+    <span class="hljs-comment"># 生成新的SegWit地址</span>
+    result = bitcoin_rpc(<span class="hljs-string">"getnewaddress"</span>, [<span class="hljs-string">""</span>, <span class="hljs-string">"bech32"</span>])
+
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">f"SegWit地址: <span class="hljs-subst">{result[<span class="hljs-string">'result'</span>]}</span>"</span>)
+    <span class="hljs-keyword">return</span> result[<span class="hljs-string">'result'</span>]
+
+<span class="hljs-comment"># 执行创建SegWit地址</span>
+segwit_address = create_segwit_address()
+</code></pre>
+<h3 id="segwit交易签名">SegWit交易签名</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">create_segwit_transaction</span>(<span class="hljs-params">inputs, outputs</span>):
+    <span class="hljs-string">"""创建SegWit交易"""</span>
+
+    <span class="hljs-comment"># 创建原始交易</span>
+    raw_tx = bitcoin_rpc(<span class="hljs-string">"createrawtransaction"</span>, [inputs, outputs])
+
+    <span class="hljs-comment"># 签名交易（自动使用SegWit格式）</span>
+    signed_tx = bitcoin_rpc(<span class="hljs-string">"signrawtransaction"</span>, [raw_tx[<span class="hljs-string">'result'</span>]])
+
+    <span class="hljs-keyword">return</span> signed_tx[<span class="hljs-string">'result'</span>][<span class="hljs-string">'hex'</span>]
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">broadcast_segwit_transaction</span>(<span class="hljs-params">signed_tx</span>):
+    <span class="hljs-string">"""广播SegWit交易"""</span>
+
+    result = bitcoin_rpc(<span class="hljs-string">"sendrawtransaction"</span>, [signed_tx])
+    <span class="hljs-keyword">return</span> result[<span class="hljs-string">'result'</span>]
+
+<span class="hljs-comment"># 使用示例</span>
+inputs = [{<span class="hljs-string">"txid"</span>: <span class="hljs-string">"previous_txid"</span>, <span class="hljs-string">"vout"</span>: <span class="hljs-number">0</span>}]
+outputs = {<span class="hljs-string">"bc1q40x77y..."</span>: <span class="hljs-number">0.001</span>}  <span class="hljs-comment"># SegWit地址</span>
+
+raw_tx = create_segwit_transaction(inputs, outputs)
+txid = broadcast_segwit_transaction(raw_tx)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f"交易ID: <span class="hljs-subst">{txid}</span>"</span>)
+</code></pre>
+<h2 id="常见问题">常见问题</h2>
+<h3 id="❓-segwit是否改变了比特币的本质？">❓ SegWit是否改变了比特币的本质？</h3>
+<p><strong>答案</strong>：没有！</p>
+<pre><code>SegWit只是改变了数据的组织方式：
+- 所有数据仍然存储在区块链上
+- 没有改变比特币的共识规则
+- 没有改变比特币的货币政策
+- 只是提高了效率和安全性
+</code></pre><h3 id="❓-为什么需要软分叉而不是硬分叉？">❓ 为什么需要软分叉而不是硬分叉？</h3>
+<pre><code>软分叉的优势：
+✅ 向后兼容
+✅ 不会导致网络分裂
+✅ 渐进式升级
+✅ 降低升级风险
+
+硬分叉的风险：
+❌ 可能导致网络分裂
+❌ 需要所有节点同时升级
+❌ 升级风险较高
+</code></pre><h3 id="❓-segwit地址和传统地址有什么区别？">❓ SegWit地址和传统地址有什么区别？</h3>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>传统地址</th>
+<th>SegWit地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>格式</strong></td>
+<td>1开头</td>
+<td>bc1q开头</td>
+</tr>
+<tr>
+<td><strong>费用</strong></td>
+<td>较高</td>
+<td>较低</td>
+</tr>
+<tr>
+<td><strong>容量</strong></td>
+<td>占用更多空间</td>
+<td>占用更少空间</td>
+</tr>
+<tr>
+<td><strong>兼容性</strong></td>
+<td>所有节点支持</td>
+<td>需要SegWit支持</td>
+</tr>
+</tbody>
+</table>
+<h3 id="❓-如何判断一个交易是否使用了segwit？">❓ 如何判断一个交易是否使用了SegWit？</h3>
+<pre><code>判断方法：
+1. 查看交易是否有witness字段
+2. 查看输出地址格式（bc1q开头）
+3. 查看交易权重 vs 字节数
+4. 使用区块浏览器查看交易详情
+</code></pre><h3 id="❓-segwit对闪电网络有什么影响？">❓ SegWit对闪电网络有什么影响？</h3>
+<pre><code>关键影响：
+✅ 解决了交易延展性问题
+✅ 为闪电网络提供稳定基础
+✅ 降低了通道操作费用
+✅ 提高了闪电网络的安全性
+
+没有SegWit，闪电网络无法安全运行！
+</code></pre><h2 id="结语">结语</h2>
+<p>通过本章的学习，你已经深入了解了隔离见证（SegWit）技术的核心原理和重要价值：</p>
+<ul>
+<li><strong>技术原理</strong>：理解了SegWit如何通过数据重组提升效率</li>
+<li><strong>问题解决</strong>：掌握了交易延展性问题的解决方案</li>
+<li><strong>效率提升</strong>：学会了费用优化和容量提升的机制</li>
+<li><strong>兼容性</strong>：了解了软分叉升级的智慧</li>
+</ul>
+<p>SegWit是比特币技术发展的重要里程碑，它不仅解决了当时面临的技术问题，还为后续的Taproot升级和闪电网络等Layer 2解决方案奠定了坚实基础。</p>
+<p>在下一章《Taproot升级详解》中，我们将学习比特币的最新升级：Taproot技术，它如何通过Schnorr签名和MAST技术进一步提升比特币的隐私性和效率。</p>
+<blockquote>
+<p>🌟 <strong>SegWit的意义</strong>：SegWit技术体现了比特币社区的技术智慧，通过软分叉的方式实现了重大升级，既保持了网络的稳定性，又为未来发展开辟了新的道路。</p>
+</blockquote>
+<hr></hr>
+<div align="center">
+<a href="https://github.com/beihaili/Get-Started-with-Web3" target="_blank">🏠 返回主页</a> | 
+<a href="https://twitter.com/bhbtc1337" target="_blank">🐦 关注作者</a> | 
+<a href="https://forms.gle/QMBwL6LwZyQew1tX8" target="_blank">📝 加入交流群</a>
+</div>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../07_MultiSig/" class="navigation navigation-prev " aria-label="Previous page: 多重签名交易">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../09_Taproot/" class="navigation navigation-next " aria-label="Next page: Taproot升级详解">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"隔离见证(SegWit)技术","level":"4.8","depth":1,"next":{"title":"Taproot升级详解","level":"4.9","depth":1,"path":"GetStartedWithBitcoin/09_Taproot/README.MD","ref":"GetStartedWithBitcoin/09_Taproot/README.MD","articles":[]},"previous":{"title":"多重签名交易","level":"4.7","depth":1,"path":"GetStartedWithBitcoin/07_MultiSig/README.MD","ref":"GetStartedWithBitcoin/07_MultiSig/README.MD","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"beihaili","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Get Started with Web3","language":"zh-hans","gitbook":"*","description":"Web3、区块链和加密货币入门指南"},"file":{"path":"GetStartedWithBitcoin/08_SegWit/README.MD","mtime":"2025-08-10T08:27:26.722Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-08-11T03:11:53.773Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
