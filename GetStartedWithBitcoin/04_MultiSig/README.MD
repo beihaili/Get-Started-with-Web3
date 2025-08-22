@@ -1,4 +1,4 @@
-# 多重签名交易
+# 第04讲：多重签名交易
 
 ![status](https://img.shields.io/badge/状态-已完成-success)
 ![author](https://img.shields.io/badge/作者-beihaili-blue)

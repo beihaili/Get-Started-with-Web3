@@ -1,4 +1,4 @@
-# 比特币扩容与治理
+# 第19讲：比特币扩容与治理
 
 ![status](https://img.shields.io/badge/状态-已完成-success)
 ![author](https://img.shields.io/badge/作者-beihaili-blue)

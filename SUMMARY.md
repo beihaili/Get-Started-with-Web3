@@ -21,19 +21,33 @@
 * [07 初出茅庐：社区与工具](比特币那些事儿/07_初出茅庐：社区与工具.md)
 * [08 初出茅庐：价值发现](比特币那些事儿/08_初出茅庐：价值发现.md)
 
-## 比特币入门
-* [比特币概述](GetStartedWithBitcoin/01_Overview/README.MD)
-* [比特币钱包](GetStartedWithBitcoin/02_BitcoinWallet/README.MD)
-* [比特币核心](GetStartedWithBitcoin/03_BitcoinCore/README.MD)
-* [比特币 RPC](GetStartedWithBitcoin/04_BitcoinRPC/README.MD)
-* [比特币UTXO归集与低费率转账](GetStartedWithBitcoin/05_BitcoinLowFeeBroadcast/README.MD)
-* [比特币交易基础](GetStartedWithBitcoin/06_BitcoinTx/README.MD)
-* [多重签名交易](GetStartedWithBitcoin/07_MultiSig/README.MD)
-* [隔离见证(SegWit)技术](GetStartedWithBitcoin/08_SegWit/README.MD)
-* [Taproot升级详解](GetStartedWithBitcoin/09_Taproot/README.MD)
-* [Ordinals与Inscriptions技术](GetStartedWithBitcoin/10_Ordinals/README.MD)
-* [高级交易应用](GetStartedWithBitcoin/11_AdvancedTransactions/README.MD)
-* [比特币扩容与治理](GetStartedWithBitcoin/12_BitcoinGovernance/README.MD)
+## 比特币技术入门（5层架构体系）
+
+### 🔐 第一层：密码学基础层
+* [第01讲：密码学基础](GetStartedWithBitcoin/01_Cryptography/README.MD)
+* [第02讲：比特币概述](GetStartedWithBitcoin/02_Overview/README.MD)
+
+### 📊 第二层：数据层
+* [第03讲：比特币交易基础](GetStartedWithBitcoin/03_BitcoinTx/README.MD)
+* [第04讲：多重签名交易](GetStartedWithBitcoin/04_MultiSig/README.MD)
+* [第05讲：隔离见证(SegWit)技术](GetStartedWithBitcoin/05_SegWit/README.MD)
+* [第06讲：Taproot升级详解](GetStartedWithBitcoin/06_Taproot/README.MD)
+* [第07讲：高级交易应用](GetStartedWithBitcoin/07_AdvancedTransactions/README.MD)
+
+### 🌐 第三层：网络层  
+* [第09讲：比特币核心节点](GetStartedWithBitcoin/09_BitcoinCore/README.MD)
+
+### 🤝 第四层：共识层
+* 第12讲：工作量证明与挖矿 🚧
+* 第13讲：难度调整算法 🚧
+* 第14讲：分叉机制与BIP流程 🚧
+
+### 💼 第五层：应用层
+* [第15讲：比特币钱包](GetStartedWithBitcoin/15_BitcoinWallet/README.MD)
+* [第16讲：比特币RPC应用开发](GetStartedWithBitcoin/16_BitcoinRPC/README.MD)
+* [第17讲：比特币开发工具](GetStartedWithBitcoin/17_BitcoinLowFeeBroadcast/README.MD)
+* [第19讲：比特币扩容与治理](GetStartedWithBitcoin/19_BitcoinGovernance/README.MD)
+* [第20讲：Ordinals与生态创新](GetStartedWithBitcoin/20_Ordinals/README.MD)
 
 ## 其它学习资源整理
 * [以太坊学习指南](其它学习资源整理/Etherum/README.MD)

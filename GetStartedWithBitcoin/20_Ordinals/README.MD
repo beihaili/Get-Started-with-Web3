@@ -1,4 +1,4 @@
-# Ordinals与Inscriptions技术
+# 第20讲：Ordinals与生态创新
 
 ![status](https://img.shields.io/badge/状态-已完成-success)
 ![author](https://img.shields.io/badge/作者-beihaili-blue)
