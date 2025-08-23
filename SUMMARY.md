@@ -22,6 +22,7 @@
 * [08 初出茅庐：价值发现](比特币那些事儿/08_初出茅庐：价值发现.md)
 
 ## 比特币技术入门（5层架构体系）
+* [📋 技术架构总览](GetStartedWithBitcoin/README.md)
 
 ### 🔐 第一层：密码学基础层
 * [第01讲：密码学基础](GetStartedWithBitcoin/01_Cryptography/README.MD)

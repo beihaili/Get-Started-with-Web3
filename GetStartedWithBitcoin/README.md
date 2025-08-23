@@ -8,76 +8,66 @@
 
 ## 📖 技术架构设计
 
-本教程按照**经典5层计算机系统架构**组织，更加科学合理：
+本教程按照**5层架构**组织：
 
 ```mermaid
 graph TD
-    subgraph "💼 第五层：应用层"
-        L15["第15讲：比特币钱包"]
-        L16["第16讲：RPC应用开发"]
-        L17["第17讲：开发工具"]
-        L18["第18讲：Script脚本系统"]
-        L19["第19讲：扩容与治理"]
-        L20["第20讲：Ordinals生态"]
-        L21["第21讲：DeFi与跨链"]
+    subgraph L5 ["💼 第五层：应用层"]
+        A15["🔑 钱包技术<br/>第15讲"] 
+        A16["🔌 RPC开发<br/>第16讲"]
+        A17["🛠️ 开发工具<br/>第17讲"]
+        A18["📜 Script脚本<br/>第18讲"]
+        A19["🏛️ 扩容治理<br/>第19讲"]
+        A20["🎨 Ordinals<br/>第20讲"]
+        A21["🌉 DeFi跨链<br/>第21讲"]
     end
     
-    subgraph "🤝 第四层：共识层"
-        L12["第12讲：工作量证明与挖矿"]
-        L13["第13讲：难度调整算法"]
-        L14["第14讲：分叉机制与BIP"]
+    subgraph L4 ["🤝 第四层：共识层"]
+        A12["⛏️ 工作量证明<br/>第12讲"]
+        A13["📊 难度调整<br/>第13讲"]
+        A14["🔀 分叉机制<br/>第14讲"]
     end
     
-    subgraph "🌐 第三层：网络层"
-        L09["第09讲：比特币核心节点"]
-        L10["第10讲：P2P网络协议"]
-        L11["第11讲：网络安全防护"]
+    subgraph L3 ["🌐 第三层：网络层"]
+        A09["🖥️ 核心节点<br/>第09讲"]
+        A10["🔗 P2P网络<br/>第10讲"]
+        A11["🛡️ 网络安全<br/>第11讲"]
     end
     
-    subgraph "📊 第二层：数据层"
-        L03["第03讲：比特币交易基础"]
-        L04["第04讲：多重签名交易"]
-        L05["第05讲：隔离见证SegWit"]
-        L06["第06讲：Taproot升级"]
-        L07["第07讲：高级交易应用"]
-        L08["第08讲：区块结构默克尔树"]
+    subgraph L2 ["📊 第二层：数据层"]
+        A03["💰 交易基础<br/>第03讲"]
+        A04["🔐 多重签名<br/>第04讲"]
+        A05["⚡ SegWit<br/>第05讲"]
+        A06["🚀 Taproot<br/>第06讲"]
+        A07["🎯 高级交易<br/>第07讲"]
+        A08["🧱 区块结构<br/>第08讲"]
     end
     
-    subgraph "🔐 第一层：密码学基础层"
-        L01["第01讲：密码学基础"]
-        L02["第02讲：比特币概述"]
+    subgraph L1 ["🔐 第一层：密码学基础层"]
+        A01["🔑 密码学基础<br/>第01讲"]
+        A02["₿ 比特币概述<br/>第02讲"]
     end
     
-    %% 依赖关系
-    L01 --> L03
-    L01 --> L04
-    L01 --> L12
-    L02 --> L03
+    %% 学习路径
+    A01 --> A03
+    A03 --> A09
+    A09 --> A12
+    A12 --> A15
     
-    L03 --> L05
-    L04 --> L05
-    L05 --> L06
-    L06 --> L07
-    L03 --> L08
+    classDef layer1 fill:#ff6b6b,stroke:#d63031,stroke-width:2px,color:#fff;
+    classDef layer2 fill:#4ecdc4,stroke:#00b894,stroke-width:2px,color:#fff;
+    classDef layer3 fill:#45b7d1,stroke:#0984e3,stroke-width:2px,color:#fff;
+    classDef layer4 fill:#96ceb4,stroke:#00b894,stroke-width:2px,color:#fff;
+    classDef layer5 fill:#ffeaa7,stroke:#fdcb6e,stroke-width:2px,color:#2d3436;
     
-    L03 --> L09
-    L09 --> L10
-    L10 --> L11
-    
-    L08 --> L12
-    L03 --> L13
-    L06 --> L14
-    
-    L09 --> L15
-    L10 --> L16
-    L03 --> L17
-    L04 --> L18
-    L14 --> L19
-    L06 --> L20
-    L19 --> L21
+    class A01,A02 layer1;
+    class A03,A04,A05,A06,A07,A08 layer2;
+    class A09,A10,A11 layer3;
+    class A12,A13,A14 layer4;
+    class A15,A16,A17,A18,A19,A20,A21 layer5;
 ```
 
-**🎯 经典5层架构：**
+**🎯 5层架构：**
 ```
 💼 应用层        │ 钱包、RPC开发、脚本系统、生态应用
 🤝 共识层        │ 工作量证明、难度调整、分叉机制
