@@ -5,13 +5,5 @@
   "language": "zh-hans",
   "structure": {
     "readme": "README.md"
-  },
-  "plugins": [
-    "mermaid-gb3"
-  ],
-  "pluginsConfig": {
-    "mermaid-gb3": {
-      "theme": "default"
-    }
   }
 }

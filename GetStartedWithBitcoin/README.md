@@ -10,62 +10,10 @@
 
 本教程按照**5层架构**组织：
 
-```mermaid
-graph TD
-    subgraph L5 ["💼 第五层：应用层"]
-        A15["🔑 钱包技术<br/>第15讲"] 
-        A16["🔌 RPC开发<br/>第16讲"]
-        A17["🛠️ 开发工具<br/>第17讲"]
-        A18["📜 Script脚本<br/>第18讲"]
-        A19["🏛️ 扩容治理<br/>第19讲"]
-        A20["🎨 Ordinals<br/>第20讲"]
-        A21["🌉 DeFi跨链<br/>第21讲"]
-    end
-    
-    subgraph L4 ["🤝 第四层：共识层"]
-        A12["⛏️ 工作量证明<br/>第12讲"]
-        A13["📊 难度调整<br/>第13讲"]
-        A14["🔀 分叉机制<br/>第14讲"]
-    end
-    
-    subgraph L3 ["🌐 第三层：网络层"]
-        A09["🖥️ 核心节点<br/>第09讲"]
-        A10["🔗 P2P网络<br/>第10讲"]
-        A11["🛡️ 网络安全<br/>第11讲"]
-    end
-    
-    subgraph L2 ["📊 第二层：数据层"]
-        A03["💰 交易基础<br/>第03讲"]
-        A04["🔐 多重签名<br/>第04讲"]
-        A05["⚡ SegWit<br/>第05讲"]
-        A06["🚀 Taproot<br/>第06讲"]
-        A07["🎯 高级交易<br/>第07讲"]
-        A08["🧱 区块结构<br/>第08讲"]
-    end
-    
-    subgraph L1 ["🔐 第一层：密码学基础层"]
-        A01["🔑 密码学基础<br/>第01讲"]
-        A02["₿ 比特币概述<br/>第02讲"]
-    end
-    
-    %% 学习路径
-    A01 --> A03
-    A03 --> A09
-    A09 --> A12
-    A12 --> A15
-    
-    classDef layer1 fill:#ff6b6b,stroke:#d63031,stroke-width:2px,color:#fff;
-    classDef layer2 fill:#4ecdc4,stroke:#00b894,stroke-width:2px,color:#fff;
-    classDef layer3 fill:#45b7d1,stroke:#0984e3,stroke-width:2px,color:#fff;
-    classDef layer4 fill:#96ceb4,stroke:#00b894,stroke-width:2px,color:#fff;
-    classDef layer5 fill:#ffeaa7,stroke:#fdcb6e,stroke-width:2px,color:#2d3436;
-    
-    class A01,A02 layer1;
-    class A03,A04,A05,A06,A07,A08 layer2;
-    class A09,A10,A11 layer3;
-    class A12,A13,A14 layer4;
-    class A15,A16,A17,A18,A19,A20,A21 layer5;
-```
+![比特币技术5层架构图](./img/bitcoin_architecture.png)
+
+> **图：比特币技术5层架构体系**  
+> 从底层密码学基础到顶层应用开发的完整技术栈，每层都有独特的功能定位和学习重点
 
 **🎯 5层架构：**
 ```
