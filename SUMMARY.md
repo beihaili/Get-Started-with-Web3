@@ -34,6 +34,7 @@
 * [第05讲：隔离见证(SegWit)技术](GetStartedWithBitcoin/05_SegWit/README.MD)
 * [第06讲：Taproot升级详解](GetStartedWithBitcoin/06_Taproot/README.MD)
 * [第07讲：高级交易应用](GetStartedWithBitcoin/07_AdvancedTransactions/README.MD)
+* [第08讲：区块链数据结构](GetStartedWithBitcoin/08_DataStructure/README.MD)
 
 ### 🌐 第三层：网络层  
 * [第09讲：比特币核心节点](GetStartedWithBitcoin/09_BitcoinCore/README.MD)
