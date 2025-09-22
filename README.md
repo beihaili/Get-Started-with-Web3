@@ -30,81 +30,88 @@
 
 本仓库将从以下几个方面入手，由浅入深，帮助大家快速入门区块链，学习 Web3 的基础知识，以及 Web3 的应用。
 
-## 🎭 比特币那些事儿
-
-**致敬《明朝那些事儿》风格的比特币历史故事系列**
-
-从哈耶克的疯癫预言到中本聪的神秘登场，从密码朋克的技术拼图到2008年的完美风暴。用生动有趣的语言，讲述比特币诞生前的思想史和技术史。
-
-[**第 00 讲：引子 — 一束照进现实的理想之光**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/比特币那些事儿/00_引子：一束照进现实的理想之光.md)
-
-[**第 01 讲：创世纪 — 哈耶克的预言**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/比特币那些事儿/01_创世纪：哈耶克的预言.md)
-
-[**第 02 讲：创世纪 — 乔姆的孤独方舟**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/比特币那些事儿/02_创世纪：乔姆的孤独方舟.md)
-
-[**第 03 讲：创世纪 — 密码朋克的技术拼图**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/比特币那些事儿/03_创世纪：密码朋克的技术拼图.md)
-
-[**第 04 讲：创世纪 — 2008时机成熟**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/比特币那些事儿/04_创世纪：2008时机成熟.md)
-
-[**第 05 讲：创世纪 — 中本聪创世**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/比特币那些事儿/05_创世纪：中本聪创世.md)
-
-[**第 06 讲：初出茅庐 — 第一个信徒**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/比特币那些事儿/06_初出茅庐：第一个信徒.md)
-
-[**第 07 讲：初出茅庐 — 社区与工具**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/比特币那些事儿/07_初出茅庐：社区与工具.md)
-
-[**第 08 讲：初出茅庐 — 价值发现**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/比特币那些事儿/08_初出茅庐：价值发现.md)
-
 ## 1. Web3 快速入门
 
-[**第 01 讲：创建你的第一个 Web3 身份**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/Web3QuickStart/01_FirstWeb3Identity/README.MD)
+[**第 01 讲：创建你的第一个 Web3 身份**](Web3QuickStart/01_FirstWeb3Identity/README.MD)
 
-[**第 02 讲：进行你的第一笔 Web3 交易**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/Web3QuickStart/02_FirstWeb3Transaction/README.MD)
+[**第 02 讲：进行你的第一笔 Web3 交易**](Web3QuickStart/02_FirstWeb3Transaction/README.MD)
 
-[**第 03 讲：构建你的第一个 Web3 DApp**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/Web3QuickStart/03_FirstWeb3Dapp/README.MD)
+[**第 03 讲：构建你的第一个 Web3 DApp**](Web3QuickStart/03_FirstWeb3Dapp/README.MD)
 
-[**第 04 讲：有用的 Web3 站点**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/Web3QuickStart/04_UsefulWeb3Sites/README.MD)
+[**第 04 讲：有用的 Web3 站点**](Web3QuickStart/04_UsefulWeb3Sites/README.MD)
 
-[**第 05 讲：发行你的第一个代币**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/Web3QuickStart/05_LaunchYourFirstToken/README.MD)
+[**第 05 讲：发行你的第一个代币**](Web3QuickStart/05_LaunchYourFirstToken/README.MD)
+
+[**第 06 讲：Web3安全防护与防骗指南**](Web3QuickStart/06_Web3Security/README.MD)
 
 ## 2. 比特币技术入门
 
-[**第 01 讲：比特币概述**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/GetStartedWithBitcoin/01_Overview/README.MD)
+[**技术架构总览**](GetStartedWithBitcoin/README.md)
 
-[**第 02 讲：比特币钱包**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/GetStartedWithBitcoin/02_BitcoinWallet/README.MD)
+[**第 01 讲：密码学基础**](GetStartedWithBitcoin/01_Cryptography/README.MD)
 
-[**第 03 讲：比特币核心节点**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/GetStartedWithBitcoin/03_BitcoinCore/README.MD)
+[**第 02 讲：比特币概述**](GetStartedWithBitcoin/02_Overview/README.MD)
 
-[**第 04 讲：比特币 RPC 应用开发**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/GetStartedWithBitcoin/04_BitcoinRPC/README.MD)
+[**第 03 讲：比特币交易基础**](GetStartedWithBitcoin/03_BitcoinTx/README.MD)
 
-[**第 05 讲：【实践】比特币低费率广播工具**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/GetStartedWithBitcoin/05_BitcoinLowFeeBroadcast/README.MD)
+[**第 04 讲：多重签名交易**](GetStartedWithBitcoin/04_MultiSig/README.MD)
 
-[**第 06 讲：比特币交易基础**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/GetStartedWithBitcoin/06_BitcoinTx/README.MD)
+[**第 05 讲：隔离见证(SegWit)技术**](GetStartedWithBitcoin/05_SegWit/README.MD)
 
-[**第 07 讲：比特币交易进阶**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/GetStartedWithBitcoin/07_BitcoinTxAdvanced/README.MD)
+[**第 06 讲：Taproot升级详解**](GetStartedWithBitcoin/06_Taproot/README.MD)
 
-[**第 08 讲：比特币扩容与治理**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/GetStartedWithBitcoin/08_BitcoinGovernance/README.MD)
+[**第 07 讲：高级交易应用**](GetStartedWithBitcoin/07_AdvancedTransactions/README.MD)
+
+[**第 08 讲：区块链数据结构**](GetStartedWithBitcoin/08_DataStructure/README.MD)
+
+[**第 09 讲：比特币核心节点**](GetStartedWithBitcoin/09_BitcoinCore/README.MD)
+
+[**第 10 讲：P2P网络协议**](GetStartedWithBitcoin/10_P2PProtocol/README.MD)
+
+[**第 11 讲：网络安全**](GetStartedWithBitcoin/11_NetworkSecurity/README.MD)
+
+[**第 12 讲：工作量证明与挖矿**](GetStartedWithBitcoin/12_ProofOfWork/README.md)
+
+[**第 13 讲：难度调整算法**](GetStartedWithBitcoin/13_DifficultyAdjustment/README.MD)
+
+[**第 14 讲：分叉机制与BIP流程**](GetStartedWithBitcoin/14_ForksBIPs/README.MD)
+
+[**第 15 讲：比特币钱包**](GetStartedWithBitcoin/15_BitcoinWallet/README.MD)
+
+[**第 16 讲：比特币RPC应用开发**](GetStartedWithBitcoin/16_BitcoinRPC/README.MD)
+
+[**第 17 讲：比特币低费率广播工具**](GetStartedWithBitcoin/17_BitcoinLowFeeBroadcast/README.MD)
+
+[**第 18 讲：Bitcoin Script脚本系统**](GetStartedWithBitcoin/18_BitcoinScript/README.MD)
+
+[**第 19 讲：比特币扩容与治理**](GetStartedWithBitcoin/19_BitcoinGovernance/README.MD)
+
+[**第 20 讲：Ordinals与生态创新**](GetStartedWithBitcoin/20_Ordinals/README.MD)
+
+[**第 21 讲：DeFi跨链**](GetStartedWithBitcoin/21_DeFiCrossChain/README.MD)
+
 
 ## 3. 其它学习资源
 
-[**以太坊学习指南**](https://github.com/beihaili/Get-Started-with-Web3/tree/main/其它学习资源整理/Etherum)
+[**以太坊学习指南**](其它学习资源整理/Etherum/README.MD)
 
-[**DeFi学习指南**](https://github.com/beihaili/Get-Started-with-Web3/tree/main/其它学习资源整理/DeFi)
+[**DeFi学习指南**](其它学习资源整理/DeFi/README.MD)
 
 ## 5. Web3 思考集合
 
-[**Web3 原则**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/Web3Thoughts/01_Principles/README.MD)
+[**Web3 原则**](Web3Thoughts/01_Principles/README.MD)
 
-[**为什么区块链是必须的？《主权个人》读书笔记**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/Web3Thoughts/02_WhyBlockchainIsNecessary/README.MD)
+[**为什么区块链是必须的？《主权个人》读书笔记**](Web3Thoughts/02_WhyBlockchainIsNecessary/README.MD)
 
-[**区块链彩蛋解读指南：b10c...eb5d 玩了哪些「梗」？**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/Web3Thoughts/03_TheCoolestTransactionOnBitcoin/README.MD)
+[**区块链彩蛋解读指南：b10c...eb5d 玩了哪些「梗」？**](Web3Thoughts/03_TheCoolestTransactionOnBitcoin/README.MD)
 
 ## 6. Web3 工作机会
 
-[**工作机会和面试技巧**](https://github.com/beihaili/Get-Started-with-Web3/blob/main/Web3WorkOpportunities/README.md)
+[**工作机会和面试技巧**](Web3WorkOpportunities/README.md)
 
 ## 7. 研究报告
 
-[**BSC 链上的攻击：为何发生及其潜在的危害**](/OurResearch/Search01_BscAttack/README.md)
+[**BSC 链上的攻击：为何发生及其潜在的危害**](OurResearch/Search01_BscAttack/README.md)
 
 ---
 

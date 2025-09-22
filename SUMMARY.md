@@ -10,18 +10,7 @@
 * [发行你的第一个代币](Web3QuickStart/05_LaunchYourFirstToken/README.MD)
 * [Web3安全防护与防骗指南](Web3QuickStart/06_Web3Security/README.MD)
 
-## 比特币那些事儿
-* [00 引子：一束照进现实的理想之光](比特币那些事儿/00_引子：一束照进现实的理想之光.md)
-* [01 创世纪：哈耶克的预言](比特币那些事儿/01_创世纪：哈耶克的预言.md)
-* [02 创世纪：乔姆的孤独方舟](比特币那些事儿/02_创世纪：乔姆的孤独方舟.md)
-* [03 创世纪：密码朋克的技术拼图](比特币那些事儿/03_创世纪：密码朋克的技术拼图.md)
-* [04 创世纪：2008时机成熟](比特币那些事儿/04_创世纪：2008时机成熟.md)
-* [05 创世纪：中本聪创世](比特币那些事儿/05_创世纪：中本聪创世.md)
-* [06 初出茅庐：第一个信徒](比特币那些事儿/06_初出茅庐：第一个信徒.md)
-* [07 初出茅庐：社区与工具](比特币那些事儿/07_初出茅庐：社区与工具.md)
-* [08 初出茅庐：价值发现](比特币那些事儿/08_初出茅庐：价值发现.md)
-
-## 比特币技术入门（5层架构体系）
+## 比特币技术入门
 * [📋 技术架构总览](GetStartedWithBitcoin/README.md)
 
 ### 🔐 第一层：密码学基础层
@@ -38,18 +27,22 @@
 
 ### 🌐 第三层：网络层  
 * [第09讲：比特币核心节点](GetStartedWithBitcoin/09_BitcoinCore/README.MD)
+* [第10讲：P2P网络协议](GetStartedWithBitcoin/10_P2PProtocol/README.MD)
+* [第11讲：网络安全](GetStartedWithBitcoin/11_NetworkSecurity/README.MD)
 
 ### 🤝 第四层：共识层
-* 第12讲：工作量证明与挖矿 🚧
-* 第13讲：难度调整算法 🚧
-* 第14讲：分叉机制与BIP流程 🚧
+* [第12讲：工作量证明与挖矿](GetStartedWithBitcoin/12_ProofOfWork/README.md)
+* [第13讲：难度调整算法](GetStartedWithBitcoin/13_DifficultyAdjustment/README.MD)
+* [第14讲：分叉机制与BIP流程](GetStartedWithBitcoin/14_ForksBIPs/README.MD)
 
 ### 💼 第五层：应用层
 * [第15讲：比特币钱包](GetStartedWithBitcoin/15_BitcoinWallet/README.MD)
 * [第16讲：比特币RPC应用开发](GetStartedWithBitcoin/16_BitcoinRPC/README.MD)
-* [第17讲：比特币开发工具](GetStartedWithBitcoin/17_BitcoinLowFeeBroadcast/README.MD)
+* [第17讲：比特币低费率广播工具](GetStartedWithBitcoin/17_BitcoinLowFeeBroadcast/README.MD)
+* [第18讲：Bitcoin Script脚本系统](GetStartedWithBitcoin/18_BitcoinScript/README.MD)
 * [第19讲：比特币扩容与治理](GetStartedWithBitcoin/19_BitcoinGovernance/README.MD)
 * [第20讲：Ordinals与生态创新](GetStartedWithBitcoin/20_Ordinals/README.MD)
+* [第21讲：DeFi跨链](GetStartedWithBitcoin/21_DeFiCrossChain/README.MD)
 
 ## 其它学习资源整理
 * [以太坊学习指南](其它学习资源整理/Etherum/README.MD)
