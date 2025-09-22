@@ -27,12 +27,12 @@
 
 ### 🌐 第三层：网络层  
 * [第09讲：比特币核心节点](GetStartedWithBitcoin/09_BitcoinCore/README.MD)
-* [第10讲：P2P网络协议](GetStartedWithBitcoin/10_P2PProtocol/README.MD)
+* [第10讲：P2P网络协议](GetStartedWithBitcoin/10_P2PProtocol/README.md)
 * [第11讲：网络安全](GetStartedWithBitcoin/11_NetworkSecurity/README.MD)
 
 ### 🤝 第四层：共识层
 * [第12讲：工作量证明与挖矿](GetStartedWithBitcoin/12_ProofOfWork/README.md)
-* [第13讲：难度调整算法](GetStartedWithBitcoin/13_DifficultyAdjustment/README.MD)
+* [第13讲：难度调整算法](GetStartedWithBitcoin/13_DifficultyAdjustment/README.md)
 * [第14讲：分叉机制与BIP流程](GetStartedWithBitcoin/14_ForksBIPs/README.MD)
 
 ### 💼 第五层：应用层
@@ -57,4 +57,4 @@
 * [Web3 工作机会](Web3WorkOpportunities/README.md)
 
 ## 我们的研究报告
-* [BSC 链上的攻击：为何发生及其潜在的危害](OurResearch/Search01_BscAttack/README.md) 
+* [BSC 链上的攻击：为何发生及其潜在的危害](OurResearch/Search01_BscAttack/README.md)
