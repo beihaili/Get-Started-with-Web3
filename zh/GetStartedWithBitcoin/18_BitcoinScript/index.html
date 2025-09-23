@@ -1,0 +1,1630 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>第18讲：Bitcoin Script脚本系统 · Web3入门指南</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.3">
+        <meta name="author" content="beihaili">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../19_BitcoinGovernance/" />
+    
+    
+    <link rel="prev" href="../17_BitcoinLowFeeBroadcast/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Web3 快速入门</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../Web3QuickStart/01_FirstWeb3Identity/">
+            
+                <a href="../../Web3QuickStart/01_FirstWeb3Identity/">
+            
+                    
+                    创建你的第一个 Web3 身份
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../Web3QuickStart/02_FirstWeb3Transaction/">
+            
+                <a href="../../Web3QuickStart/02_FirstWeb3Transaction/">
+            
+                    
+                    进行你的第一笔 Web3 交易
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../Web3QuickStart/03_FirstWeb3Dapp/">
+            
+                <a href="../../Web3QuickStart/03_FirstWeb3Dapp/">
+            
+                    
+                    构建你的第一个 Web3 DApp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../Web3QuickStart/04_UsefulWeb3Sites/">
+            
+                <a href="../../Web3QuickStart/04_UsefulWeb3Sites/">
+            
+                    
+                    有用的 Web3 站点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../Web3QuickStart/05_LaunchYourFirstToken/">
+            
+                <a href="../../Web3QuickStart/05_LaunchYourFirstToken/">
+            
+                    
+                    发行你的第一个代币
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../../Web3QuickStart/06_Web3Security/">
+            
+                <a href="../../Web3QuickStart/06_Web3Security/">
+            
+                    
+                    Web3安全防护与防骗指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">比特币技术入门</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    📋 技术架构总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">🔐 第一层：密码学基础层</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../01_Cryptography/">
+            
+                <a href="../01_Cryptography/">
+            
+                    
+                    第01讲：密码学基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../02_Overview/">
+            
+                <a href="../02_Overview/">
+            
+                    
+                    第02讲：比特币概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">📊 第二层：数据层</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../03_BitcoinTx/">
+            
+                <a href="../03_BitcoinTx/">
+            
+                    
+                    第03讲：比特币交易基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../04_MultiSig/">
+            
+                <a href="../04_MultiSig/">
+            
+                    
+                    第04讲：多重签名交易
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../05_SegWit/">
+            
+                <a href="../05_SegWit/">
+            
+                    
+                    第05讲：隔离见证(SegWit)技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../06_Taproot/">
+            
+                <a href="../06_Taproot/">
+            
+                    
+                    第06讲：Taproot升级详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="../07_AdvancedTransactions/">
+            
+                <a href="../07_AdvancedTransactions/">
+            
+                    
+                    第07讲：高级交易应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="../08_DataStructure/">
+            
+                <a href="../08_DataStructure/">
+            
+                    
+                    第08讲：区块链数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">🌐 第三层：网络层</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../09_BitcoinCore/">
+            
+                <a href="../09_BitcoinCore/">
+            
+                    
+                    第09讲：比特币核心节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../10_P2PProtocol/">
+            
+                <a href="../10_P2PProtocol/">
+            
+                    
+                    第10讲：P2P网络协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../11_NetworkSecurity/">
+            
+                <a href="../11_NetworkSecurity/">
+            
+                    
+                    第11讲：网络安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">🤝 第四层：共识层</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../12_ProofOfWork/">
+            
+                <a href="../12_ProofOfWork/">
+            
+                    
+                    第12讲：工作量证明与挖矿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../13_DifficultyAdjustment/">
+            
+                <a href="../13_DifficultyAdjustment/">
+            
+                    
+                    第13讲：难度调整算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../14_ForksBIPs/">
+            
+                <a href="../14_ForksBIPs/">
+            
+                    
+                    第14讲：分叉机制与BIP流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">💼 第五层：应用层</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../15_BitcoinWallet/">
+            
+                <a href="../15_BitcoinWallet/">
+            
+                    
+                    第15讲：比特币钱包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../16_BitcoinRPC/">
+            
+                <a href="../16_BitcoinRPC/">
+            
+                    
+                    第16讲：比特币RPC应用开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../17_BitcoinLowFeeBroadcast/">
+            
+                <a href="../17_BitcoinLowFeeBroadcast/">
+            
+                    
+                    第17讲：比特币低费率广播工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="8.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第18讲：Bitcoin Script脚本系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="../19_BitcoinGovernance/">
+            
+                <a href="../19_BitcoinGovernance/">
+            
+                    
+                    第19讲：比特币扩容与治理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.6" data-path="../20_Ordinals/">
+            
+                <a href="../20_Ordinals/">
+            
+                    
+                    第20讲：Ordinals与生态创新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.7" data-path="../21_DeFiCrossChain/">
+            
+                <a href="../21_DeFiCrossChain/">
+            
+                    
+                    第21讲：DeFi跨链
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其它学习资源整理</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../../其它学习资源整理/Etherum/">
+            
+                <a href="../../其它学习资源整理/Etherum/">
+            
+                    
+                    以太坊学习指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="../../其它学习资源整理/DeFi/">
+            
+                <a href="../../其它学习资源整理/DeFi/">
+            
+                    
+                    DeFi学习指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Web3 思考</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../../Web3Thoughts/01_Principles/">
+            
+                <a href="../../Web3Thoughts/01_Principles/">
+            
+                    
+                    Web3 原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../../Web3Thoughts/02_WhyBlockchainIsNecessary/">
+            
+                <a href="../../Web3Thoughts/02_WhyBlockchainIsNecessary/">
+            
+                    
+                    为什么区块链是必须的？《主权个人》读书笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="../../Web3Thoughts/03_TheCoolestTransactionOnBitcoin/">
+            
+                <a href="../../Web3Thoughts/03_TheCoolestTransactionOnBitcoin/">
+            
+                    
+                    区块链彩蛋解读指南：b10c...eb5d 玩了哪些「梗」？
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Web3 工作机会</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../../Web3WorkOpportunities/">
+            
+                <a href="../../Web3WorkOpportunities/">
+            
+                    
+                    Web3 工作机会
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">我们的研究报告</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../../OurResearch/Search01_BscAttack/">
+            
+                <a href="../../OurResearch/Search01_BscAttack/">
+            
+                    
+                    BSC 链上的攻击：为何发生及其潜在的危害
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >第18讲：Bitcoin Script脚本系统</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="第18讲：bitcoin-script脚本系统">第18讲：Bitcoin Script脚本系统</h1>
+<p><img src="https://img.shields.io/badge/状态-已完成-success" alt="status"></img>
+<img src="https://img.shields.io/badge/作者-beihaili-blue" alt="author"></img>
+<img src="https://img.shields.io/badge/日期-2025--09-orange" alt="date"></img>
+<img src="https://img.shields.io/badge/难度-中级-yellow" alt="difficulty"></img></p>
+<blockquote>
+<p>💡 想象比特币是一台自动贩卖机，你不仅可以投币买东西，还可以设置各种条件："只有两个人同时插钥匙才能打开"、"只有在特定时间才能使用"、"必须输入正确密码"。这就是比特币脚本的魅力——让数字货币变得可编程。</p>
+</blockquote>
+<h2 id="目录">目录</h2>
+<ul>
+<li><a href="#前言比特币的可编程货币基因">前言：比特币的可编程货币基因</a></li>
+<li><a href="#script语言设计哲学">Script语言设计哲学</a></li>
+<li><a href="#操作码系统详解">操作码系统详解</a></li>
+<li><a href="#常见脚本模式">常见脚本模式</a></li>
+<li><a href="#高级脚本应用">高级脚本应用</a></li>
+<li><a href="#脚本安全性分析">脚本安全性分析</a></li>
+<li><a href="#实战演练编写bitcoin脚本">实战演练：编写Bitcoin脚本</a></li>
+<li><a href="#常见问题">常见问题</a></li>
+<li><a href="#结语">结语</a></li>
+</ul>
+<h2 id="前言：比特币的可编程货币基因">前言：比特币的可编程货币基因</h2>
+<p>很多人认为比特币只是"数字现金"，但实际上比特币从诞生之初就具备了可编程性。Bitcoin Script是比特币内置的脚本语言，它让比特币不仅仅是转账工具，更是可编程的数字合约平台。</p>
+<p><strong>现实世界的类比：</strong></p>
+<ul>
+<li><strong>支票</strong>：可以设置收款人、金额、有效期</li>
+<li><strong>信托</strong>：可以设置复杂的资金释放条件  </li>
+<li><strong>保险箱</strong>：可以设置多把钥匙同时使用</li>
+</ul>
+<p><strong>Bitcoin Script的能力：</strong></p>
+<ul>
+<li><strong>条件支付</strong>：只有满足特定条件才能花费</li>
+<li><strong>多重签名</strong>：需要多个签名才能动用资金</li>
+<li><strong>时间锁定</strong>：在特定时间后才能使用</li>
+<li><strong>复杂逻辑</strong>：组合多种条件创造智能合约</li>
+</ul>
+<h2 id="script语言设计哲学">Script语言设计哲学</h2>
+<h3 id="核心设计原则">核心设计原则</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">BitcoinScriptDesign</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-variable language_">self</span>.design_principles = {
+            <span class="hljs-string">"确定性"</span>: {
+                <span class="hljs-string">"原则"</span>: <span class="hljs-string">"相同输入产生相同输出"</span>,
+                <span class="hljs-string">"实现"</span>: <span class="hljs-string">"禁止随机数生成器"</span>,
+                <span class="hljs-string">"目的"</span>: <span class="hljs-string">"确保所有节点执行结果一致"</span>,
+                <span class="hljs-string">"例子"</span>: <span class="hljs-string">"不允许获取当前时间作为变量"</span>
+            },
+
+            <span class="hljs-string">"简单性"</span>: {
+                <span class="hljs-string">"原则"</span>: <span class="hljs-string">"保持语言简单易验证"</span>,
+                <span class="hljs-string">"实现"</span>: <span class="hljs-string">"有限的操作码集合"</span>,
+                <span class="hljs-string">"目的"</span>: <span class="hljs-string">"减少实现错误和安全漏洞"</span>,
+                <span class="hljs-string">"例子"</span>: <span class="hljs-string">"只有100多个操作码"</span>
+            },
+
+            <span class="hljs-string">"安全性"</span>: {
+                <span class="hljs-string">"原则"</span>: <span class="hljs-string">"优先考虑安全而非功能"</span>,
+                <span class="hljs-string">"实现"</span>: <span class="hljs-string">"禁用危险操作"</span>,
+                <span class="hljs-string">"目的"</span>: <span class="hljs-string">"保护网络免受攻击"</span>,
+                <span class="hljs-string">"例子"</span>: <span class="hljs-string">"禁用了乘法和字符串操作"</span>
+            },
+
+            <span class="hljs-string">"非图灵完备"</span>: {
+                <span class="hljs-string">"原则"</span>: <span class="hljs-string">"不支持无限循环"</span>,
+                <span class="hljs-string">"实现"</span>: <span class="hljs-string">"没有循环结构"</span>,
+                <span class="hljs-string">"目的"</span>: <span class="hljs-string">"防止无限执行消耗资源"</span>,
+                <span class="hljs-string">"例子"</span>: <span class="hljs-string">"无法编写死循环程序"</span>
+            }
+        }
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">script_limitations</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-string">"""脚本限制说明"""</span>
+
+        <span class="hljs-keyword">return</span> {
+            <span class="hljs-string">"禁用的操作码"</span>: [
+                <span class="hljs-string">"OP_CAT: 字符串连接（安全风险）"</span>,
+                <span class="hljs-string">"OP_SUBSTR: 子字符串提取"</span>,
+                <span class="hljs-string">"OP_MUL: 乘法操作"</span>,
+                <span class="hljs-string">"OP_RSHIFT: 右移位操作"</span>
+            ],
+
+            <span class="hljs-string">"执行限制"</span>: [
+                <span class="hljs-string">"最大脚本大小: 10,000字节"</span>,
+                <span class="hljs-string">"最大栈大小: 1,000项"</span>,
+                <span class="hljs-string">"最大操作码数量: 201个"</span>,
+                <span class="hljs-string">"最大签名验证次数: 20个"</span>
+            ],
+
+            <span class="hljs-string">"设计考虑"</span>: [
+                <span class="hljs-string">"防止DoS攻击"</span>,
+                <span class="hljs-string">"确保快速验证"</span>,
+                <span class="hljs-string">"维护网络稳定性"</span>,
+                <span class="hljs-string">"保证向前兼容性"</span>
+            ]
+        }
+</code></pre>
+<h3 id="栈式执行模型">栈式执行模型</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">BitcoinScriptStack</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-variable language_">self</span>.stack = []
+        <span class="hljs-variable language_">self</span>.alt_stack = []
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">execute_script</span>(<span class="hljs-params">self, script_ops</span>):
+        <span class="hljs-string">"""执行脚本操作序列"""</span>
+
+        <span class="hljs-keyword">for</span> op <span class="hljs-keyword">in</span> script_ops:
+            <span class="hljs-keyword">if</span> <span class="hljs-variable language_">self</span>.is_push_data(op):
+                <span class="hljs-variable language_">self</span>.stack.append(op[<span class="hljs-string">'data'</span>])
+            <span class="hljs-keyword">else</span>:
+                <span class="hljs-variable language_">self</span>.execute_opcode(op[<span class="hljs-string">'opcode'</span>])
+
+        <span class="hljs-comment"># 脚本成功执行当且仅当栈顶为真（非零值）</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">len</span>(<span class="hljs-variable language_">self</span>.stack) &gt; <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> <span class="hljs-variable language_">self</span>.stack[-<span class="hljs-number">1</span>] != <span class="hljs-string">b'\x00'</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">execute_opcode</span>(<span class="hljs-params">self, opcode</span>):
+        <span class="hljs-string">"""执行具体操作码"""</span>
+
+        <span class="hljs-keyword">if</span> opcode == <span class="hljs-string">'OP_DUP'</span>:
+            <span class="hljs-comment"># 复制栈顶元素</span>
+            <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(<span class="hljs-variable language_">self</span>.stack) &lt; <span class="hljs-number">1</span>:
+                <span class="hljs-keyword">raise</span> Exception(<span class="hljs-string">"Stack underflow"</span>)
+            <span class="hljs-variable language_">self</span>.stack.append(<span class="hljs-variable language_">self</span>.stack[-<span class="hljs-number">1</span>])
+
+        <span class="hljs-keyword">elif</span> opcode == <span class="hljs-string">'OP_HASH160'</span>:
+            <span class="hljs-comment"># SHA256 + RIPEMD160 哈希</span>
+            <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(<span class="hljs-variable language_">self</span>.stack) &lt; <span class="hljs-number">1</span>:
+                <span class="hljs-keyword">raise</span> Exception(<span class="hljs-string">"Stack underflow"</span>)
+            data = <span class="hljs-variable language_">self</span>.stack.pop()
+            hash_result = <span class="hljs-variable language_">self</span>.hash160(data)
+            <span class="hljs-variable language_">self</span>.stack.append(hash_result)
+
+        <span class="hljs-keyword">elif</span> opcode == <span class="hljs-string">'OP_EQUALVERIFY'</span>:
+            <span class="hljs-comment"># 验证栈顶两个元素相等，相等则继续，不等则失败</span>
+            <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(<span class="hljs-variable language_">self</span>.stack) &lt; <span class="hljs-number">2</span>:
+                <span class="hljs-keyword">raise</span> Exception(<span class="hljs-string">"Stack underflow"</span>)
+            a = <span class="hljs-variable language_">self</span>.stack.pop()
+            b = <span class="hljs-variable language_">self</span>.stack.pop()
+            <span class="hljs-keyword">if</span> a != b:
+                <span class="hljs-keyword">raise</span> Exception(<span class="hljs-string">"EQUALVERIFY failed"</span>)
+
+        <span class="hljs-keyword">elif</span> opcode == <span class="hljs-string">'OP_CHECKSIG'</span>:
+            <span class="hljs-comment"># 验证数字签名</span>
+            <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(<span class="hljs-variable language_">self</span>.stack) &lt; <span class="hljs-number">2</span>:
+                <span class="hljs-keyword">raise</span> Exception(<span class="hljs-string">"Stack underflow"</span>)
+            pubkey = <span class="hljs-variable language_">self</span>.stack.pop()
+            signature = <span class="hljs-variable language_">self</span>.stack.pop()
+
+            <span class="hljs-comment"># 简化的签名验证</span>
+            result = <span class="hljs-variable language_">self</span>.verify_signature(signature, pubkey)
+            <span class="hljs-variable language_">self</span>.stack.append(<span class="hljs-string">b'\x01'</span> <span class="hljs-keyword">if</span> result <span class="hljs-keyword">else</span> <span class="hljs-string">b'\x00'</span>)
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">demonstrate_p2pkh_execution</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-string">"""演示P2PKH脚本执行过程"""</span>
+
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"📝 P2PKH脚本执行演示:"</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"="</span> * <span class="hljs-number">40</span>)
+
+        <span class="hljs-comment"># 输入脚本 (scriptSig): &lt;signature&gt; &lt;pubkey&gt;</span>
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"步骤1: 执行输入脚本"</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"操作: 推入签名和公钥"</span>)
+        <span class="hljs-variable language_">self</span>.stack = [<span class="hljs-string">b'signature'</span>, <span class="hljs-string">b'pubkey'</span>]
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">f"栈状态: <span class="hljs-subst">{[item.decode() <span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> self.stack]}</span>"</span>)
+        <span class="hljs-built_in">print</span>()
+
+        <span class="hljs-comment"># 输出脚本 (scriptPubKey): OP_DUP OP_HASH160 &lt;pubkey_hash&gt; OP_EQUALVERIFY OP_CHECKSIG</span>
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"步骤2: 执行输出脚本"</span>)
+
+        <span class="hljs-comment"># OP_DUP</span>
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"OP_DUP - 复制栈顶元素"</span>)
+        <span class="hljs-variable language_">self</span>.stack.append(<span class="hljs-variable language_">self</span>.stack[-<span class="hljs-number">1</span>])
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">f"栈状态: <span class="hljs-subst">{[item.decode() <span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> self.stack]}</span>"</span>)
+
+        <span class="hljs-comment"># OP_HASH160</span>
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"OP_HASH160 - 哈希栈顶元素"</span>)
+        pubkey = <span class="hljs-variable language_">self</span>.stack.pop()
+        pubkey_hash = <span class="hljs-string">b'pubkey_hash'</span>  <span class="hljs-comment"># 模拟哈希结果</span>
+        <span class="hljs-variable language_">self</span>.stack.append(pubkey_hash)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">f"栈状态: <span class="hljs-subst">{[item.decode() <span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> self.stack]}</span>"</span>)
+
+        <span class="hljs-comment"># 推入目标公钥哈希</span>
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"推入目标公钥哈希"</span>)
+        <span class="hljs-variable language_">self</span>.stack.append(<span class="hljs-string">b'pubkey_hash'</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">f"栈状态: <span class="hljs-subst">{[item.decode() <span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> self.stack]}</span>"</span>)
+
+        <span class="hljs-comment"># OP_EQUALVERIFY</span>
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"OP_EQUALVERIFY - 验证哈希相等"</span>)
+        hash1 = <span class="hljs-variable language_">self</span>.stack.pop()
+        hash2 = <span class="hljs-variable language_">self</span>.stack.pop()
+        <span class="hljs-keyword">if</span> hash1 == hash2:
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">"✅ 公钥哈希验证通过"</span>)
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">"❌ 公钥哈希验证失败"</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">f"栈状态: <span class="hljs-subst">{[item.decode() <span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> self.stack]}</span>"</span>)
+
+        <span class="hljs-comment"># OP_CHECKSIG</span>
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"OP_CHECKSIG - 验证数字签名"</span>)
+        pubkey = <span class="hljs-variable language_">self</span>.stack.pop()
+        signature = <span class="hljs-variable language_">self</span>.stack.pop()
+        <span class="hljs-comment"># 模拟签名验证成功</span>
+        <span class="hljs-variable language_">self</span>.stack.append(<span class="hljs-string">b'\x01'</span>)  <span class="hljs-comment"># True</span>
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"✅ 数字签名验证通过"</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">f"最终栈状态: <span class="hljs-subst">{[<span class="hljs-built_in">hex</span>(<span class="hljs-built_in">ord</span>(item)) <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(item)==<span class="hljs-number">1</span> <span class="hljs-keyword">else</span> item.decode() <span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> self.stack]}</span>"</span>)
+
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">len</span>(<span class="hljs-variable language_">self</span>.stack) &gt; <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> <span class="hljs-variable language_">self</span>.stack[-<span class="hljs-number">1</span>] == <span class="hljs-string">b'\x01'</span>
+</code></pre>
+<h2 id="操作码系统详解">操作码系统详解</h2>
+<h3 id="操作码分类">操作码分类</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">bitcoin_opcodes_reference</span>():
+    <span class="hljs-string">"""比特币操作码参考手册"""</span>
+
+    <span class="hljs-keyword">return</span> {
+        <span class="hljs-string">"常量操作"</span>: {
+            <span class="hljs-string">"OP_0 (OP_FALSE)"</span>: <span class="hljs-string">"推入空字节数组"</span>,
+            <span class="hljs-string">"OP_1-OP_16"</span>: <span class="hljs-string">"推入数字1-16"</span>,
+            <span class="hljs-string">"OP_1NEGATE"</span>: <span class="hljs-string">"推入-1"</span>,
+            <span class="hljs-string">"OP_PUSHDATA1-4"</span>: <span class="hljs-string">"推入不同长度的数据"</span>
+        },
+
+        <span class="hljs-string">"栈操作"</span>: {
+            <span class="hljs-string">"OP_DUP"</span>: <span class="hljs-string">"复制栈顶元素"</span>,
+            <span class="hljs-string">"OP_DROP"</span>: <span class="hljs-string">"删除栈顶元素"</span>, 
+            <span class="hljs-string">"OP_SWAP"</span>: <span class="hljs-string">"交换栈顶两个元素"</span>,
+            <span class="hljs-string">"OP_ROT"</span>: <span class="hljs-string">"栈顶三个元素循环左移"</span>,
+            <span class="hljs-string">"OP_PICK"</span>: <span class="hljs-string">"复制栈中第n个元素到栈顶"</span>,
+            <span class="hljs-string">"OP_ROLL"</span>: <span class="hljs-string">"移动栈中第n个元素到栈顶"</span>
+        },
+
+        <span class="hljs-string">"算术运算"</span>: {
+            <span class="hljs-string">"OP_ADD"</span>: <span class="hljs-string">"加法运算"</span>,
+            <span class="hljs-string">"OP_SUB"</span>: <span class="hljs-string">"减法运算"</span>, 
+            <span class="hljs-string">"OP_1ADD"</span>: <span class="hljs-string">"加1"</span>,
+            <span class="hljs-string">"OP_1SUB"</span>: <span class="hljs-string">"减1"</span>,
+            <span class="hljs-string">"OP_NEGATE"</span>: <span class="hljs-string">"取负数"</span>,
+            <span class="hljs-string">"OP_ABS"</span>: <span class="hljs-string">"取绝对值"</span>,
+            <span class="hljs-string">"OP_MIN"</span>: <span class="hljs-string">"取最小值"</span>,
+            <span class="hljs-string">"OP_MAX"</span>: <span class="hljs-string">"取最大值"</span>
+        },
+
+        <span class="hljs-string">"逻辑运算"</span>: {
+            <span class="hljs-string">"OP_NOT"</span>: <span class="hljs-string">"逻辑非"</span>,
+            <span class="hljs-string">"OP_BOOLAND"</span>: <span class="hljs-string">"逻辑与"</span>,
+            <span class="hljs-string">"OP_BOOLOR"</span>: <span class="hljs-string">"逻辑或"</span>,
+            <span class="hljs-string">"OP_EQUAL"</span>: <span class="hljs-string">"相等比较"</span>,
+            <span class="hljs-string">"OP_EQUALVERIFY"</span>: <span class="hljs-string">"相等验证（失败则脚本失败）"</span>,
+            <span class="hljs-string">"OP_LESSTHAN"</span>: <span class="hljs-string">"小于比较"</span>,
+            <span class="hljs-string">"OP_GREATERTHAN"</span>: <span class="hljs-string">"大于比较"</span>
+        },
+
+        <span class="hljs-string">"密码学操作"</span>: {
+            <span class="hljs-string">"OP_RIPEMD160"</span>: <span class="hljs-string">"RIPEMD160哈希"</span>,
+            <span class="hljs-string">"OP_SHA1"</span>: <span class="hljs-string">"SHA1哈希"</span>,
+            <span class="hljs-string">"OP_SHA256"</span>: <span class="hljs-string">"SHA256哈希"</span>, 
+            <span class="hljs-string">"OP_HASH160"</span>: <span class="hljs-string">"SHA256+RIPEMD160"</span>,
+            <span class="hljs-string">"OP_HASH256"</span>: <span class="hljs-string">"双SHA256"</span>,
+            <span class="hljs-string">"OP_CHECKSIG"</span>: <span class="hljs-string">"验证ECDSA签名"</span>,
+            <span class="hljs-string">"OP_CHECKMULTISIG"</span>: <span class="hljs-string">"验证多重签名"</span>
+        },
+
+        <span class="hljs-string">"条件执行"</span>: {
+            <span class="hljs-string">"OP_IF"</span>: <span class="hljs-string">"条件分支开始"</span>,
+            <span class="hljs-string">"OP_NOTIF"</span>: <span class="hljs-string">"反条件分支开始"</span>, 
+            <span class="hljs-string">"OP_ELSE"</span>: <span class="hljs-string">"条件分支的else部分"</span>,
+            <span class="hljs-string">"OP_ENDIF"</span>: <span class="hljs-string">"条件分支结束"</span>,
+            <span class="hljs-string">"OP_VERIFY"</span>: <span class="hljs-string">"验证栈顶为真"</span>
+        },
+
+        <span class="hljs-string">"时间锁定"</span>: {
+            <span class="hljs-string">"OP_CHECKLOCKTIMEVERIFY"</span>: <span class="hljs-string">"验证绝对锁定时间"</span>,
+            <span class="hljs-string">"OP_CHECKSEQUENCEVERIFY"</span>: <span class="hljs-string">"验证相对锁定时间"</span>
+        }
+    }
+</code></pre>
+<h3 id="复杂操作码示例">复杂操作码示例</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">AdvancedScriptOpcodes</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-variable language_">self</span>.current_block_height = <span class="hljs-number">866000</span>
+        <span class="hljs-variable language_">self</span>.current_timestamp = <span class="hljs-number">1725894000</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">demonstrate_multisig</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-string">"""演示多重签名脚本"""</span>
+
+        <span class="hljs-comment"># 2-of-3 多重签名脚本</span>
+        multisig_script = [
+            <span class="hljs-string">'OP_2'</span>,           <span class="hljs-comment"># 需要2个签名</span>
+            <span class="hljs-string">'pubkey1'</span>,        <span class="hljs-comment"># 公钥1  </span>
+            <span class="hljs-string">'pubkey2'</span>,        <span class="hljs-comment"># 公钥2</span>
+            <span class="hljs-string">'pubkey3'</span>,        <span class="hljs-comment"># 公钥3</span>
+            <span class="hljs-string">'OP_3'</span>,           <span class="hljs-comment"># 总共3个公钥</span>
+            <span class="hljs-string">'OP_CHECKMULTISIG'</span> <span class="hljs-comment"># 验证多重签名</span>
+        ]
+
+        <span class="hljs-comment"># 对应的解锁脚本</span>
+        unlock_script = [
+            <span class="hljs-string">'OP_0'</span>,          <span class="hljs-comment"># 由于CHECKMULTISIG的bug，需要额外的值</span>
+            <span class="hljs-string">'signature1'</span>,    <span class="hljs-comment"># 第一个签名</span>
+            <span class="hljs-string">'signature3'</span>     <span class="hljs-comment"># 第三个签名（跳过第二个）</span>
+        ]
+
+        <span class="hljs-keyword">return</span> {
+            <span class="hljs-string">"类型"</span>: <span class="hljs-string">"2-of-3多重签名"</span>,
+            <span class="hljs-string">"解锁脚本"</span>: unlock_script,
+            <span class="hljs-string">"锁定脚本"</span>: multisig_script,
+            <span class="hljs-string">"说明"</span>: <span class="hljs-string">"需要3个公钥中的任意2个对应私钥签名"</span>
+        }
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">demonstrate_timelock</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-string">"""演示时间锁定脚本"""</span>
+
+        <span class="hljs-comment"># 绝对时间锁定：只能在特定时间后花费</span>
+        absolute_timelock = [
+            <span class="hljs-string">'1735689600'</span>,              <span class="hljs-comment"># 2025年1月1日的时间戳</span>
+            <span class="hljs-string">'OP_CHECKLOCKTIMEVERIFY'</span>,  <span class="hljs-comment"># 验证当前时间大于指定时间</span>
+            <span class="hljs-string">'OP_DROP'</span>,                 <span class="hljs-comment"># 移除时间值</span>
+            <span class="hljs-string">'OP_DUP'</span>,                  <span class="hljs-comment"># 标准P2PKH后续操作...</span>
+            <span class="hljs-string">'OP_HASH160'</span>,
+            <span class="hljs-string">'pubkey_hash'</span>,
+            <span class="hljs-string">'OP_EQUALVERIFY'</span>,
+            <span class="hljs-string">'OP_CHECKSIG'</span>
+        ]
+
+        <span class="hljs-comment"># 相对时间锁定：必须在指定区块数后才能花费</span>
+        relative_timelock = [
+            <span class="hljs-string">'144'</span>,                     <span class="hljs-comment"># 144个区块（约1天）</span>
+            <span class="hljs-string">'OP_CHECKSEQUENCEVERIFY'</span>,  <span class="hljs-comment"># 验证相对锁定时间</span>
+            <span class="hljs-string">'OP_DROP'</span>,
+            <span class="hljs-string">'OP_DUP'</span>,                  <span class="hljs-comment"># 标准P2PKH后续操作...</span>
+            <span class="hljs-string">'OP_HASH160'</span>, 
+            <span class="hljs-string">'pubkey_hash'</span>,
+            <span class="hljs-string">'OP_EQUALVERIFY'</span>,
+            <span class="hljs-string">'OP_CHECKSIG'</span>
+        ]
+
+        <span class="hljs-keyword">return</span> {
+            <span class="hljs-string">"绝对时间锁"</span>: {
+                <span class="hljs-string">"脚本"</span>: absolute_timelock,
+                <span class="hljs-string">"用途"</span>: <span class="hljs-string">"在指定日期后才能花费资金"</span>,
+                <span class="hljs-string">"场景"</span>: <span class="hljs-string">"定期释放、遗嘱执行"</span>
+            },
+            <span class="hljs-string">"相对时间锁"</span>: {
+                <span class="hljs-string">"脚本"</span>: relative_timelock,
+                <span class="hljs-string">"用途"</span>: <span class="hljs-string">"在UTXO创建一定时间后才能花费"</span>,
+                <span class="hljs-string">"场景"</span>: <span class="hljs-string">"支付通道、争议解决"</span>
+            }
+        }
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">demonstrate_hash_lock</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-string">"""演示哈希锁定脚本"""</span>
+
+        <span class="hljs-comment"># 哈希锁定：需要提供特定数据的原像</span>
+        hash_lock_script = [
+            <span class="hljs-string">'OP_HASH256'</span>,                    <span class="hljs-comment"># 对栈顶数据做双SHA256</span>
+            <span class="hljs-string">'3044022...hash_value'</span>,          <span class="hljs-comment"># 预设的哈希值</span>
+            <span class="hljs-string">'OP_EQUAL'</span>                       <span class="hljs-comment"># 验证哈希值相等</span>
+        ]
+
+        <span class="hljs-comment"># 解锁需要提供原像</span>
+        unlock_script = [
+            <span class="hljs-string">'secret_data'</span>  <span class="hljs-comment"># 能够产生指定哈希值的原始数据</span>
+        ]
+
+        <span class="hljs-keyword">return</span> {
+            <span class="hljs-string">"锁定脚本"</span>: hash_lock_script,
+            <span class="hljs-string">"解锁脚本"</span>: unlock_script,
+            <span class="hljs-string">"应用场景"</span>: [
+                <span class="hljs-string">"原子交换（Atomic Swap）"</span>,
+                <span class="hljs-string">"支付通道路由"</span>, 
+                <span class="hljs-string">"条件支付"</span>,
+                <span class="hljs-string">"隐私保护机制"</span>
+            ],
+            <span class="hljs-string">"工作原理"</span>: <span class="hljs-string">"只有知道秘密数据的人才能花费资金"</span>
+        }
+</code></pre>
+<h2 id="常见脚本模式">常见脚本模式</h2>
+<h3 id="标准脚本类型">标准脚本类型</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">standard_script_patterns</span>():
+    <span class="hljs-string">"""标准脚本模式分析"""</span>
+
+    <span class="hljs-keyword">return</span> {
+        <span class="hljs-string">"P2PKH (Pay-to-Public-Key-Hash)"</span>: {
+            <span class="hljs-string">"锁定脚本"</span>: <span class="hljs-string">"OP_DUP OP_HASH160 &lt;pubkey_hash&gt; OP_EQUALVERIFY OP_CHECKSIG"</span>,
+            <span class="hljs-string">"解锁脚本"</span>: <span class="hljs-string">"&lt;signature&gt; &lt;pubkey&gt;"</span>, 
+            <span class="hljs-string">"优点"</span>: <span class="hljs-string">"简单、安全、隐私保护好"</span>,
+            <span class="hljs-string">"缺点"</span>: <span class="hljs-string">"功能单一"</span>,
+            <span class="hljs-string">"使用率"</span>: <span class="hljs-string">"约60%的交易"</span>,
+            <span class="hljs-string">"地址格式"</span>: <span class="hljs-string">"1开头的地址"</span>
+        },
+
+        <span class="hljs-string">"P2SH (Pay-to-Script-Hash)"</span>: {
+            <span class="hljs-string">"锁定脚本"</span>: <span class="hljs-string">"OP_HASH160 &lt;script_hash&gt; OP_EQUAL"</span>,
+            <span class="hljs-string">"解锁脚本"</span>: <span class="hljs-string">"&lt;sig1&gt; &lt;sig2&gt; ... &lt;redeemScript&gt;"</span>,
+            <span class="hljs-string">"优点"</span>: <span class="hljs-string">"支持复杂脚本、转移复杂度到花费方"</span>,
+            <span class="hljs-string">"缺点"</span>: <span class="hljs-string">"脚本大小限制、费用可能较高"</span>,
+            <span class="hljs-string">"使用率"</span>: <span class="hljs-string">"约25%的交易"</span>,
+            <span class="hljs-string">"地址格式"</span>: <span class="hljs-string">"3开头的地址"</span>
+        },
+
+        <span class="hljs-string">"P2WPKH (Pay-to-Witness-PubkeyHash)"</span>: {
+            <span class="hljs-string">"锁定脚本"</span>: <span class="hljs-string">"OP_0 &lt;pubkey_hash&gt;"</span>,
+            <span class="hljs-string">"见证数据"</span>: <span class="hljs-string">"&lt;signature&gt; &lt;pubkey&gt;"</span>,
+            <span class="hljs-string">"优点"</span>: <span class="hljs-string">"交易费用低、解决延展性"</span>,
+            <span class="hljs-string">"缺点"</span>: <span class="hljs-string">"需要SegWit支持"</span>,
+            <span class="hljs-string">"使用率"</span>: <span class="hljs-string">"约30%的交易"</span>,
+            <span class="hljs-string">"地址格式"</span>: <span class="hljs-string">"bc1q开头的地址"</span>
+        },
+
+        <span class="hljs-string">"P2WSH (Pay-to-Witness-Script-Hash)"</span>: {
+            <span class="hljs-string">"锁定脚本"</span>: <span class="hljs-string">"OP_0 &lt;script_hash&gt;"</span>,
+            <span class="hljs-string">"见证数据"</span>: <span class="hljs-string">"&lt;sig1&gt; &lt;sig2&gt; ... &lt;witnessScript&gt;"</span>,
+            <span class="hljs-string">"优点"</span>: <span class="hljs-string">"支持复杂脚本、费用低、无延展性"</span>,
+            <span class="hljs-string">"缺点"</span>: <span class="hljs-string">"较为复杂"</span>,
+            <span class="hljs-string">"使用率"</span>: <span class="hljs-string">"约2%的交易"</span>,
+            <span class="hljs-string">"地址格式"</span>: <span class="hljs-string">"bc1q开头的长地址"</span>
+        },
+
+        <span class="hljs-string">"P2TR (Pay-to-Taproot)"</span>: {
+            <span class="hljs-string">"锁定脚本"</span>: <span class="hljs-string">"OP_1 &lt;taproot_output&gt;"</span>,
+            <span class="hljs-string">"解锁方式"</span>: <span class="hljs-string">"密钥路径或脚本路径"</span>,
+            <span class="hljs-string">"优点"</span>: <span class="hljs-string">"隐私性最佳、效率高、功能强大"</span>,
+            <span class="hljs-string">"缺点"</span>: <span class="hljs-string">"相对新颖、支持还在增长"</span>,
+            <span class="hljs-string">"使用率"</span>: <span class="hljs-string">"约3%的交易（持续增长）"</span>,
+            <span class="hljs-string">"地址格式"</span>: <span class="hljs-string">"bc1p开头的地址"</span>
+        }
+    }
+</code></pre>
+<h2 id="高级脚本应用">高级脚本应用</h2>
+<h3 id="原子交换脚本">原子交换脚本</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">AtomicSwapScript</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-variable language_">self</span>.hash_lock = <span class="hljs-string">"a91420f69d...hash_value"</span>
+        <span class="hljs-variable language_">self</span>.alice_pubkey = <span class="hljs-string">"03a1b2c3...alice_key"</span>  
+        <span class="hljs-variable language_">self</span>.bob_pubkey = <span class="hljs-string">"03d4e5f6...bob_key"</span>
+        <span class="hljs-variable language_">self</span>.locktime = <span class="hljs-number">1735689600</span>  <span class="hljs-comment"># 2025-01-01</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">create_htlc_script</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-string">"""创建哈希时间锁定合约（HTLC）"""</span>
+
+        htlc_script = <span class="hljs-string">f"""
+        OP_IF
+            OP_HASH160 <span class="hljs-subst">{self.hash_lock}</span> OP_EQUALVERIFY
+            <span class="hljs-subst">{self.alice_pubkey}</span> OP_CHECKSIG
+        OP_ELSE
+            <span class="hljs-subst">{self.locktime}</span> OP_CHECKLOCKTIMEVERIFY OP_DROP
+            <span class="hljs-subst">{self.bob_pubkey}</span> OP_CHECKSIG  
+        OP_ENDIF
+        """</span>
+
+        <span class="hljs-keyword">return</span> {
+            <span class="hljs-string">"脚本"</span>: htlc_script.strip(),
+            <span class="hljs-string">"功能说明"</span>: {
+                <span class="hljs-string">"条件1"</span>: <span class="hljs-string">"Alice提供秘密原像，可以立即花费"</span>,
+                <span class="hljs-string">"条件2"</span>: <span class="hljs-string">"超时后，Bob可以赎回资金"</span>,
+                <span class="hljs-string">"用途"</span>: <span class="hljs-string">"跨链原子交换的核心机制"</span>
+            },
+            <span class="hljs-string">"安全特性"</span>: [
+                <span class="hljs-string">"要么交换成功，要么全部回滚"</span>,
+                <span class="hljs-string">"不存在一方得利另一方损失的情况"</span>,
+                <span class="hljs-string">"通过时间锁定防止资金永久锁定"</span>
+            ]
+        }
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">atomic_swap_process</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-string">"""原子交换完整流程"""</span>
+
+        <span class="hljs-keyword">return</span> {
+            <span class="hljs-string">"参与方"</span>: {
+                <span class="hljs-string">"Alice"</span>: <span class="hljs-string">"拥有Bitcoin，想要Litecoin"</span>,
+                <span class="hljs-string">"Bob"</span>: <span class="hljs-string">"拥有Litecoin，想要Bitcoin"</span>
+            },
+
+            <span class="hljs-string">"步骤1_准备"</span>: [
+                <span class="hljs-string">"Alice生成秘密值S和其哈希值H = hash(S)"</span>,
+                <span class="hljs-string">"双方商定交换金额和时间锁定参数"</span>,
+                <span class="hljs-string">"Alice创建Bitcoin HTLC，锁定1 BTC"</span>,
+                <span class="hljs-string">"Bob验证Bitcoin HTLC正确性"</span>
+            ],
+
+            <span class="hljs-string">"步骤2_响应"</span>: [
+                <span class="hljs-string">"Bob在Litecoin上创建相同哈希值H的HTLC"</span>,
+                <span class="hljs-string">"Bob锁定50 LTC（假设汇率1:50）"</span>,
+                <span class="hljs-string">"Alice验证Litecoin HTLC正确性"</span>
+            ],
+
+            <span class="hljs-string">"步骤3_执行"</span>: [
+                <span class="hljs-string">"Alice使用秘密值S解锁Litecoin HTLC，获得50 LTC"</span>,
+                <span class="hljs-string">"此时秘密值S暴露在Litecoin区块链上"</span>,
+                <span class="hljs-string">"Bob看到秘密值S，用它解锁Bitcoin HTLC，获得1 BTC"</span>
+            ],
+
+            <span class="hljs-string">"结果"</span>: <span class="hljs-string">"双方都获得了想要的币种，交换成功完成"</span>
+        }
+</code></pre>
+<h3 id="支付通道脚本">支付通道脚本</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">PaymentChannelScript</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-variable language_">self</span>.alice_pubkey = <span class="hljs-string">"03a1b2..."</span>
+        <span class="hljs-variable language_">self</span>.bob_pubkey = <span class="hljs-string">"03b2c3..."</span>
+        <span class="hljs-variable language_">self</span>.channel_capacity = <span class="hljs-number">1.0</span>  <span class="hljs-comment"># 1 BTC</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">funding_transaction_script</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-string">"""资金锁定交易脚本"""</span>
+
+        <span class="hljs-comment"># 2-of-2多重签名锁定资金</span>
+        funding_script = <span class="hljs-string">f"""
+        OP_2 
+        <span class="hljs-subst">{self.alice_pubkey}</span> 
+        <span class="hljs-subst">{self.bob_pubkey}</span> 
+        OP_2 
+        OP_CHECKMULTISIG
+        """</span>
+
+        <span class="hljs-keyword">return</span> {
+            <span class="hljs-string">"类型"</span>: <span class="hljs-string">"2-of-2多重签名"</span>,
+            <span class="hljs-string">"脚本"</span>: funding_script.strip(),
+            <span class="hljs-string">"功能"</span>: <span class="hljs-string">"需要Alice和Bob都签名才能花费"</span>,
+            <span class="hljs-string">"用途"</span>: <span class="hljs-string">"锁定支付通道的初始资金"</span>
+        }
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">commitment_transaction_script</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-string">"""承诺交易脚本（可撤销）"""</span>
+
+        <span class="hljs-comment"># Alice的输出（可被Bob在延迟期内撤销）</span>
+        alice_output = <span class="hljs-string">f"""
+        OP_IF
+            <span class="hljs-subst">{self.bob_pubkey}</span> OP_CHECKSIGVERIFY
+        OP_ELSE  
+            144 OP_CHECKSEQUENCEVERIFY OP_DROP
+            <span class="hljs-subst">{self.alice_pubkey}</span> OP_CHECKSIG
+        OP_ENDIF
+        """</span>
+
+        <span class="hljs-keyword">return</span> {
+            <span class="hljs-string">"Alice输出"</span>: alice_output.strip(),
+            <span class="hljs-string">"功能说明"</span>: {
+                <span class="hljs-string">"立即花费"</span>: <span class="hljs-string">"Bob可以立即用撤销密钥花费（惩罚机制）"</span>,
+                <span class="hljs-string">"延迟花费"</span>: <span class="hljs-string">"Alice必须等待144个区块后才能花费"</span>
+            },
+            <span class="hljs-string">"安全机制"</span>: <span class="hljs-string">"防止Alice广播旧的承诺交易"</span>
+        }
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">htlc_payment_script</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-string">"""HTLC支付脚本"""</span>
+
+        <span class="hljs-comment"># 通过支付通道进行条件支付</span>
+        htlc_script = <span class="hljs-string">f"""
+        OP_IF
+            OP_HASH160 &lt;payment_hash&gt; OP_EQUALVERIFY
+            <span class="hljs-subst">{self.bob_pubkey}</span> OP_CHECKSIG
+        OP_ELSE
+            1008 OP_CHECKSEQUENCEVERIFY OP_DROP
+            <span class="hljs-subst">{self.alice_pubkey}</span> OP_CHECKSIG
+        OP_ENDIF
+        """</span>
+
+        <span class="hljs-keyword">return</span> {
+            <span class="hljs-string">"脚本"</span>: htlc_script.strip(),
+            <span class="hljs-string">"用途"</span>: <span class="hljs-string">"在支付通道中进行条件支付"</span>,
+            <span class="hljs-string">"路由"</span>: <span class="hljs-string">"可以通过多个通道路由支付"</span>,
+            <span class="hljs-string">"时间锁"</span>: <span class="hljs-string">"1008个区块（约1周）的超时机制"</span>
+        }
+</code></pre>
+<h2 id="实战演练：编写bitcoin脚本">实战演练：编写Bitcoin脚本</h2>
+<pre><code class="lang-python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">BitcoinScriptBuilder</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-variable language_">self</span>.script = []
+        <span class="hljs-variable language_">self</span>.stack_trace = []
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">add_op</span>(<span class="hljs-params">self, opcode, data=<span class="hljs-literal">None</span></span>):
+        <span class="hljs-string">"""添加操作码"""</span>
+        <span class="hljs-keyword">if</span> data:
+            <span class="hljs-variable language_">self</span>.script.append(<span class="hljs-string">f"<span class="hljs-subst">{opcode}</span> <span class="hljs-subst">{data}</span>"</span>)
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-variable language_">self</span>.script.append(opcode)
+        <span class="hljs-keyword">return</span> <span class="hljs-variable language_">self</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">push_data</span>(<span class="hljs-params">self, data</span>):
+        <span class="hljs-string">"""推入数据"""</span>
+        <span class="hljs-variable language_">self</span>.script.append(data)
+        <span class="hljs-keyword">return</span> <span class="hljs-variable language_">self</span>
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">build_custom_script</span>(<span class="hljs-params">self, scenario</span>):
+        <span class="hljs-string">"""构建自定义脚本"""</span>
+
+        <span class="hljs-keyword">if</span> scenario == <span class="hljs-string">"escrow"</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-variable language_">self</span>.build_escrow_script()
+        <span class="hljs-keyword">elif</span> scenario == <span class="hljs-string">"lottery"</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-variable language_">self</span>.build_lottery_script() 
+        <span class="hljs-keyword">elif</span> scenario == <span class="hljs-string">"will"</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-variable language_">self</span>.build_digital_will_script()
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">raise</span> ValueError(<span class="hljs-string">"Unknown scenario"</span>)
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">build_escrow_script</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-string">"""构建托管脚本"""</span>
+
+        <span class="hljs-comment"># 三方托管：买方、卖方、仲裁方</span>
+        buyer_key = <span class="hljs-string">"03buyer..."</span>
+        seller_key = <span class="hljs-string">"03seller..."</span>
+        arbitrator_key = <span class="hljs-string">"03arbitrator..."</span>
+
+        escrow_script = [
+            <span class="hljs-string">"OP_2"</span>,                    <span class="hljs-comment"># 需要2个签名</span>
+            buyer_key,                 <span class="hljs-comment"># 买方公钥</span>
+            seller_key,                <span class="hljs-comment"># 卖方公钥  </span>
+            arbitrator_key,            <span class="hljs-comment"># 仲裁方公钥</span>
+            <span class="hljs-string">"OP_3"</span>,                    <span class="hljs-comment"># 总共3个公钥</span>
+            <span class="hljs-string">"OP_CHECKMULTISIG"</span>         <span class="hljs-comment"># 2-of-3多重签名</span>
+        ]
+
+        <span class="hljs-keyword">return</span> {
+            <span class="hljs-string">"脚本"</span>: escrow_script,
+            <span class="hljs-string">"使用场景"</span>: [
+                <span class="hljs-string">"买卖双方都同意：直接完成交易"</span>,
+                <span class="hljs-string">"买方和仲裁方同意：买方获得商品"</span>,
+                <span class="hljs-string">"卖方和仲裁方同意：卖方获得货款"</span>
+            ],
+            <span class="hljs-string">"优势"</span>: <span class="hljs-string">"去中心化的托管服务"</span>
+        }
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">build_lottery_script</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-string">"""构建彩票脚本"""</span>
+
+        <span class="hljs-comment"># 基于区块哈希的简单彩票</span>
+        lottery_script = [
+            <span class="hljs-string">"OP_DUP"</span>,                         <span class="hljs-comment"># 复制提交的数字</span>
+            <span class="hljs-string">"OP_HASH256"</span>,                     <span class="hljs-comment"># 哈希处理</span>
+            <span class="hljs-string">"&lt;target_hash&gt;"</span>,                  <span class="hljs-comment"># 目标哈希值</span>
+            <span class="hljs-string">"OP_EQUAL"</span>,                       <span class="hljs-comment"># 比较是否相等</span>
+            <span class="hljs-string">"OP_IF"</span>,                          <span class="hljs-comment"># 如果匹配</span>
+                <span class="hljs-string">"&lt;winner_pubkey&gt;"</span>,            <span class="hljs-comment"># 中奖者公钥</span>
+                <span class="hljs-string">"OP_CHECKSIG"</span>,                <span class="hljs-comment"># 验证签名</span>
+            <span class="hljs-string">"OP_ELSE"</span>,                        <span class="hljs-comment"># 如果不匹配</span>
+                <span class="hljs-string">"576"</span>,                        <span class="hljs-comment"># 4小时后</span>
+                <span class="hljs-string">"OP_CHECKSEQUENCEVERIFY"</span>,     <span class="hljs-comment"># 时间锁定</span>
+                <span class="hljs-string">"OP_DROP"</span>,                    <span class="hljs-comment"># 清理栈</span>
+                <span class="hljs-string">"&lt;organizer_pubkey&gt;"</span>,         <span class="hljs-comment"># 组织者公钥</span>
+                <span class="hljs-string">"OP_CHECKSIG"</span>,                <span class="hljs-comment"># 验证签名</span>
+            <span class="hljs-string">"OP_ENDIF"</span>
+        ]
+
+        <span class="hljs-keyword">return</span> {
+            <span class="hljs-string">"脚本"</span>: lottery_script,
+            <span class="hljs-string">"规则"</span>: <span class="hljs-string">"提交正确哈希原像的人获奖"</span>,
+            <span class="hljs-string">"公平性"</span>: <span class="hljs-string">"基于未来区块哈希，无法预测"</span>,
+            <span class="hljs-string">"时间限制"</span>: <span class="hljs-string">"4小时内无人中奖则退还给组织者"</span>
+        }
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">build_digital_will_script</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-string">"""构建数字遗嘱脚本"""</span>
+
+        <span class="hljs-comment"># 简单的数字遗嘱：一定时间不活动则继承人可以使用</span>
+        will_script = [
+            <span class="hljs-string">"OP_IF"</span>,                          <span class="hljs-comment"># 如果是所有者</span>
+                <span class="hljs-string">"&lt;owner_pubkey&gt;"</span>,             <span class="hljs-comment"># 所有者公钥</span>
+                <span class="hljs-string">"OP_CHECKSIG"</span>,                <span class="hljs-comment"># 验证所有者签名</span>
+            <span class="hljs-string">"OP_ELSE"</span>,                        <span class="hljs-comment"># 如果是继承人</span>
+                <span class="hljs-string">"52560"</span>,                      <span class="hljs-comment"># 1年 = 52560个区块</span>
+                <span class="hljs-string">"OP_CHECKSEQUENCEVERIFY"</span>,     <span class="hljs-comment"># 检查相对锁定时间</span>
+                <span class="hljs-string">"OP_DROP"</span>,                    <span class="hljs-comment"># 清理栈</span>
+                <span class="hljs-string">"&lt;heir_pubkey&gt;"</span>,              <span class="hljs-comment"># 继承人公钥</span>
+                <span class="hljs-string">"OP_CHECKSIG"</span>,                <span class="hljs-comment"># 验证继承人签名</span>
+            <span class="hljs-string">"OP_ENDIF"</span>
+        ]
+
+        <span class="hljs-keyword">return</span> {
+            <span class="hljs-string">"脚本"</span>: will_script,
+            <span class="hljs-string">"功能"</span>: <span class="hljs-string">"所有者可随时使用，1年未使用则继承人可用"</span>,
+            <span class="hljs-string">"应用"</span>: <span class="hljs-string">"数字资产传承"</span>,
+            <span class="hljs-string">"注意"</span>: <span class="hljs-string">"需要定期'刷新'来重置时间锁定"</span>
+        }
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">script_workshop</span>():
+    <span class="hljs-string">"""脚本编程工作坊"""</span>
+
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"🛠️ Bitcoin Script编程工作坊"</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"="</span> * <span class="hljs-number">40</span>)
+
+    builder = BitcoinScriptBuilder()
+
+    <span class="hljs-comment"># 演示各种脚本场景</span>
+    scenarios = [<span class="hljs-string">"escrow"</span>, <span class="hljs-string">"lottery"</span>, <span class="hljs-string">"will"</span>]
+
+    <span class="hljs-keyword">for</span> scenario <span class="hljs-keyword">in</span> scenarios:
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">f"\n📝 场景: <span class="hljs-subst">{scenario.upper()}</span>"</span>)
+        script_info = builder.build_custom_script(scenario)
+
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"脚本内容:"</span>)
+        <span class="hljs-keyword">for</span> i, op <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(script_info[<span class="hljs-string">"脚本"</span>]):
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">f"  <span class="hljs-subst">{i+<span class="hljs-number">1</span>}</span>. <span class="hljs-subst">{op}</span>"</span>)
+
+        <span class="hljs-keyword">if</span> <span class="hljs-string">"使用场景"</span> <span class="hljs-keyword">in</span> script_info:
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">"\n使用场景:"</span>)
+            <span class="hljs-keyword">for</span> scene <span class="hljs-keyword">in</span> script_info[<span class="hljs-string">"使用场景"</span>]:
+                <span class="hljs-built_in">print</span>(<span class="hljs-string">f"  • <span class="hljs-subst">{scene}</span>"</span>)
+
+        <span class="hljs-keyword">if</span> <span class="hljs-string">"规则"</span> <span class="hljs-keyword">in</span> script_info:
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">f"\n规则: <span class="hljs-subst">{script_info[<span class="hljs-string">'规则'</span>]}</span>"</span>)
+
+        <span class="hljs-keyword">if</span> <span class="hljs-string">"功能"</span> <span class="hljs-keyword">in</span> script_info:
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">f"\n功能: <span class="hljs-subst">{script_info[<span class="hljs-string">'功能'</span>]}</span>"</span>)
+
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"-"</span> * <span class="hljs-number">30</span>)
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span>:
+    script_workshop()
+</code></pre>
+<h2 id="常见问题">常见问题</h2>
+<h3 id="❓-为什么bitcoin-script不是图灵完备的？">❓ 为什么Bitcoin Script不是图灵完备的？</h3>
+<p><strong>设计考虑：</strong></p>
+<ul>
+<li><strong>安全性</strong>：防止无限循环导致的DoS攻击</li>
+<li><strong>可预测性</strong>：确保脚本执行时间有上限</li>
+<li><strong>简单性</strong>：降低实现复杂度和错误风险</li>
+<li><strong>共识</strong>：确保所有节点执行结果一致</li>
+</ul>
+<h3 id="❓-bitcoin-script能实现智能合约吗？">❓ Bitcoin Script能实现智能合约吗？</h3>
+<p><strong>能力与限制：</strong></p>
+<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">script_smart_contract_capabilities</span>():
+    <span class="hljs-string">"""Script智能合约能力分析"""</span>
+
+    <span class="hljs-keyword">return</span> {
+        <span class="hljs-string">"可以实现"</span>: [
+            <span class="hljs-string">"多重签名钱包"</span>,
+            <span class="hljs-string">"时间锁定支付"</span>,
+            <span class="hljs-string">"条件支付（哈希锁）"</span>,
+            <span class="hljs-string">"简单的托管服务"</span>,
+            <span class="hljs-string">"原子交换"</span>,
+            <span class="hljs-string">"支付通道"</span>
+        ],
+
+        <span class="hljs-string">"无法实现"</span>: [
+            <span class="hljs-string">"复杂的状态管理"</span>,
+            <span class="hljs-string">"动态数据存储"</span>,
+            <span class="hljs-string">"外部数据获取（Oracle）"</span>,
+            <span class="hljs-string">"复杂的计算逻辑"</span>,
+            <span class="hljs-string">"循环和递归结构"</span>
+        ],
+
+        <span class="hljs-string">"与以太坊对比"</span>: {
+            <span class="hljs-string">"Bitcoin Script"</span>: <span class="hljs-string">"简单、安全、有限功能"</span>,
+            <span class="hljs-string">"以太坊Solidity"</span>: <span class="hljs-string">"图灵完备、功能强大、复杂度高"</span>
+        }
+    }
+</code></pre>
+<h3 id="❓-如何调试bitcoin脚本？">❓ 如何调试Bitcoin脚本？</h3>
+<p><strong>调试工具和方法：</strong></p>
+<ul>
+<li><strong>Bitcoin Core测试网</strong>：在测试环境验证脚本</li>
+<li><strong>脚本模拟器</strong>：离线模拟脚本执行</li>
+<li><strong>栈跟踪</strong>：记录每步操作的栈状态</li>
+<li><strong>单元测试</strong>：编写测试用例验证逻辑</li>
+</ul>
+<h2 id="常见问题解答">常见问题解答</h2>
+<h3 id="q1-bitcoin-script和以太坊智能合约有什么区别？">Q1: Bitcoin Script和以太坊智能合约有什么区别？</h3>
+<p><strong>A:</strong> 它们的设计理念完全不同：</p>
+<ul>
+<li><strong>Bitcoin Script</strong>：简单、安全、有限功能，专注于支付条件</li>
+<li><strong>以太坊智能合约</strong>：复杂、图灵完备，可以做任何计算</li>
+<li><strong>比喻</strong>：前者像保险箱的密码锁，后者像一台完整的电脑</li>
+</ul>
+<p>Bitcoin更像是"有条件的支付"，以太坊更像是"去中心化的计算平台"。</p>
+<h3 id="q2-为什么bitcoin-script不支持循环？">Q2: 为什么Bitcoin Script不支持循环？</h3>
+<p><strong>A:</strong> 这是故意的安全设计：</p>
+<ul>
+<li><strong>防止死循环</strong>：避免脚本永远执行下去消耗资源</li>
+<li><strong>确保执行时间</strong>：每个脚本都能在有限时间内完成</li>
+<li><strong>网络稳定</strong>：防止恶意脚本攻击网络</li>
+</ul>
+<p>就像银行的密码锁，功能简单但绝对可靠。</p>
+<h3 id="q3-普通用户需要学习bitcoin-script吗？">Q3: 普通用户需要学习Bitcoin Script吗？</h3>
+<p><strong>A:</strong> 看你的需求：</p>
+<ul>
+<li><strong>普通转账</strong>：完全不需要，钱包会自动处理</li>
+<li><strong>多重签名</strong>：需要基本了解，但有现成工具</li>
+<li><strong>高级应用</strong>：如果要做闪电网络、原子交换等，最好了解</li>
+<li><strong>开发者</strong>：必须掌握，这是基础技能</li>
+</ul>
+<h3 id="q4-bitcoin-script能做智能合约吗？">Q4: Bitcoin Script能做智能合约吗？</h3>
+<p><strong>A:</strong> 能做，但功能有限：</p>
+<ul>
+<li><strong>简单合约</strong>：多重签名、时间锁定、条件支付等</li>
+<li><strong>复杂应用</strong>：闪电网络、原子交换、去中心化交易所</li>
+<li><strong>局限性</strong>：不能做复杂计算，不能访问外部数据</li>
+<li><strong>补充方案</strong>：Layer 2方案（如闪电网络）扩展功能</li>
+</ul>
+<h3 id="q5-如何学习bitcoin-script编程？">Q5: 如何学习Bitcoin Script编程？</h3>
+<p><strong>A:</strong> 循序渐进的学习路径：</p>
+<ol>
+<li><strong>理解基础</strong>：先了解比特币交易原理</li>
+<li><strong>学习操作码</strong>：掌握常用的脚本操作</li>
+<li><strong>分析实例</strong>：研究现有的脚本模式</li>
+<li><strong>动手实践</strong>：在测试网上编写和部署脚本</li>
+<li><strong>阅读源码</strong>：研究Bitcoin Core的脚本实现</li>
+</ol>
+<h2 id="结语">结语</h2>
+<p>Bitcoin Script是比特币可编程性的核心，它在安全性和功能性之间取得了巧妙的平衡：</p>
+<h3 id="🏛️-设计哲学">🏛️ 设计哲学</h3>
+<ul>
+<li><strong>安全优先</strong>：宁可功能受限也要确保安全</li>
+<li><strong>简单可靠</strong>：通过简单性实现可靠性</li>
+<li><strong>确定性执行</strong>：确保网络共识的一致性</li>
+<li><strong>可扩展性</strong>：通过软分叉添加新功能</li>
+</ul>
+<h3 id="🔧-技术特色">🔧 技术特色</h3>
+<ul>
+<li><strong>栈式执行</strong>：简单高效的执行模型</li>
+<li><strong>有限操作码</strong>：精心选择的操作集合</li>
+<li><strong>条件逻辑</strong>：支持复杂的支付条件</li>
+<li><strong>密码学集成</strong>：内置的签名和哈希操作</li>
+</ul>
+<h3 id="🚀-实际价值">🚀 实际价值</h3>
+<p>掌握Bitcoin Script后，你能够：</p>
+<ul>
+<li>理解比特币交易的底层机制</li>
+<li>设计复杂的支付条件和智能合约</li>
+<li>分析和审计比特币脚本安全性</li>
+<li>为Layer 2解决方案开发应用</li>
+</ul>
+<p>虽然Bitcoin Script看起来功能有限，但它为比特币提供了足够的可编程性来支持各种创新应用。从最初的简单支付到现在的DeFi应用，都离不开Script的强大支撑。</p>
+<p>理解和掌握Bitcoin Script，就是理解比特币作为可编程货币的本质。它不仅仅是数字现金，更是一个可以承载复杂金融逻辑的平台。</p>
+<blockquote>
+<p>🌟 <strong>代码实践</strong>：本章的完整脚本示例代码请查看：<a href="script_examples.py">script_examples.py</a></p>
+</blockquote>
+<hr></hr>
+<div align="center">
+<a href="https://github.com/beihaili/Get-Started-with-Web3" target="_blank">🏠 返回主页</a> | 
+<a href="https://twitter.com/bhbtc1337" target="_blank">🐦 关注作者</a> | 
+<a href="https://forms.gle/QMBwL6LwZyQew1tX8" target="_blank">📝 加入交流群</a>
+</div>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../17_BitcoinLowFeeBroadcast/" class="navigation navigation-prev " aria-label="Previous page: 第17讲：比特币低费率广播工具">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../19_BitcoinGovernance/" class="navigation navigation-next " aria-label="Next page: 第19讲：比特币扩容与治理">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第18讲：Bitcoin Script脚本系统","level":"8.4","depth":1,"next":{"title":"第19讲：比特币扩容与治理","level":"8.5","depth":1,"path":"GetStartedWithBitcoin/19_BitcoinGovernance/README.MD","ref":"GetStartedWithBitcoin/19_BitcoinGovernance/README.MD","articles":[]},"previous":{"title":"第17讲：比特币低费率广播工具","level":"8.3","depth":1,"path":"GetStartedWithBitcoin/17_BitcoinLowFeeBroadcast/README.MD","ref":"GetStartedWithBitcoin/17_BitcoinLowFeeBroadcast/README.MD","articles":[]},"dir":"ltr"},"config":{"plugins":["highlight","fontsettings"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"beihaili","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"version":"完整版","status":"✅ 21个技术章节已完成","chapters":21,"lastUpdate":"2025-09"},"title":"Web3入门指南","language":"zh-hans","gitbook":"*","description":"全面的Web3、区块链和加密货币学习指南，包含21讲比特币技术详解"},"file":{"path":"GetStartedWithBitcoin/18_BitcoinScript/README.MD","mtime":"2025-09-23T02:19:20.580Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-09-23T02:25:11.154Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

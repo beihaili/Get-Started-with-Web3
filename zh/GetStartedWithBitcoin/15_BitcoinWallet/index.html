@@ -1,0 +1,953 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>第15讲：比特币钱包 · Web3入门指南</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.3">
+        <meta name="author" content="beihaili">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../16_BitcoinRPC/" />
+    
+    
+    <link rel="prev" href="../14_ForksBIPs/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Web3 快速入门</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../Web3QuickStart/01_FirstWeb3Identity/">
+            
+                <a href="../../Web3QuickStart/01_FirstWeb3Identity/">
+            
+                    
+                    创建你的第一个 Web3 身份
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../Web3QuickStart/02_FirstWeb3Transaction/">
+            
+                <a href="../../Web3QuickStart/02_FirstWeb3Transaction/">
+            
+                    
+                    进行你的第一笔 Web3 交易
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../Web3QuickStart/03_FirstWeb3Dapp/">
+            
+                <a href="../../Web3QuickStart/03_FirstWeb3Dapp/">
+            
+                    
+                    构建你的第一个 Web3 DApp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../Web3QuickStart/04_UsefulWeb3Sites/">
+            
+                <a href="../../Web3QuickStart/04_UsefulWeb3Sites/">
+            
+                    
+                    有用的 Web3 站点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../Web3QuickStart/05_LaunchYourFirstToken/">
+            
+                <a href="../../Web3QuickStart/05_LaunchYourFirstToken/">
+            
+                    
+                    发行你的第一个代币
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../../Web3QuickStart/06_Web3Security/">
+            
+                <a href="../../Web3QuickStart/06_Web3Security/">
+            
+                    
+                    Web3安全防护与防骗指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">比特币技术入门</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    📋 技术架构总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">🔐 第一层：密码学基础层</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../01_Cryptography/">
+            
+                <a href="../01_Cryptography/">
+            
+                    
+                    第01讲：密码学基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../02_Overview/">
+            
+                <a href="../02_Overview/">
+            
+                    
+                    第02讲：比特币概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">📊 第二层：数据层</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../03_BitcoinTx/">
+            
+                <a href="../03_BitcoinTx/">
+            
+                    
+                    第03讲：比特币交易基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../04_MultiSig/">
+            
+                <a href="../04_MultiSig/">
+            
+                    
+                    第04讲：多重签名交易
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../05_SegWit/">
+            
+                <a href="../05_SegWit/">
+            
+                    
+                    第05讲：隔离见证(SegWit)技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../06_Taproot/">
+            
+                <a href="../06_Taproot/">
+            
+                    
+                    第06讲：Taproot升级详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="../07_AdvancedTransactions/">
+            
+                <a href="../07_AdvancedTransactions/">
+            
+                    
+                    第07讲：高级交易应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="../08_DataStructure/">
+            
+                <a href="../08_DataStructure/">
+            
+                    
+                    第08讲：区块链数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">🌐 第三层：网络层</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../09_BitcoinCore/">
+            
+                <a href="../09_BitcoinCore/">
+            
+                    
+                    第09讲：比特币核心节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../10_P2PProtocol/">
+            
+                <a href="../10_P2PProtocol/">
+            
+                    
+                    第10讲：P2P网络协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../11_NetworkSecurity/">
+            
+                <a href="../11_NetworkSecurity/">
+            
+                    
+                    第11讲：网络安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">🤝 第四层：共识层</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../12_ProofOfWork/">
+            
+                <a href="../12_ProofOfWork/">
+            
+                    
+                    第12讲：工作量证明与挖矿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../13_DifficultyAdjustment/">
+            
+                <a href="../13_DifficultyAdjustment/">
+            
+                    
+                    第13讲：难度调整算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../14_ForksBIPs/">
+            
+                <a href="../14_ForksBIPs/">
+            
+                    
+                    第14讲：分叉机制与BIP流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">💼 第五层：应用层</li>
+        
+        
+    
+        <li class="chapter active" data-level="8.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第15讲：比特币钱包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../16_BitcoinRPC/">
+            
+                <a href="../16_BitcoinRPC/">
+            
+                    
+                    第16讲：比特币RPC应用开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../17_BitcoinLowFeeBroadcast/">
+            
+                <a href="../17_BitcoinLowFeeBroadcast/">
+            
+                    
+                    第17讲：比特币低费率广播工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../18_BitcoinScript/">
+            
+                <a href="../18_BitcoinScript/">
+            
+                    
+                    第18讲：Bitcoin Script脚本系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="../19_BitcoinGovernance/">
+            
+                <a href="../19_BitcoinGovernance/">
+            
+                    
+                    第19讲：比特币扩容与治理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.6" data-path="../20_Ordinals/">
+            
+                <a href="../20_Ordinals/">
+            
+                    
+                    第20讲：Ordinals与生态创新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.7" data-path="../21_DeFiCrossChain/">
+            
+                <a href="../21_DeFiCrossChain/">
+            
+                    
+                    第21讲：DeFi跨链
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其它学习资源整理</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../../其它学习资源整理/Etherum/">
+            
+                <a href="../../其它学习资源整理/Etherum/">
+            
+                    
+                    以太坊学习指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="../../其它学习资源整理/DeFi/">
+            
+                <a href="../../其它学习资源整理/DeFi/">
+            
+                    
+                    DeFi学习指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Web3 思考</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../../Web3Thoughts/01_Principles/">
+            
+                <a href="../../Web3Thoughts/01_Principles/">
+            
+                    
+                    Web3 原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../../Web3Thoughts/02_WhyBlockchainIsNecessary/">
+            
+                <a href="../../Web3Thoughts/02_WhyBlockchainIsNecessary/">
+            
+                    
+                    为什么区块链是必须的？《主权个人》读书笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="../../Web3Thoughts/03_TheCoolestTransactionOnBitcoin/">
+            
+                <a href="../../Web3Thoughts/03_TheCoolestTransactionOnBitcoin/">
+            
+                    
+                    区块链彩蛋解读指南：b10c...eb5d 玩了哪些「梗」？
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Web3 工作机会</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../../Web3WorkOpportunities/">
+            
+                <a href="../../Web3WorkOpportunities/">
+            
+                    
+                    Web3 工作机会
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">我们的研究报告</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../../OurResearch/Search01_BscAttack/">
+            
+                <a href="../../OurResearch/Search01_BscAttack/">
+            
+                    
+                    BSC 链上的攻击：为何发生及其潜在的危害
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >第15讲：比特币钱包</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="第15讲：比特币钱包">第15讲：比特币钱包</h1>
+<p><img src="https://img.shields.io/badge/状态-已完成-success" alt="status"></img>
+<img src="https://img.shields.io/badge/作者-beihaili-blue" alt="author"></img>
+<img src="https://img.shields.io/badge/日期-2025--06-orange" alt="date"></img>
+<img src="https://img.shields.io/badge/难度-初级-brightgreen" alt="difficulty"></img></p>
+<blockquote>
+<p>💡 自学入门 <code>Web3</code> 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 <code>Web3</code> 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1-3 讲。</p>
+<p>欢迎关注我的推特：<a href="https://twitter.com/bhbtc1337" target="_blank">@bhbtc1337</a></p>
+<p>进入微信交流群请填表：<a href="https://forms.gle/QMBwL6LwZyQew1tX8" target="_blank">表格链接</a></p>
+<p>文章开源在 GitHub：<a href="https://github.com/beihaili/Get-Started-with-Web3" target="_blank">Get-Started-with-Web3</a></p>
+<p>购买BTC/ETH/USDT 等加密货币推荐 <a href="https://www.binance.com/zh-CN" target="_blank">币安</a><a href="https://accounts.marketwebb.me/register?ref=39797374" target="_blank">注册链接</a></p>
+</blockquote>
+<h2 id="目录">目录</h2>
+<ul>
+<li><a href="#前言">前言</a></li>
+<li><a href="#比特币钱包基本概念">比特币钱包基本概念</a></li>
+<li><a href="#创建自己的比特币钱包">创建自己的比特币钱包</a></li>
+<li><a href="#常见问题">常见问题</a></li>
+<li><a href="#结语">结语</a></li>
+</ul>
+<h2 id="前言">前言</h2>
+<p>当进入加密货币世界时，拥有一个安全可靠的比特币钱包是你的第一道门槛。就像你不会把现金随意放在街头一样，你的加密资产同样需要一个安全的“容器”来存储和管理。</p>
+<p>区块链的世界被喜为一片黑暗森林，每个参与者都需要学会保护自己的财产安全，因为这里没有人会为你负责。和《三体》中的黑暗森林法则类似，区块链世界里，保护好自己的私钥，藏得越深越安全，切记 <code>Not Your Key, Not Your Coin</code>。 </p>
+<p>对于初学者而言，你可能需要一些时间来适应这个世界的规则——例如，当你丢失钱包密码时，这里没有“找回密码”的按钮😂。在这一节中，我们将一起探讨比特币钱包的核心概念，不同类型的钱包及其利弊，以及如何一步步创建属于你自己的第一个比特币钱包。</p>
+<h2 id="比特币钱包基本概念">比特币钱包基本概念</h2>
+<h3 id="什么是比特币钱包">什么是比特币钱包</h3>
+<p>比特币钱包是用于存储和管理比特币私钥的工具。比特币钱包并不直接存储比特币，而是存储一组密钥对（私钥和公钥）。私钥用来签署交易，而公钥通过加密算法生成比特币地址，用于接收比特币。钱包是用户与比特币网络互动的桥梁，它允许你接收、发送和管理比特币资产。</p>
+<h3 id="比特币钱包的种类">比特币钱包的种类</h3>
+<p>比特币钱包可以从以下两个维度来进行分类：</p>
+<h4 id="根据是否触网分类">根据是否触网分类</h4>
+<ol>
+<li><p><strong>热钱包</strong>：热钱包连接互联网，适合日常使用和交易。这类钱包包括浏览器插件钱包、手机钱包和桌面钱包。由于热钱包始终在线，它们容易受到网络攻击，因此安全性较低。</p>
+</li>
+<li><p><strong>冷钱包</strong>：冷钱包不连接互联网，适合长期存储比特币。包括硬件钱包和纸钱包等。冷钱包因为不联网，安全性更高，但使用起来不如热钱包方便。</p>
+</li>
+</ol>
+<h4 id="根据验证方式分类">根据验证方式分类</h4>
+<ol>
+<li><p><strong>全节点钱包</strong>：全节点钱包是运行完整的比特币区块链节点的软件，它不仅管理私钥，还直接与比特币网络同步所有区块数据。全节点钱包提供最高级别的安全性和隐私性，但需要大量的存储空间和网络带宽。</p>
+</li>
+<li><p><strong>轻量级钱包</strong>：轻量级钱包不下载整个区块链数据，而是依赖第三方节点进行交易验证。虽然这些钱包更轻便，适合移动设备使用，但安全性和隐私性略低于全节点钱包。</p>
+</li>
+</ol>
+<h3 id="比特币钱包的用途">比特币钱包的用途</h3>
+<p>比特币钱包的主要用途包括：</p>
+<ol>
+<li><p><strong>存储比特币</strong>：钱包用来安全存储比特币的私钥，确保你的比特币资产只有你能控制。</p>
+</li>
+<li><p><strong>接收和发送比特币</strong>：钱包生成的比特币地址可以用来接收比特币，你也可以使用钱包发送比特币给其他人。</p>
+</li>
+<li><p><strong>管理资产</strong>：钱包提供的界面和工具可以帮助你查看余额、交易记录以及管理多种加密货币资产。</p>
+</li>
+</ol>
+<h2 id="手把手教你创建一个比特币钱包">手把手教你创建一个比特币钱包</h2>
+<h3 id="浏览器插件钱包">浏览器插件钱包</h3>
+<p>浏览器插件钱包是最方便的热钱包之一，非常适合日常使用。以下是创建浏览器插件钱包的步骤：</p>
+<ol>
+<li><p><strong>选择钱包插件</strong>：推荐使用广泛使用和开源的钱包插件，如 <a href="https://unisat.io/" target="_blank">Unisat</a>。首页如下所示：</p>
+<div align="center"> <img src="img/1.png" width="600"></img> </div>
+</li>
+<li><p><strong>安装插件</strong>：访问插件的官方网站，按照提示将其安装到浏览器中。首页上点击右上角的connect，会让你选择连接一个钱包，选择unisat wallet，或者直接选择首页中的wallet选项下载，是一样的效果。</p>
+<div align="center"> <img src="img/2.png" width="600"></img> </div>
+  点击第四项下载浏览器扩展程序：
+<div align="center"> <img src="img/3.png" width="600"></img> </div>
+  点击右上角的添加至chrome：
+<div align="center"> <img src="img/4.png" width="600"></img> </div>
+  耐心等待下载和安装：
+<div align="center"> <img src="img/5.png" width="600"></img> </div>
+</li>
+<li><p><strong>创建新钱包</strong>：安装后，运行插件会弹窗提示：
+</p><div align="center"> <img src="img/6.png" width="600"></img> </div>
+  打开插件并选择"创建新钱包"。根据提示设置一个强密码，并妥善保存钱包的助记词。创建钱包后会让你设置一个密码，这个密码是用来在这个机器上查询私钥的。<p></p>
+</li>
+<li><p><strong>备份助记词</strong>：助记词是恢复钱包的唯一途径，必须妥善保管，确保其不会丢失或泄露。备份完成助记词之后，第二步会让你选择钱包地址：
+</p><div align="center"> <img src="img/7.png" width="600"></img> </div>
+  不同的地址应对不同的使用场景，交易手续费也不同。可以先选择默认的第一个地址类型，交易费用较低。但是对于一些特殊的场景，如ordinals协议类型的交易，需要使用taproot地址，这个后续可以在钱包设置中灵活修改。<p></p>
+</li>
+<li><p><strong>开始使用</strong>：创建完成后，你可以使用钱包生成比特币地址，接收和发送比特币。</p>
+<div align="center"> <img src="img/8.png" width="600"></img> </div>
+
+</li>
+</ol>
+<h3 id="旧手机自制冷钱包">旧手机自制冷钱包</h3>
+<p>旧手机可以被用来制作一个高安全性的冷钱包，用于长期存储比特币。</p>
+<ol>
+<li><p><strong>准备工作</strong>：找到一部旧手机，并将其恢复出厂设置，确保没有恶意软件。（选做）物理损坏旧手机的信号接收和发送模块</p>
+</li>
+<li><p><strong>安装钱包应用</strong>：在手机上安装一个支持离线使用的钱包应用，如 <a href="https://www.bitcoin.com/zh-cn/btc-wallet/" target="_blank">比太钱包</a>。</p>
+</li>
+<li><p><strong>断开网络</strong>：在安装完钱包应用后，断开手机的网络连接（Wi-Fi 和移动数据）。</p>
+</li>
+<li><p><strong>创建冷钱包</strong>：打开钱包应用，选择"创建新钱包"，确保生成的私钥随机，生成钱包助记词。</p>
+</li>
+<li><p><strong>重点：备份助记词</strong>：将助记词抄写两份，加上冷钱包手机一共形成三份备份，分别放在不同的地方，注意防水防止字迹变淡消失。（这里的三份是经验之谈，能够比较好的平衡丢失和被人盗窃）</p>
+</li>
+<li><p><strong>转移比特币</strong>：使用热钱包发送比特币到冷钱包的地址，并确保冷钱包的私钥不与网络连接。</p>
+</li>
+<li><p><strong>离线存储</strong>：将手机关机，并安全存放在一个防火、防水的地方，作为离线冷钱包。</p>
+</li>
+</ol>
+<h3 id="全节点钱包">全节点钱包</h3>
+<p>全节点钱包适合那些希望完全控制自己的比特币交易和隐私的用户。</p>
+<ol>
+<li><p><strong>安装 Bitcoin Core</strong>：访问 Bitcoin Core 官方网站，下载并安装全节点钱包软件。</p>
+</li>
+<li><p><strong>初次同步</strong>：启动 Bitcoin Core，软件会开始下载整个比特币区块链数据。这可能需要数天时间和数百 GB 的存储空间。</p>
+</li>
+<li><p><strong>创建钱包</strong>：在 Bitcoin Core 完成初次同步后，选择"文件"菜单中的"创建钱包"选项。为新钱包设置名称，并根据需要选择是否加密。</p>
+</li>
+<li><p><strong>备份钱包</strong>：在"文件"菜单中选择"备份钱包"，将钱包文件保存到安全的地方。确保备份副本离线存储，防止丢失。</p>
+</li>
+<li><p><strong>管理比特币</strong>：你现在可以使用全节点钱包生成地址、接收比特币、发送比特币，并参与比特币网络的共识。</p>
+</li>
+</ol>
+<p>通过这几个步骤，你可以创建一个适合自己需求的比特币钱包，无论是用于日常交易还是长期存储比特币资产。选择适合的工具并了解其使用方法，是保障数字资产安全的重要一步。</p>
+<h2 id="常见问题">常见问题</h2>
+<h4 id="❓-热钱包和冷钱包有什么区别？">❓ 热钱包和冷钱包有什么区别？</h4>
+<p>热钱包和冷钱包的主要区别在于：</p>
+<ol>
+<li><strong>网络连接</strong>：热钱包保持与互联网连接，冷钱包完全离线、不连接网络</li>
+<li><strong>安全性</strong>：冷钱包安全性更高，因为不存在网络攻击风险；热钱包更容易受到黑客攻击</li>
+<li><strong>使用便利性</strong>：热钱包使用更便捷，可以随时进行交易；冷钱包需要额外的步骤才能发送交易</li>
+<li><strong>应用场景</strong>：热钱包适合日常交易和小额资金；冷钱包适合长期存储和大额资产</li>
+</ol>
+<h4 id="❓-助记词是什么，为什么这么重要？">❓ 助记词是什么，为什么这么重要？</h4>
+<p>助记词是一组用来生成和恢复钱包私钥的普通单词。其重要性在于：</p>
+<ol>
+<li><strong>私钥恢复</strong>：如果你的设备丢失或损坏，助记词是恢复钱包访问权的唯一方式</li>
+<li><strong>跨平台兼容</strong>：助记词可以在不同的钱包软件之间共用，方便迁移</li>
+<li><strong>人类可读</strong>：比起复杂的私钥字符串，单词更容易记录和存储</li>
+</ol>
+<p>如果助记词丢失，就相当于永久失去了钱包中的所有资产访问权。</p>
+<h4 id="❓-作为初学者我应该选择什么类型的钱包？">❓ 作为初学者我应该选择什么类型的钱包？</h4>
+<p>作为初学者，你可以考虑以下选择：</p>
+<ol>
+<li><strong>开始时</strong>：选用像 unisat 这样的浏览器扩展钱包或手机应用钱包，操作相对简单</li>
+<li><strong>小额资产</strong>：对于小额比特币，热钱包是合适的</li>
+<li><strong>积累经验后</strong>：随着资产增长，添加冷钱包来存储大部分资产</li>
+</ol>
+<h2 id="结语">结语</h2>
+<p>创建和管理比特币钱包是每一个Web3探索者的基础技能。当你掌握了不同类型钱包的特点和用途后，你将能够根据自身需求做出明智的选择，并安全地管理你的加密资产。</p>
+<p>记住，在加密货币世界里，安全不是一个可选项而是必须项。每个人都要为自己的资产安全负责，这就是“Not Your Keys, Not Your Coins”所传达的核心理念。</p>
+<p>你的加密货币之旅已经开始，希望你能在这个充满刺激和机会的领域中找到自己的路径。记住，万事开头难，当你走得足够远，回头看看，会发现自己比想象中进步更多。</p>
+<hr></hr>
+<div align="center">
+<a href="https://github.com/beihaili/Get-Started-with-Web3" target="_blank">🏠 返回主页</a> | 
+<a href="https://twitter.com/bhbtc1337" target="_blank">🐦 关注作者</a> | 
+<a href="https://forms.gle/QMBwL6LwZyQew1tX8" target="_blank">📝 加入交流群</a>
+</div>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../14_ForksBIPs/" class="navigation navigation-prev " aria-label="Previous page: 第14讲：分叉机制与BIP流程">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../16_BitcoinRPC/" class="navigation navigation-next " aria-label="Next page: 第16讲：比特币RPC应用开发">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第15讲：比特币钱包","level":"8.1","depth":1,"next":{"title":"第16讲：比特币RPC应用开发","level":"8.2","depth":1,"path":"GetStartedWithBitcoin/16_BitcoinRPC/README.MD","ref":"GetStartedWithBitcoin/16_BitcoinRPC/README.MD","articles":[]},"previous":{"title":"第14讲：分叉机制与BIP流程","level":"7.3","depth":1,"path":"GetStartedWithBitcoin/14_ForksBIPs/README.MD","ref":"GetStartedWithBitcoin/14_ForksBIPs/README.MD","articles":[]},"dir":"ltr"},"config":{"plugins":["highlight","fontsettings"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"beihaili","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"version":"完整版","status":"✅ 21个技术章节已完成","chapters":21,"lastUpdate":"2025-09"},"title":"Web3入门指南","language":"zh-hans","gitbook":"*","description":"全面的Web3、区块链和加密货币学习指南，包含21讲比特币技术详解"},"file":{"path":"GetStartedWithBitcoin/15_BitcoinWallet/README.MD","mtime":"2025-09-23T02:19:20.579Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-09-23T02:25:11.154Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

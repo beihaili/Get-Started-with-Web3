@@ -1,0 +1,1331 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>第12讲：工作量证明与挖矿 · Web3入门指南</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.3">
+        <meta name="author" content="beihaili">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../13_DifficultyAdjustment/" />
+    
+    
+    <link rel="prev" href="../11_NetworkSecurity/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Web3 快速入门</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../Web3QuickStart/01_FirstWeb3Identity/">
+            
+                <a href="../../Web3QuickStart/01_FirstWeb3Identity/">
+            
+                    
+                    创建你的第一个 Web3 身份
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../Web3QuickStart/02_FirstWeb3Transaction/">
+            
+                <a href="../../Web3QuickStart/02_FirstWeb3Transaction/">
+            
+                    
+                    进行你的第一笔 Web3 交易
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../Web3QuickStart/03_FirstWeb3Dapp/">
+            
+                <a href="../../Web3QuickStart/03_FirstWeb3Dapp/">
+            
+                    
+                    构建你的第一个 Web3 DApp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../Web3QuickStart/04_UsefulWeb3Sites/">
+            
+                <a href="../../Web3QuickStart/04_UsefulWeb3Sites/">
+            
+                    
+                    有用的 Web3 站点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../Web3QuickStart/05_LaunchYourFirstToken/">
+            
+                <a href="../../Web3QuickStart/05_LaunchYourFirstToken/">
+            
+                    
+                    发行你的第一个代币
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../../Web3QuickStart/06_Web3Security/">
+            
+                <a href="../../Web3QuickStart/06_Web3Security/">
+            
+                    
+                    Web3安全防护与防骗指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">比特币技术入门</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    📋 技术架构总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">🔐 第一层：密码学基础层</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../01_Cryptography/">
+            
+                <a href="../01_Cryptography/">
+            
+                    
+                    第01讲：密码学基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../02_Overview/">
+            
+                <a href="../02_Overview/">
+            
+                    
+                    第02讲：比特币概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">📊 第二层：数据层</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../03_BitcoinTx/">
+            
+                <a href="../03_BitcoinTx/">
+            
+                    
+                    第03讲：比特币交易基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../04_MultiSig/">
+            
+                <a href="../04_MultiSig/">
+            
+                    
+                    第04讲：多重签名交易
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../05_SegWit/">
+            
+                <a href="../05_SegWit/">
+            
+                    
+                    第05讲：隔离见证(SegWit)技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../06_Taproot/">
+            
+                <a href="../06_Taproot/">
+            
+                    
+                    第06讲：Taproot升级详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="../07_AdvancedTransactions/">
+            
+                <a href="../07_AdvancedTransactions/">
+            
+                    
+                    第07讲：高级交易应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="../08_DataStructure/">
+            
+                <a href="../08_DataStructure/">
+            
+                    
+                    第08讲：区块链数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">🌐 第三层：网络层</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../09_BitcoinCore/">
+            
+                <a href="../09_BitcoinCore/">
+            
+                    
+                    第09讲：比特币核心节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../10_P2PProtocol/">
+            
+                <a href="../10_P2PProtocol/">
+            
+                    
+                    第10讲：P2P网络协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../11_NetworkSecurity/">
+            
+                <a href="../11_NetworkSecurity/">
+            
+                    
+                    第11讲：网络安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">🤝 第四层：共识层</li>
+        
+        
+    
+        <li class="chapter active" data-level="7.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第12讲：工作量证明与挖矿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../13_DifficultyAdjustment/">
+            
+                <a href="../13_DifficultyAdjustment/">
+            
+                    
+                    第13讲：难度调整算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../14_ForksBIPs/">
+            
+                <a href="../14_ForksBIPs/">
+            
+                    
+                    第14讲：分叉机制与BIP流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">💼 第五层：应用层</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../15_BitcoinWallet/">
+            
+                <a href="../15_BitcoinWallet/">
+            
+                    
+                    第15讲：比特币钱包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../16_BitcoinRPC/">
+            
+                <a href="../16_BitcoinRPC/">
+            
+                    
+                    第16讲：比特币RPC应用开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../17_BitcoinLowFeeBroadcast/">
+            
+                <a href="../17_BitcoinLowFeeBroadcast/">
+            
+                    
+                    第17讲：比特币低费率广播工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../18_BitcoinScript/">
+            
+                <a href="../18_BitcoinScript/">
+            
+                    
+                    第18讲：Bitcoin Script脚本系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="../19_BitcoinGovernance/">
+            
+                <a href="../19_BitcoinGovernance/">
+            
+                    
+                    第19讲：比特币扩容与治理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.6" data-path="../20_Ordinals/">
+            
+                <a href="../20_Ordinals/">
+            
+                    
+                    第20讲：Ordinals与生态创新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.7" data-path="../21_DeFiCrossChain/">
+            
+                <a href="../21_DeFiCrossChain/">
+            
+                    
+                    第21讲：DeFi跨链
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其它学习资源整理</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../../其它学习资源整理/Etherum/">
+            
+                <a href="../../其它学习资源整理/Etherum/">
+            
+                    
+                    以太坊学习指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="../../其它学习资源整理/DeFi/">
+            
+                <a href="../../其它学习资源整理/DeFi/">
+            
+                    
+                    DeFi学习指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Web3 思考</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../../Web3Thoughts/01_Principles/">
+            
+                <a href="../../Web3Thoughts/01_Principles/">
+            
+                    
+                    Web3 原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../../Web3Thoughts/02_WhyBlockchainIsNecessary/">
+            
+                <a href="../../Web3Thoughts/02_WhyBlockchainIsNecessary/">
+            
+                    
+                    为什么区块链是必须的？《主权个人》读书笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="../../Web3Thoughts/03_TheCoolestTransactionOnBitcoin/">
+            
+                <a href="../../Web3Thoughts/03_TheCoolestTransactionOnBitcoin/">
+            
+                    
+                    区块链彩蛋解读指南：b10c...eb5d 玩了哪些「梗」？
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Web3 工作机会</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../../Web3WorkOpportunities/">
+            
+                <a href="../../Web3WorkOpportunities/">
+            
+                    
+                    Web3 工作机会
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">我们的研究报告</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../../OurResearch/Search01_BscAttack/">
+            
+                <a href="../../OurResearch/Search01_BscAttack/">
+            
+                    
+                    BSC 链上的攻击：为何发生及其潜在的危害
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >第12讲：工作量证明与挖矿</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="第12讲：工作量证明与挖矿">第12讲：工作量证明与挖矿</h1>
+<p><img src="https://img.shields.io/badge/状态-已完成-success" alt="status"></img>
+<img src="https://img.shields.io/badge/作者-beihaili-blue" alt="author"></img>
+<img src="https://img.shields.io/badge/日期-2025--09-orange" alt="date"></img>
+<img src="https://img.shields.io/badge/难度-中级-yellow" alt="difficulty"></img></p>
+<blockquote>
+<p>💡 想象一个村庄，村民们都在找金子，但金子被埋在地下，需要不停挖掘才能找到。每当有人找到金子，整个村庄都会为他鼓掌，因为这证明了他确实付出了劳动。这就是比特币挖矿的真实写照。</p>
+</blockquote>
+<h2 id="目录">目录</h2>
+<ul>
+<li><a href="#前言为什么要挖矿">前言：为什么要挖矿？</a></li>
+<li><a href="#挖矿原理数字世界的淘金游戏">挖矿原理：数字世界的淘金游戏</a></li>
+<li><a href="#挖矿设备从铁锹到挖掘机的进化">挖矿设备：从铁锹到挖掘机的进化</a></li>
+<li><a href="#矿池合作抱团取暖的智慧">矿池合作：抱团取暖的智慧</a></li>
+<li><a href="#挖矿经济成本与收益的账本">挖矿经济：成本与收益的账本</a></li>
+<li><a href="#能耗争议到底值不值得">能耗争议：到底值不值得？</a></li>
+<li><a href="#动手实践模拟挖矿过程">动手实践：模拟挖矿过程</a></li>
+<li><a href="#常见问题解答">常见问题解答</a></li>
+<li><a href="#总结">总结</a></li>
+</ul>
+<h2 id="前言：为什么要挖矿？">前言：为什么要挖矿？</h2>
+<p>你有没有想过这样一个问题：在网络世界里，如何防止有人印假钞？</p>
+<p>在现实中，政府控制印钞机，谁敢私自印钞就抓谁。但比特币没有政府、没有银行、没有中央机构，那谁来防止作弊呢？</p>
+<p>中本聪想出了一个绝妙的办法：<strong>让大家比赛挖矿</strong>！</p>
+<h3 id="💡-思考一下">💡 思考一下</h3>
+<p>在学习挖矿之前，先想想：</p>
+<ul>
+<li>如果你们班要选班长，但没有老师监督，如何保证选举公平？</li>
+<li>如果村庄要决定一件事，但没有村长，怎样达成共识？</li>
+<li>为什么挖金子很贵，但复制文件很便宜？</li>
+</ul>
+<h3 id="从印钞票到挖比特币">从印钞票到挖比特币</h3>
+<p><strong>传统货币（政府印钞）：</strong></p>
+<pre><code>政府说：我来印钞票，你们都得承认
+老百姓：好吧，我们相信政府不会乱印
+</code></pre><p><strong>比特币（大家挖矿）：</strong></p>
+<pre><code>网络说：谁挖到矿，谁就能记账并获得奖励
+矿工们：好，我们用计算机比赛，算力最强的获胜
+</code></pre><p>这就是挖矿的核心：<strong>用计算机的劳动代替政府的权威</strong>。</p>
+<h2 id="挖矿原理：数字世界的淘金游戏">挖矿原理：数字世界的淘金游戏</h2>
+<h3 id="挖矿就像淘金">挖矿就像淘金</h3>
+<p>想象一下古代的淘金者：</p>
+<ul>
+<li>他们在河里敲沙子，希望找到金子</li>
+<li>大部分时候都是沙子，偶尔才能找到金子</li>
+<li>找到金子的人可以拿去卖钱</li>
+<li>大家都知道这是真金子，因为伪造成本太高</li>
+</ul>
+<p>比特币挖矿就是数字版的淘金：</p>
+<p><strong>传统淘金：</strong></p>
+<pre><code>沙子 + 河水 + 劳动 → 偶尔找到金子
+</code></pre><p><strong>比特币挖矿：</strong></p>
+<pre><code>数据 + 随机数 + 计算 → 偶尔找到"数字金子"
+</code></pre><h3 id="什么是数字金子？">什么是"数字金子"？</h3>
+<p>在比特币世界里，"金子"就是一个特殊的数字：<strong>以很多零开头的哈希值</strong>。</p>
+<p>比如，网络要求找到以18个零开头的哈希值：</p>
+<pre><code>需要找到：000000000000000000...（后面随意）
+不要这样：123456789abcdef...（没有足够的零）
+</code></pre><h3 id="为什么如此难找？">为什么如此难找？</h3>
+<p>哈希函数就像一个魔法盒子：</p>
+<ul>
+<li>你放任何东西进去，出来的结果都是随机的</li>
+<li>你无法预测结果，只能一个一个尝试</li>
+<li>就像摇骰子，每次都可能摇出不同的结果</li>
+</ul>
+<p><strong>挖矿的真实过程：</strong></p>
+<pre><code>第1次尝试："区块数据 + 1" → 哈希 → 123abc...（不满足）
+第2次尝试："区块数据 + 2" → 哈希 → 789def...（不满足）
+第3次尝试："区块数据 + 3" → 哈希 → 456ghi...（不满足）
+...
+第999999次："区块数据 + 999999" → 哈希 → 000000...（成功！）
+</code></pre><p>就像不停地摇骰子，直到摇出6个6一样！</p>
+<h3 id="验证很简单，寻找很难">验证很简单，寻找很难</h3>
+<p>这就是挖矿的巧妙设计：</p>
+<ul>
+<li><strong>找答案很难</strong>：需要尝试无数次，耗费大量电力</li>
+<li><strong>验证答案很容易</strong>：任何人都能瞬间验证是否正确</li>
+</ul>
+<p>就像：</p>
+<ul>
+<li><strong>出数学题很难</strong>：老师要想很久</li>
+<li><strong>检查答案很容易</strong>：对照标准答案就行</li>
+</ul>
+<h3 id="难度的指数级特性">难度的指数级特性</h3>
+<p>比特币难度调整展现了<strong>指数级的计算复杂度</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>难度前导零</th>
+<th>搜索空间缩小</th>
+<th>平均尝试次数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1个零</td>
+<td>1/16</td>
+<td>~16次</td>
+</tr>
+<tr>
+<td>2个零</td>
+<td>1/256</td>
+<td>~256次</td>
+</tr>
+<tr>
+<td>3个零</td>
+<td>1/4,096</td>
+<td>~4,096次</td>
+</tr>
+<tr>
+<td>20个零</td>
+<td>1/2^80</td>
+<td>~10^24次</td>
+</tr>
+</tbody>
+</table>
+<p>当前比特币网络的难度相当于寻找<strong>约19个前导零的哈希值</strong>，这需要平均<strong>10^22次</strong>尝试。</p>
+<h2 id="挖矿算法：sha-256的随机性博弈">挖矿算法：SHA-256的随机性博弈</h2>
+<h3 id="算法选择的战略考虑">算法选择的战略考虑</h3>
+<p>比特币选择SHA-256作为哈希函数有深层考虑：</p>
+<p><strong>技术特性：</strong></p>
+<ul>
+<li><strong>成熟稳定</strong>：NSA设计，经过20年验证</li>
+<li><strong>高安全性</strong>：至今未发现有效的预映像攻击</li>
+<li><strong>计算密集</strong>：适合硬件优化，难以通过软件技巧绕过</li>
+<li><strong>无记忆性</strong>：每次计算都是独立的随机过程</li>
+</ul>
+<p><strong>经济考虑：</strong></p>
+<ul>
+<li><strong>公平竞争</strong>：纯粹的计算能力竞争，没有其他技巧</li>
+<li><strong>硬件专业化</strong>：推动专用硬件发展，提高网络安全</li>
+<li><strong>能耗透明</strong>：计算成本直接对应电力成本</li>
+</ul>
+<h3 id="区块头结构：80字节的数学游戏">区块头结构：80字节的数学游戏</h3>
+<p>比特币区块头精确设计为80字节：</p>
+<pre><code>[版本4字节][前块哈希32字节][Merkle根32字节][时间戳4字节][难度4字节][Nonce4字节]
+</code></pre><p><strong>设计巧思</strong>：</p>
+<ul>
+<li><strong>Nonce空间</strong>：4字节提供2^32 ≈ 43亿种可能</li>
+<li><strong>扩展空间</strong>：当Nonce耗尽时，可修改时间戳或Merkle根</li>
+<li><strong>固定长度</strong>：确保哈希计算的一致性和可预测性</li>
+</ul>
+<h3 id="挖矿的概率分布">挖矿的概率分布</h3>
+<p>挖矿成功遵循<strong>泊松分布</strong>，这意味着：</p>
+<pre><code>P(t) = 1 - e^(-λt)
+其中 λ = 算力份额 / 600秒
+</code></pre><p><strong>实际意义</strong>：</p>
+<ul>
+<li>小矿工的收益具有<strong>高方差</strong>特性</li>
+<li>大矿工的收益趋向<strong>稳定可预测</strong></li>
+<li>这种差异推动了矿池的形成</li>
+</ul>
+<h2 id="硬件军备竞赛：从cpu到asic">硬件军备竞赛：从CPU到ASIC</h2>
+<h3 id="算力演进的摩尔定律">算力演进的摩尔定律</h3>
+<p>挖矿硬件的演进体现了<strong>专业化的经济规律</strong>：</p>
+<p><strong>四个时代的技术跃迁：</strong></p>
+<table>
+<thead>
+<tr>
+<th>时代</th>
+<th>代表硬件</th>
+<th>算力</th>
+<th>功效比</th>
+<th>经济特征</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU</td>
+<td>Intel Core i7</td>
+<td>20 MH/s</td>
+<td>0.15 MH/J</td>
+<td>通用计算，门槛低</td>
+</tr>
+<tr>
+<td>GPU</td>
+<td>AMD HD5970</td>
+<td>600 MH/s</td>
+<td>2.0 MH/J</td>
+<td>并行计算，性价比高</td>
+</tr>
+<tr>
+<td>FPGA</td>
+<td>BitForce</td>
+<td>832 MH/s</td>
+<td>10.4 MH/J</td>
+<td>可编程专用，成本昂贵</td>
+</tr>
+<tr>
+<td>ASIC</td>
+<td>Antminer S21</td>
+<td>200 TH/s</td>
+<td>56 GH/J</td>
+<td>专用芯片，效率极致</td>
+</tr>
+</tbody>
+</table>
+<h3 id="asic化的不可逆性">ASIC化的不可逆性</h3>
+<p><strong>专业化螺旋</strong>：</p>
+<pre><code>竞争加剧 → 利润率下降 → 效率要求提升 → 专业硬件需求 → 进一步专业化
+</code></pre><p><strong>经济学后果</strong>：</p>
+<ul>
+<li><strong>进入门槛</strong>：从几百美元上升到几千美元</li>
+<li><strong>地理集中</strong>：向电力成本低的地区集中</li>
+<li><strong>规模经济</strong>：大型矿场的成本优势明显</li>
+<li><strong>技术依赖</strong>：少数芯片厂商控制硬件供应</li>
+</ul>
+<h3 id="能效比的极限挑战">能效比的极限挑战</h3>
+<p>ASIC芯片的能效提升正在接近<strong>物理极限</strong>：</p>
+<p><strong>技术路线图</strong>：</p>
+<ul>
+<li><strong>7nm工艺</strong>：当前主流，能效约50 J/TH</li>
+<li><strong>5nm工艺</strong>：下一代目标，预计能效70-80 J/TH</li>
+<li><strong>3nm工艺</strong>：理论极限，能效可能突破100 J/TH</li>
+</ul>
+<p><strong>物理约束</strong>：</p>
+<ul>
+<li><strong>热力学极限</strong>：计算必然产生熱量</li>
+<li><strong>量子隧道效应</strong>：限制晶体管尺寸缩小</li>
+<li><strong>经济可行性</strong>：制造成本与性能提升的权衡</li>
+</ul>
+<h2 id="矿池合作：抱团取暖的智慧">矿池合作：抱团取暖的智慧</h2>
+<h3 id="为什么要组建矿池？">为什么要组建矿池？</h3>
+<p>想象一下买彩票的场景：</p>
+<p><strong>单独买彩票：</strong></p>
+<ul>
+<li>你每周买1张彩票，可能几年都不中奖</li>
+<li>但一旦中奖，奖金全是你的</li>
+<li>风险：可能永远等不到中奖</li>
+</ul>
+<p><strong>组建彩票团购群：</strong></p>
+<ul>
+<li>100个人每人出1元，每周买100张彩票</li>
+<li>中奖概率提高100倍，但奖金要分100份</li>
+<li>好处：经常有小额奖金进账</li>
+</ul>
+<p>矿池就是"挖矿彩票团购群"：</p>
+<p><strong>单独挖矿：</strong></p>
+<pre><code>小矿工：我这台矿机，可能一年都挖不到区块
+风险：电费一直花，但可能颗粒无收
+</code></pre><p><strong>加入矿池：</strong></p>
+<pre><code>矿池：大家一起挖，挖到就平分奖励
+小矿工：虽然分得少，但每天都有收入
+</code></pre><h3 id="矿池分配方式：谁干活多谁分得多">矿池分配方式：谁干活多谁分得多</h3>
+<p>矿池有几种分配奖励的方式，就像不同的工资制度：</p>
+<p><strong>🏭 计件工资制 (PPS)：</strong></p>
+<ul>
+<li>干多少活给多少钱，旱涝保收</li>
+<li>适合想要稳定收入的矿工</li>
+<li>矿池老板承担运气风险</li>
+</ul>
+<p><strong>🎲 业绩提成制 (PPLNS)：</strong></p>
+<ul>
+<li>公司赚钱了大家一起分</li>
+<li>收入跟着公司业绩波动</li>
+<li>激励大家长期合作</li>
+</ul>
+<p><strong>💰 全包福利制 (FPPS)：</strong></p>
+<ul>
+<li>不仅分挖矿奖励，连手续费也分</li>
+<li>收入最高，但矿池手续费也高</li>
+<li>适合大型专业矿工</li>
+</ul>
+<h3 id="矿池真的安全吗？">矿池真的安全吗？</h3>
+<p>加入矿池虽然好处多，但也有风险：</p>
+<p><strong>🤝 好处：</strong></p>
+<ul>
+<li>收入稳定，每天都有钱进账</li>
+<li>技术门槛低，不用自己管理</li>
+<li>风险分散，不怕单独倒霉</li>
+</ul>
+<p><strong>⚠️ 风险：</strong></p>
+<ul>
+<li>要交手续费给矿池（通常2-4%）</li>
+<li>矿池跑路，损失算力</li>
+<li>算力过于集中，影响网络安全</li>
+</ul>
+<p><strong>选择建议：</strong></p>
+<ul>
+<li>🥇 <strong>大型矿池</strong>：收入稳定，但要小心垄断</li>
+<li>🥈 <strong>中型矿池</strong>：平衡收益和去中心化</li>
+<li>🥉 <strong>小型矿池</strong>：支持去中心化，但收入波动大</li>
+</ul>
+<h2 id="挖矿经济：成本与收益的账本">挖矿经济：成本与收益的账本</h2>
+<h3 id="挖矿收入：两种赚钱方式">挖矿收入：两种赚钱方式</h3>
+<p>挖矿赚钱就像开出租车，有两种收入来源：</p>
+<p><strong>🎁 基础工资（区块奖励）：</strong></p>
+<ul>
+<li>每挖到一个区块，系统固定奖励3.125个比特币</li>
+<li>就像出租车司机的基础工资，旱涝保收</li>
+<li>每4年减半一次，越来越稀缺</li>
+</ul>
+<p><strong>💰 小费收入（交易手续费）：</strong></p>
+<ul>
+<li>乘客（用户）给的小费，多少不定</li>
+<li>网络拥堵时小费更多，平时较少</li>
+<li>就像高峰期打车，乘客愿意多给小费</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">mining_income_example</span>():
+    <span class="hljs-string">"""挖矿收入简单计算"""</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"🏅 成功挖到一个区块的收入："</span>)
+
+    <span class="hljs-comment"># 基础奖励</span>
+    block_reward = <span class="hljs-number">3.125</span>  <span class="hljs-comment"># BTC</span>
+    btc_price = <span class="hljs-number">45000</span>     <span class="hljs-comment"># 美元</span>
+    base_income = block_reward * btc_price
+
+    <span class="hljs-comment"># 交易手续费（假设）</span>
+    tx_fees = <span class="hljs-number">0.3</span>  <span class="hljs-comment"># BTC</span>
+    fee_income = tx_fees * btc_price
+
+    total_income = base_income + fee_income
+
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">f"基础奖励: <span class="hljs-subst">{block_reward}</span> BTC = $<span class="hljs-subst">{base_income:,}</span>"</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">f"交易手续费: <span class="hljs-subst">{tx_fees}</span> BTC = $<span class="hljs-subst">{fee_income:,}</span>"</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">f"总收入: $<span class="hljs-subst">{total_income:,}</span>"</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">f"一天挖144个区块，全网总奖励: $<span class="hljs-subst">{total_income * <span class="hljs-number">144</span>:,}</span>"</span>)
+
+mining_income_example()
+</code></pre>
+<h3 id="挖矿成本：花钱的地方">挖矿成本：花钱的地方</h3>
+<p>挖矿运营的<strong>综合成本模型</strong>：</p>
+<p><strong>资本支出(CAPEX)</strong>：</p>
+<ul>
+<li>ASIC矿机：70-80%</li>
+<li>基础设施：15-20%</li>
+<li>运营设置：5-10%</li>
+</ul>
+<p><strong>运营支出(OPEX)</strong>：</p>
+<ul>
+<li>电费：60-80%</li>
+<li>维护人工：10-20%</li>
+<li>场地租赁：5-15%</li>
+<li>其他费用：5-10%</li>
+</ul>
+<h3 id="盈亏平衡分析">盈亏平衡分析</h3>
+<p><strong>关键变量</strong>：</p>
+<pre><code>盈利能力 = f(BTC价格, 网络难度, 电力成本, 硬件效率, 运营成本)
+</code></pre><p><strong>敏感性排序</strong>：</p>
+<ol>
+<li><strong>BTC价格</strong>：影响最大，价格翻倍通常意味着利润翻倍</li>
+<li><strong>电力成本</strong>：长期竞争力的决定因素</li>
+<li><strong>网络难度</strong>：影响所有矿工，相对影响较小</li>
+<li><strong>硬件效率</strong>：随时间递减的竞争优势</li>
+</ol>
+<h3 id="挖矿经济周期">挖矿经济周期</h3>
+<p>挖矿行业呈现<strong>明显的周期性特征</strong>：</p>
+<p><strong>牛市阶段</strong>：</p>
+<ul>
+<li>高盈利 → 大量投资 → 算力快速增长 → 难度上升</li>
+</ul>
+<p><strong>熊市阶段</strong>：</p>
+<ul>
+<li>低盈利 → 边际矿工退出 → 算力下降 → 难度调整</li>
+</ul>
+<p><strong>减半效应</strong>：</p>
+<ul>
+<li>供应冲击 → 收益减半 → 行业洗牌 → 新平衡点</li>
+</ul>
+<h2 id="能耗争议：价值创造还是能源浪费">能耗争议：价值创造还是能源浪费</h2>
+<h3 id="能耗规模的客观评估">能耗规模的客观评估</h3>
+<p><strong>2024年比特币网络能耗</strong>：</p>
+<ul>
+<li><strong>年耗电量</strong>：约150-180 TWh</li>
+<li><strong>占全球用电</strong>：约0.6-0.8%</li>
+<li><strong>功耗等级</strong>：介于阿根廷和挪威之间</li>
+</ul>
+<h3 id="能耗的价值论证">能耗的价值论证</h3>
+<p><strong>安全成本观</strong>：</p>
+<pre><code>网络安全价值 = 保护资产价值 × 安全预算比例
+当前约：1万亿美元 × 0.5% = 50亿美元/年
+</code></pre><p><strong>对比分析</strong>：</p>
+<ul>
+<li><strong>传统银行系统</strong>：约264 TWh/年</li>
+<li><strong>黄金开采</strong>：约241 TWh/年</li>
+<li><strong>数据中心</strong>：约200 TWh/年</li>
+<li><strong>比特币网络</strong>：约180 TWh/年</li>
+</ul>
+<h3 id="环保技术发展">环保技术发展</h3>
+<p><strong>可再生能源趋势</strong>：</p>
+<ul>
+<li><strong>水电</strong>：约40%的挖矿能源（中国、北欧、北美）</li>
+<li><strong>风电</strong>：约25%（德州、内蒙古等地）</li>
+<li><strong>太阳能</strong>：约15%（中东、澳洲等地）</li>
+<li><strong>余热利用</strong>：矿场余热用于供暖、农业等</li>
+</ul>
+<p><strong>技术创新</strong>：</p>
+<ul>
+<li><strong>液冷技术</strong>：提高散热效率，降低运营成本</li>
+<li><strong>废热回收</strong>：矿场废热用于供暖、海水淡化</li>
+<li><strong>碳中和挖矿</strong>：通过碳信用抵消实现净零排放</li>
+</ul>
+<h2 id="安全性分析：51攻击的现实可能性">安全性分析：51%攻击的现实可能性</h2>
+<h3 id="51攻击的理论与现实">51%攻击的理论与现实</h3>
+<p><strong>攻击成本计算</strong>：</p>
+<pre><code>控制51%算力的成本 = (全网算力的51% × ASIC单价) + 电费成本
+</code></pre><p><strong>2024年成本估算</strong>：</p>
+<ul>
+<li><strong>硬件成本</strong>：约200-300亿美元</li>
+<li><strong>日运营成本</strong>：约5000万美元</li>
+<li><strong>攻击收益</strong>：远低于攻击成本</li>
+</ul>
+<h3 id="攻击的经济学悖论">攻击的经济学悖论</h3>
+<p><strong>自我毁灭性</strong>：成功的51%攻击会：</p>
+<ul>
+<li>严重破坏比特币价值</li>
+<li>使攻击者的大量投资贬值</li>
+<li>触发社区硬分叉，攻击者资产归零</li>
+</ul>
+<p><strong>机会成本</strong>：控制51%算力的投资者：</p>
+<ul>
+<li>诚实挖矿的年收益约15-25%</li>
+<li>破坏网络的一次性攻击收益极其有限</li>
+</ul>
+<h3 id="深度重组攻击的实际威胁">深度重组攻击的实际威胁</h3>
+<p><strong>六个确认的安全性</strong>：</p>
+<pre><code>重写6个区块的成本 ≈ 6 × 3.125 BTC × 当前价格 × 网络算力投资
+</code></pre><p><strong>实际案例</strong>：历史上从未发生过超过3个区块的意外重组，而恶意重组从未发生。</p>
+<h2 id="未来演进：pow的技术发展方向">未来演进：PoW的技术发展方向</h2>
+<h3 id="量子计算的威胁与应对">量子计算的威胁与应对</h3>
+<p><strong>威胁评估</strong>：</p>
+<ul>
+<li><strong>Grover算法</strong>：将SHA-256搜索复杂度从O(2^256)降至O(2^128)</li>
+<li><strong>实际影响</strong>：仍需要巨大的量子计算资源</li>
+<li><strong>时间窗口</strong>：专家预计15-30年内出现威胁</li>
+</ul>
+<p><strong>应对策略</strong>：</p>
+<ul>
+<li><strong>算法升级</strong>：迁移到量子安全的哈希函数</li>
+<li><strong>难度调整</strong>：通过增加输出位数对抗量子优势</li>
+<li><strong>混合PoW</strong>：结合多种抗量子算法</li>
+</ul>
+<h3 id="新兴pow变种">新兴PoW变种</h3>
+<p><strong>绿色PoW</strong>：</p>
+<ul>
+<li><strong>有用计算</strong>：将挖矿计算用于科学研究</li>
+<li><strong>可再生证明</strong>：激励使用清洁能源</li>
+<li><strong>碳中和PoW</strong>：内建碳信用机制</li>
+</ul>
+<p><strong>光学PoW</strong>：</p>
+<ul>
+<li><strong>光子计算</strong>：利用光的物理性质</li>
+<li><strong>更低能耗</strong>：理论上可显著降低能耗</li>
+<li><strong>技术挑战</strong>：仍处于实验室阶段</li>
+</ul>
+<h3 id="与其他共识机制的竞合">与其他共识机制的竞合</h3>
+<p><strong>PoW的独特优势</strong>：</p>
+<ul>
+<li><strong>客观性</strong>：不依赖主观质押</li>
+<li><strong>去中心化</strong>：任何人可以参与</li>
+<li><strong>抗审查</strong>：难以被政府控制</li>
+<li><strong>经过验证</strong>：15年实际运行记录</li>
+</ul>
+<p><strong>劣势与改进</strong>：</p>
+<ul>
+<li><strong>能耗问题</strong>：通过技术创新和可再生能源缓解</li>
+<li><strong>扩容限制</strong>：通过Layer 2解决方案补充</li>
+<li><strong>确认时间</strong>：通过支付通道实现即时确认</li>
+</ul>
+<h2 id="常见问题解答">常见问题解答</h2>
+<h3 id="q1-挖矿真的能赚钱吗？">Q1: 挖矿真的能赚钱吗？</h3>
+<p><strong>A:</strong> 这取决于很多因素：</p>
+<ul>
+<li><strong>电费成本</strong>：最关键因素，电费便宜的地方更容易盈利</li>
+<li><strong>设备价格</strong>：矿机贵，回本周期长</li>
+<li><strong>比特币价格</strong>：价格高时赚钱，价格低时可能亏损</li>
+<li><strong>网络难度</strong>：参与的人越多，个人收益越少</li>
+</ul>
+<p>简单来说：<strong>就像开出租车，能不能赚钱要看油费、车价、客流量</strong>。</p>
+<h3 id="q2-为什么挖矿要消耗这么多电？">Q2: 为什么挖矿要消耗这么多电？</h3>
+<p><strong>A:</strong> 这是设计特点，不是缺陷：</p>
+<ul>
+<li><strong>安全需要</strong>：消耗电力是为了保护网络安全</li>
+<li><strong>防止作弊</strong>：作弊的成本必须很高才有威慑力</li>
+<li><strong>就像银行</strong>：银行金库、保安、监控系统也都要花钱</li>
+</ul>
+<p>而且现在很多矿场都用可再生能源，比传统银行系统环保多了。</p>
+<h3 id="q3-普通人还能挖矿吗？">Q3: 普通人还能挖矿吗？</h3>
+<p><strong>A:</strong> 可以，但要现实一点：</p>
+<ul>
+<li><strong>家用电脑</strong>：算了吧，电费都挣不回来</li>
+<li><strong>专业矿机</strong>：可以试试，但要算好账</li>
+<li><strong>云挖矿</strong>：花钱租别人的矿机，但要小心骗局</li>
+<li><strong>买比特币</strong>：对普通人来说，直接买可能更简单</li>
+</ul>
+<h3 id="q4-挖完2100万个比特币后怎么办？">Q4: 挖完2100万个比特币后怎么办？</h3>
+<p><strong>A:</strong> 不用担心，这要到2140年：</p>
+<ul>
+<li><strong>交易手续费</strong>：矿工还能收手续费维持运营</li>
+<li><strong>技术进步</strong>：100多年后技术肯定大不一样</li>
+<li><strong>经济激励</strong>：只要有交易，就会有人维护网络</li>
+</ul>
+<p>就像担心100年后汽油用完一样，到时候肯定有新解决方案。</p>
+<h3 id="q5-为什么不用更环保的方式？">Q5: 为什么不用更环保的方式？</h3>
+<p><strong>A:</strong> 其实有很多人在研究：</p>
+<ul>
+<li><strong>可再生能源</strong>：很多矿场已经用太阳能、水力发电</li>
+<li><strong>余热利用</strong>：用挖矿产生的热量供暖</li>
+<li><strong>绿色证书</strong>：证明使用的是清洁能源</li>
+</ul>
+<p>比特币挖矿其实在推动可再生能源发展，因为哪里电便宜，矿工就去哪里。</p>
+<h2 id="总结">总结</h2>
+<p>挖矿就像数字世界的淘金：需要设备、需要运气、需要坚持。虽然不是每个人都能发财，但这套系统保护了我们的比特币安全。</p>
+<h3 id="🎯-关键要点">🎯 关键要点</h3>
+<ul>
+<li><strong>挖矿本质</strong>：用计算机劳动换取比特币奖励</li>
+<li><strong>经济模型</strong>：高投入、高风险、高回报（如果成功的话）</li>
+<li><strong>安全价值</strong>：保护网络，防止双花和51%攻击</li>
+<li><strong>技术创新</strong>：推动了芯片技术和可再生能源发展</li>
+</ul>
+<h3 id="🌟-挖矿哲学">🌟 挖矿哲学</h3>
+<p>挖矿证明了一个道理：<strong>在数字世界里，也可以用"劳动"创造价值</strong>。每一台嗡嗡作响的矿机，都在为全世界的比特币用户提供安全保障。</p>
+<p>这就是中本聪的天才设计：把个人利益和集体安全完美结合，让"自私"的行为产生"无私"的结果。</p>
+<blockquote>
+<p>🔗 <strong>深入学习</strong>：</p>
+<ul>
+<li>完整挖矿代码示例：<a href="mining_examples.py">mining_examples.py</a></li>
+<li>比特币挖矿数据：<a href="https://blockchain.info/stats" target="_blank">blockchain.info/stats</a></li>
+<li>全网算力监控：<a href="https://btc.com/stats" target="_blank">btc.com/stats</a></li>
+<li>PoW研究论文：<a href="https://bitcoin.org/bitcoin.pdf" target="_blank">Nakamoto Consensus Paper</a></li>
+</ul>
+</blockquote>
+<hr></hr>
+<div align="center">
+<a href="https://github.com/beihaili/Get-Started-with-Web3" target="_blank">🏠 返回主页</a> | 
+<a href="https://twitter.com/bhbtc1337" target="_blank">🐦 关注作者</a> | 
+<a href="https://forms.gle/QMBwL6LwZyQew1tX8" target="_blank">📝 加入交流群</a>
+</div>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../11_NetworkSecurity/" class="navigation navigation-prev " aria-label="Previous page: 第11讲：网络安全">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../13_DifficultyAdjustment/" class="navigation navigation-next " aria-label="Next page: 第13讲：难度调整算法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第12讲：工作量证明与挖矿","level":"7.1","depth":1,"next":{"title":"第13讲：难度调整算法","level":"7.2","depth":1,"path":"GetStartedWithBitcoin/13_DifficultyAdjustment/README.md","ref":"GetStartedWithBitcoin/13_DifficultyAdjustment/README.md","articles":[]},"previous":{"title":"第11讲：网络安全","level":"6.3","depth":1,"path":"GetStartedWithBitcoin/11_NetworkSecurity/README.MD","ref":"GetStartedWithBitcoin/11_NetworkSecurity/README.MD","articles":[]},"dir":"ltr"},"config":{"plugins":["highlight","fontsettings"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"beihaili","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"version":"完整版","status":"✅ 21个技术章节已完成","chapters":21,"lastUpdate":"2025-09"},"title":"Web3入门指南","language":"zh-hans","gitbook":"*","description":"全面的Web3、区块链和加密货币学习指南，包含21讲比特币技术详解"},"file":{"path":"GetStartedWithBitcoin/12_ProofOfWork/README.md","mtime":"2025-09-23T02:19:20.578Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-09-23T02:25:11.154Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
