@@ -4,6 +4,19 @@
   "description": "Web3、区块链和加密货币入门指南",
   "language": "zh-hans",
   "structure": {
-    "readme": "README.md"
+    "readme": "README.md",
+    "summary": "SUMMARY.md"
+  },
+  "plugins": [
+    "search",
+    "highlight",
+    "fontsettings"
+  ],
+  "pluginsConfig": {
+    "fontsettings": {
+      "theme": "white",
+      "family": "sans",
+      "size": 2
+    }
   }
 }

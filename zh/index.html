@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web3入门指南 - 中文版</title>
+    <meta name="description" content="全面的Web3、区块链和加密货币学习指南，包含21讲比特币技术详解">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 700px;
+            padding: 2rem;
+        }
+        
+        .logo {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        .status-badge {
+            background: rgba(40, 167, 69, 0.2);
+            border: 1px solid rgba(40, 167, 69, 0.5);
+            border-radius: 20px;
+            padding: 0.5rem 1rem;
+            margin-bottom: 2rem;
+            display: inline-block;
+            font-size: 0.9rem;
+        }
+        
+        .content-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 2rem;
+        }
+        
+        .available-content {
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+        
+        .available-content h3 {
+            margin-bottom: 1rem;
+            color: #ffd700;
+        }
+        
+        .available-content ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .available-content li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .available-content li:last-child {
+            border-bottom: none;
+        }
+        
+        .available-content a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .available-content a:hover {
+            color: #ffd700;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .stat {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 1rem;
+        }
+        
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ffd700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .btn-primary {
+            background: rgba(40, 167, 69, 0.3);
+            border-color: rgba(40, 167, 69, 0.5);
+        }
+        
+        .btn-primary:hover {
+            background: rgba(40, 167, 69, 0.4);
+        }
+        
+        .footer {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+            opacity: 0.7;
+        }
+        
+        .footer a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: opacity 0.3s ease;
+        }
+        
+        .footer a:hover {
+            opacity: 1;
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .subtitle { font-size: 1rem; }
+            .cta-buttons { flex-direction: column; align-items: center; }
+            .btn { min-width: 200px; }
+            .stats { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🌐</div>
+        <h1>Web3入门指南</h1>
+        <p class="subtitle">
+            全面的Web3、区块链和加密货币学习指南<br>
+            从零基础到精通，21讲比特币技术详解
+        </p>
+        
+        <div class="status-badge">
+            ✅ 完整版本 - 所有内容已上线！
+        </div>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">21+</div>
+                <div class="stat-label">技术章节</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">代码示例</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">6</div>
+                <div class="stat-label">Web3快速入门</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">开源免费</div>
+            </div>
+        </div>
+        
+        <div class="content-card">
+            <div class="available-content">
+                <h3>🚀 Web3快速入门</h3>
+                <ul>
+                    <li><a href="Web3QuickStart/01_FirstWeb3Identity/README.MD">创建你的第一个Web3身份</a></li>
+                    <li><a href="Web3QuickStart/02_FirstWeb3Transaction/README.MD">进行你的第一笔Web3交易</a></li>
+                    <li><a href="Web3QuickStart/03_FirstWeb3Dapp/README.MD">构建你的第一个Web3 DApp</a></li>
+                    <li><a href="Web3QuickStart/04_UsefulWeb3Sites/README.MD">实用的Web3网站</a></li>
+                    <li><a href="Web3QuickStart/05_LaunchYourFirstToken/README.MD">发行你的第一个代币</a></li>
+                    <li><a href="Web3QuickStart/06_Web3Security/README.MD">Web3安全与防骗指南</a></li>
+                </ul>
+            </div>
+            
+            <div class="available-content">
+                <h3>₿ 比特币技术详解</h3>
+                <ul>
+                    <li><a href="GetStartedWithBitcoin/01_Cryptography/README.MD">第01章：密码学基础</a></li>
+                    <li><a href="GetStartedWithBitcoin/02_Overview/README.MD">第02章：比特币概述</a></li>
+                    <li><a href="GetStartedWithBitcoin/03_BitcoinTx/README.MD">第03章：比特币交易基础</a></li>
+                    <li><a href="GetStartedWithBitcoin/04_MultiSig/README.MD">第04章：多重签名交易</a></li>
+                    <li><a href="GetStartedWithBitcoin/05_SegWit/README.MD">第05章：隔离见证技术</a></li>
+                    <li><a href="GetStartedWithBitcoin/06_Taproot/README.MD">第06章：Taproot升级详解</a></li>
+                    <li><a href="GetStartedWithBitcoin/07_AdvancedTransactions/README.MD">第07章：高级交易应用</a></li>
+                    <li><a href="GetStartedWithBitcoin/08_DataStructure/README.MD">第08章：区块链数据结构</a></li>
+                    <li><a href="GetStartedWithBitcoin/09_BitcoinCore/README.MD">第09章：Bitcoin Core节点</a></li>
+                    <li><a href="GetStartedWithBitcoin/10_P2PProtocol/README.md">第10章：P2P网络协议</a></li>
+                    <li><a href="GetStartedWithBitcoin/11_NetworkSecurity/README.MD">第11章：网络安全</a></li>
+                    <li><a href="GetStartedWithBitcoin/12_ProofOfWork/README.md">第12章：工作量证明与挖矿</a></li>
+                    <li><a href="GetStartedWithBitcoin/13_DifficultyAdjustment/README.MD">第13章：难度调整算法</a></li>
+                    <li><a href="GetStartedWithBitcoin/14_ForksBIPs/README.MD">第14章：分叉机制与BIP流程</a></li>
+                    <li><a href="GetStartedWithBitcoin/15_BitcoinWallet/README.MD">第15章：比特币钱包</a></li>
+                    <li><a href="GetStartedWithBitcoin/16_BitcoinRPC/README.MD">第16章：Bitcoin RPC应用开发</a></li>
+                    <li><a href="GetStartedWithBitcoin/17_BitcoinLowFeeBroadcast/README.MD">第17章：比特币低手续费广播工具</a></li>
+                    <li><a href="GetStartedWithBitcoin/18_BitcoinScript/README.MD">第18章：比特币脚本系统</a></li>
+                    <li><a href="GetStartedWithBitcoin/19_BitcoinGovernance/README.MD">第19章：比特币扩容与治理</a></li>
+                    <li><a href="GetStartedWithBitcoin/20_Ordinals/README.MD">第20章：Ordinals与生态创新</a></li>
+                    <li><a href="GetStartedWithBitcoin/21_DeFiCrossChain/README.MD">第21章：DeFi跨链</a></li>
+                </ul>
+            </div>
+            
+            <div class="available-content">
+                <h3>💭 Web3思考与机会</h3>
+                <ul>
+                    <li><a href="Web3Thoughts/01_Principles/README.MD">Web3原则</a></li>
+                    <li><a href="Web3Thoughts/02_WhyBlockchainIsNecessary/README.MD">为什么区块链是必要的</a></li>
+                    <li><a href="Web3Thoughts/03_TheCoolestTransactionOnBitcoin/README.MD">比特币上最酷的交易</a></li>
+                    <li><a href="Web3WorkOpportunities/README.md">Web3工作机会</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="cta-buttons">
+            <a href="README.md" class="btn btn-primary">📖 开始学习</a>
+            <a href="../en/" class="btn">🇺🇸 English Version</a>
+            <a href="../" class="btn">🏠 首页</a>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <a href="https://github.com/beihaili/Get-Started-with-Web3" target="_blank">🐙 GitHub</a>
+        <a href="https://twitter.com/bhbtc1337" target="_blank">🐦 Twitter</a>
+        <a href="https://forms.gle/QMBwL6LwZyQew1tX8" target="_blank">💬 社区</a>
+    </div>
+</body>
+</html>
