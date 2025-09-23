@@ -1,0 +1,76 @@
+/* 自定义样式 - 语言切换和页面浏览量统计 */
+
+/* 语言切换按钮样式 */
+#languageSwitch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.lang-switch-btn {
+    background: rgba(102, 126, 234, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    padding: 10px 18px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lang-switch-btn:hover {
+    background: rgba(118, 75, 162, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* 页面浏览量计数器样式 */
+.page-views-counter {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    #languageSwitch {
+        top: 10px;
+        right: 10px;
+    }
+    
+    .lang-switch-btn {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+    
+    .page-views-counter {
+        bottom: 10px;
+        right: 10px;
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+}
+
+/* 确保按钮在HonKit主题中可见 */
+.book-body .lang-switch-btn {
+    background: rgba(102, 126, 234, 0.9) !important;
+    color: white !important;
+}
+
+.book-body .page-views-counter {
+    background: rgba(0, 0, 0, 0.8) !important;
+    color: white !important;
+}

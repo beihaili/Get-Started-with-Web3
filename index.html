@@ -25,7 +25,7 @@
         
         .container {
             text-align: center;
-            max-width: 600px;
+            max-width: 1000px;
             padding: 2rem;
         }
         
@@ -58,19 +58,25 @@
             gap: 2rem;
             justify-content: center;
             flex-wrap: wrap;
+            margin-bottom: 3rem;
         }
         
         .language-card {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
-            padding: 2rem;
-            min-width: 200px;
+            padding: 2.5rem;
+            width: 400px;
+            height: 280px;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
             transition: all 0.3s ease;
             text-decoration: none;
             color: white;
-            display: block;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
         
         .language-card:hover {
@@ -80,21 +86,21 @@
         }
         
         .flag {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
             display: block;
         }
         
         .language-name {
-            font-size: 1.5rem;
+            font-size: 2rem;
             font-weight: 600;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
         
         .language-desc {
-            font-size: 0.9rem;
+            font-size: 1rem;
             opacity: 0.8;
-            line-height: 1.4;
+            line-height: 1.5;
         }
         
         .footer {
@@ -141,11 +147,27 @@
             opacity: 0.8;
         }
         
+        @media (max-width: 900px) {
+            .language-options { 
+                flex-direction: column; 
+                align-items: center; 
+            }
+            .language-card { 
+                width: 350px; 
+                height: 250px;
+            }
+        }
+        
         @media (max-width: 768px) {
             h1 { font-size: 2rem; }
             .subtitle { font-size: 1rem; }
-            .language-options { flex-direction: column; align-items: center; }
-            .language-card { min-width: 250px; }
+            .language-card { 
+                width: 300px; 
+                height: 220px;
+                padding: 2rem;
+            }
+            .flag { font-size: 3rem; }
+            .language-name { font-size: 1.5rem; }
             .stats { gap: 1rem; }
         }
     </style>
@@ -192,6 +214,10 @@
                 <div class="stat-number">100%</div>
                 <div class="stat-label">Open Source</div>
             </div>
+            <div class="stat">
+                <div class="stat-number" id="pageViews">-</div>
+                <div class="stat-label">Page Views</div>
+            </div>
         </div>
     </div>
     
@@ -202,6 +228,22 @@
     </div>
     
     <script>
+        // 页面浏览量统计
+        function updatePageViews() {
+            const pageKey = 'web3_tutorial_views';
+            let views = parseInt(localStorage.getItem(pageKey)) || 0;
+            views++;
+            localStorage.setItem(pageKey, views.toString());
+            
+            // 显示浏览量
+            const viewsElement = document.getElementById('pageViews');
+            if (viewsElement) {
+                viewsElement.textContent = views.toLocaleString();
+            }
+            
+            return views;
+        }
+        
         // 记录用户语言偏好
         function setLanguagePreference(lang) {
             localStorage.setItem('preferredLanguage', lang);
@@ -235,7 +277,10 @@
         });
         
         // 页面加载完成后执行
-        document.addEventListener('DOMContentLoaded', autoRedirect);
+        document.addEventListener('DOMContentLoaded', function() {
+            updatePageViews();
+            autoRedirect();
+        });
     </script>
 </body>
 </html>
