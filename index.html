@@ -27,6 +27,7 @@
             text-align: center;
             max-width: 1000px;
             padding: 2rem;
+            width: 100%;
         }
         
         .logo {
@@ -54,53 +55,74 @@
         }
         
         .language-options {
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 2rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 3rem;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
         .language-card {
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
+            border-radius: 20px;
             padding: 2.5rem;
-            width: 400px;
-            height: 280px;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.2);
             transition: all 0.3s ease;
             text-decoration: none;
             color: white;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            text-align: center;
+            justify-content: center;
+            min-height: 280px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .language-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .language-card:hover::before {
+            opacity: 1;
         }
         
         .language-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.2);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
         }
         
         .flag {
             font-size: 4rem;
             margin-bottom: 1.5rem;
             display: block;
+            position: relative;
+            z-index: 1;
         }
         
         .language-name {
-            font-size: 2rem;
-            font-weight: 600;
+            font-size: 1.8rem;
+            font-weight: 700;
             margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
         }
         
         .language-desc {
             font-size: 1rem;
-            opacity: 0.8;
+            opacity: 0.9;
             line-height: 1.5;
+            position: relative;
+            z-index: 1;
         }
         
         .footer {
@@ -147,23 +169,16 @@
             opacity: 0.8;
         }
         
-        @media (max-width: 900px) {
-            .language-options { 
-                flex-direction: column; 
-                align-items: center; 
-            }
-            .language-card { 
-                width: 350px; 
-                height: 250px;
-            }
-        }
-        
         @media (max-width: 768px) {
             h1 { font-size: 2rem; }
             .subtitle { font-size: 1rem; }
+            .language-options { 
+                grid-template-columns: 1fr; 
+                gap: 1.5rem;
+                max-width: 400px;
+            }
             .language-card { 
-                width: 300px; 
-                height: 220px;
+                min-height: 220px;
                 padding: 2rem;
             }
             .flag { font-size: 3rem; }
@@ -214,10 +229,6 @@
                 <div class="stat-number">100%</div>
                 <div class="stat-label">Open Source</div>
             </div>
-            <div class="stat">
-                <div class="stat-number" id="pageViews">-</div>
-                <div class="stat-label">Page Views</div>
-            </div>
         </div>
     </div>
     
@@ -228,22 +239,6 @@
     </div>
     
     <script>
-        // 页面浏览量统计
-        function updatePageViews() {
-            const pageKey = 'web3_tutorial_views';
-            let views = parseInt(localStorage.getItem(pageKey)) || 0;
-            views++;
-            localStorage.setItem(pageKey, views.toString());
-            
-            // 显示浏览量
-            const viewsElement = document.getElementById('pageViews');
-            if (viewsElement) {
-                viewsElement.textContent = views.toLocaleString();
-            }
-            
-            return views;
-        }
-        
         // 记录用户语言偏好
         function setLanguagePreference(lang) {
             localStorage.setItem('preferredLanguage', lang);
@@ -277,10 +272,7 @@
         });
         
         // 页面加载完成后执行
-        document.addEventListener('DOMContentLoaded', function() {
-            updatePageViews();
-            autoRedirect();
-        });
+        document.addEventListener('DOMContentLoaded', autoRedirect);
     </script>
 </body>
 </html>

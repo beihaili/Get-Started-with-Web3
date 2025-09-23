@@ -9,7 +9,8 @@
   },
   "plugins": [
     "highlight",
-    "fontsettings"
+    "fontsettings",
+    "./plugins/language-switcher"
   ],
   "pluginsConfig": {
     "fontsettings": {

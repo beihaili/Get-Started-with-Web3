@@ -1,0 +1,16 @@
+{
+  "name": "language-switcher",
+  "version": "1.0.0",
+  "description": "Add language switcher to HonKit pages",
+  "engines": {
+    "honkit": ">=3.0.0"
+  },
+  "honkit": {
+    "properties": {
+      "language-switcher": {
+        "type": "object",
+        "default": {}
+      }
+    }
+  }
+}
