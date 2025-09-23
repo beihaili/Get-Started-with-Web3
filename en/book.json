@@ -4,6 +4,19 @@
   "description": "Comprehensive guide to Web3, blockchain and cryptocurrency",
   "language": "en",
   "structure": {
-    "readme": "README.md"
+    "readme": "README.md",
+    "summary": "SUMMARY.md"
+  },
+  "plugins": [
+    "search",
+    "highlight",
+    "fontsettings"
+  ],
+  "pluginsConfig": {
+    "fontsettings": {
+      "theme": "white",
+      "family": "sans",
+      "size": 2
+    }
   }
 }
