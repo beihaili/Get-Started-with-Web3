@@ -15,6 +15,15 @@ gitbook-temp/
 *.mobi
 *.pdf
 
+# Python 缓存文件
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
 # 编辑器和IDE相关文件
 .vscode/
 .idea/
@@ -46,7 +55,11 @@ CHAPTER_REWRITE_PLAN.md
 CHAPTER_REWRITE_REPORT.md
 CHAPTER_REWRITE_SUMMARY.md
 CHAPTER_REWRITE_TEMPLATE.md
-CHAPTER_REWRITE_TEMPLATE.md
 
 #Claude
 CLAUDE.md
+
+# 部署脚本（保留但不在构建中处理）
+deploy*.sh
+DEPLOY_GUIDE.md
+MULTILINGUAL_GUIDE.md

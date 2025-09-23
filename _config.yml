@@ -1,54 +1,31 @@
-# GitHub Pages configuration for multi-language support
+# GitHub Pages configuration for HonKit
 title: "Get Started with Web3"
 description: "Comprehensive Web3, blockchain and cryptocurrency tutorial | 全面的Web3、区块链和加密货币教程"
 url: "https://beihaili.github.io"
 baseurl: "/Get-Started-with-Web3"
 
-# Language settings
-languages: ["en", "zh"]
-default_lang: "en"
-exclude_from_localization: ["assets", "images", "img"]
-
-# Build settings
+# HonKit settings
 markdown: kramdown
 highlighter: rouge
-theme: minima
 
-# Plugins
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
+# Exclude from Jekyll processing (HonKit handles the build)
+exclude:
+  - zh/
+  - en/
+  - book.json
+  - package.json
+  - package-lock.json
+  - deploy*.sh
+  - DEPLOY_GUIDE.md
+  - MULTILINGUAL_GUIDE.md
+  - templates/
 
-# Collections for multi-language content
-collections:
-  posts_en:
-    output: true
-    permalink: /en/:name/
-  posts_zh:
-    output: true
-    permalink: /zh/:name/
-
-# Navigation
-header_pages:
+# Keep only the main index.html for language selection
+include:
   - index.html
+  - README.md
+  - LICENSE
 
 # Social links
 github_username: beihaili
 twitter_username: bhbtc1337
-
-# Analytics (if needed)
-google_analytics: 
-
-# Language-specific configurations
-defaults:
-  - scope:
-      path: "en"
-    values:
-      layout: "default"
-      lang: "en"
-  - scope:
-      path: "zh"
-    values:
-      layout: "default"
-      lang: "zh"
