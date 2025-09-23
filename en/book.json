@@ -8,7 +8,6 @@
     "summary": "SUMMARY.md"
   },
   "plugins": [
-    "search",
     "highlight",
     "fontsettings"
   ],
