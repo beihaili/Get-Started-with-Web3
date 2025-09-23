@@ -1,7 +1,7 @@
 {
   "title": "Get Started with Web3",
   "author": "beihaili",
-  "description": "Comprehensive guide to Web3, blockchain and cryptocurrency",
+  "description": "Comprehensive guide to Web3, blockchain and cryptocurrency for beginners",
   "language": "en",
   "structure": {
     "readme": "README.md",
@@ -18,5 +18,11 @@
       "family": "sans",
       "size": 2
     }
+  },
+  "variables": {
+    "version": "Under Construction",
+    "status": "🚧 English translation in progress",
+    "chapters": 1,
+    "lastUpdate": "2025-09"
   }
 }

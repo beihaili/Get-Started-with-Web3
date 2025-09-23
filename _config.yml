@@ -8,24 +8,6 @@ baseurl: "/Get-Started-with-Web3"
 markdown: kramdown
 highlighter: rouge
 
-# Exclude from Jekyll processing (HonKit handles the build)
-exclude:
-  - zh/
-  - en/
-  - book.json
-  - package.json
-  - package-lock.json
-  - deploy*.sh
-  - DEPLOY_GUIDE.md
-  - MULTILINGUAL_GUIDE.md
-  - templates/
-
-# Keep only the main index.html for language selection
-include:
-  - index.html
-  - README.md
-  - LICENSE
-
 # Social links
 github_username: beihaili
 twitter_username: bhbtc1337
