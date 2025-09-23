@@ -57,53 +57,6 @@
         }
     };
     
-    // 添加样式
-    function addStyles() {
-        const style = document.createElement('style');
-        style.textContent = `
-            #languageSwitch {
-                position: fixed;
-                top: 20px;
-                right: 20px;
-                z-index: 1000;
-            }
-            
-            .lang-switch-btn {
-                background: rgba(255, 255, 255, 0.1);
-                border: 1px solid rgba(255, 255, 255, 0.3);
-                border-radius: 25px;
-                padding: 8px 16px;
-                color: white;
-                font-size: 14px;
-                font-weight: 500;
-                cursor: pointer;
-                transition: all 0.3s ease;
-                backdrop-filter: blur(10px);
-            }
-            
-            .lang-switch-btn:hover {
-                background: rgba(255, 255, 255, 0.2);
-                transform: translateY(-2px);
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            }
-            
-            .page-views-counter {
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-                background: rgba(0, 0, 0, 0.7);
-                color: white;
-                padding: 8px 12px;
-                border-radius: 20px;
-                font-size: 12px;
-                font-weight: 500;
-                z-index: 1000;
-                backdrop-filter: blur(10px);
-            }
-        `;
-        document.head.appendChild(style);
-    }
-    
     // 创建页面浏览量显示
     function createPageViewsCounter() {
         const counter = document.createElement('div');
@@ -114,7 +67,6 @@
     
     // 初始化
     function init() {
-        addStyles();
         createLanguageSwitch();
         createPageViewsCounter();
         updatePageViews();

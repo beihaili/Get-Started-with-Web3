@@ -9,8 +9,7 @@
   },
   "plugins": [
     "highlight",
-    "fontsettings",
-    "custom-features"
+    "fontsettings"
   ],
   "pluginsConfig": {
     "fontsettings": {
