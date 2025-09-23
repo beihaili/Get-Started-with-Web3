@@ -244,21 +244,17 @@
             localStorage.setItem('preferredLanguage', lang);
         }
         
-        // 自动跳转逻辑（可选）
-        function autoRedirect() {
+        // 智能推荐逻辑（不自动跳转）
+        function showLanguageRecommendation() {
             const preferred = localStorage.getItem('preferredLanguage');
             const browserLang = navigator.language || navigator.userLanguage;
             
-            // 如果用户之前选择过语言，直接跳转
-            if (preferred && window.location.search.indexOf('no-redirect') === -1) {
-                window.location.href = `./${preferred}/`;
-                return;
-            }
-            
-            // 根据浏览器语言智能推荐
-            if (browserLang.startsWith('zh') && window.location.search.indexOf('no-redirect') === -1) {
-                // 可以显示推荐提示，但不自动跳转
+            // 根据浏览器语言显示推荐提示
+            if (browserLang.startsWith('zh')) {
                 console.log('检测到中文环境，推荐中文版');
+                // 可以在这里添加视觉提示，但不自动跳转
+            } else {
+                console.log('检测到英文环境，推荐英文版');
             }
         }
         
@@ -272,7 +268,7 @@
         });
         
         // 页面加载完成后执行
-        document.addEventListener('DOMContentLoaded', autoRedirect);
+        document.addEventListener('DOMContentLoaded', showLanguageRecommendation);
     </script>
 </body>
 </html>
