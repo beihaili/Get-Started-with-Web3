@@ -71,3 +71,13 @@
         color: #8fa4ff;
     }
 }
+
+/* 动态插入语言切换器的JavaScript */
+.language-switcher-script {
+    display: none;
+}
+
+/* 确保语言切换器在所有页面上显示 */
+body {
+    position: relative;
+}
