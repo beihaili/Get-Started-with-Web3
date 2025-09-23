@@ -1,0 +1,45 @@
+name: Deploy Multi-language HonKit
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Install HonKit
+      run: |
+        npm install -g honkit
+        
+    - name: Build Chinese version
+      run: |
+        cd zh
+        honkit build _book
+        
+    - name: Build English version
+      run: |
+        cd en
+        honkit build _book
+        
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      if: github.ref == 'refs/heads/main'
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: |
+          .
+          zh/_book
+          en/_book
+        keep_files: true
