@@ -1,0 +1,86 @@
+import { BookOpen, Activity, BrainCircuit } from 'lucide-react';
+
+// GitHub 配置
+export const GITHUB_USERNAME = "beihaili";
+export const GITHUB_REPO = "GetStartedWithWeb3";
+export const GITHUB_BRANCH = "main";
+
+export const getRawBaseUrl = (path) => `https://raw.githubusercontent.com/${GITHUB_USERNAME}/${GITHUB_REPO}/${GITHUB_BRANCH}/${path}/`;
+export const getRawUrl = (path) => `https://raw.githubusercontent.com/${GITHUB_USERNAME}/${GITHUB_REPO}/${GITHUB_BRANCH}/${path}`;
+
+// 课程数据配置
+export const COURSE_DATA = [
+  {
+    id: 'module-1',
+    title: 'Web3 快速入门',
+    icon: BookOpen,
+    color: 'text-blue-400',
+    lessons: [
+      { 
+        id: '1-1', 
+        title: '创建第一个 Web3 身份', 
+        path: 'zh/Web3QuickStart/01_FirstWeb3Identity', 
+        fallbackContent: `# 正在连接 GitHub...\n\n如果长时间未加载，请检查网络连接。`
+      },
+      { 
+        id: '1-2', 
+        title: '体验第一笔交易', 
+        path: 'zh/Web3QuickStart/02_FirstWeb3Transaction', 
+        fallbackContent: `# Loading...`
+      },
+      { 
+        id: '1-3', 
+        title: '体验第一个 DApp', 
+        path: 'zh/Web3QuickStart/03_FirstWeb3Dapp', 
+        fallbackContent: `# Loading...`
+      },
+      {
+        id: '1-4',
+        title: '常用 Web3 网站',
+        path: 'zh/Web3QuickStart/04_UsefulWeb3Sites',
+        fallbackContent: `# Loading...`
+      },
+      {
+        id: '1-5',
+        title: '发行你的第一个代币',
+        path: 'zh/Web3QuickStart/05_LaunchYourFirstToken',
+        fallbackContent: `# Loading...`
+      },
+      {
+        id: '1-6',
+        title: 'Web3 安全基础',
+        path: 'zh/Web3QuickStart/06_Web3Security',
+        fallbackContent: `# Loading...`
+      }
+    ]
+  },
+  {
+    id: 'module-2',
+    title: '比特币基础',
+    icon: Activity,
+    color: 'text-orange-400',
+    lessons: [
+      { id: '2-1', title: '密码学基础', path: 'zh/GetStartedWithBitcoin/01_Cryptography', fallbackContent: '# Loading...' },
+      { id: '2-2', title: '比特币概览', path: 'zh/GetStartedWithBitcoin/02_Overview', fallbackContent: '# Loading...' },
+      { id: '2-3', title: '比特币交易结构', path: 'zh/GetStartedWithBitcoin/03_BitcoinTx', fallbackContent: '# Loading...' },
+      { id: '2-4', title: '多重签名 (MultiSig)', path: 'zh/GetStartedWithBitcoin/04_MultiSig', fallbackContent: '# Loading...' },
+      { id: '2-5', title: '隔离见证 (SegWit)', path: 'zh/GetStartedWithBitcoin/05_SegWit', fallbackContent: '# Loading...' },
+      { id: '2-6', title: '数据结构', path: 'zh/GetStartedWithBitcoin/08_DataStructure', fallbackContent: '# Loading...' },
+      { id: '2-7', title: 'P2P 协议', path: 'zh/GetStartedWithBitcoin/10_P2PProtocol', fallbackContent: '# Loading...' },
+      { id: '2-8', title: '工作量证明 (PoW)', path: 'zh/GetStartedWithBitcoin/12_ProofOfWork', fallbackContent: '# Loading...' },
+      { id: '2-9', title: '难度调整机制', path: 'zh/GetStartedWithBitcoin/13_DifficultyAdjustment', fallbackContent: '# Loading...' },
+      { id: '2-10', title: '比特币钱包', path: 'zh/GetStartedWithBitcoin/15_BitcoinWallet', fallbackContent: '# Loading...' }
+    ]
+  },
+  {
+    id: 'module-3',
+    title: 'Web3 深度思考',
+    icon: BrainCircuit,
+    color: 'text-purple-400',
+    lessons: [
+      { id: '3-1', title: 'Web3 基本原则', path: 'zh/Web3Thoughts/01_Principles', fallbackContent: '# Loading...' },
+      { id: '3-2', title: '为什么区块链是必须的', path: 'zh/Web3Thoughts/02_WhyBlockchainIsNecessary', fallbackContent: '# Loading...' },
+      { id: '3-3', title: '比特币上最酷的交易', path: 'zh/Web3Thoughts/03_TheCoolestTransactionOnBitcoin', fallbackContent: '# Loading...' }
+    ]
+  }
+];

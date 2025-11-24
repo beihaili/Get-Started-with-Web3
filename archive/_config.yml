@@ -1,0 +1,13 @@
+# GitHub Pages configuration for HonKit
+title: "Get Started with Web3"
+description: "Comprehensive Web3, blockchain and cryptocurrency tutorial | 全面的Web3、区块链和加密货币教程"
+url: "https://beihaili.github.io"
+baseurl: "/Get-Started-with-Web3"
+
+# HonKit settings
+markdown: kramdown
+highlighter: rouge
+
+# Social links
+github_username: beihaili
+twitter_username: bhbtc1337

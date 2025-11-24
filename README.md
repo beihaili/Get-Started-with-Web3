@@ -26,9 +26,19 @@
 
 ## 📖 About This Project
 
-**Get Started With Web3** is a comprehensive, open-source learning resource designed to guide newcomers through the exciting world of Web3, blockchain technology, and Bitcoin.
+**Get Started With Web3** is a comprehensive, open-source learning resource designed to guide newcomers through the exciting world of Web3, blockchain technology, and Bitcoin. 
+
+🎉 **NEW: Modern React Interface!** - Experience our brand new interactive learning platform with AI-powered assistance, beautiful animations, and Web3 wallet integration.
 
 **《Web3入门指南》** 是一个全面的开源学习资源，旨在引导新人进入激动人心的Web3、区块链技术和比特币世界。
+
+🎉 **全新：现代化React界面！** - 体验全新的交互式学习平台，支持AI助教、精美动画和Web3钱包集成。
+
+### 🌐 Access Options | 访问方式
+
+- **🚀 [Modern React App (Recommended)](https://beihaili.github.io/GetStartedWithWeb3/)** - Interactive learning platform with AI features
+- **📚 [Traditional GitBook](./zh/)** - Classic text-based tutorials
+- **🌍 [English Version](./en/)** - English language support
 
 ### 🎯 What You'll Learn | 你将学到什么
 
@@ -60,6 +70,15 @@
 
 ### 🌟 Features | 特色功能
 
+**React App Features:**
+- ⚡ **Modern Tech Stack** - React 19, Vite, Tailwind CSS
+- 🎨 **Beautiful UI** - Cyberpunk-style dark theme with animations
+- 🔗 **Wallet Integration** - Connect MetaMask and track progress on-chain
+- 🤖 **AI Assistant** - Powered by Gemini AI (coming soon)
+- 🎮 **Interactive Demos** - Web3 Oracle, Wallet Simulator, Hash Visualizer
+- 📱 **Responsive Design** - Works perfectly on mobile and desktop
+
+**Content Features:**
 - ✅ **Beginner-friendly** | 新手友好
 - ✅ **Code examples** | 代码示例
 - ✅ **Interactive tutorials** | 互动教程
