@@ -1,0 +1,74 @@
+name: Deploy Web3 Learning Platform
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # 允许手动触发部署
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    steps:
+    - name: Checkout 📁
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js 🟢
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+
+    - name: Install Dependencies 📦
+      run: npm ci
+
+    - name: Build Application 🔨
+      run: npm run build
+      env:
+        VITE_GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        VITE_GITHUB_USERNAME: ${{ secrets.GITHUB_USERNAME || 'beihaili' }}
+        VITE_GITHUB_REPO: ${{ secrets.GITHUB_REPO || 'GetStartedWithWeb3' }}
+        VITE_GITHUB_BRANCH: ${{ secrets.GITHUB_BRANCH || 'main' }}
+
+    - name: Setup GitHub Pages 📄
+      if: github.ref == 'refs/heads/main'
+      uses: actions/configure-pages@v4
+
+    - name: Upload Pages Artifact 📤
+      if: github.ref == 'refs/heads/main'
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: ./dist
+
+    - name: Deploy to GitHub Pages 🚀
+      if: github.ref == 'refs/heads/main'
+      id: deployment
+      uses: actions/deploy-pages@v4
+
+    - name: Comment PR with Preview Link 💬
+      if: github.event_name == 'pull_request'
+      uses: actions/github-script@v7
+      with:
+        script: |
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: '📦 **构建成功！** 在合并到 main 分支后将自动部署到生产环境。'
+          })
+
+    - name: Output deployment URL 🌐
+      if: github.ref == 'refs/heads/main'
+      run: |
+        echo "🚀 部署完成！"
+        echo "📍 网站地址: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+        echo "⏰ 部署时间: $(date '+%Y-%m-%d %H:%M:%S')"
