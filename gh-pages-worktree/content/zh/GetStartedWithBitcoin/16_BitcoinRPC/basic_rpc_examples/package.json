@@ -1,9 +1,0 @@
-{
-  "name": "bitcoin-rpc-example",
-  "version": "1.0.0",
-  "description": "比特币RPC接口示例",
-  "main": "bitcoin_rpc_example.js",
-  "dependencies": {
-    "axios": "^1.6.0"
-  }
-}
