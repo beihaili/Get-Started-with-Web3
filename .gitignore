@@ -15,6 +15,7 @@ yarn-error.log*
 dist/
 build/
 _book/
+public/content/
 
 # Environment files
 .env

@@ -4,6 +4,9 @@
   "description": "Modern React-powered Web3 learning platform with interactive tutorials and AI assistance",
   "type": "module",
   "scripts": {
+    "predev": "npm run sync-content",
+    "prebuild": "npm run sync-content",
+    "sync-content": "node scripts/sync-content.mjs",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",

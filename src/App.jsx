@@ -273,6 +273,15 @@ const GITHUB_BRANCH = import.meta.env.VITE_GITHUB_BRANCH || "main";
 const getRawBaseUrl = (path) => `https://raw.githubusercontent.com/${GITHUB_USERNAME}/${GITHUB_REPO}/${GITHUB_BRANCH}/${path}/`;
 const getRawUrl = (path) => `https://raw.githubusercontent.com/${GITHUB_USERNAME}/${GITHUB_REPO}/${GITHUB_BRANCH}/${path}`;
 
+const ensureTrailingSlash = (value = '') => value.endsWith('/') ? value : `${value}/`;
+const stripLeadingSlash = (value = '') => value.replace(/^\/+/, '');
+
+const APP_BASE_URL = ensureTrailingSlash(import.meta.env.BASE_URL || '/');
+const LOCAL_CONTENT_BASE = ensureTrailingSlash(`${APP_BASE_URL}content`);
+
+const getLocalBaseUrl = (path = '') => ensureTrailingSlash(`${LOCAL_CONTENT_BASE}${stripLeadingSlash(path)}`);
+const getLocalUrl = (path = '') => `${LOCAL_CONTENT_BASE}${stripLeadingSlash(path)}`;
+
 const COURSE_DATA = [
   {
     id: 'module-1',
@@ -2886,49 +2895,51 @@ export default function App() {
     if (!activeLesson.path) {
       setLessonContent(activeLesson.fallbackContent);
       setFetchError(null);
+      setBasePath('');
       return;
     }
 
     const fetchContent = async () => {
       setContentLoading(true);
       setFetchError(null);
-      setBasePath(getRawBaseUrl(activeLesson.path));
+      setBasePath('');
       
-      const tryFetch = async (filename) => {
-        const path = `${activeLesson.path}/${filename}`;
-        const url = getRawUrl(path);
-        try {
-          const res = await fetch(url);
-          if (res.ok) {
-            return await res.text();
-          }
-          return null;
-        } catch (e) {
-          return null;
+      const candidateFiles = ['README.MD', 'README.md', 'readme.md', 'index.md', 'index.MD'];
+      const failureLogs = [];
+      const sources = [
+        {
+          label: '本地内容镜像',
+          basePath: getLocalBaseUrl(activeLesson.path),
+          getUrl: (filename) => getLocalUrl(`${activeLesson.path}/${filename}`)
+        },
+        {
+          label: 'GitHub Raw',
+          basePath: getRawBaseUrl(activeLesson.path),
+          getUrl: (filename) => getRawUrl(`${activeLesson.path}/${filename}`)
         }
-      };
+      ];
 
       try {
-        let text = await tryFetch('README.MD');
-        if (!text) {
-           console.log("README.MD not found, trying README.md...");
-           text = await tryFetch('README.md');
-        }
-        if (!text) {
-           console.log("README.md not found, trying readme.md...");
-           text = await tryFetch('readme.md');
+        for (const source of sources) {
+          for (const filename of candidateFiles) {
+            const url = source.getUrl(filename);
+            try {
+              const res = await fetch(url, { cache: 'no-store' });
+              if (res.ok) {
+                const text = await res.text();
+                setLessonContent(text);
+                setBasePath(source.basePath);
+                return;
+              }
+              failureLogs.push(`${source.label}: ${url} (${res.status})`);
+            } catch (error) {
+              failureLogs.push(`${source.label}: ${url} (${error.message})`);
+            }
+          }
         }
 
-        if (text) {
-          setLessonContent(text);
-        } else {
-          const failedUrl = getRawUrl(`${activeLesson.path}/README.MD`);
-          console.error(`Failed to fetch from ${failedUrl}`);
-          setFetchError(failedUrl); 
-          setLessonContent(activeLesson.fallbackContent);
-        }
-      } catch (err) {
-        console.error(err);
+        console.error('Failed to load lesson content', failureLogs);
+        setFetchError(failureLogs.join('\n'));
         setLessonContent(activeLesson.fallbackContent);
       } finally {
         setContentLoading(false);
@@ -3462,14 +3473,14 @@ export default function App() {
               {contentLoading ? (
                 <div className="flex flex-col items-center justify-center py-20 text-slate-400 gap-4">
                   <Loader2 className="w-10 h-10 text-cyan-400 animate-spin" />
-                  <p>正在从 GitHub 抓取最新教程...</p>
+                  <p>正在加载课程内容...</p>
                 </div>
               ) : fetchError ? (
                 <div className="p-6 bg-red-900/20 border border-red-500/30 rounded-xl text-center">
                    <div className="flex justify-center mb-4"><AlertTriangle className="w-8 h-8 text-red-400" /></div>
                    <h3 className="text-lg font-bold text-red-400 mb-2">内容加载失败</h3>
-                   <p className="text-slate-400 text-sm mb-4">无法从 GitHub 获取文件。请检查仓库路径是否正确。</p>
-                   <div className="bg-black/30 p-3 rounded font-mono text-xs text-slate-500 break-all">{fetchError}</div>
+                   <p className="text-slate-400 text-sm mb-4">无法加载课程文本，已尝试本地镜像与 GitHub Raw。</p>
+                   <div className="bg-black/30 p-3 rounded font-mono text-xs text-slate-500 break-all whitespace-pre-wrap">{fetchError}</div>
                 </div>
               ) : (
                 <article className="prose prose-invert prose-lg max-w-3xl mx-auto mb-12">
