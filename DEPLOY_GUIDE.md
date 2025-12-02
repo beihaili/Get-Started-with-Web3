@@ -55,4 +55,34 @@
 
 ---
 
+## React 前端（当前主站）部署说明
+1. **构建并同步课程内容**
+   ```bash
+   npm run build
+   ```
+   - 该命令会先执行 `npm run sync-content`，把 `zh/...` 教程与配图复制到 `public/content/...`，再由 Vite 产出 `dist/`。
+2. **优先使用一键发布**
+   ```bash
+   npm run deploy
+   ```
+   - 实际等价于 `gh-pages -d dist`，成功时会自动推送到 `gh-pages` 分支。
+3. **遇到 `HTTP 400` 等远端拒绝时的手动方案**
+   ```bash
+   git worktree add -B gh-pages .gh-pages origin/gh-pages
+   rm -rf .gh-pages/*
+   cp -R dist/. .gh-pages/
+   cd .gh-pages
+   git add -A
+   git commit -m "chore: deploy latest build"
+   git push origin gh-pages
+   cd ..
+   git worktree remove .gh-pages
+   ```
+   - 直接重置 `gh-pages` 分支内容，绕过 `gh-pages` CLI 对大提交或权限的限制。
+4. **验证上线**
+   - 访问 `https://beihaili.github.io/Get-Started-with-Web3/`，或执行 `curl -I` 查看是否返回 `HTTP/2 200`。
+   - GitHub Pages 缓存通常 1~5 分钟，必要时强制刷新浏览器。
+
+---
+
 下次需要自动化部署，只需让AI严格按上述流程操作即可，遇到问题也可直接参考"常见问题与排查"部分。 
