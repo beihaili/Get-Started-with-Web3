@@ -14,7 +14,7 @@ Learning Web3 from scratch isn't easy. As someone who recently entered the Web3 
 
 ## 📖 Online Reading
 
-🌐 **[Click here to read online](https://beihaili.github.io/Get-Started-with-Web3/en/)** — Better reading experience with search and navigation support
+🌐 **[Click here to read online](https://beihaili.github.io/Get-Started-with-Web3/en/)** —— Better reading experience with search and navigation support.
 
 ## 🤝 Connect With Us
 
@@ -24,7 +24,7 @@ Join our community: [Sign-up form](https://forms.gle/QMBwL6LwZyQew1tX8)
 
 Open source on GitHub: [Get-Started-with-Web3](https://github.com/beihaili/Get-Started-with-Web3)
 
-Buy BTC/ETH/USDT recommended: [Binance](https://www.binance.com/en)[Registration Link](https://accounts.marketwebb.me/register?ref=39797374)
+Buy BTC / ETH / USDT recommended: [Binance](https://www.binance.com/en)[Registration Link](https://accounts.marketwebb.me/register?ref=39797374)
 
 ---
 
@@ -114,12 +114,12 @@ This repository will approach from the following aspects, from shallow to deep, 
 
 ## 💫 Features
 
-- 📚 **Comprehensive**: From basics to advanced topics
-- 🛠️ **Practical**: Includes hands-on code examples
-- 🔄 **Updated**: Regular weekly updates
-- 🌍 **Open Source**: Community-driven development
-- 🎯 **Beginner-Friendly**: Easy-to-understand explanations
-- 💻 **Interactive**: Runnable code examples
+- 📚 **Comprehensive**: From basics to advanced topics.
+- 🛠️ **Practical**: Includes hands-on code examples.
+- 🔄 **Updated**: Regular weekly updates.
+- 🌍 **Open Source**: Community-driven development.
+- 🎯 **Beginner-Friendly**: Easy-to-understand explanations.
+- 💻 **Interactive**: Runnable code examples.
 
 ## 🤝 Contributing
 
@@ -127,7 +127,7 @@ We welcome contributions! Please check out our [contribution guidelines](../temp
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](../LICENSE) file for details.
+This project is licensed under the MIT License —— see the [LICENSE](../LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 

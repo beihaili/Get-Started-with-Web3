@@ -11,7 +11,7 @@
 
 <div align="center">
   <h3>Choose your preferred language to start learning Web3!</h3>
-  <p>选择您的语言开始学习Web3！</p>
+  <p>选择您的语言开始学习 Web3！</p>
   
   <a href="./zh/" style="text-decoration: none;">
     <img src="https://img.shields.io/badge/🇨🇳_中文-Learn_Web3_in_Chinese-red?style=for-the-badge&logo=gitbook" alt="Chinese Version"/>
@@ -30,9 +30,9 @@
 
 🎉 **NEW: Modern React Interface!** - Experience our brand new interactive learning platform with AI-powered assistance, beautiful animations, and Web3 wallet integration.
 
-**《Web3入门指南》** 是一个全面的开源学习资源，旨在引导新人进入激动人心的Web3、区块链技术和比特币世界。
+**《Web3 入门指南》** 是一个全面的开源学习资源，旨在引导新人进入激动人心的 Web3、区块链技术和比特币世界。
 
-🎉 **全新：现代化React界面！** - 体验全新的交互式学习平台，支持AI助教、精美动画和Web3钱包集成。
+🎉 **全新：现代化 React 界面！** —— 体验全新的交互式学习平台，支持 AI 助教、精美动画和 Web3 钱包集成。
 
 ### 🌐 Access Options | 访问方式
 
@@ -49,9 +49,9 @@
 - Security best practices
 
 **🔰 Web3 基础知识**
-- 创建你的第一个Web3身份
+- 创建你的第一个 Web3 身份
 - 进行你的第一笔加密货币交易
-- 构建你的第一个DApp
+- 构建你的第一个 DApp
 - 安全最佳实践
 
 **₿ Bitcoin Deep Dive**
@@ -66,7 +66,7 @@
 - 交易机制
 - 网络协议
 - 挖矿和共识
-- 21个综合章节
+- 21 个综合章节
 
 ### 🌟 Features | 特色功能
 
@@ -151,7 +151,7 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE) for detai
 
 <div align="center">
   <p><strong>Made with ❤️ by blockchain enthusiasts worldwide</strong></p>
-  <p><strong>由全球区块链爱好者们用❤️共同开发</strong></p>
+  <p><strong>由全球区块链爱好者们用 ❤️ 共同开发</strong></p>
   
   <a href="./zh/">🇨🇳 中文版</a> | 
   <a href="./en/">🇺🇸 English</a> | 

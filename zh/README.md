@@ -22,7 +22,7 @@
 
 文章开源在 GitHub：[Get-Started-with-Web3](https://github.com/beihaili/Get-Started-with-Web3)
 
-购买BTC/ETH/USDT 等加密货币推荐 [币安](https://www.binance.com/zh-CN)[注册链接](https://accounts.marketwebb.me/register?ref=39797374)
+购买 BTC/ETH/USDT 等加密货币推荐 [币安](https://www.binance.com/zh-CN)[注册链接](https://accounts.marketwebb.me/register?ref=39797374)
 
 ---
 
@@ -42,7 +42,7 @@
 
 [**第 05 讲：发行你的第一个代币**](Web3QuickStart/05_LaunchYourFirstToken/README.MD)
 
-[**第 06 讲：Web3安全防护与防骗指南**](Web3QuickStart/06_Web3Security/README.MD)
+[**第 06 讲：Web3 安全防护与防骗指南**](Web3QuickStart/06_Web3Security/README.MD)
 
 ## 2. 比特币技术入门
 
@@ -56,9 +56,9 @@
 
 [**第 04 讲：多重签名交易**](GetStartedWithBitcoin/04_MultiSig/README.MD)
 
-[**第 05 讲：隔离见证(SegWit)技术**](GetStartedWithBitcoin/05_SegWit/README.MD)
+[**第 05 讲：隔离见证 (SegWit) 技术**](GetStartedWithBitcoin/05_SegWit/README.MD)
 
-[**第 06 讲：Taproot升级详解**](GetStartedWithBitcoin/06_Taproot/README.MD)
+[**第 06 讲：Taproot 升级详解**](GetStartedWithBitcoin/06_Taproot/README.MD)
 
 [**第 07 讲：高级交易应用**](GetStartedWithBitcoin/07_AdvancedTransactions/README.MD)
 
@@ -66,7 +66,7 @@
 
 [**第 09 讲：比特币核心节点**](GetStartedWithBitcoin/09_BitcoinCore/README.MD)
 
-[**第 10 讲：P2P网络协议**](GetStartedWithBitcoin/10_P2PProtocol/README.MD)
+[**第 10 讲：P2P 网络协议**](GetStartedWithBitcoin/10_P2PProtocol/README.MD)
 
 [**第 11 讲：网络安全**](GetStartedWithBitcoin/11_NetworkSecurity/README.MD)
 
@@ -74,28 +74,28 @@
 
 [**第 13 讲：难度调整算法**](GetStartedWithBitcoin/13_DifficultyAdjustment/README.MD)
 
-[**第 14 讲：分叉机制与BIP流程**](GetStartedWithBitcoin/14_ForksBIPs/README.MD)
+[**第 14 讲：分叉机制与 BIP 流程**](GetStartedWithBitcoin/14_ForksBIPs/README.MD)
 
 [**第 15 讲：比特币钱包**](GetStartedWithBitcoin/15_BitcoinWallet/README.MD)
 
-[**第 16 讲：比特币RPC应用开发**](GetStartedWithBitcoin/16_BitcoinRPC/README.MD)
+[**第 16 讲：比特币 RPC 应用开发**](GetStartedWithBitcoin/16_BitcoinRPC/README.MD)
 
 [**第 17 讲：比特币低费率广播工具**](GetStartedWithBitcoin/17_BitcoinLowFeeBroadcast/README.MD)
 
-[**第 18 讲：Bitcoin Script脚本系统**](GetStartedWithBitcoin/18_BitcoinScript/README.MD)
+[**第 18 讲：Bitcoin Script 脚本系统**](GetStartedWithBitcoin/18_BitcoinScript/README.MD)
 
 [**第 19 讲：比特币扩容与治理**](GetStartedWithBitcoin/19_BitcoinGovernance/README.MD)
 
-[**第 20 讲：Ordinals与生态创新**](GetStartedWithBitcoin/20_Ordinals/README.MD)
+[**第 20 讲：Ordinals 与生态创新**](GetStartedWithBitcoin/20_Ordinals/README.MD)
 
-[**第 21 讲：DeFi跨链**](GetStartedWithBitcoin/21_DeFiCrossChain/README.MD)
+[**第 21 讲：DeFi 跨链**](GetStartedWithBitcoin/21_DeFiCrossChain/README.MD)
 
 
 ## 3. 其它学习资源
 
 [**以太坊学习指南**](其它学习资源整理/Etherum/README.MD)
 
-[**DeFi学习指南**](其它学习资源整理/DeFi/README.MD)
+[**DeFi 学习指南**](其它学习资源整理/DeFi/README.MD)
 
 ## 5. Web3 思考集合
 
@@ -117,7 +117,7 @@
 
 ## 📢 加入我们的开源社区！
 
-> **Web3的世界需要你的声音和智慧！**
+> **Web3 的世界需要你的声音和智慧！**
 
 无论你是区块链专家还是刚入门的新人，我们都欢迎你的贡献！这个项目旨在成为社区共同创建的知识库，集思广益，共同成长。
 
@@ -126,11 +126,11 @@
 ### 为什么要贡献？
 
 - **分享你的专业知识**：每个人都有独特的经验和见解
-- **提升你的影响力**：你的贡献将帮助全球的Web3学习者
+- **提升你的影响力**：你的贡献将帮助全球的 Web3 学习者
 - **完善你的作品集**：开源贡献是简历和个人品牌的重要资产
-- **加入Web3先行者社区**：与志同道合的贡献者建立联系
+- **加入 Web3 先行者社区**：与志同道合的贡献者建立联系
 
-不必担心贡献的规模——无论是修复一个错别字，添加一篇教程，还是改进代码，每一点贡献都很宝贵！我们相信多元化的声音能创造出更全面、更有价值的Web3学习资源。
+不必担心贡献的规模——无论是修复一个错别字，添加一篇教程，还是改进代码，每一点贡献都很宝贵！我们相信多元化的声音能创造出更全面、更有价值的 Web3 学习资源。
 
 **立即行动！** 查看我们的[贡献指南](#如何贡献)，找到适合你的参与方式！
 
@@ -156,23 +156,23 @@
 
 ### 贡献指南
 
-- **内容贡献**：如果你想添加新的学习资源、教程或指南，请确保内容准确、清晰且对初学者友好。
+- **内容贡献**：如果你想添加新的学习资源、教程 or 指南，请确保内容准确、清晰且对初学者友好。
 - **代码示例**：提供的代码示例应该简洁、易懂，并尽可能包含注释。
-- **文档改进**：欢迎修复文档中的错误或提出改进建议。
+- **文档改进**：欢迎修复文档中的错误 or 提出改进建议。
 - **翻译**：帮助我们将内容翻译成其他语言，让更多人受益。
 
 ### 行为准则
 
 参与贡献即表示您同意遵守我们的行为准则：
 
-- 尊重所有参与者，不论经验水平、性别、性取向、残疾、种族或宗教信仰。
+- 尊重所有参与者，不论经验水平、性别、性取向、残疾、种族 or 宗教信仰。
 - 使用友好和包容的语言。
 - 接受建设性批评，并把社区最佳利益放在首位。
 - 在讨论中保持专业和尊重。
 
 ## 联系我们
 
-如果你有任何问题、建议或反馈，可以通过以下方式与我们联系：
+如果你有任何问题、建议 or 反馈，可以通过以下方式与我们联系：
 
 - **GitHub Issues**: [提交问题](https://github.com/beihaili/Get-Started-with-Web3/issues)
 - **Twitter**: [@bhbtc1337](https://twitter.com/bhbtc1337)

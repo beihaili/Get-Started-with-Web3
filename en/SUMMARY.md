@@ -6,7 +6,7 @@
 
 > **Note**: We are currently translating content into English. More chapters will be available soon!
 >
-> **注意**: 我们正在将内容翻译成英文。更多章节即将推出！
+> **注意**：我们正在将内容翻译成英文。更多章节即将推出！
 
 ## Currently Available / 目前可用
 
@@ -61,8 +61,8 @@
 
 We welcome contributions from the community to help translate this content into English. If you'd like to help, please:
 
-1. Check our [GitHub repository](https://github.com/beihaili/Get-Started-with-Web3)
-2. Open an issue or submit a pull request
-3. Join our community discussions
+1. Check our [GitHub repository](https://github.com/beihaili/Get-Started-with-Web3)。
+2. Open an issue or submit a pull request。
+3. Join our community discussions。
 
 For the complete Chinese version, visit: [🇨🇳 Chinese Version](../zh/)

@@ -1,11 +1,11 @@
-# 如何在 Pump.fun 上发行你的第一个 meme币
+# 如何在 Pump.fun 上发行你的第一个 Meme 币
 
 ![status](https://img.shields.io/badge/状态-已完成-success)
 ![author](https://img.shields.io/badge/作者-beihaili-blue)
 ![date](https://img.shields.io/badge/日期-2025--06-orange)
 ![difficulty](https://img.shields.io/badge/难度-初级-brightgreen)
 
-> 💡 本教程将指导您如何在 Solana 链上通过 Pump.fun 平台快速发行自己的第一个meme币，无需编写任何代码。整个过程只需几分钟即可完成，是 Web3 新手入门的绝佳实践。
+> 💡 本教程将指导您如何在 Solana 链上通过 Pump.fun 平台快速发行自己的第一个 Meme 币，无需编写任何代码。整个过程只需几分钟即可完成，是 Web3 新手入门的绝佳实践。
 
 ## 目录
 
@@ -20,7 +20,7 @@
 
 ### 什么是 Pump.fun？
 
-🚀 **Pump.fun** 是基于 Solana 链的一个一站式发币和交易平台，让任何人都能以极低的成本和门槛发行自己的代币。这些代币通常被称为"模因币"(meme coins)或"社区币"，可以反映特定主题、事件或社区。
+🚀 **Pump.fun** 是基于 Solana 链的一个一站式发币和交易平台，让任何人都能以极低的成本和门槛发行自己的代币。这些代币通常被称为「模因币」(Meme coins) 或「社区币」，可以反映特定主题、事件或社区。
 
 Pump.fun 平台的独特之处在于：
 
@@ -32,7 +32,7 @@ Pump.fun 平台的独特之处在于：
 | 实时交易 | 发行后立即可交易，无需等待 |
 | 社区互动 | 内置评论和社交功能 |
 
-### 为什么选择在 Solana 上发meme？
+### 为什么选择在 Solana 上发 Meme？
 
 ⚡ Solana 区块链具有以下优势：
 - 超高交易速度（每秒处理数千笔交易）
@@ -48,7 +48,7 @@ Pump.fun 平台的独特之处在于：
 
 1. **Solana 钱包**：推荐使用 [Phantom 钱包](https://phantom.app/)
    
-   > 🔔 Phantom是最流行的Solana钱包之一，提供了友好的用户界面和安全特性
+   > 🔔 Phantom 是最流行的 Solana 钱包之一，提供了友好的用户界面和安全特性。
    
 2. **SOL**：至少 0.03 SOL（用于支付发行费用和首次购买）
 3. **代币创意**：包括名称、符号、描述和图像
@@ -72,15 +72,15 @@ Pump.fun 平台的独特之处在于：
 
    <div align="center"> <img src="./img/pumpfun主界面.jpg" width = 500 /> </div>
 
-2. 点击右上角的“Connect”按钮连接您的 Phantom 钱包
+2. 点击右上角的「Connect」按钮连接您的 Phantom 钱包
 
 3. 在弹出的钱包界面中确认连接
 
-   > 🔔 连接钱包时，请确保您在官方的 Pump.fun 网站上，以避免钱包汉钥被盗取的风险
+   > 🔔 连接钱包时，请确保您在官方的 Pump.fun 网站上，以避免私钥被盗取的风险。
 
 ### 步骤 2：开始创建新代币
 
-1. 在平台首页点击"Start a new coin"按钮
+1. 在平台首页点击「Start a new coin」按钮
    
    <div align="center"> <img src="./img/空代币页面.jpg" width = 500 /> </div>
 
@@ -93,10 +93,10 @@ Pump.fun 平台的独特之处在于：
 | 字段 | 说明 | 示例 |
 |:----:|:----:|:----:|
 | 名称 | 代币全称 | GetStartedWithWeb3 |
-| 符号 | 代币简称(大写) | WEB3 |
+| 符号 | 代币简称 (大写) | WEB3 |
 | 图片 | 代币图标 | 上传一个正方形图像 |
-| 描述 | 代币简介 | GetStartedWithWeb3社区meme |
-| 网站/社交媒体 | 可选链接 | Twitter、Discord等这里我们把我们的仓库放上去https://github.com/beihaili |
+| 描述 | 代币简介 | GetStartedWithWeb3 社区 Meme |
+| 网站/社交媒体 | 可选链接 | Twitter、Discord 等，这里我们把我们的仓库放上去 https://github.com/beihaili |
 
 <div align="center"> <img src="./img/创建token.jpg" width = 500 /> </div>
 
@@ -106,12 +106,12 @@ Pump.fun 平台的独特之处在于：
 
 ### 步骤 4：确认创建
 
-1. 填写完所有信息后，点击"Create coin"按钮
+1. 填写完所有信息后，点击「Create coin」按钮
 2. 在弹出的确认框中，您可以选择是否在创建时购买一定数量的代币：
 
 <div align="center"> <img src="./img/提前购买.jpg" width = 500 /> </div>
 
-3. 建议购买一些初始meme币（例如 0.2 SOL），这样您将持有自己发行meme币的一部分
+3. 建议购买一些初始 Meme 币（例如 0.2 SOL），这样您将持有自己发行 Meme 币的一部分。
 4. 确认交易详情，包括：
    - 发行费用（约 0.02 SOL）
    - 初始购买金额（如有）
@@ -119,7 +119,7 @@ Pump.fun 平台的独特之处在于：
 
 <div align="center"> <img src="./img/确认交易.jpg" width = 500 /> </div>
 
-5. 点击“确认”按钮并在钱包中批准交易
+5. 点击「确认」按钮并在钱包中批准交易
 
 ### 步骤 5：发行成功
 
@@ -127,11 +127,11 @@ Pump.fun 平台的独特之处在于：
 
 <div align="center"> <img src="./img/交易完成.jpg" width = 500 /> </div>
 
-点击"View"按钮查看您的代币详情页面。
+点击「View」按钮查看您的代币详情页面。
 
 <div align="center"> <img src="./img/coink线界面.jpg" width = 500 /> </div>
 
-我们的WEB3代币合约地址9f2Xw9HNx37YkXSbCTyV4saW4zwjaaFp9tFHPjtYpump，这个地址是唯一识别，可以通过这个地址在pumpfun购买meme币
+我们的 WEB3 代币合约地址为 `9f2Xw9HNx37YkXSbCTyV4saW4zwjaaFp9tFHPjtYpump`，这个地址是唯一标识，可以通过这个地址在 Pump.fun 购买 Meme 币。
 
 ## 管理和推广您的代币
 
@@ -148,8 +148,8 @@ Pump.fun 平台的独特之处在于：
 
 ### 如何购买代币
 
-1. 打开pumpfun
-2. 在搜索框中输入您的代币合约地址 例如我们的代币合约地址：9f2Xw9HNx37YkXSbCTyV4saW4zwjaaFp9tFHPjtYpump
+1. 打开 Pump.fun
+2. 在搜索框中输入您的代币合约地址，例如我们的代币合约地址：`9f2Xw9HNx37YkXSbCTyV4saW4zwjaaFp9tFHPjtYpump`
 <div align="center"> <img src="./img/搜索代币.jpg" width = 500 /> </div>
 3. 选择数量点击购买
 <div align="center"> <img src="./img/购买代币.jpg" width = 500 /> </div>
@@ -160,7 +160,7 @@ Pump.fun 平台的独特之处在于：
 
 <div align="center"> <img src="./img/确认购买.jpg" width = 500 /> </div>
 
-5. 点击"确认"按钮并在钱包中批准交易
+5. 点击「确认」按钮并在钱包中批准交易
 
 ### 增加流动性
 
@@ -201,15 +201,15 @@ Pump.fun 使用自动债券曲线来管理流动性，随着购买量增加，�
 
 #### ❓ 创建代币后为什么在区块链浏览器上找不到？
 
-发行完成后，你的代币需要几分钟时间在Solana区块浏览器（如Solscan或Solana Explorer）上更新索引。你可以先使用Pump.fun的界面查看代币信息，等待区块链浏览器更新完成。
+发行完成后，你的代币需要几分钟时间在 Solana 区块浏览器（如 Solscan 或 Solana Explorer）上更新索引。你可以先使用 Pump.fun 的界面查看代币信息，等待区块链浏览器更新完成。
 
 #### ❓ 我需要维护我的代币吗？会有定期费用吗？
 
-Pump.fun上发行的代币不需要你定期维护或支付维护费用。一旦发行，代币将永久存在于Solana区块链上。唯一的费用是初始发行费用和交易时的小额网络费。
+Pump.fun 上发行的代币不需要你定期维护或支付维护费用。一旦发行，代币将永久存在于 Solana 区块链上。唯一的费用是初始发行费用和交易时的小额网络费。
 
 ## 结语
 
-通过本教程，你已经完成了一次真正的 Web3 创造——在全球可访问的区块链上发行了自己的数字资产。当你看到自己的代币名字和代码出现在区块链浏览器上时，相信你一定感受到了这个全新金融世界的魅力。
+通过本教程，你已经完成了一次真正的 Web3 创造 —— 在全球可访问的区块链上发行了自己的数字资产。当你看到自己的代币名字和代码出现在区块链浏览器上时，相信你一定感受到了这个全新金融世界的魅力。
 
 别小看这看似简单的操作，它代表着一种历史性的变革：
 
@@ -226,7 +226,7 @@ Pump.fun上发行的代币不需要你定期维护或支付维护费用。一旦
 
 Web3 的旅程才刚刚开始。从一个简单的代币到可能改变世界的项目，这条路上充满了无限的可能性。你的创造力、执行力和社区的力量，将决定你能走多远。
 
-记住，每一个改变世界的项目，都是从一步简单的尝试开始的——你已经迈出了这一步。
+记住，每一个改变世界的项目，都是从一步简单的尝试开始的 —— 你已经迈出了这一步。
 
 ---
 

@@ -1,7 +1,7 @@
 {
-  "title": "Web3入门指南",
+  "title": "Web3 入门指南",
   "author": "beihaili",
-  "description": "全面的Web3、区块链和加密货币学习指南，包含21讲比特币技术详解",
+  "description": "全面的 Web3 、区块链和加密货币学习指南，包含 21 讲比特币技术详解",
   "language": "zh-hans",
   "structure": {
     "readme": "README.md",
@@ -20,7 +20,7 @@
   },
   "variables": {
     "version": "完整版",
-    "status": "✅ 21个技术章节已完成",
+    "status": "✅ 21 个技术章节已完成",
     "chapters": 21,
     "lastUpdate": "2025-09"
   },

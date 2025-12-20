@@ -1,4 +1,4 @@
-# 第06讲：Taproot升级详解
+# 第 06 讲：Taproot 升级详解
 
 ![status](https://img.shields.io/badge/状态-已完成-success)
 ![author](https://img.shields.io/badge/作者-beihaili-blue)
@@ -13,45 +13,45 @@
 > 
 > 文章开源在 GitHub：[Get-Started-with-Web3](https://github.com/beihaili/Get-Started-with-Web3)
 > 
-> 购买BTC/ETH/USDT 等加密货币推荐 [币安](https://www.binance.com/zh-CN)[注册链接](https://accounts.marketwebb.me/register?ref=39797374)
+> 购买 BTC / ETH / USDT 等加密货币推荐 [币安](https://www.binance.com/zh-CN)[注册链接](https://accounts.marketwebb.me/register?ref=39797374)
 
 ## 目录
 
 - [前言](#前言)
-- [Taproot基础概念](#taproot基础概念)
-- [Schnorr签名算法](#schnorr签名算法)
-- [MAST技术详解](#mast技术详解)
+- [Taproot 基础概念](#taproot基础概念)
+- [Schnorr 签名算法](#schnorr签名算法)
+- [MAST 技术详解](#mast技术详解)
 - [隐私性提升](#隐私性提升)
 - [效率优化](#效率优化)
 - [智能合约增强](#智能合约增强)
-- [实战演练：Taproot交易](#实战演练taproot交易)
+- [实战演练：Taproot 交易](#实战演练taproot交易)
 - [常见问题](#常见问题)
 - [结语](#结语)
 
 ## 前言
 
-在前一章《隔离见证(SegWit)技术》中，我们学习了SegWit如何通过数据重组解决交易延展性问题并提升网络效率。现在，我们将探索比特币技术发展的最新里程碑：Taproot升级。
+在前一章《隔离见证 (SegWit) 技术》中，我们学习了 SegWit 如何通过数据重组解决交易延展性问题并提升网络效率。现在，我们将探索比特币技术发展的最新里程碑：Taproot 升级。
 
-Taproot是比特币在2021年实施的重要升级，它引入了Schnorr签名算法和MAST技术，大幅提升了比特币的隐私性、效率和智能合约功能。本章将深入讲解Taproot的技术原理和应用。
+Taproot 是比特币在 2021 年实施的重要升级，它引入了 Schnorr 签名算法和 MAST 技术，大幅提升了比特币的隐私性、效率和智能合约功能。本章将深入讲解 Taproot 的技术原理和应用。
 
-## Taproot基础概念
+## Taproot 基础概念
 
 ### 📅 基本信息
 
 ```
-激活时间：2021年11月14日（区块709,632）
-升级方式：软分叉（Speedy Trial）
-核心技术：Schnorr签名 + MAST + Tapscript
+激活时间：2021 年 11 月 14 日（区块 709,632）
+升级方式：软分叉 (Speedy Trial)
+核心技术：Schnorr 签名 + MAST + Tapscript
 主要目标：隐私性 + 效率 + 智能合约功能增强
 ```
 
-### 🎯 Taproot是什么？
+### 🎯 Taproot 是什么？
 
-Taproot是比特币的一次重大升级，它将三种技术整合在一起：
+Taproot 是比特币的一次重大升级，它将三种技术整合在一起：
 
-1. **Schnorr签名**：更高效、更安全的签名算法
-2. **MAST**：默克尔抽象语法树，提升隐私性
-3. **Tapscript**：新的脚本语言，增强智能合约功能
+1. **Schnorr 签名**：更高效、更安全的签名算法。
+2. **MAST**：默克尔抽象语法树，提升隐私性。
+3. **Tapscript**：新的脚本语言，增强智能合约功能。
 
 ### 🔑 核心技术创新
 
@@ -61,44 +61,44 @@ Taproot是比特币的一次重大升级，它将三种技术整合在一起：
 传统 ECDSA vs 新 Schnorr：
 
 ECDSA（传统）：
-- 签名长度：71-73字节
+- 签名长度：71-73 字节
 - 多签复杂：需要多个签名
 - 隐私性差：容易识别多签交易
 
 Schnorr（Taproot）：
-- 签名长度：64字节（固定）
-- 签名聚合：多个签名→一个签名
+- 签名长度：64 字节（固定）
+- 签名聚合：多个签名 → 一个签名
 - 隐私增强：多签看起来像单签
 ```
 
-#### 2. MAST（Merklized Abstract Syntax Trees）
+#### 2. MAST (Merklized Abstract Syntax Trees)
 
 ```
 问题：复杂脚本暴露所有条件
 解决：只暴露使用的执行路径
 
-传统P2SH脚本：
+传统 P2SH 脚本：
 IF 
-  Alice签名 AND Bob签名    # 条件1
+  Alice 签名 AND Bob 签名    # 条件 1
 ELSE
-  时间锁 AND Charlie签名   # 条件2  
+  时间锁 AND Charlie 签名   # 条件 2  
 ENDIF
 
-MAST脚本：
-默认：Alice单签（最常用）
-备选：Merkle树根（包含其他复杂条件）
+MAST 脚本：
+默认：Alice 单签（最常用）
+备选：Merkle 树根（包含其他复杂条件）
 → 只有实际使用的条件才会上链
 ```
 
-## Schnorr签名算法
+## Schnorr 签名算法
 
-### 🔐 Schnorr vs ECDSA对比
+### 🔐 Schnorr vs ECDSA 对比
 
 #### 技术特性对比
 
 | 特性 | ECDSA | Schnorr |
 |------|-------|---------|
-| **签名长度** | 71-73字节 | 64字节（固定） |
+| **签名长度** | 71-73 字节 | 64 字节（固定） |
 | **多签处理** | 需要多个签名 | 可聚合为单签名 |
 | **隐私性** | 容易识别多签 | 多签像单签 |
 | **安全性** | 良好 | 更好（可证明安全） |
@@ -107,28 +107,28 @@ MAST脚本：
 #### 签名聚合机制
 
 ```
-传统多签（ECDSA）：
+传统多签 (ECDSA)：
 交易 = {
-  输入: [签名1, 签名2, 签名3],
+  输入: [签名 1, 签名 2, 签名 3],
   输出: [...]
 }
 
-Schnorr多签（聚合）：
+Schnorr 多签（聚合）：
 交易 = {
-  输入: [聚合签名],  ← 3个签名合并为1个
+  输入: [聚合签名],  ← 3 个签名合并为 1 个
   输出: [...]
 }
 ```
 
 ### 🧮 数学原理
 
-#### Schnorr签名生成
+#### Schnorr 签名生成
 
 ```
 1. 选择随机数 k
-2. 计算 R = k * G（G是生成点）
-3. 计算 e = hash(R || P || m)（P是公钥，m是消息）
-4. 计算 s = k + e * x（x是私钥）
+2. 计算 R = k * G（G 是生成点）
+3. 计算 e = hash(R || P || m)（P 是公钥，m 是消息）
+4. 计算 s = k + e * x（x 是私钥）
 5. 签名 = (R, s)
 ```
 
@@ -144,19 +144,19 @@ Schnorr多签（聚合）：
 #### 1. 空间节省
 
 ```
-2-of-3多签对比：
+2-of-3 多签对比：
 
 ECDSA：
-- 2个签名：2 × 71字节 = 142字节
-- 2个公钥：2 × 33字节 = 66字节
-- 总计：208字节
+- 2 个签名：2 × 71 字节 = 142 字节
+- 2 个公钥：2 × 33 字节 = 66 字节
+- 总计：208 字节
 
 Schnorr：
-- 1个聚合签名：64字节
-- 1个聚合公钥：33字节
-- 总计：97字节
+- 1 个聚合签名：64 字节
+- 1 个聚合公钥：33 字节
+- 总计：97 字节
 
-节省：(208-97)/208 ≈ 53%
+节省：(208 - 97) / 208 ≈ 53%
 ```
 
 #### 2. 隐私增强
@@ -167,28 +167,28 @@ Schnorr：
 - 多个签名暴露参与方数量
 - 容易识别企业钱包
 
-Taproot多签交易：
+Taproot 多签交易：
 - 看起来像普通单签交易
 - 无法从交易本身判断是否多签
 - 保护商业隐私
 ```
 
-## MAST技术详解
+## MAST 技术详解
 
-### 🌳 什么是MAST？
+### 🌳 什么是 MAST？
 
-MAST（Merklized Abstract Syntax Trees）是一种将复杂脚本转换为默克尔树的技术，只暴露实际使用的执行路径。
+MAST (Merklized Abstract Syntax Trees) 是一种将复杂脚本转换为默克尔树的技术，只暴露实际使用的执行路径。
 
 #### 传统脚本的问题
 
 ```
-传统P2SH多签脚本：
+传统 P2SH 多签脚本：
 IF 
-  Alice签名 AND Bob签名    # 条件1：日常使用
+  Alice 签名 AND Bob 签名    # 条件 1：日常使用
 ELSE
-  时间锁 AND Charlie签名   # 条件2：紧急情况
+  时间锁 AND Charlie 签名   # 条件 2：紧急情况
 ELSE  
-  继承条件                # 条件3：遗产继承
+  继承条件                # 条件 3：遗产继承
 ENDIF
 
 问题：
@@ -197,43 +197,43 @@ ENDIF
 ❌ 费用高（存储所有条件）
 ```
 
-#### MAST的解决方案
+#### MAST 的解决方案
 
 ```
-MAST结构：
-默认路径：Alice单签（最常用）
-备选路径：Merkle树根（包含其他条件）
+MAST 结构：
+默认路径：Alice 单签（最常用）
+备选路径：Merkle 树根（包含其他条件）
 
 实际使用：
-日常转账：只暴露Alice签名
-紧急情况：暴露时间锁+Charlie签名+路径证明
-继承情况：暴露继承条件+路径证明
+日常转账：只暴露 Alice 签名
+紧急情况：暴露时间锁 + Charlie 签名 + 路径证明
+继承情况：暴露继承条件 + 路径证明
 ```
 
 ### 🔧 技术实现
 
-#### Merkle树构建
+#### Merkle 树构建
 
 ```
-假设有4个条件：A, B, C, D
+假设有 4 个条件：A, B, C, D
 
 Level 2: Hash(A+B), Hash(C+D)
-Level 1: Hash(Hash(A+B) + Hash(C+D)) = Merkle根
+Level 1: Hash(Hash(A+B) + Hash(C+D)) = Merkle 根
 
-地址 = Hash(内部公钥 + Merkle根)
+地址 = Hash(内部公钥 + Merkle 根)
 ```
 
 #### 路径证明
 
 ```
-使用条件A时：
-需要提供：A + 路径证明（证明A在树中）
+使用条件 A 时：
+需要提供：A + 路径证明（证明 A 在树中）
 路径证明：Hash(B), Hash(Hash(C+D))
 
 验证：
-1. 计算Hash(A+B)
-2. 计算Hash(Hash(A+B) + Hash(Hash(C+D)))
-3. 验证是否等于Merkle根
+1. 计算 Hash(A+B)
+2. 计算 Hash(Hash(A+B) + Hash(Hash(C+D)))
+3. 验证是否等于 Merkle 根
 ```
 
 ### 🎯 隐私性提升
@@ -246,7 +246,7 @@ Level 1: Hash(Hash(A+B) + Hash(C+D)) = Merkle根
 - 参与方数量
 - 业务逻辑结构
 
-MAST方法隐藏的信息：
+MAST 方法隐藏的信息：
 - 只暴露实际使用的条件
 - 其他条件保持隐私
 - 无法推断完整逻辑
@@ -260,12 +260,12 @@ MAST方法隐藏的信息：
 隐私对比：
 
 传统多签 (2-of-3)：
-地址：3AnNyxwq...（P2SH）
+地址：3AnNyxwq... (P2SH)
 → 一看就知道是多签
 → 脚本暴露所有条件
 
-Taproot多签：
-地址：bc1p5d7rj...（P2TR）
+Taproot 多签：
+地址：bc1p5d7rj... (P2TR)
 → 看起来像普通单签 ✨
 → 只有花费时才知道是否复杂
 
@@ -285,7 +285,7 @@ Taproot多签：
 - 交易模式容易被识别
 - 商业活动透明可见
 
-Taproot企业多签：
+Taproot 企业多签：
 - 看起来像个人钱包
 - 无法从地址判断企业性质
 - 保护商业隐私
@@ -295,10 +295,10 @@ Taproot企业多签：
 
 ```
 传统继承脚本：
-"我单签 OR (时间锁 AND 继承人签名)"
+「我单签 OR (时间锁 AND 继承人签名)」
 → 暴露继承逻辑
 
-Taproot继承：
+Taproot 继承：
 默认：我单签（日常使用）
 备选：继承条件（隐藏）
 → 日常使用只暴露单签
@@ -311,17 +311,17 @@ Taproot继承：
 ```
 数据大小对比：
 
-传统2-of-3多签：
-- 脚本大小：~105字节
-- 签名数据：~144字节（2个签名）
-- 总开销：~249字节
+传统 2-of-3 多签：
+- 脚本大小：~105 字节
+- 签名数据：~144 字节（2 个签名）
+- 总开销：~249 字节
 
-Taproot多签（聚合签名）：
-- 脚本大小：32字节（只有公钥哈希）
-- 签名数据：64字节（聚合后的单签名）
-- 总开销：~96字节
+Taproot 多签（聚合签名）：
+- 脚本大小：32 字节（只有公钥哈希）
+- 签名数据：64 字节（聚合后的单签名）
+- 总开销：~96 字节
 
-节省：(249-96)/249 ≈ 61%的空间！
+节省：(249 - 96) / 249 ≈ 61% 的空间！
 ```
 
 ### 💰 费用节省
@@ -330,12 +330,12 @@ Taproot多签（聚合签名）：
 费用计算对比：
 
 传统多签交易：
-费用 = 249字节 × 费率
+费用 = 249 字节 × 费率
 
-Taproot多签交易：
-费用 = 96字节 × 费率
+Taproot 多签交易：
+费用 = 96 字节 × 费率
 
-节省：约61%的费用
+节省：约 61% 的费用
 ```
 
 ### 🚀 性能提升
@@ -343,8 +343,8 @@ Taproot多签交易：
 #### 验证速度
 
 ```
-Schnorr签名验证：
-- 比ECDSA更快
+Schnorr 签名验证：
+- 比 ECDSA 更快
 - 支持批量验证
 - 减少计算开销
 ```
@@ -360,13 +360,13 @@ Schnorr签名验证：
 
 ## 智能合约增强
 
-### 🔧 Tapscript新功能
+### 🔧 Tapscript 新功能
 
 #### 新的操作码
 
 ```
-Taproot引入的新操作码：
-- OP_CHECKSIGADD：支持Schnorr签名验证
+Taproot 引入的新操作码：
+- OP_CHECKSIGADD：支持 Schnorr 签名验证
 - OP_TAPBRANCH：支持脚本路径
 - OP_TAPLEAF：支持叶子节点操作
 ```
@@ -379,7 +379,7 @@ Taproot引入的新操作码：
 - 有限的组合方式
 - 隐私性差
 
-Tapscript优势：
+Tapscript 优势：
 - 更灵活的脚本组合
 - 更好的隐私保护
 - 更高效的执行
@@ -391,16 +391,16 @@ Tapscript优势：
 
 ```
 闪电网络通道：
-- 使用Taproot提升隐私性
+- 使用 Taproot 提升隐私性
 - 通道关闭看起来像普通转账
 - 降低链上足迹
 ```
 
-#### 2. DeFi应用
+#### 2. DeFi 应用
 
 ```
-DeFi合约：
-- 复杂的DeFi逻辑在链上简化显示
+DeFi 合约：
+- 复杂的 DeFi 逻辑在链上简化显示
 - 保护用户隐私
 - 降低费用
 ```
@@ -414,12 +414,12 @@ DeFi合约：
 - 更低的费用
 ```
 
-## 实战演练：Taproot交易
+## 实战演练：Taproot 交易
 
 ### 🎯 Taproot 交易结构
 
 ```json
-// Taproot交易示例
+// Taproot 交易示例
 {
   "vin": [
     {
@@ -430,7 +430,7 @@ DeFi合约：
         "hex": ""
       },
       "witness": [
-        "signature_64_bytes"  // ← 简洁的Schnorr签名
+        "signature_64_bytes"  // ← 简洁的 Schnorr 签名
       ]
     }
   ],
@@ -439,15 +439,15 @@ DeFi合约：
       "value": 0.01000000,
       "scriptPubKey": {
         "asm": "OP_1 5d7rjc4k3m8n9p0q1r2s3t4u5v6w7x8y9z",
-        "type": "witness_v1_taproot",       // ← Taproot类型
-        "address": "bc1p5d7rjc4k3m8n..."   // ← bc1p开头
+        "type": "witness_v1_taproot",       // ← Taproot 类型
+        "address": "bc1p5d7rjc4k3m8n..."   // ← bc1p 开头
       }
     }
   ]
 }
 ```
 
-### 创建Taproot地址
+### 创建 Taproot 地址
 
 ```python
 import requests
@@ -468,32 +468,32 @@ def bitcoin_rpc(method, params=[]):
     return response.json()
 
 def create_taproot_address():
-    # 生成新的Taproot地址
+    # 生成新的 Taproot 地址
     result = bitcoin_rpc("getnewaddress", ["", "bech32m"])
     
-    print(f"Taproot地址: {result['result']}")
+    print(f"Taproot 地址: {result['result']}")
     return result['result']
 
-# 执行创建Taproot地址
+# 执行创建 Taproot 地址
 taproot_address = create_taproot_address()
 ```
 
-### Taproot多签钱包
+### Taproot 多签钱包
 
 ```python
 def create_taproot_multisig(pubkeys, required_signatures):
-    """创建Taproot多签钱包"""
+    """创建 Taproot 多签钱包"""
     
     # 创建多签地址
     result = bitcoin_rpc("createmultisig", [required_signatures, pubkeys, "bech32m"])
     
-    print(f"Taproot多签地址: {result['result']['address']}")
+    print(f"Taproot 多签地址: {result['result']['address']}")
     return result['result']
 
 def sign_taproot_transaction(raw_tx, private_keys):
-    """签名Taproot交易"""
+    """签名 Taproot 交易"""
     
-    # 使用Schnorr签名
+    # 使用 Schnorr 签名
     signed_tx = bitcoin_rpc("signrawtransaction", [raw_tx, [], private_keys])
     
     return signed_tx['result']['hex']
@@ -503,19 +503,19 @@ pubkeys = ["pubkey1", "pubkey2", "pubkey3"]
 multisig_info = create_taproot_multisig(pubkeys, 2)
 ```
 
-### MAST脚本示例
+### MAST 脚本示例
 
 ```python
 def create_mast_script(internal_key, merkle_root):
-    """创建MAST脚本"""
+    """创建 MAST 脚本"""
     
-    # 构建Taproot地址
+    # 构建 Taproot 地址
     taproot_address = bitcoin_rpc("createtaproot", [internal_key, merkle_root])
     
     return taproot_address['result']['address']
 
 def spend_mast_script(script_path, path_proof):
-    """花费MAST脚本"""
+    """花费 MAST 脚本"""
     
     # 提供脚本路径和证明
     witness = [script_path] + path_proof
@@ -525,29 +525,29 @@ def spend_mast_script(script_path, path_proof):
 
 ## 常见问题
 
-### ❓ Taproot是否向后兼容？
+### ❓ Taproot 是否向后兼容？
 
 **答案**：是的！
 
 ```
 兼容性特点：
 ✅ 软分叉升级
-✅ 老节点可以验证Taproot交易
+✅ 老节点可以验证 Taproot 交易
 ✅ 渐进式采用
 ✅ 不会导致网络分裂
 ```
 
-### ❓ Schnorr签名是否安全？
+### ❓ Schnorr 签名是否安全？
 
 ```
 安全性分析：
 ✅ 数学上可证明安全
-✅ 比ECDSA更安全
+✅ 比 ECDSA 更安全
 ✅ 经过多年学术研究
 ✅ 已在其他项目验证
 ```
 
-### ❓ MAST如何提升隐私性？
+### ❓ MAST 如何提升隐私性？
 
 ```
 隐私提升机制：
@@ -557,31 +557,31 @@ def spend_mast_script(script_path, path_proof):
 ✅ 保护商业隐私
 ```
 
-### ❓ Taproot地址格式是什么？
+### ❓ Taproot 地址格式是什么？
 
 ```
 地址格式：
 - 前缀：bc1p
-- 长度：62字符
+- 长度：62 字符
 - 编码：Bech32m
 - 特点：区分大小写
 ```
 
-### ❓ 如何迁移到Taproot？
+### ❓ 如何迁移到 Taproot？
 
 ```
 迁移策略：
-1. 新地址使用Taproot
+1. 新地址使用 Taproot
 2. 逐步转移资金
 3. 更新钱包软件
 4. 享受新功能
 ```
 
-### ❓ Taproot对Ordinals有什么影响？
+### ❓ Taproot 对 Ordinals 有什么影响？
 
 ```
-Ordinals应用：
-✅ 使用Taproot存储数据
+Ordinals 应用：
+✅ 使用 Taproot 存储数据
 ✅ 更好的隐私性
 ✅ 更低的费用
 ✅ 更大的数据容量
@@ -589,19 +589,19 @@ Ordinals应用：
 
 ## 结语
 
-通过本章的学习，你已经深入了解了Taproot升级的核心技术价值：
+通过本章的学习，你已经深入了解了 Taproot 升级的核心技术价值：
 
-- **Schnorr签名**：理解了更高效、更安全的签名算法
-- **MAST技术**：掌握了提升隐私性的默克尔树技术
-- **隐私增强**：学会了如何保护交易隐私
-- **效率优化**：了解了空间和费用的节省机制
-- **智能合约**：认识了新的脚本功能
+- **Schnorr 签名**：理解了更高效、更安全的签名算法。
+- **MAST 技术**：掌握了提升隐私性的默克尔树技术。
+- **隐私增强**：学会了如何保护交易隐私。
+- **效率优化**：了解了空间和费用的节省机制。
+- **智能合约**：认识了新的脚本功能。
 
-Taproot是比特币技术发展的重要里程碑，它不仅提升了比特币的隐私性和效率，还为未来的创新应用奠定了坚实基础。
+Taproot 是比特币技术发展的重要里程碑，它不仅提升了比特币的隐私性和效率，还为未来的创新应用奠定了坚实基础。
 
-在下一章《Ordinals与Inscriptions技术》中，我们将学习如何利用Taproot技术创建独特的数字资产，探索比特币上的NFT和数字艺术世界。
+在下一章《Ordinals 与 Inscriptions 技术》中，我们将学习如何利用 Taproot 技术创建独特的数字资产，探索比特币上的 NFT 和数字艺术世界。
 
-> 🌟 **Taproot的意义**：Taproot技术体现了比特币社区的创新精神，通过软分叉的方式实现了重大功能升级，既保持了网络的稳定性，又为未来发展开辟了无限可能。
+> 🌟 **Taproot 的意义**：Taproot 技术体现了比特币社区的创新精神，通过软分叉的方式实现了重大功能升级，既保持了网络的稳定性，又为未来发展开辟了无限可能。
 
 ---
 
