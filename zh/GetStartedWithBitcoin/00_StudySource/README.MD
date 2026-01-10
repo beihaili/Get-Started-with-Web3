@@ -48,9 +48,12 @@
 ### 基础理论
 
 * **《精通比特币》（Mastering Bitcoin）**：[GitHub 开源地址](https://github.com/bitcoinbook/bitcoinbook)，Andreas M. Antonopoulos 著。
+
 * **《Programming Bitcoin》**：[GitHub 开源地址](https://github.com/jimmysong/programmingbitcoin)，从密码学原理到用 Python 构建比特币库与节点。
 
-mastering Taproot 
+* **Mastering Taproot**：[GitHub 开源地址](https://github.com/aaron-recompile/mastering-taproot)，深入讲解 Taproot/Schnorr 原理与实现细节。
+
+
 * **《比特币标准》（The Bitcoin Standard）**：Saifedean Ammous 著，探讨硬通货的经济逻辑。
 * **《通往奴役之路》**：哈耶克著，比特币自由主义精神的理论源头。
 
