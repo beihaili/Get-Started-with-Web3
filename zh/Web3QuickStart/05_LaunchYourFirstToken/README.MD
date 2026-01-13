@@ -1,20 +1,20 @@
 # 如何在 Pump.fun 上发行你的第一个 Meme 币
 
-![status](https://img.shields.io/badge/状态-已完成-success)
-![author](https://img.shields.io/badge/作者-beihaili-blue)
-![date](https://img.shields.io/badge/日期-2025--06-orange)
-![difficulty](https://img.shields.io/badge/难度-初级-brightgreen)
+![status](https://img.shields.io/badge/ 状态 - 已完成 - success)
+![author](https://img.shields.io/badge/ 作者 - beihaili-blue)
+![date](https://img.shields.io/badge/ 日期 - 2025--06-orange)
+![difficulty](https://img.shields.io/badge/ 难度 - 初级 - brightgreen)
 
 > 💡 本教程将指导您如何在 Solana 链上通过 Pump.fun 平台快速发行自己的第一个 Meme 币，无需编写任何代码。整个过程只需几分钟即可完成，是 Web3 新手入门的绝佳实践。
 
 ## 目录
 
-- [背景介绍](#背景介绍)
-- [准备工作](#准备工作)
-- [创建代币步骤](#创建代币步骤)
-- [管理和推广您的代币](#管理和推广您的代币)
-- [常见问题解答](#常见问题解答)
-- [总结](#总结)
+- [背景介绍](# 背景介绍)
+- [准备工作](# 准备工作)
+- [创建代币步骤](# 创建代币步骤)
+- [管理和推广您的代币](# 管理和推广您的代币)
+- [常见问题解答](# 常见问题解答)
+- [总结](# 总结)
 
 ## 背景介绍
 
@@ -46,12 +46,12 @@ Pump.fun 平台的独特之处在于：
 
 在开始前，请确保您已准备好以下内容：
 
-1. **Solana 钱包**：推荐使用 [Phantom 钱包](https://phantom.app/)
+1. **Solana 钱包 **：推荐使用 [Phantom 钱包](https://phantom.app/)
    
    > 🔔 Phantom 是最流行的 Solana 钱包之一，提供了友好的用户界面和安全特性。
    
 2. **SOL**：至少 0.03 SOL（用于支付发行费用和首次购买）
-3. **代币创意**：包括名称、符号、描述和图像
+3. ** 代币创意 **：包括名称、符号、描述和图像
 
 ### 创建 Phantom 钱包（如果您还没有）
 
@@ -60,9 +60,9 @@ Pump.fun 平台的独特之处在于：
 3. 确保安全备份您的助记词
 4. 向钱包中充值一些 SOL（可从交易所转入）
 
-<div align="center"> <img src="./img/phantom钱包界面.jpg" width = 500 /> </div>
+<div align="center"> <img src="./img/phantom 钱包界面.jpg" width = 500 /> </div>
 
-> ⚠️ **重要**：助记词是恢复钱包的唯一方式，请将它安全地存储在纸质介质上，并保存在安全的地方。永远不要将助记词分享给他人或存储在电子设备上。
+> ⚠️ ** 重要 **：助记词是恢复钱包的唯一方式，请将它安全地存储在纸质介质上，并保存在安全的地方。永远不要将助记词分享给他人或存储在电子设备上。
 
 ## 创建代币步骤
 
@@ -70,7 +70,7 @@ Pump.fun 平台的独特之处在于：
 
 1. 打开浏览器，访问 [Pump.fun](https://pump.fun/)
 
-   <div align="center"> <img src="./img/pumpfun主界面.jpg" width = 500 /> </div>
+   <div align="center"> <img src="./img/pumpfun 主界面.jpg" width = 500 /> </div>
 
 2. 点击右上角的「Connect」按钮连接您的 Phantom 钱包
 
@@ -82,7 +82,7 @@ Pump.fun 平台的独特之处在于：
 
 1. 在平台首页点击「Start a new coin」按钮
    
-   <div align="center"> <img src="./img/空代币页面.jpg" width = 500 /> </div>
+   <div align="center"> <img src="./img/ 空代币页面.jpg" width = 500 /> </div>
 
 2. 进入代币创建页面
 
@@ -96,20 +96,20 @@ Pump.fun 平台的独特之处在于：
 | 符号 | 代币简称 (大写) | WEB3 |
 | 图片 | 代币图标 | 上传一个正方形图像 |
 | 描述 | 代币简介 | GetStartedWithWeb3 社区 Meme |
-| 网站/社交媒体 | 可选链接 | Twitter、Discord 等，这里我们把我们的仓库放上去 https://github.com/beihaili |
+| 网站 / 社交媒体 | 可选链接 | Twitter、Discord 等，这里我们把我们的仓库放上去 https://github.com/beihaili |
 
-<div align="center"> <img src="./img/创建token.jpg" width = 500 /> </div>
+<div align="center"> <img src="./img/ 创建 token.jpg" width = 500 /> </div>
 
 > 🔔 注：填写代币名称、符号和描述，这些是您代币的基本信息。
 
-> ⚠️ **注意**：请选择一个独特且有吸引力的名称和符号，这对代币的后续推广非常重要。
+> ⚠️ ** 注意 **：请选择一个独特且有吸引力的名称和符号，这对代币的后续推广非常重要。
 
 ### 步骤 4：确认创建
 
 1. 填写完所有信息后，点击「Create coin」按钮
 2. 在弹出的确认框中，您可以选择是否在创建时购买一定数量的代币：
 
-<div align="center"> <img src="./img/提前购买.jpg" width = 500 /> </div>
+<div align="center"> <img src="./img/ 提前购买.jpg" width = 500 /> </div>
 
 3. 建议购买一些初始 Meme 币（例如 0.2 SOL），这样您将持有自己发行 Meme 币的一部分。
 4. 确认交易详情，包括：
@@ -117,7 +117,7 @@ Pump.fun 平台的独特之处在于：
    - 初始购买金额（如有）
    - 总费用
 
-<div align="center"> <img src="./img/确认交易.jpg" width = 500 /> </div>
+<div align="center"> <img src="./img/ 确认交易.jpg" width = 500 /> </div>
 
 5. 点击「确认」按钮并在钱包中批准交易
 
@@ -125,11 +125,11 @@ Pump.fun 平台的独特之处在于：
 
 交易确认后，您的代币将在几秒钟内发行完成。系统会显示成功信息，并提供查看代币详情的链接。
 
-<div align="center"> <img src="./img/交易完成.jpg" width = 500 /> </div>
+<div align="center"> <img src="./img/ 交易完成.jpg" width = 500 /> </div>
 
 点击「View」按钮查看您的代币详情页面。
 
-<div align="center"> <img src="./img/coink线界面.jpg" width = 500 /> </div>
+<div align="center"> <img src="./img/coink 线界面.jpg" width = 500 /> </div>
 
 我们的 WEB3 代币合约地址为 `9f2Xw9HNx37YkXSbCTyV4saW4zwjaaFp9tFHPjtYpump`，这个地址是唯一标识，可以通过这个地址在 Pump.fun 购买 Meme 币。
 
@@ -150,15 +150,15 @@ Pump.fun 平台的独特之处在于：
 
 1. 打开 Pump.fun
 2. 在搜索框中输入您的代币合约地址，例如我们的代币合约地址：`9f2Xw9HNx37YkXSbCTyV4saW4zwjaaFp9tFHPjtYpump`
-<div align="center"> <img src="./img/搜索代币.jpg" width = 500 /> </div>
+<div align="center"> <img src="./img/ 搜索代币.jpg" width = 500 /> </div>
 3. 选择数量点击购买
-<div align="center"> <img src="./img/购买代币.jpg" width = 500 /> </div>
+<div align="center"> <img src="./img/ 购买代币.jpg" width = 500 /> </div>
 
 4. 确认交易详情，包括：
    - 花费的 SOL 代币数量
    - 将收获的 WEB3 代币数量
 
-<div align="center"> <img src="./img/确认购买.jpg" width = 500 /> </div>
+<div align="center"> <img src="./img/ 确认购买.jpg" width = 500 /> </div>
 
 5. 点击「确认」按钮并在钱包中批准交易
 
@@ -213,9 +213,9 @@ Pump.fun 上发行的代币不需要你定期维护或支付维护费用。一�
 
 别小看这看似简单的操作，它代表着一种历史性的变革：
 
-- **金融民主化**：曾经，只有金融机构和政府才能发行货币或证券。你刚刚说明，现在任何人都可以这样做。
-- **全球化**：你的代币可以被世界各地的人交易，没有国境限制。
-- **无许可创新**：你不需要任何政府机构的批准就能创造新的金融工具。
+- ** 金融民主化 **：曾经，只有金融机构和政府才能发行货币或证券。你刚刚说明，现在任何人都可以这样做。
+- ** 全球化 **：你的代币可以被世界各地的人交易，没有国境限制。
+- ** 无许可创新 **：你不需要任何政府机构的批准就能创造新的金融工具。
 
 从这里出发，你可以：
 
@@ -231,7 +231,7 @@ Web3 的旅程才刚刚开始。从一个简单的代币到可能改变世界的
 ---
 
 <div align="center">
-<a href="https://github.com/beihaili/Get-Started-with-Web3">🏠 返回主页</a> | 
-<a href="https://twitter.com/bhbtc1337">🐦 关注作者</a> | 
-<a href="https://forms.gle/QMBwL6LwZyQew1tX8">📝 加入交流群</a>
+<a href="https://github.com/beihaili/Get-Started-with-Web3">🏠 返回主页 </a> | 
+<a href="https://twitter.com/bhbtc1337">🐦 关注作者 </a> | 
+<a href="https://forms.gle/QMBwL6LwZyQew1tX8">📝 加入交流群 </a>
 </div>

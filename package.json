@@ -11,9 +11,25 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "lint": "eslint src --ext .js,.jsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint src --ext .js,.jsx --fix",
+    "format": "prettier --write \"src/**/*.{js,jsx,json,css,md}\"",
+    "format:check": "prettier --check \"src/**/*.{js,jsx,json,css,md}\"",
+    "organize:rename": "node scripts/organize-files.mjs",
+    "organize:format": "node scripts/format-markdown.mjs",
+    "organize:all": "npm run organize:rename && npm run organize:format",
+    "prepare": "husky"
   },
-  "keywords": ["web3", "blockchain", "education", "react", "tutorial", "cryptocurrency", "bitcoin"],
+  "keywords": [
+    "web3",
+    "blockchain",
+    "education",
+    "react",
+    "tutorial",
+    "cryptocurrency",
+    "bitcoin"
+  ],
   "author": "beihaili",
   "license": "MIT",
   "homepage": "https://beihaili.github.io/GetStartedWithWeb3/",
@@ -22,16 +38,38 @@
     "url": "https://github.com/beihaili/GetStartedWithWeb3.git"
   },
   "dependencies": {
+    "fuse.js": "^7.0.0",
     "lucide-react": "^0.554.0",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^6.22.0",
+    "zustand": "^4.5.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^18.6.0",
+    "@commitlint/config-conventional": "^18.6.0",
     "@vitejs/plugin-react": "^4.7.0",
     "autoprefixer": "^10.4.22",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "gh-pages": "^6.3.0",
+    "husky": "^9.0.10",
+    "lint-staged": "^15.2.0",
+    "pangu": "^4.0.7",
     "postcss": "^8.5.6",
+    "prettier": "^3.2.4",
     "tailwindcss": "^3.4.18",
     "vite": "^4.5.14"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "zh/**/*.{md,MD}": [
+      "node scripts/format-markdown.mjs"
+    ]
   }
 }

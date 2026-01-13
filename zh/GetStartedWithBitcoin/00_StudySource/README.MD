@@ -7,7 +7,7 @@
 * **[BTCStudy](https://www.btcstudy.org/)**：最优质的比特币中文技术学习与翻译资源库。
 * **[Bitcoin Optech](https://bitcoinops.org/)**：对比特币协议技术进展、改进提案（BIPs）的专业周报。
 * **[Delving Bitcoin](https://delvingbitcoin.org/)**：比特币开发者讨论底层协议设计与改进的高端论坛。
-* **[Stacker News](https://stacker.news/)**：比特币原生的“Hacker News”，基于闪电网络驱动的资讯聚合社区。
+* **[Stacker News](https://stacker.news/)**：比特币原生的 “Hacker News”，基于闪电网络驱动的资讯聚合社区。
 * **[No Bullshit Bitcoin](https://nobullshitbitcoin.com/)**：主张隐私、无广告、纯净的比特币每日新闻源。
 * **[Bitcoin Magazine](https://bitcoinmagazine.com/)**：比特币行业的深度报道与文化分析。
 * **[Blockstream Blog](https://blockstream.com/blog/)**：侧重侧链（Liquid）、闪电网络及底层协议的官方技术博客。

@@ -1,9 +1,9 @@
 # 第 04 讲：多重签名交易
 
-![status](https://img.shields.io/badge/状态-已完成-success)
-![author](https://img.shields.io/badge/作者-beihaili-blue)
-![date](https://img.shields.io/badge/日期-2025--06-orange)
-![difficulty](https://img.shields.io/badge/难度-中级-yellow)
+![status](https://img.shields.io/badge/ 状态 - 已完成 - success)
+![author](https://img.shields.io/badge/ 作者 - beihaili-blue)
+![date](https://img.shields.io/badge/ 日期 - 2025--06-orange)
+![difficulty](https://img.shields.io/badge/ 难度 - 中级 - yellow)
 
 > 💡 自学入门 `Web3` 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 `Web3` 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1-3 讲。
 > 
@@ -17,14 +17,14 @@
 
 ## 目录
 
-- [前言](#前言)
-- [多重签名基础概念](#多重签名基础概念)
-- [多重签名技术原理](#多重签名技术原理)
-- [P2SH 多重签名](#p2sh多重签名)
-- [企业级应用场景](#企业级应用场景)
-- [实战演练：创建多签钱包](#实战演练创建多签钱包)
-- [常见问题](#常见问题)
-- [结语](#结语)
+- [前言](# 前言)
+- [多重签名基础概念](# 多重签名基础概念)
+- [多重签名技术原理](# 多重签名技术原理)
+- [P2SH 多重签名](#p2sh 多重签名)
+- [企业级应用场景](# 企业级应用场景)
+- [实战演练：创建多签钱包](# 实战演练创建多签钱包)
+- [常见问题](# 常见问题)
+- [结语](# 结语)
 
 ## 前言
 
@@ -42,21 +42,21 @@
 
 #### P2PKH (付款给公钥哈希) - 单签名交易
 ```
-之前交易输出: OP_DUP OP_HASH160 <Alice 的公钥哈希> OP_EQUALVERIFY OP_CHECKSIG
-当前交易输入: <Alice 的签名> <Alice 的公钥>
+之前交易输出: OP_DUP OP_HASH160 <Alice 的公钥哈希 > OP_EQUALVERIFY OP_CHECKSIG
+当前交易输入: <Alice 的签名 > <Alice 的公钥 >
 ```
-- ✅ **只需要 1 个签名**：因为之前交易指定「付款给 Alice 的公钥哈希」
-- 🔓 **解锁条件**：提供正确的公钥和对应的私钥签名即可
-- 👤 **使用场景**：个人钱包之间的转账
+- ✅ ** 只需要 1 个签名 **：因为之前交易指定「付款给 Alice 的公钥哈希」
+- 🔓 ** 解锁条件 **：提供正确的公钥和对应的私钥签名即可
+- 👤 ** 使用场景 **：个人钱包之间的转账
 
 #### 多重签名交易 - 需要多个签名
 ```
-之前交易输出: OP_2 <公钥 1> <公钥 2> <公钥 3> OP_3 OP_CHECKMULTISIG (2-of-3 多签)
-当前交易输入: OP_0 <签名 1> <签名 2> <赎回脚本>
+之前交易输出: OP_2 < 公钥 1> < 公钥 2> < 公钥 3> OP_3 OP_CHECKMULTISIG (2-of-3 多签)
+当前交易输入: OP_0 < 签名 1> < 签名 2> < 赎回脚本 >
 ```
-- ⚠️ **需要多个签名**：因为之前交易设定了「需要 3 个公钥中的任意 2 个签名」
-- 🔓 **解锁条件**：必须提供足够数量的有效签名
-- 🏢 **使用场景**：企业资金管理、托管服务、增强安全性
+- ⚠️ ** 需要多个签名 **：因为之前交易设定了「需要 3 个公钥中的任意 2 个签名」
+- 🔓 ** 解锁条件 **：必须提供足够数量的有效签名
+- 🏢 ** 使用场景 **：企业资金管理、托管服务、增强安全性
 
 #### 为什么签名要求不同？
 
@@ -66,25 +66,25 @@
 | 2-of-3 多签 | 需要 3 个公钥中的 2 个 | 2 个签名 | 资金需要多方共同控制 |
 | 3-of-5 多签 | 需要 5 个公钥中的 3 个 | 3 个签名 | 更高的安全要求 |
 
-> 💡 **关键理解**：签名要求由**之前交易的输出脚本**决定，不是任意选择的！
+> 💡 ** 关键理解 **：签名要求由 ** 之前交易的输出脚本 ** 决定，不是任意选择的！
 
 ### 🌟 形象化理解
 
 想象比特币就像一个智能保险箱：
 
-**普通保险箱 (P2PKH)**：
+** 普通保险箱 (P2PKH)**：
 ```
 📦 之前有人给 Alice 发了一个保险箱，上面写着：「只有 Alice 的钥匙能打开」
 🔑 现在 Alice 要用这个保险箱里的钱，只需要用她的钥匙 (私钥签名) 即可
 ```
 
-**多重签名保险箱 (MultiSig)**：
+** 多重签名保险箱 (MultiSig)**：
 ```
 📦 之前有人给公司发了一个保险箱，上面写着：「需要 CEO、CFO、CTO 中任意 2 人的钥匙才能打开」
 🔑🔑 现在公司要用这个保险箱里的钱，必须有 2 个人同时用钥匙 (2 个私钥签名)
 ```
 
-**重点**：保险箱的开锁规则是**发送者在创建保险箱时就设定好的**，接收者必须按照规则来解锁！
+** 重点 **：保险箱的开锁规则是 ** 发送者在创建保险箱时就设定好的 **，接收者必须按照规则来解锁！
 
 ## 多重签名技术原理
 
@@ -92,17 +92,17 @@
 
 这是比特币历史上一个著名的技术债务！
 
-**📖 历史背景**
+**📖 历史背景 **
 
 当中本聪最初实现多重签名验证时，犯了一个小错误：
 
 ```javascript
 // 比特币源码中的多签验证逻辑（简化版）
-bool CheckMultiSig() {
-    // ... 验证签名逻辑 ...
+bool CheckMultiSig () {
+    //... 验证签名逻辑 ...
     
     // 🐛 这里有个 bug：会多 pop 一个元素
-    stack.pop();  // 本来不应该有这一行
+    stack.pop ();  // 本来不应该有这一行
     
     // 验证结果
     return isValid;
@@ -122,11 +122,11 @@ bool CheckMultiSig() {
 
 **🤔 为什么不修复这个 bug？**
 
-1. **向后兼容性**：修复会导致所有历史多签交易失效。
-2. **共识规则**：所有节点必须保持相同的验证逻辑。
-3. **历史成本**：修复的风险远大于收益。
+1. ** 向后兼容性 **：修复会导致所有历史多签交易失效。
+2. ** 共识规则 **：所有节点必须保持相同的验证逻辑。
+3. ** 历史成本 **：修复的风险远大于收益。
 
-> 💭 **有趣的事实**：这个 OP_0 至今仍存在于每一笔多重签名交易中，成为比特币历史的永久印记！
+> 💭 ** 有趣的事实 **：这个 OP_0 至今仍存在于每一笔多重签名交易中，成为比特币历史的永久印记！
 
 ### 多重签名交易示例
 
@@ -143,7 +143,7 @@ bool CheckMultiSig() {
 }
 ```
 
-**分析**：
+** 分析 **：
 - `OP_0`：多重签名的特殊要求 (Bitcoin 的一个已知 bug，需要额外的 0)。
 - 包含两个数字签名，满足 2-of-3 多签要求。
 - 这笔输入对应的之前交易规定了需要 3 个公钥中的 2 个签名。
@@ -164,7 +164,7 @@ bool CheckMultiSig() {
 }
 ```
 
-**分析**：
+** 分析 **：
 - 地址以 `3` 开头的 P2SH 地址。
 - 可以包含多重签名、时间锁等复杂条件。
 - 脚本哈希隐藏了真实的复杂脚本，提高隐私性。
@@ -173,11 +173,11 @@ bool CheckMultiSig() {
 
 | 特性 | 原生多签 | P2SH 多签 |
 |------|----------|----------|
-| **地址格式** | 1 开头 | 3 开头 |
-| **脚本可见性** | 脚本完全暴露 | 脚本哈希隐藏 |
-| **隐私性** | 较差 | 较好 |
-| **兼容性** | 所有节点支持 | 需要 P2SH 支持 |
-| **费用** | 较高 | 较低 |
+| ** 地址格式 ** | 1 开头 | 3 开头 |
+| ** 脚本可见性 ** | 脚本完全暴露 | 脚本哈希隐藏 |
+| ** 隐私性 ** | 较差 | 较好 |
+| ** 兼容性 ** | 所有节点支持 | 需要 P2SH 支持 |
+| ** 费用 ** | 较高 | 较低 |
 
 ## 企业级应用场景
 
@@ -250,7 +250,7 @@ bool CheckMultiSig() {
 import requests
 import json
 
-def bitcoin_rpc(method, params=[]):
+def bitcoin_rpc (method, params=[]):
     url = "http://localhost:8332"
     headers = {'content-type': 'application/json'}
     
@@ -261,10 +261,10 @@ def bitcoin_rpc(method, params=[]):
         "id": 0,
     }
     
-    response = requests.post(url, data=json.dumps(payload), headers=headers, auth=('user', 'password'))
-    return response.json()
+    response = requests.post (url, data=json.dumps (payload), headers=headers, auth=('user', 'password'))
+    return response.json ()
 
-def create_multisig_address():
+def create_multisig_address ():
     # 1. 生成公钥（示例）
     pubkeys = [
         "03a1b2c3d4e5f6...",  # 公钥 1
@@ -273,40 +273,40 @@ def create_multisig_address():
     ]
     
     # 2. 创建 2-of-3 多签地址
-    result = bitcoin_rpc("createmultisig", [2, pubkeys])
+    result = bitcoin_rpc ("createmultisig", [2, pubkeys])
     
-    print(f"多签地址: {result['result']['address']}")
-    print(f"赎回脚本: {result['result']['redeemScript']}")
+    print (f"多签地址: {result ['result']['address']}")
+    print (f"赎回脚本: {result ['result']['redeemScript']}")
     
-    return result['result']
+    return result ['result']
 
 # 执行创建多签地址
-multisig_info = create_multisig_address()
+multisig_info = create_multisig_address ()
 ```
 
 ### 多签交易签名流程
 
 ```python
-def sign_multisig_transaction(raw_tx, private_keys, redeem_script):
+def sign_multisig_transaction (raw_tx, private_keys, redeem_script):
     """
     对多签交易进行签名
     """
     
     # 1. 使用第一个私钥签名
-    signed_tx1 = bitcoin_rpc("signrawtransaction", [raw_tx, [{"txid": "prev_txid", "vout": 0, "scriptPubKey": "script", "redeemScript": redeem_script}], [private_keys[0]]])
+    signed_tx1 = bitcoin_rpc ("signrawtransaction", [raw_tx, [{"txid": "prev_txid", "vout": 0, "scriptPubKey": "script", "redeemScript": redeem_script}], [private_keys [0]]])
     
     # 2. 使用第二个私钥签名
-    signed_tx2 = bitcoin_rpc("signrawtransaction", [signed_tx1['result']['hex'], [{"txid": "prev_txid", "vout": 0, "scriptPubKey": "script", "redeemScript": redeem_script}], [private_keys[1]]])
+    signed_tx2 = bitcoin_rpc ("signrawtransaction", [signed_tx1 ['result']['hex'], [{"txid": "prev_txid", "vout": 0, "scriptPubKey": "script", "redeemScript": redeem_script}], [private_keys [1]]])
     
-    return signed_tx2['result']['hex']
+    return signed_tx2 ['result']['hex']
 
-def broadcast_multisig_transaction(signed_tx):
+def broadcast_multisig_transaction (signed_tx):
     """
     广播多签交易
     """
     
-    result = bitcoin_rpc("sendrawtransaction", [signed_tx])
-    return result['result']
+    result = bitcoin_rpc ("sendrawtransaction", [signed_tx])
+    return result ['result']
 ```
 
 ### 多签钱包管理工具
@@ -319,33 +319,33 @@ class MultiSigWallet:
         self.address = None
         self.redeem_script = None
         
-    def create_wallet(self):
+    def create_wallet (self):
         """创建多签钱包"""
-        result = bitcoin_rpc("createmultisig", [self.required_signatures, self.pubkeys])
-        self.address = result['result']['address']
-        self.redeem_script = result['result']['redeemScript']
+        result = bitcoin_rpc ("createmultisig", [self.required_signatures, self.pubkeys])
+        self.address = result ['result']['address']
+        self.redeem_script = result ['result']['redeemScript']
         return self.address
     
-    def create_transaction(self, outputs):
+    def create_transaction (self, outputs):
         """创建多签交易"""
         inputs = [{"txid": "previous_utxo", "vout": 0}]
-        raw_tx = bitcoin_rpc("createrawtransaction", [inputs, outputs])
-        return raw_tx['result']
+        raw_tx = bitcoin_rpc ("createrawtransaction", [inputs, outputs])
+        return raw_tx ['result']
     
-    def sign_transaction(self, raw_tx, private_key):
+    def sign_transaction (self, raw_tx, private_key):
         """签名交易"""
         # 实现签名逻辑
         pass
     
-    def broadcast_transaction(self, signed_tx):
+    def broadcast_transaction (self, signed_tx):
         """广播交易"""
-        return bitcoin_rpc("sendrawtransaction", [signed_tx])
+        return bitcoin_rpc ("sendrawtransaction", [signed_tx])
 
 # 使用示例
 pubkeys = ["pubkey1", "pubkey2", "pubkey3"]
-wallet = MultiSigWallet(pubkeys, 2)
-address = wallet.create_wallet()
-print(f"多签地址: {address}")
+wallet = MultiSigWallet (pubkeys, 2)
+address = wallet.create_wallet ()
+print (f"多签地址: {address}")
 ```
 
 ## 常见问题
@@ -397,19 +397,19 @@ print(f"多签地址: {address}")
 
 多签钱包恢复需要：
 
-1. **收集必要信息**：
+1. ** 收集必要信息 **：
    - 赎回脚本
    - 足够的私钥
    - 交易历史
 
-2. **重建钱包**：
+2. ** 重建钱包 **：
    ```python
-   def recover_multisig_wallet(redeem_script, private_keys):
+   def recover_multisig_wallet (redeem_script, private_keys):
        # 使用赎回脚本和私钥重建钱包
        pass
    ```
 
-3. **验证资金**：
+3. ** 验证资金 **：
    - 检查 UTXO 状态
    - 验证签名权限
 
@@ -417,15 +417,15 @@ print(f"多签地址: {address}")
 
 多签钱包的隐私性：
 
-**优势**：
+** 优势 **：
 - 地址格式统一 (P2SH)
 - 脚本哈希隐藏真实逻辑
 
-**劣势**：
+** 劣势 **：
 - 交易大小较大，容易被识别
 - 签名数量暴露多签配置
 
-**改进方案**：
+** 改进方案 **：
 - 使用 Taproot 多签（下一章介绍）
 - 混合使用不同地址类型
 
@@ -433,21 +433,21 @@ print(f"多签地址: {address}")
 
 通过本章的学习，你已经掌握了多重签名交易的核心概念和技术原理：
 
-- **基础概念**：理解了多签的本质和优势
-- **技术原理**：深入了解了多签的技术实现
-- **应用场景**：学会了如何选择合适的多签配置
-- **实战操作**：掌握了创建和管理多签钱包的方法
+- ** 基础概念 **：理解了多签的本质和优势
+- ** 技术原理 **：深入了解了多签的技术实现
+- ** 应用场景 **：学会了如何选择合适的多签配置
+- ** 实战操作 **：掌握了创建和管理多签钱包的方法
 
 多重签名是比特币技术发展的重要里程碑，它不仅增强了安全性，还为企业和机构提供了更灵活的资金管理方案。
 
 在下一章《隔离见证 (SegWit) 技术》中，我们将学习比特币的另一个重要升级：SegWit 技术，它如何解决交易延展性问题并提升网络效率。
 
-> 🌟 **多重签名的意义**：多签技术体现了比特币的一个重要理念：通过技术手段实现去中心化的信任机制，让多方协作变得安全可靠。
+> 🌟 ** 多重签名的意义 **：多签技术体现了比特币的一个重要理念：通过技术手段实现去中心化的信任机制，让多方协作变得安全可靠。
 
 ---
 
 <div align="center">
-<a href="https://github.com/beihaili/Get-Started-with-Web3">🏠 返回主页</a> | 
-<a href="https://twitter.com/bhbtc1337">🐦 关注作者</a> | 
-<a href="https://forms.gle/QMBwL6LwZyQew1tX8">📝 加入交流群</a>
+<a href="https://github.com/beihaili/Get-Started-with-Web3">🏠 返回主页 </a> | 
+<a href="https://twitter.com/bhbtc1337">🐦 关注作者 </a> | 
+<a href="https://forms.gle/QMBwL6LwZyQew1tX8">📝 加入交流群 </a>
 </div>

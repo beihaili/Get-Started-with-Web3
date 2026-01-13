@@ -1,38 +1,38 @@
 # 第 18 讲：Bitcoin Script 脚本系统
 
-![status](https://img.shields.io/badge/状态-已完成-success)
-![author](https://img.shields.io/badge/作者-beihaili-blue)
-![date](https://img.shields.io/badge/日期-2025--09-orange)
-![difficulty](https://img.shields.io/badge/难度-中级-yellow)
+![status](https://img.shields.io/badge/ 状态 - 已完成 - success)
+![author](https://img.shields.io/badge/ 作者 - beihaili-blue)
+![date](https://img.shields.io/badge/ 日期 - 2025--09-orange)
+![difficulty](https://img.shields.io/badge/ 难度 - 中级 - yellow)
 
 > 💡 想象比特币是一台自动贩卖机，你不仅可以投币买东西，还可以设置各种条件：「只有两个人同时插钥匙才能打开」、「只有在特定时间才能使用」、「必须输入正确密码」。这就是比特币脚本的魅力 —— 让数字货币变得可编程。
 
 ## 目录
 
-- [前言：比特币的可编程货币基因](#前言比特币的可编程货币基因)
-- [Script 语言设计哲学](#script语言设计哲学)
-- [操作码系统详解](#操作码系统详解)
-- [常见脚本模式](#常见脚本模式)
-- [高级脚本应用](#高级脚本应用)
-- [脚本安全性分析](#脚本安全性分析)
-- [实战演练：编写 Bitcoin 脚本](#实战演练编写bitcoin脚本)
-- [常见问题](#常见问题)
-- [结语](#结语)
+- [前言：比特币的可编程货币基因](# 前言比特币的可编程货币基因)
+- [Script 语言设计哲学](#script 语言设计哲学)
+- [操作码系统详解](# 操作码系统详解)
+- [常见脚本模式](# 常见脚本模式)
+- [高级脚本应用](# 高级脚本应用)
+- [脚本安全性分析](# 脚本安全性分析)
+- [实战演练：编写 Bitcoin 脚本](# 实战演练编写 bitcoin 脚本)
+- [常见问题](# 常见问题)
+- [结语](# 结语)
 
 ## 前言：比特币的可编程货币基因
 
 很多人认为比特币只是「数字现金」，但实际上比特币从诞生之初就具备了可编程性。 Bitcoin Script 是比特币内置的脚本语言，它让比特币不仅仅是转账工具，更是可编程的数字合约平台。
 
-**现实世界的类比：**
-- **支票**：可以设置收款人、金额、有效期。
-- **信托**：可以设置复杂的资金释放条件。
-- **保险箱**：可以设置多把钥匙同时使用。
+** 现实世界的类比：**
+- ** 支票 **：可以设置收款人、金额、有效期。
+- ** 信托 **：可以设置复杂的资金释放条件。
+- ** 保险箱 **：可以设置多把钥匙同时使用。
 
 **Bitcoin Script 的能力：**
-- **条件支付**：只有满足特定条件才能花费。
-- **多重签名**：需要多个签名才能动用资金。
-- **时间锁定**：在特定时间后才能使用。
-- **复杂逻辑**：组合多种条件创造智能合约。
+- ** 条件支付 **：只有满足特定条件才能花费。
+- ** 多重签名 **：需要多个签名才能动用资金。
+- ** 时间锁定 **：在特定时间后才能使用。
+- ** 复杂逻辑 **：组合多种条件创造智能合约。
 
 ## Script 语言设计哲学
 
@@ -71,7 +71,7 @@ class BitcoinScriptDesign:
             }
         }
     
-    def script_limitations(self):
+    def script_limitations (self):
         """脚本限制说明"""
         
         return {
@@ -106,108 +106,108 @@ class BitcoinScriptStack:
         self.stack = []
         self.alt_stack = []
         
-    def execute_script(self, script_ops):
+    def execute_script (self, script_ops):
         """执行脚本操作序列"""
         
         for op in script_ops:
-            if self.is_push_data(op):
-                self.stack.append(op['data'])
+            if self.is_push_data (op):
+                self.stack.append (op ['data'])
             else:
-                self.execute_opcode(op['opcode'])
+                self.execute_opcode (op ['opcode'])
         
         # 脚本成功执行当且仅当栈顶为真（非零值）
-        return len(self.stack) > 0 and self.stack[-1] != b'\x00'
+        return len (self.stack) > 0 and self.stack [-1] != b'\x00'
     
-    def execute_opcode(self, opcode):
+    def execute_opcode (self, opcode):
         """执行具体操作码"""
         
         if opcode == 'OP_DUP':
             # 复制栈顶元素
-            if len(self.stack) < 1:
-                raise Exception("Stack underflow")
-            self.stack.append(self.stack[-1])
+            if len (self.stack) < 1:
+                raise Exception ("Stack underflow")
+            self.stack.append (self.stack [-1])
             
         elif opcode == 'OP_HASH160':
             # SHA256 + RIPEMD160 哈希
-            if len(self.stack) < 1:
-                raise Exception("Stack underflow")
-            data = self.stack.pop()
-            hash_result = self.hash160(data)
-            self.stack.append(hash_result)
+            if len (self.stack) < 1:
+                raise Exception ("Stack underflow")
+            data = self.stack.pop ()
+            hash_result = self.hash160 (data)
+            self.stack.append (hash_result)
             
         elif opcode == 'OP_EQUALVERIFY':
             # 验证栈顶两个元素相等，相等则继续，不等则失败
-            if len(self.stack) < 2:
-                raise Exception("Stack underflow")
-            a = self.stack.pop()
-            b = self.stack.pop()
+            if len (self.stack) < 2:
+                raise Exception ("Stack underflow")
+            a = self.stack.pop ()
+            b = self.stack.pop ()
             if a != b:
-                raise Exception("EQUALVERIFY failed")
+                raise Exception ("EQUALVERIFY failed")
                 
         elif opcode == 'OP_CHECKSIG':
             # 验证数字签名
-            if len(self.stack) < 2:
-                raise Exception("Stack underflow")
-            pubkey = self.stack.pop()
-            signature = self.stack.pop()
+            if len (self.stack) < 2:
+                raise Exception ("Stack underflow")
+            pubkey = self.stack.pop ()
+            signature = self.stack.pop ()
             
             # 简化的签名验证
-            result = self.verify_signature(signature, pubkey)
-            self.stack.append(b'\x01' if result else b'\x00')
+            result = self.verify_signature (signature, pubkey)
+            self.stack.append (b'\x01' if result else b'\x00')
     
-    def demonstrate_p2pkh_execution(self):
+    def demonstrate_p2pkh_execution (self):
         """演示 P2PKH 脚本执行过程"""
         
-        print("📝 P2PKH 脚本执行演示:")
-        print("=" * 40)
+        print ("📝 P2PKH 脚本执行演示:")
+        print ("=" * 40)
         
         # 输入脚本 (scriptSig): <signature> <pubkey>
-        print("步骤 1: 执行输入脚本")
-        print("操作: 推入签名和公钥")
+        print ("步骤 1: 执行输入脚本")
+        print ("操作：推入签名和公钥")
         self.stack = [b'signature', b'pubkey']
-        print(f"栈状态: {[item.decode() for item in self.stack]}")
-        print()
+        print (f"栈状态: {[item.decode () for item in self.stack]}")
+        print ()
         
         # 输出脚本 (scriptPubKey): OP_DUP OP_HASH160 <pubkey_hash> OP_EQUALVERIFY OP_CHECKSIG
-        print("步骤 2: 执行输出脚本")
+        print ("步骤 2: 执行输出脚本")
         
         # OP_DUP
-        print("OP_DUP —— 复制栈顶元素")
-        self.stack.append(self.stack[-1])
-        print(f"栈状态: {[item.decode() for item in self.stack]}")
+        print ("OP_DUP —— 复制栈顶元素")
+        self.stack.append (self.stack [-1])
+        print (f"栈状态: {[item.decode () for item in self.stack]}")
         
         # OP_HASH160
-        print("OP_HASH160 —— 哈希栈顶元素")
-        pubkey = self.stack.pop()
+        print ("OP_HASH160 —— 哈希栈顶元素")
+        pubkey = self.stack.pop ()
         pubkey_hash = b'pubkey_hash'  # 模拟哈希结果
-        self.stack.append(pubkey_hash)
-        print(f"栈状态: {[item.decode() for item in self.stack]}")
+        self.stack.append (pubkey_hash)
+        print (f"栈状态: {[item.decode () for item in self.stack]}")
         
         # 推入目标公钥哈希
-        print("推入目标公钥哈希")
-        self.stack.append(b'pubkey_hash')
-        print(f"栈状态: {[item.decode() for item in self.stack]}")
+        print ("推入目标公钥哈希")
+        self.stack.append (b'pubkey_hash')
+        print (f"栈状态: {[item.decode () for item in self.stack]}")
         
         # OP_EQUALVERIFY
-        print("OP_EQUALVERIFY —— 验证哈希相等")
-        hash1 = self.stack.pop()
-        hash2 = self.stack.pop()
+        print ("OP_EQUALVERIFY —— 验证哈希相等")
+        hash1 = self.stack.pop ()
+        hash2 = self.stack.pop ()
         if hash1 == hash2:
-            print("✅ 公钥哈希验证通过")
+            print ("✅ 公钥哈希验证通过")
         else:
-            print("❌ 公钥哈希验证失败")
-        print(f"栈状态: {[item.decode() for item in self.stack]}")
+            print ("❌ 公钥哈希验证失败")
+        print (f"栈状态: {[item.decode () for item in self.stack]}")
         
         # OP_CHECKSIG
-        print("OP_CHECKSIG —— 验证数字签名")
-        pubkey = self.stack.pop()
-        signature = self.stack.pop()
+        print ("OP_CHECKSIG —— 验证数字签名")
+        pubkey = self.stack.pop ()
+        signature = self.stack.pop ()
         # 模拟签名验证成功
-        self.stack.append(b'\x01')  # True
-        print("✅ 数字签名验证通过")
-        print(f"最终栈状态: {[hex(ord(item)) if len(item)==1 else item.decode() for item in self.stack]}")
+        self.stack.append (b'\x01')  # True
+        print ("✅ 数字签名验证通过")
+        print (f"最终栈状态: {[hex (ord (item)) if len (item)==1 else item.decode () for item in self.stack]}")
         
-        return len(self.stack) > 0 and self.stack[-1] == b'\x01'
+        return len (self.stack) > 0 and self.stack [-1] == b'\x01'
 ```
 
 ## 操作码系统详解
@@ -215,7 +215,7 @@ class BitcoinScriptStack:
 ### 操作码分类
 
 ```python
-def bitcoin_opcodes_reference():
+def bitcoin_opcodes_reference ():
     """比特币操作码参考手册"""
     
     return {
@@ -289,7 +289,7 @@ class AdvancedScriptOpcodes:
         self.current_block_height = 866000
         self.current_timestamp = 1725894000
     
-    def demonstrate_multisig(self):
+    def demonstrate_multisig (self):
         """演示多重签名脚本"""
         
         # 2-of-3 多重签名脚本
@@ -316,7 +316,7 @@ class AdvancedScriptOpcodes:
             "说明": "需要 3 个公钥中的任意 2 个对应私钥签名"
         }
     
-    def demonstrate_timelock(self):
+    def demonstrate_timelock (self):
         """演示时间锁定脚本"""
         
         # 绝对时间锁定：只能在特定时间后花费
@@ -356,7 +356,7 @@ class AdvancedScriptOpcodes:
             }
         }
     
-    def demonstrate_hash_lock(self):
+    def demonstrate_hash_lock (self):
         """演示哈希锁定脚本"""
         
         # 哈希锁定：需要提供特定数据的原像
@@ -389,7 +389,7 @@ class AdvancedScriptOpcodes:
 ### 标准脚本类型
 
 ```python
-def standard_script_patterns():
+def standard_script_patterns ():
     """标准脚本模式分析"""
     
     return {
@@ -452,7 +452,7 @@ class AtomicSwapScript:
         self.bob_pubkey = "03d4e5f6...bob_key"
         self.locktime = 1735689600  # 2025-01-01
     
-    def create_htlc_script(self):
+    def create_htlc_script (self):
         """创建哈希时间锁定合约 (HTLC)"""
         
         htlc_script = f"""
@@ -466,7 +466,7 @@ class AtomicSwapScript:
         """
         
         return {
-            "脚本": htlc_script.strip(),
+            "脚本": htlc_script.strip (),
             "功能说明": {
                 "条件 1": "Alice 提供秘密原像，可以立即花费",
                 "条件 2": "超时后，Bob 可以赎回资金",
@@ -479,7 +479,7 @@ class AtomicSwapScript:
             ]
         }
     
-    def atomic_swap_process(self):
+    def atomic_swap_process (self):
         """原子交换完整流程"""
         
         return {
@@ -489,7 +489,7 @@ class AtomicSwapScript:
             },
             
             "步骤 1_准备": [
-                "Alice 生成秘密值 S 和其哈希值 H = hash(S)",
+                "Alice 生成秘密值 S 和其哈希值 H = hash (S)",
                 "双方商定交换金额和时间锁定参数",
                 "Alice 创建 Bitcoin HTLC，锁定 1 BTC",
                 "Bob 验证 Bitcoin HTLC 正确性"
@@ -520,7 +520,7 @@ class PaymentChannelScript:
         self.bob_pubkey = "03b2c3..."
         self.channel_capacity = 1.0  # 1 BTC
     
-    def funding_transaction_script(self):
+    def funding_transaction_script (self):
         """资金锁定交易脚本"""
         
         # 2-of-2 多重签名锁定资金
@@ -534,12 +534,12 @@ class PaymentChannelScript:
         
         return {
             "类型": "2-of-2 多重签名",
-            "脚本": funding_script.strip(),
+            "脚本": funding_script.strip (),
             "功能": "需要 Alice 和 Bob 都签名才能花费",
             "用途": "锁定支付通道的初始资金"
         }
     
-    def commitment_transaction_script(self):
+    def commitment_transaction_script (self):
         """承诺交易脚本（可撤销）"""
         
         # Alice 的输出（可被 Bob 在延迟期内撤销）
@@ -553,7 +553,7 @@ class PaymentChannelScript:
         """
         
         return {
-            "Alice 输出": alice_output.strip(),
+            "Alice 输出": alice_output.strip (),
             "功能说明": {
                 "立即花费": "Bob 可以立即用撤销密钥花费（惩罚机制）",
                 "延迟花费": "Alice 必须等待 144 个区块后才能花费"
@@ -561,7 +561,7 @@ class PaymentChannelScript:
             "安全机制": "防止 Alice 广播旧的承诺交易"
         }
     
-    def htlc_payment_script(self):
+    def htlc_payment_script (self):
         """HTLC 支付脚本"""
         
         # 通过支付通道进行条件支付
@@ -576,7 +576,7 @@ class PaymentChannelScript:
         """
         
         return {
-            "脚本": htlc_script.strip(),
+            "脚本": htlc_script.strip (),
             "用途": "在支付通道中进行条件支付",
             "路由": "可以通过多个通道路由支付",
             "时间锁": "1008 个区块（约 1 周）的超时机制"
@@ -591,32 +591,32 @@ class BitcoinScriptBuilder:
         self.script = []
         self.stack_trace = []
         
-    def add_op(self, opcode, data=None):
+    def add_op (self, opcode, data=None):
         """添加操作码"""
         if data:
-            self.script.append(f"{opcode} {data}")
+            self.script.append (f"{opcode} {data}")
         else:
-            self.script.append(opcode)
+            self.script.append (opcode)
         return self
     
-    def push_data(self, data):
+    def push_data (self, data):
         """推入数据"""
-        self.script.append(data)
+        self.script.append (data)
         return self
     
-    def build_custom_script(self, scenario):
+    def build_custom_script (self, scenario):
         """构建自定义脚本"""
         
         if scenario == "escrow":
-            return self.build_escrow_script()
+            return self.build_escrow_script ()
         elif scenario == "lottery":
-            return self.build_lottery_script() 
+            return self.build_lottery_script () 
         elif scenario == "will":
-            return self.build_digital_will_script()
+            return self.build_digital_will_script ()
         else:
-            raise ValueError("Unknown scenario")
+            raise ValueError ("Unknown scenario")
     
-    def build_escrow_script(self):
+    def build_escrow_script (self):
         """构建托管脚本"""
         
         # 三方托管：买方、卖方、仲裁方
@@ -643,7 +643,7 @@ class BitcoinScriptBuilder:
             "优势": "去中心化的托管服务"
         }
     
-    def build_lottery_script(self):
+    def build_lottery_script (self):
         """构建彩票脚本"""
         
         # 基于区块哈希的简单彩票
@@ -671,7 +671,7 @@ class BitcoinScriptBuilder:
             "时间限制": "4 小时内无人中奖则退还给组织者"
         }
     
-    def build_digital_will_script(self):
+    def build_digital_will_script (self):
         """构建数字遗嘱脚本"""
         
         # 简单的数字遗嘱：一定时间不活动则继承人可以使用
@@ -695,57 +695,57 @@ class BitcoinScriptBuilder:
             "注意": "需要定期『刷新』来重置时间锁定"
         }
 
-def script_workshop():
+def script_workshop ():
     """脚本编程工作坊"""
     
-    print("🛠️ Bitcoin Script 编程工作坊")
-    print("=" * 40)
+    print ("🛠️ Bitcoin Script 编程工作坊")
+    print ("=" * 40)
     
-    builder = BitcoinScriptBuilder()
+    builder = BitcoinScriptBuilder ()
     
     # 演示各种脚本场景
     scenarios = ["escrow", "lottery", "will"]
     
     for scenario in scenarios:
-        print(f"\n📝 场景: {scenario.upper()}")
-        script_info = builder.build_custom_script(scenario)
+        print (f"\n📝 场景: {scenario.upper ()}")
+        script_info = builder.build_custom_script (scenario)
         
-        print("脚本内容:")
-        for i, op in enumerate(script_info["脚本"]):
-            print(f"  {i+1}. {op}")
+        print ("脚本内容:")
+        for i, op in enumerate (script_info ["脚本"]):
+            print (f"{i+1}. {op}")
         
         if "使用场景" in script_info:
-            print("\n使用场景:")
-            for scene in script_info["使用场景"]:
-                print(f"  • {scene}")
+            print ("\n 使用场景:")
+            for scene in script_info ["使用场景"]:
+                print (f"・{scene}")
         
         if "规则" in script_info:
-            print(f"\n规则: {script_info['规则']}")
+            print (f"\n 规则: {script_info [' 规则 ']}")
         
         if "功能" in script_info:
-            print(f"\n功能: {script_info['功能']}")
+            print (f"\n 功能: {script_info [' 功能 ']}")
         
-        print("-" * 30)
+        print ("-" * 30)
 
 if __name__ == "__main__":
-    script_workshop()
+    script_workshop ()
 ```
 
 ## 常见问题
 
 ### ❓ 为什么 Bitcoin Script 不是图灵完备的？
 
-**设计考虑：**
-- **安全性**：防止无限循环导致的 DoS 攻击。
-- **可预测性**：确保脚本执行时间有上限。
-- **简单性**：降低实现复杂度和错误风险。
-- **共识**：确保所有节点执行结果一致。
+** 设计考虑：**
+- ** 安全性 **：防止无限循环导致的 DoS 攻击。
+- ** 可预测性 **：确保脚本执行时间有上限。
+- ** 简单性 **：降低实现复杂度和错误风险。
+- ** 共识 **：确保所有节点执行结果一致。
 
 ### ❓ Bitcoin Script 能实现智能合约吗？
 
-**能力与限制：**
+** 能力与限制：**
 ```python
-def script_smart_contract_capabilities():
+def script_smart_contract_capabilities ():
     """Script 智能合约能力 analysis"""
     
     return {
@@ -775,51 +775,51 @@ def script_smart_contract_capabilities():
 
 ### ❓ 如何调试 Bitcoin 脚本？
 
-**调试工具和方法：**
-- **Bitcoin Core 测试网**：在测试环境验证脚本。
-- **脚本模拟器**：离线模拟脚本执行。
-- **栈跟踪**：记录每步操作的栈状态。
-- **单元测试**：编写测试用例验证逻辑。
+** 调试工具和方法：**
+- **Bitcoin Core 测试网 **：在测试环境验证脚本。
+- ** 脚本模拟器 **：离线模拟脚本执行。
+- ** 栈跟踪 **：记录每步操作的栈状态。
+- ** 单元测试 **：编写测试用例验证逻辑。
 
 ## 常见问题解答
 
 ### Q1: Bitcoin Script 和以太坊智能合约有什么区别？
 **A:** 它们的设计理念完全不同：
 - **Bitcoin Script**：简单、安全、有限功能，专注于支付条件。
-- **以太坊智能合约**：复杂、图灵完备，可以做任何计算。
-- **比喻**：前者像保险箱的密码锁，后者像一台完整的电脑。
+- ** 以太坊智能合约 **：复杂、图灵完备，可以做任何计算。
+- ** 比喻 **：前者像保险箱的密码锁，后者像一台完整的电脑。
 
 Bitcoin 更像是「有条件的支付」，以太坊更像是「去中心化的计算平台」。
 
 ### Q2: 为什么 Bitcoin Script 不支持循环？
 **A:** 这是故意的安全设计：
-- **防止死循环**：避免脚本永远执行下去消耗资源。
-- **确保执行时间**：每个脚本都能在有限时间内完成。
-- **网络稳定**：防止恶意脚本攻击网络。
+- ** 防止死循环 **：避免脚本永远执行下去消耗资源。
+- ** 确保执行时间 **：每个脚本都能在有限时间内完成。
+- ** 网络稳定 **：防止恶意脚本攻击网络。
 
 就像银行的密码锁，功能简单但绝对可靠。
 
 ### Q3: 普通用户需要学习 Bitcoin Script 吗？
 **A:** 看你的需求：
-- **普通转账**：完全不需要，钱包会自动处理。
-- **多重签名**：需要基本了解，但有现成工具。
-- **高级应用**：如果要做闪电网络、原子交换等，最好了解。
-- **开发者**：必须掌握，这是基础技能。
+- ** 普通转账 **：完全不需要，钱包会自动处理。
+- ** 多重签名 **：需要基本了解，但有现成工具。
+- ** 高级应用 **：如果要做闪电网络、原子交换等，最好了解。
+- ** 开发者 **：必须掌握，这是基础技能。
 
 ### Q4: Bitcoin Script 能做智能合约吗？
 **A:** 能做，但功能有限：
-- **简单合约**：多重签名、时间锁定、条件支付等。
-- **复杂应用**：闪电网络、原子交换、去中心化交易所。
-- **局限性**：不能做复杂计算，不能访问外部数据。
-- **补充方案**： Layer 2 方案（如闪电网络）扩展功能。
+- ** 简单合约 **：多重签名、时间锁定、条件支付等。
+- ** 复杂应用 **：闪电网络、原子交换、去中心化交易所。
+- ** 局限性 **：不能做复杂计算，不能访问外部数据。
+- ** 补充方案 **： Layer 2 方案（如闪电网络）扩展功能。
 
 ### Q5: 如何学习 Bitcoin Script 编程？
 **A:** 循序渐进的学习路径：
-1. **理解基础**：先了解比特币交易原理。
-2. **学习操作码**：掌握常用的脚本操作。
-3. **分析实例**：研究现有的脚本模式。
-4. **动手实践**：在测试网上编写和部署脚本。
-5. **阅读源码**：研究 Bitcoin Core 的脚本实现。
+1. ** 理解基础 **：先了解比特币交易原理。
+2. ** 学习操作码 **：掌握常用的脚本操作。
+3. ** 分析实例 **：研究现有的脚本模式。
+4. ** 动手实践 **：在测试网上编写和部署脚本。
+5. ** 阅读源码 **：研究 Bitcoin Core 的脚本实现。
 
 ## 结语
 
@@ -827,17 +827,17 @@ Bitcoin Script 是比特币可编程性的核心，它在安全性和功能性�
 
 ### 🏛️ 设计哲学
 
-- **安全优先**：宁可功能受限也要确保安全。
-- **简单可靠**：通过简单性实现可靠性。
-- **确定性执行**：确保网络共识的一致性。
-- **可扩展性**：通过软分叉添加新功能。
+- ** 安全优先 **：宁可功能受限也要确保安全。
+- ** 简单可靠 **：通过简单性实现可靠性。
+- ** 确定性执行 **：确保网络共识的一致性。
+- ** 可扩展性 **：通过软分叉添加新功能。
 
 ### 🔧 技术特色
 
-- **栈式执行**：简单高效的执行模型。
-- **有限操作码**：精心选择的操作集合。
-- **条件逻辑**：支持复杂的支付条件。
-- **密码学集成**：内置的签名和哈希操作。
+- ** 栈式执行 **：简单高效的执行模型。
+- ** 有限操作码 **：精心选择的操作集合。
+- ** 条件逻辑 **：支持复杂的支付条件。
+- ** 密码学集成 **：内置的签名和哈希操作。
 
 ### 🚀 实际价值
 
@@ -851,12 +851,12 @@ Bitcoin Script 是比特币可编程性的核心，它在安全性和功能性�
 
 理解和掌握 Bitcoin Script ，就是理解比特币作为可编程货币的本质。它不仅仅是数字现金，更是一个可以承载复杂金融逻辑的平台。
 
-> 🌟 **代码实践**：本章的完整脚本示例代码请查看： [script_examples.py](./script_examples.py)
+> 🌟 ** 代码实践 **：本章的完整脚本示例代码请查看： [script_examples.py](./script_examples.py)
 
 ---
 
 <div align="center">
-<a href="https://github.com/beihaili/Get-Started-with-Web3">🏠 返回主页</a> | 
-<a href="https://twitter.com/bhbtc1337">🐦 关注作者</a> | 
-<a href="https://forms.gle/QMBwL6LwZyQew1tX8">📝 加入交流群</a>
+<a href="https://github.com/beihaili/Get-Started-with-Web3">🏠 返回主页 </a> | 
+<a href="https://twitter.com/bhbtc1337">🐦 关注作者 </a> | 
+<a href="https://forms.gle/QMBwL6LwZyQew1tX8">📝 加入交流群 </a>
 </div>

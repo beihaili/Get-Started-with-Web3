@@ -1,37 +1,37 @@
 # 第 14 讲：分叉机制与 BIP 流程
 
-![status](https://img.shields.io/badge/状态-已完成-success)
-![author](https://img.shields.io/badge/作者-beihaili-blue)
-![date](https://img.shields.io/badge/日期-2025--09-orange)
-![difficulty](https://img.shields.io/badge/难度-中级-yellow)
+![status](https://img.shields.io/badge/ 状态 - 已完成 - success)
+![author](https://img.shields.io/badge/ 作者 - beihaili-blue)
+![date](https://img.shields.io/badge/ 日期 - 2025--09-orange)
+![difficulty](https://img.shields.io/badge/ 难度 - 中级 - yellow)
 
 > 💡 想象一个神奇的村庄，没有村长，但村民们能够通过「全民公投」的方式来决定修改村规。有时候改动很小，老村民不用学新规就能适应；有时候改动很大，需要所有人都同意才能执行。这就是比特币的分叉和升级机制。
 
 ## 目录
 
-- [前言：为什么村庄需要修改规则？](#前言为什么村庄需要修改规则)
-- [分叉类型：软改革 vs 硬改革](#分叉类型软改革vs硬改革)
-- [BIP 提案：民主决策的流程](#bip提案民主决策的流程)
-- [经典案例：村庄改革的历史](#经典案例村庄改革的历史)
-- [激活机制：如何确保改革成功](#激活机制如何确保改革成功)
-- [动手实践：分析分叉影响](#动手实践分析分叉影响)
-- [常见问题解答](#常见问题解答)
+- [前言：为什么村庄需要修改规则？](# 前言为什么村庄需要修改规则)
+- [分叉类型：软改革 vs 硬改革](# 分叉类型软改革 vs 硬改革)
+- [BIP 提案：民主决策的流程](#bip 提案民主决策的流程)
+- [经典案例：村庄改革的历史](# 经典案例村庄改革的历史)
+- [激活机制：如何确保改革成功](# 激活机制如何确保改革成功)
+- [动手实践：分析分叉影响](# 动手实践分析分叉影响)
+- [常见问题解答](# 常见问题解答)
 
 ## 前言：为什么村庄需要修改规则？
 
 你有没有想过这样一个问题：比特币运行了 16 年，但它的功能却在不断进化，这是怎么做到的？
 
-**传统系统的升级方式：**
-- **微信升级**：腾讯发布新版本，用户下载更新。
-- **银行系统**：总行决定新政策，分行执行。
-- **政府政策**：政府制定，民众执行。
+** 传统系统的升级方式：**
+- ** 微信升级 **：腾讯发布新版本，用户下载更新。
+- ** 银行系统 **：总行决定新政策，分行执行。
+- ** 政府政策 **：政府制定，民众执行。
 
-**比特币的难题：**
+** 比特币的难题：**
 - 没有 CEO 决定升级什么。
 - 没有总部推送更新。
 - 没有政府强制执行。
 
-那比特币如何升级？答案是：**通过分叉和 BIP 提案流程**。
+那比特币如何升级？答案是：** 通过分叉和 BIP 提案流程 **。
 
 ### 💡 思考一下
 在学习分叉机制之前，先想想：
@@ -43,12 +43,12 @@
 
 想象比特币是一个巨大的村庄，有几万个村民（节点），他们都在按照同一套村规（协议）生活：
 
-**如果没有分叉机制：**
+** 如果没有分叉机制：**
 ```
 村庄永远不能改变 → 无法适应新需求 → 逐渐落后时代
 ```
 
-**有了分叉机制：**
+** 有了分叉机制：**
 ```
 发现问题 → 提出改进方案 → 村民投票 → 实施改革 → 村庄变得更好
 ```
@@ -78,11 +78,11 @@ class ForkTypes:
                 "节点升级": "必须升级",
                 "区块验证": "旧规则拒绝新区块",
                 "风险": "高（可能分裂网络）",
-                "例子": "区块大小增加, Bitcoin Cash"
+                "例子": "区块大小增加，Bitcoin Cash"
             }
         }
     
-    def compare_forks(self):
+    def compare_forks (self):
         """详细对比软硬分叉"""
         
         comparison = {
@@ -108,7 +108,7 @@ class ForkTypes:
 ### 历史分叉案例
 
 ```python
-def major_bitcoin_forks():
+def major_bitcoin_forks ():
     """比特币主要分叉历史"""
     
     return {
@@ -190,7 +190,7 @@ class BIPClassification:
             }
         }
     
-    def bip_lifecycle(self):
+    def bip_lifecycle (self):
         """BIP 生命周期"""
         
         stages = {
@@ -238,7 +238,7 @@ class BIPClassification:
 ### 激活方式演进
 
 ```python
-def activation_mechanisms():
+def activation_mechanisms ():
     """软分叉激活机制演进史"""
     
     mechanisms = {
@@ -296,7 +296,7 @@ class TaprootActivation:
             "2021 年 11 月": "正式激活"
         }
     
-    def activation_parameters(self):
+    def activation_parameters (self):
         """Taproot 激活参数"""
         
         return {
@@ -308,7 +308,7 @@ class TaprootActivation:
             "后备方案": "如果超时则考虑 UASF"
         }
     
-    def success_factors(self):
+    def success_factors (self):
         """成功因素分析"""
         
         return {
@@ -381,7 +381,7 @@ class BIPEvaluationFramework:
             }
         }
     
-    def evaluate_bip(self, bip_details):
+    def evaluate_bip (self, bip_details):
         """评估 BIP 提案"""
         
         # 示例：评估一个假想的「区块大小增加」提案
@@ -395,7 +395,7 @@ class BIPEvaluationFramework:
         evaluation_score = {}
         
         # 技术评估
-        evaluation_score["技术"] = {
+        evaluation_score ["技术"] = {
             "功能性": 8,  # 确实能提高吞吐量
             "安全性": 4,  # 可能增加中心化风险
             "兼容性": 2,  # 硬分叉不兼容
@@ -404,7 +404,7 @@ class BIPEvaluationFramework:
         }
         
         # 经济评估
-        evaluation_score["经济"] = {
+        evaluation_score ["经济"] = {
             "成本效益": 5,  # 收益明显但成本高
             "激励一致": 3,  # 矿工和用户激励不完全一致
             "市场影响": 6,  # 可能正面影响价格
@@ -413,7 +413,7 @@ class BIPEvaluationFramework:
         }
         
         # 社会评估
-        evaluation_score["社会"] = {
+        evaluation_score ["社会"] = {
             "社区支持": 3,  # 社区分化严重
             "争议程度": 2,  # 极具争议性
             "教育需求": 4,  # 需要大量解释工作
@@ -422,7 +422,7 @@ class BIPEvaluationFramework:
         }
         
         # 政治评估  
-        evaluation_score["政治"] = {
+        evaluation_score ["政治"] = {
             "权力影响": 3,  # 可能增加矿工权力
             "监管风险": 5,  # 监管反应不明
             "国际影响": 4,  # 各国态度不同
@@ -434,19 +434,19 @@ class BIPEvaluationFramework:
         total_score = 0
         total_items = 0
         
-        for category, scores in evaluation_score.items():
-            category_avg = sum(scores.values()) / len(scores)
+        for category, scores in evaluation_score.items ():
+            category_avg = sum (scores.values ()) /len (scores)
             total_score += category_avg
             total_items += 1
             
-            print(f"{category}评估: {category_avg:.1f} / 10")
-            for item, score in scores.items():
-                print(f"  {item}: {score} / 10")
-            print()
+            print (f"{category} 评估: {category_avg:.1f} / 10")
+            for item, score in scores.items ():
+                print (f"{item}: {score} / 10")
+            print ()
         
-        overall_score = total_score / total_items
+        overall_score = total_score /total_items
         
-        recommendation = self.get_recommendation(overall_score)
+        recommendation = self.get_recommendation (overall_score)
         
         return {
             "综合得分": f"{overall_score:.1f} / 10",
@@ -454,7 +454,7 @@ class BIPEvaluationFramework:
             "详细评分": evaluation_score
         }
     
-    def get_recommendation(self, score):
+    def get_recommendation (self, score):
         """根据得分给出建议"""
         
         if score >= 8:
@@ -467,14 +467,14 @@ class BIPEvaluationFramework:
             return "不推荐：风险太高，不建议推进"
 
 # 运行示例评估
-def run_bip_evaluation():
-    framework = BIPEvaluationFramework()
-    result = framework.evaluate_bip({})
+def run_bip_evaluation ():
+    framework = BIPEvaluationFramework ()
+    result = framework.evaluate_bip ({})
     
-    print("📊 BIP 提案评估结果:")
-    print("=" * 40)
-    print(f"综合得分: {result['综合得分']}")
-    print(f"建议: {result['建议']}")
+    print ("📊 BIP 提案评估结果:")
+    print ("=" * 40)
+    print (f"综合得分: {result [' 综合得分 ']}")
+    print (f"建议: {result [' 建议 ']}")
     
     return result
 ```
@@ -483,16 +483,16 @@ def run_bip_evaluation():
 
 ### ❓ 为什么比特币升级这么困难？
 
-**设计理念的体现：**
-- **保守主义**：优先考虑稳定性而非快速创新。
-- **去中心化**：没有中央权威强制升级。
-- **经济激励**：各方利益需要保持平衡。
-- **社会共识**：需要广泛的社区支持。
+** 设计理念的体现：**
+- ** 保守主义 **：优先考虑稳定性而非快速创新。
+- ** 去中心化 **：没有中央权威强制升级。
+- ** 经济激励 **：各方利益需要保持平衡。
+- ** 社会共识 **：需要广泛的社区支持。
 
 ### ❓ 如何评估一个 BIP 的成功概率？
 
 ```python
-def bip_success_predictors():
+def bip_success_predictors ():
     """BIP 成功的预测因素"""
     
     return {
@@ -521,11 +521,11 @@ def bip_success_predictors():
 
 ### ❓ 分叉会影响比特币的价值吗？
 
-**不同类型分叉的影响：**
-- **成功软分叉**：通常提升价值（增加功能）。
-- **争议软分叉**：短期波动，长期看功能价值。
-- **共识硬分叉**：理论上不影响（如果全网升级）。
-- **争议硬分叉**：通常导致价值分流和下跌。
+** 不同类型分叉的影响：**
+- ** 成功软分叉 **：通常提升价值（增加功能）。
+- ** 争议软分叉 **：短期波动，长期看功能价值。
+- ** 共识硬分叉 **：理论上不影响（如果全网升级）。
+- ** 争议硬分叉 **：通常导致价值分流和下跌。
 
 ## 结语
 
@@ -533,34 +533,34 @@ def bip_success_predictors():
 
 ### 🏛️ 治理哲学
 
-- **渐进改进**：通过小步快跑实现持续进化。
-- **保守主义**：优先考虑稳定性和向后兼容。
-- **多方制衡**：开发者、矿工、用户的权力平衡。
-- **透明过程**：公开透明的决策过程。
+- ** 渐进改进 **：通过小步快跑实现持续进化。
+- ** 保守主义 **：优先考虑稳定性和向后兼容。
+- ** 多方制衡 **：开发者、矿工、用户的权力平衡。
+- ** 透明过程 **：公开透明的决策过程。
 
 ### 🔧 机制设计
 
-- **分层决策**：不同类型提案有不同流程。
-- **多重验证**：技术、经济、社会多维度评估。
-- **风险管控**：通过激活机制控制升级风险。
-- **社区参与**：确保各利益相关方的参与。
+- ** 分层决策 **：不同类型提案有不同流程。
+- ** 多重验证 **：技术、经济、社会多维度评估。
+- ** 风险管控 **：通过激活机制控制升级风险。
+- ** 社区参与 **：确保各利益相关方的参与。
 
 ### 🚀 未来展望
 
 比特币的治理机制仍在不断演进：
-- **激活机制优化**：寻找更好的激活方式。
-- **工具改进**：更好的测试和部署工具。
-- **社区参与**：提高普通用户的参与度。
-- **国际协调**：应对全球化的治理挑战。
+- ** 激活机制优化 **：寻找更好的激活方式。
+- ** 工具改进 **：更好的测试和部署工具。
+- ** 社区参与 **：提高普通用户的参与度。
+- ** 国际协调 **：应对全球化的治理挑战。
 
 这套机制虽然复杂且有时效率不高，但它确保了比特币作为一个去中心化系统能够安全、稳定地演进。每一次成功的升级，都是整个社区智慧和共识的体现。
 
-> 🌟 **延伸阅读**：想了解更多 BIP 详情，请访问： [Bitcoin BIPs GitHub](https://github.com/bitcoin/bips)
+> 🌟 ** 延伸阅读 **：想了解更多 BIP 详情，请访问： [Bitcoin BIPs GitHub](https://github.com/bitcoin/bips)
 
 ---
 
 <div align="center">
-<a href="https://github.com/beihaili/Get-Started-with-Web3">🏠 返回主页</a> | 
-<a href="https://twitter.com/bhbtc1337">🐦 关注作者</a> | 
-<a href="https://forms.gle/QMBwL6LwZyQew1tX8">📝 加入交流群</a>
+<a href="https://github.com/beihaili/Get-Started-with-Web3">🏠 返回主页 </a> | 
+<a href="https://twitter.com/bhbtc1337">🐦 关注作者 </a> | 
+<a href="https://forms.gle/QMBwL6LwZyQew1tX8">📝 加入交流群 </a>
 </div>

@@ -1,9 +1,9 @@
 # 创建你的第一个 Web3 身份
 
-![status](https://img.shields.io/badge/状态-已完成-success)
-![author](https://img.shields.io/badge/作者-beihaili-blue)
-![date](https://img.shields.io/badge/日期-2025--06-orange)
-![difficulty](https://img.shields.io/badge/难度-初级-brightgreen)
+![status](https://img.shields.io/badge/ 状态 - 已完成 - success)
+![author](https://img.shields.io/badge/ 作者 - beihaili-blue)
+![date](https://img.shields.io/badge/ 日期 - 2025--06-orange)
+![difficulty](https://img.shields.io/badge/ 难度 - 初级 - brightgreen)
 
 > 💡 自学入门 `Web3` 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 `Web3` 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1-3 讲。
 > 
@@ -18,12 +18,12 @@
 
 ## 目录
 
-- [前言](#前言)
-- [Web3 简述](#web3-简述)
-- [小狐狸钱包 MetaMask 简述](#小狐狸钱包-metamask-简述)
-- [使用 MetaMask 创建第一个 Web3 身份](#使用-metamask-创建第一个-web3-身份)
-- [常见问题](#常见问题)
-- [总结](#总结)
+- [前言](# 前言)
+- [Web3 简述](#web3 - 简述)
+- [小狐狸钱包 MetaMask 简述](# 小狐狸钱包 - metamask - 简述)
+- [使用 MetaMask 创建第一个 Web3 身份](# 使用 - metamask - 创建第一个 - web3 - 身份)
+- [常见问题](# 常见问题)
+- [总结](# 总结)
 
 ## 前言
 
@@ -121,7 +121,7 @@ MetaMask 本身是免费的，但在区块链上进行交易时需要支付网�
 ---
 
 <div align="center">
-<a href="https://github.com/beihaili/Get-Started-with-Web3">🏠 返回主页</a> | 
-<a href="https://twitter.com/bhbtc1337">🐦 关注作者</a> | 
-<a href="https://forms.gle/QMBwL6LwZyQew1tX8">📝 加入交流群</a>
+<a href="https://github.com/beihaili/Get-Started-with-Web3">🏠 返回主页 </a> | 
+<a href="https://twitter.com/bhbtc1337">🐦 关注作者 </a> | 
+<a href="https://forms.gle/QMBwL6LwZyQew1tX8">📝 加入交流群 </a>
 </div>

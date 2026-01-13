@@ -1,23 +1,23 @@
 # 第 20 讲：Ordinals 与生态创新
 
-![status](https://img.shields.io/badge/状态-已完成-success)
-![author](https://img.shields.io/badge/作者-beihaili-blue)
-![date](https://img.shields.io/badge/日期-2025--06-orange)
-![difficulty](https://img.shields.io/badge/难度-中级-yellow)
+![status](https://img.shields.io/badge/ 状态 - 已完成 - success)
+![author](https://img.shields.io/badge/ 作者 - beihaili-blue)
+![date](https://img.shields.io/badge/ 日期 - 2025--06-orange)
+![difficulty](https://img.shields.io/badge/ 难度 - 中级 - yellow)
 
 > 💡 想象一下，如果每一粒沙子都能刻上独特的标记，成为独一无二的艺术品。比特币 Ordinals 协议就是这样的魔法，它让比特币网络中的每一聪都能承载数据，变成数字世界的「收藏品」。
 
 ## 目录
 
-- [前言：为什么要在聪上刻字？](#前言为什么要在聪上刻字)
-- [Ordinals 协议基础](#ordinals协议基础)
-- [Inscriptions 技术详解](#inscriptions技术详解)
-- [Taproot 脚本路径存储](#taproot脚本路径存储)
-- [数字资产应用](#数字资产应用)
-- [BRC-20 代币标准](#brc-20代币标准)
-- [实战演练：创建 Inscription](#实战演练创建inscription)
-- [常见问题](#常见问题)
-- [结语](#结语)
+- [前言：为什么要在聪上刻字？](# 前言为什么要在聪上刻字)
+- [Ordinals 协议基础](#ordinals 协议基础)
+- [Inscriptions 技术详解](#inscriptions 技术详解)
+- [Taproot 脚本路径存储](#taproot 脚本路径存储)
+- [数字资产应用](# 数字资产应用)
+- [BRC-20 代币标准](#brc-20 代币标准)
+- [实战演练：创建 Inscription](# 实战演练创建 inscription)
+- [常见问题](# 常见问题)
+- [结语](# 结语)
 
 ## 前言：为什么要在聪上刻字？
 
@@ -26,10 +26,10 @@
 现在想象一下：如果你能在每一聪（比特币的最小单位）上「刻字」，让它承载图片、文字、甚至小游戏，这些聪是不是也会变得特别？
 
 这就是 Ordinals 协议的精髓：
-- 🎨 **让聪变成画布**：在聪上「铭刻」各种数据。
-- 🔢 **给聪编号**：每个聪都有独特的身份证。
-- 💎 **创造稀缺性**：有些聪因为特殊属性变得珍贵。
-- 🎪 **丰富比特币生态**：从「数字黄金」到「数字收藏品」。
+- 🎨 ** 让聪变成画布 **：在聪上「铭刻」各种数据。
+- 🔢 ** 给聪编号 **：每个聪都有独特的身份证。
+- 💎 ** 创造稀缺性 **：有些聪因为特殊属性变得珍贵。
+- 🎪 ** 丰富比特币生态 **：从「数字黄金」到「数字收藏品」。
 
 ### 💡 思考一下
 在学习 Ordinals 之前，先想想：
@@ -127,7 +127,7 @@ Ordinals 使用 Taproot 的脚本路径功能来存储数据：
         "OP_PUSHNUM_1",
         "OP_PUSHBYTES_9 746578742f68746d6c",  // "text/html"
         "OP_0",
-        "OP_PUSHDATA2 <HTML 数据>",
+        "OP_PUSHDATA2 <HTML 数据 >",
         "OP_ENDIF"
       ]
     }
@@ -153,11 +153,11 @@ Taproot 地址 = 内部公钥 (Internal Key) + Merkle 树根 (Merkle Root)
 
 ```
 传统 P2SH 多签：
-地址 = Hash(脚本)
+地址 = Hash (脚本)
 花费时：提供脚本 + 签名
 
 Taproot 脚本路径：
-地址 = Hash(内部公钥 + Merkle 树根)
+地址 = Hash (内部公钥 + Merkle 树根)
 花费时：提供脚本路径证明 + 脚本 + 签名
 ```
 
@@ -165,7 +165,7 @@ Taproot 脚本路径：
 
 #### 1. 传统方法的局限性
 
-**OP_RETURN 方法的问题**：
+**OP_RETURN 方法的问题 **：
 ```
 ❌ 明显的「数据存储」交易
 ❌ 80 字节限制
@@ -173,7 +173,7 @@ Taproot 脚本路径：
 ❌ 隐私性差（一看就知道是数据存储）
 ```
 
-**直接写在脚本中的问题**：
+** 直接写在脚本中的问题 **：
 ```
 ❌ 脚本大小限制
 ❌ 费用昂贵
@@ -182,20 +182,20 @@ Taproot 脚本路径：
 
 #### 2. Taproot 的巧妙解决方案
 
-**核心思想：把数据「藏」在 witness 中**
+** 核心思想：把数据「藏」在 witness 中 **
 
 ```
 传统交易结构：
 交易 = {
-  输入: [签名, 公钥],
-  输出: [地址, 金额]
+  输入: [签名，公钥],
+  输出: [地址，金额]
 }
 
 Taproot 交易结构：
 交易 = {
   输入: [简化的引用],
-  输出: [地址, 金额],
-  witness: [签名, 公钥, 脚本路径证明, 数据脚本]  ← 数据藏在这里！
+  输出: [地址，金额],
+  witness: [签名，公钥，脚本路径证明，数据脚本]  ← 数据藏在这里！
 }
 ```
 
@@ -205,13 +205,13 @@ Taproot 交易结构：
 |------|------|--------|----------|--------|
 | OP_RETURN | 高 | 差 | 80 字节 | 低 |
 | 直接脚本 | 很高 | 差 | 有限 | 低 |
-| **Taproot** | **低** | **好** | **大** | **高** |
+| **Taproot** | ** 低 ** | ** 好 ** | ** 大 ** | ** 高 ** |
 
 ### 🌳 Merkle 根的作用详解
 
 #### 1. 什么是 Merkle 根？
 
-想象一个**文件柜系统**：
+想象一个 ** 文件柜系统 **：
 
 ```
 文件柜 = 多个抽屉
@@ -223,40 +223,40 @@ Merkle 根 = 整个文件柜的「目录索引」
 
 #### 2. 为什么需要 Merkle 根？
 
-**问题**：如何在不暴露所有脚本的情况下，证明某个脚本是有效的？
+** 问题 **：如何在不暴露所有脚本的情况下，证明某个脚本是有效的？
 
-**解决方案**：Merkle 树
+** 解决方案 **：Merkle 树
 
 ```
 传统方法（暴露所有脚本）：
-地址 = Hash(脚本 1 + 脚本 2 + 脚本 3 + ...)
+地址 = Hash (脚本 1 + 脚本 2 + 脚本 3 + ...)
 问题：需要提供所有脚本，数据量大
 
 Merkle 树方法（只暴露需要的脚本）：
-地址 = Hash(内部公钥 + Merkle 根)
+地址 = Hash (内部公钥 + Merkle 根)
 花费时：只提供需要的脚本 + 路径证明
 ```
 
 #### 3. Merkle 树的工作原理
 
-**简单类比**：
+** 简单类比 **：
 
 ```
 假设你有 4 个文件：A, B, C, D
 
 传统方法：
-Hash(A + B + C + D) = 根哈希
+Hash (A + B + C + D) = 根哈希
 需要提供：A, B, C, D（全部文件）
 
 Merkle 树方法：
-Level 2: Hash(A+B), Hash(C+D)
-Level 1: Hash(Hash(A+B) + Hash(C+D)) = 根哈希
+Level 2: Hash (A+B), Hash (C+D)
+Level 1: Hash (Hash (A+B) + Hash (C+D)) = 根哈希
 需要提供：A + 路径证明（证明 A 在树中）
 ```
 
 #### 4. 实际应用场景
 
-**场景 1：只使用脚本 1**
+** 场景 1：只使用脚本 1**
 ```javascript
 // 花费时只需要提供：
 witness = [
@@ -268,7 +268,7 @@ witness = [
 ]
 ```
 
-**场景 2：只使用脚本 3**
+** 场景 2：只使用脚本 3**
 ```javascript
 // 花费时只需要提供：
 witness = [
@@ -286,11 +286,11 @@ witness = [
 
 ```
 传统方法（暴露所有脚本）：
-地址 = Hash(脚本 1 + 脚本 2 + 脚本 3 + 脚本 4)
+地址 = Hash (脚本 1 + 脚本 2 + 脚本 3 + 脚本 4)
 witness 大小 = 脚本 1 + 脚本 2 + 脚本 3 + 脚本 4 = 4 个脚本
 
 Merkle 树方法：
-地址 = Hash(内部公钥 + Merkle 根)
+地址 = Hash (内部公钥 + Merkle 根)
 witness 大小 = 脚本 1 + 2 个哈希值 = 1 个脚本 + 2 个哈希
 ```
 
@@ -425,7 +425,7 @@ BRC-20 特点：
 }
 ```
 
-**参数说明**：
+** 参数说明 **：
 - `p`: 协议标识 (brc-20)
 - `op`: 操作类型 (deploy)
 - `tick`: 代币符号
@@ -443,7 +443,7 @@ BRC-20 特点：
 }
 ```
 
-**参数说明**：
+** 参数说明 **：
 - `op`: 操作类型 (mint)
 - `tick`: 代币符号
 - `amt`: 铸造数量
@@ -459,7 +459,7 @@ BRC-20 特点：
 }
 ```
 
-**参数说明**：
+** 参数说明 **：
 - `op`: 操作类型 (transfer)
 - `tick`: 代币符号
 - `amt`: 转移数量
@@ -501,7 +501,7 @@ cd ord
 cargo build --release
 
 # 安装到系统路径
-sudo cp target/release/ord /usr/local/bin/
+sudo cp target/release/ord/usr/local/bin/
 ```
 
 #### 配置 Bitcoin Core
@@ -573,7 +573,7 @@ ord wallet inscriptions
     <title>My Bitcoin Inscription</title>
     <style>
         body { 
-            background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+            background: linear-gradient (45deg, #f0f0f0, #e0e0e0);
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 50px;
@@ -582,7 +582,7 @@ ord wallet inscriptions
             background: white;
             border-radius: 10px;
             padding: 30px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba (0,0,0,0.1);
         }
     </style>
 </head>
@@ -607,7 +607,7 @@ cat > inscription.html << 'EOF'
     <title>My Bitcoin Inscription</title>
     <style>
         body { 
-            background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+            background: linear-gradient (45deg, #f0f0f0, #e0e0e0);
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 50px;
@@ -616,7 +616,7 @@ cat > inscription.html << 'EOF'
             background: white;
             border-radius: 10px;
             padding: 30px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba (0,0,0,0.1);
         }
     </style>
 </head>
@@ -704,7 +704,7 @@ ord wallet inscription <inscription_id> --output -
 
 ### ❓ Ordinals 是否改变了比特币的本质？
 
-**答案**：没有！
+** 答案 **：没有！
 
 ```
 Ordinals 特点：
@@ -786,19 +786,19 @@ Inscription：
 
 通过本章的学习，你已经深入了解了 Ordinals 协议和 Inscriptions 技术的核心价值：
 
-- **技术原理**：理解了如何利用 Taproot 技术存储数据。
-- **应用场景**：掌握了数字艺术、域名、文档存储等应用。
-- **BRC-20 标准**：认识了比特币上的代币标准。
-- **实战操作**：学会了创建和管理 Inscription 的方法。
+- ** 技术原理 **：理解了如何利用 Taproot 技术存储数据。
+- ** 应用场景 **：掌握了数字艺术、域名、文档存储等应用。
+- **BRC-20 标准 **：认识了比特币上的代币标准。
+- ** 实战操作 **：学会了创建和管理 Inscription 的方法。
 
 Ordinals 技术为比特币开辟了新的应用领域，让比特币不仅是一个支付网络，更成为了一个数字资产平台。它展示了比特币技术的灵活性和创新潜力。
 
-> 🌟 **Ordinals 的意义**：Ordinals 技术体现了比特币社区的创新精神，在保持比特币核心价值的同时，为其开辟了新的应用可能性，让比特币真正成为了数字资产的基石。
+> 🌟 **Ordinals 的意义 **：Ordinals 技术体现了比特币社区的创新精神，在保持比特币核心价值的同时，为其开辟了新的应用可能性，让比特币真正成为了数字资产的基石。
 
 ---
 
 <div align="center">
-<a href="https://github.com/beihaili/Get-Started-with-Web3">🏠 返回主页</a> | 
-<a href="https://twitter.com/bhbtc1337">🐦 关注作者</a> | 
-<a href="https://forms.gle/QMBwL6LwZyQew1tX8">📝 加入交流群</a>
+<a href="https://github.com/beihaili/Get-Started-with-Web3">🏠 返回主页 </a> | 
+<a href="https://twitter.com/bhbtc1337">🐦 关注作者 </a> | 
+<a href="https://forms.gle/QMBwL6LwZyQew1tX8">📝 加入交流群 </a>
 </div>

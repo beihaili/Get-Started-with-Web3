@@ -1,9 +1,9 @@
 # 发送第一笔 Web3 交易
 
-![status](https://img.shields.io/badge/状态-已完成-success)
-![author](https://img.shields.io/badge/作者-beihaili-blue)
-![date](https://img.shields.io/badge/日期-2025--06-orange)
-![difficulty](https://img.shields.io/badge/难度-初级-brightgreen)
+![status](https://img.shields.io/badge/ 状态 - 已完成 - success)
+![author](https://img.shields.io/badge/ 作者 - beihaili-blue)
+![date](https://img.shields.io/badge/ 日期 - 2025--06-orange)
+![difficulty](https://img.shields.io/badge/ 难度 - 初级 - brightgreen)
 
 > 💡 自学入门 `Web3` 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 `Web3` 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1-3 讲。
 > 
@@ -18,12 +18,12 @@
 
 ## 目录
 
-- [前言](#前言)
-- [交易是什么](#交易是什么)
-- [0 成本在测试网上发出第一笔交易](#0-成本在测试网上发出第一笔交易)
-- [（选做）在主网上发出第一笔交易](#选做在主网上发出第一笔交易)
-- [常见问题](#常见问题)
-- [总结](#总结)
+- [前言](# 前言)
+- [交易是什么](# 交易是什么)
+- [0 成本在测试网上发出第一笔交易](#0 - 成本在测试网上发出第一笔交易)
+- [（选做）在主网上发出第一笔交易](# 选做在主网上发出第一笔交易)
+- [常见问题](# 常见问题)
+- [总结](# 总结)
 
 ## 前言
 
@@ -146,10 +146,10 @@ Gas 费用是区块链网络的「燃料」，用于补偿矿工或验证者的�
 
 主要区别如下：
 
-1. **价值**：测试网上的代币没有实际价值，而主网代币有真实的经济价值
-2. **安全性**：主网有更多的节点和更强的安全保障
-3. **可获得性**：测试网代币可以免费获取，主网代币需要购买
-4. **用途**：测试网用于开发和测试，主网用于实际交易
+1. ** 价值 **：测试网上的代币没有实际价值，而主网代币有真实的经济价值
+2. ** 安全性 **：主网有更多的节点和更强的安全保障
+3. ** 可获得性 **：测试网代币可以免费获取，主网代币需要购买
+4. ** 用途 **：测试网用于开发和测试，主网用于实际交易
 
 ## 总结
 
@@ -162,7 +162,7 @@ Gas 费用是区块链网络的「燃料」，用于补偿矿工或验证者的�
 ---
 
 <div align="center">
-<a href="https://github.com/beihaili/Get-Started-with-Web3">🏠 返回主页</a> | 
-<a href="https://twitter.com/bhbtc1337">🐦 关注作者</a> | 
-<a href="https://forms.gle/QMBwL6LwZyQew1tX8">📝 加入交流群</a>
+<a href="https://github.com/beihaili/Get-Started-with-Web3">🏠 返回主页 </a> | 
+<a href="https://twitter.com/bhbtc1337">🐦 关注作者 </a> | 
+<a href="https://forms.gle/QMBwL6LwZyQew1tX8">📝 加入交流群 </a>
 </div>

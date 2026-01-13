@@ -1,9 +1,9 @@
 # 使用 Web3 的第一个 DApp
 
-![status](https://img.shields.io/badge/状态-已完成-success)
-![author](https://img.shields.io/badge/作者-beihaili-blue)
-![date](https://img.shields.io/badge/日期-2025--06-orange)
-![difficulty](https://img.shields.io/badge/难度-初级-brightgreen)
+![status](https://img.shields.io/badge/ 状态 - 已完成 - success)
+![author](https://img.shields.io/badge/ 作者 - beihaili-blue)
+![date](https://img.shields.io/badge/ 日期 - 2025--06-orange)
+![difficulty](https://img.shields.io/badge/ 难度 - 初级 - brightgreen)
 
 > 💡 自学入门 `Web3` 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 `Web3` 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1-3 讲。
 > 
@@ -18,12 +18,12 @@
 
 ## 目录
 
-- [前言](#前言)
-- [DApp 是什么](#dapp-是什么)
-- [运行 DApp 的流程](#运行-dapp-的流程)
-- [使用 Web3 的第一个 DApp](#使用-web3-的第一个-dapp)
-- [常见问题](#常见问题)
-- [总结](#总结)
+- [前言](# 前言)
+- [DApp 是什么](#dapp - 是什么)
+- [运行 DApp 的流程](# 运行 - dapp - 的流程)
+- [使用 Web3 的第一个 DApp](# 使用 - web3 - 的第一个 - dapp)
+- [常见问题](# 常见问题)
+- [总结](# 总结)
 
 ## 前言
 
@@ -35,10 +35,10 @@
 
 DApp 是 `Decentralized Application` 的缩写，中文翻译为去中心化应用。DApp 是一种基于区块链的应用，它的运行不依赖于中心化的服务器，而是依赖于区块链网络。DApp 的运行结果会被写入区块链中，所有人都可以通过区块链查询到交易的执行结果。DApp 的应用场景广泛，可应用于：
 
-- **去中心化金融**：著名的有 Uniswap、Compound、Aave、Synthetix、MakerDAO、Yearn Finance、Curve Finance、Balancer 等。
-- **去中心化社交**：著名的有 Damus、Lens Protocol 等。
+- ** 去中心化金融 **：著名的有 Uniswap、Compound、Aave、Synthetix、MakerDAO、Yearn Finance、Curve Finance、Balancer 等。
+- ** 去中心化社交 **：著名的有 Damus、Lens Protocol 等。
 - **NFT**：著名的有 OpenSea、Rarible、SuperRare 等。
-- **其他**：治理、投票，著名的有 Snapshot、Gnosis 等。
+- ** 其他 **：治理、投票，著名的有 Snapshot、Gnosis 等。
 
 ## 运行 DApp 的流程
 
@@ -79,10 +79,10 @@ DApp 是 `Decentralized Application` 的缩写，中文翻译为去中心化应�
 
 DApp 与传统应用的主要区别在于：
 
-1. **存储位置**：DApp 的代码和数据存储在分布式的区块链上，而非中心化服务器。
-2. **控制权**：没有单一实体能够关闭或控制 DApp，因为它运行在去中心化网络上。
-3. **透明性**：DApp 的代码和交互完全公开透明，任何人都可以查看。
-4. **手续费**：使用 DApp 通常需要支付小额的加密货币作为 Gas 费用。
+1. ** 存储位置 **：DApp 的代码和数据存储在分布式的区块链上，而非中心化服务器。
+2. ** 控制权 **：没有单一实体能够关闭或控制 DApp，因为它运行在去中心化网络上。
+3. ** 透明性 **：DApp 的代码和交互完全公开透明，任何人都可以查看。
+4. ** 手续费 **：使用 DApp 通常需要支付小额的加密货币作为 Gas 费用。
 
 #### ❓ 为什么 Uniswap 被称为 Web3 领域的重要 DApp？
 
@@ -108,7 +108,7 @@ Uniswap 被称为 Web3 领域的重要 DApp 因为：
 ---
 
 <div align="center">
-<a href="https://github.com/beihaili/Get-Started-with-Web3">🏠 返回主页</a> | 
-<a href="https://twitter.com/bhbtc1337">🐦 关注作者</a> | 
-<a href="https://forms.gle/QMBwL6LwZyQew1tX8">📝 加入交流群</a>
+<a href="https://github.com/beihaili/Get-Started-with-Web3">🏠 返回主页 </a> | 
+<a href="https://twitter.com/bhbtc1337">🐦 关注作者 </a> | 
+<a href="https://forms.gle/QMBwL6LwZyQew1tX8">📝 加入交流群 </a>
 </div>

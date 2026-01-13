@@ -1,11 +1,11 @@
 # 区块链彩蛋解读指南：b10c...eb5d 玩了哪些「梗」？
 
-> 🧭 **在比特币世界里，有些交易不只是交易，而是技术、历史与文化的多重彩蛋。这篇文章带你看懂 b10c...eb5d 这笔神级彩蛋交易背后的所有隐藏细节。**
+> 🧭 ** 在比特币世界里，有些交易不只是交易，而是技术、历史与文化的多重彩蛋。这篇文章带你看懂 b10c...eb5d 这笔神级彩蛋交易背后的所有隐藏细节。**
 
-![](https://img.shields.io/badge/作者-CloseArk-blue)
-![](https://img.shields.io/badge/难度-硬核深挖-red)
-![](https://img.shields.io/badge/分类-比特币交易-green)
-![](https://img.shields.io/badge/状态-已归档-purple)
+![](https://img.shields.io/badge/ 作者 - CloseArk-blue)
+![](https://img.shields.io/badge/ 难度 - 硬核深挖 - red)
+![](https://img.shields.io/badge/ 分类 - 比特币交易 - green)
+![](https://img.shields.io/badge/ 状态 - 已归档 - purple)
 
 ## 🌟 前言：当交易也成为艺术
 
@@ -141,13 +141,13 @@ b10c...eb5d 这笔交易，就是这样的神作。
 
 > **「b10c...eb5d 这笔交易，就像是比特币史上的一次彩蛋盛宴，把协议历史、漏洞演化、文化玩梗与密码学极客精神浓缩在一个 TXID 里。」**
 
-在技术细节之外，它更像是一个写给所有比特币人的**密码学纪念碑** —— 这是只有认真学习比特币协议与文化的人，才能完全读懂的一种浪漫。
+在技术细节之外，它更像是一个写给所有比特币人的 ** 密码学纪念碑 ** —— 这是只有认真学习比特币协议与文化的人，才能完全读懂的一种浪漫。
 
 ---
 
 ## 参考资料
 
-- [b10c...eb5d 玩了哪些「梗」？](https://justloseit.top/b10ceb5d%E7%8E%A9%E6%A2%97)
+- [b10c...eb5d 玩了哪些「梗」？](https://justloseit.top/b10ceb5d% E7%8E% A9% E6% A2%97)
 - [Analysis of 0xB10C's weird bitcoin transaction](https://stacker.news/items/593226)
 - [Definitive explanation of my weird Bitcoin transaction](https://stacker.news/items/600187)
 - [On anyone-can-spend Pay-to-Taproot outputs before activation](https://b10c.me/blog/007-spending-p2tr-pre-activation)
@@ -159,6 +159,6 @@ b10c...eb5d 这笔交易，就是这样的神作。
 ---
 
 <div align="center">
-<a href="https://github.com/beihaili/Get-Started-with-Web3">🏠 返回主页</a> | 
-<a href="https://mempool.space/tx/b10c0000004da5a9d1d9b4ae32e09f0b3e62d21a5cce5428d4ad714fb444eb5d">🔗 查看完整交易</a>
+<a href="https://github.com/beihaili/Get-Started-with-Web3">🏠 返回主页 </a> | 
+<a href="https://mempool.space/tx/b10c0000004da5a9d1d9b4ae32e09f0b3e62d21a5cce5428d4ad714fb444eb5d">🔗 查看完整交易 </a>
 </div>

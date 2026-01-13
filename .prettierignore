@@ -1,0 +1,8 @@
+dist
+node_modules
+.git
+*.lock
+package-lock.json
+public
+_book
+.cache

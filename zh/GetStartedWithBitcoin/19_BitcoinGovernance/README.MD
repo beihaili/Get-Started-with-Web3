@@ -1,9 +1,9 @@
 # 第 19 讲：比特币扩容与治理
 
-![status](https://img.shields.io/badge/状态-已完成-success)
-![author](https://img.shields.io/badge/作者-beihaili-blue)
-![date](https://img.shields.io/badge/日期-2025--06-orange)
-![difficulty](https://img.shields.io/badge/难度-高级-red)
+![status](https://img.shields.io/badge/ 状态 - 已完成 - success)
+![author](https://img.shields.io/badge/ 作者 - beihaili-blue)
+![date](https://img.shields.io/badge/ 日期 - 2025--06-orange)
+![difficulty](https://img.shields.io/badge/ 难度 - 高级 - red)
 
 > 💡 自学入门 `Web3` 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 `Web3` 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1-3 讲。
 > 
@@ -17,18 +17,18 @@
 
 ## 目录
 
-- [前言](#前言)
-- [比特币扩容之争 (2015 - 2017)](#比特币扩容之争-2015-2017)
-- [软分叉 vs 硬分叉：技术机制详解](#软分叉-vs-硬分叉技术机制详解)
-- [SegWit 激活的政治过程](#segwit-激活的政治过程)
-- [比特币分裂： BTC vs BCH](#比特币分裂-btc-vs-bch)
-- [比特币治理机制](#比特币治理机制)
-- [升级激活机制演进](#升级激活机制演进)
-- [社区共识的形成](#社区共识的形成)
-- [历史教训与未来展望](#历史教训与未来展望)
-- [实战：参与比特币治理](#实战参与比特币治理)
-- [常见问题](#常见问题)
-- [结语](#结语)
+- [前言](# 前言)
+- [比特币扩容之争 (2015 - 2017)](# 比特币扩容之争 - 2015-2017)
+- [软分叉 vs 硬分叉：技术机制详解](# 软分叉 - vs - 硬分叉技术机制详解)
+- [SegWit 激活的政治过程](#segwit - 激活的政治过程)
+- [比特币分裂： BTC vs BCH](# 比特币分裂 - btc-vs-bch)
+- [比特币治理机制](# 比特币治理机制)
+- [升级激活机制演进](# 升级激活机制演进)
+- [社区共识的形成](# 社区共识的形成)
+- [历史教训与未来展望](# 历史教训与未来展望)
+- [实战：参与比特币治理](# 实战参与比特币治理)
+- [常见问题](# 常见问题)
+- [结语](# 结语)
 
 ## 前言
 
@@ -61,7 +61,7 @@
 → 网络经常满载，费用飙升
 ```
 
-**拥堵的直接影响**：
+** 拥堵的直接影响 **：
 - 交易确认时间延长（数小时甚至数天）。
 - 手续费急剧上升（从几分钱涨到几十美元）。
 - 用户体验恶化。
@@ -71,7 +71,7 @@
 
 #### 阵营 1：大区块派 (Big Blockers)
 
-**核心观点**：直接扩大区块大小
+** 核心观点 **：直接扩大区块大小
 
 ```
 解决方案：硬分叉扩容
@@ -96,7 +96,7 @@
 
 #### 阵营 2：小区块派 (Small Blockers)
 
-**核心观点**：优化现有区块 + 层级扩展
+** 核心观点 **：优化现有区块 + 层级扩展
 
 ```
 解决方案：软分叉优化 + Layer 2
@@ -144,14 +144,14 @@
 
 #### 时间线回顾
 
-**2015 年 6 月**： Bitcoin XT 发布（支持 8 MB 区块）。
-**2015 年 12 月**：香港圆桌会议，临时达成妥协。
-**2016 年 2 月**： Bitcoin Classic 发布（支持 2 MB 区块）。
-**2016 年 12 月**： Bitcoin Unlimited 发布（动态区块大小）。
-**2017 年 3 月**：纽约协议 (SegWit + 2 MB 硬分叉)。
-**2017 年 5 月**： UASF (用户激活软分叉) 运动兴起。
-**2017 年 8 月 1 日**：比特币现金 (BCH) 分叉。
-**2017 年 8 月 24 日**： SegWit 激活。
+**2015 年 6 月 **： Bitcoin XT 发布（支持 8 MB 区块）。
+**2015 年 12 月 **：香港圆桌会议，临时达成妥协。
+**2016 年 2 月 **： Bitcoin Classic 发布（支持 2 MB 区块）。
+**2016 年 12 月 **： Bitcoin Unlimited 发布（动态区块大小）。
+**2017 年 3 月 **：纽约协议 (SegWit + 2 MB 硬分叉)。
+**2017 年 5 月 **： UASF (用户激活软分叉) 运动兴起。
+**2017 年 8 月 1 日 **：比特币现金 (BCH) 分叉。
+**2017 年 8 月 24 日 **： SegWit 激活。
 
 #### 社区分裂的表现
 
@@ -177,7 +177,7 @@
 
 #### 软分叉 (Soft Fork)
 
-**定义**：收紧或添加新规则的升级，新规则是旧规则的子集。
+** 定义 **：收紧或添加新规则的升级，新规则是旧规则的子集。
 
 ```
 软分叉特点：
@@ -192,12 +192,12 @@
 - 新节点：按更严格规则验证
 ```
 
-**软分叉例子： SegWit (BIP 141)**
+** 软分叉例子： SegWit (BIP 141)**
 ```javascript
 // 老节点看到的 SegWit 交易
-function isValidTransaction(tx) {
+function isValidTransaction (tx) {
     // 基础验证
-    if (!basicValidation(tx)) return false;
+    if (!basicValidation (tx)) return false;
     
     // 对于 witness 数据，老节点认为「任何人可花费」
     // 但不会主动创建这样的交易
@@ -205,13 +205,13 @@ function isValidTransaction(tx) {
 }
 
 // 新节点的验证
-function isValidTransactionNew(tx) {
+function isValidTransactionNew (tx) {
     // 基础验证
-    if (!basicValidation(tx)) return false;
+    if (!basicValidation (tx)) return false;
     
     // 额外的 witness 验证
-    if (isSegWitTx(tx)) {
-        return validateWitness(tx);  // 严格验证
+    if (isSegWitTx (tx)) {
+        return validateWitness (tx);  // 严格验证
     }
     
     return true;
@@ -220,7 +220,7 @@ function isValidTransactionNew(tx) {
 
 #### 硬分叉 (Hard Fork)
 
-**定义**：放宽或修改规则的升级，打破向后兼容性。
+** 定义 **：放宽或修改规则的升级，打破向后兼容性。
 
 ```
 硬分叉特点：
@@ -236,22 +236,22 @@ function isValidTransactionNew(tx) {
 - 网络分裂：两条不兼容的链
 ```
 
-**硬分叉例子：区块大小升级**
+** 硬分叉例子：区块大小升级 **
 ```javascript
 // 硬分叉前的验证
-function isValidBlock(block) {
+function isValidBlock (block) {
     if (block.size > 1000000) {  // 1 MB 限制
         return false;  // 硬拒绝
     }
-    return validateTransactions(block);
+    return validateTransactions (block);
 }
 
 // 硬分叉后的验证
-function isValidBlockNew(block) {
+function isValidBlockNew (block) {
     if (block.size > 2000000) {  // 2 MB 限制
         return false;
     }
-    return validateTransactions(block);
+    return validateTransactions (block);
 }
 
 // 结果：老节点会拒绝 > 1 MB 的新区块
@@ -332,7 +332,7 @@ function isValidBlockNew(block) {
 
 #### 纽约协议 (2017 年 5 月)
 
-**协议内容**：
+** 协议内容 **：
 ```
 SegWit2x 计划：
 1. 先激活 SegWit（2017 年 8 月）
@@ -348,11 +348,11 @@ SegWit2x 计划：
 - 在 3 个月内进行 2 MB 硬分叉
 ```
 
-**问题**： Bitcoin Core 开发团队拒绝参与。
+** 问题 **： Bitcoin Core 开发团队拒绝参与。
 
 #### UASF (用户激活软分叉) 运动
 
-**背景**：矿工对 SegWit 激活消极。
+** 背景 **：矿工对 SegWit 激活消极。
 
 ```
 UASF BIP 148 提案：
@@ -366,7 +366,7 @@ UASF BIP 148 提案：
 「用户才是比特币的真正主人」
 ```
 
-**UASF 的威胁**：
+**UASF 的威胁 **：
 ```
 如果 UASF 成功：
 - 会创造一条只包含 SegWit 区块的链
@@ -602,7 +602,7 @@ BIP 类型：
    - 例子： BIP 1 (BIP 流程本身)
 ```
 
-**BIP 流程图**：
+**BIP 流程图 **：
 ```
 想法 / 概念
     ↓
@@ -913,13 +913,13 @@ Taproot 激活参数：
 
 #### 1. 技术贡献
 
-**运行比特币节点**：
+** 运行比特币节点 **：
 - 下载并运行 Bitcoin Core 客户端。
 - 配置测试网节点参与网络测试。
 - 帮助验证网络的稳定性和安全性。
 - 为网络提供去中心化支持。
 
-**参与代码开发**：
+** 参与代码开发 **：
 - 在 GitHub 上关注 Bitcoin Core 仓库。
 - 学习 C++ 和比特币代码结构。
 - 从小的 bug 修复开始贡献。
@@ -927,13 +927,13 @@ Taproot 激活参数：
 
 #### 2. 代码审查参与
 
-**审查 Pull Request**：
+** 审查 Pull Request**：
 - 检查代码是否包含充分的测试。
 - 验证文档是否得到相应更新。
 - 确认代码风格符合项目规范。
 - 评估变更是否可能破坏兼容性。
 
-**审查要点**：
+** 审查要点 **：
 - 功能正确性和安全性。
 - 性能影响和资源消耗。
 - 向后兼容性考虑。
@@ -941,13 +941,13 @@ Taproot 激活参数：
 
 #### 3. 运行信号节点
 
-**监控网络升级**：
+** 监控网络升级 **：
 - 运行支持 BIP 9 版本位的节点。
 - 监控矿工对升级提案的信号支持。
 - 跟踪激活进度和社区反应。
 - 参与升级测试和验证。
 
-**信号监控内容**：
+** 信号监控内容 **：
 - 版本位信号统计。
 - 支持率变化趋势。
 - 激活阈值进度。
@@ -1098,33 +1098,33 @@ Taproot 激活参数：
 
 通过本章的学习，我们深刻理解了：
 
-**技术维度**：
+** 技术维度 **：
 - 软分叉和硬分叉的技术差异和权衡。
 - SegWit 如何通过巧妙设计实现向后兼容。
 - 不同激活机制的优劣和适用场景。
 
-**治理维度**：
+** 治理维度 **：
 - 去中心化治理的复杂性和挑战。
 - 多方利益相关者的博弈和制衡。
 - 共识形成的机制和影响因素。
 
-**历史维度**：
+** 历史维度 **：
 - 扩容之争的完整过程和各方立场。
 - 比特币分裂的原因和后果。
 - 市场对不同技术路线的验证。
 
 ### 💡 深层启示
 
-**1. 技术中性的神话**
+**1. 技术中性的神话 **
 看似纯技术的问题往往涉及深层的价值观和利益分歧。 SegWit vs 大区块的争论，本质上是关于比特币应该是什么的哲学辩论。
 
-**2. 去中心化治理的艺术**
+**2. 去中心化治理的艺术 **
 没有中央权威的系统如何做出集体决策？比特币的经验表明，这需要精巧的制衡机制、充分的沟通协调，以及最终的市场验证。
 
-**3. 妥协的价值**
+**3. 妥协的价值 **
 在分布式系统中，妥协往往比完美解决方案更重要。 SegWit 的成功在于它找到了技术可行性和政治可接受性的平衡点。
 
-**4. 时间的力量**
+**4. 时间的力量 **
 短期的技术争议可能引起激烈分歧，但长期来看，市场会选择最符合用户需求的解决方案。 BTC vs BCH 的市场表现证明了这一点。
 
 ### 🚀 展望未来
@@ -1134,16 +1134,16 @@ Taproot 激活参数：
 - 未来升级将面临量子计算、隐私增强等新挑战。
 - 国际化和多元化将使治理更加复杂但也更加包容。
 
-比特币扩容之争的历史告诉我们：在去中心化的世界里，**技术进步需要社会共识的支撑，而共识的达成需要时间、耐心和智慧**。
+比特币扩容之争的历史告诉我们：在去中心化的世界里，** 技术进步需要社会共识的支撑，而共识的达成需要时间、耐心和智慧 **。
 
 作为比特币生态的参与者，我们每个人都是这个去中心化治理实验的一部分。无论是运行节点、参与讨论，还是简单地使用比特币，我们都在为这个网络的未来投票。
 
-这就是比特币最伟大的创新之一： **它不仅创造了数字货币，更探索了人类如何在没有中央权威的情况下进行大规模协作**。
+这就是比特币最伟大的创新之一： ** 它不仅创造了数字货币，更探索了人类如何在没有中央权威的情况下进行大规模协作 **。
 
 ---
 
 <div align="center">
-<a href="https://github.com/beihaili/Get-Started-with-Web3">🏠 返回主页</a> | 
-<a href="https://twitter.com/bhbtc1337">🐦 关注作者</a> | 
-<a href="https://forms.gle/QMBwL6LwZyQew1tX8">📝 加入交流群</a>
+<a href="https://github.com/beihaili/Get-Started-with-Web3">🏠 返回主页 </a> | 
+<a href="https://twitter.com/bhbtc1337">🐦 关注作者 </a> | 
+<a href="https://forms.gle/QMBwL6LwZyQew1tX8">📝 加入交流群 </a>
 </div>

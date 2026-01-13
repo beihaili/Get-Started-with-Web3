@@ -1,9 +1,9 @@
 # 第 07 讲：高级交易应用
 
-![status](https://img.shields.io/badge/状态-已完成-success)
-![author](https://img.shields.io/badge/作者-beihaili-blue)
-![date](https://img.shields.io/badge/日期-2025--06-orange)
-![difficulty](https://img.shields.io/badge/难度-高级-red)
+![status](https://img.shields.io/badge/ 状态 - 已完成 - success)
+![author](https://img.shields.io/badge/ 作者 - beihaili-blue)
+![date](https://img.shields.io/badge/ 日期 - 2025--06-orange)
+![difficulty](https://img.shields.io/badge/ 难度 - 高级 - red)
 
 > 💡 自学入门 `Web3` 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 `Web3` 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1-3 讲。
 > 
@@ -17,13 +17,13 @@
 
 ## 目录
 
-- [前言](#前言)
-- [复杂交易类型分析](#复杂交易类型分析)
-- [地址格式演进](#地址格式演进)
-- [高级交易应用](#高级交易应用)
-- [实战演练：高级交易](#实战演练高级交易)
-- [常见问题](#常见问题)
-- [结语](#结语)
+- [前言](# 前言)
+- [复杂交易类型分析](# 复杂交易类型分析)
+- [地址格式演进](# 地址格式演进)
+- [高级交易应用](# 高级交易应用)
+- [实战演练：高级交易](# 实战演练高级交易)
+- [常见问题](# 常见问题)
+- [结语](# 结语)
 
 ## 前言
 
@@ -35,7 +35,7 @@
 
 ### OP_RETURN 输出（自定义数据存储）
 
-**重要说明**：OP_RETURN 是交易**输出 (Outputs)** 的一种特殊类型！
+** 重要说明 **：OP_RETURN 是交易 ** 输出 (Outputs)** 的一种特殊类型！
 
 ```json
 {
@@ -49,13 +49,13 @@
 }
 ```
 
-**分析**：
-- **这就是一个标准的交易输出**，和 P2PKH 输出结构完全一样。
+** 分析 **：
+- ** 这就是一个标准的交易输出 **，和 P2PKH 输出结构完全一样。
 - `value`: 0 BTC（无价值转移，专门用于数据存储）。
 - `n`: 3（这是交易的第 4 个输出，索引从 0 开始）。
 - **scriptPubKey**：锁定脚本，这里是 OP_RETURN 类型。
 - `48656c6c6f20426974636f696e` 解码后是「Hello Bitcoin」。
-- 这种输出**无法被花费**，数据永久保存在区块链上。
+- 这种输出 ** 无法被花费 **，数据永久保存在区块链上。
 
 ### 📊 比特币交易结构总览
 
@@ -81,16 +81,16 @@
 }
 ```
 
-> 💡 **这就是自定义数据的存储方式！**
+> 💡 ** 这就是自定义数据的存储方式！**
 > 
-> **常见用途**：
-> - 📝 **留言**：在转账时附上文字信息
-> - 🏷️ **标记**：记录交易用途或分类
-> - 📄 **文档哈希**：存储文件的哈希值作为存在性证明
-> - 🎨 **艺术创作**：一些早期的区块链艺术项目
+> ** 常见用途 **：
+> - 📝 ** 留言 **：在转账时附上文字信息
+> - 🏷️ ** 标记 **：记录交易用途或分类
+> - 📄 ** 文档哈希 **：存储文件的哈希值作为存在性证明
+> - 🎨 ** 艺术创作 **：一些早期的区块链艺术项目
 > 
-> **限制**：
-> - 最多存储 **80 字节** 的数据
+> ** 限制 **：
+> - 最多存储 **80 字节 ** 的数据
 > - 需要支付少量手续费
 > - 数据一旦上链就无法修改或删除
 
@@ -181,14 +181,14 @@ Taproot 采用率：
 #### 从 Legacy 到 SegWit
 
 ```python
-def convert_legacy_to_segwit(legacy_address):
+def convert_legacy_to_segwit (legacy_address):
     """将 Legacy 地址转换为 SegWit 地址"""
     
     # 1. 从 Legacy 地址提取公钥哈希
-    pubkey_hash = decode_base58(legacy_address)
+    pubkey_hash = decode_base58 (legacy_address)
     
     # 2. 创建 SegWit 地址
-    segwit_address = encode_bech32(pubkey_hash, "bc", 0)
+    segwit_address = encode_bech32 (pubkey_hash, "bc", 0)
     
     return segwit_address
 ```
@@ -196,17 +196,17 @@ def convert_legacy_to_segwit(legacy_address):
 #### 从 SegWit 到 Taproot
 
 ```python
-def convert_segwit_to_taproot(segwit_address):
+def convert_segwit_to_taproot (segwit_address):
     """将 SegWit 地址转换为 Taproot 地址"""
     
     # 1. 从 SegWit 地址提取公钥哈希
-    pubkey_hash = decode_bech32(segwit_address)
+    pubkey_hash = decode_bech32 (segwit_address)
     
     # 2. 创建 Taproot 内部公钥
-    internal_key = create_taproot_internal_key(pubkey_hash)
+    internal_key = create_taproot_internal_key (pubkey_hash)
     
     # 3. 生成 Taproot 地址
-    taproot_address = create_taproot_address(internal_key)
+    taproot_address = create_taproot_address (internal_key)
     
     return taproot_address
 ```
@@ -221,7 +221,7 @@ def convert_segwit_to_taproot(segwit_address):
 ```json
 {
   "locktime": 700000,  // 区块高度或时间戳
-  // ... 其他交易数据
+  //... 其他交易数据
 }
 ```
 
@@ -286,7 +286,7 @@ Bob 的莱特币锁定脚本：
 #### 原子交换实现
 
 ```python
-def create_atomic_swap(secret_hash, recipient_pubkey, timeout):
+def create_atomic_swap (secret_hash, recipient_pubkey, timeout):
     """创建原子交换脚本"""
     
     script = f"""
@@ -319,15 +319,15 @@ def create_atomic_swap(secret_hash, recipient_pubkey, timeout):
 企业级批量操作：
 
 ```python
-def create_batch_transaction(recipients):
+def create_batch_transaction (recipients):
     """创建批量交易"""
     
     outputs = {}
     for recipient in recipients:
-        outputs[recipient["address"]] = recipient["amount"]
+        outputs [recipient ["address"]] = recipient ["amount"]
     
     # 创建包含多个输出的交易
-    raw_tx = bitcoin_rpc("createrawtransaction", [inputs, outputs])
+    raw_tx = bitcoin_rpc ("createrawtransaction", [inputs, outputs])
     return raw_tx
 ```
 
@@ -339,7 +339,7 @@ def create_batch_transaction(recipients):
 import requests
 import json
 
-def bitcoin_rpc(method, params=[]):
+def bitcoin_rpc (method, params=[]):
     url = "http://localhost:8332"
     headers = {'content-type': 'application/json'}
     
@@ -350,10 +350,10 @@ def bitcoin_rpc(method, params=[]):
         "id": 0,
     }
     
-    response = requests.post(url, data=json.dumps(payload), headers=headers, auth=('user', 'password'))
-    return response.json()
+    response = requests.post (url, data=json.dumps (payload), headers=headers, auth=('user', 'password'))
+    return response.json ()
 
-def create_multisig_address():
+def create_multisig_address ():
     # 1. 生成公钥（示例）
     pubkeys = [
         "03a1b2c3d4e5f6...",  # 公钥 1
@@ -362,21 +362,21 @@ def create_multisig_address():
     ]
     
     # 2. 创建 2-of-3 多签地址
-    result = bitcoin_rpc("createmultisig", [2, pubkeys])
+    result = bitcoin_rpc ("createmultisig", [2, pubkeys])
     
-    print(f"多签地址: {result['result']['address']}")
-    print(f"赎回脚本: {result['result']['redeemScript']}")
+    print (f"多签地址: {result ['result']['address']}")
+    print (f"赎回脚本: {result ['result']['redeemScript']}")
     
-    return result['result']
+    return result ['result']
 
 # 执行创建多签地址
-multisig_info = create_multisig_address()
+multisig_info = create_multisig_address ()
 ```
 
 ### 创建 SegWit 交易
 
 ```python
-def create_segwit_transaction():
+def create_segwit_transaction ():
     # 1. 选择 SegWit UTXO
     inputs = [
         {
@@ -392,28 +392,28 @@ def create_segwit_transaction():
     }
     
     # 3. 创建原始交易
-    raw_tx = bitcoin_rpc("createrawtransaction", [inputs, outputs])
+    raw_tx = bitcoin_rpc ("createrawtransaction", [inputs, outputs])
     
     # 4. 签名（SegWit 会自动处理 witness 数据）
-    signed_tx = bitcoin_rpc("signrawtransactionwithwallet", [raw_tx['result']])
+    signed_tx = bitcoin_rpc ("signrawtransactionwithwallet", [raw_tx ['result']])
     
     # 5. 广播
-    if signed_tx['result']['complete']:
-        txid = bitcoin_rpc("sendrawtransaction", [signed_tx['result']['hex']])
-        print(f"SegWit 交易已发送：{txid['result']}")
+    if signed_tx ['result']['complete']:
+        txid = bitcoin_rpc ("sendrawtransaction", [signed_tx ['result']['hex']])
+        print (f"SegWit 交易已发送：{txid ['result']}")
     
-    return txid['result']
+    return txid ['result']
 ```
 
 ### 创建 Taproot 交易
 
 ```python
-def create_taproot_transaction():
+def create_taproot_transaction ():
     # 1. 生成 Taproot 密钥对
-    internal_key = generate_taproot_key()
+    internal_key = generate_taproot_key ()
     
     # 2. 创建 Taproot 地址
-    taproot_address = create_taproot_address(internal_key)
+    taproot_address = create_taproot_address (internal_key)
     
     # 3. 构建交易
     inputs = [{"txid": "previous_utxo", "vout": 0}]
@@ -423,59 +423,59 @@ def create_taproot_transaction():
     }
     
     # 4. 创建和签名交易
-    raw_tx = bitcoin_rpc("createrawtransaction", [inputs, outputs])
-    signed_tx = bitcoin_rpc("signrawtransactionwithwallet", [raw_tx['result']])
+    raw_tx = bitcoin_rpc ("createrawtransaction", [inputs, outputs])
+    signed_tx = bitcoin_rpc ("signrawtransactionwithwallet", [raw_tx ['result']])
     
-    return signed_tx['result']['hex']
+    return signed_tx ['result']['hex']
 ```
 
 ### 监控复杂交易
 
 ```python
-def analyze_transaction(txid):
+def analyze_transaction (txid):
     """分析交易类型和特征"""
     
     # 获取交易详情
-    tx_info = bitcoin_rpc("getrawtransaction", [txid, True])
+    tx_info = bitcoin_rpc ("getrawtransaction", [txid, True])
     
     # 分析输入类型
     input_types = []
-    for vin in tx_info['result']['vin']:
+    for vin in tx_info ['result']['vin']:
         if 'witness' in vin:
-            input_types.append("SegWit / Taproot")
+            input_types.append ("SegWit / Taproot")
         else:
-            input_types.append("Legacy")
+            input_types.append ("Legacy")
     
     # 分析输出类型
     output_types = []
-    for vout in tx_info['result']['vout']:
-        script_type = vout['scriptPubKey']['type']
-        output_types.append(script_type)
+    for vout in tx_info ['result']['vout']:
+        script_type = vout ['scriptPubKey']['type']
+        output_types.append (script_type)
     
     # 分析交易特征
     features = {
         "input_types": input_types,
         "output_types": output_types,
-        "is_segwit": any("witness" in vin for vin in tx_info['result']['vin']),
-        "has_op_return": any("nulldata" in vout['scriptPubKey']['type'] for vout in tx_info['result']['vout']),
-        "size": len(tx_info['result']['hex']) // 2,
-        "weight": calculate_weight(tx_info['result'])
+        "is_segwit": any ("witness" in vin for vin in tx_info ['result']['vin']),
+        "has_op_return": any ("nulldata" in vout ['scriptPubKey']['type'] for vout in tx_info ['result']['vout']),
+        "size": len (tx_info ['result']['hex']) // 2,
+        "weight": calculate_weight (tx_info ['result'])
     }
     
     return features
 
-def calculate_weight(tx):
+def calculate_weight (tx):
     """计算交易权重"""
     
     # 基础大小
-    base_size = len(tx['hex']) // 2
+    base_size = len (tx ['hex']) // 2
     
     # Witness 大小
     witness_size = 0
-    for vin in tx['vin']:
+    for vin in tx ['vin']:
         if 'witness' in vin:
-            for witness_item in vin['witness']:
-                witness_size += len(witness_item) // 2
+            for witness_item in vin ['witness']:
+                witness_size += len (witness_item) // 2
     
     # 权重计算
     weight = base_size * 4 + witness_size
@@ -486,7 +486,7 @@ def calculate_weight(tx):
 ### 创建 OP_RETURN 交易
 
 ```python
-def create_op_return_transaction(message):
+def create_op_return_transaction (message):
     """创建包含 OP_RETURN 的交易"""
     
     # 1. 准备输入
@@ -499,14 +499,14 @@ def create_op_return_transaction(message):
     }
     
     # 3. 创建交易
-    raw_tx = bitcoin_rpc("createrawtransaction", [inputs, outputs])
+    raw_tx = bitcoin_rpc ("createrawtransaction", [inputs, outputs])
     
     # 4. 签名和广播
-    signed_tx = bitcoin_rpc("signrawtransactionwithwallet", [raw_tx['result']])
+    signed_tx = bitcoin_rpc ("signrawtransactionwithwallet", [raw_tx ['result']])
     
-    if signed_tx['result']['complete']:
-        txid = bitcoin_rpc("sendrawtransaction", [signed_tx['result']['hex']])
-        return txid['result']
+    if signed_tx ['result']['complete']:
+        txid = bitcoin_rpc ("sendrawtransaction", [signed_tx ['result']['hex']])
+        return txid ['result']
     
     return None
 ```
@@ -571,23 +571,23 @@ HTLC：
 ### ❓ 如何验证 Inscription 的真实性？
 
 ```python
-def verify_inscription(witness_data):
+def verify_inscription (witness_data):
     """验证 Inscription 的真实性"""
     
     # 1. 解析 witness 数据
-    signature = witness_data[0]
-    internal_key = witness_data[1]
-    merkle_proof = witness_data[2]
-    script_data = witness_data[3:]
+    signature = witness_data [0]
+    internal_key = witness_data [1]
+    merkle_proof = witness_data [2]
+    script_data = witness_data [3:]
     
     # 2. 验证 Merkle 路径
-    if not verify_merkle_proof(merkle_proof, script_data):
+    if not verify_merkle_proof (merkle_proof, script_data):
         return False
     
     # 3. 验证 Ordinals 格式
-    if (script_data[0] == "OP_0" and 
-        script_data[1] == "OP_IF" and
-        script_data[3] == "6f7264"):  # "ord"
+    if (script_data [0] == "OP_0" and 
+        script_data [1] == "OP_IF" and
+        script_data [3] == "6f7264"):  # "ord"
         return True
     
     return False
@@ -597,25 +597,25 @@ def verify_inscription(witness_data):
 
 Taproot 通过以下方式增强隐私：
 
-1. **脚本路径隐藏**：只有花费时才暴露实际使用的脚本。
-2. **签名聚合**：多个签名看起来像一个签名。
-3. **地址统一**：所有 Taproot 地址格式相同。
-4. **条件隐藏**：复杂条件隐藏在 Merkle 树中。
+1. ** 脚本路径隐藏 **：只有花费时才暴露实际使用的脚本。
+2. ** 签名聚合 **：多个签名看起来像一个签名。
+3. ** 地址统一 **：所有 Taproot 地址格式相同。
+4. ** 条件隐藏 **：复杂条件隐藏在 Merkle 树中。
 
 ## 结语
 
 通过本章的学习，你已经掌握了比特币交易的高级特性：
 
-- **复杂交易类型**：理解了 OP_RETURN 和各种特殊输出。
-- **地址格式演进**：认识了比特币技术发展的历程。
-- **高级交易应用**：学会了时间锁定、HTLC、原子交换等技术。
-- **实战演练**：掌握了创建和管理高级交易的方法。
+- ** 复杂交易类型 **：理解了 OP_RETURN 和各种特殊输出。
+- ** 地址格式演进 **：认识了比特币技术发展的历程。
+- ** 高级交易应用 **：学会了时间锁定、HTLC、原子交换等技术。
+- ** 实战演练 **：掌握了创建和管理高级交易的方法。
 
 这些技术不仅提升了比特币的功能性和效率，更为 Layer 2 解决方案（如闪电网络）、DeFi 应用和其他创新奠定了坚实基础。
 
 ### 🌟 技术演进的意义
 
-**从简单到复杂**：
+** 从简单到复杂 **：
 ```
 2009 年：基础 P2PKH 交易
 2012 年：P2SH 多签支持
@@ -624,7 +624,7 @@ Taproot 通过以下方式增强隐私：
 2023 年：Ordinals 数字资产
 ```
 
-**从单一到多元**：
+** 从单一到多元 **：
 ```
 最初：单纯的货币转账
 现在：智能合约、数字资产、隐私保护
@@ -635,27 +635,27 @@ Taproot 通过以下方式增强隐私：
 
 比特币的技术演进仍在继续：
 
-1. **Layer 2 发展**：闪电网络、Liquid 等。
-2. **隐私技术**：CoinJoin、Taproot 等。
-3. **智能合约**：更复杂的脚本功能。
-4. **数字资产**：Ordinals、BRC-20 等。
-5. **跨链技术**：原子交换等。
+1. **Layer 2 发展 **：闪电网络、Liquid 等。
+2. ** 隐私技术 **：CoinJoin、Taproot 等。
+3. ** 智能合约 **：更复杂的脚本功能。
+4. ** 数字资产 **：Ordinals、BRC-20 等。
+5. ** 跨链技术 **：原子交换等。
 
 ### 💡 学习建议
 
-1. **实践为主**：多动手创建不同类型的交易。
-2. **关注发展**：跟踪比特币技术的最新进展。
-3. **理解原理**：深入理解每个技术背后的设计思想。
-4. **安全第一**：在测试网络上充分测试后再在主网使用。
+1. ** 实践为主 **：多动手创建不同类型的交易。
+2. ** 关注发展 **：跟踪比特币技术的最新进展。
+3. ** 理解原理 **：深入理解每个技术背后的设计思想。
+4. ** 安全第一 **：在测试网络上充分测试后再在主网使用。
 
 在下一章《比特币扩容与治理》中，我们将深入探讨比特币历史上的技术争论、升级机制和社区治理，了解这些技术是如何在激烈的讨论中诞生和发展的。
 
-> 🌟 **比特币的哲学**：这些技术升级体现了比特币的核心价值观：去中心化、安全性、隐私性和可扩展性，同时保持了向后兼容性和渐进式发展。
+> 🌟 ** 比特币的哲学 **：这些技术升级体现了比特币的核心价值观：去中心化、安全性、隐私性和可扩展性，同时保持了向后兼容性和渐进式发展。
 
 ---
 
 <div align="center">
-<a href="https://github.com/beihaili/Get-Started-with-Web3">🏠 返回主页</a> | 
-<a href="https://twitter.com/bhbtc1337">🐦 关注作者</a> | 
-<a href="https://forms.gle/QMBwL6LwZyQew1tX8">📝 加入交流群</a>
+<a href="https://github.com/beihaili/Get-Started-with-Web3">🏠 返回主页 </a> | 
+<a href="https://twitter.com/bhbtc1337">🐦 关注作者 </a> | 
+<a href="https://forms.gle/QMBwL6LwZyQew1tX8">📝 加入交流群 </a>
 </div>

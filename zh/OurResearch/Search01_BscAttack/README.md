@@ -2,15 +2,15 @@
 
 # BSC 链上的攻击：为何发生及其潜在的危害
 
-<img src="https://img.shields.io/badge/区块链-安全研究-red" alt="区块链安全研究"/> <img src="https://img.shields.io/badge/BSC-攻击分析-orange" alt="BSC攻击分析"/> <img src="https://img.shields.io/badge/DeFi-漏洞研究-blue" alt="DeFi漏洞研究"/>
+<img src="https://img.shields.io/badge/ 区块链 - 安全研究 - red" alt="区块链安全研究"/> <img src="https://img.shields.io/badge/BSC - 攻击分析 - orange" alt="BSC 攻击分析"/> <img src="https://img.shields.io/badge/DeFi - 漏洞研究 - blue" alt="DeFi 漏洞研究"/>
 
-<strong>👇 需要查看完整互动版本? 点击下方链接 👇</strong><br/>
-<a href="./BSC-attack_cn.html"><img src="https://img.shields.io/badge/查看-完整HTML版本-blue?style=for-the-badge" alt="查看完整HTML版本" /></a>
+<strong>👇 需要查看完整互动版本？点击下方链接 👇</strong><br/>
+<a href="./BSC-attack_cn.html"><img src="https://img.shields.io/badge/ 查看 - 完整 HTML 版本 - blue?style=for-the-badge" alt="查看完整 HTML 版本" /></a>
 </div>
 
 ---
 
-> 📜 **研究报告摘要**：本文研究了 BSC 链上发生的攻击原因及其可能造成的危害，全面分析了攻击机制和防范措施，由北航区块链协会研究团队撰写。
+> 📜 ** 研究报告摘要 **：本文研究了 BSC 链上发生的攻击原因及其可能造成的危害，全面分析了攻击机制和防范措施，由北航区块链协会研究团队撰写。
 
 ## 🌐 背景
 
@@ -24,12 +24,12 @@
 
 | 挑战类型 | 危险等级 | 主要影响领域 |
 |:---------------:|:---------:|:------------------:|
-| 智能合约漏洞 | 高 | DeFi 协议, 桥接合约 |
+| 智能合约漏洞 | 高 | DeFi 协议，桥接合约 |
 | 闪电贷恶意使用 | 高 | 去中心化交易所 |
-| 预言机价格操纵 | 中 | 借贷平台, 保证金协议 |
+| 预言机价格操纵 | 中 | 借贷平台，保证金协议 |
 | 跨链桥接漏洞 | 严重 | 跨链资产流动 |
 
-## 🛡 攻击怎么发生的?
+## 🛡 攻击怎么发生的？
 
 ### 概览
 
@@ -37,7 +37,7 @@
 BSC 链上的攻击并非偶然事件，而是经过精心策划的作战。攻击者通常会研究目标协议的代码并发现其中的漏洞，然后设计复杂的交易序列来利用这些漏洞，从中获取非法利益。
 </div>
 
-<img src="https://img.shields.io/badge/攻击手法-多样化-red" alt="攻击手法多样化"/>
+<img src="https://img.shields.io/badge/ 攻击手法 - 多样化 - red" alt="攻击手法多样化"/>
 
 BSC 链上的攻击主要利用以下技术路径：
 
@@ -51,28 +51,28 @@ BSC 链上的攻击主要利用以下技术路径：
 <div style="display: flex; justify-content: center; margin: 20px 0;">
 <table style="width: 90%; border-collapse: collapse;">
   <tr style="background-color: #f8f9fa;">
-    <th style="padding: 10px; border: 1px solid #dee2e6; text-align: center;">攻击类型</th>
-    <th style="padding: 10px; border: 1px solid #dee2e6; text-align: center;">技术原理</th>
-    <th style="padding: 10px; border: 1px solid #dee2e6; text-align: center;">典型案例</th>
-    <th style="padding: 10px; border: 1px solid #dee2e6; text-align: center;">损失规模</th>
+    <th style="padding: 10px; border: 1px solid #dee2e6; text-align: center;"> 攻击类型 </th>
+    <th style="padding: 10px; border: 1px solid #dee2e6; text-align: center;"> 技术原理 </th>
+    <th style="padding: 10px; border: 1px solid #dee2e6; text-align: center;"> 典型案例 </th>
+    <th style="padding: 10px; border: 1px solid #dee2e6; text-align: center;"> 损失规模 </th>
   </tr>
   <tr>
-    <td style="padding: 10px; border: 1px solid #dee2e6; text-align: center;"><strong>💧 闪电贷攻击</strong></td>
-    <td style="padding: 10px; border: 1px solid #dee2e6;">利用无需抵押的闪电贷功能，在单个交易中借入大量资产，操纵市场价格或利用流动性不平衡所引起的安全问题。</td>
+    <td style="padding: 10px; border: 1px solid #dee2e6; text-align: center;"><strong>💧 闪电贷攻击 </strong></td>
+    <td style="padding: 10px; border: 1px solid #dee2e6;"> 利用无需抵押的闪电贷功能，在单个交易中借入大量资产，操纵市场价格或利用流动性不平衡所引起的安全问题。</td>
     <td style="padding: 10px; border: 1px solid #dee2e6;">PancakeSwap 价格操纵事件 (2022)</td>
-    <td style="padding: 10px; border: 1px solid #dee2e6; text-align: center;">$1800 万</td>
+    <td style="padding: 10px; border: 1px solid #dee2e6; text-align: center;">$1800 万 </td>
   </tr>
   <tr>
-    <td style="padding: 10px; border: 1px solid #dee2e6; text-align: center;"><strong>🔄 重入攻击</strong></td>
-    <td style="padding: 10px; border: 1px solid #dee2e6;">利用合约间调用时的状态管理漏洞，在资产转移前多次重复调用相同函数导致重复执行提款操作。</td>
+    <td style="padding: 10px; border: 1px solid #dee2e6; text-align: center;"><strong>🔄 重入攻击 </strong></td>
+    <td style="padding: 10px; border: 1px solid #dee2e6;"> 利用合约间调用时的状态管理漏洞，在资产转移前多次重复调用相同函数导致重复执行提款操作。</td>
     <td style="padding: 10px; border: 1px solid #dee2e6;">BurgerSwap 攻击 (2021)</td>
-    <td style="padding: 10px; border: 1px solid #dee2e6; text-align: center;">$760 万</td>
+    <td style="padding: 10px; border: 1px solid #dee2e6; text-align: center;">$760 万 </td>
   </tr>
   <tr>
-    <td style="padding: 10px; border: 1px solid #dee2e6; text-align: center;"><strong>📈 预言机操纵</strong></td>
-    <td style="padding: 10px; border: 1px solid #dee2e6;">通过大额交易或多笔小额交易影响去中心化交易所价格，从而操纵依赖这些价格作为数据源的预言机系统。</td>
+    <td style="padding: 10px; border: 1px solid #dee2e6; text-align: center;"><strong>📈 预言机操纵 </strong></td>
+    <td style="padding: 10px; border: 1px solid #dee2e6;"> 通过大额交易或多笔小额交易影响去中心化交易所价格，从而操纵依赖这些价格作为数据源的预言机系统。</td>
     <td style="padding: 10px; border: 1px solid #dee2e6;">Venus Protocol 事件 (2021)</td>
-    <td style="padding: 10px; border: 1px solid #dee2e6; text-align: center;">$2200 万</td>
+    <td style="padding: 10px; border: 1px solid #dee2e6; text-align: center;">$2200 万 </td>
   </tr>
 </table>
 </div>
@@ -138,9 +138,9 @@ BSC 链上的攻击主要利用以下技术路径：
 
 BSC 与 COSMOS 生态系统的交互日益密切，尤其是通过 IBC (区块链间通信协议) 进行资产跨链转移。我们的研究团队发现了几种针对这种跨链交互的特殊攻击手法：
 
-1. **中继信息抓取攻击** —— 利用 IBC 协议中的通信延迟进行信息截取。
-2. **状态同步不一致攻击** —— 利用链间状态同步的时间差异。
-3. **跨链权限提升攻击** —— 在目标链上获得超出源链授权的权限。
+1. ** 中继信息抓取攻击 ** —— 利用 IBC 协议中的通信延迟进行信息截取。
+2. ** 状态同步不一致攻击 ** —— 利用链间状态同步的时间差异。
+3. ** 跨链权限提升攻击 ** —— 在目标链上获得超出源链授权的权限。
 
 ## 🔐 防范措施
 
@@ -152,52 +152,52 @@ BSC 与 COSMOS 生态系统的交互日益密切，尤其是通过 IBC (区块�
 
 <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
   <tr style="background-color: #f8f9fa;">
-    <th style="padding: 10px; border: 1px solid #dee2e6; text-align: center;">安全实践</th>
-    <th style="padding: 10px; border: 1px solid #dee2e6; text-align: center;">优先级</th>
-    <th style="padding: 10px; border: 1px solid #dee2e6; text-align: center;">技术细节</th>
+    <th style="padding: 10px; border: 1px solid #dee2e6; text-align: center;"> 安全实践 </th>
+    <th style="padding: 10px; border: 1px solid #dee2e6; text-align: center;"> 优先级 </th>
+    <th style="padding: 10px; border: 1px solid #dee2e6; text-align: center;"> 技术细节 </th>
   </tr>
   <tr>
-    <td style="padding: 10px; border: 1px solid #dee2e6;"><strong>多层次安全审计</strong></td>
-    <td style="padding: 10px; border: 1px solid #dee2e6; text-align: center;">关键</td>
-    <td style="padding: 10px; border: 1px solid #dee2e6;">采用至少 2-3 个独立审计团队进行代码审核，包括形式化验证和手动审计相结合。</td>
+    <td style="padding: 10px; border: 1px solid #dee2e6;"><strong > 多层次安全审计 </strong></td>
+    <td style="padding: 10px; border: 1px solid #dee2e6; text-align: center;"> 关键 </td>
+    <td style="padding: 10px; border: 1px solid #dee2e6;"> 采用至少 2-3 个独立审计团队进行代码审核，包括形式化验证和手动审计相结合。</td>
   </tr>
   <tr>
-    <td style="padding: 10px; border: 1px solid #dee2e6;"><strong>强化预言机设计</strong></td>
-    <td style="padding: 10px; border: 1px solid #dee2e6; text-align: center;">高</td>
-    <td style="padding: 10px; border: 1px solid #dee2e6;">使用时间加权平均价格、多数据源交叉验证和异常价格检测机制。</td>
+    <td style="padding: 10px; border: 1px solid #dee2e6;"><strong > 强化预言机设计 </strong></td>
+    <td style="padding: 10px; border: 1px solid #dee2e6; text-align: center;"> 高 </td>
+    <td style="padding: 10px; border: 1px solid #dee2e6;"> 使用时间加权平均价格、多数据源交叉验证和异常价格检测机制。</td>
   </tr>
   <tr>
-    <td style="padding: 10px; border: 1px solid #dee2e6;"><strong>闪电贷限制与监控</strong></td>
-    <td style="padding: 10px; border: 1px solid #dee2e6; text-align: center;">中</td>
-    <td style="padding: 10px; border: 1px solid #dee2e6;">实施借贷金额限制、异常交易监控和反操纵机制。</td>
+    <td style="padding: 10px; border: 1px solid #dee2e6;"><strong > 闪电贷限制与监控 </strong></td>
+    <td style="padding: 10px; border: 1px solid #dee2e6; text-align: center;"> 中 </td>
+    <td style="padding: 10px; border: 1px solid #dee2e6;"> 实施借贷金额限制、异常交易监控和反操纵机制。</td>
   </tr>
   <tr>
-    <td style="padding: 10px; border: 1px solid #dee2e6;"><strong>重入防护模式</strong></td>
-    <td style="padding: 10px; border: 1px solid #dee2e6; text-align: center;">高</td>
-    <td style="padding: 10px; border: 1px solid #dee2e6;">采用检查-生效-交互模式和状态锁定机制，遵循 ReentrancyGuard 设计模式。</td>
+    <td style="padding: 10px; border: 1px solid #dee2e6;"><strong > 重入防护模式 </strong></td>
+    <td style="padding: 10px; border: 1px solid #dee2e6; text-align: center;"> 高 </td>
+    <td style="padding: 10px; border: 1px solid #dee2e6;"> 采用检查 - 生效 - 交互模式和状态锁定机制，遵循 ReentrancyGuard 设计模式。</td>
   </tr>
 </table>
 
 ### 用户安全指南
 
-- ✅ **与经过审计的知名协议交互**：优先使用已经过安全审计的老牌协议。
-- ✅ **定期检查授权**：检查并撤销不必要的合约授权。
-- ✅ **小额测试原则**：在新协议上先使用小额资金测试。
-- ❌ **避免热门新项目**：谨慎对待刚推出的及高利率的产品。
+- ✅ ** 与经过审计的知名协议交互 **：优先使用已经过安全审计的老牌协议。
+- ✅ ** 定期检查授权 **：检查并撤销不必要的合约授权。
+- ✅ ** 小额测试原则 **：在新协议上先使用小额资金测试。
+- ❌ ** 避免热门新项目 **：谨慎对待刚推出的及高利率的产品。
 
 ## 🌐 结论
 
 <div style="padding: 20px; border: 2px solid #6c757d; border-radius: 5px; margin: 20px 0; background-color: #f8f9fa;">
 随着 BSC 生态系统的快速发展，其面临的安全挑战也日益复杂。我们的研究表明，大多数攻击并非技术特异干扰，而是源于基本的合约设计缺陷和业务逻辑漏洞。
 
-这说明<strong>区块链安全是一项持续性工作</strong>，需要全生态系统共同参与：开发者需要采用更严格的安全实践，用户需要提高风险意识，审计机构需要提供更全面的安全评估。
+这说明 < strong > 区块链安全是一项持续性工作 </strong>，需要全生态系统共同参与：开发者需要采用更严格的安全实践，用户需要提高风险意识，审计机构需要提供更全面的安全评估。
 
 只有通过生态系统各方的共同努力，才能构建一个更安全、更倾向用户的 BSC 生态系统。
 </div>
 
 ## 👨‍💻 关于我们
 
-<div style="display: flex; justify-content: space-between; padding: 20px; border-radius: 5px; background: linear-gradient(to right, #e9ecef, #f8f9fa); margin: 20px 0;">
+<div style="display: flex; justify-content: space-between; padding: 20px; border-radius: 5px; background: linear-gradient (to right, #e9ecef, #f8f9fa); margin: 20px 0;">
 
 <div style="flex: 3; padding-right: 20px;">
 
@@ -229,8 +229,8 @@ BSC 与 COSMOS 生态系统的交互日益密切，尤其是通过 IBC (区块�
 
 ### 报告格式选择
 
-<a href="./BSC-attack_cn.html" style="display: inline-block; margin: 0 10px; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">🇨🇳 查看 HTML 中文版</a>
+<a href="./BSC-attack_cn.html" style="display: inline-block; margin: 0 10px; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">🇨🇳 查看 HTML 中文版 </a>
 <a href="./BSC-attack_en.html" style="display: inline-block; margin: 0 10px; padding: 10px 20px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">🇺🇸 View in English</a>
-<a href="https://github.com/beihaili/Get-Started-with-Web3/" style="display: inline-block; margin: 0 10px; padding: 10px 20px; background-color: #6c757d; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">👨‍💻 返回项目首页</a>
+<a href="https://github.com/beihaili/Get-Started-with-Web3/" style="display: inline-block; margin: 0 10px; padding: 10px 20px; background-color: #6c757d; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">👨‍💻 返回项目首页 </a>
 
 </div>

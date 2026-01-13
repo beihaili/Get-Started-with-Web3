@@ -1,11 +1,11 @@
 # 为什么区块链是必须的？《主权个人》读书笔记
 
-> 📚 **《主权个人》(The Sovereign Individual) 是由詹姆斯·戴尔·戴维森 (James Dale Davidson) 和威廉·里斯 - 莫格 (William Rees-Mogg) 在 1997 年共同撰写的一本著作，被认为是预见比特币和区块链时代到来的预言之书。**
+> 📚 **《主权个人》(The Sovereign Individual) 是由詹姆斯・戴尔・戴维森 (James Dale Davidson) 和威廉・里斯 - 莫格 (William Rees-Mogg) 在 1997 年共同撰写的一本著作，被认为是预见比特币和区块链时代到来的预言之书。**
 
-![](https://img.shields.io/badge/作者-北海-blue)
-![](https://img.shields.io/badge/难度-思想启蒙-yellow)
-![](https://img.shields.io/badge/分类-Web3思考-green)
-![](https://img.shields.io/badge/状态-已发布-orange)
+![](https://img.shields.io/badge/ 作者 - 北海 - blue)
+![](https://img.shields.io/badge/ 难度 - 思想启蒙 - yellow)
+![](https://img.shields.io/badge/ 分类 - Web3 思考 - green)
+![](https://img.shields.io/badge/ 状态 - 已发布 - orange)
 
 ## 🔮 《主权个人》的核心预见
 
@@ -81,9 +81,9 @@
 
 《主权个人》提出了一个关键观点：技术变革会根本性改变社会组织形式。从历史发展来看，区块链技术的出现是信息时代的必然产物：
 
-1. **信息的不可控性**：数字信息的复制和传播能力使得中央集权控制变得越来越困难。
-2. **网络效应**：互联网的发展促使社会组织从金字塔结构转向网络结构。
-3. **密码学的民主化**：加密技术的普及使个人有能力保护自己的数据和资产。
+1. ** 信息的不可控性 **：数字信息的复制和传播能力使得中央集权控制变得越来越困难。
+2. ** 网络效应 **：互联网的发展促使社会组织从金字塔结构转向网络结构。
+3. ** 密码学的民主化 **：加密技术的普及使个人有能力保护自己的数据和资产。
 
 > 「每一次生产方式的变革都会带来相应的权力结构变化。在信息时代，权力将从中心化机构流向掌握信息技术的个体和网络。」
 
@@ -108,6 +108,6 @@
 ---
 
 <div align="center">
-<a href="https://github.com/beihaili/Get-Started-with-Web3">🏠 返回主页</a> | 
-<a href="https://twitter.com/bhbtc1337">🐦 关注作者</a>
+<a href="https://github.com/beihaili/Get-Started-with-Web3">🏠 返回主页 </a> | 
+<a href="https://twitter.com/bhbtc1337">🐦 关注作者 </a>
 </div>
