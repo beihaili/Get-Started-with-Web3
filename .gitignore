@@ -83,3 +83,4 @@ CLAUDE.md
 deploy*.sh
 DEPLOY_GUIDE.md
 MULTILINGUAL_GUIDE.md
+src/App-original.jsx
