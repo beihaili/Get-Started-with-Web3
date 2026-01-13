@@ -42,7 +42,7 @@ export const useContentStore = create((set, get) => ({
 
     // 检查缓存
     if (contentCache[lessonPath]) {
-      return contentCache[lessonPath];
+      return contentCache[lessonPath].content;
     }
 
     set({ contentLoading: true, fetchError: null });
@@ -78,7 +78,7 @@ export const useContentStore = create((set, get) => ({
         contentLoading: false,
       });
 
-      return cachedData;
+      return content;
     } catch (error) {
       set({
         fetchError: error.message,

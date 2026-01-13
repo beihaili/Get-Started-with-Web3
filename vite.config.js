@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,22 +13,43 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-      }
+      },
     },
     // 确保资源路径正确
     assetsDir: 'assets',
     rollupOptions: {
       output: {
-        // 避免代码分割导致的动态导入问题
-        manualChunks: undefined,
-      }
-    }
+        // 智能代码分割优化
+        manualChunks(id) {
+          // React核心库单独打包
+          if (
+            id.includes('node_modules/react') ||
+            id.includes('node_modules/react-dom') ||
+            id.includes('node_modules/react-router-dom')
+          ) {
+            return 'react-vendor';
+          }
+          // 状态管理库
+          if (id.includes('node_modules/zustand')) {
+            return 'store';
+          }
+          // UI组件库
+          if (id.includes('node_modules/lucide-react')) {
+            return 'ui';
+          }
+          // AI相关库
+          if (id.includes('node_modules/@google')) {
+            return 'ai';
+          }
+        },
+      },
+    },
   },
   // 开发环境配置
   server: {
     // 确保开发环境也遵循CSP
     hmr: {
       protocol: 'ws',
-    }
-  }
-})
+    },
+  },
+});

@@ -4,8 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web3 Starter - 从入门到精通</title>
+
+    <!-- SEO基础标签 -->
+    <meta name="description" content="Web3和区块链入门教程平台，提供Web3快速入门、比特币技术深度解析等优质内容。22讲比特币技术+6讲Web3入门，系统化学习路径，游戏化学习体验。">
+    <meta name="keywords" content="Web3, 区块链, 比特币, 教程, 入门, blockchain, bitcoin, tutorial, 加密货币, cryptocurrency, 以太坊, ethereum">
+    <meta name="author" content="Bei Hai">
+    <link rel="canonical" href="https://beihaili.github.io/Get-Started-with-Web3/">
+
+    <!-- Open Graph (社交分享) -->
+    <meta property="og:title" content="Get Started With Web3 - Web3区块链入门教程">
+    <meta property="og:description" content="开源Web3教育平台，系统化学习Web3和比特币技术。包含22讲比特币技术课程和6讲Web3快速入门。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://beihaili.github.io/Get-Started-with-Web3/">
+    <meta property="og:site_name" content="Get Started With Web3">
+    <meta property="og:locale" content="zh_CN">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@bhbtc1337">
+    <meta name="twitter:title" content="Get Started With Web3 - Web3区块链入门教程">
+    <meta name="twitter:description" content="开源Web3教育平台，系统化学习Web3和比特币技术">
+
+    <!-- PWA相关 -->
+    <meta name="theme-color" content="#1a1a2e">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   </head>
   <body>
+    <!-- SPA路由恢复脚本 -->
+    <script>
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
