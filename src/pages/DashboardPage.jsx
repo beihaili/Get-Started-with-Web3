@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
-import { ArrowLeft, BookOpen, Award, TrendingUp } from 'lucide-react';
+import { ArrowLeft, Award, TrendingUp, BookOpen } from 'lucide-react';
 import { useUserStore } from '../store/useUserStore';
+import { COURSE_DATA } from '../config/courseData';
 
 /**
  * 仪表板页面
  * 显示课程列表和学习进度
- * TODO: 从原App.jsx迁移完整的Dashboard内容
  */
 const DashboardPage = () => {
-  const { totalExperience, userTitle, progress } = useUserStore();
+  const { totalExperience, userTitle, progress, getLessonProgress } = useUserStore();
 
   const progressCount = Object.keys(progress).length;
 
@@ -46,7 +46,7 @@ const DashboardPage = () => {
               </div>
               <div>
                 <p className="text-slate-400 text-sm">经验值</p>
-                <p className="text-white text-xl font-bold">{totalExperience}</p>
+                <p className="text-white text-xl font-bold">{totalExperience} XP</p>
               </div>
             </div>
 
@@ -74,55 +74,79 @@ const DashboardPage = () => {
 
         {/* Course Modules */}
         <div className="space-y-6">
-          <CourseModule
-            title="Web3 快速入门"
-            description="6 讲快速入门课程"
-            moduleId="web3-quickstart"
-            lessons={[
-              { id: '01', title: '创建你的第一个 Web3 身份' },
-              { id: '02', title: '进行你的第一笔 Web3 交易' },
-              { id: '03', title: '构建你的第一个 Web3 DApp' },
-            ]}
-          />
+          {COURSE_DATA.map((module) => {
+            const Icon = module.icon;
+            const completedCount = module.lessons.filter((lesson) =>
+              getLessonProgress(`${module.id}-${lesson.id}`)
+            ).length;
+            const progressPercent = ((completedCount / module.lessons.length) * 100).toFixed(0);
 
-          <CourseModule
-            title="比特币技术入门"
-            description="22 讲系统化学习比特币技术"
-            moduleId="bitcoin"
-            lessons={[
-              { id: '01', title: '密码学基础' },
-              { id: '02', title: '比特币概述' },
-              { id: '03', title: '比特币交易基础' },
-            ]}
-          />
+            return (
+              <div
+                key={module.id}
+                className="p-6 bg-slate-900/60 backdrop-blur-md border border-slate-700/50 rounded-xl"
+              >
+                {/* Module Header */}
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-center gap-3">
+                    <div
+                      className={`w-12 h-12 rounded-full bg-gradient-to-br ${module.color} bg-opacity-10 flex items-center justify-center`}
+                    >
+                      <Icon className={`w-6 h-6 ${module.color}`} />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-white">{module.title}</h3>
+                      <p className="text-slate-400">{module.lessons.length} 讲课程</p>
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-2xl font-bold text-cyan-400">{progressPercent}%</div>
+                    <div className="text-sm text-slate-400">
+                      {completedCount}/{module.lessons.length}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Progress Bar */}
+                <div className="mb-4 h-2 bg-slate-800 rounded-full overflow-hidden">
+                  <div
+                    className={`h-full bg-gradient-to-r ${module.color} transition-all duration-500`}
+                    style={{ width: `${progressPercent}%` }}
+                  />
+                </div>
+
+                {/* Lessons */}
+                <div className="space-y-2">
+                  {module.lessons.map((lesson) => {
+                    const isCompleted = getLessonProgress(`${module.id}-${lesson.id}`);
+                    return (
+                      <Link
+                        key={lesson.id}
+                        to={`/learn/${module.id}/${lesson.id}`}
+                        className={`block p-4 bg-slate-800/40 border rounded-lg transition-all ${
+                          isCompleted
+                            ? 'border-green-500/30 bg-green-500/5'
+                            : 'border-slate-700/30 hover:border-cyan-500/40 hover:bg-slate-800/60'
+                        }`}
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className={`${isCompleted ? 'text-green-400' : 'text-white'}`}>
+                            {lesson.title}
+                          </span>
+                          {isCompleted ? (
+                            <span className="text-green-400">✓</span>
+                          ) : (
+                            <span className="text-cyan-400">→</span>
+                          )}
+                        </div>
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })}
         </div>
-      </div>
-    </div>
-  );
-};
-
-// Course Module Component
-const CourseModule = ({ title, description, moduleId, lessons }) => {
-  return (
-    <div className="p-6 bg-slate-900/60 backdrop-blur-md border border-slate-700/50 rounded-xl">
-      <h3 className="text-2xl font-bold text-white mb-2">{title}</h3>
-      <p className="text-slate-400 mb-4">{description}</p>
-
-      <div className="space-y-2">
-        {lessons.map((lesson) => (
-          <Link
-            key={lesson.id}
-            to={`/learn/${moduleId}/${lesson.id}`}
-            className="block p-4 bg-slate-800/40 border border-slate-700/30 rounded-lg hover:border-cyan-500/40 hover:bg-slate-800/60 transition-all"
-          >
-            <div className="flex items-center justify-between">
-              <span className="text-white">
-                第 {lesson.id} 讲：{lesson.title}
-              </span>
-              <span className="text-cyan-400">→</span>
-            </div>
-          </Link>
-        ))}
       </div>
     </div>
   );
