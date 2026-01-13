@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>Get Started With Web3</title>
+  <script>
+    // GitHub Pages SPA重定向hack
+    // 保存完整路径（pathname + search + hash）
+    sessionStorage.setItem('redirect', location.pathname + location.search + location.hash);
+    // 重定向到应用入口
+    location.replace(location.origin + '/Get-Started-with-Web3/');
+  </script>
+</head>
+<body>
+  <!-- 加载中的备用内容（如果JS被禁用） -->
+  <div style="text-align:center;padding:50px;font-family:sans-serif;">
+    <h2>正在跳转...</h2>
+    <p>如果没有自动跳转，请点击 <a href="/Get-Started-with-Web3/">这里</a></p>
+  </div>
+</body>
+</html>
