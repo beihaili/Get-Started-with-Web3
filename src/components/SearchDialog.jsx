@@ -93,7 +93,7 @@ const SearchDialog = () => {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-start justify-center pt-[15vh]"
+      className="fixed inset-0 z-50 flex items-start justify-center pt-[10vh] sm:pt-[15vh]"
       onClick={closeSearch}
     >
       <div className="fixed inset-0 bg-black/60 backdrop-blur-sm" />

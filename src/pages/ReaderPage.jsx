@@ -131,7 +131,9 @@ const ReaderPage = () => {
                 <div className="inline-block px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-full mb-4">
                   <span className="text-cyan-400 text-sm font-medium">{currentModule?.title}</span>
                 </div>
-                <h1 className="text-4xl font-bold text-white mb-4">{currentLesson?.title}</h1>
+                <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                  {currentLesson?.title}
+                </h1>
               </div>
 
               {/* Markdown Content */}
@@ -151,26 +153,30 @@ const ReaderPage = () => {
                 {prevLesson ? (
                   <Link
                     to={`/learn/${moduleId}/${prevLesson.id}`}
-                    className="px-6 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-lg transition-colors"
+                    className="px-4 sm:px-6 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-lg transition-colors text-sm sm:text-base"
                   >
-                    ← 上一讲
+                    ← <span className="hidden sm:inline">上一讲</span>
+                    <span className="sm:hidden">上一</span>
                   </Link>
                 ) : (
-                  <div className="px-6 py-2 bg-slate-800/50 text-slate-600 rounded-lg cursor-not-allowed">
-                    ← 上一讲
+                  <div className="px-4 sm:px-6 py-2 bg-slate-800/50 text-slate-600 rounded-lg cursor-not-allowed text-sm sm:text-base">
+                    ← <span className="hidden sm:inline">上一讲</span>
+                    <span className="sm:hidden">上一</span>
                   </div>
                 )}
 
                 {nextLesson ? (
                   <Link
                     to={`/learn/${moduleId}/${nextLesson.id}`}
-                    className="px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors ml-auto"
+                    className="px-4 sm:px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors ml-auto text-sm sm:text-base"
                   >
-                    下一讲 →
+                    <span className="hidden sm:inline">下一讲</span>
+                    <span className="sm:hidden">下一</span> →
                   </Link>
                 ) : (
-                  <div className="px-6 py-2 bg-slate-800/50 text-slate-600 rounded-lg cursor-not-allowed ml-auto">
-                    下一讲 →
+                  <div className="px-4 sm:px-6 py-2 bg-slate-800/50 text-slate-600 rounded-lg cursor-not-allowed ml-auto text-sm sm:text-base">
+                    <span className="hidden sm:inline">下一讲</span>
+                    <span className="sm:hidden">下一</span> →
                   </div>
                 )}
               </div>

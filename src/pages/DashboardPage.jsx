@@ -31,11 +31,14 @@ const DashboardPage = () => {
           <div className="flex items-center gap-4">
             <button
               onClick={openSearch}
+              aria-label="搜索课程"
               className="flex items-center gap-2 px-3 py-1.5 text-slate-500 hover:text-slate-300 bg-slate-800 border border-slate-700 rounded-lg text-sm transition-colors"
             >
               <Search className="w-4 h-4" />
-              <span>搜索课程</span>
-              <kbd className="ml-1 px-1.5 py-0.5 bg-slate-700 rounded text-xs">⌘K</kbd>
+              <span className="hidden sm:inline">搜索课程</span>
+              <kbd className="hidden sm:inline ml-1 px-1.5 py-0.5 bg-slate-700 rounded text-xs">
+                ⌘K
+              </kbd>
             </button>
             <Link
               to="/badges"
@@ -52,7 +55,7 @@ const DashboardPage = () => {
         {/* User Stats */}
         <div className="mb-8 p-6 bg-slate-900/60 backdrop-blur-md border border-slate-700/50 rounded-xl">
           <h2 className="text-2xl font-bold text-white mb-4">学习概览</h2>
-          <div className="grid md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-full bg-cyan-500/10 flex items-center justify-center">
                 <TrendingUp className="w-6 h-6 text-cyan-400" />
@@ -146,7 +149,7 @@ const DashboardPage = () => {
                       <Link
                         key={lesson.id}
                         to={`/learn/${module.id}/${lesson.id}`}
-                        className={`block p-4 bg-slate-800/40 border rounded-lg transition-all ${
+                        className={`block p-3 sm:p-4 bg-slate-800/40 border rounded-lg transition-all ${
                           isCompleted
                             ? 'border-green-500/30 bg-green-500/5'
                             : 'border-slate-700/30 hover:border-cyan-500/40 hover:bg-slate-800/60'

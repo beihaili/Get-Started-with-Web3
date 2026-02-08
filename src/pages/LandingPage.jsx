@@ -28,7 +28,7 @@ const LandingPage = () => {
               {totalLessons} 讲系统化教程 · 开源免费
             </span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight">
             Get Started
             <br />
             with Web3
@@ -64,7 +64,7 @@ const LandingPage = () => {
 
         {/* Stats Bar */}
         <div className="max-w-3xl mx-auto mb-16">
-          <div className="grid grid-cols-3 gap-4 p-6 bg-slate-900/60 backdrop-blur-md border border-slate-700/50 rounded-2xl">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-6 bg-slate-900/60 backdrop-blur-md border border-slate-700/50 rounded-2xl">
             <div className="text-center">
               <div className="text-3xl font-bold text-cyan-400">{COURSE_DATA.length}</div>
               <div className="text-sm text-slate-400">课程模块</div>
