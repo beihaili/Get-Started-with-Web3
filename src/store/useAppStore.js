@@ -16,9 +16,6 @@ export const useAppStore = create(
       pendingBadgeUnlock: null,
       showConfetti: false,
 
-      // Gas价格模拟（用于教学）
-      gasPrice: 20,
-
       // Actions - API配置
       setGeminiApiKey: (key) =>
         set({
@@ -43,12 +40,6 @@ export const useAppStore = create(
         setTimeout(() => {
           set({ showConfetti: false });
         }, 5000);
-      },
-
-      updateGasPrice: () => {
-        // 模拟Gas价格波动 (15-30 gwei)
-        const newPrice = Math.floor(Math.random() * 15) + 15;
-        set({ gasPrice: newPrice });
       },
     }),
     {

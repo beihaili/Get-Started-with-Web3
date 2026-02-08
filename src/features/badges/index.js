@@ -15,6 +15,4 @@ export {
 
 // 徽章组件
 export { default as BadgeCard } from './components/BadgeCard';
-export { default as BadgeUnlockAnimation } from './components/BadgeUnlockAnimation';
-export { default as BadgeCollection } from './components/BadgeCollection';
 export { default as BadgeFloatingAnimation } from './components/BadgeFloatingAnimation';

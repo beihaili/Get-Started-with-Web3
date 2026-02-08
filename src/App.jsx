@@ -9,18 +9,12 @@ import { Confetti } from './components/animations';
  * 主应用组件
  */
 function App() {
-  const { updateGasPrice, showConfetti } = useAppStore();
+  const showConfetti = useAppStore((s) => s.showConfetti);
   const { cleanOldCache } = useContentStore();
 
   useEffect(() => {
-    updateGasPrice();
-    const gasInterval = setInterval(updateGasPrice, 10000);
     cleanOldCache();
-
-    return () => {
-      clearInterval(gasInterval);
-    };
-  }, [updateGasPrice, cleanOldCache]);
+  }, [cleanOldCache]);
 
   return (
     <div className="app">
