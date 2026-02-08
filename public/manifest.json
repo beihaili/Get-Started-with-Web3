@@ -29,5 +29,19 @@
       "type": "image/png",
       "purpose": "any"
     }
+  ],
+  "shortcuts": [
+    {
+      "name": "开始学习",
+      "short_name": "学习",
+      "url": "/Get-Started-with-Web3/dashboard",
+      "description": "进入课程仪表板"
+    },
+    {
+      "name": "我的徽章",
+      "short_name": "徽章",
+      "url": "/Get-Started-with-Web3/badges",
+      "description": "查看学习成就和徽章"
+    }
   ]
 }
