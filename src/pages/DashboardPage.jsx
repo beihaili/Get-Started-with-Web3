@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, Award, TrendingUp, BookOpen, Flame } from 'lucide-react';
 import { useUserStore } from '../store/useUserStore';
 import { COURSE_DATA } from '../config/courseData';
+import { Web3Oracle } from '../components/interactive';
 
 /**
  * 仪表板页面
@@ -158,6 +159,11 @@ const DashboardPage = () => {
               </div>
             );
           })}
+        </div>
+
+        {/* Web3 Oracle */}
+        <div className="mt-8">
+          <Web3Oracle />
         </div>
       </div>
     </div>

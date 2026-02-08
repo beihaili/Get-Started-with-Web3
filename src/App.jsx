@@ -3,23 +3,18 @@ import { router } from './routes';
 import { useEffect } from 'react';
 import { useAppStore } from './store/useAppStore';
 import { useContentStore } from './store/useContentStore';
+import { Confetti } from './components/animations';
 
 /**
- * 主应用组件（重构后）
- * 使用React Router和Zustand状态管理
- *
- * 从原3529行精简到~100行
+ * 主应用组件
  */
 function App() {
-  const { updateGasPrice } = useAppStore();
+  const { updateGasPrice, showConfetti } = useAppStore();
   const { cleanOldCache } = useContentStore();
 
   useEffect(() => {
-    // 初始化：更新Gas价格
     updateGasPrice();
     const gasInterval = setInterval(updateGasPrice, 10000);
-
-    // 初始化：清理旧缓存
     cleanOldCache();
 
     return () => {
@@ -30,6 +25,7 @@ function App() {
   return (
     <div className="app">
       <RouterProvider router={router} />
+      <Confetti active={showConfetti} />
     </div>
   );
 }
