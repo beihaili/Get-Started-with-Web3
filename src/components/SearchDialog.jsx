@@ -98,6 +98,9 @@ const SearchDialog = () => {
     >
       <div className="fixed inset-0 bg-black/60 backdrop-blur-sm" />
       <div
+        role="dialog"
+        aria-modal="true"
+        aria-label="搜索课程"
         className="relative w-full max-w-lg mx-4 bg-slate-900 border border-slate-700 rounded-xl shadow-2xl overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
@@ -110,15 +113,20 @@ const SearchDialog = () => {
             onChange={(e) => setSearchQuery(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder="搜索课程..."
+            aria-label="搜索课程"
             className="flex-1 bg-transparent text-white placeholder-slate-500 outline-none text-base"
           />
-          <button onClick={closeSearch} className="text-slate-400 hover:text-white">
+          <button
+            onClick={closeSearch}
+            aria-label="关闭搜索"
+            className="text-slate-400 hover:text-white"
+          >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Results */}
-        <div className="max-h-80 overflow-y-auto">
+        <div className="max-h-80 overflow-y-auto" role="listbox">
           {searchQuery.trim() && flatResults.length === 0 && (
             <div className="px-4 py-8 text-center text-slate-500">没有找到匹配的课程</div>
           )}
@@ -133,6 +141,8 @@ const SearchDialog = () => {
                 return (
                   <button
                     key={item.lessonId}
+                    role="option"
+                    aria-selected={idx === selectedIndex}
                     onClick={() => handleSelect(item)}
                     onMouseEnter={() => setSelectedIndex(idx)}
                     className={`w-full px-4 py-3 text-left transition-colors ${

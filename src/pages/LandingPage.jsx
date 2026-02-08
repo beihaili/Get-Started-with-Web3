@@ -20,7 +20,7 @@ const LandingPage = () => {
       <ParticleBackground />
       <MouseSpotlight />
 
-      <div className="container mx-auto px-4 py-16 relative z-10">
+      <main className="container mx-auto px-4 py-16 relative z-10">
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="inline-block mb-6 px-4 py-1.5 bg-cyan-500/10 border border-cyan-500/20 rounded-full">
@@ -193,10 +193,10 @@ const LandingPage = () => {
         </div>
 
         {/* Footer */}
-        <div className="text-center text-slate-500 text-sm border-t border-slate-800 pt-8">
+        <footer className="text-center text-slate-500 text-sm border-t border-slate-800 pt-8">
           <p>MIT License | 开源 Web3 教育平台</p>
-        </div>
-      </div>
+        </footer>
+      </main>
     </div>
   );
 };

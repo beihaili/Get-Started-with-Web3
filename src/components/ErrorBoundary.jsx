@@ -28,12 +28,14 @@ class ErrorBoundary extends Component {
             <div className="flex gap-4 justify-center">
               <button
                 onClick={() => window.location.reload()}
+                aria-label="重新加载页面"
                 className="px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors"
               >
                 重新加载
               </button>
               <a
                 href="/Get-Started-with-Web3/"
+                aria-label="返回首页"
                 className="px-6 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-lg transition-colors"
               >
                 返回首页

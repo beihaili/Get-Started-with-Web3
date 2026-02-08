@@ -77,7 +77,10 @@ const ReaderPage = () => {
   return (
     <div className="min-h-screen bg-slate-950">
       {/* Header */}
-      <div className="sticky top-0 z-10 border-b border-slate-800 bg-slate-950/80 backdrop-blur-md">
+      <nav
+        aria-label="课程导航"
+        className="sticky top-0 z-10 border-b border-slate-800 bg-slate-950/80 backdrop-blur-md"
+      >
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link
             to="/dashboard"
@@ -105,10 +108,10 @@ const ReaderPage = () => {
             )}
           </div>
         </div>
-      </div>
+      </nav>
 
       {/* Content */}
-      <div className="container mx-auto px-4 py-8 max-w-4xl">
+      <main className="container mx-auto px-4 py-8 max-w-4xl">
         <div className="p-8 bg-slate-900/60 backdrop-blur-md border border-slate-700/50 rounded-xl">
           {loading ? (
             <div className="flex flex-col items-center justify-center py-20">
@@ -174,7 +177,7 @@ const ReaderPage = () => {
             </>
           )}
         </div>
-      </div>
+      </main>
 
       {/* AI Tutor */}
       <AiTutor lessonContext={content} />

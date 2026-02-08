@@ -118,10 +118,12 @@ const MultiQuiz = ({ lessonId, onPass }) => {
             <>
               <h5 className="text-lg font-semibold text-white mb-6">{currentQ.question}</h5>
 
-              <div className="space-y-3 mb-6">
+              <div className="space-y-3 mb-6" role="radiogroup" aria-label="选择答案">
                 {currentQ.options.map((option, index) => (
                   <button
                     key={index}
+                    role="radio"
+                    aria-checked={selectedAnswer === index}
                     onClick={() => selectAnswer(index)}
                     className={`w-full text-left p-4 rounded-lg border transition-all ${
                       selectedAnswer === index

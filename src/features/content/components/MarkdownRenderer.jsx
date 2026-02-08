@@ -21,6 +21,7 @@ const CopyButton = ({ text }) => {
   return (
     <button
       onClick={handleCopy}
+      aria-label="复制代码"
       className="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100"
       title="复制代码"
     >
