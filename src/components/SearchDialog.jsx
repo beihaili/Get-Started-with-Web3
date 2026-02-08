@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Fuse from 'fuse.js';
 import { Search, X } from 'lucide-react';
 import { useSearchStore } from '../store/useSearchStore';
 import { COURSE_DATA } from '../config/courseData';
@@ -10,21 +11,28 @@ const SearchDialog = () => {
   const { isSearchOpen, searchQuery, closeSearch, setSearchQuery, addToHistory } = useSearchStore();
   const [selectedIndex, setSelectedIndex] = useState(0);
 
-  // Filter lessons by query
+  // Build Fuse.js index once
+  const fuse = useMemo(() => {
+    const items = COURSE_DATA.flatMap((module) =>
+      module.lessons.map((lesson) => ({
+        moduleId: module.id,
+        moduleTitle: module.title,
+        lessonId: lesson.id,
+        lessonTitle: lesson.title,
+      }))
+    );
+    return new Fuse(items, {
+      keys: ['lessonTitle'],
+      threshold: 0.4,
+      includeMatches: true,
+    });
+  }, []);
+
+  // Fuzzy search results
   const flatResults = useMemo(() => {
     if (!searchQuery.trim()) return [];
-    const q = searchQuery.toLowerCase();
-    return COURSE_DATA.flatMap((module) =>
-      module.lessons
-        .filter((lesson) => lesson.title.toLowerCase().includes(q))
-        .map((lesson) => ({
-          moduleId: module.id,
-          moduleTitle: module.title,
-          lessonId: lesson.id,
-          lessonTitle: lesson.title,
-        }))
-    );
-  }, [searchQuery]);
+    return fuse.search(searchQuery).map((result) => result.item);
+  }, [searchQuery, fuse]);
 
   // Group results by module
   const grouped = useMemo(
