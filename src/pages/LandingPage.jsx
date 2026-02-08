@@ -11,7 +11,7 @@ import { useUserStore } from '../store/useUserStore';
  * 着陆页（首页）
  */
 const LandingPage = () => {
-  const { totalExperience, userTitle, progress } = useUserStore();
+  const { totalExperience, userTitle, progress, studyStreak } = useUserStore();
   const totalLessons = COURSE_DATA.reduce((sum, m) => sum + m.lessons.length, 0);
   const completedCount = Object.keys(progress).length;
 
@@ -36,6 +36,13 @@ const LandingPage = () => {
           <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-8">
             中文世界最系统的比特币与 Web3 学习平台。从零基础到深入原理，一站式掌握区块链核心技术。
           </p>
+          {studyStreak > 0 && (
+            <div className="inline-block mb-4 px-4 py-1.5 bg-orange-500/10 border border-orange-500/20 rounded-full">
+              <span className="text-orange-400 text-sm font-medium">
+                🔥 连续学习 {studyStreak} 天
+              </span>
+            </div>
+          )}
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
               to="/dashboard"

@@ -3,15 +3,11 @@ import { persist } from 'zustand/middleware';
 
 /**
  * 用户状态管理
- * 管理钱包连接、学习进度、徽章、经验值等用户相关数据
+ * 管理学习进度、徽章、经验值等用户相关数据
  */
 export const useUserStore = create(
   persist(
     (set, get) => ({
-      // 钱包状态
-      address: '',
-      connected: false,
-
       // 学习进度 { lessonId: true }
       progress: {},
 
@@ -25,19 +21,6 @@ export const useUserStore = create(
       // 学习连续天数
       studyStreak: 0,
       lastStudyDate: null,
-
-      // Actions - 钱包连接
-      connectWallet: (walletAddress) =>
-        set({
-          address: walletAddress,
-          connected: true,
-        }),
-
-      disconnectWallet: () =>
-        set({
-          address: '',
-          connected: false,
-        }),
 
       // Actions - 学习进度
       markLessonComplete: (lessonId) => {
@@ -145,23 +128,10 @@ export const useUserStore = create(
           }
         }
       },
-
-      // Reset user data
-      resetUserData: () =>
-        set({
-          progress: {},
-          earnedBadges: {},
-          totalExperience: 0,
-          userTitle: '新手探索者',
-          studyStreak: 0,
-          lastStudyDate: null,
-        }),
     }),
     {
       name: 'web3-user-store', // localStorage key
       partialize: (state) => ({
-        address: state.address,
-        connected: state.connected,
         progress: state.progress,
         earnedBadges: state.earnedBadges,
         totalExperience: state.totalExperience,

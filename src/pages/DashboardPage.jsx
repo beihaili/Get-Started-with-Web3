@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Award, TrendingUp, BookOpen, Flame } from 'lucide-react';
+import { ArrowLeft, Award, TrendingUp, BookOpen, Flame, Search } from 'lucide-react';
 import { useUserStore } from '../store/useUserStore';
+import { useSearchStore } from '../store/useSearchStore';
 import { COURSE_DATA } from '../config/courseData';
 import { Web3Oracle } from '../components/interactive';
 
@@ -9,7 +10,8 @@ import { Web3Oracle } from '../components/interactive';
  * 显示课程列表和学习进度
  */
 const DashboardPage = () => {
-  const { totalExperience, userTitle, progress, getLessonProgress } = useUserStore();
+  const { totalExperience, userTitle, progress, studyStreak, getLessonProgress } = useUserStore();
+  const openSearch = useSearchStore((s) => s.openSearch);
 
   const progressCount = Object.keys(progress).length;
 
@@ -26,13 +28,23 @@ const DashboardPage = () => {
             <span>返回首页</span>
           </Link>
 
-          <Link
-            to="/badges"
-            className="flex items-center gap-2 text-slate-400 hover:text-purple-400 transition-colors"
-          >
-            <Award className="w-5 h-5" />
-            <span>我的徽章</span>
-          </Link>
+          <div className="flex items-center gap-4">
+            <button
+              onClick={openSearch}
+              className="flex items-center gap-2 px-3 py-1.5 text-slate-500 hover:text-slate-300 bg-slate-800 border border-slate-700 rounded-lg text-sm transition-colors"
+            >
+              <Search className="w-4 h-4" />
+              <span>搜索课程</span>
+              <kbd className="ml-1 px-1.5 py-0.5 bg-slate-700 rounded text-xs">⌘K</kbd>
+            </button>
+            <Link
+              to="/badges"
+              className="flex items-center gap-2 text-slate-400 hover:text-purple-400 transition-colors"
+            >
+              <Award className="w-5 h-5" />
+              <span>我的徽章</span>
+            </Link>
+          </div>
         </div>
       </div>
 
@@ -76,10 +88,8 @@ const DashboardPage = () => {
                 <Flame className="w-6 h-6 text-orange-400" />
               </div>
               <div>
-                <p className="text-slate-400 text-sm">总课程数</p>
-                <p className="text-white text-xl font-bold">
-                  {COURSE_DATA.reduce((sum, m) => sum + m.lessons.length, 0)}
-                </p>
+                <p className="text-slate-400 text-sm">连续学习</p>
+                <p className="text-white text-xl font-bold">{studyStreak} 天</p>
               </div>
             </div>
           </div>

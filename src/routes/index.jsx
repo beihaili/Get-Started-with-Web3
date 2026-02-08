@@ -1,5 +1,8 @@
-import { createBrowserRouter, Navigate } from 'react-router-dom';
-import { lazy, Suspense } from 'react';
+import { createBrowserRouter, Navigate, Outlet } from 'react-router-dom';
+import { lazy, Suspense, useEffect } from 'react';
+import ErrorBoundary from '../components/ErrorBoundary';
+import SearchDialog from '../components/SearchDialog';
+import { useSearchStore } from '../store/useSearchStore';
 
 // Lazy load pages for code splitting
 const LandingPage = lazy(() => import('../pages/LandingPage'));
@@ -17,8 +20,35 @@ const PageLoader = () => (
   </div>
 );
 
-// Wrapper component for Suspense
-const SuspenseWrapper = ({ children }) => <Suspense fallback={<PageLoader />}>{children}</Suspense>;
+// Wrapper component for Suspense + ErrorBoundary
+const SuspenseWrapper = ({ children }) => (
+  <Suspense fallback={<PageLoader />}>
+    <ErrorBoundary>{children}</ErrorBoundary>
+  </Suspense>
+);
+
+// Root layout with global overlays (SearchDialog needs router context)
+const RootLayout = () => {
+  const openSearch = useSearchStore((s) => s.openSearch);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        openSearch();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [openSearch]);
+
+  return (
+    <>
+      <Outlet />
+      <SearchDialog />
+    </>
+  );
+};
 
 /**
  * 应用路由配置
@@ -27,40 +57,45 @@ const SuspenseWrapper = ({ children }) => <Suspense fallback={<PageLoader />}>{c
 export const router = createBrowserRouter(
   [
     {
-      path: '/',
-      element: (
-        <SuspenseWrapper>
-          <LandingPage />
-        </SuspenseWrapper>
-      ),
-    },
-    {
-      path: '/dashboard',
-      element: (
-        <SuspenseWrapper>
-          <DashboardPage />
-        </SuspenseWrapper>
-      ),
-    },
-    {
-      path: '/learn/:moduleId/:lessonId',
-      element: (
-        <SuspenseWrapper>
-          <ReaderPage />
-        </SuspenseWrapper>
-      ),
-    },
-    {
-      path: '/badges',
-      element: (
-        <SuspenseWrapper>
-          <BadgeCollectionPage />
-        </SuspenseWrapper>
-      ),
-    },
-    {
-      path: '*',
-      element: <Navigate to="/" replace />,
+      element: <RootLayout />,
+      children: [
+        {
+          path: '/',
+          element: (
+            <SuspenseWrapper>
+              <LandingPage />
+            </SuspenseWrapper>
+          ),
+        },
+        {
+          path: '/dashboard',
+          element: (
+            <SuspenseWrapper>
+              <DashboardPage />
+            </SuspenseWrapper>
+          ),
+        },
+        {
+          path: '/learn/:moduleId/:lessonId',
+          element: (
+            <SuspenseWrapper>
+              <ReaderPage />
+            </SuspenseWrapper>
+          ),
+        },
+        {
+          path: '/badges',
+          element: (
+            <SuspenseWrapper>
+              <BadgeCollectionPage />
+            </SuspenseWrapper>
+          ),
+        },
+        {
+          path: '*',
+          element: <Navigate to="/" replace />,
+        },
+      ],
     },
   ],
   {

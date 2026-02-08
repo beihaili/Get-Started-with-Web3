@@ -5,6 +5,7 @@ import { useContentStore } from '../store/useContentStore';
 import { useEffect, useState } from 'react';
 import { MarkdownRenderer } from '../features/content';
 import { AiTutor } from '../features/ai-tutor';
+import { MultiQuiz, QUIZ_BANK } from '../features/quiz';
 import { COURSE_DATA } from '../config/courseData';
 
 /**
@@ -134,6 +135,13 @@ const ReaderPage = () => {
               <div className="prose prose-invert max-w-none">
                 <MarkdownRenderer content={content} basePath={basePath} />
               </div>
+
+              {/* Quiz Section */}
+              {QUIZ_BANK[lessonId] && (
+                <div className="mt-8 pt-8 border-t border-slate-700">
+                  <MultiQuiz lessonId={lessonId} onPass={handleMarkComplete} />
+                </div>
+              )}
 
               {/* Navigation Buttons */}
               <div className="flex gap-4 mt-8 pt-8 border-t border-slate-700">
