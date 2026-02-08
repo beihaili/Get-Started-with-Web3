@@ -10,7 +10,7 @@ export const getRawBaseUrl = (path) =>
 export const getRawUrl = (path) =>
   `https://raw.githubusercontent.com/${GITHUB_USERNAME}/${GITHUB_REPO}/${GITHUB_BRANCH}/${path}`;
 
-const FALLBACK = '# Loading...';
+const FALLBACK = '# 正在加载内容...\n\n请稍候，如果长时间未加载请检查网络连接后刷新页面。';
 
 // 课程数据配置
 export const COURSE_DATA = [
