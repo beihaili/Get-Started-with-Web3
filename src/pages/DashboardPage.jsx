@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Award, TrendingUp, BookOpen } from 'lucide-react';
+import { ArrowLeft, Award, TrendingUp, BookOpen, Flame } from 'lucide-react';
 import { useUserStore } from '../store/useUserStore';
 import { COURSE_DATA } from '../config/courseData';
 
@@ -39,7 +39,7 @@ const DashboardPage = () => {
         {/* User Stats */}
         <div className="mb-8 p-6 bg-slate-900/60 backdrop-blur-md border border-slate-700/50 rounded-xl">
           <h2 className="text-2xl font-bold text-white mb-4">学习概览</h2>
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-4 gap-4">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-full bg-cyan-500/10 flex items-center justify-center">
                 <TrendingUp className="w-6 h-6 text-cyan-400" />
@@ -69,6 +69,18 @@ const DashboardPage = () => {
                 <p className="text-white text-xl font-bold">{progressCount}</p>
               </div>
             </div>
+
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 rounded-full bg-orange-500/10 flex items-center justify-center">
+                <Flame className="w-6 h-6 text-orange-400" />
+              </div>
+              <div>
+                <p className="text-slate-400 text-sm">总课程数</p>
+                <p className="text-white text-xl font-bold">
+                  {COURSE_DATA.reduce((sum, m) => sum + m.lessons.length, 0)}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -90,12 +102,12 @@ const DashboardPage = () => {
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-3">
                     <div
-                      className={`w-12 h-12 rounded-full bg-gradient-to-br ${module.color} bg-opacity-10 flex items-center justify-center`}
+                      className={`w-12 h-12 rounded-full bg-gradient-to-br ${module.color} flex items-center justify-center`}
                     >
-                      <Icon className={`w-6 h-6 ${module.color}`} />
+                      <Icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-white">{module.title}</h3>
+                      <h3 className="text-xl font-bold text-white">{module.title}</h3>
                       <p className="text-slate-400">{module.lessons.length} 讲课程</p>
                     </div>
                   </div>

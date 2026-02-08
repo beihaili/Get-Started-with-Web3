@@ -32,10 +32,10 @@
   ],
   "author": "beihaili",
   "license": "MIT",
-  "homepage": "https://beihaili.github.io/GetStartedWithWeb3/",
+  "homepage": "https://beihaili.github.io/Get-Started-with-Web3/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/beihaili/GetStartedWithWeb3.git"
+    "url": "https://github.com/beihaili/Get-Started-with-Web3.git"
   },
   "dependencies": {
     "fuse.js": "^7.0.0",

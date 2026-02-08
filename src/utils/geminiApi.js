@@ -1,7 +1,25 @@
 /**
  * Gemini API工具函数
- * 从原App.jsx迁移 (lines 52-91)
  */
+
+const STORAGE_KEY = 'web3-app-store';
+
+/**
+ * 从持久化存储获取 Gemini API Key
+ * 兼容 Zustand persist 的存储格式
+ */
+function getApiKey() {
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored) {
+      const parsed = JSON.parse(stored);
+      return parsed?.state?.geminiApiKey || '';
+    }
+  } catch {
+    // fallback
+  }
+  return '';
+}
 
 /**
  * 安全的 Gemini API 调用
@@ -11,8 +29,7 @@
  * @returns {Promise<string>} API响应
  */
 export async function callGemini(prompt, systemInstruction = '', jsonMode = false) {
-  // 从localStorage获取API key
-  const apiKey = localStorage.getItem('gemini-api-key');
+  const apiKey = getApiKey();
 
   if (!apiKey) {
     throw new Error('请先配置您的 Gemini API Key');
@@ -38,10 +55,6 @@ export async function callGemini(prompt, systemInstruction = '', jsonMode = fals
 
     const data = await response.json();
     if (data.error) {
-      // 如果是API key错误，清除存储的key
-      if (data.error.message.includes('API_KEY') || data.error.message.includes('invalid')) {
-        localStorage.removeItem('gemini-api-key');
-      }
       throw new Error(data.error.message);
     }
     return data.candidates?.[0]?.content?.parts?.[0]?.text || 'No response';

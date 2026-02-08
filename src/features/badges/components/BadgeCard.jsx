@@ -5,7 +5,7 @@ import BadgeFloatingAnimation from './BadgeFloatingAnimation';
  * 单个徽章卡片组件
  * 从原App.jsx迁移 (lines 509-610)
  */
-const BadgeCard = ({ badge, earned = false, onClick, progress = 0 }) => {
+const BadgeCard = ({ badge, earned = false, earnedData, onClick, progress = 0 }) => {
   const Icon = badge.icon;
 
   return (
@@ -106,7 +106,10 @@ const BadgeCard = ({ badge, earned = false, onClick, progress = 0 }) => {
           <div className="mt-2">
             <p className="text-xs text-green-400 flex items-center gap-1">
               <CheckCircle className="w-3 h-3" />
-              已获得 • {new Date().toLocaleDateString()}
+              已获得{' '}
+              {earnedData?.timestamp
+                ? `• ${new Date(earnedData.timestamp).toLocaleDateString()}`
+                : ''}
             </p>
           </div>
         )}

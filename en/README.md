@@ -1,4 +1,4 @@
-# Get Started With Web3
+# Get Started With Web3 — English
 
 [![GitHub stars](https://img.shields.io/github/stars/beihaili/Get-Started-with-Web3)](https://github.com/beihaili/Get-Started-with-Web3/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/beihaili/Get-Started-with-Web3)](https://github.com/beihaili/Get-Started-with-Web3/network/members)
@@ -6,139 +6,149 @@
 [![GitHub license](https://img.shields.io/github/license/beihaili/Get-Started-with-Web3)](https://github.com/beihaili/Get-Started-with-Web3/blob/main/LICENSE)
 [![Contributors](https://img.shields.io/github/contributors/beihaili/Get-Started-with-Web3)](https://github.com/beihaili/Get-Started-with-Web3/graphs/contributors)
 
-[🇨🇳 中文版](../zh/) | **🇺🇸 English**
+[**中文版**](../zh/) | English
+
+**The most systematic open-source Bitcoin & Web3 learning platform.** 27 structured tutorials covering everything from Web3 basics to Bitcoin's underlying architecture.
+
+**Online learning platform:** https://beihaili.github.io/Get-Started-with-Web3/
+
+> **Translation Status:** English translations are in progress. The primary content is in Chinese. Contributions to translations are welcome!
 
 ---
 
-Learning Web3 from scratch isn't easy. As someone who recently entered the Web3 space, I've compiled the simplest and most intuitive Web3 beginner's guide. This resource integrates high-quality materials from the open-source community to guide everyone from entry-level to mastery of Web3. Updated with 1-3 chapters weekly.
+## Learning Path
 
-## 📖 Online Reading
+Recommended order: **Web3 Quick Start first** -> **then Bitcoin Technical Deep Dive**.
 
-🌐 **[Click here to read online](https://beihaili.github.io/Get-Started-with-Web3/en/)** —— Better reading experience with search and navigation support.
-
-## 🤝 Connect With Us
-
-Follow me on Twitter: [@bhbtc1337](https://twitter.com/bhbtc1337)
-
-Join our community: [Sign-up form](https://forms.gle/QMBwL6LwZyQew1tX8)
-
-Open source on GitHub: [Get-Started-with-Web3](https://github.com/beihaili/Get-Started-with-Web3)
-
-Buy BTC / ETH / USDT recommended: [Binance](https://www.binance.com/en)[Registration Link](https://accounts.marketwebb.me/register?ref=39797374)
+Developers with programming experience can jump directly to the Bitcoin series.
 
 ---
 
-## 0. How to Get Started with Blockchain?
+## 1. Web3 Quick Start (6 Tutorials)
 
-This repository will approach from the following aspects, from shallow to deep, helping everyone quickly get started with blockchain, learn the basics of Web3, and understand Web3 applications.
+Start from zero. No programming background required.
 
-## 1. Web3 Quick Start
-
-[**Chapter 01: Create Your First Web3 Identity**](Web3QuickStart/01_FirstWeb3Identity/README.MD)
-
-[**Chapter 02: Make Your First Web3 Transaction**](Web3QuickStart/02_FirstWeb3Transaction/README.MD)
-
-[**Chapter 03: Build Your First Web3 DApp**](Web3QuickStart/03_FirstWeb3Dapp/README.MD)
-
-[**Chapter 04: Useful Web3 Websites**](Web3QuickStart/04_UsefulWeb3Sites/README.MD)
-
-[**Chapter 05: Launch Your First Token**](Web3QuickStart/05_LaunchYourFirstToken/README.MD)
-
-[**Chapter 06: Web3 Security and Anti-Scam Guide**](Web3QuickStart/06_Web3Security/README.MD)
-
-## 2. Bitcoin Technology Introduction
-
-[**Technical Architecture Overview**](GetStartedWithBitcoin/README.md)
-
-[**Chapter 01: Cryptography Fundamentals**](GetStartedWithBitcoin/01_Cryptography/README.MD)
-
-[**Chapter 02: Bitcoin Overview**](GetStartedWithBitcoin/02_Overview/README.MD)
-
-[**Chapter 03: Bitcoin Transaction Basics**](GetStartedWithBitcoin/03_BitcoinTx/README.MD)
-
-[**Chapter 04: Multi-Signature Transactions**](GetStartedWithBitcoin/04_MultiSig/README.MD)
-
-[**Chapter 05: Segregated Witness (SegWit) Technology**](GetStartedWithBitcoin/05_SegWit/README.MD)
-
-[**Chapter 06: Taproot Upgrade Explained**](GetStartedWithBitcoin/06_Taproot/README.MD)
-
-[**Chapter 07: Advanced Transaction Applications**](GetStartedWithBitcoin/07_AdvancedTransactions/README.MD)
-
-[**Chapter 08: Blockchain Data Structure**](GetStartedWithBitcoin/08_DataStructure/README.MD)
-
-[**Chapter 09: Bitcoin Core Nodes**](GetStartedWithBitcoin/09_BitcoinCore/README.MD)
-
-[**Chapter 10: P2P Network Protocol**](GetStartedWithBitcoin/10_P2PProtocol/README.MD)
-
-[**Chapter 11: Network Security**](GetStartedWithBitcoin/11_NetworkSecurity/README.MD)
-
-[**Chapter 12: Proof of Work and Mining**](GetStartedWithBitcoin/12_ProofOfWork/README.md)
-
-[**Chapter 13: Difficulty Adjustment Algorithm**](GetStartedWithBitcoin/13_DifficultyAdjustment/README.MD)
-
-[**Chapter 14: Fork Mechanisms and BIP Process**](GetStartedWithBitcoin/14_ForksBIPs/README.MD)
-
-[**Chapter 15: Bitcoin Wallets**](GetStartedWithBitcoin/15_BitcoinWallet/README.MD)
-
-[**Chapter 16: Bitcoin RPC Application Development**](GetStartedWithBitcoin/16_BitcoinRPC/README.MD)
-
-[**Chapter 17: Bitcoin Low-Fee Broadcasting Tool**](GetStartedWithBitcoin/17_BitcoinLowFeeBroadcast/README.MD)
-
-[**Chapter 18: Bitcoin Script System**](GetStartedWithBitcoin/18_BitcoinScript/README.MD)
-
-[**Chapter 19: Bitcoin Scaling and Governance**](GetStartedWithBitcoin/19_BitcoinGovernance/README.MD)
-
-[**Chapter 20: Ordinals and Ecosystem Innovation**](GetStartedWithBitcoin/20_Ordinals/README.MD)
-
-[**Chapter 21: DeFi Cross-Chain**](GetStartedWithBitcoin/21_DeFiCrossChain/README.MD)
-
-## 3. Other Learning Resources
-
-[**Ethereum Learning Guide**](其它学习资源整理/Ethereum/README.MD)
-
-[**DeFi Learning Guide**](其它学习资源整理/DeFi/README.MD)
-
-## 4. Web3 Thoughts Collection
-
-[**Chapter 01: Web3 Principles**](Web3Thoughts/01_Principles/README.MD)
-
-[**Chapter 02: Why Blockchain is Necessary**](Web3Thoughts/02_WhyBlockchainIsNecessary/README.MD)
-
-[**Chapter 03: The Coolest Transaction on Bitcoin**](Web3Thoughts/03_TheCoolestTransactionOnBitcoin/README.MD)
-
-## 5. Web3 Work Opportunities
-
-[**Career Opportunities and Development Paths**](Web3WorkOpportunities/README.md)
+| # | Topic | Key Content |
+|---|-------|-------------|
+| 01 | [Create Your First Web3 Identity](Web3QuickStart/01_FirstWeb3Identity/README.MD) | Wallet setup, address creation, seed phrase backup |
+| 02 | [Make Your First Web3 Transaction](Web3QuickStart/02_FirstWeb3Transaction/README.MD) | Transfers, gas fees, transaction confirmation |
+| 03 | [Build Your First Web3 DApp](Web3QuickStart/03_FirstWeb3Dapp/README.MD) | Wallet connection, smart contract interaction |
+| 04 | [Useful Web3 Websites](Web3QuickStart/04_UsefulWeb3Sites/README.MD) | Block explorers, DeFi tools, information aggregators |
+| 05 | [Launch Your First Token](Web3QuickStart/05_LaunchYourFirstToken/README.MD) | Complete ERC-20 token launch process |
+| 06 | [Web3 Security Guide](Web3QuickStart/06_Web3Security/README.MD) | Scam identification, asset protection, security best practices |
 
 ---
 
-## 💫 Features
+## 2. Bitcoin Technical Deep Dive (21 Tutorials)
 
-- 📚 **Comprehensive**: From basics to advanced topics.
-- 🛠️ **Practical**: Includes hands-on code examples.
-- 🔄 **Updated**: Regular weekly updates.
-- 🌍 **Open Source**: Community-driven development.
-- 🎯 **Beginner-Friendly**: Easy-to-understand explanations.
-- 💻 **Interactive**: Runnable code examples.
+Organized by a **5-layer technical architecture**, from cryptographic foundations to ecosystem applications.
 
-## 🤝 Contributing
+```
+  Application Layer (15-21)    Wallets, RPC, Script, Ordinals, DeFi
+  Consensus Layer  (12-14)     Proof of Work, difficulty adjustment, forks & BIPs
+  Network Layer    (09-11)     Bitcoin Core, P2P protocol, network security
+  Data Layer       (03-08)     Transactions, multisig, SegWit, Taproot
+  Cryptography     (01-02)     Hash functions, digital signatures, ECC, HD wallets
+```
 
-We welcome contributions! Please check out our [contribution guidelines](../templates/README.md) for more information.
+> Full architecture diagram and study guide: [Bitcoin Technical Architecture Overview](GetStartedWithBitcoin/README.md)
 
-## 📄 License
+### Layer 1: Cryptographic Foundations
 
-This project is licensed under the MIT License —— see the [LICENSE](../LICENSE) file for details.
+| # | Topic | Key Content |
+|---|-------|-------------|
+| 01 | [Cryptography Fundamentals](GetStartedWithBitcoin/01_Cryptography/README.MD) | Hash functions, digital signatures, elliptic curves, HD wallets |
+| 02 | [Bitcoin Overview](GetStartedWithBitcoin/02_Overview/README.MD) | Bitcoin's essence, decentralization philosophy |
 
-## 🙏 Acknowledgments
+### Layer 2: Data Layer
 
-Thanks to all contributors and the open-source community for making this resource possible.
+| # | Topic | Key Content |
+|---|-------|-------------|
+| 03 | [Bitcoin Transaction Basics](GetStartedWithBitcoin/03_BitcoinTx/README.MD) | UTXO model, transaction structure & validation |
+| 04 | [Multi-Signature Transactions](GetStartedWithBitcoin/04_MultiSig/README.MD) | Multisig mechanisms, security models |
+| 05 | [Segregated Witness (SegWit)](GetStartedWithBitcoin/05_SegWit/README.MD) | Transaction data reorganization, capacity optimization |
+| 06 | [Taproot Upgrade](GetStartedWithBitcoin/06_Taproot/README.MD) | Schnorr signatures, MAST, privacy improvements |
+| 07 | [Advanced Transactions](GetStartedWithBitcoin/07_AdvancedTransactions/README.MD) | Timelocks, complex scripts |
+| 08 | [Blockchain Data Structure](GetStartedWithBitcoin/08_DataStructure/README.MD) | Block structure, Merkle trees |
+
+### Layer 3: Network Layer
+
+| # | Topic | Key Content |
+|---|-------|-------------|
+| 09 | [Bitcoin Core Nodes](GetStartedWithBitcoin/09_BitcoinCore/README.MD) | Running nodes, network participation |
+| 10 | [P2P Network Protocol](GetStartedWithBitcoin/10_P2PProtocol/README.MD) | Peer discovery, data propagation & sync |
+| 11 | [Network Security](GetStartedWithBitcoin/11_NetworkSecurity/README.MD) | Attack types & defense, privacy protection |
+
+### Layer 4: Consensus Layer
+
+| # | Topic | Key Content |
+|---|-------|-------------|
+| 12 | [Proof of Work & Mining](GetStartedWithBitcoin/12_ProofOfWork/README.md) | Mining algorithms, hardware evolution, mining pools |
+| 13 | [Difficulty Adjustment](GetStartedWithBitcoin/13_DifficultyAdjustment/README.MD) | Dynamic difficulty adjustment, economic incentive balance |
+| 14 | [Forks & BIP Process](GetStartedWithBitcoin/14_ForksBIPs/README.MD) | Soft forks vs hard forks, protocol upgrades |
+
+### Layer 5: Application Layer
+
+| # | Topic | Key Content |
+|---|-------|-------------|
+| 15 | [Bitcoin Wallets](GetStartedWithBitcoin/15_BitcoinWallet/README.MD) | Wallet types, key management |
+| 16 | [Bitcoin RPC Development](GetStartedWithBitcoin/16_BitcoinRPC/README.MD) | RPC interface, system integration |
+| 17 | [Low-Fee Broadcasting Tool](GetStartedWithBitcoin/17_BitcoinLowFeeBroadcast/README.MD) | Fee optimization, practical tool development |
+| 18 | [Bitcoin Script System](GetStartedWithBitcoin/18_BitcoinScript/README.MD) | Stack-based scripting, conditional payments |
+| 19 | [Bitcoin Scaling & Governance](GetStartedWithBitcoin/19_BitcoinGovernance/README.MD) | Layer 2, Lightning Network, governance |
+| 20 | [Ordinals & Ecosystem Innovation](GetStartedWithBitcoin/20_Ordinals/README.MD) | Inscriptions, BRC-20, NFTs |
+| 21 | [DeFi Cross-Chain](GetStartedWithBitcoin/21_DeFiCrossChain/README.MD) | Cross-chain protocols, decentralized finance |
+
+---
+
+## 3. Web3 Thoughts
+
+| Topic | Description |
+|-------|-------------|
+| [Web3 Principles](Web3Thoughts/01_Principles/README.MD) | Core Web3 ideals and values |
+| [Why Blockchain is Necessary](Web3Thoughts/02_WhyBlockchainIsNecessary/README.MD) | Notes on *The Sovereign Individual* |
+| [Bitcoin Easter Eggs](Web3Thoughts/03_TheCoolestTransactionOnBitcoin/README.MD) | Hidden gems in the b10c...eb5d transaction |
+
+## 4. Web3 Career
+
+| Topic | Description |
+|-------|-------------|
+| [Career Opportunities & Interview Tips](Web3WorkOpportunities/README.md) | Web3 job hunting and preparation |
+
+---
+
+## Contributing
+
+We welcome contributions of all kinds:
+
+| Type | Description |
+|------|-------------|
+| **Content Review** | Review tutorials for technical accuracy |
+| **Translation** | Help translate Chinese tutorials to English |
+| **Code Examples** | Write runnable companion code |
+| **Platform Development** | Improve the React learning platform (React 19 + Vite + Tailwind CSS) |
+
+### How to Contribute
+
+1. Fork this repository
+2. Create a feature branch (`git checkout -b feature/your-contribution`)
+3. Commit your changes (`git commit -m 'Add your contribution'`)
+4. Push and open a Pull Request
+
+---
+
+## Community
+
+- **Twitter**: [@bhbtc1337](https://twitter.com/bhbtc1337)
+- **WeChat Group**: [Join here](https://forms.gle/QMBwL6LwZyQew1tX8)
+- **GitHub Issues**: [Report issues](https://github.com/beihaili/Get-Started-with-Web3/issues)
+
+## License
+
+This project is licensed under the [MIT License](../LICENSE).
 
 ---
 
 <div align="center">
-
-**Happy Learning! 🎉**
-
-*If you find this helpful, please give it a ⭐ on GitHub!*
-
+  <strong>Let's build the best open-source Bitcoin & Web3 learning resource together!</strong>
 </div>

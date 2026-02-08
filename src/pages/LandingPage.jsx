@@ -55,13 +55,9 @@ const LandingPage = () => {
           </a>
         </div>
 
-        {/* Status Badge */}
-        <div className="mt-16 text-center">
-          <div className="inline-block px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full">
-            <span className="text-green-400 text-sm font-medium">
-              ✅ 路由系统已激活 | Zustand 状态管理就绪
-            </span>
-          </div>
+        {/* Footer */}
+        <div className="mt-16 text-center text-slate-500 text-sm">
+          <p>MIT License | 开源 Web3 教育平台</p>
         </div>
       </div>
     </div>

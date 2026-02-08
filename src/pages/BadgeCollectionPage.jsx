@@ -74,8 +74,16 @@ const BadgeCollectionPage = () => {
           <>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 max-w-6xl mx-auto">
               {Object.values(ACHIEVEMENT_BADGES).map((badge) => {
-                const isEarned = earnedBadges[badge.id];
-                return <BadgeCard key={badge.id} badge={badge} earned={isEarned} progress={0} />;
+                const earnedData = earnedBadges[badge.id];
+                return (
+                  <BadgeCard
+                    key={badge.id}
+                    badge={badge}
+                    earned={!!earnedData}
+                    earnedData={earnedData}
+                    progress={0}
+                  />
+                );
               })}
             </div>
 
