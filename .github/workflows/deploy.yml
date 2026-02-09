@@ -40,7 +40,7 @@ jobs:
       env:
         VITE_GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         VITE_GITHUB_USERNAME: ${{ secrets.GITHUB_USERNAME || 'beihaili' }}
-        VITE_GITHUB_REPO: ${{ secrets.GITHUB_REPO || 'GetStartedWithWeb3' }}
+        VITE_GITHUB_REPO: ${{ secrets.GITHUB_REPO || 'Get-Started-with-Web3' }}
         VITE_GITHUB_BRANCH: ${{ secrets.GITHUB_BRANCH || 'main' }}
 
     - name: Setup GitHub Pages 📄
