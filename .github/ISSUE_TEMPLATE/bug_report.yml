@@ -1,0 +1,83 @@
+name: Bug 报告
+description: 提交一个 Bug 报告来帮助我们改进
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢你提交 Bug 报告！请尽可能详细地填写以下信息。
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug 描述
+      description: 简要描述你遇到的问题
+      placeholder: 清晰描述 Bug 是什么
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 描述如何复现这个 Bug
+      placeholder: |
+        1. 打开页面 '...'
+        2. 点击 '...'
+        3. 滚动到 '...'
+        4. 看到错误
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望行为
+      description: 描述你期望发生的情况
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际行为
+      description: 描述实际发生的情况
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 截图
+      description: 如果有的话，请添加截图来帮助说明问题
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: 浏览器
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+        - 其他
+    validations:
+      required: true
+
+  - type: dropdown
+    id: device
+    attributes:
+      label: 设备类型
+      options:
+        - 桌面端
+        - 移动端
+        - 平板
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 补充信息
+      description: 其他可能有助于解决问题的信息
