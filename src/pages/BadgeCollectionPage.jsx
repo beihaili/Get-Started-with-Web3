@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Award, ArrowLeft } from 'lucide-react';
+import { Award, ArrowLeft, Share2 } from 'lucide-react';
 import { useUserStore } from '../store/useUserStore';
 import { BadgeCard, ACHIEVEMENT_BADGES } from '../features/badges';
+import ShareCard from '../components/ShareCard';
 
 /**
  * 徽章收藏页面
@@ -9,6 +11,7 @@ import { BadgeCard, ACHIEVEMENT_BADGES } from '../features/badges';
  */
 const BadgeCollectionPage = () => {
   const { earnedBadges, totalExperience, userTitle } = useUserStore();
+  const [showShareCard, setShowShareCard] = useState(false);
 
   const totalBadges = Object.keys(ACHIEVEMENT_BADGES).length;
   const earnedBadgeCount = Object.keys(earnedBadges).length;
@@ -88,7 +91,7 @@ const BadgeCollectionPage = () => {
             </div>
 
             <div className="max-w-4xl mx-auto p-8 bg-slate-900/60 backdrop-blur-md border border-slate-700/50 rounded-xl">
-              <div className="grid grid-cols-3 gap-4 text-center">
+              <div className="grid grid-cols-3 gap-4 text-center mb-6">
                 <div>
                   <div className="text-3xl font-bold text-cyan-400">{earnedBadgeCount}</div>
                   <div className="text-sm text-slate-400">已获得</div>
@@ -104,10 +107,19 @@ const BadgeCollectionPage = () => {
                   <div className="text-sm text-slate-400">完成度</div>
                 </div>
               </div>
+              <button
+                onClick={() => setShowShareCard(true)}
+                className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white rounded-lg transition-all font-medium"
+              >
+                <Share2 className="w-4 h-4" />
+                分享学习成就
+              </button>
             </div>
           </>
         )}
       </div>
+
+      {showShareCard && <ShareCard onClose={() => setShowShareCard(false)} />}
     </div>
   );
 };

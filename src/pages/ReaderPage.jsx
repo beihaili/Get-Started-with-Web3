@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, CheckCircle, Loader2 } from 'lucide-react';
+import { ArrowLeft, CheckCircle, Loader2, Share2 } from 'lucide-react';
 import { useUserStore } from '../store/useUserStore';
 import { useContentStore } from '../store/useContentStore';
 import { useEffect, useState } from 'react';
@@ -7,6 +7,7 @@ import { MarkdownRenderer } from '../features/content';
 import { AiTutor } from '../features/ai-tutor';
 import { MultiQuiz, QUIZ_BANK } from '../features/quiz';
 import { COURSE_DATA } from '../config/courseData';
+import ShareCard from '../components/ShareCard';
 
 /**
  * 课程阅读页面
@@ -21,6 +22,7 @@ const ReaderPage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [basePath, setBasePath] = useState('');
+  const [showShareCard, setShowShareCard] = useState(false);
 
   const lessonKey = `${moduleId}-${lessonId}`;
   const isCompleted = getLessonProgress(lessonKey);
@@ -73,6 +75,12 @@ const ReaderPage = () => {
     currentLessonIndex < (currentModule?.lessons.length ?? 0) - 1
       ? currentModule.lessons[currentLessonIndex + 1]
       : null;
+
+  // Check if all lessons in this module are completed
+  const { getModuleProgress } = useUserStore();
+  const moduleLessonKeys = currentModule?.lessons.map((l) => `${moduleId}-${l.id}`) || [];
+  const moduleProgress = getModuleProgress(moduleLessonKeys);
+  const isModuleComplete = moduleProgress.percentage === 100;
 
   return (
     <div className="min-h-screen bg-slate-950">
@@ -180,6 +188,22 @@ const ReaderPage = () => {
                   </div>
                 )}
               </div>
+              {/* Module completion banner */}
+              {isModuleComplete && (
+                <div className="mt-8 p-6 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-xl text-center">
+                  <h3 className="text-xl font-bold text-white mb-2">
+                    {currentModule?.title} 全部完成！
+                  </h3>
+                  <p className="text-slate-400 mb-4">恭喜你完成了本模块的所有课程</p>
+                  <button
+                    onClick={() => setShowShareCard(true)}
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white rounded-lg transition-all font-medium"
+                  >
+                    <Share2 className="w-4 h-4" />
+                    分享学习成就
+                  </button>
+                </div>
+              )}
             </>
           )}
         </div>
@@ -187,6 +211,8 @@ const ReaderPage = () => {
 
       {/* AI Tutor */}
       <AiTutor lessonContext={content} />
+
+      {showShareCard && <ShareCard onClose={() => setShowShareCard(false)} />}
     </div>
   );
 };
