@@ -10,17 +10,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
     permissions:
-      contents: read
-      pages: write
-      id-token: write
+      contents: write
+      pull-requests: write
 
     steps:
     - name: Checkout 📁
@@ -42,24 +37,16 @@ jobs:
       run: npm run build
       env:
         VITE_GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        VITE_GITHUB_USERNAME: ${{ secrets.GITHUB_USERNAME || 'beihaili' }}
-        VITE_GITHUB_REPO: ${{ secrets.GITHUB_REPO || 'Get-Started-with-Web3' }}
-        VITE_GITHUB_BRANCH: ${{ secrets.GITHUB_BRANCH || 'main' }}
-
-    - name: Setup GitHub Pages 📄
-      if: github.ref == 'refs/heads/main'
-      uses: actions/configure-pages@v4
-
-    - name: Upload Pages Artifact 📤
-      if: github.ref == 'refs/heads/main'
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: ./dist
+        VITE_GITHUB_USERNAME: ${{ vars.GITHUB_USERNAME || 'beihaili' }}
+        VITE_GITHUB_REPO: ${{ vars.GITHUB_REPO || 'Get-Started-with-Web3' }}
+        VITE_GITHUB_BRANCH: ${{ vars.GITHUB_BRANCH || 'main' }}
 
     - name: Deploy to GitHub Pages 🚀
       if: github.ref == 'refs/heads/main'
-      id: deployment
-      uses: actions/deploy-pages@v4
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
 
     - name: Comment PR with Preview Link 💬
       if: github.event_name == 'pull_request'
