@@ -1,0 +1,47 @@
+{
+  "name": "Get Started With Web3",
+  "short_name": "Web3 Starter",
+  "description": "Web3 和区块链入门教程平台 — 21 讲比特币技术 + 6 讲 Web3 入门",
+  "start_url": "/Get-Started-with-Web3/",
+  "scope": "/Get-Started-with-Web3/",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#0f172a",
+  "background_color": "#020617",
+  "categories": ["education", "books"],
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "开始学习",
+      "short_name": "学习",
+      "url": "/Get-Started-with-Web3/dashboard",
+      "description": "进入课程仪表板"
+    },
+    {
+      "name": "我的徽章",
+      "short_name": "徽章",
+      "url": "/Get-Started-with-Web3/badges",
+      "description": "查看学习成就和徽章"
+    }
+  ]
+}

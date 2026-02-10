@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="url(#bg)"/>
+  <!-- Blockchain cube -->
+  <g transform="translate(256,240)">
+    <!-- Top face -->
+    <polygon points="0,-100 120,-40 0,20 -120,-40" fill="#22d3ee" opacity="0.9"/>
+    <!-- Left face -->
+    <polygon points="-120,-40 0,20 0,140 -120,80" fill="#0891b2" opacity="0.9"/>
+    <!-- Right face -->
+    <polygon points="120,-40 0,20 0,140 120,80" fill="#06b6d4" opacity="0.9"/>
+    <!-- Chain links -->
+    <circle cx="0" cy="-100" r="8" fill="#fff"/>
+    <circle cx="120" cy="-40" r="8" fill="#fff"/>
+    <circle cx="-120" cy="-40" r="8" fill="#fff"/>
+    <circle cx="0" cy="20" r="8" fill="#fff" opacity="0.6"/>
+  </g>
+  <!-- W3 text -->
+  <text x="256" y="440" font-family="system-ui,sans-serif" font-size="80" font-weight="bold" fill="url(#accent)" text-anchor="middle">W3</text>
+</svg>
