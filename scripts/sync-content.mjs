@@ -13,6 +13,12 @@ const SOURCE_FOLDERS = [
   'Web3QuickStart',
   'GetStartedWithBitcoin',
   'Web3Thoughts',
+  '其它学习资源整理/DeFi',
+  '其它学习资源整理/Etherum',
+  '其它学习资源整理/Layer2',
+  '其它学习资源整理/新兴公链生态',
+  '其它学习资源整理/AI_Web3',
+  '其它学习资源整理/实用工具',
 ];
 
 const ensureExists = async (dir) => {

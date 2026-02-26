@@ -1,4 +1,4 @@
-import { BookOpen, BrainCircuit, Shield, Globe, Cpu } from 'lucide-react';
+import { BookOpen, BrainCircuit, Shield, Globe, Cpu, Layers } from 'lucide-react';
 
 // GitHub 配置
 export const GITHUB_USERNAME = 'beihaili';
@@ -230,6 +230,50 @@ export const COURSE_DATA = [
         id: '5-3',
         title: '比特币上最酷的交易',
         path: 'zh/Web3Thoughts/03_TheCoolestTransactionOnBitcoin',
+        fallbackContent: FALLBACK,
+      },
+    ],
+  },
+  {
+    id: 'module-6',
+    title: 'Web3 生态与实用工具',
+    icon: Layers,
+    color: 'from-teal-400 to-emerald-400',
+    lessons: [
+      {
+        id: '6-1',
+        title: 'DeFi 去中心化金融',
+        path: 'zh/其它学习资源整理/DeFi',
+        fallbackContent: FALLBACK,
+      },
+      {
+        id: '6-2',
+        title: '以太坊生态概览',
+        path: 'zh/其它学习资源整理/Etherum',
+        fallbackContent: FALLBACK,
+      },
+      {
+        id: '6-3',
+        title: 'Layer 2 扩容技术',
+        path: 'zh/其它学习资源整理/Layer2',
+        fallbackContent: FALLBACK,
+      },
+      {
+        id: '6-4',
+        title: '新兴公链生态 (Solana/Sui/Aptos)',
+        path: 'zh/其它学习资源整理/新兴公链生态',
+        fallbackContent: FALLBACK,
+      },
+      {
+        id: '6-5',
+        title: 'AI + Web3 融合',
+        path: 'zh/其它学习资源整理/AI_Web3',
+        fallbackContent: FALLBACK,
+      },
+      {
+        id: '6-6',
+        title: 'Web3 实用工具大全',
+        path: 'zh/其它学习资源整理/实用工具',
         fallbackContent: FALLBACK,
       },
     ],

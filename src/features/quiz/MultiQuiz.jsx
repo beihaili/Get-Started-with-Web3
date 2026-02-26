@@ -223,15 +223,17 @@ const MultiQuiz = ({ lessonId, onPass }) => {
                 >
                   🔄 重新挑战
                 </button>
-                <button
-                  onClick={() => {
-                    onPass();
-                    setQuizState('idle');
-                  }}
-                  className="bg-slate-600 hover:bg-slate-500 text-white py-3 px-6 rounded-lg transition-colors"
-                >
-                  跳过 (调试用)
-                </button>
+                {import.meta.env.DEV && (
+                  <button
+                    onClick={() => {
+                      onPass();
+                      setQuizState('idle');
+                    }}
+                    className="bg-slate-600 hover:bg-slate-500 text-white py-3 px-6 rounded-lg transition-colors"
+                  >
+                    跳过 (调试用)
+                  </button>
+                )}
               </div>
             </>
           )}

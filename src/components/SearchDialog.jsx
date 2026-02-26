@@ -22,7 +22,7 @@ const SearchDialog = () => {
       }))
     );
     return new Fuse(items, {
-      keys: ['lessonTitle'],
+      keys: ['lessonTitle', 'moduleTitle'],
       threshold: 0.4,
       includeMatches: true,
     });

@@ -1,4 +1,4 @@
-import { Rocket, Brain, Crown, Shield, Globe, Flame, Target, Calendar } from 'lucide-react';
+import { Rocket, Brain, Crown, Shield, Globe, Flame, Target, Calendar, Layers } from 'lucide-react';
 
 /**
  * EWP-721 (Education Web3 Protocol) - 学习徽章协议
@@ -106,6 +106,25 @@ export const ACHIEVEMENT_BADGES = {
       title: '👑 Web3 思想家',
       experience: 300,
       unlockedFeatures: ['AI 哲学对话模式', 'Web3 未来趋势预测'],
+      nextBadgeHint: '继续学习 Web3 生态与实用工具',
+    },
+  },
+  'module-6': {
+    id: 'web3-ecosystem-explorer',
+    name: 'Web3 Ecosystem Explorer',
+    title: 'Web3 生态探索者',
+    description: '掌握 DeFi、以太坊、新兴公链和 AI+Web3 等多元生态知识',
+    icon: Layers,
+    rarity: 'Epic',
+    color: 'from-teal-500 to-emerald-500',
+    glowColor: 'shadow-teal-500/50',
+    borderColor: 'border-teal-500',
+    bgColor: 'bg-teal-500/10',
+    requirement: '完成 Web3 生态与实用工具的所有 6 个课程',
+    rewards: {
+      title: '🌍 Web3 生态专家',
+      experience: 300,
+      unlockedFeatures: ['多链生态数据看板', 'DeFi 收益计算器'],
       nextBadgeHint: '恭喜完成所有模块！你已成为真正的 Web3 Builder',
     },
   },

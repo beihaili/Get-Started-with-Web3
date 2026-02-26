@@ -1,6 +1,6 @@
 /**
  * 测验题库数据
- * 覆盖全部 30 课 × 3 题 = 90 题
+ * 覆盖全部 36 课 × 3 题 = 108 题
  */
 
 export const QUIZ_BANK = {
@@ -818,6 +818,162 @@ export const QUIZ_BANK = {
       correctAnswer: 1,
       explanation:
         '交易覆盖了 P2PK、P2PKH、P2SH、P2WPKH、P2WSH、P2TR 等几乎所有比特币脚本类型的演进。',
+    },
+  ],
+  '6-1': [
+    // DeFi 去中心化金融
+    {
+      question: 'DeFi 中，TVL (Total Value Locked) 代表什么含义？',
+      options: ['每日交易总量', '锁定在协议中的资产总价值', '年化收益率', '代币总供应量'],
+      correctAnswer: 1,
+      explanation:
+        'TVL (Total Value Locked) 即总锁定价值，是衡量 DeFi 协议中锁定资产总价值的重要指标，反映了用户对协议的信任度和规模。',
+    },
+    {
+      question: '以下哪个协议是以太坊流动性质押 (LSDFi) 领域 TVL 最高的？',
+      options: ['Rocket Pool', 'Frax Ether', 'Lido', 'Coinbase cbETH'],
+      correctAnswer: 2,
+      explanation:
+        'Lido 以超过 320 亿美元的 TVL 位居以太坊流动性质押龙头，远超第二名 Rocket Pool。',
+    },
+    {
+      question: 'RWA (现实世界资产) 代币化的市场规模预计到 2030 年将达到多少？',
+      options: ['1 万亿美元', '5 万亿美元', '16 万亿美元', '50 万亿美元'],
+      correctAnswer: 2,
+      explanation:
+        'RWA 代币化市场规模预计到 2030 年将达到 16 万亿美元，BlackRock BUIDL、Ondo Finance 等是核心项目。',
+    },
+  ],
+  '6-2': [
+    // 以太坊生态概览
+    {
+      question: '以太坊的 "The Merge"（合并）在何时完成？',
+      options: ['2020 年 12 月', '2021 年 6 月', '2022 年 9 月', '2023 年 3 月'],
+      correctAnswer: 2,
+      explanation:
+        '以太坊的 The Merge 于 2022 年 9 月完成，主网从工作量证明 (PoW) 转变为权益证明 (PoS)，能耗降低了 99.95%。',
+    },
+    {
+      question: '要成为以太坊 PoS 验证者，最低需要质押多少 ETH？',
+      options: ['1 ETH', '16 ETH', '32 ETH', '64 ETH'],
+      correctAnswer: 2,
+      explanation: '以太坊权益证明 (PoS) 机制要求验证者至少质押 32 个 ETH 才能参与网络验证。',
+    },
+    {
+      question: '以太坊中外部账户 (EOA) 的特点是什么？',
+      options: [
+        '由智能合约代码控制',
+        '包含合约代码',
+        '只能被动响应调用',
+        '由私钥控制，可以主动发起交易',
+      ],
+      correctAnswer: 3,
+      explanation:
+        '外部账户 (EOA) 由私钥控制，可以主动发起交易。而合约账户由智能合约代码控制，只能被动响应调用。',
+    },
+  ],
+  '6-3': [
+    // Layer 2 扩容技术
+    {
+      question: 'Optimistic Rollups 的提款周期通常需要多长时间？',
+      options: ['1 小时', '1 天', '7 天', '30 天'],
+      correctAnswer: 2,
+      explanation:
+        'Optimistic Rollups 假设所有交易都是有效的，只在被质疑时才进行验证，因此提款需等待 7 天的挑战期。',
+    },
+    {
+      question: '截至 2025 年 1 月，哪个 Layer 2 项目的 TVL 最高？',
+      options: ['Optimism', 'Base', 'Arbitrum', 'zkSync Era'],
+      correctAnswer: 2,
+      explanation:
+        '截至 2025 年 1 月，Arbitrum 以 150 亿美元的 TVL 排名第一，占 Layer 2 市场份额的 43.2%。',
+    },
+    {
+      question: '以太坊主网 (Layer 1) 的 TPS 大约是多少？',
+      options: ['约 15 TPS', '约 100 TPS', '约 1,000 TPS', '约 10,000 TPS'],
+      correctAnswer: 0,
+      explanation:
+        '以太坊主网的 TPS 约为 15，远低于 Layer 2 的 2,000-10,000+ TPS，这正是 Layer 2 扩容方案存在的根本原因。',
+    },
+  ],
+  '6-4': [
+    // 新兴公链生态
+    {
+      question: 'Solana 区块链使用的独创性共识机制核心技术是什么？',
+      options: ['权益证明 (PoS)', '历史证明 (PoH)', '委托权益证明 (DPoS)', '工作量证明 (PoW)'],
+      correctAnswer: 1,
+      explanation:
+        'Solana 的核心创新是历史证明 (Proof of History, PoH)，通过创建历史记录证明来为交易排序，配合 PoS 共识实现 65,000+ 的高 TPS。',
+    },
+    {
+      question: 'Aptos 和 Sui 都使用哪种编程语言进行智能合约开发？',
+      options: ['Solidity', 'Rust', 'Move', 'Go'],
+      correctAnswer: 2,
+      explanation:
+        'Aptos 和 Sui 都使用 Move 语言，以资源导向编程为特色，编译时保证资源不能被复制或丢弃，安全性更高。',
+    },
+    {
+      question: '在新兴公链的 TPS 性能对比中，以下哪个公链的理论 TPS 最高？',
+      options: ['Solana (65,000+)', 'Aptos (160,000+)', 'Sui (297,000+)', 'Cosmos (10,000+)'],
+      correctAnswer: 2,
+      explanation:
+        'Sui 凭借 Narwhal & Bullshark 共识算法达到了 297,000+ 的 TPS，高于 Aptos 和 Solana。',
+    },
+  ],
+  '6-5': [
+    // AI + Web3 融合
+    {
+      question: 'zkML (零知识机器学习) 的核心优势是什么？',
+      options: [
+        '加速 AI 模型训练速度',
+        '在不暴露模型参数或训练数据的情况下证明 AI 模型的正确执行',
+        '降低 AI 模型的存储成本',
+        '提高 AI 模型的准确率',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'zkML 结合零知识证明和机器学习，在不暴露模型参数或训练数据的情况下，通过数学保证证明 AI 模型的正确执行。',
+    },
+    {
+      question: '根据 Vitalik Buterin 的框架，AI 在加密领域有几种角色？',
+      options: ['两种', '三种', '四种', '五种'],
+      correctAnswer: 2,
+      explanation: '根据 Vitalik 的框架，AI 在 Crypto 中有四种角色：参与者、接口、规则和目标。',
+    },
+    {
+      question: '去中心化 AI 基础设施项目 Render Network (RNDR) 主要提供什么服务？',
+      options: ['去中心化数据存储', 'GPU 渲染和 AI 训练', '跨链通信协议', '隐私信用评估'],
+      correctAnswer: 1,
+      explanation:
+        'Render Network 是去中心化 GPU 渲染网络，主要应用于 3D 渲染和 AI 模型训练，是去中心化计算基础设施的代表。',
+    },
+  ],
+  '6-6': [
+    // Web3 实用工具大全
+    {
+      question: 'Slither 是由哪个安全团队开发的智能合约静态分析工具？',
+      options: ['OpenZeppelin', 'Certora', 'Trail of Bits', 'ConsenSys Diligence'],
+      correctAnswer: 2,
+      explanation:
+        'Slither 是由 Trail of Bits 团队用 Python 开发的静态分析工具，能够检测 90+ 种漏洞类型。',
+    },
+    {
+      question: '1inch DEX 聚合器支持多少条链和多少个 DEX？',
+      options: [
+        '5+ 条链，50+ DEX',
+        '12+ 条链，200+ DEX',
+        '20+ 条链，500+ DEX',
+        '8+ 条链，100+ DEX',
+      ],
+      correctAnswer: 1,
+      explanation: '1inch 支持 12+ 条区块链和 200+ 个 DEX，通过智能路由为用户寻找最优交易价格。',
+    },
+    {
+      question: 'Foundry 开发工具链是用什么编程语言编写的？',
+      options: ['JavaScript', 'Python', 'Rust', 'Go'],
+      correctAnswer: 2,
+      explanation:
+        'Foundry 是用 Rust 编写的现代化 Solidity 开发工具链，具有极速编译、内置模糊测试等特点。',
     },
   ],
   // 默认通用题目
