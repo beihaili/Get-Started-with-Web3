@@ -1,6 +1,11 @@
 import { Rocket, Brain, Crown, Shield, Globe, Flame, Target, Calendar, Layers } from 'lucide-react';
 
 /**
+ * 平台上线日期（用于 early-adopter 徽章判定）
+ */
+export const PLATFORM_LAUNCH_DATE = new Date('2025-06-01').getTime();
+
+/**
  * EWP-721 (Education Web3 Protocol) - 学习徽章协议
  */
 export const BADGE_PROTOCOL = {
@@ -25,7 +30,7 @@ export const ACHIEVEMENT_BADGES = {
     glowColor: 'shadow-blue-500/50',
     borderColor: 'border-blue-500',
     bgColor: 'bg-blue-500/10',
-    requirement: '完成 Web3 快速入门的所有 6 个课程',
+    requirement: '完成 Web3 快速入门的所有 7 个课程',
     rewards: {
       title: '🚀 Web3 探索者',
       experience: 100,

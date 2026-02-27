@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Award, ArrowLeft, Share2 } from 'lucide-react';
 import { useUserStore } from '../store/useUserStore';
-import { BadgeCard, ACHIEVEMENT_BADGES } from '../features/badges';
+import { BadgeCard, ACHIEVEMENT_BADGES, SPECIAL_BADGES } from '../features/badges';
 import ShareCard from '../components/ShareCard';
 
 /**
@@ -13,12 +13,16 @@ const BadgeCollectionPage = () => {
   const { earnedBadges, totalExperience, userTitle } = useUserStore();
   const [showShareCard, setShowShareCard] = useState(false);
 
-  const totalBadges = Object.keys(ACHIEVEMENT_BADGES).length;
+  const totalBadges = Object.keys(ACHIEVEMENT_BADGES).length + Object.keys(SPECIAL_BADGES).length;
   const earnedBadgeCount = Object.keys(earnedBadges).length;
   const completionRate = ((earnedBadgeCount / totalBadges) * 100).toFixed(1);
 
   return (
     <div className="min-h-screen bg-slate-950">
+      <title>徽章收藏馆 | Web3 Starter</title>
+      <meta name="description" content="Web3 学习平台徽章收藏，查看已获得的学习成就徽章" />
+      <meta property="og:title" content="徽章收藏馆 | Web3 Starter" />
+      <link rel="canonical" href="https://beihaili.github.io/Get-Started-with-Web3/badges" />
       <div className="sticky top-0 z-10 border-b border-slate-800 bg-slate-950/80 backdrop-blur-md">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link
@@ -88,6 +92,25 @@ const BadgeCollectionPage = () => {
                   />
                 );
               })}
+            </div>
+
+            {/* Special Badges */}
+            <div className="max-w-6xl mx-auto mb-8">
+              <h2 className="text-2xl font-bold text-white mb-6 text-center">特殊成就</h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                {Object.values(SPECIAL_BADGES).map((badge) => {
+                  const earnedData = earnedBadges[badge.id];
+                  return (
+                    <BadgeCard
+                      key={badge.id}
+                      badge={badge}
+                      earned={!!earnedData}
+                      earnedData={earnedData}
+                      progress={0}
+                    />
+                  );
+                })}
+              </div>
             </div>
 
             <div className="max-w-4xl mx-auto p-8 bg-slate-900/60 backdrop-blur-md border border-slate-700/50 rounded-xl">

@@ -201,7 +201,7 @@ const MultiQuiz = ({ lessonId, onPass }) => {
               </p>
               <button
                 onClick={() => {
-                  onPass();
+                  onPass(score, currentQuiz.length);
                   setQuizState('idle');
                 }}
                 className="bg-green-600 hover:bg-green-500 text-white font-bold py-3 px-8 rounded-lg transition-colors transform hover:scale-105 shadow-lg"
@@ -226,7 +226,7 @@ const MultiQuiz = ({ lessonId, onPass }) => {
                 {import.meta.env.DEV && (
                   <button
                     onClick={() => {
-                      onPass();
+                      onPass(score, currentQuiz.length);
                       setQuizState('idle');
                     }}
                     className="bg-slate-600 hover:bg-slate-500 text-white py-3 px-6 rounded-lg transition-colors"

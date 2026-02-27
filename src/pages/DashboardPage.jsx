@@ -17,6 +17,10 @@ const DashboardPage = () => {
 
   return (
     <div className="min-h-screen bg-slate-950">
+      <title>课程仪表盘 | Web3 Starter</title>
+      <meta name="description" content="Web3 学习平台课程仪表盘，查看学习进度和课程列表" />
+      <meta property="og:title" content="课程仪表盘 | Web3 Starter" />
+      <link rel="canonical" href="https://beihaili.github.io/Get-Started-with-Web3/dashboard" />
       {/* Header */}
       <nav aria-label="课程导航" className="border-b border-slate-800">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">

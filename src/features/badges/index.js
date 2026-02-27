@@ -8,6 +8,7 @@ export {
   BADGE_PROTOCOL,
   ACHIEVEMENT_BADGES,
   SPECIAL_BADGES,
+  PLATFORM_LAUNCH_DATE,
   getAllBadges,
   getBadgeById,
   shouldUnlockBadge,

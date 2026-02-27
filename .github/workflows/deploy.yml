@@ -30,6 +30,9 @@ jobs:
     - name: Install Dependencies 📦
       run: npm ci
 
+    - name: Install Playwright Chromium 🎭
+      run: npx playwright install chromium
+
     - name: Run Tests 🧪
       run: npm test
 

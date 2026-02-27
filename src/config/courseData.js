@@ -56,6 +56,12 @@ export const COURSE_DATA = [
         path: 'zh/Web3QuickStart/06_Web3Security',
         fallbackContent: FALLBACK,
       },
+      {
+        id: '1-7',
+        title: 'Web3 交易所入门',
+        path: 'zh/Web3QuickStart/07_Web3CEX',
+        fallbackContent: FALLBACK,
+      },
     ],
   },
   {

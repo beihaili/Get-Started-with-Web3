@@ -17,6 +17,13 @@ const LandingPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
+      <title>Get Started with Web3 - 从入门到精通</title>
+      <meta
+        name="description"
+        content="中文世界最系统的比特币与 Web3 学习平台。从零基础到深入原理，一站式掌握区块链核心技术。"
+      />
+      <meta property="og:title" content="Get Started with Web3 - 从入门到精通" />
+      <link rel="canonical" href="https://beihaili.github.io/Get-Started-with-Web3/" />
       <ParticleBackground />
       <MouseSpotlight />
 

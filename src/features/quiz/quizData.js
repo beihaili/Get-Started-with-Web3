@@ -1,6 +1,6 @@
 /**
  * 测验题库数据
- * 覆盖全部 36 课 × 3 题 = 108 题
+ * 覆盖全部 36 课 × 5 题 = 180 题 + 5 默认题 = 185 题
  */
 
 export const QUIZ_BANK = {
@@ -34,6 +34,20 @@ export const QUIZ_BANK = {
       correctAnswer: 1,
       explanation: '助记词应该离线保存，写在纸上是最安全的方式，避免网络攻击和设备丢失的风险。',
     },
+    {
+      question: '标准的 BIP-39 助记词通常由多少个单词组成？',
+      options: ['6 个', '12 个或 24 个', '8 个', '32 个'],
+      correctAnswer: 1,
+      explanation:
+        'BIP-39 标准助记词通常为 12 个或 24 个英文单词，从 2048 个单词的词表中生成，提供足够的安全性。',
+    },
+    {
+      question: '以下哪个不是常见的 Web3 钱包？',
+      options: ['MetaMask', 'Phantom', '支付宝', 'Trust Wallet'],
+      correctAnswer: 2,
+      explanation:
+        '支付宝是传统中心化支付工具，不是 Web3 钱包。MetaMask、Phantom 和 Trust Wallet 都是流行的去中心化钱包。',
+    },
   ],
   '1-2': [
     // 体验第一笔交易
@@ -54,6 +68,25 @@ export const QUIZ_BANK = {
       options: ['立即完成', '几分钟到几小时不等', '总是24小时', '1秒钟'],
       correctAnswer: 1,
       explanation: '交易确认时间取决于网络拥堵程度和Gas费设置，通常从几分钟到几小时不等。',
+    },
+    {
+      question: '以太坊交易中的 Nonce 值代表什么？',
+      options: ['交易金额', '该地址发送交易的序号', 'Gas 费上限', '区块编号'],
+      correctAnswer: 1,
+      explanation:
+        'Nonce 是该地址发送交易的计数器，从 0 开始递增，用于防止重放攻击并确保交易按顺序执行。',
+    },
+    {
+      question: '区块链交易一旦被确认后，以下哪项描述是正确的？',
+      options: [
+        '可以联系客服撤销',
+        '只要支付额外费用就能取消',
+        '无法被撤销或修改',
+        '等待 24 小时后可以回滚',
+      ],
+      correctAnswer: 2,
+      explanation:
+        '区块链交易一旦被确认就不可逆转，这是区块链不可篡改性的体现，因此发送前务必仔细核实地址和金额。',
     },
   ],
   '1-3': [
@@ -81,6 +114,25 @@ export const QUIZ_BANK = {
       correctAnswer: 1,
       explanation: '连接钱包可以证明用户身份，并授权DApp代表用户执行区块链交易。',
     },
+    {
+      question: '以下哪个是 DApp 的典型应用场景？',
+      options: ['传统银行转账', '去中心化交易所（DEX）和借贷协议', '安装操作系统', '编辑本地文档'],
+      correctAnswer: 1,
+      explanation:
+        'DEX 和借贷协议是 DApp 最常见的应用场景，它们通过智能合约实现无需中介的金融服务。',
+    },
+    {
+      question: '连接 DApp 时给予"无限授权"可能带来什么风险？',
+      options: [
+        '降低交易速度',
+        '增加 Gas 费',
+        '恶意合约可以转走你授权的所有代币',
+        '导致钱包地址泄露',
+      ],
+      correctAnswer: 2,
+      explanation:
+        '无限授权意味着智能合约可以无限额转走你授权的代币，如果合约存在漏洞或是恶意的，资产可能被盗。',
+    },
   ],
   '1-4': [
     // 常用 Web3 网站
@@ -102,6 +154,25 @@ export const QUIZ_BANK = {
       correctAnswer: 1,
       explanation: 'DefiLlama 是 DeFi 领域的重要数据平台，主要提供各协议的 TVL 和收益信息。',
     },
+    {
+      question: 'Etherscan 是哪条区块链的浏览器？',
+      options: ['比特币', '以太坊', 'Solana', 'Cosmos'],
+      correctAnswer: 1,
+      explanation:
+        'Etherscan 是以太坊上最常用的区块链浏览器，可以查看交易详情、合约代码和地址余额等信息。',
+    },
+    {
+      question: 'CoinMarketCap 和 CoinGecko 网站的主要用途是什么？',
+      options: [
+        '发行新代币',
+        '查看加密货币市值、价格和交易量等市场数据',
+        '管理私钥',
+        '运行挖矿程序',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'CoinMarketCap 和 CoinGecko 是最流行的加密市场数据网站，提供各种加密货币的实时价格、市值排名和交易量数据。',
+    },
   ],
   '1-5': [
     // 发行你的第一个代币
@@ -122,6 +193,30 @@ export const QUIZ_BANK = {
       options: ['社交媒体链接', '代币名称和符号', '社区评论', '代币描述的外部链接'],
       correctAnswer: 1,
       explanation: '代币的基本信息（名称和符号）在链上发行后不可更改，这是区块链不可篡改性的体现。',
+    },
+    {
+      question: '债券曲线（Bonding Curve）的价格特征是什么？',
+      options: [
+        '价格始终固定不变',
+        '买入越多价格越高，卖出越多价格越低',
+        '价格完全随机波动',
+        '只能上涨不能下跌',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '债券曲线是一种数学定价模型，代币价格随供应量变化：买入增多价格上升，卖出增多价格下降。',
+    },
+    {
+      question: '在 Pump.fun 上发行代币时，最重要的安全注意事项是什么？',
+      options: [
+        '选择好看的代币图标',
+        '了解智能合约风险和代币归零的可能性',
+        '尽量多买自己发行的代币',
+        '在社交媒体上大力推广',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '发行和购买代币存在极高风险，大部分代币可能归零，参与前必须了解智能合约风险并只投入能承受损失的金额。',
     },
   ],
   '1-6': [
@@ -145,6 +240,93 @@ export const QUIZ_BANK = {
       correctAnswer: 2,
       explanation: '大额资产应使用冷钱包离线存储，安全等级最高，避免网络攻击风险。',
     },
+    {
+      question: '以下哪种是常见的 Web3 钓鱼攻击方式？',
+      options: [
+        '通过电话推销加密货币',
+        '伪造知名项目官网诱骗用户签署恶意交易',
+        '在交易所内部攻击',
+        '破解区块链网络',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '钓鱼攻击通常伪造与知名项目极其相似的网站，诱骗用户连接钱包并签署恶意交易，从而转走用户资产。',
+    },
+    {
+      question: '在签署区块链交易前，最重要的安全习惯是什么？',
+      options: [
+        '检查网络是否畅通',
+        '仔细阅读交易内容，确认授权范围和目标地址',
+        '确保 Gas 费最低',
+        '使用 VPN 连接',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '签署交易前务必仔细核对交易内容和授权范围，盲目签名是 Web3 中最常见的资产丢失原因之一。',
+    },
+  ],
+  '1-7': [
+    // Web3 交易所入门
+    {
+      question: 'CEX（中心化交易所）与 DEX（去中心化交易所）的核心区别是什么？',
+      options: [
+        'CEX 手续费更高',
+        'CEX 由公司运营并托管用户资产，DEX 通过智能合约实现无托管交易',
+        'DEX 只能交易比特币',
+        'CEX 不需要注册账户',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'CEX 由中心化公司运营，用户将资产托管给交易所；DEX 通过智能合约运行，用户始终控制自己的资产。',
+    },
+    {
+      question: '在交易所充值加密货币时，最重要的注意事项是什么？',
+      options: [
+        '选择手续费最低的网络',
+        '确保充值地址和网络（链）都选择正确',
+        '尽量一次性充值大额',
+        '只在白天操作',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '充值时必须确认地址和网络都正确，选错网络（如将 ERC-20 代币发到 TRC-20 地址）可能导致资产永久丢失。',
+    },
+    {
+      question: '以下哪项不是交易所账户安全的推荐做法？',
+      options: [
+        '启用 Google Authenticator 两步验证（2FA）',
+        '设置提币地址白名单',
+        '将所有资产长期存放在交易所',
+        '使用独立的邮箱注册交易所账户',
+      ],
+      correctAnswer: 2,
+      explanation:
+        '交易所可能被黑客攻击或出现运营风险，大额资产应转移到自己控制私钥的钱包中，"Not your keys, not your coins"。',
+    },
+    {
+      question: 'KYC（Know Your Customer）在交易所中指的是什么？',
+      options: [
+        '一种加密货币名称',
+        '交易所要求用户完成身份认证的流程',
+        '一种交易策略',
+        '钱包的安全等级',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'KYC 即"了解你的客户"，是中心化交易所为遵守反洗钱法规要求用户提交身份证明的认证流程。',
+    },
+    {
+      question: '限价单和市价单的主要区别是什么？',
+      options: [
+        '限价单手续费更高',
+        '限价单指定成交价格，市价单以当前最优价格立即成交',
+        '市价单无法执行',
+        '两者没有区别',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '限价单让你设定期望的买入或卖出价格，只在达到该价格时成交；市价单则以当前市场最优价格立即成交。',
+    },
   ],
   '2-1': [
     // 密码学基础
@@ -165,6 +347,25 @@ export const QUIZ_BANK = {
       options: ['加密数据', '证明身份和防篡改', '生成地址', '挖矿算法'],
       correctAnswer: 1,
       explanation: '数字签名用于证明消息来自私钥持有者，并确保消息在传输中未被篡改。',
+    },
+    {
+      question: '比特币使用的椭圆曲线算法名称是什么？',
+      options: ['RSA-2048', 'secp256k1', 'Ed25519', 'AES-256'],
+      correctAnswer: 1,
+      explanation:
+        '比特币使用 secp256k1 椭圆曲线进行公钥密码学运算，该曲线在安全性和计算效率之间取得了平衡。',
+    },
+    {
+      question: '哈希函数的"雪崩效应"指的是什么？',
+      options: [
+        '输入不变输出也不变',
+        '输入的微小变化会导致输出完全不同',
+        '输出长度随输入增大',
+        '多个输入产生相同输出',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '雪崩效应是指输入哪怕只改变一个比特，哈希输出也会发生巨大变化，这保证了哈希函数的安全性。',
     },
   ],
   '2-2': [
@@ -187,6 +388,20 @@ export const QUIZ_BANK = {
       correctAnswer: 1,
       explanation: '比特币使用工作量证明(PoW)共识机制，矿工需要解决数学难题来获得记账权。',
     },
+    {
+      question: '比特币白皮书的作者署名是什么？',
+      options: ['Vitalik Buterin', '中本聪（Satoshi Nakamoto）', 'Hal Finney', 'Nick Szabo'],
+      correctAnswer: 1,
+      explanation:
+        '比特币白皮书《Bitcoin: A Peer-to-Peer Electronic Cash System》由中本聪于 2008 年发表，其真实身份至今未知。',
+    },
+    {
+      question: '比特币区块奖励减半大约每几年发生一次？',
+      options: ['每 1 年', '每 2 年', '每 4 年', '每 10 年'],
+      correctAnswer: 2,
+      explanation:
+        '比特币每 210,000 个区块（约 4 年）进行一次区块奖励减半，从最初的 50 BTC 逐步减少。',
+    },
   ],
   '2-3': [
     // 比特币交易结构
@@ -207,6 +422,25 @@ export const QUIZ_BANK = {
       options: ['格式验证', 'UTXO 存在性检查', '用户身份证验证', '脚本验证（密码学证明）'],
       correctAnswer: 2,
       explanation: '比特币是无许可系统，不需要身份证验证，而是通过密码学签名验证所有权。',
+    },
+    {
+      question: 'UTXO 模型与账户余额模型相比有什么优势？',
+      options: ['更容易理解', '支持并行验证交易且隐私性更好', '存储空间更小', '交易速度更快'],
+      correctAnswer: 1,
+      explanation:
+        'UTXO 模型中每笔交易独立验证，天然支持并行处理；且每次交易可使用新地址，增强了隐私性。',
+    },
+    {
+      question: '比特币交易中的"找零"是什么意思？',
+      options: [
+        '退回多余的手续费',
+        '将 UTXO 中超出支付金额的部分返回到自己的新地址',
+        '交易所退款',
+        '矿工返还的奖励',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '由于 UTXO 必须整体花费，如果 UTXO 金额大于需要支付的金额，多余部分会作为找零发送到自己控制的新地址。',
     },
   ],
   '2-4': [
@@ -240,6 +474,20 @@ export const QUIZ_BANK = {
       correctAnswer: 1,
       explanation: 'P2SH（Pay-to-Script-Hash）地址以 3 开头，它将复杂的多签脚本隐藏在哈希中。',
     },
+    {
+      question: '多重签名技术最常见的应用场景是什么？',
+      options: ['加速交易确认', '企业资金管理和安全托管', '降低交易手续费', '增加匿名性'],
+      correctAnswer: 1,
+      explanation:
+        '多重签名广泛用于企业资金管理（如 3-of-5 签名保护公司金库）、安全托管和联合账户等场景。',
+    },
+    {
+      question: '比特币标准多重签名最多支持多少个公钥？',
+      options: ['3 个', '7 个', '15 个', '无限制'],
+      correctAnswer: 2,
+      explanation:
+        '比特币标准多重签名最多支持 15 个公钥（15-of-15），这是由 OP_CHECKMULTISIG 的脚本大小限制决定的。',
+    },
   ],
   '2-5': [
     // 隔离见证
@@ -261,6 +509,25 @@ export const QUIZ_BANK = {
       options: ['Base58', 'Bech32', 'Hex', 'Base64'],
       correctAnswer: 1,
       explanation: '原生 SegWit 地址（bc1q 开头）使用 Bech32 编码，比 Base58 更高效且不易出错。',
+    },
+    {
+      question: '交易延展性（Transaction Malleability）问题指的是什么？',
+      options: [
+        '交易金额可以被篡改',
+        '交易 ID 可以在不改变交易内容的情况下被修改',
+        '交易可以被取消',
+        '交易地址可以被伪造',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '交易延展性指签名数据的轻微修改会导致交易哈希（TXID）改变，而交易实际内容不变，SegWit 通过分离签名数据解决了此问题。',
+    },
+    {
+      question: 'SegWit 升级是通过什么方式激活的？',
+      options: ['硬分叉', '软分叉（向后兼容）', '中心化决定', '全网投票'],
+      correctAnswer: 1,
+      explanation:
+        'SegWit 是通过软分叉激活的，向后兼容意味着未升级的旧节点仍然可以验证 SegWit 交易。',
     },
   ],
   '2-6': [
@@ -289,6 +556,25 @@ export const QUIZ_BANK = {
       correctAnswer: 1,
       explanation: 'MAST 将脚本条件组织成默克尔树，只需揭示实际执行的路径，保护了其他条件的隐私。',
     },
+    {
+      question: 'Taproot 地址以什么字符开头？',
+      options: ['1', '3', 'bc1q', 'bc1p'],
+      correctAnswer: 3,
+      explanation:
+        'Taproot 地址以 bc1p 开头，使用 Bech32m 编码（Bech32 的改进版），是目前最先进的比特币地址格式。',
+    },
+    {
+      question: 'Taproot 升级对比特币隐私性的改善体现在哪里？',
+      options: [
+        '隐藏交易金额',
+        '单签和多签交易在链上看起来完全相同',
+        '隐藏发送方地址',
+        '加密交易数据',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '通过 Schnorr 签名聚合和 MAST，Taproot 使单签、多签和复杂脚本交易在链上看起来完全一致，大幅提升隐私性。',
+    },
   ],
   '2-7': [
     // 高级交易应用
@@ -315,6 +601,25 @@ export const QUIZ_BANK = {
       correctAnswer: 1,
       explanation:
         '比特币地址从早期的 1 开头（P2PKH），到 3 开头（P2SH），再到 bc1q（SegWit）和 bc1p（Taproot）。',
+    },
+    {
+      question: 'OP_RETURN 输出有什么特殊之处？',
+      options: ['可以被花费', '标记为不可花费，不会进入 UTXO 集合', '必须包含签名', '只能存储数字'],
+      correctAnswer: 1,
+      explanation:
+        'OP_RETURN 输出被标记为可证明不可花费（provably unspendable），不会进入 UTXO 集合，避免了 UTXO 膨胀。',
+    },
+    {
+      question: 'HTLC 中的"时间锁"组件的作用是什么？',
+      options: [
+        '加速交易确认',
+        '如果接收方未在规定时间内提供哈希原像，资金自动退回发送方',
+        '锁定交易手续费',
+        '限制每天的交易次数',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '时间锁确保了安全性：如果接收方不在限定时间内用哈希原像领取资金，发送方可以在超时后取回资金。',
     },
   ],
   '2-8': [
@@ -343,6 +648,25 @@ export const QUIZ_BANK = {
       explanation:
         'SPV 轻节点只存储区块头（约 80 字节），通过默克尔证明来验证交易，适合手机钱包等场景。',
     },
+    {
+      question: '比特币区块头中包含的默克尔根（Merkle Root）代表什么？',
+      options: ['前一个区块的哈希', '该区块所有交易的摘要', '矿工的公钥', '当前网络难度'],
+      correctAnswer: 1,
+      explanation:
+        '默克尔根是区块中所有交易经过默克尔树逐层哈希后得到的根哈希值，可以用来快速验证任意一笔交易是否包含在区块中。',
+    },
+    {
+      question: '修改区块链中某个已确认区块的交易数据会导致什么？',
+      options: [
+        '只影响该区块',
+        '该区块及其后所有区块的哈希都会改变，篡改会被立即发现',
+        '不会有任何影响',
+        '只影响下一个区块',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '由于哈希指针的链式结构，修改任何一个区块的数据都会导致该区块及后续所有区块的哈希改变，使篡改立即可被检测。',
+    },
   ],
   '3-1': [
     // 比特币核心节点
@@ -370,6 +694,25 @@ export const QUIZ_BANK = {
       explanation:
         '修剪模式验证完整区块链后删除旧数据，可将存储降至 2-10 GB 同时保持完整验证能力。',
     },
+    {
+      question: '比特币核心客户端（Bitcoin Core）的主要实现语言是什么？',
+      options: ['Python', 'Java', 'C++', 'Rust'],
+      correctAnswer: 2,
+      explanation:
+        'Bitcoin Core 主要使用 C++ 编写，从中本聪最初的代码发展至今，是比特币网络最广泛使用的节点实现。',
+    },
+    {
+      question: '初始区块下载（IBD）过程中节点在做什么？',
+      options: [
+        '只下载区块头',
+        '从网络下载并验证从创世区块到最新区块的所有数据',
+        '只同步最近 100 个区块',
+        '从中心化服务器获取数据快照',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'IBD 过程中节点从头开始下载并验证整条区块链，确保每一笔交易和每一个区块都符合共识规则。',
+    },
   ],
   '3-2': [
     // P2P 网络协议
@@ -390,6 +733,20 @@ export const QUIZ_BANK = {
       options: ['手动输入 IP 地址', 'DNS 种子服务器查询', '广播搜索', '中心化注册表'],
       correctAnswer: 1,
       explanation: '新节点通过查询 9 个独立的 DNS 种子服务器来获取初始节点列表，确保去中心化发现。',
+    },
+    {
+      question: '比特币 P2P 网络的拓扑结构属于什么类型？',
+      options: ['星型网络', '环型网络', '非结构化的平等对等网络', '树型层级网络'],
+      correctAnswer: 2,
+      explanation:
+        '比特币网络是非结构化的平等对等（peer-to-peer）网络，没有中心节点，每个节点地位平等。',
+    },
+    {
+      question: '比特币节点之间的消息传播使用什么机制？',
+      options: ['中心化广播', 'Gossip 协议（洪泛传播）', '直接点对点发送', '定时轮询服务器'],
+      correctAnswer: 1,
+      explanation:
+        '比特币使用 Gossip 协议传播交易和区块，节点收到新信息后转发给相邻节点，像"八卦"一样扩散到全网。',
     },
   ],
   '3-3': [
@@ -416,6 +773,30 @@ export const QUIZ_BANK = {
       ],
       correctAnswer: 1,
       explanation: '日蚀攻击通过让目标节点只连接攻击者控制的节点，使其无法获取真实的网络信息。',
+    },
+    {
+      question: '51% 攻击能做到以下哪项？',
+      options: [
+        '修改比特币总供应量',
+        '对自己的交易进行双重支付',
+        '偷走任何人钱包中的比特币',
+        '创造新的比特币',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '51% 攻击者可以重组区块链实现双重支付（双花），但无法修改协议规则、偷走他人资产或凭空创造比特币。',
+    },
+    {
+      question: '比特币网络防范日蚀攻击的主要机制有哪些？',
+      options: [
+        '加密所有通信数据',
+        '限制单一 IP 段的连接数并随机选择出站连接',
+        '要求所有节点注册身份',
+        '关闭入站连接',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'Bitcoin Core 通过限制来自同一 /16 子网的连接数量、随机选择出站连接等机制来抵御日蚀攻击。',
     },
   ],
   '3-4': [
@@ -449,6 +830,25 @@ export const QUIZ_BANK = {
       explanation:
         '比特币每 210,000 个区块（约 4 年）减半一次，从最初的 50 BTC 逐渐减少直至 2140 年归零。',
     },
+    {
+      question: '矿工在挖矿过程中不断改变的区块头字段是什么？',
+      options: ['前一区块哈希', 'Nonce（随机数）', '版本号', '默克尔根'],
+      correctAnswer: 1,
+      explanation:
+        '矿工通过不断改变 Nonce 值来尝试不同的区块头哈希，直到找到一个小于目标难度值的有效哈希。',
+    },
+    {
+      question: '比特币矿池（Mining Pool）存在的主要原因是什么？',
+      options: [
+        '降低电费成本',
+        '单个矿工获得区块奖励的概率太低，矿池可以稳定收益',
+        '提高比特币价格',
+        '中心化管理更高效',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '单个矿工独立挖到区块的概率极低，矿池将多个矿工的算力汇聚，按贡献分配收益，使挖矿收入更加稳定。',
+    },
   ],
   '3-5': [
     // 难度调整算法
@@ -470,6 +870,25 @@ export const QUIZ_BANK = {
       correctAnswer: 1,
       explanation:
         '得益于难度调整机制，比特币 15 年来的平均出块时间为 9.8 分钟，非常接近 10 分钟目标。',
+    },
+    {
+      question: '如果全网算力突然翻倍，在下一次难度调整前会发生什么？',
+      options: ['出块时间不变', '出块时间会缩短为约 5 分钟', '网络会暂停', '区块大小会增加'],
+      correctAnswer: 1,
+      explanation:
+        '在难度调整前，算力翻倍会导致出块速度加快约一倍（约 5 分钟/块），直到下一个难度调整周期将难度提高以恢复 10 分钟目标。',
+    },
+    {
+      question: '难度调整机制对比特币网络安全性有什么作用？',
+      options: [
+        '降低手续费',
+        '确保即使算力大幅变化也能维持稳定的出块速率和安全性',
+        '增加区块容量',
+        '加密交易数据',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '难度调整保证了无论全网算力如何变化，出块时间始终保持在约 10 分钟，既维护了网络安全又确保了经济激励的可持续性。',
     },
   ],
   '3-6': [
@@ -497,6 +916,30 @@ export const QUIZ_BANK = {
       ],
       correctAnswer: 1,
       explanation: 'BIP 分为标准跟踪类（影响实现）、信息类（最佳实践）和流程类（治理流程）三种。',
+    },
+    {
+      question: 'BIP 的全称是什么？',
+      options: [
+        'Bitcoin Investment Proposal',
+        'Bitcoin Improvement Proposal',
+        'Blockchain Integration Protocol',
+        'Bitcoin Internal Process',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'BIP（Bitcoin Improvement Proposal）是比特币改进提案，任何人都可以提交，是比特币协议升级的标准化流程。',
+    },
+    {
+      question: '软分叉在什么条件下可以成功激活？',
+      options: [
+        '需要 100% 节点同意',
+        '只需要多数算力支持即可，无需所有节点升级',
+        '需要中本聪亲自批准',
+        '需要所有交易所支持',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '软分叉只需多数算力（通常要求 95% 信号支持）即可激活，未升级的旧节点仍然可以验证新区块。',
     },
   ],
   '4-1': [
@@ -529,6 +972,25 @@ export const QUIZ_BANK = {
       correctAnswer: 1,
       explanation: '热钱包始终联网方便日常使用，冷钱包离线保存适合大额长期存储，安全性更高。',
     },
+    {
+      question: 'HD 钱包（分层确定性钱包）的主要优势是什么？',
+      options: [
+        '交易速度更快',
+        '只需一个种子即可生成无限的密钥对和地址',
+        '手续费更低',
+        '只能存储比特币',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'HD 钱包从一个主种子派生出所有密钥对，只需备份一组助记词就能恢复所有地址和资产。',
+    },
+    {
+      question: '以下哪种是硬件钱包的代表产品？',
+      options: ['MetaMask', 'Ledger Nano', 'Phantom', 'Trust Wallet'],
+      correctAnswer: 1,
+      explanation:
+        'Ledger Nano 是最知名的硬件冷钱包之一，将私钥存储在离线的安全芯片中，交易签名在设备内完成，大幅降低被盗风险。',
+    },
   ],
   '4-2': [
     // 比特币 RPC
@@ -554,6 +1016,25 @@ export const QUIZ_BANK = {
       ],
       correctAnswer: 2,
       explanation: 'RPC 命令覆盖区块链查询、钱包操作和交易管理等功能，不涉及社交媒体。',
+    },
+    {
+      question: '使用比特币 RPC 时需要配置什么安全凭证？',
+      options: ['邮箱和手机号', 'rpcuser 和 rpcpassword（用户名和密码）', 'SSL 证书', '指纹识别'],
+      correctAnswer: 1,
+      explanation:
+        'RPC 接口通过 bitcoin.conf 中配置的 rpcuser 和 rpcpassword 进行身份验证，防止未授权访问。',
+    },
+    {
+      question: 'bitcoin-cli 工具的作用是什么？',
+      options: [
+        '挖矿软件',
+        '比特币核心的命令行 RPC 客户端，用于与节点交互',
+        '钱包图形界面',
+        '区块链浏览器',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'bitcoin-cli 是 Bitcoin Core 附带的命令行工具，封装了 RPC 调用，方便开发者和管理员直接在终端操作节点。',
     },
   ],
   '4-3': [
@@ -591,6 +1072,30 @@ export const QUIZ_BANK = {
       correctAnswer: 1,
       explanation: '时间胶囊交易指用极低的费率广播交易，耐心等待网络不拥堵时才被矿工打包确认。',
     },
+    {
+      question: 'CPFP（Child Pays for Parent）的工作原理是什么？',
+      options: [
+        '矿工免费加速交易',
+        '创建一笔子交易花费未确认的父交易输出，并附带高手续费来激励矿工同时打包两笔交易',
+        '向矿工直接转账',
+        '回滚未确认的交易',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'CPFP 通过创建一笔花费未确认 UTXO 的子交易，矿工为了获取子交易的高手续费会同时打包父交易。',
+    },
+    {
+      question: '比特币交易手续费的计算依据是什么？',
+      options: [
+        '转账金额的百分比',
+        '交易数据的大小（以虚拟字节 vByte 计算）',
+        '固定金额',
+        '发送方的钱包余额',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '比特币手续费按交易的数据大小（vByte）计算，与转账金额无关，费率以 sat/vB（聪/虚拟字节）为单位。',
+    },
   ],
   '4-4': [
     // Bitcoin Script
@@ -622,6 +1127,30 @@ export const QUIZ_BANK = {
       ],
       correctAnswer: 1,
       explanation: 'P2PKH 是最经典也是使用最广泛的脚本类型，约占比特币交易的 60%。',
+    },
+    {
+      question: 'P2PKH 脚本在验证交易时需要提供什么？',
+      options: [
+        '只需要公钥',
+        '需要公钥和对应私钥生成的数字签名',
+        '只需要比特币地址',
+        '需要矿工的授权',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'P2PKH 验证时，花费者需要提供公钥和用对应私钥生成的数字签名，脚本验证签名有效且公钥哈希匹配。',
+    },
+    {
+      question: '比特币脚本中 OP_DUP 和 OP_HASH160 的组合作用是什么？',
+      options: [
+        '加密交易数据',
+        '复制栈顶的公钥并计算其哈希，用于与锁定脚本中的地址哈希比对',
+        '删除无效交易',
+        '生成新的比特币地址',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '在 P2PKH 脚本中，OP_DUP 复制栈顶公钥，OP_HASH160 对其进行哈希运算，然后与脚本中预存的地址哈希进行比较。',
     },
   ],
   '4-5': [
@@ -661,6 +1190,30 @@ export const QUIZ_BANK = {
       explanation:
         '比特币的去中心化治理由开发者、矿工、经济节点和用户共同参与，没有中央银行的角色。',
     },
+    {
+      question: 'SegWit2x 提案为什么最终失败？',
+      options: [
+        '技术上无法实现',
+        '缺乏足够的社区共识和用户支持，在争议中被放弃',
+        '中本聪反对',
+        '矿工全部拒绝',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'SegWit2x 试图在 SegWit 之后进一步将区块大小增至 2MB，但由于社区反对和缺乏共识最终被取消。',
+    },
+    {
+      question: '比特币"无领导者"的治理模式意味着什么？',
+      options: [
+        '没有人维护代码',
+        '协议变更需要生态系统多方参与者的粗略共识，任何单一方都无法独自决定',
+        '可以随意修改代码',
+        '由最大矿池决定一切',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '比特币没有 CEO 或董事会，协议变更需要开发者、矿工、节点运营者和用户之间达成粗略共识，这确保了去中心化。',
+    },
   ],
   '4-6': [
     // Ordinals 与生态创新
@@ -695,6 +1248,30 @@ export const QUIZ_BANK = {
       explanation:
         'BRC-20 使用 JSON 格式在 Ordinals 铭文中定义代币的 deploy、mint 和 transfer 操作。',
     },
+    {
+      question: 'Ordinals 协议中"稀有聪"（Rare Sats）的分类依据是什么？',
+      options: [
+        '聪的金额大小',
+        '聪在特殊事件（如减半、新难度周期）中被挖出的时间',
+        '聪所在交易的手续费',
+        '随机抽取',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'Ordinals 根据聪被挖出的时间点将其分为 common、uncommon、rare、epic、legendary、mythic 等稀有度等级。',
+    },
+    {
+      question: 'Ordinals 铭文与传统 NFT（如以太坊 ERC-721）的最大区别是什么？',
+      options: [
+        '铭文更便宜',
+        '铭文数据完全存储在链上，不依赖外部存储',
+        '铭文可以修改',
+        '传统 NFT 不能交易',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'Ordinals 铭文将图片、文字等数据直接写入比特币区块链，而多数以太坊 NFT 的元数据存储在 IPFS 等链外系统。',
+    },
   ],
   '4-7': [
     // DeFi 跨链
@@ -726,6 +1303,30 @@ export const QUIZ_BANK = {
       ],
       correctAnswer: 1,
       explanation: 'RGB 采用客户端验证模式，合约状态只由交易双方验证，保护了隐私且不增加链上负担。',
+    },
+    {
+      question: '闪电网络中打开支付通道需要在链上进行什么操作？',
+      options: [
+        '注册账户',
+        '创建一笔链上交易将资金锁入 2-of-2 多签地址',
+        '向矿工支付特殊费用',
+        '提交身份验证',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '开通闪电通道需要一笔链上交易将资金存入双方的 2-of-2 多签地址，之后通道内的交易都在链下进行。',
+    },
+    {
+      question: '原子交换的"原子性"指的是什么？',
+      options: [
+        '交易速度极快',
+        '跨链交易要么完全成功，要么完全失败，不存在中间状态',
+        '交易金额很小',
+        '交易消耗的能量很少',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '原子性意味着跨链交易要么双方都完成交换，要么双方都不执行，避免了一方得到资产而另一方未收到的风险。',
     },
   ],
   '5-1': [
@@ -759,6 +1360,30 @@ export const QUIZ_BANK = {
       correctAnswer: 2,
       explanation: '在 Web3 世界中，信任需要通过时间和透明度来赢得，默认应对一切保持谨慎。',
     },
+    {
+      question: '"DYOR"（Do Your Own Research）在 Web3 中意味着什么？',
+      options: [
+        '只看新闻报道',
+        '在投资或参与任何项目前独立研究其技术、团队和风险',
+        '复制他人的投资组合',
+        '只依赖 KOL 的推荐',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'DYOR 是 Web3 社区的核心理念，强调在投入资金前必须独立研究项目的白皮书、技术细节和团队背景。',
+    },
+    {
+      question: 'Web3 中的"永续学习"原则为什么重要？',
+      options: [
+        '为了赚更多钱',
+        '因为行业变化极快，技术和生态不断演进需要持续更新认知',
+        '学习可以获得代币奖励',
+        '只是一种社交方式',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'Web3 领域技术迭代迅速，新协议、新工具和新风险不断涌现，持续学习是保护资产和把握机遇的基础。',
+    },
   ],
   '5-2': [
     // 为什么区块链是必须的
@@ -786,6 +1411,30 @@ export const QUIZ_BANK = {
       correctAnswer: 2,
       explanation:
         '五大支柱包括：财富保护、全球化、契约执行新范式、货币竞争和个体主权，不涉及网速。',
+    },
+    {
+      question: '比特币作为"数字黄金"解决了什么传统金融问题？',
+      options: [
+        '网络延迟',
+        '提供了不受任何单一政府或机构控制的财富存储方式',
+        '降低了银行手续费',
+        '提高了股票交易速度',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '比特币作为去中心化的价值存储工具，为个人提供了独立于政府和银行的财富保护手段，特别是在货币贬值和资本管制的环境中。',
+    },
+    {
+      question: '区块链对全球化的意义是什么？',
+      options: [
+        '增加国际航班数量',
+        '实现无国界的价值转移和经济参与',
+        '统一全球语言',
+        '消除所有贸易壁垒',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '区块链使任何有互联网连接的人都能参与全球经济，实现无国界、无许可的价值转移，打破传统金融的地理限制。',
     },
   ],
   '5-3': [
@@ -819,6 +1468,29 @@ export const QUIZ_BANK = {
       explanation:
         '交易覆盖了 P2PK、P2PKH、P2SH、P2WPKH、P2WSH、P2TR 等几乎所有比特币脚本类型的演进。',
     },
+    {
+      question: '这笔交易中使用了哪些历史人物的公钥来致敬？',
+      options: [
+        '只有中本聪',
+        '包括中本聪、Hal Finney 等比特币早期贡献者',
+        '没有使用任何历史公钥',
+        '只有矿池运营者',
+      ],
+      correctAnswer: 1,
+      explanation: '交易输出中使用了中本聪和 Hal Finney 等比特币先驱的公钥，向这些早期贡献者致敬。',
+    },
+    {
+      question: '为什么说这笔交易是比特币技术的"活教科书"？',
+      options: [
+        '因为它金额很大',
+        '因为它在一笔交易中展示了比特币脚本、地址格式和协议演进的完整历史',
+        '因为它被写入了教材',
+        '因为它是中本聪创建的',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '这笔交易精心设计，将比特币从诞生到 Taproot 的所有关键技术升级浓缩在一起，堪称链上技术博物馆。',
+    },
   ],
   '6-1': [
     // DeFi 去中心化金融
@@ -842,6 +1514,30 @@ export const QUIZ_BANK = {
       correctAnswer: 2,
       explanation:
         'RWA 代币化市场规模预计到 2030 年将达到 16 万亿美元，BlackRock BUIDL、Ondo Finance 等是核心项目。',
+    },
+    {
+      question: 'AMM（自动做市商）与传统订单簿交易的核心区别是什么？',
+      options: [
+        'AMM 手续费更高',
+        'AMM 使用数学公式（如 x*y=k）和流动性池自动定价，无需买卖双方匹配',
+        'AMM 只能交易稳定币',
+        'AMM 需要中间人撮合',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'AMM 通过恒定乘积公式等数学模型和流动性池实现自动定价和交易，消除了传统订单簿对买卖双方匹配的依赖。',
+    },
+    {
+      question: '无常损失（Impermanent Loss）是什么？',
+      options: [
+        '交易手续费的损失',
+        '向 AMM 流动性池提供流动性时，由于代币价格变化导致的潜在价值损失',
+        '网络拥堵造成的损失',
+        '黑客攻击的损失',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '无常损失是流动性提供者面临的主要风险，当池中代币的价格比率发生变化时，LP 的资产价值可能低于简单持有。',
     },
   ],
   '6-2': [
@@ -871,6 +1567,30 @@ export const QUIZ_BANK = {
       explanation:
         '外部账户 (EOA) 由私钥控制，可以主动发起交易。而合约账户由智能合约代码控制，只能被动响应调用。',
     },
+    {
+      question: 'EIP-1559 升级对以太坊 Gas 费机制的主要改变是什么？',
+      options: [
+        '取消了 Gas 费',
+        '引入了基础费用燃烧机制和小费机制，使费用更可预测',
+        '固定了 Gas 价格',
+        '只有矿工可以设置 Gas 费',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'EIP-1559 将 Gas 费分为被燃烧的基础费和支付给验证者的小费，使费用估算更可预测并引入了 ETH 通缩机制。',
+    },
+    {
+      question: '以太坊虚拟机（EVM）的主要作用是什么？',
+      options: [
+        '挖矿计算',
+        '为智能合约提供统一的执行环境，确保所有节点得到相同结果',
+        '存储用户数据',
+        '管理网络连接',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'EVM 是以太坊的核心组件，为智能合约提供了确定性的执行环境，确保全网所有节点执行合约后得到完全相同的结果。',
+    },
   ],
   '6-3': [
     // Layer 2 扩容技术
@@ -895,6 +1615,30 @@ export const QUIZ_BANK = {
       explanation:
         '以太坊主网的 TPS 约为 15，远低于 Layer 2 的 2,000-10,000+ TPS，这正是 Layer 2 扩容方案存在的根本原因。',
     },
+    {
+      question: 'Optimistic Rollups 和 ZK Rollups 的核心区别是什么？',
+      options: [
+        '支持的代币种类不同',
+        'Optimistic 假设交易有效通过欺诈证明纠错，ZK 用零知识证明数学验证正确性',
+        '部署的区块链不同',
+        '手续费的支付方式不同',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'Optimistic Rollups 先乐观假设交易有效，通过争议期和欺诈证明纠错；ZK Rollups 为每批交易生成零知识证明，数学上保证正确性。',
+    },
+    {
+      question: 'Layer 2 解决方案如何继承以太坊主网的安全性？',
+      options: [
+        '运行独立的共识机制',
+        '将交易数据或证明提交到以太坊主网，由主网最终确认和保障安全',
+        '使用相同的验证者集合',
+        '共享 Gas 费池',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'Layer 2 将压缩后的交易数据和/或有效性证明提交到以太坊主网，借助主网的去中心化和安全性来保障 L2 交易的最终确定性。',
+    },
   ],
   '6-4': [
     // 新兴公链生态
@@ -918,6 +1662,25 @@ export const QUIZ_BANK = {
       correctAnswer: 2,
       explanation:
         'Sui 凭借 Narwhal & Bullshark 共识算法达到了 297,000+ 的 TPS，高于 Aptos 和 Solana。',
+    },
+    {
+      question: 'Cosmos 生态的核心跨链通信协议是什么？',
+      options: ['Wormhole', 'LayerZero', 'IBC（跨链通信协议）', 'Polkadot XCM'],
+      correctAnswer: 2,
+      explanation:
+        'Cosmos 使用 IBC (Inter-Blockchain Communication) 协议实现生态内不同区块链之间的跨链资产转移和消息传递。',
+    },
+    {
+      question: 'Solana 相比以太坊的主要优势和劣势分别是什么？',
+      options: [
+        '优势是更安全，劣势是更慢',
+        '优势是交易速度快且费用低，劣势是网络稳定性和去中心化程度不及以太坊',
+        '优势是更去中心化，劣势是费用更高',
+        '优势和劣势都与以太坊完全相同',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'Solana 以极高的 TPS 和极低的交易费用著称，但曾多次经历网络宕机，其验证者节点的硬件要求较高也限制了去中心化程度。',
     },
   ],
   '6-5': [
@@ -947,6 +1710,30 @@ export const QUIZ_BANK = {
       explanation:
         'Render Network 是去中心化 GPU 渲染网络，主要应用于 3D 渲染和 AI 模型训练，是去中心化计算基础设施的代表。',
     },
+    {
+      question: '去中心化 AI 训练面临的最大挑战是什么？',
+      options: [
+        '电费太高',
+        '大模型训练需要大量 GPU 间通信，分布式网络的带宽和延迟成为瓶颈',
+        '缺少训练数据',
+        '法律不允许',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '大模型训练需要 GPU 之间频繁交换梯度数据，去中心化网络中节点间的高延迟和低带宽是实现高效分布式训练的主要障碍。',
+    },
+    {
+      question: 'AI 作为区块链"参与者"的典型应用是什么？',
+      options: [
+        '替代所有人类用户',
+        'AI 交易机器人自主执行链上交易和 DeFi 策略',
+        '编写区块链底层代码',
+        '关闭智能合约',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'AI 作为链上参与者，可以自主分析市场数据、执行交易策略和参与 DeFi 协议，是 AI+Web3 最直接的结合方式。',
+    },
   ],
   '6-6': [
     // Web3 实用工具大全
@@ -975,6 +1762,25 @@ export const QUIZ_BANK = {
       explanation:
         'Foundry 是用 Rust 编写的现代化 Solidity 开发工具链，具有极速编译、内置模糊测试等特点。',
     },
+    {
+      question: 'Hardhat 开发框架的主要编程语言是什么？',
+      options: ['Python', 'JavaScript/TypeScript', 'Rust', 'Solidity'],
+      correctAnswer: 1,
+      explanation:
+        'Hardhat 是基于 JavaScript/TypeScript 的以太坊开发框架，提供了编译、测试、部署智能合约的完整工具链。',
+    },
+    {
+      question: 'OpenZeppelin 在 Web3 开发中扮演什么角色？',
+      options: [
+        '加密货币交易所',
+        '提供经过安全审计的标准化智能合约库（如 ERC-20、ERC-721 实现）',
+        '区块链浏览器',
+        '去中心化存储服务',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'OpenZeppelin 提供了业界标准的安全合约库，包括 ERC-20、ERC-721 等代币标准的参考实现，被大量项目采用。',
+    },
   ],
   // 默认通用题目
   default: [
@@ -995,6 +1801,30 @@ export const QUIZ_BANK = {
       options: ['更快的网络', '用户拥有数据主权', '免费服务', '中心化管理'],
       correctAnswer: 1,
       explanation: 'Web3的核心理念是用户拥有自己的数据和资产，实现真正的数字主权。',
+    },
+    {
+      question: '什么是去中心化（Decentralization）？',
+      options: [
+        '由单一公司控制系统',
+        '系统不依赖单一中心节点，由分布在全球的参与者共同维护',
+        '取消所有网络连接',
+        '只在一个国家运行',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '去中心化意味着没有单一控制点，系统由全球分布的节点共同维护，提高了抗审查性和可靠性。',
+    },
+    {
+      question: '共识机制（Consensus Mechanism）解决的核心问题是什么？',
+      options: [
+        '提高交易速度',
+        '在去中心化网络中，让互不信任的节点就数据状态达成一致',
+        '降低存储成本',
+        '加密用户数据',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '共识机制解决了拜占庭将军问题，使分布在全球的节点在没有中心化协调者的情况下就区块链的状态达成一致。',
     },
   ],
 };

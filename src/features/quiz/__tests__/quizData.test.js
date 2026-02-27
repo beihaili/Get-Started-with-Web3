@@ -12,11 +12,11 @@ describe('Quiz data completeness', () => {
     }
   });
 
-  it('each lesson quiz has exactly 3 questions', () => {
+  it('each lesson quiz has exactly 5 questions', () => {
     for (const lessonId of allLessonIds) {
       const quiz = QUIZ_BANK[lessonId];
       if (quiz) {
-        expect(quiz.length, `Lesson ${lessonId} should have 3 questions`).toBe(3);
+        expect(quiz.length, `Lesson ${lessonId} should have 5 questions`).toBe(5);
       }
     }
   });
@@ -46,9 +46,9 @@ describe('Quiz data structure', () => {
     }
   });
 
-  it('default quiz exists with 3 questions', () => {
+  it('default quiz exists with 5 questions', () => {
     expect(QUIZ_BANK.default).toBeDefined();
-    expect(QUIZ_BANK.default.length).toBe(3);
+    expect(QUIZ_BANK.default.length).toBe(5);
   });
 });
 

@@ -15,7 +15,8 @@ import ShareCard from '../components/ShareCard';
  */
 const ReaderPage = () => {
   const { moduleId, lessonId } = useParams();
-  const { markLessonComplete, getLessonProgress } = useUserStore();
+  const { markLessonComplete, getLessonProgress, recordQuizScore, checkModuleBadges } =
+    useUserStore();
   const { fetchLessonContent } = useContentStore();
 
   const [content, setContent] = useState('');
@@ -64,8 +65,12 @@ const ReaderPage = () => {
     loadContent();
   }, [moduleId, lessonId, currentLesson, fetchLessonContent]);
 
-  const handleMarkComplete = () => {
+  const handleMarkComplete = (score, total) => {
+    if (score !== undefined && total !== undefined) {
+      recordQuizScore(lessonId, score, total);
+    }
     markLessonComplete(lessonKey);
+    checkModuleBadges(moduleId);
   };
 
   // 查找上一讲和下一讲
@@ -82,8 +87,22 @@ const ReaderPage = () => {
   const moduleProgress = getModuleProgress(moduleLessonKeys);
   const isModuleComplete = moduleProgress.percentage === 100;
 
+  const pageTitle = currentLesson
+    ? `${currentLesson.title} | ${currentModule?.title} | Web3 Starter`
+    : 'Web3 Starter';
+  const pageDescription = currentLesson
+    ? `${currentLesson.title} - ${currentModule?.title} 教程`
+    : 'Web3 学习平台';
+  const canonicalUrl = `https://beihaili.github.io/Get-Started-with-Web3/learn/${moduleId}/${lessonId}`;
+
   return (
     <div className="min-h-screen bg-slate-950">
+      <title>{pageTitle}</title>
+      <meta name="description" content={pageDescription} />
+      <meta property="og:title" content={pageTitle} />
+      <meta property="og:description" content={pageDescription} />
+      <meta property="og:url" content={canonicalUrl} />
+      <link rel="canonical" href={canonicalUrl} />
       {/* Header */}
       <nav
         aria-label="课程导航"

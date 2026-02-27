@@ -1,5 +1,11 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
+import { COURSE_DATA } from '../config/courseData';
+import {
+  ACHIEVEMENT_BADGES,
+  SPECIAL_BADGES,
+  PLATFORM_LAUNCH_DATE,
+} from '../features/badges/badgeData';
 
 /**
  * 用户状态管理
@@ -22,15 +28,22 @@ export const useUserStore = create(
       studyStreak: 0,
       lastStudyDate: null,
 
+      // 测验成绩 { lessonId: { score, total, isPerfect } }
+      quizScores: {},
+
+      // 首次学习时间戳
+      firstActivityTimestamp: null,
+
       // Actions - 学习进度
       markLessonComplete: (lessonId) => {
-        const { progress, totalExperience } = get();
+        const { progress, totalExperience, firstActivityTimestamp } = get();
 
         // 如果课程还未完成，增加经验值
         if (!progress[lessonId]) {
           set({
             progress: { ...progress, [lessonId]: true },
             totalExperience: totalExperience + 100,
+            firstActivityTimestamp: firstActivityTimestamp || Date.now(),
           });
 
           // 更新学习连续天数
@@ -38,6 +51,9 @@ export const useUserStore = create(
 
           // 检查是否解锁新头衔
           get().updateUserTitle();
+
+          // 检查特殊徽章
+          get().checkSpecialBadges();
         }
       },
 
@@ -109,6 +125,80 @@ export const useUserStore = create(
         set({ userTitle: newTitle });
       },
 
+      // Actions - 测验成绩
+      recordQuizScore: (lessonId, score, total) => {
+        const { quizScores } = get();
+        set({
+          quizScores: {
+            ...quizScores,
+            [lessonId]: { score, total, isPerfect: score === total },
+          },
+        });
+
+        // 检查特殊徽章
+        get().checkSpecialBadges();
+      },
+
+      // Actions - 徽章自动检测
+      checkModuleBadges: (moduleId) => {
+        const { progress, earnedBadges } = get();
+        const moduleData = COURSE_DATA.find((m) => m.id === moduleId);
+        if (!moduleData) return;
+
+        const badge = ACHIEVEMENT_BADGES[moduleId];
+        if (!badge) return;
+
+        // 已有该徽章则跳过
+        if (earnedBadges[badge.id]) return;
+
+        // 检查模块所有课程是否完成
+        const allCompleted = moduleData.lessons.every(
+          (lesson) => progress[`${moduleId}-${lesson.id}`]
+        );
+
+        if (allCompleted) {
+          get().earnBadge(badge.id, moduleId);
+        }
+      },
+
+      checkSpecialBadges: () => {
+        const { progress, quizScores, firstActivityTimestamp, earnedBadges } = get();
+
+        // 获取所有课程的 lessonKey 列表
+        const allLessonKeys = COURSE_DATA.flatMap((m) => m.lessons.map((l) => `${m.id}-${l.id}`));
+        const allLessonIds = COURSE_DATA.flatMap((m) => m.lessons.map((l) => l.id));
+        const allCompleted = allLessonKeys.every((key) => progress[key]);
+
+        // speed-runner: 24 小时内完成所有课程
+        if (
+          !earnedBadges[SPECIAL_BADGES['speed-runner'].id] &&
+          allCompleted &&
+          firstActivityTimestamp &&
+          Date.now() - firstActivityTimestamp < 24 * 60 * 60 * 1000
+        ) {
+          get().earnBadge(SPECIAL_BADGES['speed-runner'].id, 'special');
+        }
+
+        // perfectionist: 所有课程测验满分
+        if (!earnedBadges[SPECIAL_BADGES.perfectionist.id]) {
+          const allPerfect =
+            allLessonIds.length > 0 &&
+            allLessonIds.every((id) => quizScores[id]?.isPerfect === true);
+          if (allPerfect) {
+            get().earnBadge(SPECIAL_BADGES.perfectionist.id, 'special');
+          }
+        }
+
+        // early-adopter: 在平台上线后第一周内开始学习
+        if (
+          !earnedBadges[SPECIAL_BADGES['early-adopter'].id] &&
+          firstActivityTimestamp &&
+          firstActivityTimestamp < PLATFORM_LAUNCH_DATE + 7 * 24 * 60 * 60 * 1000
+        ) {
+          get().earnBadge(SPECIAL_BADGES['early-adopter'].id, 'special');
+        }
+      },
+
       // Actions - 学习连续天数
       updateStudyStreak: () => {
         const { lastStudyDate, studyStreak } = get();
@@ -138,6 +228,8 @@ export const useUserStore = create(
         userTitle: state.userTitle,
         studyStreak: state.studyStreak,
         lastStudyDate: state.lastStudyDate,
+        quizScores: state.quizScores,
+        firstActivityTimestamp: state.firstActivityTimestamp,
       }),
     }
   )
