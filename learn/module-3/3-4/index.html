@@ -1,0 +1,485 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第12讲 工作量证明与挖矿 | 比特币技术 — 网络与共识层 | Web3 Starter</title><title>Get Started with Web3 - 从入门到精通</title><title>Web3 Starter - 从入门到精通</title>
+
+    <!-- SEO基础标签 -->
+    <meta name="description" content="Web3和区块链入门教程平台，提供Web3快速入门、比特币技术深度解析等优质内容。21讲比特币技术+6讲Web3入门，系统化学习路径，游戏化学习体验。">
+    <meta name="keywords" content="Web3, 区块链, 比特币, 教程, 入门, blockchain, bitcoin, tutorial, 加密货币, cryptocurrency, 以太坊, ethereum">
+    <meta name="author" content="Bei Hai">
+    <link rel="canonical" href="https://beihaili.github.io/Get-Started-with-Web3/">
+
+    <!-- Open Graph (社交分享) -->
+    <meta property="og:title" content="Get Started With Web3 - Web3区块链入门教程">
+    <meta property="og:description" content="开源Web3教育平台，系统化学习Web3和比特币技术。包含21讲比特币技术课程和6讲Web3快速入门。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://beihaili.github.io/Get-Started-with-Web3/">
+    <meta property="og:site_name" content="Get Started With Web3">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:image" content="https://beihaili.github.io/Get-Started-with-Web3/logo.png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@bhbtc1337">
+    <meta name="twitter:title" content="Get Started With Web3 - Web3区块链入门教程">
+    <meta name="twitter:description" content="开源Web3教育平台，系统化学习Web3和比特币技术">
+    <meta name="twitter:image" content="https://beihaili.github.io/Get-Started-with-Web3/logo.png">
+
+    <!-- JSON-LD 结构化数据 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Get Started With Web3",
+      "description": "开源Web3教育平台，系统化学习Web3和比特币技术。包含21讲比特币技术课程和6讲Web3快速入门。",
+      "provider": {
+        "@type": "Organization",
+        "name": "Get Started With Web3",
+        "url": "https://beihaili.github.io/Get-Started-with-Web3/"
+      },
+      "inLanguage": "zh-CN",
+      "isAccessibleForFree": true,
+      "url": "https://beihaili.github.io/Get-Started-with-Web3/",
+      "image": "https://beihaili.github.io/Get-Started-with-Web3/logo.png",
+      "hasCourseInstance": [
+        {
+          "@type": "CourseInstance",
+          "name": "Web3 快速入门",
+          "courseMode": "online"
+        },
+        {
+          "@type": "CourseInstance",
+          "name": "比特币技术深度解析",
+          "courseMode": "online"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Analytics (Umami) - TODO: Replace data-website-id and src with your Umami instance -->
+    <script defer="" src="https://YOUR_UMAMI_INSTANCE/script.js" data-website-id="YOUR_WEBSITE_ID"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/Get-Started-with-Web3/favicon.svg">
+
+    <!-- PWA相关 -->
+    <link rel="manifest" href="/Get-Started-with-Web3/manifest.json">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/Get-Started-with-Web3/logo.png">
+    <script type="module" crossorigin="" src="/Get-Started-with-Web3/assets/index-80535c00.js"></script>
+    <link rel="modulepreload" crossorigin="" href="/Get-Started-with-Web3/assets/markdown-423020bc.js">
+    <link rel="modulepreload" crossorigin="" href="/Get-Started-with-Web3/assets/react-vendor-27695bbf.js">
+    <link rel="modulepreload" crossorigin="" href="/Get-Started-with-Web3/assets/ui-cdaf153a.js">
+    <link rel="modulepreload" crossorigin="" href="/Get-Started-with-Web3/assets/store-c89224d1.js">
+    <link rel="stylesheet" href="/Get-Started-with-Web3/assets/index-5edec340.css">
+  <link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/LandingPage-49a30d08.js"><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/HashVisualizer-9d5c85bb.js"><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/useUserStore-4b837476.js"><meta name="description" content="中文世界最系统的比特币与 Web3 学习平台。从零基础到深入原理，一站式掌握区块链核心技术。"><meta property="og:title" content="Get Started with Web3 - 从入门到精通"><link rel="canonical" href="https://beihaili.github.io/Get-Started-with-Web3/"><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/ReaderPage-a5c39713.js"><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/ShareCard-cfaa4b6a.js"><meta name="description" content="第12讲 工作量证明与挖矿 - 比特币技术 — 网络与共识层 教程"><meta property="og:title" content="第12讲 工作量证明与挖矿 | 比特币技术 — 网络与共识层 | Web3 Starter"><meta property="og:description" content="第12讲 工作量证明与挖矿 - 比特币技术 — 网络与共识层 教程"><meta property="og:url" content="https://beihaili.github.io/Get-Started-with-Web3/learn/module-3/3-4"><link rel="canonical" href="https://beihaili.github.io/Get-Started-with-Web3/learn/module-3/3-4"></head>
+  <body>
+    <!-- SPA路由恢复脚本 -->
+    <script>
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+
+    <div id="root"><div class="app"><div class="min-h-screen bg-slate-950"><nav aria-label="课程导航" class="sticky top-0 z-10 border-b border-slate-800 bg-slate-950/80 backdrop-blur-md"><div class="container mx-auto px-4 py-4 flex items-center justify-between"><a class="flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors" href="/Get-Started-with-Web3/dashboard"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left w-5 h-5" aria-hidden="true"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg><span>返回课程</span></a><div class="flex items-center gap-4"><span class="text-slate-400 text-sm">比特币技术 — 网络与共识层</span><button class="px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors text-sm font-medium">标记为已完成</button></div></div></nav><main class="container mx-auto px-4 py-8 max-w-4xl"><div class="p-8 bg-slate-900/60 backdrop-blur-md border border-slate-700/50 rounded-xl"><div class="mb-8"><div class="inline-block px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-full mb-4"><span class="text-cyan-400 text-sm font-medium">比特币技术 — 网络与共识层</span></div><h1 class="text-3xl sm:text-4xl font-bold text-white mb-4">第12讲 工作量证明与挖矿</h1></div><div class="prose prose-invert max-w-none"><div class="font-sans text-base markdown-content"><h1 class="text-3xl md:text-4xl font-black text-white mt-12 mb-8 border-b border-slate-800 pb-4">第 12 讲：工作量证明与挖矿</h1>
+<p class="mb-4 text-slate-300 leading-7">![status](<a href="https://img.shields.io/badge/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">https://img.shields.io/badge/ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> 状态 - 已完成 - success)
+![author](<a href="https://img.shields.io/badge/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">https://img.shields.io/badge/ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> 作者 - beihaili-blue)
+![date](<a href="https://img.shields.io/badge/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">https://img.shields.io/badge/ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> 日期 - 2025--09-orange)
+![difficulty](<a href="https://img.shields.io/badge/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">https://img.shields.io/badge/ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> 难度 - 中级 - yellow)</p>
+<blockquote class="border-l-4 border-cyan-500/30 bg-slate-900/50 p-4 text-slate-400 rounded-r-lg my-4 text-base italic">
+<p class="mb-4 text-slate-300 leading-7">💡 想象一个村庄，村民们都在找金子，但金子被埋在地下，需要不停挖掘才能找到。每当有人找到金子，整个村庄都会为他鼓掌，因为这证明了他确实付出了劳动。这就是比特币挖矿的真实写照。</p>
+</blockquote>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">目录</h2>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[前言：为什么要挖矿？](# 前言为什么要挖矿)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[挖矿原理：数字世界的淘金游戏](# 挖矿原理数字世界的淘金游戏)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[挖矿设备：从铁锹到挖掘机的进化](# 挖矿设备从铁锹到挖掘机的进化)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[矿池合作：抱团取暖的智慧](# 矿池合作抱团取暖的智慧)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[能耗争议：到底值不值得？](# 能耗争议到底值不值得)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[动手实践：模拟挖矿过程](# 动手实践模拟挖矿过程)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[常见问题解答](# 常见问题解答)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[总结](# 总结)</div></li>
+</ul>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">前言：为什么要挖矿？</h2>
+<p class="mb-4 text-slate-300 leading-7">你有没有想过这样一个问题：在网络世界里，如何防止有人印假钞？</p>
+<p class="mb-4 text-slate-300 leading-7">在现实中，政府控制印钞机，谁敢私自印钞就抓谁。但比特币没有政府、没有银行、没有中央机构，那谁来防止作弊呢？</p>
+<p class="mb-4 text-slate-300 leading-7">中本聪想出了一个绝妙的办法：** 让大家比赛挖矿 **！</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>💡 思考一下</h3>
+<p class="mb-4 text-slate-300 leading-7">在学习挖矿之前，先想想：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">如果你们班要选班长，但没有老师监督，如何保证选举公平？</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">如果村庄要决定一件事，但没有村长，怎样达成共识？</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">为什么挖金子很贵，但复制文件很便宜？</div></li>
+</ul>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>从印钞票到挖比特币</h3>
+<p class="mb-4 text-slate-300 leading-7">** 传统货币（政府印钞）：**</p>
+<div class="relative my-6 group"><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">政府说：我来印钞票，你们都得承认
+老百姓：好吧，我们相信政府不会乱印
+</code></pre></div>
+<p class="mb-4 text-slate-300 leading-7">** 比特币（大家挖矿）：**</p>
+<div class="relative my-6 group"><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">网络说：谁挖到矿，谁就能记账并获得奖励
+矿工们：好，我们用计算机比赛，算力最强的获胜
+</code></pre></div>
+<p class="mb-4 text-slate-300 leading-7">这就是挖矿的核心：** 用计算机的劳动代替政府的权威 **。</p>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">挖矿原理：数字世界的淘金游戏</h2>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>挖矿就像淘金</h3>
+<p class="mb-4 text-slate-300 leading-7">想象一下古代的淘金者：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">他们在河里敲沙子，希望找到金子。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">大部分时候都是沙子，偶尔才能找到金子。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">找到金子的人可以拿去卖钱。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">大家都知道这是真金子，因为伪造成本太高。</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">比特币挖矿就是数字版的淘金：</p>
+<p class="mb-4 text-slate-300 leading-7">** 传统淘金：**</p>
+<div class="relative my-6 group"><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">沙子 + 河水 + 劳动 → 偶尔找到金子
+</code></pre></div>
+<p class="mb-4 text-slate-300 leading-7">** 比特币挖矿：**</p>
+<div class="relative my-6 group"><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">数据 + 随机数 + 计算 → 偶尔找到「数字金子」
+</code></pre></div>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>什么是「数字金子」？</h3>
+<p class="mb-4 text-slate-300 leading-7">在比特币世界里，「金子」就是一个特殊的数字：** 以很多零开头的哈希值 **。</p>
+<p class="mb-4 text-slate-300 leading-7">比如，网络要求找到以 18 个零开头的哈希值：</p>
+<div class="relative my-6 group"><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">需要找到：000000000000000000...（后面随意）
+不要这样：123456789abcdef...（没有足够的零）
+</code></pre></div>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>为什么如此难找？</h3>
+<p class="mb-4 text-slate-300 leading-7">哈希函数就像一个魔法盒子：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">你放任何东西进去，出来的结果都是随机的。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">你无法预测结果，只能一个一个尝试。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">就像摇骰子，每次都可能摇出不同的结果。</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">** 挖矿的真实过程：**</p>
+<div class="relative my-6 group"><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">第 1 次尝试：「区块数据 + 1」 → 哈希 → 123abc...（不满足）
+第 2 次尝试：「区块数据 + 2」 → 哈希 → 789def...（不满足）
+第 3 次尝试：「区块数据 + 3」 → 哈希 → 456ghi...（不满足）
+...
+第 999,999 次：「区块数据 + 999,999」 → 哈希 → 000000...（成功！）
+</code></pre></div>
+<p class="mb-4 text-slate-300 leading-7">就像不停地摇骰子，直到摇出 6 个 6 一样！</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>验证很简单，寻找很难</h3>
+<p class="mb-4 text-slate-300 leading-7">这就是挖矿的巧妙设计：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 找答案很难 **：需要尝试无数次，耗费大量电力。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 验证答案很容易 **：任何人都能瞬间验证是否正确。</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">就像：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 出数学题很难 **：老师要想很久。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 检查答案很容易 **：对照标准答案就行。</div></li>
+</ul>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>难度的指数级特性</h3>
+<p class="mb-4 text-slate-300 leading-7">比特币难度调整展现了 ** 指数级的计算复杂度 **：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="my-6 overflow-x-auto rounded-lg border border-slate-700"><table class="w-full text-sm"><thead><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">难度前导零</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">搜索空间缩小</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">平均尝试次数</th></tr></thead><tbody><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">1 个零</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">1 / 16</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">~16 次</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">2 个零</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">1 / 256</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">~256 次</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">3 个零</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">1 / 4,096</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">~4,096 次</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">20 个零</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">1 / 2^80</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">~10^24 次</td></tr></tbody></table></div>
+<p class="mb-4 text-slate-300 leading-7">当前比特币网络的难度相当于寻找 ** 约 19 个前导零的哈希值 **，这需要平均 **10^22 次 ** 尝试。</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>挖矿算法与区块头：矿工到底在算什么？</h3>
+<p class="mb-4 text-slate-300 leading-7">比特币使用 SHA-256 来做工作量证明，核心是利用哈希函数的 ** 随机性 ** 与 ** 易验证 ** 特性。</p>
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">SHA-256 的关键特性：</strong></p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 成熟稳定 **：已被长期研究与使用。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 高安全性 **：难以被 “逆推” 输入。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 计算密集 **：几乎只能靠 “堆算力” 试出来。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 无记忆性 **：每次尝试相互独立，只能不断试随机数。</div></li>
+</ul>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>区块头结构：80 字节的数学游戏</h3>
+<p class="mb-4 text-slate-300 leading-7">矿工反复改变的通常是 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">Nonce</code>（随机数），对固定长度的区块头做哈希，去 “碰运气” 撞到满足难度目标的结果。</p>
+<div class="relative my-6 group"><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">[版本 4 字节][前块哈希 32 字节][Merkle 根 32 字节][时间戳 4 字节][难度 4 字节][Nonce 4 字节]
+</code></pre></div>
+<p class="mb-4 text-slate-300 leading-7">** 设计巧思 **：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">**Nonce 空间 **： 4 字节提供 2^32 ≈ 43 亿种可能。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 扩展空间 **：当 Nonce 耗尽时，可修改时间戳或 Merkle 根。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 固定长度 **：确保哈希计算的一致性和可预测性。</div></li>
+</ul>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>安全性：为什么 51% 攻击很难？</h3>
+<p class="mb-4 text-slate-300 leading-7">工作量证明的 “贵”，本质上是在为网络安全付费：想作恶的人必须付出极高的硬件与电力成本。</p>
+<div class="relative my-6 group"><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">控制 51% 算力的成本 = (全网算力的 51% × ASIC 单价) + 电费成本
+</code></pre></div>
+<p class="mb-4 text-slate-300 leading-7">而且成功攻击往往会 ** 摧毁市场信心 **，让攻击者自身投入迅速贬值，这使得 “作恶” 在经济上很不划算。</p>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">挖矿设备：从铁锹到挖掘机的进化</h2>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>算力演进的摩尔定律</h3>
+<p class="mb-4 text-slate-300 leading-7">挖矿硬件的演进体现了 ** 专业化的经济规律 **：</p>
+<p class="mb-4 text-slate-300 leading-7">** 四个时代的技术跃迁：**</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="my-6 overflow-x-auto rounded-lg border border-slate-700"><table class="w-full text-sm"><thead><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">时代</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">代表硬件</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">算力</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">功效比</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">经济特征</th></tr></thead><tbody><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">CPU</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Intel Core i7</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">20 MH/s</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">0.15 MH/J</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">通用计算，门槛低</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">GPU</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">AMD HD5970</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">600 MH/s</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">2.0 MH/J</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">并行计算，性价比高</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">FPGA</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">BitForce</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">832 MH/s</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">10.4 MH/J</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">可编程专用，成本昂贵</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">ASIC</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Antminer S21</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">200 TH/s</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">56 GH/J</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">专用芯片，效率极致</td></tr></tbody></table></div>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>ASIC 化的不可逆性</h3>
+<p class="mb-4 text-slate-300 leading-7">** 专业化螺旋 **：</p>
+<div class="relative my-6 group"><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">竞争加剧 → 利润率下降 → 效率要求提升 → 专业硬件需求 → 进一步专业化
+</code></pre></div>
+<p class="mb-4 text-slate-300 leading-7">** 经济学后果 **：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 进入门槛 **：从几百美元上升到几千美元。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 地理集中 **：向电力成本低的地区集中。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 规模经济 **：大型矿场的成本优势明显。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 技术依赖 **：少数芯片厂商控制硬件供应。</div></li>
+</ul>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>能效比的极限挑战</h3>
+<p class="mb-4 text-slate-300 leading-7">ASIC 芯片的能效提升正在接近 ** 物理极限 **：</p>
+<p class="mb-4 text-slate-300 leading-7">** 技术路线图 **：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">**7 nm 工艺 **：当前主流，能效约 50 J/TH 。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">**5 nm 工艺 **：下一代目标，预计能效 70 - 80 J/TH 。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">**3 nm 工艺 **：理论极限，能效可能突破 100 J/TH 。</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">** 物理约束 **：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 热力学极限 **：计算必然产生热量。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 量子隧道效应 **：限制晶体管尺寸缩小。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 经济可行性 **：制造成本与性能提升的权衡。</div></li>
+</ul>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">矿池合作：抱团取暖的智慧</h2>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>为什么要组建矿池？</h3>
+<p class="mb-4 text-slate-300 leading-7">想象一下买彩票的场景：</p>
+<p class="mb-4 text-slate-300 leading-7">** 单独买彩票：**</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">你每周买 1 张彩票，可能几年都不中奖。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">但一旦中奖，奖金全是你的。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">风险：可能永远等不到中奖。</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">** 组建彩票团购群：**</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">100 个人每人出 1 元，每周买 100 张彩票。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">中奖概率提高 100 倍，但奖金要分 100 份。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">好处：经常有小额奖金进账。</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">矿池就是「挖矿彩票团购群」：</p>
+<p class="mb-4 text-slate-300 leading-7">** 单独挖矿：**</p>
+<div class="relative my-6 group"><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">小矿工：我这台矿机，可能一年都挖不到区块
+风险：电费一直花，但可能颗粒无收
+</code></pre></div>
+<p class="mb-4 text-slate-300 leading-7">** 加入矿池：**</p>
+<div class="relative my-6 group"><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">矿池：大家一起挖，挖到就平分奖励
+小矿工：虽然分得少，但每天都有收入
+</code></pre></div>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>矿池分配方式：谁干活多谁分得多</h3>
+<p class="mb-4 text-slate-300 leading-7">矿池有几种分配奖励的方式，就像不同的工资制度：</p>
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">🏭 计件工资制 (PPS)：</strong></p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">干多少活给多少钱，旱涝保收。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">适合想要稳定收入的矿工。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">矿池老板承担运气风险。</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">🎲 业绩提成制 (PPLNS)：</strong></p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">公司赚钱了大家一起分。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">收入跟着公司业绩波动。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">激励大家长期合作。</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">💰 全包福利制 (FPPS)：</strong></p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">不仅分挖矿奖励，连手续费也分。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">收入最高，但矿池手续费也高。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">适合大型专业矿工。</div></li>
+</ul>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>矿池真的安全吗？</h3>
+<p class="mb-4 text-slate-300 leading-7">加入矿池虽然好处多，但也有风险：</p>
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">🤝 好处：</strong></p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">收入稳定，每天都有钱进账。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">技术门槛低，不用自己管理。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">风险分散，不怕单独倒霉。</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">⚠️ 风险：</strong></p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">要交手续费给矿池（通常 2% - 4%）。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">矿池跑路，损失算力。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">算力过于集中，影响网络安全。</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">** 选择建议：**</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">🥇 ** 大型矿池 **：收入稳定，但要小心垄断。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">🥈 ** 中型矿池 **：平衡收益和去中心化。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">🥉 ** 小型矿池 **：支持去中心化，但收入波动大。</div></li>
+</ul>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">能耗争议：到底值不值得？</h2>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>能耗规模的客观评估</h3>
+<p class="mb-4 text-slate-300 leading-7">**2024 年比特币网络能耗 **：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 年耗电量 **：约 150 - 180 TWh 。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 占全球用电 **：约 0.6% - 0.8% 。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 功耗等级 **：介于阿根廷和挪威之间。</div></li>
+</ul>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>能耗的价值论证</h3>
+<p class="mb-4 text-slate-300 leading-7">** 安全成本观 **：</p>
+<div class="relative my-6 group"><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">网络安全价值 = 保护资产价值 × 安全预算比例
+当前约：1 万亿美元 × 0.5% = 50 亿美元 / 年
+</code></pre></div>
+<p class="mb-4 text-slate-300 leading-7">** 对比分析 **：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 传统银行系统 **：约 264 TWh / 年。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 黄金开采 **：约 241 TWh / 年。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 数据中心 **：约 200 TWh / 年。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 比特币网络 **：约 180 TWh / 年。</div></li>
+</ul>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>环保技术发展</h3>
+<p class="mb-4 text-slate-300 leading-7">** 可再生能源趋势 **：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 水电 **：约 40% 的挖矿能源（中国、北欧、北美）。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 风电 **：约 25%（德州、内蒙古等地）。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 太阳能 **：约 15%（中东、澳洲等地）。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 余热利用 **：矿场余热用于供暖、农业等。</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">** 技术创新 **：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 液冷技术 **：提高散热效率，降低运营成本。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 废热回收 **：矿场废热用于供暖、海水淡化。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 碳中和挖矿 **：通过碳信用抵消实现净零排放。</div></li>
+</ul>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">动手实践：模拟挖矿过程</h2>
+<p class="mb-4 text-slate-300 leading-7">本讲配套代码在 <a href="./mining_examples.py" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">mining_examples.py <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a>。</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 运行方式 **：<code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">python3 mining_examples.py</code></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 默认行为 **：会自动运行「基础概念演示」</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 更多演示 **：你可以在文件末尾的 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">demos</code> 列表中切换要运行的内容（例如「完整挖矿演示」「能耗分析」等）</div></li>
+</ul>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">常见问题解答</h2>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>Q1: 挖矿真的能赚钱吗？</h3>
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">A:</strong> 这取决于很多因素：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 电费成本 **：最关键因素，电费便宜的地方更容易盈利。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 设备价格 **：矿机贵，回本周期长。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 比特币价格 **：价格高时赚钱，价格低时可能亏损。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 网络难度 **：参与的人越多，个人收益越少。</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">简单来说：** 就像开出租车，能不能赚钱要看油费、车价、客流量 **。</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>Q2: 为什么挖矿要消耗这么多电？</h3>
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">A:</strong> 这是设计特点，不是缺陷：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 安全需要 **：消耗电力是为了保护网络安全。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 防止作弊 **：作弊的成本必须很高才有威慑力。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 就像银行 **：银行金库、保安、监控系统也都要花钱。</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">而且现在很多矿场都用可再生能源，比传统银行系统环保多了。</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>Q3: 普通人还能挖矿吗？</h3>
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">A:</strong> 可以，但要现实一点：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 家用电脑 **：算了吧，电费都挣不回来。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 专业矿机 **：可以试试，但要算好账。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 云挖矿 **：花钱租别人的矿机，但要小心骗局。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 买比特币 **：对普通人来说，直接买可能更简单。</div></li>
+</ul>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>Q4: 挖完 2,100 万个比特币后怎么办？</h3>
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">A:</strong> 不用担心，这要到 2140 年：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 交易手续费 **：矿工还能收手续费维持运营。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 技术进步 **： 100 多年后技术肯定大不一样。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 经济激励 **：只要有交易，就会有人维护网络。</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">就像担心 100 年后汽油用完一样，到时候肯定有新解决方案。</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>Q5: 为什么不用更环保的方式？</h3>
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">A:</strong> 其实有很多人在研究：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 可再生能源 **：很多矿场已经用太阳能、水力发电。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 余热利用 **：用挖矿产生的热量供暖。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 绿色证书 **：证明使用的是清洁能源。</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">比特币挖矿其实在推动可再生能源发展，因为哪里电便宜，矿工就去哪里。</p>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">总结</h2>
+<p class="mb-4 text-slate-300 leading-7">挖矿就像数字世界的淘金：需要设备、需要运气、需要坚持。虽然不是每个人都能发财，但这套系统保护了我们的比特币安全。</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>🎯 关键要点</h3>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 挖矿本质 **：用计算机劳动换取比特币奖励。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 经济模型 **：高投入、高风险、高回报（如果成功的话）。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 安全价值 **：保护网络，防止双花和 51% 攻击。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 技术创新 **：推动了芯片技术和可再生能源发展。</div></li>
+</ul>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>🌟 挖矿哲学</h3>
+<p class="mb-4 text-slate-300 leading-7">挖矿证明了一个道理：** 在数字世界里，也可以用「劳动」创造价值 **。每一台嗡嗡作响的矿机，都在为全世界的比特币用户提供安全保障。</p>
+<p class="mb-4 text-slate-300 leading-7">这就是中本聪的天才设计：把个人利益和集体安全完美结合，让「自私」的行为产生「无私」的结果。</p>
+<blockquote class="border-l-4 border-cyan-500/30 bg-slate-900/50 p-4 text-slate-400 rounded-r-lg my-4 text-base italic">
+<p class="mb-4 text-slate-300 leading-7">🔗 ** 深入学习 **：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">完整挖矿代码示例： <a href="./mining_examples.py" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">mining_examples.py <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">比特币挖矿数据： <a href="https://blockchain.info/stats" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">blockchain.info/stats <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">全网算力监控： <a href="https://btc.com/stats" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">btc.com/stats <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">PoW 研究论文： <a href="https://bitcoin.org/bitcoin.pdf" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Nakamoto Consensus Paper <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+</ul>
+</blockquote>
+<hr class="my-8 border-slate-800">
+<div align="center">
+<a href="https://github.com/beihaili/Get-Started-with-Web3" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">🏠 返回主页  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> | 
+<a href="https://twitter.com/bhbtc1337" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">🐦 关注作者  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> | 
+<a href="https://forms.gle/QMBwL6LwZyQew1tX8" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">📝 加入交流群  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a>
+</div></div></div><div class="mt-8 pt-8 border-t border-slate-700"><div class="space-y-4"><div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 text-center"><div class="flex items-center justify-center gap-2 mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-circuit w-6 h-6 text-purple-400" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M9 13a4.5 4.5 0 0 0 3-4"></path><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path d="M6 18a4 4 0 0 1-1.967-.516"></path><path d="M12 13h4"></path><path d="M12 18h6a2 2 0 0 1 2 2v1"></path><path d="M12 8h8"></path><path d="M16 8V5a2 2 0 0 1 2-2"></path><circle cx="16" cy="13" r=".5"></circle><circle cx="18" cy="3" r=".5"></circle><circle cx="20" cy="21" r=".5"></circle><circle cx="20" cy="8" r=".5"></circle></svg><h4 class="text-white font-bold">闯关测验</h4></div><p class="text-slate-300 mb-6">完成 <span class="text-cyan-400 font-bold">5 道题目</span>，需要<span class="text-green-400 font-bold"> 全部答对 </span>才能通关下一章节</p><button class="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-bold py-3 px-8 rounded-lg transition-all transform hover:scale-105 shadow-lg shadow-purple-500/20">🚀 开始挑战</button></div></div></div><div class="flex gap-4 mt-8 pt-8 border-t border-slate-700"><a class="px-4 sm:px-6 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-lg transition-colors text-sm sm:text-base" href="/Get-Started-with-Web3/learn/module-3/3-3">← <span class="hidden sm:inline">上一讲</span><span class="sm:hidden">上一</span></a><a class="px-4 sm:px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors ml-auto text-sm sm:text-base" href="/Get-Started-with-Web3/learn/module-3/3-5"><span class="hidden sm:inline">下一讲</span><span class="sm:hidden">下一</span> →</a></div></div></main><div class="fixed bottom-6 right-6 z-50"><button class="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white p-4 rounded-full shadow-2xl shadow-purple-500/20 transition-all transform hover:scale-105"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-circuit w-6 h-6" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M9 13a4.5 4.5 0 0 0 3-4"></path><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path d="M6 18a4 4 0 0 1-1.967-.516"></path><path d="M12 13h4"></path><path d="M12 18h6a2 2 0 0 1 2 2v1"></path><path d="M12 8h8"></path><path d="M16 8V5a2 2 0 0 1 2-2"></path><circle cx="16" cy="13" r=".5"></circle><circle cx="18" cy="3" r=".5"></circle><circle cx="20" cy="21" r=".5"></circle><circle cx="20" cy="8" r=".5"></circle></svg></button></div></div></div></div>
+    
+  
+</body></html>
