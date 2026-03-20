@@ -1,5 +1,6 @@
 import { createBrowserRouter, Navigate, Outlet, useParams } from 'react-router-dom';
 import { lazy, Suspense, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import ErrorBoundary from '../components/ErrorBoundary';
 import SearchDialog from '../components/SearchDialog';
 import { useSearchStore } from '../store/useSearchStore';
@@ -12,14 +13,17 @@ const ReaderPage = lazy(() => import('../pages/ReaderPage'));
 const BadgeCollectionPage = lazy(() => import('../pages/BadgeCollectionPage'));
 
 // Loading component
-const PageLoader = () => (
-  <div className="min-h-screen bg-slate-950 flex items-center justify-center">
-    <div className="text-center">
-      <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-500"></div>
-      <p className="mt-4 text-slate-400">加载中...</p>
+const PageLoader = () => {
+  const { t } = useTranslation();
+  return (
+    <div className="min-h-screen bg-slate-950 flex items-center justify-center">
+      <div className="text-center">
+        <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-500"></div>
+        <p className="mt-4 text-slate-400">{t('common.loading')}</p>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 // Wrapper component for Suspense + ErrorBoundary
 const SuspenseWrapper = ({ children }) => (

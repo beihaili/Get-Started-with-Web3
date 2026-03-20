@@ -1,9 +1,11 @@
 import { Link, useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { ArrowLeft, Award, TrendingUp, BookOpen, Flame, Search } from 'lucide-react';
 import { useUserStore } from '../store/useUserStore';
 import { useSearchStore } from '../store/useSearchStore';
 import { COURSE_DATA } from '../config/courseData';
 import { Web3Oracle } from '../components/interactive';
+import LanguageSwitcher from '../components/LanguageSwitcher';
 
 /**
  * 仪表板页面
@@ -11,6 +13,7 @@ import { Web3Oracle } from '../components/interactive';
  */
 const DashboardPage = () => {
   const { lang } = useParams();
+  const { t } = useTranslation();
   const { totalExperience, userTitle, progress, studyStreak, getLessonProgress } = useUserStore();
   const openSearch = useSearchStore((s) => s.openSearch);
 
@@ -18,34 +21,34 @@ const DashboardPage = () => {
 
   return (
     <div className="min-h-screen bg-slate-950">
-      <title>课程仪表盘 | Web3 Starter</title>
-      <meta name="description" content="Web3 学习平台课程仪表盘，查看学习进度和课程列表" />
-      <meta property="og:title" content="课程仪表盘 | Web3 Starter" />
+      <title>{t('dashboard.pageTitle')}</title>
+      <meta name="description" content={t('dashboard.pageDesc')} />
+      <meta property="og:title" content={t('dashboard.pageTitle')} />
       <link
         rel="canonical"
         href={`https://beihaili.github.io/Get-Started-with-Web3/${lang}/dashboard`}
       />
       {/* Header */}
-      <nav aria-label="课程导航" className="border-b border-slate-800">
+      <nav aria-label={t('dashboard.navLabel')} className="border-b border-slate-800">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link
             to={`/${lang}`}
             className="flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
-            <span>返回首页</span>
+            <span>{t('nav.backToHome')}</span>
           </Link>
 
           <div className="flex items-center gap-4">
             <button
               onClick={openSearch}
-              aria-label="搜索课程"
+              aria-label={t('nav.searchCourses')}
               className="flex items-center gap-2 px-3 py-1.5 text-slate-500 hover:text-slate-300 bg-slate-800 border border-slate-700 rounded-lg text-sm transition-colors"
             >
               <Search className="w-4 h-4" />
-              <span className="hidden sm:inline">搜索课程</span>
+              <span className="hidden sm:inline">{t('nav.searchCourses')}</span>
               <kbd className="hidden sm:inline ml-1 px-1.5 py-0.5 bg-slate-700 rounded text-xs">
-                ⌘K
+                {t('nav.searchPlaceholder')}
               </kbd>
             </button>
             <Link
@@ -53,8 +56,9 @@ const DashboardPage = () => {
               className="flex items-center gap-2 text-slate-400 hover:text-purple-400 transition-colors"
             >
               <Award className="w-5 h-5" />
-              <span>我的徽章</span>
+              <span>{t('nav.badges')}</span>
             </Link>
+            <LanguageSwitcher />
           </div>
         </div>
       </nav>
@@ -62,14 +66,14 @@ const DashboardPage = () => {
       <main className="container mx-auto px-4 py-8">
         {/* User Stats */}
         <div className="mb-8 p-6 bg-slate-900/60 backdrop-blur-md border border-slate-700/50 rounded-xl">
-          <h2 className="text-2xl font-bold text-white mb-4">学习概览</h2>
+          <h2 className="text-2xl font-bold text-white mb-4">{t('dashboard.overviewTitle')}</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-full bg-cyan-500/10 flex items-center justify-center">
                 <TrendingUp className="w-6 h-6 text-cyan-400" />
               </div>
               <div>
-                <p className="text-slate-400 text-sm">经验值</p>
+                <p className="text-slate-400 text-sm">{t('dashboard.statXp')}</p>
                 <p className="text-white text-xl font-bold">{totalExperience} XP</p>
               </div>
             </div>
@@ -79,7 +83,7 @@ const DashboardPage = () => {
                 <Award className="w-6 h-6 text-purple-400" />
               </div>
               <div>
-                <p className="text-slate-400 text-sm">头衔</p>
+                <p className="text-slate-400 text-sm">{t('dashboard.statTitle')}</p>
                 <p className="text-white text-xl font-bold">{userTitle}</p>
               </div>
             </div>
@@ -89,7 +93,7 @@ const DashboardPage = () => {
                 <BookOpen className="w-6 h-6 text-blue-400" />
               </div>
               <div>
-                <p className="text-slate-400 text-sm">已完成课程</p>
+                <p className="text-slate-400 text-sm">{t('dashboard.statCompleted')}</p>
                 <p className="text-white text-xl font-bold">{progressCount}</p>
               </div>
             </div>
@@ -99,8 +103,10 @@ const DashboardPage = () => {
                 <Flame className="w-6 h-6 text-orange-400" />
               </div>
               <div>
-                <p className="text-slate-400 text-sm">连续学习</p>
-                <p className="text-white text-xl font-bold">{studyStreak} 天</p>
+                <p className="text-slate-400 text-sm">{t('dashboard.statStreak')}</p>
+                <p className="text-white text-xl font-bold">
+                  {t('dashboard.streakDays', { count: studyStreak })}
+                </p>
               </div>
             </div>
           </div>
@@ -130,7 +136,9 @@ const DashboardPage = () => {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white">{module.title}</h3>
-                      <p className="text-slate-400">{module.lessons.length} 讲课程</p>
+                      <p className="text-slate-400">
+                        {t('dashboard.lessonsCount', { count: module.lessons.length })}
+                      </p>
                     </div>
                   </div>
                   <div className="text-right">

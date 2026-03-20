@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Heart, Wallet } from 'lucide-react';
 import { DONATION_LINKS, CRYPTO_WALLETS } from '../config/sponsorData';
 
@@ -6,12 +7,11 @@ import { DONATION_LINKS, CRYPTO_WALLETS } from '../config/sponsorData';
  * 显示捐赠渠道和加密货币钱包地址
  */
 const DonationSection = () => {
+  const { t } = useTranslation();
   return (
     <div className="max-w-3xl mx-auto mb-16">
-      <h2 className="text-2xl font-bold text-white text-center mb-2">支持本项目</h2>
-      <p className="text-slate-400 text-center text-sm mb-8">
-        本教程完全免费开源，如果对你有帮助，欢迎支持作者持续更新 ✨
-      </p>
+      <h2 className="text-2xl font-bold text-white text-center mb-2">{t('donation.title')}</h2>
+      <p className="text-slate-400 text-center text-sm mb-8">{t('donation.subtitle')}</p>
 
       {/* 捐赠渠道 */}
       <div className="grid sm:grid-cols-2 gap-4 mb-6">
@@ -44,7 +44,7 @@ const DonationSection = () => {
       <div className="space-y-3">
         <div className="flex items-center gap-2 text-slate-400 text-sm">
           <Wallet className="w-4 h-4" />
-          <span>加密货币打赏</span>
+          <span>{t('donation.cryptoLabel')}</span>
         </div>
         {CRYPTO_WALLETS.map((wallet) => (
           <div
