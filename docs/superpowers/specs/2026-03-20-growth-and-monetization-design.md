@@ -27,7 +27,7 @@ All content stays free and open. Maximize organic traffic via SEO + i18n. Layer 
 ### Content Translation Strategy
 
 - AI-translate all 37 lessons from `zh/` to `en/`, maintaining identical directory structure
-- Store English content in `en/` directory at project root (note: `en/` already partially exists with ~3 files — audit existing translations, keep those that are accurate, overwrite or regenerate the rest)
+- Store English content in `en/` directory at project root (note: `en/` already partially exists with GitBook-era legacy files like `book.json`, `SUMMARY.md`, `styles/` and one translated lesson — clean out legacy artifacts first, then audit the existing translation, keep if accurate, regenerate otherwise)
 - Prioritize first 2 modules (Web3 Quick Start + Bitcoin Cryptography) — highest traffic entry points
 - Tag translated PRs with `translation-review` label for community proofreading
 
@@ -35,11 +35,11 @@ All content stays free and open. Maximize organic traffic via SEO + i18n. Layer 
 
 - Integrate `react-i18next` for UI string localization
 - **Routing architecture**: Language is a route parameter, not a separate route tree. The existing `createBrowserRouter` with `basename: '/Get-Started-with-Web3'` stays unchanged. Add a top-level `/:lang` parameter wrapping all routes:
-  - `/:lang/learn/:moduleSlug/:lessonSlug` (e.g., `/en/learn/module-1/1-1`)
+  - `/:lang/learn/:moduleId/:lessonId` (e.g., `/en/learn/module-1/1-1`)
   - `/:lang/dashboard`, `/:lang/badges`, etc.
   - Root `/` redirects based on `navigator.language`: Chinese → `/zh/dashboard`, else → `/en/dashboard`
 - **Locale resolution**: A `LanguageProvider` context reads `:lang` from the URL and passes it to `react-i18next` and `useContentStore`. No store state needed — URL is the single source of truth.
-- **`useContentStore` extension**: `fetchLessonContent(lang, lessonPath)` loads from `public/content/{lang}/{lessonPath}/README.md`. The existing `zh/` fetch logic stays as-is, `en/` follows the same pattern.
+- **`useContentStore` extension**: `fetchLessonContent(lang, lessonPath)` loads from `public/content/{lang}/{lessonPath}/README.md`. The `lessonPath` in `courseData.js` must be refactored to be language-agnostic (e.g., `'Web3QuickStart/01_FirstWeb3Identity'` instead of `'zh/Web3QuickStart/01_FirstWeb3Identity'`). The lang prefix is prepended at fetch time based on URL context.
 - Language switcher component in the navigation bar — swaps `:lang` segment in current URL
 - Auto-detect browser language on first visit only (root `/` redirect)
 
