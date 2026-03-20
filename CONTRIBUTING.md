@@ -1,3 +1,5 @@
+> **README:** [English](README.md) | [中文](README.zh.md)
+
 # 贡献指南
 
 感谢你对 **Get Started with Web3** 项目的关注！我们欢迎所有形式的贡献。
