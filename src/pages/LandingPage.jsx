@@ -6,6 +6,7 @@ import { HashVisualizer } from '../components/interactive';
 import { WalletSimulator } from '../components/interactive';
 import { COURSE_DATA } from '../config/courseData';
 import { useUserStore } from '../store/useUserStore';
+import DonationSection from '../components/DonationSection';
 
 /**
  * 着陆页（首页）
@@ -173,6 +174,9 @@ const LandingPage = () => {
             })}
           </div>
         </div>
+
+        {/* Donation */}
+        <DonationSection />
 
         {/* Community */}
         <div className="max-w-3xl mx-auto mb-16 text-center">

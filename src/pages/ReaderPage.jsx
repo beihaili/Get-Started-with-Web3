@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, Loader2, Share2 } from 'lucide-react';
+import ThankAuthorButton from '../components/ThankAuthorButton';
 import { useUserStore } from '../store/useUserStore';
 import { useContentStore } from '../store/useContentStore';
 import { useEffect, useState } from 'react';
@@ -207,6 +208,8 @@ const ReaderPage = () => {
                   </div>
                 )}
               </div>
+              {/* Thank author CTA */}
+              <ThankAuthorButton />
               {/* Module completion banner */}
               {isModuleComplete && (
                 <div className="mt-8 p-6 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-xl text-center">
