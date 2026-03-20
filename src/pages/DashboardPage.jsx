@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { ArrowLeft, Award, TrendingUp, BookOpen, Flame, Search } from 'lucide-react';
 import { useUserStore } from '../store/useUserStore';
 import { useSearchStore } from '../store/useSearchStore';
@@ -10,6 +10,7 @@ import { Web3Oracle } from '../components/interactive';
  * 显示课程列表和学习进度
  */
 const DashboardPage = () => {
+  const { lang } = useParams();
   const { totalExperience, userTitle, progress, studyStreak, getLessonProgress } = useUserStore();
   const openSearch = useSearchStore((s) => s.openSearch);
 
@@ -20,12 +21,15 @@ const DashboardPage = () => {
       <title>课程仪表盘 | Web3 Starter</title>
       <meta name="description" content="Web3 学习平台课程仪表盘，查看学习进度和课程列表" />
       <meta property="og:title" content="课程仪表盘 | Web3 Starter" />
-      <link rel="canonical" href="https://beihaili.github.io/Get-Started-with-Web3/dashboard" />
+      <link
+        rel="canonical"
+        href={`https://beihaili.github.io/Get-Started-with-Web3/${lang}/dashboard`}
+      />
       {/* Header */}
       <nav aria-label="课程导航" className="border-b border-slate-800">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link
-            to="/"
+            to={`/${lang}`}
             className="flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
@@ -45,7 +49,7 @@ const DashboardPage = () => {
               </kbd>
             </button>
             <Link
-              to="/badges"
+              to={`/${lang}/badges`}
               className="flex items-center gap-2 text-slate-400 hover:text-purple-400 transition-colors"
             >
               <Award className="w-5 h-5" />
@@ -152,7 +156,7 @@ const DashboardPage = () => {
                     return (
                       <Link
                         key={lesson.id}
-                        to={`/learn/${module.id}/${lesson.id}`}
+                        to={`/${lang}/learn/${module.id}/${lesson.id}`}
                         className={`block p-3 sm:p-4 bg-slate-800/40 border rounded-lg transition-all ${
                           isCompleted
                             ? 'border-green-500/30 bg-green-500/5'

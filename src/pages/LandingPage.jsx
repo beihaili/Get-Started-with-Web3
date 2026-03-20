@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { Rocket, BookOpen, Award, Users, Star, GitBranch } from 'lucide-react';
 import { ParticleBackground } from '../components/animations';
 import { MouseSpotlight } from '../components/animations';
@@ -12,6 +12,7 @@ import DonationSection from '../components/DonationSection';
  * 着陆页（首页）
  */
 const LandingPage = () => {
+  const { lang } = useParams();
   const { totalExperience, userTitle, progress, studyStreak } = useUserStore();
   const totalLessons = COURSE_DATA.reduce((sum, m) => sum + m.lessons.length, 0);
   const completedCount = Object.keys(progress).length;
@@ -24,7 +25,7 @@ const LandingPage = () => {
         content="中文世界最系统的比特币与 Web3 学习平台。从零基础到深入原理，一站式掌握区块链核心技术。"
       />
       <meta property="og:title" content="Get Started with Web3 - 从入门到精通" />
-      <link rel="canonical" href="https://beihaili.github.io/Get-Started-with-Web3/" />
+      <link rel="canonical" href={`https://beihaili.github.io/Get-Started-with-Web3/${lang}`} />
       <ParticleBackground />
       <MouseSpotlight />
 
@@ -53,7 +54,7 @@ const LandingPage = () => {
           )}
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
-              to="/dashboard"
+              to={`/${lang}/dashboard`}
               className="px-8 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold rounded-full transition-all hover:scale-105 shadow-lg shadow-cyan-500/20"
             >
               开始学习
@@ -91,7 +92,7 @@ const LandingPage = () => {
         {/* Quick Actions */}
         <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16">
           <Link
-            to="/dashboard"
+            to={`/${lang}/dashboard`}
             className="group p-6 bg-slate-900/60 backdrop-blur-md border border-slate-700/50 rounded-xl hover:border-cyan-500/40 transition-all hover:scale-105"
           >
             <div className="flex flex-col items-center text-center">
@@ -107,7 +108,7 @@ const LandingPage = () => {
           </Link>
 
           <Link
-            to="/badges"
+            to={`/${lang}/badges`}
             className="group p-6 bg-slate-900/60 backdrop-blur-md border border-slate-700/50 rounded-xl hover:border-purple-500/40 transition-all hover:scale-105"
           >
             <div className="flex flex-col items-center text-center">
@@ -154,7 +155,7 @@ const LandingPage = () => {
               return (
                 <Link
                   key={module.id}
-                  to="/dashboard"
+                  to={`/${lang}/dashboard`}
                   className="flex items-center gap-4 p-4 bg-slate-900/60 backdrop-blur-md border border-slate-700/50 rounded-xl hover:border-cyan-500/30 transition-all group"
                 >
                   <div

@@ -3,6 +3,9 @@ import { create } from 'zustand';
 /**
  * 内容管理状态
  * 管理课程内容加载、缓存、当前学习状态等
+ *
+ * fetchLessonContent(lang, lessonPath) now takes a language prefix
+ * so the same lessonPath can resolve to different language versions.
  */
 const MAX_CACHE_ENTRIES = 50;
 
@@ -11,10 +14,10 @@ export const useContentStore = create((set, get) => ({
   activeModule: null,
   activeLesson: null,
 
-  // 课程内容缓存 { lessonId: { content, images, metadata } }
+  // 课程内容缓存 { cacheKey: { content, timestamp } }
   contentCache: {},
 
-  // 正在进行的请求 { path: Promise }
+  // 正在进行的请求 { cacheKey: Promise }
   pendingFetches: {},
 
   // 加载状态
@@ -42,17 +45,18 @@ export const useContentStore = create((set, get) => ({
     }),
 
   // Actions - 内容加载（带去重和缓存上限）
-  fetchLessonContent: async (lessonPath) => {
+  fetchLessonContent: async (lang, lessonPath) => {
+    const cacheKey = `${lang}/${lessonPath}`;
     const { contentCache, pendingFetches } = get();
 
     // 检查缓存
-    if (contentCache[lessonPath]) {
-      return contentCache[lessonPath].content;
+    if (contentCache[cacheKey]) {
+      return contentCache[cacheKey].content;
     }
 
     // 去重：如果同一路径已经在请求中，等待现有请求
-    if (pendingFetches[lessonPath]) {
-      return pendingFetches[lessonPath];
+    if (pendingFetches[cacheKey]) {
+      return pendingFetches[cacheKey];
     }
 
     const fetchPromise = (async () => {
@@ -60,12 +64,12 @@ export const useContentStore = create((set, get) => ({
 
       try {
         // 尝试从本地public目录加载
-        const localUrl = `${get().basePath}content/${lessonPath}/README.md`;
+        const localUrl = `${get().basePath}content/${lang}/${lessonPath}/README.md`;
         let response = await fetch(localUrl);
 
         // 如果本地加载失败，尝试从GitHub Raw加载
         if (!response.ok) {
-          const githubUrl = `https://raw.githubusercontent.com/beihaili/Get-Started-with-Web3/main/${lessonPath}/README.md`;
+          const githubUrl = `https://raw.githubusercontent.com/beihaili/Get-Started-with-Web3/main/${lang}/${lessonPath}/README.md`;
           response = await fetch(githubUrl);
         }
 
@@ -86,7 +90,7 @@ export const useContentStore = create((set, get) => ({
           delete currentCache[oldest];
         }
 
-        currentCache[lessonPath] = { content, timestamp: Date.now() };
+        currentCache[cacheKey] = { content, timestamp: Date.now() };
 
         set({
           contentCache: currentCache,
@@ -103,14 +107,14 @@ export const useContentStore = create((set, get) => ({
       } finally {
         // 清理 pending
         const pending = { ...get().pendingFetches };
-        delete pending[lessonPath];
+        delete pending[cacheKey];
         set({ pendingFetches: pending });
       }
     })();
 
     // 注册 pending
     set({
-      pendingFetches: { ...get().pendingFetches, [lessonPath]: fetchPromise },
+      pendingFetches: { ...get().pendingFetches, [cacheKey]: fetchPromise },
     });
 
     return fetchPromise;

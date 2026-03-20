@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { Award, ArrowLeft, Share2 } from 'lucide-react';
 import { useUserStore } from '../store/useUserStore';
 import { BadgeCard, ACHIEVEMENT_BADGES, SPECIAL_BADGES } from '../features/badges';
@@ -10,6 +10,7 @@ import ShareCard from '../components/ShareCard';
  * 使用重构后的徽章系统模块
  */
 const BadgeCollectionPage = () => {
+  const { lang } = useParams();
   const { earnedBadges, totalExperience, userTitle } = useUserStore();
   const [showShareCard, setShowShareCard] = useState(false);
 
@@ -22,11 +23,14 @@ const BadgeCollectionPage = () => {
       <title>徽章收藏馆 | Web3 Starter</title>
       <meta name="description" content="Web3 学习平台徽章收藏，查看已获得的学习成就徽章" />
       <meta property="og:title" content="徽章收藏馆 | Web3 Starter" />
-      <link rel="canonical" href="https://beihaili.github.io/Get-Started-with-Web3/badges" />
+      <link
+        rel="canonical"
+        href={`https://beihaili.github.io/Get-Started-with-Web3/${lang}/badges`}
+      />
       <div className="sticky top-0 z-10 border-b border-slate-800 bg-slate-950/80 backdrop-blur-md">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link
-            to="/dashboard"
+            to={`/${lang}/dashboard`}
             className="flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
@@ -71,7 +75,7 @@ const BadgeCollectionPage = () => {
             <h2 className="text-2xl font-bold text-white mb-4">还没有获得徽章</h2>
             <p className="text-slate-400 mb-6">完成课程学习，解锁精美徽章和丰厚奖励！</p>
             <Link
-              to="/dashboard"
+              to={`/${lang}/dashboard`}
               className="inline-block px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors font-medium"
             >
               开始学习

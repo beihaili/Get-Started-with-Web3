@@ -15,7 +15,7 @@ import ShareCard from '../components/ShareCard';
  * 显示课程内容、Markdown渲染、AI助教
  */
 const ReaderPage = () => {
-  const { moduleId, lessonId } = useParams();
+  const { lang, moduleId, lessonId } = useParams();
   const { markLessonComplete, getLessonProgress, recordQuizScore, checkModuleBadges } =
     useUserStore();
   const { fetchLessonContent } = useContentStore();
@@ -47,13 +47,13 @@ const ReaderPage = () => {
       setLoading(true);
       setError(null);
       try {
-        const lessonContent = await fetchLessonContent(currentLesson.path);
+        const lessonContent = await fetchLessonContent(lang, currentLesson.path);
         setContent(lessonContent || currentLesson.fallbackContent || '# 内容加载中...');
 
-        // 设置图片基础路径
+        // 设置图片基础路径 (includes lang prefix for correct asset resolution)
         const pathParts = currentLesson.path.split('/');
         const base = pathParts.slice(0, -1).join('/') + '/';
-        setBasePath(`/Get-Started-with-Web3/${base}`);
+        setBasePath(`/Get-Started-with-Web3/${lang}/${base}`);
       } catch (err) {
         console.error('Failed to load lesson:', err);
         setError(err.message);
@@ -64,7 +64,7 @@ const ReaderPage = () => {
     };
 
     loadContent();
-  }, [moduleId, lessonId, currentLesson, fetchLessonContent]);
+  }, [lang, moduleId, lessonId, currentLesson, fetchLessonContent]);
 
   const handleMarkComplete = (score, total) => {
     if (score !== undefined && total !== undefined) {
@@ -94,7 +94,7 @@ const ReaderPage = () => {
   const pageDescription = currentLesson
     ? `${currentLesson.title} - ${currentModule?.title} 教程`
     : 'Web3 学习平台';
-  const canonicalUrl = `https://beihaili.github.io/Get-Started-with-Web3/learn/${moduleId}/${lessonId}`;
+  const canonicalUrl = `https://beihaili.github.io/Get-Started-with-Web3/${lang}/learn/${moduleId}/${lessonId}`;
 
   return (
     <div className="min-h-screen bg-slate-950">
@@ -111,7 +111,7 @@ const ReaderPage = () => {
       >
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link
-            to="/dashboard"
+            to={`/${lang}/dashboard`}
             className="flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
@@ -180,7 +180,7 @@ const ReaderPage = () => {
               <div className="flex gap-4 mt-8 pt-8 border-t border-slate-700">
                 {prevLesson ? (
                   <Link
-                    to={`/learn/${moduleId}/${prevLesson.id}`}
+                    to={`/${lang}/learn/${moduleId}/${prevLesson.id}`}
                     className="px-4 sm:px-6 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-lg transition-colors text-sm sm:text-base"
                   >
                     ← <span className="hidden sm:inline">上一讲</span>
@@ -195,7 +195,7 @@ const ReaderPage = () => {
 
                 {nextLesson ? (
                   <Link
-                    to={`/learn/${moduleId}/${nextLesson.id}`}
+                    to={`/${lang}/learn/${moduleId}/${nextLesson.id}`}
                     className="px-4 sm:px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors ml-auto text-sm sm:text-base"
                   >
                     <span className="hidden sm:inline">下一讲</span>

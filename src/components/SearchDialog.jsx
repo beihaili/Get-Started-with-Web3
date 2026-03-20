@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, useCallback, useMemo } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Fuse from 'fuse.js';
 import { Search, X } from 'lucide-react';
 import { useSearchStore } from '../store/useSearchStore';
@@ -7,6 +7,7 @@ import { COURSE_DATA } from '../config/courseData';
 
 const SearchDialog = () => {
   const navigate = useNavigate();
+  const { lang } = useParams();
   const inputRef = useRef(null);
   const { isSearchOpen, searchQuery, closeSearch, setSearchQuery, addToHistory } = useSearchStore();
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -54,9 +55,9 @@ const SearchDialog = () => {
     (item) => {
       addToHistory(searchQuery);
       closeSearch();
-      navigate(`/learn/${item.moduleId}/${item.lessonId}`);
+      navigate(`/${lang}/learn/${item.moduleId}/${item.lessonId}`);
     },
-    [searchQuery, addToHistory, closeSearch, navigate]
+    [searchQuery, addToHistory, closeSearch, navigate, lang]
   );
 
   const handleKeyDown = useCallback(
