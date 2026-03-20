@@ -1,0 +1,159 @@
+{
+  "nav": {
+    "back": "返回",
+    "backToHome": "返回首页",
+    "backToDashboard": "返回主页",
+    "backToCourses": "返回课程",
+    "dashboard": "仪表盘",
+    "badges": "我的徽章",
+    "searchCourses": "搜索课程",
+    "searchPlaceholder": "⌘K"
+  },
+  "landing": {
+    "heroBadge": "{{count}} 讲系统化教程 · 开源免费",
+    "subtitle": "中文世界最系统的比特币与 Web3 学习平台。从零基础到深入原理，一站式掌握区块链核心技术。",
+    "studyStreak": "🔥 连续学习 {{count}} 天",
+    "startLearning": "开始学习",
+    "statsModules": "课程模块",
+    "statsLessons": "总课程数",
+    "statsLayers": "技术架构层",
+    "cardStartTitle": "开始学习",
+    "cardStartDesc": "探索 Web3 和比特币课程",
+    "cardStartProgress": "已完成 {{completed}}/{{total}} 讲",
+    "cardBadgesTitle": "我的徽章",
+    "cardBadgesDesc": "查看学习成就",
+    "cardGitHubTitle": "GitHub",
+    "cardGitHubDesc": "查看源代码与贡献",
+    "interactiveTitle": "互动体验",
+    "learningPathTitle": "学习路径",
+    "lessonsCount": "{{count}} 讲",
+    "recommended": "新手推荐",
+    "stage": "第 {{n}} 阶段",
+    "communityTitle": "加入社区",
+    "footerLicense": "MIT License | 开源 Web3 教育平台"
+  },
+  "dashboard": {
+    "pageTitle": "课程仪表盘 | Web3 Starter",
+    "pageDesc": "Web3 学习平台课程仪表盘，查看学习进度和课程列表",
+    "navLabel": "课程导航",
+    "overviewTitle": "学习概览",
+    "statXp": "经验值",
+    "statTitle": "头衔",
+    "statCompleted": "已完成课程",
+    "statStreak": "连续学习",
+    "streakDays": "{{count}} 天",
+    "lessonsCount": "{{count}} 讲课程"
+  },
+  "reader": {
+    "pageDescSuffix": "教程",
+    "navLabel": "课程导航",
+    "completed": "已完成",
+    "markComplete": "标记为已完成",
+    "loadingContent": "加载课程内容中...",
+    "loadFailed": "加载失败：",
+    "loadFailedStrong": "加载失败：",
+    "courseNotFound": "课程不存在",
+    "loadingFallback": "# 内容加载中...",
+    "loadFailedFallback": "# 内容加载失败",
+    "prevLesson": "上一",
+    "prevLessonFull": "上一讲",
+    "nextLesson": "下一",
+    "nextLessonFull": "下一讲",
+    "moduleCompleteTitle": "{{moduleTitle}} 全部完成！",
+    "moduleCompleteDesc": "恭喜你完成了本模块的所有课程",
+    "shareAchievement": "分享学习成就"
+  },
+  "badges": {
+    "pageTitle": "徽章收藏馆 | Web3 Starter",
+    "pageDesc": "Web3 学习平台徽章收藏，查看已获得的学习成就徽章",
+    "titleLabel": "头衔",
+    "xpLabel": "经验值",
+    "galleryTitle": "🏆 徽章收藏馆",
+    "collectionRate": "收集率：{{rate}}% ({{earned}}/{{total}})",
+    "noBadgesTitle": "还没有获得徽章",
+    "noBadgesDesc": "完成课程学习，解锁精美徽章和丰厚奖励！",
+    "startLearning": "开始学习",
+    "specialAchievements": "特殊成就",
+    "earnedCount": "已获得",
+    "unlockedCount": "未解锁",
+    "completionRate": "完成度",
+    "shareAchievement": "分享学习成就"
+  },
+  "ai": {
+    "title": "AI 助教",
+    "greeting": "👋 你好！我是AI助教，有任何关于课程的问题都可以问我哦~",
+    "apiKeyAlert": "AI 助教需要配置 Gemini API Key。",
+    "placeholder": "问我任何问题...",
+    "thinking": "思考中...",
+    "errorPrefix": "抱歉，我遇到了一些问题："
+  },
+  "quiz": {
+    "title": "闯关测验",
+    "description": "完成 <strong>{{count}} 道题目</strong>，需要<strong> 全部答对 </strong>才能通关下一章节",
+    "startChallenge": "🚀 开始挑战",
+    "questionProgress": "题目 {{current}} / {{total}}",
+    "score": "得分: {{score}}/{{total}}",
+    "selectAnswer": "选择答案",
+    "confirmAnswer": "确认答案",
+    "correct": "回答正确！",
+    "wrong": "回答错误",
+    "nextQuestion": "下一题",
+    "viewResult": "查看结果",
+    "perfectTitle": "完美通关！",
+    "perfectDesc": "恭喜你全部答对 {{count}} 道题目！你已经掌握了本章节的核心知识。",
+    "unlockNext": "✅ 解锁下一章节",
+    "needMoreTitle": "还需努力",
+    "needMoreDesc": "你答对了 {{score}}/{{total}} 题。需要全部答对才能进入下一章节，再试一次吧！",
+    "retry": "🔄 重新挑战",
+    "skipDebug": "跳过 (调试用)"
+  },
+  "search": {
+    "dialogLabel": "搜索课程",
+    "placeholder": "搜索课程...",
+    "inputLabel": "搜索课程",
+    "closeLabel": "关闭搜索",
+    "noResults": "没有找到匹配的课程",
+    "hintNavigate": "↑↓ 导航",
+    "hintSelect": "↵ 选择",
+    "hintClose": "Esc 关闭"
+  },
+  "share": {
+    "closeLabel": "关闭",
+    "achievementCard": "Learning Achievement Card",
+    "studyStreak": "{{count}} 天连续学习",
+    "startJourney": "开始学习之旅",
+    "badgeCollection": "徽章收集",
+    "learningProgress": "学习进度",
+    "download": "保存图片",
+    "generating": "生成中...",
+    "shareTwitter": "分享到 Twitter",
+    "twitterText": "I earned {{count}} badge{{plural}} and {{xp}} XP on Get Started with Web3! 🚀\n\nJoin me and learn blockchain from scratch:"
+  },
+  "donation": {
+    "title": "支持本项目",
+    "subtitle": "本教程完全免费开源，如果对你有帮助，欢迎支持作者持续更新 ✨",
+    "cryptoLabel": "加密货币打赏"
+  },
+  "thankAuthor": {
+    "message": "如果这节课对你有帮助，欢迎支持作者继续创作 ☕",
+    "buttonText": "感谢作者 · Buy Me a Coffee"
+  },
+  "error": {
+    "title": "页面出错了",
+    "message": "抱歉，页面遇到了意外错误。请尝试重新加载或返回首页。",
+    "reload": "重新加载",
+    "reloadLabel": "重新加载页面",
+    "backHome": "返回首页",
+    "backHomeLabel": "返回首页"
+  },
+  "markdown": {
+    "copyCode": "复制代码",
+    "copyCodeTitle": "复制代码"
+  },
+  "common": {
+    "loading": "加载中...",
+    "error": "出现错误",
+    "xp": "XP",
+    "github": "GitHub"
+  }
+}

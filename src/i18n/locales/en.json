@@ -1,0 +1,159 @@
+{
+  "nav": {
+    "back": "Back",
+    "backToHome": "Back to Home",
+    "backToDashboard": "Back to Dashboard",
+    "backToCourses": "Back to Courses",
+    "dashboard": "Dashboard",
+    "badges": "My Badges",
+    "searchCourses": "Search courses",
+    "searchPlaceholder": "⌘K"
+  },
+  "landing": {
+    "heroBadge": "{{count}} lessons · Open Source & Free",
+    "subtitle": "The most systematic Bitcoin and Web3 learning platform in the Chinese-speaking world. Master core blockchain technology from scratch.",
+    "studyStreak": "🔥 {{count}}-day study streak",
+    "startLearning": "Start Learning",
+    "statsModules": "Course Modules",
+    "statsLessons": "Total Lessons",
+    "statsLayers": "Tech Architecture Layers",
+    "cardStartTitle": "Start Learning",
+    "cardStartDesc": "Explore Web3 and Bitcoin courses",
+    "cardStartProgress": "{{completed}}/{{total}} lessons completed",
+    "cardBadgesTitle": "My Badges",
+    "cardBadgesDesc": "View learning achievements",
+    "cardGitHubTitle": "GitHub",
+    "cardGitHubDesc": "View source code and contribute",
+    "interactiveTitle": "Interactive Experience",
+    "learningPathTitle": "Learning Path",
+    "lessonsCount": "{{count}} lessons",
+    "recommended": "Recommended",
+    "stage": "Stage {{n}}",
+    "communityTitle": "Join the Community",
+    "footerLicense": "MIT License | Open Source Web3 Education Platform"
+  },
+  "dashboard": {
+    "pageTitle": "Course Dashboard | Web3 Starter",
+    "pageDesc": "Web3 learning platform course dashboard, view learning progress and course list",
+    "navLabel": "Course navigation",
+    "overviewTitle": "Learning Overview",
+    "statXp": "Experience",
+    "statTitle": "Title",
+    "statCompleted": "Completed Courses",
+    "statStreak": "Study Streak",
+    "streakDays": "{{count}} days",
+    "lessonsCount": "{{count}} lessons"
+  },
+  "reader": {
+    "pageDescSuffix": "tutorial",
+    "navLabel": "Course navigation",
+    "completed": "Completed",
+    "markComplete": "Mark as Complete",
+    "loadingContent": "Loading course content...",
+    "loadFailed": "Failed to load:",
+    "loadFailedStrong": "Load failed:",
+    "courseNotFound": "Course not found",
+    "loadingFallback": "# Loading content...",
+    "loadFailedFallback": "# Failed to load content",
+    "prevLesson": "Previous",
+    "prevLessonFull": "Previous Lesson",
+    "nextLesson": "Next",
+    "nextLessonFull": "Next Lesson",
+    "moduleCompleteTitle": "{{moduleTitle}} All Complete!",
+    "moduleCompleteDesc": "Congratulations on completing all lessons in this module",
+    "shareAchievement": "Share Achievement"
+  },
+  "badges": {
+    "pageTitle": "Badge Collection | Web3 Starter",
+    "pageDesc": "Web3 learning platform badge collection, view earned learning achievement badges",
+    "titleLabel": "Title",
+    "xpLabel": "Experience",
+    "galleryTitle": "🏆 Badge Gallery",
+    "collectionRate": "Collection rate: {{rate}}% ({{earned}}/{{total}})",
+    "noBadgesTitle": "No badges yet",
+    "noBadgesDesc": "Complete course lessons to unlock beautiful badges and rich rewards!",
+    "startLearning": "Start Learning",
+    "specialAchievements": "Special Achievements",
+    "earnedCount": "Earned",
+    "unlockedCount": "Locked",
+    "completionRate": "Completion",
+    "shareAchievement": "Share Achievement"
+  },
+  "ai": {
+    "title": "AI Tutor",
+    "greeting": "👋 Hello! I'm your AI tutor. Feel free to ask me anything about the course~",
+    "apiKeyAlert": "AI Tutor requires a Gemini API Key to be configured.",
+    "placeholder": "Ask me anything...",
+    "thinking": "Thinking...",
+    "errorPrefix": "Sorry, I encountered an issue: "
+  },
+  "quiz": {
+    "title": "Challenge Quiz",
+    "description": "Complete <strong>{{count}} questions</strong>, you need to get <strong>all correct</strong> to unlock the next chapter",
+    "startChallenge": "🚀 Start Challenge",
+    "questionProgress": "Question {{current}} / {{total}}",
+    "score": "Score: {{score}}/{{total}}",
+    "selectAnswer": "Select an answer",
+    "confirmAnswer": "Confirm Answer",
+    "correct": "Correct!",
+    "wrong": "Wrong",
+    "nextQuestion": "Next Question",
+    "viewResult": "View Results",
+    "perfectTitle": "Perfect Score!",
+    "perfectDesc": "Congratulations, you got all {{count}} questions right! You've mastered the core knowledge of this chapter.",
+    "unlockNext": "✅ Unlock Next Chapter",
+    "needMoreTitle": "Keep Trying",
+    "needMoreDesc": "You got {{score}}/{{total}} correct. You need all correct to proceed to the next chapter. Try again!",
+    "retry": "🔄 Retry",
+    "skipDebug": "Skip (Debug)"
+  },
+  "search": {
+    "dialogLabel": "Search courses",
+    "placeholder": "Search courses...",
+    "inputLabel": "Search courses",
+    "closeLabel": "Close search",
+    "noResults": "No matching courses found",
+    "hintNavigate": "↑↓ Navigate",
+    "hintSelect": "↵ Select",
+    "hintClose": "Esc Close"
+  },
+  "share": {
+    "closeLabel": "Close",
+    "achievementCard": "Learning Achievement Card",
+    "studyStreak": "{{count}}-day streak",
+    "startJourney": "Start your learning journey",
+    "badgeCollection": "Badge Collection",
+    "learningProgress": "Learning Progress",
+    "download": "Save Image",
+    "generating": "Generating...",
+    "shareTwitter": "Share on Twitter",
+    "twitterText": "I earned {{count}} badge{{plural}} and {{xp}} XP on Get Started with Web3! 🚀\n\nJoin me and learn blockchain from scratch:"
+  },
+  "donation": {
+    "title": "Support This Project",
+    "subtitle": "This tutorial is completely free and open source. If it has been helpful to you, please consider supporting the author to keep it updated ✨",
+    "cryptoLabel": "Crypto tips"
+  },
+  "thankAuthor": {
+    "message": "If this lesson was helpful, please consider supporting the author ☕",
+    "buttonText": "Support Author · Buy Me a Coffee"
+  },
+  "error": {
+    "title": "Page Error",
+    "message": "Sorry, the page encountered an unexpected error. Please try reloading or return to the home page.",
+    "reload": "Reload",
+    "reloadLabel": "Reload page",
+    "backHome": "Back to Home",
+    "backHomeLabel": "Return to home page"
+  },
+  "markdown": {
+    "copyCode": "Copy code",
+    "copyCodeTitle": "Copy code"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "xp": "XP",
+    "github": "GitHub"
+  }
+}
