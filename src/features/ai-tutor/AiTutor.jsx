@@ -29,15 +29,8 @@ const AiTutor = ({ lessonContext = '' }) => {
 
     try {
       const contextSlice = lessonContext.slice(0, 1500);
-      const prompt = `学生问题: "${inputValue}"
-
-基于当前课程内容回答学生的问题。课程内容：
-${contextSlice}
-
-请提供清晰、易懂的解释，如果问题与当前课程相关，要结合课程内容。如果问题超出课程范围，可以适当扩展但要说明。`;
-
-      const systemInstruction =
-        '你是一个友善的Web3教育助教。用中文回答，语言要通俗易懂，可以使用表情符号让回答更生动。';
+      const prompt = t('ai.promptTemplate', { question: inputValue, context: contextSlice });
+      const systemInstruction = t('ai.systemInstruction');
 
       const response = await callGemini(prompt, systemInstruction);
 
