@@ -27,17 +27,21 @@ All content stays free and open. Maximize organic traffic via SEO + i18n. Layer 
 ### Content Translation Strategy
 
 - AI-translate all 37 lessons from `zh/` to `en/`, maintaining identical directory structure
-- Store English content in `en/` directory at project root
+- Store English content in `en/` directory at project root (note: `en/` already partially exists with ~3 files — audit existing translations, keep those that are accurate, overwrite or regenerate the rest)
 - Prioritize first 2 modules (Web3 Quick Start + Bitcoin Cryptography) — highest traffic entry points
 - Tag translated PRs with `translation-review` label for community proofreading
 
 ### Application-Layer i18n
 
 - Integrate `react-i18next` for UI string localization
-- URL structure: `/en/learn/...` and `/zh/learn/...`
-- Auto-detect browser language, default to English for non-Chinese browsers
-- Language switcher component in the navigation bar
-- Extend `useContentStore` to load from `en/` or `zh/` based on current locale
+- **Routing architecture**: Language is a route parameter, not a separate route tree. The existing `createBrowserRouter` with `basename: '/Get-Started-with-Web3'` stays unchanged. Add a top-level `/:lang` parameter wrapping all routes:
+  - `/:lang/learn/:moduleSlug/:lessonSlug` (e.g., `/en/learn/module-1/1-1`)
+  - `/:lang/dashboard`, `/:lang/badges`, etc.
+  - Root `/` redirects based on `navigator.language`: Chinese → `/zh/dashboard`, else → `/en/dashboard`
+- **Locale resolution**: A `LanguageProvider` context reads `:lang` from the URL and passes it to `react-i18next` and `useContentStore`. No store state needed — URL is the single source of truth.
+- **`useContentStore` extension**: `fetchLessonContent(lang, lessonPath)` loads from `public/content/{lang}/{lessonPath}/README.md`. The existing `zh/` fetch logic stays as-is, `en/` follows the same pattern.
+- Language switcher component in the navigation bar — swaps `:lang` segment in current URL
+- Auto-detect browser language on first visit only (root `/` redirect)
 
 ### Content Sync Pipeline Extension
 
@@ -62,15 +66,19 @@ All content stays free and open. Maximize organic traffic via SEO + i18n. Layer 
 
 ### Meta Tags & Open Graph
 
-- Dynamic `<title>`, `<meta description>`, `og:title`, `og:description`, `og:image>` per lesson
+- Dynamic `<title>`, `<meta description>`, `og:title`, `og:description`, `og:image` per lesson
 - Description sourced from lesson title + first 150 characters of content
-- OG images generated via template (lesson name + module name + brand logo) — use `satori` or static template approach
+- **OG image generation**: Use `satori` + `@resvg/resvg-js` at build time. A Node.js script reads `courseData.js`, generates one PNG per lesson (lesson name + module name + brand logo on a branded template). Images output to `dist/og/` during build. Each lesson's prerendered HTML references `/Get-Started-with-Web3/og/{moduleId}-{lessonId}.png`. New lessons auto-generate on next build.
 
 ### URL & Sitemap
 
-- Current URL: `/learn/:moduleId/:lessonId` — not SEO-friendly
-- New semantic URLs: `/en/learn/web3-quickstart/what-is-web3` — keyword-rich
-- Auto-generate `sitemap.xml` at build time covering all lesson pages in both languages
+- **URL migration strategy**: Keep existing ID-based URL structure (`/:lang/learn/:moduleId/:lessonId`) rather than introducing semantic slugs. Rationale:
+  - GitHub Pages does not support server-side redirects — migrating URLs risks breaking existing bookmarks and search index entries
+  - Slug mapping layer adds complexity and a new source of bugs for minimal SEO benefit (search engines weight page content and meta tags far more than URL keywords)
+  - IDs are already stable and unique; SEO value comes from `<title>`, `<meta description>`, and structured data — not URL slugs
+  - This avoids the need for a redirect map, slug definitions in `courseData.js`, and prerender script restructuring
+- Full URL example: `https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-1/1-1`
+- Auto-generate `sitemap.xml` at build time covering all lesson pages in both languages (read routes from `courseData.js`, generate for both `/en/` and `/zh/` prefixes)
 - Add `robots.txt` ensuring search engines can crawl prerendered pages
 
 ### SSG Prerender Enhancement
@@ -107,7 +115,7 @@ All content stays free and open. Maximize organic traffic via SEO + i18n. Layer 
 - **Sponsor display system** on Landing Page and README with tiered placement:
   - **Bronze**: README logo ($200/month)
   - **Silver**: README + Landing Page logo ($500/month)
-  - **Gold**: Above + lesson page sidebar "Powered by" ($1k/month)
+  - **Gold**: Above + lesson page inline banner "Powered by" at top of content area ($1k/month) — note: no sidebar; ReaderPage is full-width, so this is a subtle inline banner above the markdown content
 - **Sponsor kit page** showing monthly visits, GitHub stars, user geography for data-driven proposals
 - Target sponsors: Web3 wallets (MetaMask, Phantom), exchanges, L2 projects, dev tools (Alchemy, Infura)
 - Expected: 1-3 sponsors = $200-3k/month
@@ -123,10 +131,28 @@ All content stays free and open. Maximize organic traffic via SEO + i18n. Layer 
 ### Tier 4: NFT Completion Certificates (Crypto-Native)
 
 - After completing a module, users can mint an NFT certificate
-- Certificate contains: username/wallet address, module name, completion date, score
-- Deployed on low-gas chain (Base or Polygon), mint fee set at $5-15
-- Technical: simple ERC-721 contract + frontend mint button, user connects wallet and pays gas + mint fee
-- Certificates displayable on LinkedIn/Twitter — built-in viral distribution
+- Certificate contains: wallet address, module name, completion date, quiz score
+
+**Smart contract:**
+- Simple ERC-721 contract (OpenZeppelin base) deployed on **Base** (lowest gas, strong ecosystem)
+- Contract owner is the project wallet; deployment cost ~$1-5 on Base
+- `mint(moduleId, score, completionDate)` function with a configurable `mintFee` (initially $5 equivalent in ETH)
+- The mint fee is paid to the contract owner on top of gas (gas on Base is <$0.01, negligible)
+- Contract is deployed once and managed via a simple admin function to update mint fee
+
+**NFT metadata:**
+- Stored on IPFS via **Pinata** free tier (1GB, sufficient for text metadata + small certificate images)
+- Metadata JSON + certificate image (generated from template, similar to OG images) pinned at mint time
+- `tokenURI` points to `ipfs://` hash — fully decentralized, no ongoing hosting cost
+- Pinata free tier handles the volume; upgrade to $20/month only if >1000 mints/month
+
+**Frontend wallet integration:**
+- Use **wagmi v2** + **viem** + **ConnectKit** (or RainbowKit) for wallet connection
+- These are added as dependencies only to the NFT minting page/component — lazy-loaded, no impact on main bundle
+- Mint flow: Connect Wallet → Review Certificate Preview → Confirm Mint → Share on Twitter
+- Wallet connection is scoped to NFT minting only — no site-wide auth system
+
+**Certificates displayable on LinkedIn/Twitter — built-in viral distribution**
 - Expected: $200-1k/month (at 50-100 mints/month)
 
 ### Tier 5: "Thank the Author" Button
@@ -147,7 +173,7 @@ All content stays free and open. Maximize organic traffic via SEO + i18n. Layer 
 | Donation links | 2-3 hours | None |
 | Sponsor system | 4-6 hours | 1-2 hrs/month (outreach) |
 | Affiliate links | 2-3 hours | Quarterly check |
-| NFT certificates | 8-12 hours | None (on-chain) |
+| NFT certificates | 15-20 hours | Minimal (Pinata free tier monitoring, contract mint fee adjustments) |
 | Thank-you button | 30 minutes | None |
 
 ---
@@ -201,10 +227,10 @@ Key principle: **every user action has a natural "share exit"**:
 
 ### Analytics (Low Cost)
 
-- **Plausible Analytics or Umami** (privacy-friendly, open-source) — replaces Google Analytics
+- **Cloudflare Web Analytics** (free, zero-setup, privacy-friendly) as primary — or **Plausible Cloud** ($9/month) if more detailed data needed
 - Track key metrics: MAU, lesson completion rate, language distribution, traffic sources
 - Data feeds sponsor proposals and optimization decisions
-- Self-hosted Umami = zero cost, or Plausible Cloud = $9/month
+- Avoid self-hosting analytics (contradicts low-maintenance goal)
 
 ### Maintenance
 
@@ -221,16 +247,37 @@ Key principle: **every user action has a natural "share exit"**:
 
 ## Total Estimated Effort
 
+Phases are sequential (no overlap) to avoid context-switching at 5-15 hrs/week:
+
 | Phase | Items | Hours |
 |-------|-------|-------|
-| Quick wins (week 1-2) | Donation links, thank-you button, README English, topic tags, analytics | 8-12 |
-| Core infrastructure (week 3-6) | i18n framework, SEO optimization, semantic URLs, sitemap | 20-30 |
-| Content (week 4-8) | AI translation of 37 lessons, community review setup | 10-15 |
-| Monetization features (week 6-10) | Sponsor system, affiliate links, NFT contract + mint UI | 15-25 |
-| Growth features (week 8-12) | Contributors page, contributor NFT, awesome list submissions, good-first-issues | 10-15 |
-| **Total** | | **63-97 hours (~8-12 weeks at 10 hrs/week)** |
+| Phase 1: Quick wins (week 1-2) | Donation links, thank-you button, README English, topic tags, analytics, Crypto wallet addresses | 8-12 |
+| Phase 2: i18n framework (week 3-7) | `react-i18next` integration, `/:lang` routing, `LanguageProvider`, `useContentStore` extension, `sync-content.mjs` update, extract all UI strings | 30-40 |
+| Phase 3: Content translation (week 8-10) | AI bulk translate 37 lessons, audit existing `en/` files, community review setup | 10-15 |
+| Phase 4: SEO optimization (week 11-14) | Structured data, meta tags, OG image pipeline, sitemap, robots.txt, hreflang, prerender extension, article index page | 20-25 |
+| Phase 5: Monetization features (week 15-19) | Sponsor display system, affiliate links, NFT contract (Solidity + deploy), wallet integration (wagmi), mint UI, IPFS metadata | 20-30 |
+| Phase 6: Growth features (week 20-22) | Contributors page, contributor NFT, awesome list submissions, good-first-issues curation | 10-15 |
+| **Total** | | **98-137 hours (~12-18 weeks at 8 hrs/week)** |
 
-## Revenue Projections (Conservative, at ~5k MAU)
+## Revenue Projections
+
+**Phase 1 (month 1-3, ~1k MAU):**
+
+| Channel | Monthly Estimate |
+|---------|-----------------|
+| Donations + Crypto tips | $20-100 |
+| **Total** | **$20-100** |
+
+**Phase 2 (month 4-6, ~2-3k MAU with English content indexed):**
+
+| Channel | Monthly Estimate |
+|---------|-----------------|
+| Donations | $50-200 |
+| Sponsors (0-1) | $0-500 |
+| Affiliate links | $50-200 |
+| **Total** | **$100-900** |
+
+**Phase 3 (month 7-12, ~5k MAU target):**
 
 | Channel | Monthly Low | Monthly High |
 |---------|-----------|-------------|
@@ -240,12 +287,12 @@ Key principle: **every user action has a natural "share exit"**:
 | NFT certificates | $200 | $1,000 |
 | **Total** | **$550** | **$4,800** |
 
-Note: reaching 5k MAU requires 3-6 months of SEO + i18n investment. Initial months will be lower.
+Note: 5k MAU is aspirational and depends on content quality, SEO indexing speed, and community growth. Niche Web3 education in English is a competitive space — actual numbers may vary significantly.
 
 ## Non-Goals
 
 - No paywall on any existing content
-- No user authentication system (wallet connection only for NFT minting)
+- No site-wide user authentication system (wallet connection is scoped to NFT minting page only, using wagmi + ConnectKit, lazy-loaded)
 - No enterprise training features (too high maintenance for 5-15 hrs/week)
 - No real-time AI translation (static pre-translated content only)
 - No custom domain purchase at this stage (GitHub Pages is sufficient)
