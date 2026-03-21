@@ -131,6 +131,14 @@
     "shareTwitter": "Share on Twitter",
     "twitterText": "I earned {{count}} badge{{plural}} and {{xp}} XP on Get Started with Web3! 🚀\n\nJoin me and learn blockchain from scratch:"
   },
+  "articles": {
+    "pageTitle": "All Course Articles | Web3 Starter",
+    "pageDesc": "Browse all 37 lessons on Web3 and Bitcoin, systematically master core blockchain technology",
+    "heading": "All Course Articles",
+    "subheading": "Browse all lessons by module and click to read the content",
+    "lessonCount": "{{count}} lessons total",
+    "moduleCount": "{{count}} lessons"
+  },
   "donation": {
     "title": "Support This Project",
     "subtitle": "This tutorial is completely free and open source. If it has been helpful to you, please consider supporting the author to keep it updated ✨",

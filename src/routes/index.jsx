@@ -11,6 +11,7 @@ const LandingPage = lazy(() => import('../pages/LandingPage'));
 const DashboardPage = lazy(() => import('../pages/DashboardPage'));
 const ReaderPage = lazy(() => import('../pages/ReaderPage'));
 const BadgeCollectionPage = lazy(() => import('../pages/BadgeCollectionPage'));
+const ArticlesPage = lazy(() => import('../pages/ArticlesPage'));
 
 // Loading component
 const PageLoader = () => {
@@ -142,6 +143,14 @@ export const router = createBrowserRouter(
           element: (
             <SuspenseWrapper>
               <BadgeCollectionPage />
+            </SuspenseWrapper>
+          ),
+        },
+        {
+          path: 'articles',
+          element: (
+            <SuspenseWrapper>
+              <ArticlesPage />
             </SuspenseWrapper>
           ),
         },

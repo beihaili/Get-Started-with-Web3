@@ -131,6 +131,14 @@
     "shareTwitter": "分享到 Twitter",
     "twitterText": "I earned {{count}} badge{{plural}} and {{xp}} XP on Get Started with Web3! 🚀\n\nJoin me and learn blockchain from scratch:"
   },
+  "articles": {
+    "pageTitle": "所有课程文章 | Web3 Starter",
+    "pageDesc": "浏览 Web3 与比特币全部 37 讲课程，系统掌握区块链核心技术",
+    "heading": "所有课程文章",
+    "subheading": "按模块浏览全部课程，点击直达课程内容",
+    "lessonCount": "共 {{count}} 讲课程",
+    "moduleCount": "{{count}} 讲"
+  },
   "donation": {
     "title": "支持本项目",
     "subtitle": "本教程完全免费开源，如果对你有帮助，欢迎支持作者持续更新 ✨",
