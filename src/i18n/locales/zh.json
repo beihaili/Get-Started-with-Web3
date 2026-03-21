@@ -139,10 +139,25 @@
     "lessonCount": "共 {{count}} 讲课程",
     "moduleCount": "{{count}} 讲"
   },
+  "support": {
+    "pageTitle": "支持本项目",
+    "pageDesc": "帮助我们打造最好的开源 Web3 教育平台",
+    "donationTitle": "捐赠",
+    "cryptoTitle": "加密货币钱包",
+    "sponsorsTitle": "赞助商",
+    "noSponsors": "暂无赞助商，欢迎成为第一位！",
+    "backHome": "返回首页"
+  },
   "donation": {
     "title": "支持本项目",
     "subtitle": "本教程完全免费开源，如果对你有帮助，欢迎支持作者持续更新 ✨",
     "cryptoLabel": "加密货币打赏"
+  },
+  "sponsor": {
+    "title": "我们的赞助商",
+    "becomeSponsor": "成为赞助商",
+    "poweredBy": "由以下赞助商支持",
+    "noSponsors": "支持开源 Web3 教育"
   },
   "thankAuthor": {
     "message": "如果这节课对你有帮助，欢迎支持作者继续创作 ☕",

@@ -139,10 +139,25 @@
     "lessonCount": "{{count}} lessons total",
     "moduleCount": "{{count}} lessons"
   },
+  "support": {
+    "pageTitle": "Support This Project",
+    "pageDesc": "Help us build the best open-source Web3 education platform",
+    "donationTitle": "Donate",
+    "cryptoTitle": "Crypto Wallets",
+    "sponsorsTitle": "Our Sponsors",
+    "noSponsors": "No sponsors yet. Be the first!",
+    "backHome": "Back to Home"
+  },
   "donation": {
     "title": "Support This Project",
     "subtitle": "This tutorial is completely free and open source. If it has been helpful to you, please consider supporting the author to keep it updated ✨",
     "cryptoLabel": "Crypto tips"
+  },
+  "sponsor": {
+    "title": "Our Sponsors",
+    "becomeSponsor": "Become a Sponsor",
+    "poweredBy": "Powered by",
+    "noSponsors": "Support open-source Web3 education"
   },
   "thankAuthor": {
     "message": "If this lesson was helpful, please consider supporting the author ☕",

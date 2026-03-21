@@ -9,6 +9,7 @@ import { WalletSimulator } from '../components/interactive';
 import { COURSE_DATA } from '../config/courseData';
 import { useUserStore } from '../store/useUserStore';
 import DonationSection from '../components/DonationSection';
+import SponsorSection from '../components/SponsorSection';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import SeoHead from '../components/SeoHead';
 
@@ -223,6 +224,9 @@ const LandingPage = () => {
         {/* Donation */}
         <DonationSection />
 
+        {/* Sponsors */}
+        <SponsorSection />
+
         {/* Community */}
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-6">{t('landing.communityTitle')}</h2>
@@ -249,8 +253,16 @@ const LandingPage = () => {
         </div>
 
         {/* Footer */}
-        <footer className="text-center text-slate-500 text-sm border-t border-slate-800 pt-8">
+        <footer className="text-center text-slate-500 text-sm border-t border-slate-800 pt-8 space-y-2">
           <p>{t('landing.footerLicense')}</p>
+          <p>
+            <Link
+              to={`/${lang}/support`}
+              className="text-slate-500 hover:text-pink-400 transition-colors underline underline-offset-2"
+            >
+              {t('support.pageTitle')}
+            </Link>
+          </p>
         </footer>
       </main>
     </div>
