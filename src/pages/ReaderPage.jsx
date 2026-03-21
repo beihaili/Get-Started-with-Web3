@@ -10,6 +10,7 @@ import { AiTutor } from '../features/ai-tutor';
 import { MultiQuiz, QUIZ_BANK } from '../features/quiz';
 import { COURSE_DATA } from '../config/courseData';
 import ShareCard from '../components/ShareCard';
+import SponsorBanner from '../components/SponsorBanner';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import SeoHead from '../components/SeoHead';
 
@@ -174,6 +175,9 @@ const ReaderPage = () => {
                   {currentLesson?.title}
                 </h1>
               </div>
+
+              {/* Sponsor Banner (gold tier only, null if no gold sponsors) */}
+              <SponsorBanner />
 
               {/* Markdown Content */}
               <div className="prose prose-invert max-w-none">
