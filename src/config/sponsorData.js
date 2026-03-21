@@ -21,12 +21,12 @@ export const DONATION_LINKS = [
 export const CRYPTO_WALLETS = [
   {
     chain: 'ETH',
-    address: '0x742d35Cc6634C0532925a3b844Bc9e7595f2bD18',
+    address: '0xC896E7c0aD9A8F9C787b5BBEdCEebA259c912d72',
     network: 'Ethereum / Base / Polygon',
   },
   {
     chain: 'BTC',
-    address: 'bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh',
+    address: '1GihPqLkjJNK2fzCMSicc9mLapKeGy3Vv1',
     network: 'Bitcoin',
   },
 ];
