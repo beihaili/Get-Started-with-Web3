@@ -2,6 +2,18 @@
 
 # 贡献指南
 
+## Your First Contribution in 5 Minutes
+
+1. **Fork** this repository
+2. **Find an issue** labeled `good first issue` in [Issues](https://github.com/beihaili/Get-Started-with-Web3/issues)
+3. **Clone** your fork: `git clone https://github.com/YOUR_USERNAME/Get-Started-with-Web3.git`
+4. **Create a branch**: `git checkout -b fix/your-change`
+5. **Make your change** (fix a typo, improve a translation, add a quiz question)
+6. **Commit**: `git commit -m "fix: describe your change"`
+7. **Push and open a PR**: `git push origin fix/your-change`
+
+Not sure where to start? Translation proofreading is the easiest way to contribute — just find a file in `en/` and improve the English!
+
 感谢你对 **Get Started with Web3** 项目的关注！我们欢迎所有形式的贡献。
 
 ## 如何参与
