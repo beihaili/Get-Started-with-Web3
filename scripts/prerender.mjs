@@ -17,20 +17,21 @@ const DIST_DIR = join(__dirname, '..', 'dist');
 const BASE_PATH = '/Get-Started-with-Web3';
 const PORT = 4173;
 
-// 从 courseData 动态生成路由列表
+// 从 courseData 动态生成路由列表（支持 i18n 语言前缀）
 function getRoutes() {
-  const routes = ['/', '/dashboard', '/badges'];
+  const langs = ['en', 'zh'];
 
-  // 读取 courseData 源码提取路由
+  // 根路径（重定向入口）
+  const routes = ['/'];
+
+  // 读取 courseData 源码提取课程路由
   const courseDataPath = join(__dirname, '..', 'src', 'config', 'courseData.js');
   const content = readFileSync(courseDataPath, 'utf-8');
 
-  // 提取所有模块 ID
-  const moduleIdRegex = /id:\s*'(module-\d+)'/g;
-  const lessonIdRegex = /id:\s*'(\d+-\d+)'/g;
-
+  // 逐行扫描：遇到模块 ID 更新上下文，遇到课程 ID 生成路由
   let currentModuleId = null;
   const lines = content.split('\n');
+  const lessonPairs = [];
 
   for (const line of lines) {
     const moduleMatch = line.match(/id:\s*'(module-\d+)'/);
@@ -39,7 +40,21 @@ function getRoutes() {
     }
     const lessonMatch = line.match(/id:\s*'(\d+-\d+)'/);
     if (lessonMatch && currentModuleId) {
-      routes.push(`/learn/${currentModuleId}/${lessonMatch[1]}`);
+      lessonPairs.push({ moduleId: currentModuleId, lessonId: lessonMatch[1] });
+    }
+  }
+
+  // 为每种语言生成静态页面路由和课程路由
+  for (const lang of langs) {
+    routes.push(`/${lang}`);
+    routes.push(`/${lang}/dashboard`);
+    routes.push(`/${lang}/badges`);
+    routes.push(`/${lang}/articles`);
+    routes.push(`/${lang}/support`);
+    routes.push(`/${lang}/contributors`);
+
+    for (const { moduleId, lessonId } of lessonPairs) {
+      routes.push(`/${lang}/learn/${moduleId}/${lessonId}`);
     }
   }
 
