@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, useCallback, useMemo } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Fuse from 'fuse.js';
 import { Search, X } from 'lucide-react';
 import { useSearchStore } from '../store/useSearchStore';
@@ -7,6 +8,8 @@ import { COURSE_DATA } from '../config/courseData';
 
 const SearchDialog = () => {
   const navigate = useNavigate();
+  const { lang } = useParams();
+  const { t } = useTranslation();
   const inputRef = useRef(null);
   const { isSearchOpen, searchQuery, closeSearch, setSearchQuery, addToHistory } = useSearchStore();
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -54,9 +57,9 @@ const SearchDialog = () => {
     (item) => {
       addToHistory(searchQuery);
       closeSearch();
-      navigate(`/learn/${item.moduleId}/${item.lessonId}`);
+      navigate(`/${lang}/learn/${item.moduleId}/${item.lessonId}`);
     },
-    [searchQuery, addToHistory, closeSearch, navigate]
+    [searchQuery, addToHistory, closeSearch, navigate, lang]
   );
 
   const handleKeyDown = useCallback(
@@ -100,7 +103,7 @@ const SearchDialog = () => {
       <div
         role="dialog"
         aria-modal="true"
-        aria-label="搜索课程"
+        aria-label={t('search.dialogLabel')}
         className="relative w-full max-w-lg mx-4 bg-slate-900 border border-slate-700 rounded-xl shadow-2xl overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
@@ -112,13 +115,13 @@ const SearchDialog = () => {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="搜索课程..."
-            aria-label="搜索课程"
+            placeholder={t('search.placeholder')}
+            aria-label={t('search.inputLabel')}
             className="flex-1 bg-transparent text-white placeholder-slate-500 outline-none text-base"
           />
           <button
             onClick={closeSearch}
-            aria-label="关闭搜索"
+            aria-label={t('search.closeLabel')}
             className="text-slate-400 hover:text-white"
           >
             <X className="w-5 h-5" />
@@ -128,7 +131,7 @@ const SearchDialog = () => {
         {/* Results */}
         <div className="max-h-80 overflow-y-auto" role="listbox">
           {searchQuery.trim() && flatResults.length === 0 && (
-            <div className="px-4 py-8 text-center text-slate-500">没有找到匹配的课程</div>
+            <div className="px-4 py-8 text-center text-slate-500">{t('search.noResults')}</div>
           )}
 
           {Object.entries(grouped).map(([moduleTitle, items]) => (
@@ -161,9 +164,9 @@ const SearchDialog = () => {
 
         {/* Footer hint */}
         <div className="px-4 py-2 border-t border-slate-700 flex gap-4 text-xs text-slate-500">
-          <span>↑↓ 导航</span>
-          <span>↵ 选择</span>
-          <span>Esc 关闭</span>
+          <span>{t('search.hintNavigate')}</span>
+          <span>{t('search.hintSelect')}</span>
+          <span>{t('search.hintClose')}</span>
         </div>
       </div>
     </div>

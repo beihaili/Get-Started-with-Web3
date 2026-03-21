@@ -36,6 +36,9 @@ jobs:
     - name: Run Tests 🧪
       run: npm test
 
+    - name: Check translation coverage
+      run: node scripts/check-translation-coverage.mjs
+
     - name: Build Application 🔨
       run: npm run build
       env:

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { BrainCircuit, CheckCircle, X } from 'lucide-react';
 import { QUIZ_BANK } from './quizData';
 
@@ -7,6 +8,7 @@ import { QUIZ_BANK } from './quizData';
  * 从原App.jsx迁移 (lines 1973-2325)
  */
 const MultiQuiz = ({ lessonId, onPass }) => {
+  const { t } = useTranslation();
   const [quizState, setQuizState] = useState('idle'); // idle, active, completed
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState([]);
@@ -74,17 +76,19 @@ const MultiQuiz = ({ lessonId, onPass }) => {
         <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
             <BrainCircuit className="w-6 h-6 text-purple-400" />
-            <h4 className="text-white font-bold">闯关测验</h4>
+            <h4 className="text-white font-bold">{t('quiz.title')}</h4>
           </div>
-          <p className="text-slate-300 mb-6">
-            完成 <span className="text-cyan-400 font-bold">{currentQuiz.length} 道题目</span>，需要
-            <span className="text-green-400 font-bold"> 全部答对 </span>才能通关下一章节
-          </p>
+          <p
+            className="text-slate-300 mb-6"
+            dangerouslySetInnerHTML={{
+              __html: t('quiz.description', { count: currentQuiz.length }),
+            }}
+          />
           <button
             onClick={startQuiz}
             className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-bold py-3 px-8 rounded-lg transition-all transform hover:scale-105 shadow-lg shadow-purple-500/20"
           >
-            🚀 开始挑战
+            {t('quiz.startChallenge')}
           </button>
         </div>
       </div>
@@ -100,10 +104,13 @@ const MultiQuiz = ({ lessonId, onPass }) => {
           {/* 进度条 */}
           <div className="flex items-center justify-between mb-6">
             <span className="text-sm text-slate-400">
-              题目 {currentQuestion + 1} / {currentQuiz.length}
+              {t('quiz.questionProgress', {
+                current: currentQuestion + 1,
+                total: currentQuiz.length,
+              })}
             </span>
             <span className="text-sm text-cyan-400 font-mono">
-              得分: {score}/{currentQuiz.length}
+              {t('quiz.score', { score, total: currentQuiz.length })}
             </span>
           </div>
 
@@ -118,7 +125,7 @@ const MultiQuiz = ({ lessonId, onPass }) => {
             <>
               <h5 className="text-lg font-semibold text-white mb-6">{currentQ.question}</h5>
 
-              <div className="space-y-3 mb-6" role="radiogroup" aria-label="选择答案">
+              <div className="space-y-3 mb-6" role="radiogroup" aria-label={t('quiz.selectAnswer')}>
                 {currentQ.options.map((option, index) => (
                   <button
                     key={index}
@@ -144,7 +151,7 @@ const MultiQuiz = ({ lessonId, onPass }) => {
                 disabled={selectedAnswer === null}
                 className="w-full bg-green-600 hover:bg-green-500 disabled:bg-slate-600 disabled:cursor-not-allowed text-white font-bold py-3 px-6 rounded-lg transition-colors"
               >
-                确认答案
+                {t('quiz.confirmAnswer')}
               </button>
             </>
           ) : (
@@ -163,7 +170,7 @@ const MultiQuiz = ({ lessonId, onPass }) => {
                     <X className="w-5 h-5" />
                   )}
                   <span className="font-bold">
-                    {answers[currentQuestion]?.correct ? '回答正确！' : '回答错误'}
+                    {answers[currentQuestion]?.correct ? t('quiz.correct') : t('quiz.wrong')}
                   </span>
                 </div>
                 <p className="text-sm leading-relaxed">{currentQ.explanation}</p>
@@ -173,7 +180,9 @@ const MultiQuiz = ({ lessonId, onPass }) => {
                 onClick={nextQuestion}
                 className="w-full bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-3 px-6 rounded-lg transition-colors"
               >
-                {currentQuestion < currentQuiz.length - 1 ? '下一题' : '查看结果'}
+                {currentQuestion < currentQuiz.length - 1
+                  ? t('quiz.nextQuestion')
+                  : t('quiz.viewResult')}
               </button>
             </>
           )}
@@ -195,9 +204,9 @@ const MultiQuiz = ({ lessonId, onPass }) => {
           {isPerfectScore ? (
             <>
               <div className="text-6xl mb-4">🎉</div>
-              <h3 className="text-2xl font-bold text-green-400 mb-2">完美通关！</h3>
+              <h3 className="text-2xl font-bold text-green-400 mb-2">{t('quiz.perfectTitle')}</h3>
               <p className="text-green-300 mb-6">
-                恭喜你全部答对 {currentQuiz.length} 道题目！你已经掌握了本章节的核心知识。
+                {t('quiz.perfectDesc', { count: currentQuiz.length })}
               </p>
               <button
                 onClick={() => {
@@ -206,22 +215,22 @@ const MultiQuiz = ({ lessonId, onPass }) => {
                 }}
                 className="bg-green-600 hover:bg-green-500 text-white font-bold py-3 px-8 rounded-lg transition-colors transform hover:scale-105 shadow-lg"
               >
-                ✅ 解锁下一章节
+                {t('quiz.unlockNext')}
               </button>
             </>
           ) : (
             <>
               <div className="text-6xl mb-4">😔</div>
-              <h3 className="text-2xl font-bold text-orange-400 mb-2">还需努力</h3>
+              <h3 className="text-2xl font-bold text-orange-400 mb-2">{t('quiz.needMoreTitle')}</h3>
               <p className="text-orange-300 mb-6">
-                你答对了 {score}/{currentQuiz.length} 题。需要全部答对才能进入下一章节，再试一次吧！
+                {t('quiz.needMoreDesc', { score, total: currentQuiz.length })}
               </p>
               <div className="flex gap-4 justify-center">
                 <button
                   onClick={resetQuiz}
                   className="bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-3 px-6 rounded-lg transition-colors"
                 >
-                  🔄 重新挑战
+                  {t('quiz.retry')}
                 </button>
                 {import.meta.env.DEV && (
                   <button
@@ -231,7 +240,7 @@ const MultiQuiz = ({ lessonId, onPass }) => {
                     }}
                     className="bg-slate-600 hover:bg-slate-500 text-white py-3 px-6 rounded-lg transition-colors"
                   >
-                    跳过 (调试用)
+                    {t('quiz.skipDebug')}
                   </button>
                 )}
               </div>

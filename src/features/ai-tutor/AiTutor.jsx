@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { BrainCircuit, X, Send, Loader2 } from 'lucide-react';
 import { callGemini } from '../../utils/geminiApi';
 import { useAppStore } from '../../store/useAppStore';
@@ -8,6 +9,7 @@ import { useAppStore } from '../../store/useAppStore';
  * 从原App.jsx迁移 (lines 2365-2487)
  */
 const AiTutor = ({ lessonContext = '' }) => {
+  const { t } = useTranslation();
   const { geminiApiKey } = useAppStore();
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([]);
@@ -16,7 +18,7 @@ const AiTutor = ({ lessonContext = '' }) => {
 
   const sendMessage = async () => {
     if (!inputValue.trim() || !geminiApiKey) {
-      if (!geminiApiKey) alert('AI 助教需要配置 Gemini API Key。');
+      if (!geminiApiKey) alert(t('ai.apiKeyAlert'));
       return;
     }
 
@@ -27,15 +29,8 @@ const AiTutor = ({ lessonContext = '' }) => {
 
     try {
       const contextSlice = lessonContext.slice(0, 1500);
-      const prompt = `学生问题: "${inputValue}"
-
-基于当前课程内容回答学生的问题。课程内容：
-${contextSlice}
-
-请提供清晰、易懂的解释，如果问题与当前课程相关，要结合课程内容。如果问题超出课程范围，可以适当扩展但要说明。`;
-
-      const systemInstruction =
-        '你是一个友善的Web3教育助教。用中文回答，语言要通俗易懂，可以使用表情符号让回答更生动。';
+      const prompt = t('ai.promptTemplate', { question: inputValue, context: contextSlice });
+      const systemInstruction = t('ai.systemInstruction');
 
       const response = await callGemini(prompt, systemInstruction);
 
@@ -44,7 +39,7 @@ ${contextSlice}
     } catch (error) {
       const errorMessage = {
         role: 'assistant',
-        content: `抱歉，我遇到了一些问题：${error.message}`,
+        content: `${t('ai.errorPrefix')}${error.message}`,
       };
       setMessages((prev) => [...prev, errorMessage]);
     }
@@ -70,7 +65,7 @@ ${contextSlice}
       <div className="p-4 border-b border-slate-700/50 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <BrainCircuit className="w-5 h-5 text-purple-400" />
-          <h3 className="font-bold text-white">AI 助教</h3>
+          <h3 className="font-bold text-white">{t('ai.title')}</h3>
         </div>
         <button onClick={() => setIsOpen(false)} className="text-slate-400 hover:text-white">
           <X className="w-4 h-4" />
@@ -79,9 +74,7 @@ ${contextSlice}
 
       <div className="h-64 overflow-y-auto p-4 space-y-3">
         {messages.length === 0 && (
-          <div className="text-slate-400 text-sm text-center py-8">
-            👋 你好！我是AI助教，有任何关于课程的问题都可以问我哦~
-          </div>
+          <div className="text-slate-400 text-sm text-center py-8">{t('ai.greeting')}</div>
         )}
 
         {messages.map((message, index) => (
@@ -101,7 +94,7 @@ ${contextSlice}
           <div className="flex justify-start">
             <div className="bg-slate-800 text-slate-200 p-3 rounded-lg text-sm flex items-center gap-2">
               <Loader2 className="w-4 h-4 animate-spin" />
-              思考中...
+              {t('ai.thinking')}
             </div>
           </div>
         )}
@@ -114,7 +107,7 @@ ${contextSlice}
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
-            placeholder="问我任何问题..."
+            placeholder={t('ai.placeholder')}
             className="flex-1 bg-slate-800 border border-slate-600 text-slate-200 text-sm rounded px-3 py-2 focus:outline-none focus:border-cyan-500"
           />
           <button

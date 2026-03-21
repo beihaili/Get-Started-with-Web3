@@ -1,5 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { ArrowLeft, CheckCircle, Loader2, Share2 } from 'lucide-react';
+import ThankAuthorButton from '../components/ThankAuthorButton';
 import { useUserStore } from '../store/useUserStore';
 import { useContentStore } from '../store/useContentStore';
 import { useEffect, useState } from 'react';
@@ -8,13 +10,17 @@ import { AiTutor } from '../features/ai-tutor';
 import { MultiQuiz, QUIZ_BANK } from '../features/quiz';
 import { COURSE_DATA } from '../config/courseData';
 import ShareCard from '../components/ShareCard';
+import SponsorBanner from '../components/SponsorBanner';
+import LanguageSwitcher from '../components/LanguageSwitcher';
+import SeoHead from '../components/SeoHead';
 
 /**
  * 课程阅读页面
  * 显示课程内容、Markdown渲染、AI助教
  */
 const ReaderPage = () => {
-  const { moduleId, lessonId } = useParams();
+  const { lang, moduleId, lessonId } = useParams();
+  const { t } = useTranslation();
   const { markLessonComplete, getLessonProgress, recordQuizScore, checkModuleBadges } =
     useUserStore();
   const { fetchLessonContent } = useContentStore();
@@ -36,7 +42,7 @@ const ReaderPage = () => {
     window.scrollTo(0, 0);
 
     if (!currentLesson) {
-      setError('课程不存在');
+      setError(t('reader.courseNotFound'));
       setLoading(false);
       return;
     }
@@ -46,24 +52,24 @@ const ReaderPage = () => {
       setLoading(true);
       setError(null);
       try {
-        const lessonContent = await fetchLessonContent(currentLesson.path);
-        setContent(lessonContent || currentLesson.fallbackContent || '# 内容加载中...');
+        const lessonContent = await fetchLessonContent(lang, currentLesson.path);
+        setContent(lessonContent || currentLesson.fallbackContent || t('reader.loadingFallback'));
 
-        // 设置图片基础路径
+        // 设置图片基础路径 (includes lang prefix for correct asset resolution)
         const pathParts = currentLesson.path.split('/');
         const base = pathParts.slice(0, -1).join('/') + '/';
-        setBasePath(`/Get-Started-with-Web3/${base}`);
+        setBasePath(`/Get-Started-with-Web3/${lang}/${base}`);
       } catch (err) {
         console.error('Failed to load lesson:', err);
         setError(err.message);
-        setContent(currentLesson.fallbackContent || '# 内容加载失败');
+        setContent(currentLesson.fallbackContent || t('reader.loadFailedFallback'));
       } finally {
         setLoading(false);
       }
     };
 
     loadContent();
-  }, [moduleId, lessonId, currentLesson, fetchLessonContent]);
+  }, [lang, moduleId, lessonId, currentLesson, fetchLessonContent, t]);
 
   const handleMarkComplete = (score, total) => {
     if (score !== undefined && total !== undefined) {
@@ -91,30 +97,36 @@ const ReaderPage = () => {
     ? `${currentLesson.title} | ${currentModule?.title} | Web3 Starter`
     : 'Web3 Starter';
   const pageDescription = currentLesson
-    ? `${currentLesson.title} - ${currentModule?.title} 教程`
-    : 'Web3 学习平台';
-  const canonicalUrl = `https://beihaili.github.io/Get-Started-with-Web3/learn/${moduleId}/${lessonId}`;
+    ? `${currentLesson.title} - ${currentModule?.title} ${t('reader.pageDescSuffix')}`
+    : 'Web3 Starter';
+  const canonicalUrl = `https://beihaili.github.io/Get-Started-with-Web3/${lang}/learn/${moduleId}/${lessonId}`;
+
+  const altLang = lang === 'en' ? 'zh' : 'en';
+  const alternateUrl = `https://beihaili.github.io/Get-Started-with-Web3/${altLang}/learn/${moduleId}/${lessonId}`;
 
   return (
     <div className="min-h-screen bg-slate-950">
-      <title>{pageTitle}</title>
-      <meta name="description" content={pageDescription} />
-      <meta property="og:title" content={pageTitle} />
-      <meta property="og:description" content={pageDescription} />
-      <meta property="og:url" content={canonicalUrl} />
-      <link rel="canonical" href={canonicalUrl} />
+      <SeoHead
+        title={pageTitle}
+        description={pageDescription}
+        url={canonicalUrl}
+        type="article"
+        moduleTitle={currentModule?.title}
+        lang={lang}
+        alternateUrl={alternateUrl}
+      />
       {/* Header */}
       <nav
-        aria-label="课程导航"
+        aria-label={t('reader.navLabel')}
         className="sticky top-0 z-10 border-b border-slate-800 bg-slate-950/80 backdrop-blur-md"
       >
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link
-            to="/dashboard"
+            to={`/${lang}/dashboard`}
             className="flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
-            <span>返回课程</span>
+            <span>{t('nav.backToCourses')}</span>
           </Link>
 
           <div className="flex items-center gap-4">
@@ -123,16 +135,17 @@ const ReaderPage = () => {
             {isCompleted ? (
               <div className="flex items-center gap-2 px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-lg">
                 <CheckCircle className="w-4 h-4 text-green-400" />
-                <span className="text-green-400 text-sm font-medium">已完成</span>
+                <span className="text-green-400 text-sm font-medium">{t('reader.completed')}</span>
               </div>
             ) : (
               <button
                 onClick={handleMarkComplete}
                 className="px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors text-sm font-medium"
               >
-                标记为已完成
+                {t('reader.markComplete')}
               </button>
             )}
+            <LanguageSwitcher />
           </div>
         </div>
       </nav>
@@ -143,12 +156,12 @@ const ReaderPage = () => {
           {loading ? (
             <div className="flex flex-col items-center justify-center py-20">
               <Loader2 className="w-12 h-12 text-cyan-400 animate-spin mb-4" />
-              <p className="text-slate-400">加载课程内容中...</p>
+              <p className="text-slate-400">{t('reader.loadingContent')}</p>
             </div>
           ) : error ? (
             <div className="p-6 bg-red-500/10 border border-red-500/20 rounded-lg">
               <p className="text-red-400">
-                <strong>加载失败：</strong> {error}
+                <strong>{t('reader.loadFailedStrong')}</strong> {error}
               </p>
             </div>
           ) : (
@@ -162,6 +175,9 @@ const ReaderPage = () => {
                   {currentLesson?.title}
                 </h1>
               </div>
+
+              {/* Sponsor Banner (gold tier only, null if no gold sponsors) */}
+              <SponsorBanner />
 
               {/* Markdown Content */}
               <div className="prose prose-invert max-w-none">
@@ -179,47 +195,49 @@ const ReaderPage = () => {
               <div className="flex gap-4 mt-8 pt-8 border-t border-slate-700">
                 {prevLesson ? (
                   <Link
-                    to={`/learn/${moduleId}/${prevLesson.id}`}
+                    to={`/${lang}/learn/${moduleId}/${prevLesson.id}`}
                     className="px-4 sm:px-6 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-lg transition-colors text-sm sm:text-base"
                   >
-                    ← <span className="hidden sm:inline">上一讲</span>
-                    <span className="sm:hidden">上一</span>
+                    ← <span className="hidden sm:inline">{t('reader.prevLessonFull')}</span>
+                    <span className="sm:hidden">{t('reader.prevLesson')}</span>
                   </Link>
                 ) : (
                   <div className="px-4 sm:px-6 py-2 bg-slate-800/50 text-slate-600 rounded-lg cursor-not-allowed text-sm sm:text-base">
-                    ← <span className="hidden sm:inline">上一讲</span>
-                    <span className="sm:hidden">上一</span>
+                    ← <span className="hidden sm:inline">{t('reader.prevLessonFull')}</span>
+                    <span className="sm:hidden">{t('reader.prevLesson')}</span>
                   </div>
                 )}
 
                 {nextLesson ? (
                   <Link
-                    to={`/learn/${moduleId}/${nextLesson.id}`}
+                    to={`/${lang}/learn/${moduleId}/${nextLesson.id}`}
                     className="px-4 sm:px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors ml-auto text-sm sm:text-base"
                   >
-                    <span className="hidden sm:inline">下一讲</span>
-                    <span className="sm:hidden">下一</span> →
+                    <span className="hidden sm:inline">{t('reader.nextLessonFull')}</span>
+                    <span className="sm:hidden">{t('reader.nextLesson')}</span> →
                   </Link>
                 ) : (
                   <div className="px-4 sm:px-6 py-2 bg-slate-800/50 text-slate-600 rounded-lg cursor-not-allowed ml-auto text-sm sm:text-base">
-                    <span className="hidden sm:inline">下一讲</span>
-                    <span className="sm:hidden">下一</span> →
+                    <span className="hidden sm:inline">{t('reader.nextLessonFull')}</span>
+                    <span className="sm:hidden">{t('reader.nextLesson')}</span> →
                   </div>
                 )}
               </div>
+              {/* Thank author CTA */}
+              <ThankAuthorButton />
               {/* Module completion banner */}
               {isModuleComplete && (
                 <div className="mt-8 p-6 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-xl text-center">
                   <h3 className="text-xl font-bold text-white mb-2">
-                    {currentModule?.title} 全部完成！
+                    {t('reader.moduleCompleteTitle', { moduleTitle: currentModule?.title })}
                   </h3>
-                  <p className="text-slate-400 mb-4">恭喜你完成了本模块的所有课程</p>
+                  <p className="text-slate-400 mb-4">{t('reader.moduleCompleteDesc')}</p>
                   <button
                     onClick={() => setShowShareCard(true)}
                     className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white rounded-lg transition-all font-medium"
                   >
                     <Share2 className="w-4 h-4" />
-                    分享学习成就
+                    {t('reader.shareAchievement')}
                   </button>
                 </div>
               )}

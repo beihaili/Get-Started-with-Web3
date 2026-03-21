@@ -1,4 +1,5 @@
 import { useState, useCallback, useMemo, memo } from 'react';
+import { useTranslation } from 'react-i18next';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
@@ -10,6 +11,7 @@ import { ExternalLink, ChevronRight, Copy, Check } from 'lucide-react';
  */
 
 const CopyButton = ({ text }) => {
+  const { t } = useTranslation();
   const [copied, setCopied] = useState(false);
   const handleCopy = useCallback(() => {
     navigator.clipboard.writeText(text).then(() => {
@@ -21,9 +23,9 @@ const CopyButton = ({ text }) => {
   return (
     <button
       onClick={handleCopy}
-      aria-label="复制代码"
+      aria-label={t('markdown.copyCode')}
       className="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100"
-      title="复制代码"
+      title={t('markdown.copyCodeTitle')}
     >
       {copied ? <Check className="w-4 h-4 text-green-400" /> : <Copy className="w-4 h-4" />}
     </button>

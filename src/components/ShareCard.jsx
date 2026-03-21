@@ -1,10 +1,12 @@
 import { useRef, useState, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Download, X, Share2 } from 'lucide-react';
 import html2canvas from 'html2canvas';
 import { useUserStore } from '../store/useUserStore';
 import { ACHIEVEMENT_BADGES } from '../features/badges';
 
 const ShareCard = ({ onClose }) => {
+  const { t } = useTranslation();
   const cardRef = useRef(null);
   const [generating, setGenerating] = useState(false);
   const { earnedBadges, totalExperience, userTitle, studyStreak } = useUserStore();
@@ -44,13 +46,17 @@ const ShareCard = ({ onClose }) => {
   }, []);
 
   const handleShareTwitter = useCallback(() => {
-    const text = `I earned ${earnedCount} badge${earnedCount > 1 ? 's' : ''} and ${totalExperience} XP on Get Started with Web3! 🚀\n\nJoin me and learn blockchain from scratch:`;
+    const text = t('share.twitterText', {
+      count: earnedCount,
+      plural: earnedCount > 1 ? 's' : '',
+      xp: totalExperience,
+    });
     const url = 'https://beihaili.github.io/Get-Started-with-Web3/';
     window.open(
       `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`,
       '_blank'
     );
-  }, [earnedCount, totalExperience]);
+  }, [earnedCount, totalExperience, t]);
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
@@ -59,7 +65,7 @@ const ShareCard = ({ onClose }) => {
         <button
           onClick={onClose}
           className="absolute -top-3 -right-3 z-10 w-8 h-8 flex items-center justify-center bg-slate-700 hover:bg-slate-600 rounded-full text-slate-300 transition-colors"
-          aria-label="关闭"
+          aria-label={t('share.closeLabel')}
         >
           <X className="w-4 h-4" />
         </button>
@@ -74,7 +80,7 @@ const ShareCard = ({ onClose }) => {
             <div className="flex items-center justify-between">
               <div>
                 <h2 className="text-white text-xl font-bold">Get Started with Web3</h2>
-                <p className="text-blue-100 text-sm mt-1">Learning Achievement Card</p>
+                <p className="text-blue-100 text-sm mt-1">{t('share.achievementCard')}</p>
               </div>
               <div className="text-right">
                 <div className="text-3xl font-bold text-white">{totalExperience}</div>
@@ -89,14 +95,16 @@ const ShareCard = ({ onClose }) => {
               <div>
                 <div className="text-lg font-bold text-white">{userTitle}</div>
                 <div className="text-sm text-slate-400">
-                  {studyStreak > 0 ? `${studyStreak} 天连续学习` : '开始学习之旅'}
+                  {studyStreak > 0
+                    ? t('share.studyStreak', { count: studyStreak })
+                    : t('share.startJourney')}
                 </div>
               </div>
               <div className="text-right">
                 <div className="text-2xl font-bold text-cyan-400">
                   {earnedCount}/{totalBadges}
                 </div>
-                <div className="text-xs text-slate-400">徽章收集</div>
+                <div className="text-xs text-slate-400">{t('share.badgeCollection')}</div>
               </div>
             </div>
 
@@ -124,7 +132,7 @@ const ShareCard = ({ onClose }) => {
             {/* Progress bar */}
             <div className="mb-4">
               <div className="flex justify-between text-xs text-slate-400 mb-1">
-                <span>学习进度</span>
+                <span>{t('share.learningProgress')}</span>
                 <span>{((earnedCount / totalBadges) * 100).toFixed(0)}%</span>
               </div>
               <div className="h-2 bg-slate-800 rounded-full overflow-hidden">
@@ -155,14 +163,14 @@ const ShareCard = ({ onClose }) => {
             className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-cyan-600 hover:bg-cyan-700 disabled:bg-cyan-800 text-white rounded-lg transition-colors font-medium"
           >
             <Download className="w-4 h-4" />
-            {generating ? '生成中...' : '保存图片'}
+            {generating ? t('share.generating') : t('share.download')}
           </button>
           <button
             onClick={handleShareTwitter}
             className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-lg transition-colors font-medium"
           >
             <Share2 className="w-4 h-4" />
-            分享到 Twitter
+            {t('share.shareTwitter')}
           </button>
         </div>
       </div>

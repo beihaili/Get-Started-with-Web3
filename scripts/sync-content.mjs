@@ -1,3 +1,4 @@
+import { existsSync } from 'node:fs';
 import { cp, mkdir, rm, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -50,6 +51,18 @@ const main = async () => {
     const src = path.join(SOURCE_ROOT, folder);
     const dest = path.join(DEST_ROOT, folder);
     await safeCopy(src, dest);
+  }
+
+  // Sync en/ folders (skip silently if source doesn't exist)
+  const enSource = path.resolve(projectRoot, 'en');
+  const enTarget = path.resolve(projectRoot, 'public', 'content', 'en');
+
+  for (const folder of SOURCE_FOLDERS) {
+    const src = path.join(enSource, folder);
+    const dest = path.join(enTarget, folder);
+    if (existsSync(src)) {
+      await safeCopy(src, dest);
+    }
   }
 
   console.log(`[sync-content] Completed. Content root: ${path.relative(projectRoot, DEST_ROOT)}`);
