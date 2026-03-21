@@ -9,7 +9,7 @@
     "sync-content": "node scripts/sync-content.mjs",
     "dev": "vite",
     "build": "vite build",
-    "postbuild": "node scripts/prerender.mjs",
+    "postbuild": "node scripts/generate-sitemap.mjs && node scripts/prerender.mjs",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
