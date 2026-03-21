@@ -124,7 +124,7 @@ If this project has been helpful to you, consider supporting its development:
 
 - **GitHub Sponsors**: [github.com/sponsors/beihaili](https://github.com/sponsors/beihaili)
 - **Buy Me a Coffee**: [buymeacoffee.com/beihaili](https://buymeacoffee.com/beihaili)
-- **ETH / EVM**: `0xC896E7c0aD9A8F9C787b5BBEdCEebA259c912d72`
+- **ETH / EVM**: `0xb7Cd29C78B97cdf0A6e6FFC9268d43eDc3eCa649`
 - **BTC**: `1GihPqLkjJNK2fzCMSicc9mLapKeGy3Vv1`
 
 Every contribution — code, content, or coffee — is genuinely appreciated.
