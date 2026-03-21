@@ -148,6 +148,14 @@
     "noSponsors": "No sponsors yet. Be the first!",
     "backHome": "Back to Home"
   },
+  "contributors": {
+    "pageTitle": "Contributors",
+    "pageDesc": "Meet the people who built this platform",
+    "heading": "Our Contributors",
+    "contributions": "contributions",
+    "loading": "Loading contributors...",
+    "error": "Failed to load contributors"
+  },
   "donation": {
     "title": "Support This Project",
     "subtitle": "This tutorial is completely free and open source. If it has been helpful to you, please consider supporting the author to keep it updated ✨",
