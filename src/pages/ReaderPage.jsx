@@ -11,6 +11,7 @@ import { MultiQuiz, QUIZ_BANK } from '../features/quiz';
 import { COURSE_DATA } from '../config/courseData';
 import ShareCard from '../components/ShareCard';
 import LanguageSwitcher from '../components/LanguageSwitcher';
+import SeoHead from '../components/SeoHead';
 
 /**
  * 课程阅读页面
@@ -99,14 +100,20 @@ const ReaderPage = () => {
     : 'Web3 Starter';
   const canonicalUrl = `https://beihaili.github.io/Get-Started-with-Web3/${lang}/learn/${moduleId}/${lessonId}`;
 
+  const altLang = lang === 'en' ? 'zh' : 'en';
+  const alternateUrl = `https://beihaili.github.io/Get-Started-with-Web3/${altLang}/learn/${moduleId}/${lessonId}`;
+
   return (
     <div className="min-h-screen bg-slate-950">
-      <title>{pageTitle}</title>
-      <meta name="description" content={pageDescription} />
-      <meta property="og:title" content={pageTitle} />
-      <meta property="og:description" content={pageDescription} />
-      <meta property="og:url" content={canonicalUrl} />
-      <link rel="canonical" href={canonicalUrl} />
+      <SeoHead
+        title={pageTitle}
+        description={pageDescription}
+        url={canonicalUrl}
+        type="article"
+        moduleTitle={currentModule?.title}
+        lang={lang}
+        alternateUrl={alternateUrl}
+      />
       {/* Header */}
       <nav
         aria-label={t('reader.navLabel')}

@@ -6,6 +6,7 @@ import { useSearchStore } from '../store/useSearchStore';
 import { COURSE_DATA } from '../config/courseData';
 import { Web3Oracle } from '../components/interactive';
 import LanguageSwitcher from '../components/LanguageSwitcher';
+import SeoHead from '../components/SeoHead';
 
 /**
  * 仪表板页面
@@ -19,14 +20,19 @@ const DashboardPage = () => {
 
   const progressCount = Object.keys(progress).length;
 
+  const canonicalUrl = `https://beihaili.github.io/Get-Started-with-Web3/${lang}/dashboard`;
+  const altLang = lang === 'en' ? 'zh' : 'en';
+  const alternateUrl = `https://beihaili.github.io/Get-Started-with-Web3/${altLang}/dashboard`;
+
   return (
     <div className="min-h-screen bg-slate-950">
-      <title>{t('dashboard.pageTitle')}</title>
-      <meta name="description" content={t('dashboard.pageDesc')} />
-      <meta property="og:title" content={t('dashboard.pageTitle')} />
-      <link
-        rel="canonical"
-        href={`https://beihaili.github.io/Get-Started-with-Web3/${lang}/dashboard`}
+      <SeoHead
+        title={t('dashboard.pageTitle')}
+        description={t('dashboard.pageDesc')}
+        url={canonicalUrl}
+        type="webpage"
+        lang={lang}
+        alternateUrl={alternateUrl}
       />
       {/* Header */}
       <nav aria-label={t('dashboard.navLabel')} className="border-b border-slate-800">

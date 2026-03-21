@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useEffect } from 'react';
 import { Rocket, BookOpen, Award, Users, Star, GitBranch } from 'lucide-react';
 import { ParticleBackground } from '../components/animations';
 import { MouseSpotlight } from '../components/animations';
@@ -9,6 +10,7 @@ import { COURSE_DATA } from '../config/courseData';
 import { useUserStore } from '../store/useUserStore';
 import DonationSection from '../components/DonationSection';
 import LanguageSwitcher from '../components/LanguageSwitcher';
+import SeoHead from '../components/SeoHead';
 
 /**
  * 着陆页（首页）
@@ -20,12 +22,42 @@ const LandingPage = () => {
   const totalLessons = COURSE_DATA.reduce((sum, m) => sum + m.lessons.length, 0);
   const completedCount = Object.keys(progress).length;
 
+  const siteUrl = 'https://beihaili.github.io/Get-Started-with-Web3/';
+  const canonicalUrl = `${siteUrl}${lang}`;
+  const altLang = lang === 'en' ? 'zh' : 'en';
+  const alternateUrl = `${siteUrl}${altLang}`;
+
+  useEffect(() => {
+    let script = document.querySelector('script[data-platform-ld]');
+    if (!script) {
+      script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.setAttribute('data-platform-ld', 'true');
+      document.head.appendChild(script);
+    }
+    script.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'Get Started with Web3',
+      url: siteUrl,
+      publisher: {
+        '@type': 'Organization',
+        name: 'Get Started with Web3',
+        url: 'https://github.com/beihaili/Get-Started-with-Web3',
+      },
+    });
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
-      <title>Get Started with Web3 - 从入门到精通</title>
-      <meta name="description" content={t('landing.subtitle')} />
-      <meta property="og:title" content="Get Started with Web3 - 从入门到精通" />
-      <link rel="canonical" href={`https://beihaili.github.io/Get-Started-with-Web3/${lang}`} />
+      <SeoHead
+        title="Get Started with Web3 - 从入门到精通"
+        description={t('landing.subtitle')}
+        url={canonicalUrl}
+        type="webpage"
+        lang={lang}
+        alternateUrl={alternateUrl}
+      />
       <ParticleBackground />
       <MouseSpotlight />
 

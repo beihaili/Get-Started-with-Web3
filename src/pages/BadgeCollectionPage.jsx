@@ -6,6 +6,7 @@ import { useUserStore } from '../store/useUserStore';
 import { BadgeCard, ACHIEVEMENT_BADGES, SPECIAL_BADGES } from '../features/badges';
 import ShareCard from '../components/ShareCard';
 import LanguageSwitcher from '../components/LanguageSwitcher';
+import SeoHead from '../components/SeoHead';
 
 /**
  * 徽章收藏页面
@@ -21,14 +22,19 @@ const BadgeCollectionPage = () => {
   const earnedBadgeCount = Object.keys(earnedBadges).length;
   const completionRate = ((earnedBadgeCount / totalBadges) * 100).toFixed(1);
 
+  const canonicalUrl = `https://beihaili.github.io/Get-Started-with-Web3/${lang}/badges`;
+  const altLang = lang === 'en' ? 'zh' : 'en';
+  const alternateUrl = `https://beihaili.github.io/Get-Started-with-Web3/${altLang}/badges`;
+
   return (
     <div className="min-h-screen bg-slate-950">
-      <title>{t('badges.pageTitle')}</title>
-      <meta name="description" content={t('badges.pageDesc')} />
-      <meta property="og:title" content={t('badges.pageTitle')} />
-      <link
-        rel="canonical"
-        href={`https://beihaili.github.io/Get-Started-with-Web3/${lang}/badges`}
+      <SeoHead
+        title={t('badges.pageTitle')}
+        description={t('badges.pageDesc')}
+        url={canonicalUrl}
+        type="webpage"
+        lang={lang}
+        alternateUrl={alternateUrl}
       />
       <div className="sticky top-0 z-10 border-b border-slate-800 bg-slate-950/80 backdrop-blur-md">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
