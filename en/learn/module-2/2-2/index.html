@@ -1,0 +1,887 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第02讲 比特币概览 | 比特币技术 — 密码学与数据层 | Web3 Starter</title>
+
+    <!-- SEO基础标签 -->
+    <meta name="description" content="第02讲 比特币概览 - 比特币技术 — 密码学与数据层 tutorial">
+    <meta name="keywords" content="Web3, 区块链, 比特币, 教程, 入门, blockchain, bitcoin, tutorial, 加密货币, cryptocurrency, 以太坊, ethereum">
+    <meta name="author" content="Bei Hai">
+    <link rel="canonical" href="https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-2/2-2">
+
+    <!-- Open Graph (社交分享) -->
+    <meta property="og:title" content="第02讲 比特币概览 | 比特币技术 — 密码学与数据层 | Web3 Starter">
+    <meta property="og:description" content="第02讲 比特币概览 - 比特币技术 — 密码学与数据层 tutorial">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-2/2-2">
+    <meta property="og:site_name" content="Get Started With Web3">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:image" content="https://beihaili.github.io/Get-Started-with-Web3/logo.png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@bhbtc1337">
+    <meta name="twitter:title" content="Get Started With Web3 - Web3区块链入门教程">
+    <meta name="twitter:description" content="开源Web3教育平台，系统化学习Web3和比特币技术">
+    <meta name="twitter:image" content="https://beihaili.github.io/Get-Started-with-Web3/logo.png">
+
+    <!-- JSON-LD 结构化数据 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Get Started With Web3",
+      "description": "开源Web3教育平台，系统化学习Web3和比特币技术。包含21讲比特币技术课程和6讲Web3快速入门。",
+      "provider": {
+        "@type": "Organization",
+        "name": "Get Started With Web3",
+        "url": "https://beihaili.github.io/Get-Started-with-Web3/"
+      },
+      "inLanguage": "zh-CN",
+      "isAccessibleForFree": true,
+      "url": "https://beihaili.github.io/Get-Started-with-Web3/",
+      "image": "https://beihaili.github.io/Get-Started-with-Web3/logo.png",
+      "hasCourseInstance": [
+        {
+          "@type": "CourseInstance",
+          "name": "Web3 快速入门",
+          "courseMode": "online"
+        },
+        {
+          "@type": "CourseInstance",
+          "name": "比特币技术深度解析",
+          "courseMode": "online"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Analytics (Umami) - TODO: Replace data-website-id and src with your Umami instance -->
+    <script defer="" src="https://YOUR_UMAMI_INSTANCE/script.js" data-website-id="YOUR_WEBSITE_ID"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/Get-Started-with-Web3/favicon.svg">
+
+    <!-- PWA相关 -->
+    <link rel="manifest" href="/Get-Started-with-Web3/manifest.json">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/Get-Started-with-Web3/logo.png">
+    <script type="module" crossorigin="" src="/Get-Started-with-Web3/assets/index-f1e23876.js"></script>
+    <link rel="modulepreload" crossorigin="" href="/Get-Started-with-Web3/assets/markdown-423020bc.js">
+    <link rel="modulepreload" crossorigin="" href="/Get-Started-with-Web3/assets/react-vendor-5e67d862.js">
+    <link rel="modulepreload" crossorigin="" href="/Get-Started-with-Web3/assets/ui-c972d4b3.js">
+    <link rel="modulepreload" crossorigin="" href="/Get-Started-with-Web3/assets/store-fb978561.js">
+    <link rel="stylesheet" href="/Get-Started-with-Web3/assets/index-97933c30.css">
+  <link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/LandingPage-9c2265cb.js"><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/HashVisualizer-6d9f69be.js"><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/useUserStore-b03db06e.js"><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/sponsorData-38203181.js"><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/SeoHead-1998eba3.js"><link rel="alternate" hreflang="zh" href="https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-2/2-2"><script type="application/ld+json" data-seo-head="true">{"@context":"https://schema.org","@type":"Article","name":"第02讲 比特币概览 | 比特币技术 — 密码学与数据层 | Web3 Starter","description":"第02讲 比特币概览 - 比特币技术 — 密码学与数据层 tutorial","url":"https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-2/2-2","isPartOf":{"@type":"Course","name":"比特币技术 — 密码学与数据层"}}</script><script type="application/ld+json" data-platform-ld="true">{"@context":"https://schema.org","@type":"WebSite","name":"Get Started with Web3","url":"https://beihaili.github.io/Get-Started-with-Web3/","publisher":{"@type":"Organization","name":"Get Started with Web3","url":"https://github.com/beihaili/Get-Started-with-Web3"}}</script><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/ReaderPage-dee76f84.js"><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/ShareCard-ac31a07e.js"></head>
+  <body>
+    <!-- SPA路由恢复脚本 -->
+    <script>
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+
+    <div id="root"><div class="app"><div class="min-h-screen bg-slate-950"><nav aria-label="Course navigation" class="sticky top-0 z-10 border-b border-slate-800 bg-slate-950/80 backdrop-blur-md"><div class="container mx-auto px-4 py-4 flex items-center justify-between"><a class="flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors" href="/Get-Started-with-Web3/en/dashboard"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left w-5 h-5" aria-hidden="true"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg><span>Back to Courses</span></a><div class="flex items-center gap-4"><span class="text-slate-400 text-sm">比特币技术 — 密码学与数据层</span><button class="px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors text-sm font-medium">Mark as Complete</button><button class="flex items-center gap-1 rounded-lg px-2 py-1 text-sm text-slate-400 transition-colors hover:bg-slate-800 hover:text-white" title="切换中文"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe h-4 w-4" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg><span>中文</span></button></div></div></nav><main class="container mx-auto px-4 py-8 max-w-4xl"><div class="p-8 bg-slate-900/60 backdrop-blur-md border border-slate-700/50 rounded-xl"><div class="mb-8"><div class="inline-block px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-full mb-4"><span class="text-cyan-400 text-sm font-medium">比特币技术 — 密码学与数据层</span></div><h1 class="text-3xl sm:text-4xl font-bold text-white mb-4">第02讲 比特币概览</h1></div><div class="prose prose-invert max-w-none"><div class="font-sans text-base markdown-content"><h1 class="text-3xl md:text-4xl font-black text-white mt-12 mb-8 border-b border-slate-800 pb-4">Lesson 02: Bitcoin Overview</h1>
+<div class="flex flex-wrap justify-center gap-2 my-6"><span class="inline-flex m-1 align-middle"><img alt="status" loading="lazy" class="rounded-lg max-w-full h-auto shadow-lg" src="https://img.shields.io/badge/status-complete-success" style="max-height: 500px; width: auto;"></span>
+<span class="inline-flex m-1 align-middle"><img alt="author" loading="lazy" class="rounded-lg max-w-full h-auto shadow-lg" src="https://img.shields.io/badge/author-beihaili-blue" style="max-height: 500px; width: auto;"></span>
+<span class="inline-flex m-1 align-middle"><img alt="date" loading="lazy" class="rounded-lg max-w-full h-auto shadow-lg" src="https://img.shields.io/badge/date-2025--06-orange" style="max-height: 500px; width: auto;"></span>
+<span class="inline-flex m-1 align-middle"><img alt="difficulty" loading="lazy" class="rounded-lg max-w-full h-auto shadow-lg" src="https://img.shields.io/badge/difficulty-beginner-brightgreen" style="max-height: 500px; width: auto;"></span></div>
+<blockquote class="border-l-4 border-cyan-500/30 bg-slate-900/50 p-4 text-slate-400 rounded-r-lg my-4 text-base italic">
+<p class="mb-4 text-slate-300 leading-7">Getting started with <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">Web3</code> on your own is no easy task. As someone who recently entered the Web3 space, I've put together the simplest and most intuitive <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">Web3</code> beginner's guide. By integrating quality resources from the open-source community, I aim to guide everyone from beginner to expert in Web3. Updated 1-3 lessons per week.</p>
+<p class="mb-4 text-slate-300 leading-7">Follow me on Twitter: <a href="https://twitter.com/bhbtc1337" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">@bhbtc1337 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></p>
+<p class="mb-4 text-slate-300 leading-7">Join the discussion group: <a href="https://forms.gle/QMBwL6LwZyQew1tX8" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Form Link <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></p>
+<p class="mb-4 text-slate-300 leading-7">Articles are open-sourced on GitHub: <a href="https://github.com/beihaili/Get-Started-with-Web3" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Get-Started-with-Web3 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></p>
+<p class="mb-4 text-slate-300 leading-7">Recommended exchange for buying BTC/ETH/USDT: <a href="https://www.binance.com/zh-CN" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Binance <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> <a href="https://accounts.marketwebb.me/register?ref=39797374" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Registration Link <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></p>
+</blockquote>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">Table of Contents</h2>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="#introduction" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Introduction <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="#what-is-bitcoin" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">What Is Bitcoin? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="#what-is-the-value-of-bitcoin" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">What Is the Value of Bitcoin? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="#how-does-the-bitcoin-system-work" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">How Does the Bitcoin System Work? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="#faq" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">FAQ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="#conclusion" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Conclusion <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+</ul>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">Introduction</h2>
+<p class="mb-4 text-slate-300 leading-7">When you first hear about Bitcoin, you might feel curious, confused, or even skeptical. That's completely normal! Every revolutionary innovation that changes the world faces these challenges in its early days. Just like the early days of the Internet, few people could foresee how it would reshape our world.</p>
+<p class="mb-4 text-slate-300 leading-7">Bitcoin is the most successful application of blockchain, bar none. In this introductory article, we will explore the basic concepts of Bitcoin, its sources of value, and how it changes our understanding of money and value.</p>
+<p class="mb-4 text-slate-300 leading-7">In this chapter, we'll learn what Bitcoin is, what value it holds, and how it works. Bitcoin is a vast topic, and I'll only provide a brief introduction here, aiming to give beginners a comprehensive foundational understanding. Throughout the article, I'll reference articles by others as extended reading and references.</p>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">What Is Bitcoin?</h2>
+<blockquote class="border-l-4 border-cyan-500/30 bg-slate-900/50 p-4 text-slate-400 rounded-r-lg my-4 text-base italic">
+<p class="mb-4 text-slate-300 leading-7">"Bitcoin is something entirely new. Like the Internet, Bitcoin has brand-new underlying technology, operating principles, and upper-layer applications. Nothing like it has ever existed in history. Explaining Bitcoin to ordinary people is as difficult as explaining the Internet to people in the 1980s." — Jiang Zhuoer</p>
+</blockquote>
+<p class="mb-4 text-slate-300 leading-7">The mysterious figure Satoshi Nakamoto published a paper titled "Bitcoin: A Peer-to-Peer Electronic Cash System" in 2008. In just 9 pages, it outlined the concept of Bitcoin.</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">From a design perspective, Bitcoin was designed as electronic cash with the characteristics of decentralization, verifiability, immutability, and unforgeability. Like real cash, Bitcoin prevents double-spending, is easy to verify for authenticity, and provides a degree of anonymity.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Bitcoin's most important property is decentralization. Unlike traditional sovereign currencies, Bitcoin has no centralized issuing authority. Bitcoin issuance and management are implemented through algorithms — specifically, through consensus mechanisms. It is this decentralized nature that makes Bitcoin unique, giving it certain store-of-value properties, earning it the nickname "digital gold." Bitcoin's total supply is capped at 21 million, and the annual mining output is determined by the algorithm, making it extremely difficult to tamper with.</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">For extended reading, I strongly recommend Jiang Zhuoer's article "What Is Bitcoin," which is arguably the best Bitcoin introduction article in the Chinese-speaking world, striving to build a basic Bitcoin framework for readers in a short time from multiple perspectives.</p>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">What Is the Value of Bitcoin?</h2>
+<blockquote class="border-l-4 border-cyan-500/30 bg-slate-900/50 p-4 text-slate-400 rounded-r-lg my-4 text-base italic">
+<p class="mb-4 text-slate-300 leading-7">"Bitcoin is the first time in human history that technology has been used to achieve the inviolability of private property." — Li Xiaolai</p>
+</blockquote>
+<p class="mb-4 text-slate-300 leading-7">Perspectives on Bitcoin's value generally fall into two categories:</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Bitcoin's value comes from its store-of-value properties, including decentralization, fixed total supply that cannot be inflated, and a degree of anonymity.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Bitcoin's value comes from its utility, including transaction payments, cross-border remittances, and micro-transactions.</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">The author tends to agree with the first viewpoint. Here are some supporting statements:</p>
+<blockquote class="border-l-4 border-cyan-500/30 bg-slate-900/50 p-4 text-slate-400 rounded-r-lg my-4 text-base italic">
+<p class="mb-4 text-slate-300 leading-7">"Bitcoin, for the first time, guarantees at the technical level that a currency cannot be over-issued."</p>
+</blockquote>
+<blockquote class="border-l-4 border-cyan-500/30 bg-slate-900/50 p-4 text-slate-400 rounded-r-lg my-4 text-base italic">
+<p class="mb-4 text-slate-300 leading-7">"Bitcoin's core application is store of value, and its future goal is to become people's first choice for savings." — ahr999</p>
+</blockquote>
+<blockquote class="border-l-4 border-cyan-500/30 bg-slate-900/50 p-4 text-slate-400 rounded-r-lg my-4 text-base italic">
+<p class="mb-4 text-slate-300 leading-7">"Bitcoin realizes Hayek's theory of currency competition."</p>
+</blockquote>
+<p class="mb-4 text-slate-300 leading-7">Here are some statements supporting the second viewpoint:</p>
+<blockquote class="border-l-4 border-cyan-500/30 bg-slate-900/50 p-4 text-slate-400 rounded-r-lg my-4 text-base italic">
+<p class="mb-4 text-slate-300 leading-7">"Bitcoin's value comes from its utility, namely transaction payments." — Jiang Zhuoer</p>
+</blockquote>
+<p class="mb-4 text-slate-300 leading-7">For extended reading, I strongly recommend ahr999's "Hoarding Bitcoin" series.
+ahr999's articles are rich in emotion, telling us about Bitcoin's value from a missionary's perspective.</p>
+<blockquote class="border-l-4 border-cyan-500/30 bg-slate-900/50 p-4 text-slate-400 rounded-r-lg my-4 text-base italic">
+<p class="mb-4 text-slate-300 leading-7">"What I write is either something I've always believed in or something I've personally experienced. It's the experience and thinking I want to share, and also all the emotion I've poured into Bitcoin." — ahr999</p>
+</blockquote>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">How Does the Bitcoin System Work?</h2>
+<p class="mb-4 text-slate-300 leading-7">The Bitcoin system is a publicly verifiable ledger. Bitcoin was designed to be a kind of digital cash, possessing all the advantages of paper money while avoiding the centralization and difficulty of online use inherent in fiat currencies. Below, we'll understand how the Bitcoin system works, why it was designed this way, and what its pros and cons are, by comparing three tiers: the paper money system, the bank account system, and the Bitcoin system.</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>How the Paper Money System Works</h3>
+<p class="mb-4 text-slate-300 leading-7">The government issues paper money, and its value is backed by the government, which can control the money supply by printing more.
+Alice wants to give Bob 100 dollars in cash. The process is as follows:</p>
+<ol class="ml-2 mb-4 space-y-1 counter-reset-list">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Alice checks her wallet and finds she has a 100-dollar bill</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Alice gives Bob the 100-dollar bill</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Bob receives the bill, checks its security features to verify its authenticity, and puts it in his wallet</div></li>
+</ol>
+<p class="mb-4 text-slate-300 leading-7">As we can see, the foundation of trust comes from government backing. During the transaction, Alice and Bob don't need to rely on or notify any third party — they only need to verify the bill's authenticity.
+The problems are:</p>
+<ol class="ml-2 mb-4 space-y-1 counter-reset-list">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">It depends on physical delivery of cash, making electronic and remote transactions difficult</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">It depends on government backing — the government can control the money supply by printing more</div></li>
+</ol>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>How the Bank Account System Works</h3>
+<p class="mb-4 text-slate-300 leading-7">The bank's personal account system is a centralized ledger system, where the bank is responsible for maintaining the ledger and guaranteeing account authenticity.
+Alice wants to transfer 100 dollars to Bob. The process is as follows:</p>
+<ol class="ml-2 mb-4 space-y-1 counter-reset-list">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Alice initiates a transfer request to the bank</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">The bank checks Alice's account balance and confirms she has 100 dollars</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">The bank transfers 100 dollars from Alice's account to Bob's account</div></li>
+</ol>
+<p class="mb-4 text-slate-300 leading-7">As we can see, the foundation of trust comes from the bank. During the transaction, Alice and Bob must rely on the bank.
+The problems are:</p>
+<ol class="ml-2 mb-4 space-y-1 counter-reset-list">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">It depends on the bank — you must assume the bank is an honest, non-malicious third party</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">The bank may stop services for various reasons, resulting in frozen accounts</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">The bank may go bankrupt for various reasons, resulting in lost funds</div></li>
+</ol>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>How the Bitcoin System Works</h3>
+<p class="mb-4 text-slate-300 leading-7">The Bitcoin system is a decentralized ledger system where the ledger is public and anyone can view all transaction records.
+Alice wants to transfer 100 bitcoins to Bob. The process is as follows:</p>
+<ol class="ml-2 mb-4 space-y-1 counter-reset-list">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Alice initiates a transfer request, signs the transaction with her private key (think of it as a password), and broadcasts it to the Bitcoin network.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Bitcoin network nodes propagate Alice's transaction, with each node independently verifying whether Alice's transaction signature is correct (for details, see public-key cryptography), and upon passing, recording the transaction in their own ledger.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Through the Proof of Work mechanism, a node is randomly selected as the block-producing node, which packages Alice's transaction into a block and adds it to the blockchain.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Other nodes verify the block's validity, and if verification passes, they add the block to their own blockchain.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">After 6 block confirmations, Bob can confirm he has received 100 bitcoins.</div></li>
+</ol>
+<p class="mb-4 text-slate-300 leading-7">As we can see, the foundation of trust comes from public-key cryptography and the assumption that most nodes operate honestly based on economic incentives.</p>
+<ol class="ml-2 mb-4 space-y-1 counter-reset-list">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Compared to the paper money system, the Bitcoin system enables electronic and remote transactions while retaining the advantage of not requiring a third party during the transaction.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Compared to the bank account system, the Bitcoin system doesn't require reliance on a bank, doesn't require assuming the bank is honest, and doesn't need to worry about service interruptions or bankruptcy. However, Bitcoin also has drawbacks, such as slow transaction speeds and high fees.</div></li>
+</ol>
+<p class="mb-4 text-slate-300 leading-7">For extended reading, I strongly recommend the book <em>Mastering Bitcoin</em>. Andreas Antonopoulos provides a detailed and comprehensive explanation of Bitcoin's operating principles from a technical developer's perspective.</p>
+<blockquote class="border-l-4 border-cyan-500/30 bg-slate-900/50 p-4 text-slate-400 rounded-r-lg my-4 text-base italic">
+<p class="mb-4 text-slate-300 leading-7">"This book is intended primarily for coders. If you can use a programming language, this book will teach you how cryptographic currencies work, how to use them, and how to develop software that works with them. The first few chapters are also suitable as an in-depth introduction for non-coders — those trying to understand the inner workings of Bitcoin and cryptocurrencies."</p>
+</blockquote>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">Bitcoin Historical Timeline</h2>
+<p class="mb-4 text-slate-300 leading-7">Bitcoin has experienced countless milestone events from its birth to today. Below is a detailed historical timeline to help you understand Bitcoin's development trajectory.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="my-6 overflow-x-auto rounded-lg border border-slate-700"><table class="w-full text-sm"><thead><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Date</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Event</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Significance</th></tr></thead><tbody><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">October 31, 2008</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Satoshi Nakamoto publishes the whitepaper "Bitcoin: A Peer-to-Peer Electronic Cash System"</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">The concept of Bitcoin is formally proposed for the first time</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">January 3, 2009</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Satoshi Nakamoto mines the Genesis Block (Block 0)</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">The Bitcoin network officially launches; the block contains a Times headline</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">January 12, 2009</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">First Bitcoin transaction: Satoshi sends 10 BTC to Hal Finney</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Bitcoin's first peer-to-peer transfer</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">May 22, 2010</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Laszlo Hanyecz buys two pizzas for 10,000 BTC</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Bitcoin's first real-world commercial transaction, later known as "Bitcoin Pizza Day"</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">July 2010</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Mt.Gox exchange founded</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">The first major Bitcoin exchange, ushering in the exchange era</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">February 2011</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Bitcoin price reaches $1 for the first time</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Bitcoin achieves parity with the US dollar for the first time</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">November 28, 2012</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">First halving</strong>: Block reward drops from 50 BTC to 25 BTC</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Bitcoin's deflationary mechanism takes effect for the first time</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">November 2013</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Bitcoin price surpasses $1,000 for the first time</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Bitcoin begins to enter the mainstream consciousness</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">February 2014</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Mt.Gox exchange hacked, declares bankruptcy</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Industry security wake-up call, driving improved exchange security standards</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">2015</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Ethereum mainnet launches</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Smart contract platform emerges, expanding the blockchain ecosystem</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">July 9, 2016</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">Second halving</strong>: Block reward drops from 25 BTC to 12.5 BTC</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Supply continues to tighten, price subsequently enters a bull market</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">August 1, 2017</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Bitcoin Cash (BCH) hard fork</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">A major event in the block size debate</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">December 2017</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Bitcoin price approaches $20,000; CME launches Bitcoin futures</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Wall Street formally enters the Bitcoin market</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">2018</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Crypto market undergoes a major correction</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">"Crypto winter" filters out the true builders</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">May 11, 2020</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">Third halving</strong>: Block reward drops from 12.5 BTC to 6.25 BTC</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Kicks off a new bull market cycle</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">October 2020</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">PayPal announces support for buying and selling Bitcoin</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">A traditional payment giant embraces Bitcoin</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">February 2021</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Tesla announces purchase of $1.5 billion in Bitcoin</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">A landmark event in public companies holding Bitcoin at scale</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">June 2021</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">El Salvador makes Bitcoin legal tender</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">The world's first country to adopt Bitcoin as legal currency</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">November 2021</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Bitcoin price reaches all-time high of approximately $69,000</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Bull market peak driven by institutional adoption</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">November 2021</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Taproot upgrade activated</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Improves privacy and smart contract capabilities</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">January 2023</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Ordinals protocol released</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Bitcoin NFT ecosystem begins to flourish</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">January 2024</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">US SEC approves spot Bitcoin ETF</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">A milestone fusion of traditional finance and Bitcoin</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">April 20, 2024</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">Fourth halving</strong>: Block reward drops from 6.25 BTC to 3.125 BTC</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">The most recent halving, further tightening supply</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">December 2024</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Bitcoin price surpasses $100,000</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">New high driven by continued institutional buying and ETF inflows</td></tr></tbody></table></div>
+<blockquote class="border-l-4 border-cyan-500/30 bg-slate-900/50 p-4 text-slate-400 rounded-r-lg my-4 text-base italic">
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">Tip</strong>: Every major event in Bitcoin's history has validated its design philosophy to some degree. Understanding history not only helps you grasp Bitcoin but also keeps you rational in the face of market volatility.</p>
+</blockquote>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">Supply Mechanism Explained</h2>
+<p class="mb-4 text-slate-300 leading-7">Bitcoin's total supply of 21 million is one of its most core economic features. Bitcoin gradually releases new coins through a "block reward halving" mechanism, halving approximately every 4 years (210,000 blocks).</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>Halving Schedule</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="my-6 overflow-x-auto rounded-lg border border-slate-700"><table class="w-full text-sm"><thead><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Halving</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Approx. Year</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Block Height</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Block Reward (BTC)</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Daily Output (BTC)</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Cumulative Supply (approx.)</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">% Mined</th></tr></thead><tbody><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Initial</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">2009</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">0</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">50</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">7,200</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">0</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">0%</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">1st</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">2012</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">210,000</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">25</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">3,600</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">10,500,000</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">50.0%</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">2nd</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">2016</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">420,000</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">12.5</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">1,800</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">15,750,000</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">75.0%</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">3rd</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">2020</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">630,000</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">6.25</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">900</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">18,375,000</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">87.5%</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">4th</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">2024</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">840,000</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">3.125</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">450</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">19,687,500</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">93.75%</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">5th</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">~2028</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">1,050,000</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">1.5625</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">225</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">20,343,750</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">96.875%</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">6th</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">~2032</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">1,260,000</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">0.78125</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">112.5</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">20,671,875</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">98.4375%</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">...</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">...</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">...</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">...</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">...</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">...</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">...</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Final</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">~2140</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">6,930,000</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">0</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">0</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">21,000,000</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">100%</td></tr></tbody></table></div>
+<blockquote class="border-l-4 border-cyan-500/30 bg-slate-900/50 p-4 text-slate-400 rounded-r-lg my-4 text-base italic">
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">Important Note</strong>: By around 2140, all bitcoins will have been mined. At that point, miners' income will depend entirely on transaction fees. This is also an important topic in discussions about Bitcoin's long-term security model.</p>
+</blockquote>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>The Significance of Supply Scarcity</h3>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Deflationary property</strong>: Unlike fiat currencies, Bitcoin's supply decreases over time, making it a deflationary asset</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Predictability</strong>: Anyone can precisely calculate Bitcoin's supply at any point in time</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Lost bitcoins</strong>: An estimated 3-4 million bitcoins are permanently inaccessible due to lost private keys, so actual circulating supply is far less than the total</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Stock-to-Flow ratio</strong>: After each halving, Bitcoin's stock-to-flow ratio increases dramatically, theoretically driving up scarcity value</div></li>
+</ul>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">Comparison with Traditional Finance</h2>
+<p class="mb-4 text-slate-300 leading-7">One of the best ways to understand Bitcoin is to compare it with familiar traditional financial instruments.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="my-6 overflow-x-auto rounded-lg border border-slate-700"><table class="w-full text-sm"><thead><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Dimension</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Bitcoin</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Traditional Bank Deposits</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Gold</th></tr></thead><tbody><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">Issuing body</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">None (algorithmic issuance)</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Central bank</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Natural output (mining)</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">Supply cap</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">21 million</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Unlimited (can be increased)</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Earth's reserves are limited but exact amount unknown</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">Inflation/Deflation</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Deflationary (halving mechanism)</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Inflationary (central bank monetary policy)</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Slow inflation (~1.5% mined annually)</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">Transaction speed</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">~10 min/block confirmation</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Instant to days (cross-border)</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Physical delivery takes time</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">Transaction fees</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Variable ($1-$50+)</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Low or free (domestic) / High (cross-border)</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">High transport and storage costs</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">Storage method</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Digital storage (private key)</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Bank account</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Physical safekeeping / vault</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">Portability</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Extremely high (mnemonic is all you need)</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Dependent on banking system</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Low (physically heavy)</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">Divisibility</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Smallest unit: 1 satoshi = 0.00000001 BTC</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Smallest unit: $0.01</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Difficult to divide precisely</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">Censorship resistance</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">High (permissionless)</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Low (government can freeze)</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Medium (physical is hard to seize but regulatable)</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">Privacy</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Pseudonymous (addresses are public but not directly linked to identity)</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Low (real-name system)</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">High (physical transactions are anonymous)</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">Uptime</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">24/7/365 year-round</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Business hours on weekdays</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Depends on market trading hours</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">Entry barrier</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">No barrier (just need Internet)</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Requires ID and bank approval</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Requires physical purchase channel</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">History</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Since 2009</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Hundreds of years</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Thousands of years</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">Volatility</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">High</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Very low</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Low to medium</td></tr></tbody></table></div>
+<blockquote class="border-l-4 border-cyan-500/30 bg-slate-900/50 p-4 text-slate-400 rounded-r-lg my-4 text-base italic">
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">Tip</strong>: There is no perfect asset class. Bitcoin's advantages lie in decentralization and digital scarcity, but its price volatility is also higher than traditional assets. Reasonable asset allocation should be based on individual risk tolerance.</p>
+</blockquote>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">Halving Cycle Explained</h2>
+<p class="mb-4 text-slate-300 leading-7">The Bitcoin halving cycle is not just a technical event — it's an economic cycle that affects the entire crypto market.</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>Economic Impact of Halvings</h3>
+<p class="mb-4 text-slate-300 leading-7">Each halving means miners receive 50% less in block rewards, directly impacting Bitcoin's supply side:</p>
+<ol class="ml-2 mb-4 space-y-1 counter-reset-list">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Supply shock</strong>: The daily amount of newly mined Bitcoin is halved; if demand remains constant or grows, the price should theoretically rise</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Miner cost pressure</strong>: Halved rewards mean sharply reduced miner income; inefficient miners may be forced to exit, and network hashrate may temporarily decline</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Market expectations</strong>: Halving events are highly predictable, and the market typically prices them in advance</div></li>
+</ol>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>Market Performance Around Past Halvings</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="my-6 overflow-x-auto rounded-lg border border-slate-700"><table class="w-full text-sm"><thead><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Halving Date</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Price at Halving (approx.)</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Highest Price Within 1 Year After (approx.)</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Increase</th></tr></thead><tbody><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">November 2012</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">$12</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">$1,100</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">~9,000%</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">July 2016</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">$650</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">$2,500</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">~285%</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">May 2020</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">$8,700</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">$64,000</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">~636%</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">April 2024</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">$64,000</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">$108,000+</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">~69%+</td></tr></tbody></table></div>
+<blockquote class="border-l-4 border-cyan-500/30 bg-slate-900/50 p-4 text-slate-400 rounded-r-lg my-4 text-base italic">
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">Important Note</strong>: Historical data does not represent future performance. The market environment is different for each halving; do not blindly rely on historical patterns for investment decisions.</p>
+</blockquote>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>Four Phases of the Halving Cycle</h3>
+<p class="mb-4 text-slate-300 leading-7">The Bitcoin market cycle can typically be divided into four phases:</p>
+<ol class="ml-2 mb-4 space-y-1 counter-reset-list">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Accumulation phase</strong>: 12-18 months before halving, price oscillates at the bottom, smart money starts positioning</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Uptrend phase</strong>: 6-18 months after halving, the supply tightening effect gradually manifests, price enters a major upswing</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Mania phase</strong>: Late bull market, market sentiment is extremely optimistic, price may rise parabolically</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Correction phase</strong>: After the bubble bursts, a deep pullback of 50-80% from the peak, entering a bear market</div></li>
+</ol>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">Bitcoin Ecosystem Participants</h2>
+<p class="mb-4 text-slate-300 leading-7">Bitcoin is not just a digital currency — it's an ecosystem maintained by multiple participants. Understanding each participant's role helps you comprehend the Bitcoin network more completely.</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>Miners</h3>
+<p class="mb-4 text-slate-300 leading-7">Miners are the core maintainers of the Bitcoin network. They contribute computing resources to:</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Verify transactions</strong>: Check the validity of each transaction (correct signatures, sufficient balance)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Package blocks</strong>: Bundle verified transactions into new blocks</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Compete for block production</strong>: Compete for the right to produce blocks through Proof of Work (PoW), earning block rewards and transaction fees</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Secure the network</strong>: The massive hashrate makes attacking the Bitcoin network prohibitively expensive</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">Currently, Bitcoin miners are concentrated in regions with cheap electricity, using specialized ASIC mining machines. Major mining pools include Foundry USA, AntPool, F2Pool, ViaBTC, and others.</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>Full Node Operators</h3>
+<p class="mb-4 text-slate-300 leading-7">Full nodes are computers running complete Bitcoin software and storing the entire blockchain:</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Independent verification</strong>: Full nodes independently verify every transaction and block, trusting no third party</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Store the ledger</strong>: Preserve the complete transaction history from the Genesis Block to the present (~600+ GB)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Propagate transactions</strong>: Receive and relay new transactions and blocks</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Enforce consensus</strong>: "Vote" on the network's direction by running Bitcoin protocol rules</div></li>
+</ul>
+<blockquote class="border-l-4 border-cyan-500/30 bg-slate-900/50 p-4 text-slate-400 rounded-r-lg my-4 text-base italic">
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">Tip</strong>: Running a full node is the best way to participate in Bitcoin's decentralized governance. Even if you're not a miner, running a full node means you're helping maintain the network's decentralization and security.</p>
+</blockquote>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>Developers</h3>
+<p class="mb-4 text-slate-300 leading-7">Bitcoin's core developer community is responsible for maintaining and improving the Bitcoin protocol:</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Bitcoin Core</strong>: Bitcoin's reference implementation, maintained by hundreds of open-source contributors</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Protocol upgrades</strong>: Major upgrades like SegWit and Taproot go through rigorous community discussion and testing</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">BIP process</strong>: Bitcoin Improvement Proposals (BIPs) are the standardized process for protocol changes</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Auditing and security</strong>: Developers continuously audit the code to ensure robust network operation</div></li>
+</ul>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>Exchanges</h3>
+<p class="mb-4 text-slate-300 leading-7">Exchanges are the bridge connecting Bitcoin to the traditional financial world:</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Fiat on-ramp</strong>: Allow users to buy and sell Bitcoin using fiat currency</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Price discovery</strong>: Exchange order books are the primary mechanism for Bitcoin price formation</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Liquidity</strong>: Provide sufficient liquidity to make large transactions possible</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Derivatives</strong>: Offer futures, options, and other financial derivatives</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">Major exchanges include Binance, Coinbase, OKX, Kraken, and others.</p>
+<blockquote class="border-l-4 border-cyan-500/30 bg-slate-900/50 p-4 text-slate-400 rounded-r-lg my-4 text-base italic">
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">Important Note</strong>: Exchanges are fundamentally centralized custodial institutions. Storing Bitcoin on an exchange long-term means giving up control of your private keys. Remember: <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">Not Your Keys, Not Your Coins</code>.</p>
+</blockquote>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>Regular Users</h3>
+<p class="mb-4 text-slate-300 leading-7">Regular users are the ultimate beneficiaries and users of the Bitcoin ecosystem:</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Holders (HODLers)</strong>: Hold Bitcoin long-term as a store of value</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Traders</strong>: Buy and sell during market volatility</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Payment users</strong>: Use Bitcoin for everyday payments (via the Lightning Network and similar solutions)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Developers/Entrepreneurs</strong>: Build new applications and services on Bitcoin</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">The Bitcoin network's value ultimately derives from its user count and usage frequency — the <strong class="text-white font-bold">network effect</strong>.</p>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">Bitcoin vs. Traditional Assets</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="my-6 overflow-x-auto rounded-lg border border-slate-700"><table class="w-full text-sm"><thead><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Dimension</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Bitcoin</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Gold</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Fiat Currency (USD)</th></tr></thead><tbody><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">Supply cap</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">21 million, hardcoded</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Earth's reserves are limited but minable</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Unlimited, central banks can print endlessly</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">Inflation mechanism</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Halves every 4 years, gradually deflationary</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Annual production ~1.5%-2%</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Varies by country's monetary policy</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">Divisibility</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">1 BTC = 100 million satoshis</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Physically difficult to divide</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Smallest unit is a cent</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">Portability</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Only need a private key to carry any amount</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Heavy, inconvenient for large amounts</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Electronic transfers are convenient; cash is not</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">Verification cost</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Anyone can run a node to verify</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Requires specialized equipment</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Depends on banking system</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">Cross-border transfer</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">10-60 minutes, no borders</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Physical transport is time-consuming</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">1-5 business days, subject to regulation</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">Censorship resistance</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Cannot be frozen by a single entity</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Can be confiscated by government</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Accounts can be frozen</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">Storage cost</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Nearly zero</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Safe/vault fees</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Bank accounts may have maintenance fees</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">History</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Since 2009 (~16 years)</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Thousands of years</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Hundreds of years</td></tr></tbody></table></div>
+<blockquote class="border-l-4 border-cyan-500/30 bg-slate-900/50 p-4 text-slate-400 rounded-r-lg my-4 text-base italic">
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">Tip</strong>: Bitcoin is often called "digital gold," but it far surpasses gold in divisibility, portability, and verifiability.</p>
+</blockquote>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">Bitcoin Halving Cycle In-Depth</h2>
+<p class="mb-4 text-slate-300 leading-7">The halving mechanism is the core of Bitcoin's economic model. Every 210,000 blocks produced (~4 years), the block reward halves:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="my-6 overflow-x-auto rounded-lg border border-slate-700"><table class="w-full text-sm"><thead><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Halving</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Time</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Block Height</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Block Reward</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">New BTC per Period</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Cumulative Supply</th></tr></thead><tbody><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Initial</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">2009.01</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">0</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">50 BTC</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">10,500,000</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">10,500,000</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">1st</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">2012.11</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">210,000</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">25 BTC</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">5,250,000</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">15,750,000</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">2nd</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">2016.07</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">420,000</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">12.5 BTC</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">2,625,000</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">18,375,000</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">3rd</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">2020.05</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">630,000</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">6.25 BTC</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">1,312,500</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">19,687,500</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">4th</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">2024.04</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">840,000</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">3.125 BTC</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">656,250</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">20,343,750</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">5th</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">~2028</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">1,050,000</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">1.5625 BTC</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">328,125</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">20,671,875</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">...</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">...</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">...</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">...</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">...</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">...</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Final</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">~2140</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">—</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">0 BTC</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">0</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">21,000,000</td></tr></tbody></table></div>
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">Economic Impact of Halvings</strong>:</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Supply shock</strong>: Halved miner output means 50% less new supply entering the market</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Historical price trend</strong>: After each of the first four halvings, Bitcoin reached an all-time high within 12-18 months</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Miner game theory</strong>: After halving, inefficient miners exit; network hashrate temporarily drops then gradually recovers</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Long-term deflation</strong>: Current annual inflation rate is already below 1%, far lower than most fiat currencies</div></li>
+</ul>
+<blockquote class="border-l-4 border-cyan-500/30 bg-slate-900/50 p-4 text-slate-400 rounded-r-lg my-4 text-base italic">
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">Note</strong>: History does not guarantee the future. Price increases after halvings are not guaranteed. Invest cautiously.</p>
+</blockquote>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">Bitcoin Ecosystem Participants</h2>
+<p class="mb-4 text-slate-300 leading-7">The Bitcoin ecosystem is collaboratively maintained by multiple roles:</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>Miners</h3>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Secure the network through computational power</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Package transactions and compete for block production</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Earn block rewards and transaction fees</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Major pools: Foundry USA, Antpool, F2Pool, ViaBTC</div></li>
+</ul>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>Full Node Operators</h3>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Independently verify all transactions and blocks</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Store the complete blockchain data (600+ GB)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Enforce consensus rules, rejecting invalid blocks</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Approximately 20,000+ full nodes globally</div></li>
+</ul>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>Developers</h3>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Maintain core clients like Bitcoin Core</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Drive protocol upgrades through BIPs (Bitcoin Improvement Proposals)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Develop wallets, explorers, and ecosystem tools</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Core contributors include hundreds of volunteer developers</div></li>
+</ul>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>Exchanges and Service Providers</h3>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Provide fiat-to-Bitcoin exchange channels</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Offer custody, lending, and financial services</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Serve as the primary entry point for regular users to access Bitcoin</div></li>
+</ul>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>Regular Users</h3>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Use Bitcoin for storing value and making payments</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Run light nodes or use SPV wallets</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Give the Bitcoin network value through holding and usage</div></li>
+</ul>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">FAQ</h2>
+<h4 class="text-lg md:text-xl font-bold text-cyan-200 mt-6 mb-3 pl-4 border-l-2 border-cyan-500/30">What is the main difference between Bitcoin and traditional currencies (like USD)?</h4>
+<p class="mb-4 text-slate-300 leading-7">The main differences between Bitcoin and traditional currencies are:</p>
+<ol class="ml-2 mb-4 space-y-1 counter-reset-list">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Issuance mechanism</strong>: Bitcoin is issued through algorithms and network operation, free from any central authority; traditional currencies are issued by central banks</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Supply cap</strong>: Bitcoin's total supply is fixed at 21 million and cannot be increased outside the protocol; traditional currencies can be printed at government discretion</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Transaction mechanism</strong>: Bitcoin transacts directly through a peer-to-peer network without intermediaries; traditional currencies typically require financial intermediaries like banks</div></li>
+</ol>
+<h4 class="text-lg md:text-xl font-bold text-cyan-200 mt-6 mb-3 pl-4 border-l-2 border-cyan-500/30">What is Proof of Work?</h4>
+<p class="mb-4 text-slate-300 leading-7">Proof of Work (PoW) is the consensus algorithm used by the Bitcoin network, which ensures system security through competitive computation.</p>
+<h4 class="text-lg md:text-xl font-bold text-cyan-200 mt-6 mb-3 pl-4 border-l-2 border-cyan-500/30">Do I need to mine to get Bitcoin?</h4>
+<p class="mb-4 text-slate-300 leading-7">No. The main ways to acquire Bitcoin are:</p>
+<ol class="ml-2 mb-4 space-y-1 counter-reset-list">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Exchange purchase</strong>: Buy Bitcoin with fiat currency on exchanges like Binance or OKX</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Peer-to-peer trading</strong>: Acquire Bitcoin directly from other holders through P2P transactions</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Accept as payment</strong>: Provide goods or services and accept Bitcoin as payment</div></li>
+</ol>
+<p class="mb-4 text-slate-300 leading-7">While mining is one way to obtain Bitcoin, due to increasing mining difficulty, it now requires significant professional equipment and low-cost electricity to be profitable.</p>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">Conclusion</h2>
+<p class="mb-4 text-slate-300 leading-7">Learning about Bitcoin is a necessary journey for every Web3 beginner. Bitcoin brings us not just a new type of currency, but a completely new financial paradigm — one where value can be securely exchanged and stored without trusting centralized institutions.</p>
+<p class="mb-4 text-slate-300 leading-7">Bitcoin's design philosophy is simple and elegant, yet it solves a fundamental challenge in the history of human finance. As Satoshi Nakamoto inscribed in the first block: "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks" — Bitcoin's creation was a rebellion against the flaws of centralized financial systems, a revolution granting ordinary people financial autonomy.</p>
+<div align="center"> <span class="inline-flex m-1 align-middle"><img alt="Image" loading="lazy" class="rounded-lg max-w-full h-auto shadow-lg" src="/Get-Started-with-Web3/en/GetStartedWithBitcoin/img/1.png" style="max-height: 500px; width: 600px;"></span> </div>
+<hr class="my-8 border-slate-800">
+<div align="center">
+<a href="https://github.com/beihaili/Get-Started-with-Web3" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Home <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> |
+<a href="https://twitter.com/bhbtc1337" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Follow the Author <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> |
+<a href="https://forms.gle/QMBwL6LwZyQew1tX8" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Join the Community <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a>
+</div></div></div><div class="mt-8 pt-8 border-t border-slate-700"><div class="space-y-4"><div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 text-center"><div class="flex items-center justify-center gap-2 mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-circuit w-6 h-6 text-purple-400" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M9 13a4.5 4.5 0 0 0 3-4"></path><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path d="M6 18a4 4 0 0 1-1.967-.516"></path><path d="M12 13h4"></path><path d="M12 18h6a2 2 0 0 1 2 2v1"></path><path d="M12 8h8"></path><path d="M16 8V5a2 2 0 0 1 2-2"></path><circle cx="16" cy="13" r=".5"></circle><circle cx="18" cy="3" r=".5"></circle><circle cx="20" cy="21" r=".5"></circle><circle cx="20" cy="8" r=".5"></circle></svg><h4 class="text-white font-bold">Challenge Quiz</h4></div><p class="text-slate-300 mb-6">Complete <strong>5 questions</strong>, you need to get <strong>all correct</strong> to unlock the next chapter</p><button class="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-bold py-3 px-8 rounded-lg transition-all transform hover:scale-105 shadow-lg shadow-purple-500/20">🚀 Start Challenge</button></div></div></div><div class="flex gap-4 mt-8 pt-8 border-t border-slate-700"><a class="px-4 sm:px-6 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-lg transition-colors text-sm sm:text-base" href="/Get-Started-with-Web3/en/learn/module-2/2-1">← <span class="hidden sm:inline">Previous Lesson</span><span class="sm:hidden">Previous</span></a><a class="px-4 sm:px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors ml-auto text-sm sm:text-base" href="/Get-Started-with-Web3/en/learn/module-2/2-3"><span class="hidden sm:inline">Next Lesson</span><span class="sm:hidden">Next</span> →</a></div><div class="mt-8 pt-8 border-t border-slate-700 flex flex-col items-center gap-3"><p class="text-slate-400 text-sm">If this lesson was helpful, please consider supporting the author ☕</p><a href="https://buymeacoffee.com/beihai" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-pink-500 to-orange-500
+          hover:from-pink-400 hover:to-orange-400 text-white font-semibold rounded-full
+          transition-all hover:scale-105 shadow-lg shadow-pink-500/20"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart w-4 h-4" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg>Support Author · Buy Me a Coffee</a></div></div></main><div class="fixed bottom-6 right-6 z-50"><button class="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white p-4 rounded-full shadow-2xl shadow-purple-500/20 transition-all transform hover:scale-105"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-circuit w-6 h-6" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M9 13a4.5 4.5 0 0 0 3-4"></path><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path d="M6 18a4 4 0 0 1-1.967-.516"></path><path d="M12 13h4"></path><path d="M12 18h6a2 2 0 0 1 2 2v1"></path><path d="M12 8h8"></path><path d="M16 8V5a2 2 0 0 1 2-2"></path><circle cx="16" cy="13" r=".5"></circle><circle cx="18" cy="3" r=".5"></circle><circle cx="20" cy="21" r=".5"></circle><circle cx="20" cy="8" r=".5"></circle></svg></button></div></div></div></div>
+    
+  
+</body></html>

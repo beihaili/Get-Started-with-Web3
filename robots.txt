@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://beihaili.github.io/Get-Started-with-Web3/sitemap.xml
