@@ -1,4 +1,5 @@
 > **README:** [English](README.md) | [中文](README.zh.md)
+> **CONTRIBUTING:** [English](CONTRIBUTING.en.md) | [中文](CONTRIBUTING.md)
 
 # 贡献指南
 
