@@ -57,11 +57,13 @@ For this quick-start guide, we'll only cover step 6 — how regular users intera
 
 Here we'll use [Uniswap](https://uniswap.org/) as an example to demonstrate how to use your first Web3 DApp.
 
-1. Open [Uniswap](https://app.uniswap.org/#/swap). In `MetaMask`, select the `Görli test network`. Click `Connect to a wallet`, select `MetaMask`, and then click `Connect`.
+1. Open [Uniswap](https://app.uniswap.org/#/swap). In `MetaMask`, select a test network (e.g., `Sepolia`). Click `Connect to a wallet`, select `MetaMask`, and then click `Connect`.
+
+   > ⚠️ **Note**: The screenshots below show the Görli test network, which has since been deprecated. Please use the **Sepolia** test network instead — the workflow is identical.
+
    <div align="center"> <img src="./img/1.png" width="400" /> </div>
 
 2. Click `Select a token`, choose `ETH`, then click `Select`. Click `Select a token` again, choose `USDC`, then click `Select`.
-   P.S. Currently, ETH on the `Görli test network` can be exchanged for real ETH via the [LayerZero cross-chain bridge](https://testnetbridge.com/), so testnet ETH has a relatively high price lol.
    <div align="center"> <img src="./img/2.png" width="400" /> </div>
 
 3. Enter the amount you want to swap — `0.0001` — then click `Swap`. Click `Confirm Swap`, then click `Swap`.
@@ -396,7 +398,7 @@ Uniswap is considered an important Web3 DApp because:
 
 #### ❓ Do the tokens I use on testnet DApps have real value?
 
-Testnet tokens typically have no real value since they were created solely for testing purposes. However, as mentioned in the article, there's a special case: ETH on the Görli testnet can currently be exchanged for real ETH via the LayerZero cross-chain bridge, giving these testnet ETH some actual value. But this is a rare exception — most testnet assets have no real value.
+Testnet tokens typically have no real value since they were created solely for testing purposes. Most testnet assets are entirely valueless and exist only for development and learning purposes.
 
 ## Summary
 

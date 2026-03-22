@@ -686,20 +686,20 @@ Step 8: Learn to withdraw to your own wallet
 
 ### Exchange Terminology Quick Reference
 
-| Term | English | Meaning |
+| Chinese | English | Meaning |
 |------|---------|---------|
-| Place Order | Place Order | Submit a buy/sell order |
-| Take Order | Take Order | Execute immediately at market price |
-| Make Order | Make Order | Place a limit order to provide liquidity |
-| Slippage | Slippage | Difference between expected and actual execution price |
-| Depth | Depth | Order volume at various price levels in the order book |
-| Volume | Volume | Total trading amount over a time period |
-| Long / Bull | Long / Bull | Betting on price increase |
-| Short / Bear | Short / Bear | Betting on price decrease |
-| Fiat | Fiat | Traditional currency (e.g., USD, EUR) |
-| Stablecoin | Stablecoin | Crypto pegged to fiat (e.g., USDT) |
-| Liquidity | Liquidity | Ease of buying and selling an asset |
-| Liquidation | Liquidation | Forced position closure due to insufficient margin |
+| 下单 | Place Order | Submit a buy/sell order |
+| 吃单 | Take Order | Execute immediately at market price |
+| 挂单 | Make Order | Place a limit order to provide liquidity |
+| 滑点 | Slippage | Difference between expected and actual execution price |
+| 深度 | Depth | Order volume at various price levels in the order book |
+| 成交量 | Volume | Total trading amount over a time period |
+| 做多 / 看涨 | Long / Bull | Betting on price increase |
+| 做空 / 看跌 | Short / Bear | Betting on price decrease |
+| 法币 | Fiat | Traditional currency (e.g., USD, EUR) |
+| 稳定币 | Stablecoin | Crypto pegged to fiat (e.g., USDT) |
+| 流动性 | Liquidity | Ease of buying and selling an asset |
+| 爆仓 | Liquidation | Forced position closure due to insufficient margin |
 
 ## 📝 Conclusion
 
