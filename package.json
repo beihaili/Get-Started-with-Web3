@@ -9,7 +9,7 @@
     "sync-content": "node scripts/sync-content.mjs",
     "dev": "vite",
     "build": "vite build",
-    "postbuild": "node scripts/generate-sitemap.mjs && node scripts/prerender.mjs",
+    "postbuild": "node scripts/generate-og-images.mjs && node scripts/generate-sitemap.mjs && node scripts/prerender.mjs",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
@@ -58,6 +58,7 @@
   "devDependencies": {
     "@commitlint/cli": "^18.6.0",
     "@commitlint/config-conventional": "^18.6.0",
+    "@resvg/resvg-js": "^2.6.2",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@vitejs/plugin-react": "^4.7.0",
@@ -74,6 +75,7 @@
     "playwright": "^1.50.0",
     "postcss": "^8.5.6",
     "prettier": "^3.2.4",
+    "satori": "^0.26.0",
     "tailwindcss": "^3.4.18",
     "vite": "^4.5.14",
     "vitest": "^4.0.18"
