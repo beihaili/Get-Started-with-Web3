@@ -20,7 +20,7 @@ export default function LanguageSwitcher() {
   return (
     <button
   	onClick={toggleLang}
-  	aria-label="Toggle language"
+  	aria-label={lang === 'zh' ? 'Switch to English' : 'Switch to Chinese'}
   	className="flex items-center gap-1 rounded-lg px-2 py-1 text-sm text-slate-400 transition-colors hover:bg-slate-800 hover:text-white"
   	title={lang === 'zh' ? 'Switch to English' : 'Switch to Chinese'}
 >
