@@ -55,7 +55,7 @@ jobs:
         publish_dir: ./dist
 
     - name: Comment PR with Preview Link 💬
-      if: github.event_name == 'pull_request'
+      if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
       uses: actions/github-script@v7
       with:
         script: |
@@ -69,6 +69,6 @@ jobs:
     - name: Output deployment URL 🌐
       if: github.ref == 'refs/heads/main'
       run: |
-        echo "🚀 部署完成！"
-        echo "📍 网站地址: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
-        echo "⏰ 部署时间: $(date '+%Y-%m-%d %H:%M:%S')"
+        echo "🚀 Đã deploy xong!"
+        echo "📍 Website: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+        echo "⏰ Deploy lúc: $(date '+%Y-%m-%d %H:%M:%S')"
