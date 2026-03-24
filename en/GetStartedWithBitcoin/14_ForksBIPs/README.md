@@ -5,7 +5,7 @@
 ![date](https://img.shields.io/badge/Date-2025--09-orange)
 ![difficulty](https://img.shields.io/badge/Difficulty-Intermediate-yellow)
 
-> 💡 Imagine a magical village with no chief, where villagers can modify village rules through "referendums." Sometimes the changes are small — old villagers can adapt without learning new rules. Sometimes the changes are big — everyone must agree before they take effect. This is Bitcoin's fork and upgrade mechanism.
+> 💡 Imagine a magical village with no chief, where villagers can modify village rules through "referendums." Sometimes the changes are minor, and old villagers can adapt without learning new rules. Sometimes the changes are big, so everyone must agree before they take effect. This is Bitcoin's fork and upgrade mechanism.
 
 ## Table of Contents
 
@@ -19,23 +19,23 @@
 
 ## Introduction: Why Does the Village Need Rule Changes?
 
-Have you ever wondered: Bitcoin has been running for 16 years, yet its features keep evolving — how is this done?
+Have you ever wondered how Bitcoin, which has been running for 16 years, continues to evolve?
 
 **Traditional system upgrades:**
 - **WeChat upgrade**: Tencent releases a new version; users download the update.
-- **Banking system**: HQ decides new policy; branches execute.
-- **Government policy**: Government enacts; citizens comply.
+- **Banking system**: The head office decides new policy; branches implements them.
+- **Government policy**: Government formulates policies and the citizens comply.
 
 **Bitcoin's challenge:**
 - No CEO to decide what to upgrade.
-- No HQ to push updates.
+- No head office to push updates.
 - No government to enforce compliance.
 
 So how does Bitcoin upgrade? The answer: **through forks and the BIP proposal process**.
 
 ### 💡 Think About It
 Before learning about fork mechanisms, consider:
-- If you lived in a village with no chief, how would you modify the rules?
+- If you lived in a village with no chief, how would you amend the rules?
 - How do you keep the village united while implementing necessary reforms?
 - How do you ensure all villagers are satisfied with the upgrade?
 
@@ -388,7 +388,7 @@ class BIPEvaluationFramework:
 
 **A reflection of design philosophy:**
 - **Conservatism**: Prioritize stability over rapid innovation.
-- **Decentralization**: No central authority to force upgrades.
+- **Decentralization**: There is no central authority to force upgrades.
 - **Economic incentives**: Various parties' interests must stay balanced.
 - **Social consensus**: Requires broad community support.
 
@@ -436,7 +436,7 @@ Bitcoin's fork mechanism and BIP process embody the wisdom of decentralized gove
 
 ### 🏛️ Governance Philosophy
 
-- **Incremental improvement**: Continuous evolution through small, fast steps.
+- **Incremental improvement**: Continuous evolution through small and rapid steps.
 - **Conservatism**: Prioritize stability and backward compatibility.
 - **Checks and balances**: Power balance among developers, miners, and users.
 - **Transparent process**: Open and transparent decision-making.
