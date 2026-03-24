@@ -5,7 +5,7 @@
 ![date](https://img.shields.io/badge/Date-2025--06-orange)
 ![difficulty](https://img.shields.io/badge/Difficulty-Intermediate-yellow)
 
-> 💡 Self-learning Web3 is no easy task. As a newcomer to Web3, I'm putting together the simplest and most intuitive beginner tutorials. Aggregating quality open-source community resources to guide everyone from beginner to expert in Web3. Updated 1-3 lessons per week.
+> 💡 Self-learning Web3 is no easy task. As a newcomer to Web3, I'm putting together the simplest and most intuitive tutorials for beginners.I've integrated high-quality resources from the open-source community to guide you from beginner to expert in Web3. I'll update 1-3 lessons per week.
 >
 > Follow me on Twitter: [@bhbtc1337](https://twitter.com/bhbtc1337)
 >
@@ -30,16 +30,16 @@ We may never know who Satoshi Nakamoto is, but we can clearly see the Bitcoin no
 
 Small blocks guarantee that ordinary users can easily run a Bitcoin client on their home computers. This strategy has proven effective — as of now, after 15 years of operation, the Bitcoin blockchain is only about 663 GB, well within the capacity of a home computer. We can imagine what Satoshi was thinking when establishing the small block size: a brand new asset that relies not on governments or any centralized authority, but on nodes spanning the globe — even the universe — connecting to each other, self-organizing and cooperating, ultimately weaving a brilliant network!
 
-## What Is a Bitcoin Full Node
+## What is a Bitcoin Full Node
 
-A Bitcoin full node independently verifies every transaction in every block on the valid blockchain with the most proof of work. By autonomously downloading, storing, and validating the entire transaction history since Bitcoin's inception, it independently judges the validity of all transactions and blocks, ensuring users can safely use Bitcoin without trusting any third party.
+A Bitcoin full node is a node that independently verifies every transaction in every block on the valid blockchain with the most proof-of-work. It independently determines the validity of all transactions and blocks by autonomously downloading, storing, and verifying the entire transaction history since Bitcoin's inception, thus ensuring that users can use Bitcoin securely without trusting any third party.
 
 ## Pros and Cons of Running a Full Node
 
 ### Pros
 
 - **Decentralization**: Full nodes independently verify transactions, ensuring network decentralization and reliability.
-- **Privacy**: Full nodes don't rely on third-party servers, enhancing privacy.
+- **Privacy**: Full nodes don't rely on third-party servers, thus enhancing privacy.
 - **Network Security**: Full nodes help maintain Bitcoin network security by verifying transactions and blocks.
 - **Data Integrity**: Full nodes can verify the integrity of the blockchain, ensuring data hasn't been tampered with.
 - **Data Trustworthiness**: Full nodes can verify the blockchain's completeness, ensuring data authenticity.
@@ -55,13 +55,13 @@ Let's get straight to running a Bitcoin full node.
 
 ### 1. Prerequisites
 
-Ensure the host or server you plan to run the full node on meets the following requirements:
-- At least 1 TB of hard drive space (as of 2025, the Bitcoin blockchain is about 660 GB, expected to reach 1 TB by 2026).
+Ensure that the host or server you plan to run the full node on meets the following requirements:
+- At least 1 TB of hard drive space (as of 2025, the Bitcoin blockchain is about 660 GB, expected to reach 1 TB in 2026).
 - Stable internet access.
 
 ### 2. Download Bitcoin Core Client
 
-- Visit the [Bitcoin Core website](https://bitcoin.org/en/download) and download the version for your operating system.
+- Visit the [Bitcoin Core website](https://bitcoin.org/en/download) and download the version suitable for your operating system.
 
 - Verify the downloaded file's integrity by computing the file hash and comparing it with the hash provided on the website:
     - Download the `SHA256SUMS.asc` file and `SHA256SUMS` from the website.
@@ -72,11 +72,11 @@ Ensure the host or server you plan to run the full node on meets the following r
     - Verify using the commands:
     `gpg --verify SHA256SUMS.asc SHA256SUMS`
     `shasum -a 256 [your downloaded filename]`
-    - Compare the two hash values; if they match, the file is intact.
+    - Compare the two hash values; if they match, then the file is intact.
 
 - After downloading, extract the file, navigate to the folder, and run `bitcoind`.
 
-### 3. Start Bitcoin Core Client
+### 3. Launch Bitcoin Core Client
 
 - Configure Bitcoin Core:
     - The Bitcoin Core configuration file is typically located at:
@@ -112,7 +112,7 @@ Ensure the host or server you plan to run the full node on meets the following r
 
 - Check if Bitcoin Core is running:
 `bitcoin-cli getblockchaininfo`
-    - If you see output like the following, Bitcoin Core is running:
+    - If you see output like the following, it means the Bitcoin Core client is running:
 ```json
 {
   "chain": "main",
@@ -177,7 +177,7 @@ Ensure the host or server you plan to run the full node on meets the following r
 - View unconfirmed transaction count
     `bitcoin-cli getmempoolinfo`
 
-## Practical Experience and Pitfall Guide for Running a Bitcoin Node
+## Practical Experience and Pitfall avoidance guide for Running a Bitcoin Node
 
 When running a Bitcoin node in practice, you may encounter various technical challenges. Below are key considerations and solutions based on real-world experience to help you avoid common pitfalls and keep your node running stably.
 
@@ -185,15 +185,15 @@ When running a Bitcoin node in practice, you may encounter various technical cha
 
 #### File System Selection
 
-**Problem**: Different file systems have a huge impact on Bitcoin database stability. Non-journaling file systems like ExFAT are prone to data corruption during power outages or improper shutdowns.
+**Problem**: Different file systems have a huge impact on Bitcoin database stability. Non-journaling file systems like ExFAT are prone to data corruption during power outages or abnormal shutdowns.
 
 **Solution**:
-- **macOS users**: Prefer APFS file system.
-- **Windows users**: Prefer NTFS file system.
-- **Linux users**: Prefer ext4 or XFS file system.
-- **Avoid**: ExFAT, FAT32, and other non-journaling file systems.
+- **macOS users**: Use the APFS file system.
+- **Windows users**: Use the NTFS file system.
+- **Linux users**: Use the ext4 or XFS file system.
+- **Avoid Using**: ExFAT, FAT32, and other non-journaling file systems.
 
-**Real-world experience**:
+**Practical experience**:
 ```
 When running a Bitcoin node on an external SSD formatted as ExFAT, frequent database corruption occurred.
 After reformatting the same SSD to APFS, node stability improved significantly with no further corruption.
@@ -213,7 +213,7 @@ After reformatting the same SSD to APFS, node stability improved significantly w
 
 #### Disk Space Management
 
-**Problem**: The complete Bitcoin blockchain (2025) has reached 660 GB+ and continues to grow.
+**Problem**: The complete Bitcoin blockchain (as of 2025) has reached 660 GB+ and continues to grow.
 
 **Solution**:
 1. **Pruned Mode**:
@@ -343,23 +343,23 @@ main
 
 ### Lightweight Alternatives
 
-If the resource requirements for running a full node are too high, consider these lightweight alternatives:
+If the resource requirements for running a full node are too high, consider the following lightweight alternatives:
 
 #### SPV Wallets
 
 **Features**:
-- Downloads only block headers (~50 MB) instead of full blocks.
+- Downloads only the block headers (~50 MB) instead of full blocks.
 - Can be set up in minutes.
 - Extremely low resource requirements.
 
 **Recommended Options**:
-- **Electrum**: Full-featured lightweight wallet (https://electrum.org/)
-- **BlueWallet**: Mobile-friendly SPV wallet (https://bluewallet.io/)
-- **Wasabi Wallet**: Privacy-focused SPV wallet (https://wasabiwallet.io/)
+- **Electrum**: A fully featured lightweight wallet (https://electrum.org/)
+- **BlueWallet**: A Mobile-friendly SPV wallet (https://bluewallet.io/)
+- **Wasabi Wallet**: A Privacy-focused SPV wallet (https://wasabiwallet.io/)
 
 **Security Comparison**:
-- SPV wallets verify transactions via Merkle proofs rather than validating all transactions.
-- Slightly less secure than full nodes but generally sufficient for personal users.
+- SPV wallets verify transactions via Merkle proofs rather than verifying all transactions.
+- Slightly less secure than full nodes, but it is usually sufficient for individual users.
 - Requires trusting remote servers for correct information.
 
 ### Common Troubleshooting
@@ -370,7 +370,7 @@ If the resource requirements for running a full node are too high, consider thes
 1. Check network connectivity (especially firewall settings).
 2. Ensure sufficient disk space.
 3. Check `debug.log` for error messages.
-4. Try adding known nodes:
+4. Try adding a known node:
    ```
    addnode=seed.bitcoin.sipa.be add
    ```
@@ -378,7 +378,7 @@ If the resource requirements for running a full node are too high, consider thes
 #### Database Corruption
 
 **Symptoms**:
-- "database corruption" or "checksum mismatch" errors in the log.
+- Erros such as "database corruption" or "checksum mismatch" appear in the logs.
 - Node crashes or fails to start.
 
 **Solutions**:
@@ -406,7 +406,7 @@ If resources are limited, consider using pruned mode, which can reduce storage r
 Slow sync is a common issue. Here are some solutions:
 
 1. **Manually add nodes**: Add reliable node addresses in the configuration file.
-2. **Check your firewall**: Ensure port 8333 is open.
+2. **Check the firewall**: Ensure port 8333 is open.
 3. **Upgrade hardware**: If possible, use an SSD instead of an HDD.
 4. **Use fast sync**: Download a blockchain snapshot from a trusted source for quick startup.
 
@@ -414,7 +414,7 @@ Slow sync is a common issue. Here are some solutions:
 
 This is a common point of confusion:
 
-1. **Bitcoin node**: Validates and relays transactions, maintains a complete copy of the blockchain — does not earn mining rewards.
+1. **Bitcoin node**: Validates and relays transactions, maintains a complete copy of the blockchain, and do not earn mining rewards.
 2. **Mining**: Attempts to solve mathematical puzzles to create new blocks and earn Bitcoin rewards.
 
 Running a node won't directly earn you Bitcoin rewards, but it's crucial for maintaining Bitcoin's decentralization and security.
@@ -427,17 +427,17 @@ No. While running continuously is most beneficial for the Bitcoin network, you c
 
 - [Bitcoin Core Documentation](https://bitcoin.org/en/developer-reference#bitcoin-core)
 - [Bitcoin Core Source Code](https://github.com/bitcoin/bitcoin)
-- [Bitcoin Whitepaper](https://bitcoin.org/bitcoin.pdf)
+- [Bitcoin White Paper](https://bitcoin.org/bitcoin.pdf)
 - [Bitcoin Developer Guide](https://bitcoin.org/en/developer-guide)
 - [Running a Bitcoin Full Node](https://yishi.io/how-to-run-bitcoin-full-node/)
 
 ## Conclusion
 
-Running a Bitcoin node is not just a technical exercise — it's a way of participating in a financial revolution. When you set up your own node, you're not just using Bitcoin; you're contributing to the security and resilience of its decentralized network.
+Running a Bitcoin node is not just a technical exercise, but it's also a way of participating in a financial revolution. When you set up your own node, you're not just using Bitcoin; you're contributing to the security and resilience of its decentralized network.
 
-Every running node is a guardian of the Bitcoin network — your participation makes this vast financial system more enduring. Whether you use a full node or pruned mode, you're contributing to a more open, fair, and free financial future.
+Every running node is a guardian of the Bitcoin network and your participation makes this vast financial system more enduring. Whether you use a full node or pruned mode, you're contributing to a more open, fair, and free financial future.
 
-Fifteen years after that front-page headline in The Times, we have reason to believe in Satoshi's words: "I'm very confident that blockchain technology will become a new economic model, and young people will find all sorts of ways to create value using blockchain technology."
+Fifteen years after that front page headline in The Times, we have reason to believe in Satoshi's words: "I'm very confident that blockchain technology will become a new economic model, and young people will find all sorts of ways to create value using blockchain technology."
 
 ---
 
