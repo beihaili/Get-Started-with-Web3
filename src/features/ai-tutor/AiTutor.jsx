@@ -52,6 +52,7 @@ const AiTutor = ({ lessonContext = '' }) => {
       <div className="fixed bottom-6 right-6 z-50">
         <button
           onClick={() => setIsOpen(true)}
+          aria-label={t('ai.title')}
           className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white p-4 rounded-full shadow-2xl shadow-purple-500/20 transition-all transform hover:scale-105"
         >
           <BrainCircuit className="w-6 h-6" />
@@ -67,7 +68,7 @@ const AiTutor = ({ lessonContext = '' }) => {
           <BrainCircuit className="w-5 h-5 text-purple-400" />
           <h3 className="font-bold text-white">{t('ai.title')}</h3>
         </div>
-        <button onClick={() => setIsOpen(false)} className="text-slate-400 hover:text-white">
+        <button onClick={() => setIsOpen(false)} aria-label={t('ai.close')} className="text-slate-400 hover:text-white">
           <X className="w-4 h-4" />
         </button>
       </div>
@@ -113,6 +114,7 @@ const AiTutor = ({ lessonContext = '' }) => {
           <button
             onClick={sendMessage}
             disabled={!inputValue.trim() || isLoading}
+            aria-label={t('ai.sendMessage')}
             className="bg-cyan-600 hover:bg-cyan-500 disabled:bg-slate-600 text-white p-2 rounded transition-colors"
           >
             <Send className="w-4 h-4" />
