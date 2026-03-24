@@ -9,17 +9,17 @@
 
 ## Table of Contents
 
-- [Introduction: Why Can an Unguarded Vault Be So Secure?](#introduction-why-can-an-unguarded-vault-be-so-secure)
+- [Introduction: How can an Unguarded Vault Be So Secure?](#introduction-how-can-an-unguarded-vault-be-so-secure)
 - [Security Philosophy: The Village's Defense Wisdom](#security-philosophy-the-villages-defense-wisdom)
 - [Common Attacks: The Thieves' Playbook](#common-attacks-the-thieves-playbook)
 - [Defense Mechanisms: The Village's Security System](#defense-mechanisms-the-villages-security-system)
 - [Wallet Security: Protecting Your Personal Safe](#wallet-security-protecting-your-personal-safe)
 - [Node Security: Being a Responsible Villager](#node-security-being-a-responsible-villager)
 - [Real Cases: Learning from Hard Lessons](#real-cases-learning-from-hard-lessons)
-- [Future Challenges: New Era Threats](#future-challenges-new-era-threats)
+- [Future Challenges: Threats to the New Era](#future-challenges-threats-to-new-era)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
-## Introduction: Why Can an Unguarded Vault Be So Secure?
+## Introduction: How Can an Unguarded Vault Be So Secure?
 
 Imagine this scenario:
 - There's a village vault storing hundreds of billions of dollars worth of wealth
@@ -27,13 +27,13 @@ Imagine this scenario:
 - Thieves from around the world know the vault's location
 - But for 16 years, not a single thief has successfully stolen even a penny
 
-This sounds like a fantasy? But this is the true story of the Bitcoin network.
+This sounds like a fantasy, but this is the true story of the Bitcoin network.
 
 ### 💡 Think About It
 Before learning about Bitcoin security, consider:
-- If you manage a village vault but have no guards or police, how would you protect it?
-- Why is sometimes "having no center" safer than "having a strong center"?
-- What kind of defense system would let thieves know the vault's location but be unable to succeed?
+- If you were managing a village vault but have no guards or police, how would you protect it?
+- Why is sometimes "no central authority" safer than "having a strong central authority"?
+- What kind of security system can allow thieves to know the location of the vault but prevent them from breaking in?
 
 ## Security Philosophy: The Village's Defense Wisdom
 
@@ -46,7 +46,7 @@ Your Money → Bank Vault → Guards Watching → Trust Guards Won't Be Greedy
           Single Point   Can Be Bribed
           of Failure
 ```
-Like hiring the strongest guards to watch the vault, but what if the guards are bribed?
+It's like hiring the strongest guards to watch the vault, but what if the guards are bribed?
 
 **Bitcoin (Village Collective Defense Model):**
 ```
@@ -54,29 +54,29 @@ Your Money → Mathematical Lock → 13,000 Village Supervisors → Math Cannot 
               ↑                  ↑
           Cannot Crack      Cannot Bribe Everyone
 ```
-Like making everyone in the village voluntary supervisors, and using mathematics to ensure rules.
+It's like making everyone in the village voluntary supervisors, and using mathematics to ensure rules.
 
 ### Four Principles of Village Defense
 
-**🔍 Don't Trust, Verify**
-- Traditional: Old Wang says the vault is safe, everyone believes it
-- Bitcoin: Everyone can check every record of the vault
+**🔍 Don't Trust, Verify first**
+- Traditional: When old Wang says the vault is safe, everyone believes it.
+- Bitcoin: Everyone can check every record of the vault.
 
-**🏘️ No Village Chief, Everyone Equal**
-- Traditional: Village chief decides who can access the vault
-- Bitcoin: Mathematics decides, no one can change the rules
+**🏘️ No Village Chief, everyone is equal**
+- Traditional: Village chief decides who can access the vault.
+- Bitcoin: Mathematics decides, no one can change the rules.
 
-**📖 Open Books, Transparent Sunshine**
-- Traditional: Only the bank knows the accounts
-- Bitcoin: Everyone can see the complete ledger
+**📖 Open Books, Transparent accounting**
+- Traditional: Only the bank knows the accounts.
+- Bitcoin: Everyone can see the complete ledger.
 
-**💰 Honest Rewards, Cheating Must Lose**
-- Traditional: Relies on moral constraints
-- Bitcoin: The cost of cheating far exceeds the benefit of being honest
+**💰 Honesty is rewarded, cheating will result in loss**
+- Traditional: Villagers rely on moral constraints.
+- Bitcoin: The cost of cheating far exceeds the benefit of being honest.
 
 ## Common Attacks: The Thieves' Playbook
 
-Even with Bitcoin's tight defenses, clever thieves still come up with various "crooked schemes." Let's look at these tactics and how the village responds.
+Even with Bitcoin's tight defenses, clever thieves still come up with various crooked schemes. Let's look at these tactics and how the village responds.
 
 ### 1. 51% Attack: Wanting to Be a "Fake Village Chief"
 
@@ -85,9 +85,9 @@ Even with Bitcoin's tight defenses, clever thieves still come up with various "c
 **Real Analogy:** Like trying to impersonate 6,501 villagers in a village of 13,000 people to control village decisions.
 
 **Why is this almost impossible?**
-1. **Too Expensive**: Need to spend tens of billions of dollars on equipment
-2. **Nowhere to Hide**: Hash power concentration would be immediately detected
-3. **Not Worth It**: Successful attack would cause Bitcoin value to crash, making the attacker's investment worthless
+1. **Too Expensive**: Need to spend billions of dollars on equipment.
+2. **Nowhere to Hide**: Concentrated computing power will be detected immediately.
+3. **Not Worth It**: Successful attack would cause Bitcoin value to crash, making the attacker's investment worthless.
 
 ```python
 def calculate_51_attack_cost():
@@ -122,16 +122,16 @@ calculate_51_attack_cost()
 ```
 
 **Village Defense Mechanisms:**
-- 🌍 **Global Distribution**: Miners are scattered worldwide, impossible to centrally control
-- 💸 **Economic Rationality**: Attack cost far exceeds possible benefits
-- 👀 **Real-time Monitoring**: Abnormal hash power concentration is immediately detected
-- 🔄 **Self-Healing**: Even if temporarily successful, the network automatically recovers
+- 🌍 **Global Distribution**: Miners are scattered worldwide, hence cannot be centrally controlled.
+- 💸 **Economic Rationality**: Attack cost far exceeds possible benefits.
+- 👀 **Real-time Monitoring**: Abnormal hash power concentration is immediately detected.
+- 🔄 **Self-healing**: Even if temporarily successful, the network will automatically recover.
 
-### 2. Double Spending Attack: Wanting to "Spend One Coin for Two Things"
+### 2. Double Spending Attack: The desire to "buy two things for the price of one".
 
-**Attack Idea:** Can I make the same banknote buy both A and B?
+**Attack Idea:** Can I use the same banknote to buy both A and B?
 
-**Real Analogy:** Like using the same $100 bill to buy things at a convenience store and at the neighboring pharmacy, then finding a way to cancel one of the transactions.
+**Real Analogy:** It's like using the same $100 bill to buy things at a convenience store and at the neighboring pharmacy, then finding a way to cancel one of the transactions.
 
 **Attack Script:**
 ```
@@ -180,10 +180,10 @@ double_spend_protection()
 ```
 
 **Practical Protection Strategies:**
-- ☕ **Buying Coffee**: 0 confirmations OK ($5 loss acceptable)
-- 🛒 **Online Shopping**: Wait 1-3 confirmations (minutes to half hour)
-- 🏠 **Buying House**: Wait 6+ confirmations (about 1 hour, foolproof)
-- 🏢 **Large Transactions**: Wait 10+ confirmations (2 hours, absolutely safe)
+- ☕ **Buying Coffee**: 0 confirmations OK (a $5 loss acceptable).
+- 🛒 **Online Shopping**: Wait for 1-3 confirmations (a few minutes to half hour).
+- 🏠 **Buying a house**: Wait 6+ days for confirmations (about 1 hour, to be safe).
+- 🏢 **Large Transactions**: Wait 10+ confirmations (2 hours, absolutely safe).
 
 ### 3. Eclipse Attack: "Isolating Villagers"
 
@@ -215,9 +215,9 @@ Target Node ↔ Malicious Node 1 ↔ Fake Blockchain
 **Attack Idea:** If I create many fake identities, can I influence the village?
 
 **Attack Methods:**
-- Control many IP addresses
-- Run many malicious nodes
-- Try to influence node connection choices
+- Control many IP addresses.
+- Run many malicious nodes.
+- Try to influence the node's connection choices.
 
 **Defense Measures:**
 - 🔨 **Proof of Work**: Creating blocks requires actual computational cost
