@@ -244,7 +244,7 @@ After completing this lesson, you will be able to:
 
 Here, I must strongly recommend an authoritative resource in the Web3 security space:
 
-**[Blockchain Dark Forest Self-Guard Handbook](https://github.com/slowmist/Blockchain-dark-forest-selfguard-handbook/blob/main/README_CN.md)**
+**[Blockchain Dark Forest Self-Guard Handbook](https://github.com/slowmist/Blockchain-dark-forest-selfguard-handbook)**
 
 This is a comprehensive security guide produced by **SlowMist**, a well-known blockchain security firm, and is hailed as the "Web3 Security Bible."
 
@@ -366,7 +366,7 @@ talisman in the Web3 world!
 
 ## 🎯 Security Checklists
 
-### 📋 Daily Security Check (Weekly)
+### 📋 Routine Security Check (Weekly)
 
 - [ ] Check wallet balances for anomalies
 - [ ] Look for unknown transaction records
@@ -442,7 +442,7 @@ talisman in the Web3 world!
 ### 📚 In-Depth Learning Resources
 
 **Must-read handbooks**:
-- [Blockchain Dark Forest Self-Guard Handbook](https://github.com/slowmist/Blockchain-dark-forest-selfguard-handbook/blob/main/README_CN.md) - By SlowMist
+- [Blockchain Dark Forest Self-Guard Handbook](https://github.com/slowmist/Blockchain-dark-forest-selfguard-handbook) - By SlowMist
 - [DeFi Security Guide](https://github.com/OffcierCia/DeFi-Developer-Road-Map) - Developer roadmap
 
 **Security communities**:
