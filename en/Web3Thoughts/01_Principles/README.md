@@ -1,6 +1,6 @@
 # Web3 Principles: A Survival Guide for the Blockchain World
 
-> **Navigating the Web3 ocean requires a reliable set of principles as your compass. These are the core principles I've distilled from personal experience, and I hope they help you navigate this emerging world safely and successfully.**
+> **Navigating the Web3 ocean requires a reliable set of principles as your compass. These are the core principles I have distilled from personal experience, and I hope they help you navigate this emerging world safely and successfully.**
 
 ![](https://img.shields.io/badge/Author-Beihai-blue)
 ![](https://img.shields.io/badge/Difficulty-Beginner%20Recommended-yellow)
@@ -9,9 +9,9 @@
 
 ## Preface: Why Principles Matter
 
-In the Web3 world, following some fundamental principles is crucial. Just as Ray Dalio wrote his *Principles* and CZ wrote his, I'd like to share my guiding principles for the Web3 space.
+In the Web3 world, following some fundamental principles is crucial. Just as Ray Dalio wrote his *Principles* and CZ wrote his, I would like to share my guiding principles for the Web3 space.
 
-These principles are not axioms but rather my personal understanding and reflections. There is no absolute right or wrong -- they are simply shared experience. I hope they provide some practical guidance for Web3 newcomers to avoid common pitfalls in this world full of opportunity and risk.
+These principles are not absolute rules but rather my personal understanding and reflections. There is no absolute right or wrong, they are simply shared experiences. I hope they provide some practical guidance for Web3 newcomers to avoid common pitfalls in this world full of opportunity and risk.
 
 ## Investment Principles: Stability and Long-Term Thinking
 
@@ -22,7 +22,7 @@ These principles are not axioms but rather my personal understanding and reflect
 | **BTC-Denominated Valuation** | Use Bitcoin as your base investment currency | When evaluating other assets, consider their value relative to BTC |
 | **Keep Your BTC Stack Intact** | Ensure your portfolio's Bitcoin value remains stable or grows | Regularly backtest your portfolio's BTC value, not just its fiat price |
 
-> "In the crypto world, fiat numbers can deceive you, but Bitcoin-denominated accounting never lies."
+> 'In the crypto world, fiat numbers can deceive you, but Bitcoin-denominated accounting never lies.'
 
 ### 2. Asset Allocation: Stability First
 
@@ -31,17 +31,15 @@ These principles are not axioms but rather my personal understanding and reflect
 | **80%+ Bitcoin** | Allocate the majority of assets to BTC | Ensures long-term value storage, avoids missing core upside |
 | **Under 20% Other Assets** | Small positions in quality projects | Captures potential high returns with controlled risk |
 
-```
 Portfolio = 80%+ Bitcoin (long-term core) + <20% Select Projects (limited risk)
-```
 
 ### 3. Stay Away from Leverage and Excessive Risk
 
 - **No on-exchange leveraged trading**
 - **Avoid chained staking-borrowing operations**
-- **Don't speculate with perpetual contracts**
+- **Do not speculate with perpetual contracts**
 
-> "In extremely volatile markets, leverage is a wealth destroyer. A single liquidation can wipe out years of accumulation."
+> 'In extremely volatile markets, leverage is a wealth destroyer. A single liquidation can wipe out years of accumulation.'
 
 ### 4. Capital Management Firewall
 
@@ -50,7 +48,7 @@ Portfolio = 80%+ Bitcoin (long-term core) + <20% Select Projects (limited risk)
 | Discretionary Funds | Up to 30% | Early-stage investment limit |
 | Dedicated Investment Capital | 30% - 70% | Gradually increase with experience |
 
-**Core Principle**: Only invest money that won't affect your quality of life. Ensure you can maintain a normal life even in extreme market conditions.
+**Core Principle**: Only invest money that will not affect your quality of life. Ensure you can maintain a normal life even in extreme market conditions.
 
 ## Security Principles: Asset Protection
 
@@ -58,8 +56,8 @@ Portfolio = 80%+ Bitcoin (long-term core) + <20% Select Projects (limited risk)
 
 | Asset Scale | Recommended Strategy | Avoid |
 |:-----------:|:--------------------:|:-----:|
-| Small amounts | Trusted hot wallets | Don't use suspicious new wallets |
-| Medium amounts | Mainstream hardware wallets | Don't store long-term on centralized exchanges |
+| Small amounts | Trusted hot wallets | Do not use suspicious new wallets |
+| Medium amounts | Mainstream hardware wallets | Do not store long-term on centralized exchanges |
 | Large amounts | Multi-sig + cold storage | Avoid single points of failure |
 
 **Proper Backups**: Create 1-3 independent private key backups, store them in different secure locations, and consider using metal media for fire and water resistance.
@@ -68,12 +66,12 @@ Portfolio = 80%+ Bitcoin (long-term core) + <20% Select Projects (limited risk)
 
 Basic survival rules of the Web3 world:
 
-- **Don't trust any Web3 project or individual by default**
-- **Don't trust any institution by default, including major exchanges**
-- **Don't trust any code audit results by default**
-- **Don't trust any "guru" recommendations by default**
+- **Do not trust any Web3 project or individual by default**
+- **Do not trust any institution by default, including major exchanges**
+- **Do not trust any code audit results by default**
+- **Do not trust any guru recommendations by default**
 
-> "In the Web3 world, trust must be earned through time and transparency, not reputation and marketing."
+> 'In the Web3 world, trust must be earned through time and transparency, not reputation and marketing.'
 
 ## Mindset Principles: Emotional Management
 
@@ -81,7 +79,7 @@ Basic survival rules of the Web3 world:
 
 | Emotional Trap | Coping Strategy | Practical Advice |
 |:--------------:|:---------------:|:----------------:|
-| FOMO (Fear of Missing Out) | Set clear entry criteria | Write down your investment thesis in advance; don't change your standards because prices go up |
+| FOMO (Fear of Missing Out) | Set clear entry criteria | Write down your investment thesis in advance; do not change your standards because prices go up |
 | FUD (Fear, Uncertainty, Doubt) | Focus on long-term fundamentals | Temporarily step away from price charts and social media |
 | Speculative Mania | Strict position management | Set automatic take-profit levels |
 
@@ -117,7 +115,7 @@ Becoming an excellent Web3 participant requires interdisciplinary knowledge:
 | Joining DAOs | Join and contribute to communities | Understand governance mechanisms and incentive design |
 | Small-Scale Development | Build simple projects | Deep understanding of technical architecture |
 
-> "In Web3, bystanders can never gain the insights of participants."
+> 'In Web3, bystanders can never gain the insights of participants.'
 
 ## Community Principles: Growing Together
 
@@ -125,7 +123,7 @@ Becoming an excellent Web3 participant requires interdisciplinary knowledge:
 
 | Action | Recommendation | Avoid |
 |:------:|:--------------:|:-----:|
-| Sharing Knowledge | Publicly share valuable insights | Don't hoard core information for personal gain |
+| Sharing Knowledge | Publicly share valuable insights | Do not hoard core information for personal gain |
 | Reporting Issues | Provide constructive improvement suggestions | Avoid pointless criticism |
 | Writing Code | Contribute to open-source projects | Avoid being a pure taker without contributing |
 
@@ -137,11 +135,11 @@ Web3 is not a short-term gold rush but a long-term technological revolution:
 - **Value community health over short-term price**
 - **Participate in ecosystems with long-term vision**
 
-> "Short-term speculators watch prices; long-term builders watch value. Over a long enough time horizon, value is ultimately reflected in price."
+> 'Short-term speculators watch prices; long-term builders watch value. Over a long enough time horizon, value is ultimately reflected in price.'
 
 ---
 
-<div align="center">
-<a href="https://github.com/beihaili/Get-Started-with-Web3">🏠 Back to Home</a> |
-<a href="https://twitter.com/bhbtc1337">🐦 Follow the Author</a>
+<div align='center'>
+<a href='https://github.com/beihaili/Get-Started-with-Web3'>🏠 Back to Home</a> |
+<a href='https://twitter.com/bhbtc1337'>🐦 Follow the Author</a>
 </div>
