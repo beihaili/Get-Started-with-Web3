@@ -87,7 +87,9 @@
     "thinking": "Thinking...",
     "errorPrefix": "Sorry, I encountered an issue: ",
     "promptTemplate": "Student question: \"{{question}}\"\n\nAnswer the student's question based on the current lesson content. Lesson content:\n{{context}}\n\nPlease provide a clear and easy-to-understand explanation. If the question relates to the current lesson, incorporate the lesson content. If the question is beyond the lesson scope, you may expand on it but note that it goes beyond the lesson.",
-    "systemInstruction": "You are a friendly Web3 education tutor. Answer in the user's language, keep explanations simple and accessible, and feel free to use emoji to make your responses more engaging."
+    "systemInstruction": "You are a friendly Web3 education tutor. Answer in the user's language, keep explanations simple and accessible, and feel free to use emoji to make your responses more engaging.",
+    "close": "Close AI Tutor",
+    "sendMessage": "Send message"
   },
   "quiz": {
     "title": "Challenge Quiz",
