@@ -5,7 +5,7 @@
 ![date](https://img.shields.io/badge/Date-2025--09-orange)
 ![difficulty](https://img.shields.io/badge/Difficulty-Intermediate-yellow)
 
-> 💡 The Bitcoin P2P network is the core of decentralization, enabling nodes around the world to work together without a central server. This chapter will explain in the most intuitive way how this "network without a center" operates.
+> 💡 The Bitcoin peer-to-peer(P2P) network is the core of decentralization, enabling nodes around the world to work together without a central server. This chapter will explain in the most intuitive way how this "centralized network" operates.
 
 ## Table of Contents
 
@@ -28,15 +28,15 @@ Imagine what would happen if WeChat had no Tencent servers.
 - If the government shuts down Tencent → WeChat disappears entirely.
 
 **But Bitcoin achieved the impossible:**
-- 13,000 nodes globally, no headquarters, no CEO.
+- With 13,000 nodes globally, there's no headquarters and no CEO.
 - Processes transactions 24/7 without any downtime.
-- No single government can shut down the entire network.
+- No government can shut down the entire network.
 
-How is this "impossible" feat accomplished? The answer lies in the P2P (peer-to-peer) network protocol.
+How was this "impossible" feat accomplished? The answer lies in the P2P (peer-to-peer) network protocol.
 
 ### 💡 Think About It
-Before learning about P2P networks, consider:
-- If you lived in a village with no chief, how would you let everyone know about something?
+Before learning about P2P networks, consider this:
+- If you live in a village with no chief, how would you let everyone know about something?
 - Without a post office, how would you send letters to distant friends?
 - Without a telephone company, how would everyone stay in touch?
 
@@ -50,7 +50,7 @@ User A → Tencent Server ← User B
          ↑
     Single point of failure
 ```
-Like a village where only the chief handles messages — if the chief gets sick, the entire village can't communicate.
+It's like a village where only the chief handles messages — if the chief gets sick, the entire village can't communicate.
 
 **P2P network (Bitcoin model):**
 ```
@@ -59,24 +59,24 @@ Node A ↔ Node B ↔ Node C
 Node D ↔ Node E ↔ Node F
    No chief needed to pass messages
 ```
-Like villagers communicating directly — even if several leave, everyone else continues talking.
+Just like villagers communicating directly, even if several leave, everyone else continues talking.
 
 ### The Network's Magical Properties
 
 **The Bitcoin P2P network is like an ideal village:**
-- 🏘️ **Equality**: Every villager is equal — there's no "chief."
+- 🏘️ **Equality**: Every villager is equal. There's no "chief."
 - 🔄 **Fault tolerance**: Any villager leaving doesn't affect the whole village.
-- 🚫 **Censorship resistance**: No central point to shut down.
+- 🚫 **Censorship resistance**: No central point can be shut down.
 - 🤝 **Self-organization**: Villagers automatically maintain and optimize relationships.
 
-**Connection strategy (villager social rules):**
+**Connection strategy (Social Rules for Villagers):**
 - Each villager proactively contacts 8 friends (outbound connections).
 - Accepts up to 125 friend requests (inbound connections).
 - Opens the door on port 8333 by default.
 
 ## Node Discovery: How Newcomers Join the Village
 
-A new node joining the network faces a "chicken-and-egg" problem: you need to know other nodes' addresses to connect, but how do you get your first friend's contact info?
+A new node joining the network faces a "chicken-and-egg" problem: you need to know the addresses of other nodes to connect, but how do you get your first friend's contact info?
 
 ### Step 1: Check the Phone Directory (DNS Seeds)
 
@@ -84,8 +84,8 @@ Bitcoin provides new villagers with 9 "phone directories":
 
 **🔍 DNS seed discovery process:**
 1. **Query the directory**: The new node requests active node lists from 9 DNS servers.
-2. **Get contact info**: Each directory returns 5-20 reliable friend IP addresses.
-3. **Try connecting**: The new node contacts these addresses to establish its first friendships.
+2. **Get contact info**: Each directory returns 5-20 reliable friends' IP addresses.
+3. **Attempt to connect**: The new node contacts these addresses to establish its first batch of connection.
 
 **📞 Bitcoin's 9 "phone directories":**
 - `seed.bitcoin.sipa.be` — Pieter's authoritative directory.
@@ -94,8 +94,8 @@ Bitcoin provides new villagers with 9 "phone directories":
 - (Plus 6 more distributed worldwide as backups)
 
 **Phone directory advantages:**
-- 🏢 **Independently maintained**: 9 different people maintain them; they won't all fail at once.
-- 🔄 **Auto-updated**: Only returns recently active node addresses.
+- 🏢 **Independently maintained**: 9 different people maintain them, hence they won't all fail at once.
+- 🔄 **Auto-updated**: Only returns the addresses of the most recently active nodes.
 - 🌍 **Globally distributed**: Spread across different countries for fault tolerance.
 
 ### Step 2: Friends Introduce Friends (Address Propagation)
@@ -144,12 +144,12 @@ A Bitcoin node is like a socially adept villager with a complete "friendship str
 
 **Active friending (8 outbound connections):**
 - Proactively finds and contacts 8 friends.
-- Prioritizes reliable friends from the address book.
+- Prioritizes contacting reliable friends from the address book.
 - If old friends are unreachable, seeks new ones.
 
 **Passive friending (125 inbound connections):**
 - Accepts contact requests from other villagers.
-- But can't accept everyone — must guard against malicious harassment.
+- But can't accept everyone, we must guard against malicious harassment.
 - Maintains a reasonable social circle.
 
 ### Friend Circle Diversity
@@ -178,7 +178,7 @@ def choose_diverse_friends(potential_friends):
 ```
 
 **Benefits of diversity:**
-- 🌍 **Geographic distribution**: Avoid having all friends from the same region.
+- 🌍 **Geographic distribution**: Avoid having friends from the same region.
 - 🔄 **Version compatibility**: Include friends running both old and new versions.
 - ⏰ **Time distribution**: Include friends who are online at different times.
 
@@ -208,7 +208,7 @@ def keep_friendship_alive():
 
 ### Village Broadcasting System
 
-The Bitcoin network is like an efficient village broadcasting system — without a broadcasting station:
+The Bitcoin network is like an efficient village broadcasting system, but without a broadcasting station:
 
 **Traditional broadcasting:**
 ```
@@ -289,9 +289,9 @@ print(f"Message length: {len(greeting)} bytes")
 
 ## Security Upgrade: Encrypting the Messages
 
-### Risks of Plaintext Communication
+### Risks of transmitting messages in plain text
 
-Previously, villagers communicated in plaintext — like shouting:
+Previously, villagers communicated in plaintext, like shouting:
 
 ```
 Villager A shouts: "I want to transfer 1 bitcoin to Villager B!"
@@ -349,7 +349,7 @@ class SecretTalk:
 - 🛡️ **Privacy protection**: Outsiders can't eavesdrop on conversations.
 - 🔒 **Tamper-proof**: Message modifications are detected.
 - 🔑 **Forward secrecy**: Even if keys are compromised, past conversations remain safe.
-- 🔄 **Backward compatible**: Can still communicate with friends using the old method.
+- 🔄 **Backward compatiblity**: You can still communicate with friends who use the old method.
 
 ## Hands-on Practice: Connecting to the Bitcoin Network
 
@@ -536,14 +536,14 @@ python3 test_p2p.py
 
 - 🏛️ **Decentralization**: No single point of failure; no one can shut down the entire network.
 - 🛡️ **Censorship resistance**: No government or organization can take control.
-- 🌍 **Global accessibility**: Anyone can participate without permission.
+- 🌍 **Global accessibility**: Anyone can participate, no permission required.
 - 💪 **Robustness**: The network keeps running even if most nodes go offline.
 
 Efficiency can be improved through technical optimization, but once decentralization is lost, it's very hard to recover.
 
 ### ❓ Can DNS seeds become a single point of failure?
 
-**Answer:** No! DNS seeds are just "newcomer guides," not essential:
+**Answer:** No! DNS seeds are just "beginner's guides," not essential:
 
 **Multiple safeguards:**
 - 9 independent DNS seed servers distributed globally.
@@ -556,7 +556,7 @@ Efficiency can be improved through technical optimization, but once decentraliza
 - A running network doesn't depend on DNS seeds at all.
 - Even if all DNS seeds disappear, the existing network continues operating normally.
 
-### ❓ Why limit connections? Why not more is better?
+### ❓ Why limit the number of connections? Why isn't more always better?
 
 **Answer:** Just like your social circle — more isn't always better:
 
@@ -570,10 +570,10 @@ Efficiency can be improved through technical optimization, but once decentraliza
 - Heavy computational burden processing messages.
 - Susceptible to flood attacks.
 
-**The magic numbers of 8 + 125:**
+**The magic number 8 + 125:**
 - 8 outbound connections: Ensures network connectivity.
 - 125 inbound connections: Serves other nodes.
-- An optimal balance proven through years of practice.
+- An optimal balance point that has been verified through years of practice.
 
 ### ❓ Will BIP 324 encryption slow down the network?
 
@@ -592,16 +592,16 @@ Encryption overhead: < 1% CPU usage
 - 📊 **Traffic obfuscation**: Makes traffic analysis difficult.
 - 🚀 **Future extensibility**: Lays the groundwork for more features.
 
-A tiny performance cost for a massive security improvement — absolutely worth it!
+The minimal performance overhead combined with a huge security boost is absolutely worthwhile!
 
-### ❓ Do ordinary users need to run a full node?
+### ❓ Do regular users need to run a full node?
 
-**Answer:** It's not required, but strongly recommended for those who can:
+**Answer:** It's not required, but strongly recommended for those who have the necessary resources:
 
 **Light nodes (SPV) are suitable for:**
 - Mobile wallet users.
 - Occasional Bitcoin users.
-- Users with limited network conditions.
+- Users with limited network access.
 
 **Full nodes are suitable for:**
 - Frequent Bitcoin users.
@@ -614,7 +614,7 @@ A tiny performance cost for a massive security improvement — absolutely worth 
 - 🗳️ **Participate in governance**: Have a voice in protocol upgrades.
 - 📊 **Complete data**: Query any historical data.
 
-### ❓ How to detect and defend against network attacks?
+### ❓ How to detect and prevent cyberattacks?
 
 **Answer:** The Bitcoin network has multiple layers of defense:
 
@@ -670,8 +670,8 @@ The Bitcoin P2P network is a carefully designed distributed system, like an idea
 - **Adaptability**: The network automatically adapts to environmental changes.
 
 ### 🔧 Technical Features
-- **Multiple discovery mechanisms**: DNS seeds + hardcoded nodes + peer propagation.
-- **Smart connections**: A balanced strategy of 8 outbound + 125 inbound.
+- **Multiple discovery**: DNS seeds + hardcoded nodes + peer-to-peer propagation.
+- **Smart connections**: A balanced strategy of 8 outbound + 125 inbound connections.
 - **Efficient propagation**: Flood-based broadcasting + deduplication mechanism.
 - **Privacy upgrade**: BIP 324 provides end-to-end encryption.
 
@@ -684,7 +684,7 @@ The Bitcoin P2P network proves that without centralized authority, we can still 
 
 > 🔗 **Full code implementation**: [p2p_examples.py](./p2p_examples.py)
 >
-> 📚 **Deep dive**: [Complete technical documentation](./code_examples/)
+> 📚 **Dive deep**: [Complete technical documentation](./code_examples/)
 
 ---
 
