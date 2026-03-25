@@ -7,7 +7,8 @@
     "dashboard": "Dashboard",
     "badges": "My Badges",
     "searchCourses": "Search courses",
-    "searchPlaceholder": "⌘K"
+    "searchPlaceholder": "⌘K",
+    "glossary": "Glossary"
   },
   "landing": {
     "heroBadge": "{{count}} lessons · Open Source & Free",
@@ -185,6 +186,13 @@
   "markdown": {
     "copyCode": "Copy code",
     "copyCodeTitle": "Copy code"
+  },
+  "glossary": {
+    "title": "Web3 Glossary",
+    "subtitle": "{{count}} key terms to help you navigate Web3",
+    "searchPlaceholder": "Search terms...",
+    "all": "All",
+    "noResults": "No matching terms"
   },
   "common": {
     "loading": "Loading...",

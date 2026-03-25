@@ -7,6 +7,7 @@ import { COURSE_DATA } from '../config/courseData';
 import { Web3Oracle } from '../components/interactive';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import ThemeToggle from '../components/ThemeToggle';
+import MobileNav from '../components/MobileNav';
 import SeoHead from '../components/SeoHead';
 
 /**
@@ -50,26 +51,48 @@ const DashboardPage = () => {
           </Link>
 
           <div className="flex items-center gap-4">
-            <button
-              onClick={openSearch}
-              aria-label={t('nav.searchCourses')}
-              className="flex items-center gap-2 px-3 py-1.5 text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm transition-colors"
-            >
-              <Search className="w-4 h-4" />
-              <span className="hidden sm:inline">{t('nav.searchCourses')}</span>
-              <kbd className="hidden sm:inline ml-1 px-1.5 py-0.5 bg-slate-200 dark:bg-slate-700 rounded text-xs">
-                {t('nav.searchPlaceholder')}
-              </kbd>
-            </button>
-            <Link
-              to={`/${lang}/badges`}
-              className="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-purple-400 transition-colors"
-            >
-              <Award className="w-5 h-5" />
-              <span>{t('nav.badges')}</span>
-            </Link>
-            <ThemeToggle />
-            <LanguageSwitcher />
+            {/* Desktop nav */}
+            <div className="hidden sm:flex items-center gap-4">
+              <button
+                onClick={openSearch}
+                aria-label={t('nav.searchCourses')}
+                className="flex items-center gap-2 px-3 py-1.5 text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm transition-colors"
+              >
+                <Search className="w-4 h-4" />
+                <span>{t('nav.searchCourses')}</span>
+                <kbd className="ml-1 px-1.5 py-0.5 bg-slate-200 dark:bg-slate-700 rounded text-xs">
+                  {t('nav.searchPlaceholder')}
+                </kbd>
+              </button>
+              <Link
+                to={`/${lang}/badges`}
+                className="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-purple-400 transition-colors"
+              >
+                <Award className="w-5 h-5" />
+                <span>{t('nav.badges')}</span>
+              </Link>
+              <ThemeToggle />
+              <LanguageSwitcher />
+            </div>
+            {/* Mobile nav */}
+            <MobileNav
+              items={[
+                {
+                  label: t('nav.badges'),
+                  to: `/${lang}/badges`,
+                  icon: <Award className="w-4 h-4" />,
+                },
+              ]}
+              extra={
+                <button
+                  onClick={openSearch}
+                  className="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 w-full"
+                >
+                  <Search className="w-4 h-4" />
+                  <span>{t('nav.searchCourses')}</span>
+                </button>
+              }
+            />
           </div>
         </div>
       </nav>

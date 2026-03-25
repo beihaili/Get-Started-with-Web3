@@ -7,7 +7,8 @@
     "dashboard": "仪表盘",
     "badges": "我的徽章",
     "searchCourses": "搜索课程",
-    "searchPlaceholder": "⌘K"
+    "searchPlaceholder": "⌘K",
+    "glossary": "术语表"
   },
   "landing": {
     "heroBadge": "{{count}} 讲系统化教程 · 开源免费",
@@ -185,6 +186,13 @@
   "markdown": {
     "copyCode": "复制代码",
     "copyCodeTitle": "复制代码"
+  },
+  "glossary": {
+    "title": "Web3 术语表",
+    "subtitle": "{{count}} 个核心术语，助你快速理解 Web3 世界",
+    "searchPlaceholder": "搜索术语...",
+    "all": "全部",
+    "noResults": "没有匹配的术语"
   },
   "common": {
     "loading": "加载中...",

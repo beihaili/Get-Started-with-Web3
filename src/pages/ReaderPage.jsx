@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowLeft, CheckCircle, Share2 } from 'lucide-react';
+import { ArrowLeft, CheckCircle, Share2, Award } from 'lucide-react';
 import ThankAuthorButton from '../components/ThankAuthorButton';
 import { useUserStore } from '../store/useUserStore';
 import { useContentStore } from '../store/useContentStore';
@@ -13,6 +13,7 @@ import ShareCard from '../components/ShareCard';
 import SponsorBanner from '../components/SponsorBanner';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import ThemeToggle from '../components/ThemeToggle';
+import MobileNav from '../components/MobileNav';
 import SeoHead from '../components/SeoHead';
 import ContentSkeleton from '../components/ContentSkeleton';
 import ScrollToTop from '../components/ScrollToTop';
@@ -134,25 +135,59 @@ const ReaderPage = () => {
           </Link>
 
           <div className="flex items-center gap-4">
-            <span className="text-slate-500 dark:text-slate-400 text-sm">
-              {currentModule?.title}
-            </span>
+            {/* Desktop nav */}
+            <div className="hidden sm:flex items-center gap-4">
+              <span className="text-slate-500 dark:text-slate-400 text-sm">
+                {currentModule?.title}
+              </span>
 
-            {isCompleted ? (
-              <div className="flex items-center gap-2 px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-lg">
-                <CheckCircle className="w-4 h-4 text-green-400" />
-                <span className="text-green-400 text-sm font-medium">{t('reader.completed')}</span>
-              </div>
-            ) : (
-              <button
-                onClick={handleMarkComplete}
-                className="px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors text-sm font-medium"
-              >
-                {t('reader.markComplete')}
-              </button>
-            )}
-            <ThemeToggle />
-            <LanguageSwitcher />
+              {isCompleted ? (
+                <div className="flex items-center gap-2 px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-lg">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span className="text-green-400 text-sm font-medium">
+                    {t('reader.completed')}
+                  </span>
+                </div>
+              ) : (
+                <button
+                  onClick={handleMarkComplete}
+                  className="px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors text-sm font-medium"
+                >
+                  {t('reader.markComplete')}
+                </button>
+              )}
+              <ThemeToggle />
+              <LanguageSwitcher />
+            </div>
+            {/* Mobile: mark-complete button stays visible + hamburger */}
+            <div className="flex sm:hidden items-center gap-2">
+              {isCompleted ? (
+                <div className="flex items-center gap-1 px-3 py-1.5 bg-green-500/10 border border-green-500/20 rounded-lg">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                </div>
+              ) : (
+                <button
+                  onClick={handleMarkComplete}
+                  className="px-3 py-1.5 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors text-sm font-medium"
+                >
+                  {t('reader.markComplete')}
+                </button>
+              )}
+              <MobileNav
+                items={[
+                  {
+                    label: t('nav.backToCourses'),
+                    to: `/${lang}/dashboard`,
+                    icon: <ArrowLeft className="w-4 h-4" />,
+                  },
+                  {
+                    label: t('nav.badges'),
+                    to: `/${lang}/badges`,
+                    icon: <Award className="w-4 h-4" />,
+                  },
+                ]}
+              />
+            </div>
           </div>
         </div>
       </nav>
