@@ -2033,6 +2033,184 @@ export const QUIZ_BANK = {
         'L2 的交易完全可以在对应的区块浏览器上查看（如 Arbiscan、Basescan 等）。常见的坑包括代币混淆、Gas 储备不足和排序器风险。',
     },
   ],
+  '7-1': [
+    // 从零部署 ERC-20 代币
+    {
+      question: 'ERC-20 标准中，哪个函数用于查询某地址的代币余额？',
+      options: [
+        'totalSupply()',
+        'balanceOf(address)',
+        'transfer(address, uint256)',
+        'allowance(address, address)',
+      ],
+      correctAnswer: 1,
+      explanation: 'balanceOf(address) 函数接收一个地址参数，返回该地址持有的代币数量。',
+    },
+    {
+      question: '在 ERC-20 中，approve 和 transferFrom 的组合主要用于什么场景？',
+      options: [
+        '直接转账给朋友',
+        '授权第三方（如 DEX 合约）代替自己转移代币',
+        '铸造新代币',
+        '销毁代币',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'approve 授权某个地址可以代替自己花费一定数量的代币，transferFrom 则由被授权方调用来执行转移，这是 DeFi 协议交互的基础。',
+    },
+    {
+      question: '以下哪个工具可以用来编译和部署 Solidity 智能合约？',
+      options: ['MetaMask', 'Foundry', 'Etherscan', 'Uniswap'],
+      correctAnswer: 1,
+      explanation:
+        'Foundry 是一个高性能的 Solidity 开发工具链，支持合约编译、测试和部署。MetaMask 是钱包，Etherscan 是浏览器，Uniswap 是 DEX。',
+    },
+    {
+      question: '部署智能合约到以太坊网络时，需要支付什么费用？',
+      options: ['月租费', 'Gas 费', '注册费', '不需要费用'],
+      correctAnswer: 1,
+      explanation:
+        '部署合约本质上是一笔特殊的交易，需要支付 Gas 费来补偿矿工/验证者处理和存储合约代码的成本。',
+    },
+    {
+      question: '为什么建议先在测试网部署合约？',
+      options: [
+        '测试网速度更快',
+        '测试网可以免费获取测试代币，避免真金白银的损失',
+        '测试网安全性更高',
+        '测试网用户更多',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '测试网使用没有实际价值的代币，开发者可以自由测试和调试合约，发现问题后再部署到主网，避免不必要的资金损失。',
+    },
+  ],
+  '7-2': [
+    // 构建你的第一个 DApp
+    {
+      question: '一个典型的 DApp 包含哪些核心组件？',
+      options: [
+        '数据库 + 服务器 + 浏览器',
+        '前端界面 + 钱包连接 + 智能合约',
+        '操作系统 + 编辑器 + 终端',
+        'API + CDN + 负载均衡',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'DApp 的核心架构由前端界面（用户交互）、钱包连接（身份验证和签名）和智能合约（链上逻辑）三部分组成。',
+    },
+    {
+      question: 'ethers.js 中的 Provider 主要用于什么？',
+      options: [
+        '发送交易和修改链上状态',
+        '只读访问区块链数据（如查询余额、读取合约状态）',
+        '创建新的钱包地址',
+        '编译智能合约',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'Provider 提供了对区块链的只读连接，用于查询余额、读取合约状态、获取区块信息等。要发送交易则需要 Signer。',
+    },
+    {
+      question: '在 DApp 中，用户发起一笔链上交易后通常需要经历什么流程？',
+      options: [
+        '立即完成，无需等待',
+        '钱包弹窗确认 → 交易广播到网络 → 等待矿工/验证者确认',
+        '输入银行卡密码 → 银行审核 → 到账',
+        '发送邮件验证 → 人工审批 → 执行',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '链上交易需要用户通过钱包签名确认，然后交易被广播到区块链网络，由矿工/验证者打包确认，整个过程是去中心化的。',
+    },
+    {
+      question: '什么是 ABI（Application Binary Interface）？',
+      options: [
+        '一种编程语言',
+        '智能合约的接口描述，定义了如何与合约进行交互',
+        '区块链浏览器的缩写',
+        '一种加密算法',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'ABI 是智能合约编译后生成的 JSON 格式接口描述，前端通过 ABI 知道合约有哪些函数、参数类型和返回值，从而正确编码调用数据。',
+    },
+    {
+      question: '以下哪种方式是 DApp 连接用户钱包的标准做法？',
+      options: [
+        '要求用户输入私钥',
+        '通过 window.ethereum 请求用户授权连接钱包',
+        '从服务器数据库读取用户密钥',
+        '通过 cookies 自动登录',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'DApp 通过浏览器注入的 window.ethereum 对象（由 MetaMask 等钱包提供）请求连接，用户在钱包中确认授权，私钥始终由钱包保管。',
+    },
+  ],
+  '7-3': [
+    // 如何阅读区块浏览器
+    {
+      question: '区块浏览器的主要功能是什么？',
+      options: [
+        '编写和部署智能合约',
+        '查看和搜索区块链上的所有公开交易和数据',
+        '管理加密货币钱包',
+        '提供去中心化交易服务',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '区块浏览器是查看链上数据的工具，可以搜索和浏览区块、交易、地址和合约的详细信息，是 Web3 用户的必备工具。',
+    },
+    {
+      question: '在一笔以太坊交易中，"Input Data" 字段通常包含什么信息？',
+      options: [
+        '发送者的私钥',
+        '调用智能合约函数时编码后的函数签名和参数',
+        '交易手续费的计算公式',
+        '矿工的奖励信息',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'Input Data 包含了 ABI 编码后的函数选择器（前 4 字节）和参数数据，区块浏览器可以将其解码为可读的函数调用信息。',
+    },
+    {
+      question: '以太坊交易中的 "Internal Transactions" 是什么？',
+      options: [
+        '隐私交易，外部不可见',
+        '由智能合约在执行过程中触发的 ETH 转移或合约调用',
+        '交易所内部的清算记录',
+        '尚未确认的待处理交易',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'Internal Transactions 是智能合约在执行外部交易时内部触发的调用和 ETH 转移，它们不是独立的交易，而是主交易执行的一部分。',
+    },
+    {
+      question: 'Event Logs（事件日志）在智能合约中的作用是什么？',
+      options: [
+        '存储合约的源代码',
+        '记录合约执行过程中的关键操作，供前端监听和链下索引',
+        '计算 Gas 费用',
+        '验证交易签名',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'Events 是 Solidity 中的日志机制，合约通过 emit 触发事件，DApp 前端可以监听这些事件来更新 UI，链下服务也可以索引这些事件进行数据分析。',
+    },
+    {
+      question: '如何在 Etherscan 上验证一个合约是否已开源？',
+      options: [
+        '查看合约的 ETH 余额',
+        '检查 Contract 标签页是否有绿色勾号和可读的源代码',
+        '查看合约的交易数量',
+        '检查合约的创建日期',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '已验证（开源）的合约在 Etherscan 的 Contract 标签页会显示绿色勾号和完整的 Solidity 源代码，用户可以阅读代码了解合约逻辑。',
+    },
+  ],
   // 默认通用题目
   default: [
     {

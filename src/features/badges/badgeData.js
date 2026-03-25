@@ -8,6 +8,7 @@ import {
   Target,
   Calendar,
   Layers,
+  Wrench,
   Network,
 } from 'lucide-react';
 
@@ -141,7 +142,26 @@ export const ACHIEVEMENT_BADGES = {
       title: '🌍 Web3 生态专家',
       experience: 300,
       unlockedFeatures: ['多链生态数据看板', 'DeFi 收益计算器'],
-      nextBadgeHint: '继续学习跨链与 Layer 2 深度解析',
+      nextBadgeHint: '继续挑战 Web3 Builder 实战模块，动手构建真实项目',
+    },
+  },
+  'module-7': {
+    id: 'web3-builder',
+    name: 'Web3 Builder',
+    title: 'Web3 建设者',
+    description: '完成 Web3 Builder 实战模块，从理论走向实践',
+    icon: Wrench,
+    rarity: 'Epic',
+    color: 'from-rose-500 to-orange-500',
+    glowColor: 'shadow-rose-500/50',
+    borderColor: 'border-rose-500',
+    bgColor: 'bg-rose-500/10',
+    requirement: '完成 Web3 Builder 实战的所有课程',
+    rewards: {
+      title: '🔧 Web3 Builder',
+      experience: 300,
+      unlockedFeatures: ['Builder Showcase 展示权', 'Build Challenge 参赛权'],
+      nextBadgeHint: '试试构建自己的 Web3 项目并提交到 Showcase！',
     },
   },
   'module-9': {

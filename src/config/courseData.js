@@ -1,4 +1,4 @@
-import { BookOpen, BrainCircuit, Shield, Globe, Cpu, Layers, Network } from 'lucide-react';
+import { BookOpen, BrainCircuit, Shield, Globe, Cpu, Layers, Wrench, Network } from 'lucide-react';
 
 // GitHub 配置
 export const GITHUB_USERNAME = 'beihaili';
@@ -280,6 +280,32 @@ export const COURSE_DATA = [
         id: '6-6',
         title: 'Web3 实用工具大全',
         path: '其它学习资源整理/实用工具',
+        fallbackContent: FALLBACK,
+      },
+    ],
+  },
+  {
+    id: 'module-7',
+    title: 'Web3 Builder 实战',
+    icon: Wrench,
+    color: 'from-rose-400 to-orange-400',
+    lessons: [
+      {
+        id: '7-1',
+        title: '从零部署 ERC-20 代币',
+        path: 'Web3BuilderLab/01_DeployERC20',
+        fallbackContent: FALLBACK,
+      },
+      {
+        id: '7-2',
+        title: '构建你的第一个 DApp',
+        path: 'Web3BuilderLab/02_BuildFirstDApp',
+        fallbackContent: FALLBACK,
+      },
+      {
+        id: '7-3',
+        title: '如何阅读区块浏览器',
+        path: 'Web3BuilderLab/03_ReadBlockExplorer',
         fallbackContent: FALLBACK,
       },
     ],
