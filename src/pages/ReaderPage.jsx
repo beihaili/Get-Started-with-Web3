@@ -15,6 +15,8 @@ import LanguageSwitcher from '../components/LanguageSwitcher';
 import ThemeToggle from '../components/ThemeToggle';
 import SeoHead from '../components/SeoHead';
 import ContentSkeleton from '../components/ContentSkeleton';
+import ScrollToTop from '../components/ScrollToTop';
+import { estimateReadingTime } from '../utils/readingTime';
 
 /**
  * 课程阅读页面
@@ -173,6 +175,11 @@ const ReaderPage = () => {
                 <div className="inline-block px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-full mb-4">
                   <span className="text-cyan-400 text-sm font-medium">{currentModule?.title}</span>
                 </div>
+                {!loading && content && (
+                  <span className="text-slate-500 dark:text-slate-400 text-sm">
+                    {t('reader.readingTime', { minutes: estimateReadingTime(content, lang) })}
+                  </span>
+                )}
                 <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
                   {currentLesson?.title}
                 </h1>
@@ -253,6 +260,7 @@ const ReaderPage = () => {
       {/* AI Tutor */}
       <AiTutor lessonContext={content} />
 
+      <ScrollToTop />
       {showShareCard && <ShareCard onClose={() => setShowShareCard(false)} />}
     </div>
   );
