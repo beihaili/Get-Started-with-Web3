@@ -1,0 +1,56 @@
+name: Lighthouse CI
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium
+        run: npx playwright install chromium
+
+      - name: Build
+        run: npm run build
+        env:
+          VITE_GITHUB_USERNAME: beihaili
+          VITE_GITHUB_REPO: Get-Started-with-Web3
+          VITE_GITHUB_BRANCH: main
+
+      - name: Run Lighthouse
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          uploadArtifacts: true
+          configPath: '.github/lighthouse/lighthouserc.json'
+
+      - name: Format Lighthouse results as PR comment
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const results = JSON.parse(fs.readFileSync('.lighthouseci/manifest.json', 'utf8'));
+            const summary = results.map(r => {
+              const s = JSON.parse(fs.readFileSync(r.jsonPath, 'utf8'));
+              const cats = s.categories;
+              return `| ${r.url} | ${Math.round(cats.performance.score*100)} | ${Math.round(cats.accessibility.score*100)} | ${Math.round(cats['best-practices'].score*100)} | ${Math.round(cats.seo.score*100)} |`;
+            }).join('\n');
+            const body = `## Lighthouse Results\n\n| URL | Perf | A11y | BP | SEO |\n|-----|------|------|-----|-----|\n${summary}`;
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body
+            });
