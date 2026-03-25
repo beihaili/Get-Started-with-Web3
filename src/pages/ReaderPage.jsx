@@ -12,6 +12,7 @@ import { COURSE_DATA } from '../config/courseData';
 import ShareCard from '../components/ShareCard';
 import SponsorBanner from '../components/SponsorBanner';
 import LanguageSwitcher from '../components/LanguageSwitcher';
+import ThemeToggle from '../components/ThemeToggle';
 import SeoHead from '../components/SeoHead';
 
 /**
@@ -145,6 +146,7 @@ const ReaderPage = () => {
                 {t('reader.markComplete')}
               </button>
             )}
+            <ThemeToggle />
             <LanguageSwitcher />
           </div>
         </div>

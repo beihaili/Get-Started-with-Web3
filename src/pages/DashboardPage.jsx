@@ -6,6 +6,7 @@ import { useSearchStore } from '../store/useSearchStore';
 import { COURSE_DATA } from '../config/courseData';
 import { Web3Oracle } from '../components/interactive';
 import LanguageSwitcher from '../components/LanguageSwitcher';
+import ThemeToggle from '../components/ThemeToggle';
 import SeoHead from '../components/SeoHead';
 
 /**
@@ -64,6 +65,7 @@ const DashboardPage = () => {
               <Award className="w-5 h-5" />
               <span>{t('nav.badges')}</span>
             </Link>
+            <ThemeToggle />
             <LanguageSwitcher />
           </div>
         </div>
