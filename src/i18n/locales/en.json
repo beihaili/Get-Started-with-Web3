@@ -61,7 +61,8 @@
     "nextLessonFull": "Next Lesson",
     "moduleCompleteTitle": "{{moduleTitle}} All Complete!",
     "moduleCompleteDesc": "Congratulations on completing all lessons in this module",
-    "shareAchievement": "Share Achievement"
+    "shareAchievement": "Share Achievement",
+    "readingTime": "{{minutes}} min read"
   },
   "badges": {
     "pageTitle": "Badge Collection | Web3 Starter",

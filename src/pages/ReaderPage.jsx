@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowLeft, CheckCircle, Loader2, Share2 } from 'lucide-react';
+import { ArrowLeft, CheckCircle, Share2 } from 'lucide-react';
 import ThankAuthorButton from '../components/ThankAuthorButton';
 import { useUserStore } from '../store/useUserStore';
 import { useContentStore } from '../store/useContentStore';
@@ -14,6 +14,7 @@ import SponsorBanner from '../components/SponsorBanner';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import ThemeToggle from '../components/ThemeToggle';
 import SeoHead from '../components/SeoHead';
+import ContentSkeleton from '../components/ContentSkeleton';
 
 /**
  * 课程阅读页面
@@ -158,10 +159,7 @@ const ReaderPage = () => {
       <main className="container mx-auto px-4 py-8 max-w-4xl">
         <div className="p-8 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-700/50 rounded-xl">
           {loading ? (
-            <div className="flex flex-col items-center justify-center py-20">
-              <Loader2 className="w-12 h-12 text-cyan-400 animate-spin mb-4" />
-              <p className="text-slate-500 dark:text-slate-400">{t('reader.loadingContent')}</p>
-            </div>
+            <ContentSkeleton />
           ) : error ? (
             <div className="p-6 bg-red-500/10 border border-red-500/20 rounded-lg">
               <p className="text-red-400">

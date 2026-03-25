@@ -61,7 +61,8 @@
     "nextLessonFull": "下一讲",
     "moduleCompleteTitle": "{{moduleTitle}} 全部完成！",
     "moduleCompleteDesc": "恭喜你完成了本模块的所有课程",
-    "shareAchievement": "分享学习成就"
+    "shareAchievement": "分享学习成就",
+    "readingTime": "预计阅读 {{minutes}} 分钟"
   },
   "badges": {
     "pageTitle": "徽章收藏馆 | Web3 Starter",
