@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import ErrorBoundary from '../components/ErrorBoundary';
 import SearchDialog from '../components/SearchDialog';
 import { useSearchStore } from '../store/useSearchStore';
+import { useThemeStore } from '../store/useThemeStore';
 import LanguageProvider from '../i18n/LanguageProvider';
 
 // Lazy load pages for code splitting
@@ -34,6 +35,15 @@ const SuspenseWrapper = ({ children }) => (
     <ErrorBoundary>{children}</ErrorBoundary>
   </Suspense>
 );
+
+/** Syncs theme store to the <html> element's class list */
+const ThemeApplier = ({ children }) => {
+  const theme = useThemeStore((s) => s.theme);
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', theme === 'dark');
+  }, [theme]);
+  return children;
+};
 
 // Root layout with global overlays (SearchDialog needs router context)
 const RootLayout = () => {
@@ -111,9 +121,11 @@ export const router = createBrowserRouter(
     {
       path: '/:lang',
       element: (
-        <LanguageProvider>
-          <RootLayout />
-        </LanguageProvider>
+        <ThemeApplier>
+          <LanguageProvider>
+            <RootLayout />
+          </LanguageProvider>
+        </ThemeApplier>
       ),
       children: [
         {

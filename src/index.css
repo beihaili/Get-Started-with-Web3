@@ -2,23 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Light mode defaults */
 body {
-  background-color: #0f172a; /* Slate-950 */
+  background-color: #f8fafc; /* slate-50 */
+  color: #0f172a; /* slate-900 */
+}
+
+/* Dark mode overrides */
+.dark body {
+  background-color: #0f172a; /* slate-950 */
   color: white;
 }
 
-/* 自定义滚动条，增加赛博朋克感 */
+/* 自定义滚动条 */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0f172a; 
+  background: #f1f5f9; /* slate-100 */
+}
+.dark ::-webkit-scrollbar-track {
+  background: #0f172a;
 }
 ::-webkit-scrollbar-thumb {
-  background: #334155; 
+  background: #94a3b8; /* slate-400 */
   border-radius: 4px;
 }
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
 ::-webkit-scrollbar-thumb:hover {
-  background: #06b6d4; /* Cyan-500 on hover */
+  background: #06b6d4; /* cyan-500 */
 }
