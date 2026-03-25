@@ -50,7 +50,7 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 relative overflow-hidden">
       <SeoHead
         title="Get Started with Web3 - 从入门到精通"
         description={t('landing.subtitle')}
@@ -80,7 +80,9 @@ const LandingPage = () => {
             <br />
             with Web3
           </h1>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-8">{t('landing.subtitle')}</p>
+          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-8">
+            {t('landing.subtitle')}
+          </p>
           {studyStreak > 0 && (
             <div className="inline-block mb-4 px-4 py-1.5 bg-orange-500/10 border border-orange-500/20 rounded-full">
               <span className="text-orange-400 text-sm font-medium">
@@ -99,7 +101,7 @@ const LandingPage = () => {
               href="https://github.com/beihaili/Get-Started-with-Web3"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-full transition-all hover:scale-105 border border-slate-700 flex items-center gap-2"
+              className="px-8 py-3 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-900 dark:text-white font-bold rounded-full transition-all hover:scale-105 border border-slate-200 dark:border-slate-700 flex items-center gap-2"
             >
               <GitBranch className="w-4 h-4" />
               GitHub
@@ -109,18 +111,24 @@ const LandingPage = () => {
 
         {/* Stats Bar */}
         <div className="max-w-3xl mx-auto mb-16">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-6 bg-slate-900/60 backdrop-blur-md border border-slate-700/50 rounded-2xl">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-6 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-700/50 rounded-2xl">
             <div className="text-center">
               <div className="text-3xl font-bold text-cyan-400">{COURSE_DATA.length}</div>
-              <div className="text-sm text-slate-400">{t('landing.statsModules')}</div>
+              <div className="text-sm text-slate-500 dark:text-slate-400">
+                {t('landing.statsModules')}
+              </div>
             </div>
-            <div className="text-center border-x border-slate-700">
+            <div className="text-center border-x border-slate-200 dark:border-slate-700">
               <div className="text-3xl font-bold text-blue-400">{totalLessons}</div>
-              <div className="text-sm text-slate-400">{t('landing.statsLessons')}</div>
+              <div className="text-sm text-slate-500 dark:text-slate-400">
+                {t('landing.statsLessons')}
+              </div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-purple-400">5</div>
-              <div className="text-sm text-slate-400">{t('landing.statsLayers')}</div>
+              <div className="text-sm text-slate-500 dark:text-slate-400">
+                {t('landing.statsLayers')}
+              </div>
             </div>
           </div>
         </div>
@@ -129,12 +137,14 @@ const LandingPage = () => {
         <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16">
           <Link
             to={`/${lang}/dashboard`}
-            className="group p-6 bg-slate-900/60 backdrop-blur-md border border-slate-700/50 rounded-xl hover:border-cyan-500/40 transition-all hover:scale-105"
+            className="group p-6 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-700/50 rounded-xl hover:border-cyan-500/40 transition-all hover:scale-105"
           >
             <div className="flex flex-col items-center text-center">
               <Rocket className="w-12 h-12 text-cyan-400 mb-4 group-hover:animate-bounce" />
-              <h3 className="text-xl font-bold text-white mb-2">{t('landing.cardStartTitle')}</h3>
-              <p className="text-slate-400">{t('landing.cardStartDesc')}</p>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                {t('landing.cardStartTitle')}
+              </h3>
+              <p className="text-slate-500 dark:text-slate-400">{t('landing.cardStartDesc')}</p>
               {completedCount > 0 && (
                 <div className="mt-3 text-xs text-cyan-400">
                   {t('landing.cardStartProgress', {
@@ -148,12 +158,14 @@ const LandingPage = () => {
 
           <Link
             to={`/${lang}/badges`}
-            className="group p-6 bg-slate-900/60 backdrop-blur-md border border-slate-700/50 rounded-xl hover:border-purple-500/40 transition-all hover:scale-105"
+            className="group p-6 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-700/50 rounded-xl hover:border-purple-500/40 transition-all hover:scale-105"
           >
             <div className="flex flex-col items-center text-center">
               <Award className="w-12 h-12 text-purple-400 mb-4 group-hover:animate-pulse" />
-              <h3 className="text-xl font-bold text-white mb-2">{t('landing.cardBadgesTitle')}</h3>
-              <p className="text-slate-400">{t('landing.cardBadgesDesc')}</p>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                {t('landing.cardBadgesTitle')}
+              </h3>
+              <p className="text-slate-500 dark:text-slate-400">{t('landing.cardBadgesDesc')}</p>
               {totalExperience > 0 && (
                 <div className="mt-3 text-xs text-purple-400">
                   {userTitle} · {totalExperience} XP
@@ -166,19 +178,21 @@ const LandingPage = () => {
             href="https://github.com/beihaili/Get-Started-with-Web3"
             target="_blank"
             rel="noopener noreferrer"
-            className="group p-6 bg-slate-900/60 backdrop-blur-md border border-slate-700/50 rounded-xl hover:border-blue-500/40 transition-all hover:scale-105"
+            className="group p-6 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-700/50 rounded-xl hover:border-blue-500/40 transition-all hover:scale-105"
           >
             <div className="flex flex-col items-center text-center">
               <BookOpen className="w-12 h-12 text-blue-400 mb-4" />
-              <h3 className="text-xl font-bold text-white mb-2">{t('landing.cardGitHubTitle')}</h3>
-              <p className="text-slate-400">{t('landing.cardGitHubDesc')}</p>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
+                {t('landing.cardGitHubTitle')}
+              </h3>
+              <p className="text-slate-500 dark:text-slate-400">{t('landing.cardGitHubDesc')}</p>
             </div>
           </a>
         </div>
 
         {/* Interactive Demos */}
         <div className="max-w-4xl mx-auto mb-16">
-          <h2 className="text-2xl font-bold text-white text-center mb-8">
+          <h2 className="text-2xl font-bold text-slate-900 dark:text-white text-center mb-8">
             {t('landing.interactiveTitle')}
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -189,7 +203,7 @@ const LandingPage = () => {
 
         {/* Learning Path */}
         <div className="max-w-4xl mx-auto mb-16">
-          <h2 className="text-2xl font-bold text-white text-center mb-8">
+          <h2 className="text-2xl font-bold text-slate-900 dark:text-white text-center mb-8">
             {t('landing.learningPathTitle')}
           </h2>
           <div className="space-y-3">
@@ -199,7 +213,7 @@ const LandingPage = () => {
                 <Link
                   key={module.id}
                   to={`/${lang}/dashboard`}
-                  className="flex items-center gap-4 p-4 bg-slate-900/60 backdrop-blur-md border border-slate-700/50 rounded-xl hover:border-cyan-500/30 transition-all group"
+                  className="flex items-center gap-4 p-4 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-700/50 rounded-xl hover:border-cyan-500/30 transition-all group"
                 >
                   <div
                     className={`w-10 h-10 rounded-full bg-gradient-to-br ${module.color} flex items-center justify-center shrink-0`}
@@ -207,8 +221,10 @@ const LandingPage = () => {
                     <Icon className="w-5 h-5 text-white" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-white font-bold truncate">{module.title}</h3>
-                    <p className="text-slate-400 text-sm">
+                    <h3 className="text-slate-900 dark:text-white font-bold truncate">
+                      {module.title}
+                    </h3>
+                    <p className="text-slate-500 dark:text-slate-400 text-sm">
                       {t('landing.lessonsCount', { count: module.lessons.length })}
                     </p>
                   </div>
@@ -229,13 +245,15 @@ const LandingPage = () => {
 
         {/* Community */}
         <div className="max-w-3xl mx-auto mb-16 text-center">
-          <h2 className="text-2xl font-bold text-white mb-6">{t('landing.communityTitle')}</h2>
+          <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">
+            {t('landing.communityTitle')}
+          </h2>
           <div className="flex flex-wrap gap-4 justify-center">
             <a
               href="https://twitter.com/bhbtc1337"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-5 py-2.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-full text-white text-sm transition-all hover:scale-105"
+              className="flex items-center gap-2 px-5 py-2.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 rounded-full text-slate-900 dark:text-white text-sm transition-all hover:scale-105"
             >
               <Users className="w-4 h-4 text-cyan-400" />
               Twitter @bhbtc1337
@@ -244,7 +262,7 @@ const LandingPage = () => {
               href="https://github.com/beihaili/Get-Started-with-Web3"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-5 py-2.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-full text-white text-sm transition-all hover:scale-105"
+              className="flex items-center gap-2 px-5 py-2.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 rounded-full text-slate-900 dark:text-white text-sm transition-all hover:scale-105"
             >
               <Star className="w-4 h-4 text-yellow-400" />
               Star on GitHub
@@ -253,7 +271,7 @@ const LandingPage = () => {
         </div>
 
         {/* Footer */}
-        <footer className="text-center text-slate-500 text-sm border-t border-slate-800 pt-8 space-y-2">
+        <footer className="text-center text-slate-500 text-sm border-t border-slate-200 dark:border-slate-800 pt-8 space-y-2">
           <p>{t('landing.footerLicense')}</p>
           <p>
             <Link

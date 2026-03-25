@@ -106,7 +106,7 @@ const ReaderPage = () => {
   const alternateUrl = `https://beihaili.github.io/Get-Started-with-Web3/${altLang}/learn/${moduleId}/${lessonId}`;
 
   return (
-    <div className="min-h-screen bg-slate-950">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
       <SeoHead
         title={pageTitle}
         description={pageDescription}
@@ -119,19 +119,21 @@ const ReaderPage = () => {
       {/* Header */}
       <nav
         aria-label={t('reader.navLabel')}
-        className="sticky top-0 z-10 border-b border-slate-800 bg-slate-950/80 backdrop-blur-md"
+        className="sticky top-0 z-10 border-b border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-md"
       >
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link
             to={`/${lang}/dashboard`}
-            className="flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"
+            className="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-cyan-400 transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
             <span>{t('nav.backToCourses')}</span>
           </Link>
 
           <div className="flex items-center gap-4">
-            <span className="text-slate-400 text-sm">{currentModule?.title}</span>
+            <span className="text-slate-500 dark:text-slate-400 text-sm">
+              {currentModule?.title}
+            </span>
 
             {isCompleted ? (
               <div className="flex items-center gap-2 px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-lg">
@@ -154,11 +156,11 @@ const ReaderPage = () => {
 
       {/* Content */}
       <main className="container mx-auto px-4 py-8 max-w-4xl">
-        <div className="p-8 bg-slate-900/60 backdrop-blur-md border border-slate-700/50 rounded-xl">
+        <div className="p-8 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-700/50 rounded-xl">
           {loading ? (
             <div className="flex flex-col items-center justify-center py-20">
               <Loader2 className="w-12 h-12 text-cyan-400 animate-spin mb-4" />
-              <p className="text-slate-400">{t('reader.loadingContent')}</p>
+              <p className="text-slate-500 dark:text-slate-400">{t('reader.loadingContent')}</p>
             </div>
           ) : error ? (
             <div className="p-6 bg-red-500/10 border border-red-500/20 rounded-lg">
@@ -173,7 +175,7 @@ const ReaderPage = () => {
                 <div className="inline-block px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-full mb-4">
                   <span className="text-cyan-400 text-sm font-medium">{currentModule?.title}</span>
                 </div>
-                <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
                   {currentLesson?.title}
                 </h1>
               </div>
@@ -182,29 +184,29 @@ const ReaderPage = () => {
               <SponsorBanner />
 
               {/* Markdown Content */}
-              <div className="prose prose-invert max-w-none">
+              <div className="prose dark:prose-invert max-w-none">
                 <MarkdownRenderer content={content} basePath={basePath} />
               </div>
 
               {/* Quiz Section */}
               {QUIZ_BANK[lessonId] && (
-                <div className="mt-8 pt-8 border-t border-slate-700">
+                <div className="mt-8 pt-8 border-t border-slate-200 dark:border-slate-700">
                   <MultiQuiz lessonId={lessonId} onPass={handleMarkComplete} />
                 </div>
               )}
 
               {/* Navigation Buttons */}
-              <div className="flex gap-4 mt-8 pt-8 border-t border-slate-700">
+              <div className="flex gap-4 mt-8 pt-8 border-t border-slate-200 dark:border-slate-700">
                 {prevLesson ? (
                   <Link
                     to={`/${lang}/learn/${moduleId}/${prevLesson.id}`}
-                    className="px-4 sm:px-6 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-lg transition-colors text-sm sm:text-base"
+                    className="px-4 sm:px-6 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-900 dark:text-white rounded-lg transition-colors text-sm sm:text-base"
                   >
                     ← <span className="hidden sm:inline">{t('reader.prevLessonFull')}</span>
                     <span className="sm:hidden">{t('reader.prevLesson')}</span>
                   </Link>
                 ) : (
-                  <div className="px-4 sm:px-6 py-2 bg-slate-800/50 text-slate-600 rounded-lg cursor-not-allowed text-sm sm:text-base">
+                  <div className="px-4 sm:px-6 py-2 bg-slate-100/50 dark:bg-slate-800/50 text-slate-600 rounded-lg cursor-not-allowed text-sm sm:text-base">
                     ← <span className="hidden sm:inline">{t('reader.prevLessonFull')}</span>
                     <span className="sm:hidden">{t('reader.prevLesson')}</span>
                   </div>
@@ -219,7 +221,7 @@ const ReaderPage = () => {
                     <span className="sm:hidden">{t('reader.nextLesson')}</span> →
                   </Link>
                 ) : (
-                  <div className="px-4 sm:px-6 py-2 bg-slate-800/50 text-slate-600 rounded-lg cursor-not-allowed ml-auto text-sm sm:text-base">
+                  <div className="px-4 sm:px-6 py-2 bg-slate-100/50 dark:bg-slate-800/50 text-slate-600 rounded-lg cursor-not-allowed ml-auto text-sm sm:text-base">
                     <span className="hidden sm:inline">{t('reader.nextLessonFull')}</span>
                     <span className="sm:hidden">{t('reader.nextLesson')}</span> →
                   </div>
@@ -230,10 +232,12 @@ const ReaderPage = () => {
               {/* Module completion banner */}
               {isModuleComplete && (
                 <div className="mt-8 p-6 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-xl text-center">
-                  <h3 className="text-xl font-bold text-white mb-2">
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
                     {t('reader.moduleCompleteTitle', { moduleTitle: currentModule?.title })}
                   </h3>
-                  <p className="text-slate-400 mb-4">{t('reader.moduleCompleteDesc')}</p>
+                  <p className="text-slate-500 dark:text-slate-400 mb-4">
+                    {t('reader.moduleCompleteDesc')}
+                  </p>
                   <button
                     onClick={() => setShowShareCard(true)}
                     className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white rounded-lg transition-all font-medium"

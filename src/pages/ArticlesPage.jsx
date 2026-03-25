@@ -22,7 +22,7 @@ const ArticlesPage = () => {
   const alternateUrl = `https://beihaili.github.io/Get-Started-with-Web3/${altLang}/articles`;
 
   return (
-    <div className="min-h-screen bg-slate-950">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
       <SeoHead
         title={t('articles.pageTitle')}
         description={t('articles.pageDesc')}
@@ -33,11 +33,11 @@ const ArticlesPage = () => {
       />
 
       {/* Top nav bar */}
-      <div className="sticky top-0 z-10 border-b border-slate-800 bg-slate-950/80 backdrop-blur-md">
+      <div className="sticky top-0 z-10 border-b border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-md">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link
             to={`/${lang}`}
-            className="flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors"
+            className="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-cyan-400 transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
             <span>{t('nav.backToHome')}</span>
@@ -56,7 +56,9 @@ const ArticlesPage = () => {
           <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
             {t('articles.heading')}
           </h1>
-          <p className="text-slate-400 text-lg max-w-2xl mx-auto">{t('articles.subheading')}</p>
+          <p className="text-slate-500 dark:text-slate-400 text-lg max-w-2xl mx-auto">
+            {t('articles.subheading')}
+          </p>
         </div>
 
         {/* Module sections */}
@@ -94,7 +96,7 @@ const ArticlesPage = () => {
                       <Link
                         key={lesson.id}
                         to={lessonPath}
-                        className="group flex items-start gap-3 p-4 bg-slate-900/60 hover:bg-slate-800/80 border border-slate-700/50 hover:border-slate-600 rounded-xl transition-all duration-200"
+                        className="group flex items-start gap-3 p-4 bg-white/60 dark:bg-slate-900/60 hover:bg-slate-100/80 dark:hover:bg-slate-800/80 border border-slate-200/50 dark:border-slate-700/50 hover:border-slate-300 dark:hover:border-slate-600 rounded-xl transition-all duration-200"
                       >
                         {/* Lesson number badge */}
                         <span
@@ -103,7 +105,7 @@ const ArticlesPage = () => {
                           {lesson.id.split('-').pop()}
                         </span>
                         <div className="flex-1 min-w-0">
-                          <span className="text-slate-200 group-hover:text-white text-sm font-medium leading-snug line-clamp-2 transition-colors">
+                          <span className="text-slate-700 dark:text-slate-200 group-hover:text-slate-900 dark:group-hover:text-white text-sm font-medium leading-snug line-clamp-2 transition-colors">
                             {lesson.title}
                           </span>
                         </div>

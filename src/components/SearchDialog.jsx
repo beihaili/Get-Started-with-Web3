@@ -104,12 +104,12 @@ const SearchDialog = () => {
         role="dialog"
         aria-modal="true"
         aria-label={t('search.dialogLabel')}
-        className="relative w-full max-w-lg mx-4 bg-slate-900 border border-slate-700 rounded-xl shadow-2xl overflow-hidden"
+        className="relative w-full max-w-lg mx-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl shadow-2xl overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Input */}
-        <div className="flex items-center gap-3 px-4 py-3 border-b border-slate-700">
-          <Search className="w-5 h-5 text-slate-400 shrink-0" />
+        <div className="flex items-center gap-3 px-4 py-3 border-b border-slate-200 dark:border-slate-700">
+          <Search className="w-5 h-5 text-slate-500 dark:text-slate-400 shrink-0" />
           <input
             ref={inputRef}
             value={searchQuery}
@@ -117,12 +117,12 @@ const SearchDialog = () => {
             onKeyDown={handleKeyDown}
             placeholder={t('search.placeholder')}
             aria-label={t('search.inputLabel')}
-            className="flex-1 bg-transparent text-white placeholder-slate-500 outline-none text-base"
+            className="flex-1 bg-transparent text-slate-900 dark:text-white placeholder-slate-500 outline-none text-base"
           />
           <button
             onClick={closeSearch}
             aria-label={t('search.closeLabel')}
-            className="text-slate-400 hover:text-white"
+            className="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
           >
             <X className="w-5 h-5" />
           </button>
@@ -136,7 +136,7 @@ const SearchDialog = () => {
 
           {Object.entries(grouped).map(([moduleTitle, items]) => (
             <div key={moduleTitle}>
-              <div className="px-4 py-2 text-xs font-medium text-slate-500 uppercase tracking-wider bg-slate-800/50">
+              <div className="px-4 py-2 text-xs font-medium text-slate-500 uppercase tracking-wider bg-slate-100/50 dark:bg-slate-800/50">
                 {moduleTitle}
               </div>
               {items.map((item) => {
@@ -151,7 +151,7 @@ const SearchDialog = () => {
                     className={`w-full px-4 py-3 text-left transition-colors ${
                       idx === selectedIndex
                         ? 'bg-cyan-500/10 text-cyan-400'
-                        : 'text-slate-300 hover:bg-slate-800'
+                        : 'text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800'
                     }`}
                   >
                     {item.lessonTitle}
@@ -163,7 +163,7 @@ const SearchDialog = () => {
         </div>
 
         {/* Footer hint */}
-        <div className="px-4 py-2 border-t border-slate-700 flex gap-4 text-xs text-slate-500">
+        <div className="px-4 py-2 border-t border-slate-200 dark:border-slate-700 flex gap-4 text-xs text-slate-500">
           <span>{t('search.hintNavigate')}</span>
           <span>{t('search.hintSelect')}</span>
           <span>{t('search.hintClose')}</span>
