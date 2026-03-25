@@ -1,0 +1,32 @@
+name: Lighthouse CI
+on:
+  pull_request:
+    branches: [main, master, develop]
+jobs:
+  lighthouse:
+    name: 性能审计 Lighthouse
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 配置 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: 安装依赖
+        run: npm ci
+
+      - name: 构建项目
+        run: npm run build
+
+      - name: 运行 Lighthouse 审计
+        uses: treosh/lighthouse-ci-action@v11
+        with:
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+          configPath: '.lighthouserc.json'
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
