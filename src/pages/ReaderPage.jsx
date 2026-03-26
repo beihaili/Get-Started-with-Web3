@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowLeft, CheckCircle, Share2, Award } from 'lucide-react';
+import { ArrowLeft, CheckCircle, Share2, Award, Wrench } from 'lucide-react';
 import ThankAuthorButton from '../components/ThankAuthorButton';
 import { useUserStore } from '../store/useUserStore';
 import { useContentStore } from '../store/useContentStore';
@@ -219,6 +219,22 @@ const ReaderPage = () => {
                   {currentLesson?.title}
                 </h1>
               </div>
+
+              {/* Lab CTA */}
+              {currentLesson?.labUrl && (
+                <div className="mb-8">
+                  <a
+                    href={`${currentLesson.labUrl}/generate`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={t('reader.startLab')}
+                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-rose-500 to-orange-500 hover:from-rose-600 hover:to-orange-600 text-white rounded-lg font-medium transition-all"
+                  >
+                    <Wrench className="w-4 h-4" />
+                    {t('reader.startLab')}
+                  </a>
+                </div>
+              )}
 
               {/* Sponsor Banner (gold tier only, null if no gold sponsors) */}
               <SponsorBanner />
