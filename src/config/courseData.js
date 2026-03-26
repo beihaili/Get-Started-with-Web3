@@ -308,6 +308,12 @@ export const COURSE_DATA = [
         path: 'Web3BuilderLab/03_ReadBlockExplorer',
         fallbackContent: FALLBACK,
       },
+      {
+        id: '7-4',
+        title: '智能合约安全实战',
+        path: 'Web3BuilderLab/04_SmartContractSecurity',
+        fallbackContent: FALLBACK,
+      },
     ],
   },
   {

@@ -1,6 +1,6 @@
 /**
  * 测验题库数据
- * 覆盖全部 36 课 × 5 题 = 180 题 + 5 默认题 = 185 题
+ * 覆盖全部 41 课 × 5 题 = 205 题 + 5 默认题 = 210 题
  */
 
 export const QUIZ_BANK = {
@@ -2209,6 +2209,69 @@ export const QUIZ_BANK = {
       correctAnswer: 1,
       explanation:
         '已验证（开源）的合约在 Etherscan 的 Contract 标签页会显示绿色勾号和完整的 Solidity 源代码，用户可以阅读代码了解合约逻辑。',
+    },
+  ],
+  '7-4': [
+    // 智能合约安全实战
+    {
+      question: '重入攻击（Reentrancy Attack）的核心原理是什么？',
+      options: [
+        '攻击者暴力破解合约的私钥',
+        '恶意合约在回调中反复调用目标合约的提款函数，在状态更新前多次提取资金',
+        '攻击者修改区块链上的历史交易记录',
+        '通过发送大量垃圾交易使合约停止运行',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '重入攻击利用了合约在转账时触发外部调用（如 fallback 函数），恶意合约在回调中重复调用提款函数，在余额状态更新之前多次提取资金。The DAO 事件就是经典案例。',
+    },
+    {
+      question: '防止整数溢出漏洞的最佳实践是什么？',
+      options: [
+        '使用 Solidity 0.7 以下版本编写合约',
+        '使用 Solidity 0.8+ 版本（内置溢出检查）或引入 SafeMath 库',
+        '避免在合约中使用任何数学运算',
+        '将所有数值存储为字符串类型',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'Solidity 0.8 版本开始内置了整数溢出和下溢检查，运算溢出时会自动 revert。对于旧版本合约，应使用 OpenZeppelin 的 SafeMath 库进行安全的数学运算。',
+    },
+    {
+      question: '以下哪种模式是防止重入攻击的推荐做法？',
+      options: [
+        '先转账再更新状态',
+        'Checks-Effects-Interactions 模式：先检查条件、再更新状态、最后进行外部调用',
+        '在合约中不使用任何 ETH 转账功能',
+        '将所有函数设为 public 以增加透明度',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'Checks-Effects-Interactions（检查-生效-交互）模式是 Solidity 安全开发的核心原则：先验证条件，再更新合约状态，最后才进行外部调用，确保状态在外部调用前已经更新。',
+    },
+    {
+      question: 'Slither 是什么类型的智能合约安全工具？',
+      options: [
+        '链上实时监控工具',
+        '基于 Python 的静态分析框架，无需运行合约即可检测潜在漏洞',
+        '去中心化的合约审计平台',
+        '合约性能基准测试工具',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'Slither 是由 Trail of Bits 开发的 Solidity 静态分析框架，能够在不部署合约的情况下分析源代码，检测常见漏洞模式、代码优化机会和最佳实践违规。',
+    },
+    {
+      question: '关于智能合约的访问控制，以下哪项描述是正确的？',
+      options: [
+        '所有函数都应该设为 public，确保去中心化',
+        '关键管理函数应使用 onlyOwner 或基于角色的访问控制（如 OpenZeppelin AccessControl）限制调用权限',
+        '只要合约代码开源，就不需要访问控制',
+        '访问控制只需在前端实现即可',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '敏感操作（如铸币、暂停合约、提取资金）必须通过链上访问控制保护。OpenZeppelin 的 Ownable 和 AccessControl 提供了成熟的权限管理方案，前端验证可以被绕过，不能作为安全保障。',
     },
   ],
   // 默认通用题目
