@@ -5,7 +5,7 @@
 ![date](https://img.shields.io/badge/Date-2025--09-orange)
 ![difficulty](https://img.shields.io/badge/Difficulty-Intermediate-yellow)
 
-> 💡 Imagine a magical clock that rings precisely every 10 minutes, no matter how many people are in the room. When there are more people, the bell becomes harder to strike; when there are fewer, it becomes easier. This is the secret of Bitcoin's difficulty adjustment.
+> 💡 Imagine a magical clock that rings precisely every 10 minutes, no matter how many people are in the room. When there are more people, the bell becomes harder to ring; when there are fewer, it becomes easier. This is the secret of Bitcoin's difficulty adjustment.
 
 ## Table of Contents
 
@@ -25,9 +25,9 @@ Have you ever wondered: why does Bitcoin always produce a block approximately ev
 **Real-world scenario comparison:**
 
 **Bus departures:**
-- Rush hour with many passengers: the bus company increases frequency — one every 5 minutes.
-- Late night with few passengers: the company reduces frequency — one every 20 minutes.
-- Requires a dispatcher to manually adjust based on passenger volume.
+- During the morning rush hour, bus companies have increased the frequency of buses to one every 5 minutes due to the large number of passengers.
+- Late at night, there are fewer people, so bus services are reduced to once every 20 minutes.
+- The dispatcher needs to manually adjust the schedule based on passenger flow.
 
 **Bitcoin block production:**
 - More miners → fierce competition → blocks found every 5 minutes.
@@ -82,16 +82,16 @@ Observe mining performance → Automatically adjust mining difficulty → Next c
 Bitcoin's difficulty adjustment is a **self-balancing system**:
 
 **When miners increase:**
-1. Competition intensifies, blocks come faster (e.g., every 5 minutes).
+1. Competition increases, blocks come faster (e.g., one block every 5 minutes).
 2. System detects deviation from target.
 3. Automatically increases difficulty, making mining harder.
 4. Block time returns to 10 minutes.
 
 **When miners decrease:**
-1. Competition eases, blocks come slower (e.g., every 20 minutes).
+1. Competition slows down and block generation becomes slower (e.g., one block every 20 minutes).
 2. System detects deviation from target.
 3. Automatically decreases difficulty, making mining easier.
-4. Block time returns to 10 minutes.
+4. Block generation time returns to 10 minutes.
 
 ```python
 def difficulty_adjustment_analogy():
@@ -121,12 +121,12 @@ Why 2,016 blocks? This is a carefully designed number:
 **Ideally:**
 - Each block takes 10 minutes.
 - 2,016 blocks = 2,016 × 10 minutes = 20,160 minutes = 14 days.
-- In other words, difficulty adjusts every two weeks.
+- In other words, difficulty level adjusts every two weeks.
 
 **Why choose 2 weeks?**
 - 🐌 **Too short**: Frequent adjustments cause system instability.
 - 🐌 **Too long**: Adjustments lag, can't respond in time.
-- ✅ **2 weeks**: Both stable and flexible — just right.
+- ✅ **2 weeks**: Both stable and flexible, just right.
 
 ### The Formula: Elementary Math Level
 
@@ -186,7 +186,7 @@ def adjustment_limits_demo():
             "with_limits": "Difficulty drops by at most 75%, requires several rounds to gradually adjust"
         },
         {
-            "scenario": "Hash power suddenly increases 100x",
+            "scenario": "Computing power suddenly increases 100x",
             "without_limits": "Difficulty spikes, possibly hours between blocks",
             "with_limits": "Difficulty increases by at most 4x, requires several rounds to gradually adjust"
         }
@@ -230,7 +230,7 @@ def historical_events():
         {
             "date": "May 2021",
             "event": "China bans Bitcoin mining",
-            "impact": "50% of hash power disappears instantly",
+            "impact": "50% of computing power disappears instantly",
             "difficulty_change": "Record-breaking drop",
             "result": "Network continues operating normally"
         }
@@ -249,7 +249,7 @@ def historical_events():
 historical_events()
 ```
 
-### The Data Speaks: 15 Years of Stability
+### The Data speaks for itself: 15 Years of Stability
 
 ```python
 def stability_statistics():
@@ -280,9 +280,9 @@ stability_statistics()
 
 ### Miner's Perspective: Automatic Earnings Balancer
 
-From a miner's perspective, difficulty adjustment is like an "automatic earnings balancer":
+From a miner's perspective, difficulty adjustment is like an "automatic profit balancer":
 
-**🏭 Mining farm owner's daily life:**
+**🏭 A mine owner's daily life:**
 
 ```python
 def miner_perspective():
@@ -374,32 +374,32 @@ difficulty_simulation()
 - **Too slow (1 hour)**: Poor user experience, too slow to confirm.
 - **10 minutes**: Ensures network sync without being too slow.
 
-Like cooking noodles — too short and they're raw, too long and they're mushy — 10 minutes is just right.
+Like cooking noodles, too short and they're raw, too long and they're mushy. 10 minutes is just right.
 
 ### Q2: What happens if there's a global power outage?
-**A:** This is an extreme hypothetical, but the system has countermeasures:
+**A:** This is extremely hypothetical, but the system has countermeasures:
 - Short outage: Difficulty automatically drops; remaining miners continue.
 - Long outage: If all of humanity loses power, Bitcoin isn't the biggest problem.
 - After recovery: The network resumes from the last block as if nothing happened.
 
 ### Q3: Can difficulty adjustment be manipulated?
 **A:** Nearly impossible:
-- Would require controlling 51% of hash power.
+- Would require controlling 51% of computing power to have an impact.
 - Even short-term manipulation causes enormous economic losses.
 - The system design makes honest mining more profitable than cheating.
-- The entire network monitors, and any anomaly is detected.
+- With full online monitoring, any anomalies will be detected.
 
 ### Q4: Why not adjust difficulty in real-time?
-**A:** Real-time adjustment would easily cause oscillation:
-- **Problem**: Miners coming and going, difficulty swings high and low.
-- **Consequence**: System instability, unpredictable block times.
+**A:** Real-time adjustment would easily cause fluctuations:
+- **Problem**: Miners coming and going, difficulty level fluctuates.
+- **Consequences**: System instability, hence block generation time become unpredictable.
 - **Solution**: Adjusting every 2 weeks is both stable and responsive to changes.
 
 ### Q5: How do other cryptocurrencies handle difficulty adjustment?
 **A:** Each has its own approach:
 - **Ethereum**: Has switched to PoS; no difficulty adjustment needed.
 - **Litecoin**: Basically copied Bitcoin, but with a 2.5-minute target.
-- **BCH**: Can adjust every block — more aggressive.
+- **BCH**: Each block can be adjusted, making it more aggressive.
 - **Bitcoin**: The most conservative and stable, proven over time.
 
 ## Summary
@@ -408,7 +408,7 @@ Difficulty adjustment is one of Bitcoin's most elegant designs, solving a seemin
 
 ### 🎯 Key Takeaways
 - **Smart clock**: An automatic timekeeping system requiring no human intervention.
-- **Self-balancing**: Automatically adjusts when hash power changes, maintaining stability.
+- **Self-balancing**: Automatically adjusts when computing power changes, maintaining stability.
 - **Simple yet effective**: Solves complex problems with elementary math.
 - **Battle-tested**: Has never failed in 15 years.
 
