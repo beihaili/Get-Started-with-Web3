@@ -19,10 +19,10 @@ export default function LanguageSwitcher() {
 
   return (
     <button
-  	onClick={toggleLang}
-  	aria-label={lang === 'zh' ? 'Switch to English' : 'Switch to Chinese'}
-  	className="flex items-center gap-1 rounded-lg px-2 py-1 text-sm text-slate-400 transition-colors hover:bg-slate-800 hover:text-white"
-  	title={lang === 'zh' ? 'Switch to English' : 'Switch to Chinese'}
+      onClick={toggleLang}
+      aria-label={lang === 'zh' ? 'Switch to English' : 'Switch to Chinese'}
+      className="flex items-center gap-1 rounded-lg px-2 py-1 text-sm text-slate-400 transition-colors hover:bg-slate-800 hover:text-white"
+      title={lang === 'zh' ? 'Switch to English' : '切换中文'}
 >
       <Globe className="h-4 w-4" />
       <span>{lang === 'zh' ? 'EN' : '\u4e2d\u6587'}</span>
