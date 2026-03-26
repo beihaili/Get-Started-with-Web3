@@ -5,7 +5,7 @@
 ![date](https://img.shields.io/badge/Date-2025--06-orange)
 ![difficulty](https://img.shields.io/badge/Difficulty-Intermediate-yellow)
 
-> 💡 Self-learning Web3 is no easy task. As a newcomer to Web3, I'm putting together the simplest and most intuitive tutorials for beginners.I've integrated high-quality resources from the open-source community to guide you from beginner to expert in Web3. I'll update 1-3 lessons per week.
+> 💡 Self-learning Web3 is no easy task. As a newcomer to Web3, I'm putting together the simplest and most intuitive tutorials for beginners. I've integrated high-quality resources from the open-source community to guide you from beginner to expert in Web3. I'll update 1-3 lessons per week.
 >
 > Follow me on Twitter: [@bhbtc1337](https://twitter.com/bhbtc1337)
 >
@@ -177,7 +177,7 @@ Ensure that the host or server you plan to run the full node on meets the follow
 - View unconfirmed transaction count
     `bitcoin-cli getmempoolinfo`
 
-## Practical Experience and Pitfall avoidance guide for Running a Bitcoin Node
+## Practical Experience and Pitfall Guide for Running a Bitcoin Node
 
 When running a Bitcoin node in practice, you may encounter various technical challenges. Below are key considerations and solutions based on real-world experience to help you avoid common pitfalls and keep your node running stably.
 
