@@ -174,21 +174,21 @@ export const useContentStore = create((set, get) => ({
     }),
 
   /**
-   * @param {string} lessonPath - Path to the lesson content.
+   * @param {string} cacheKey - The cache key in {lang}/{lessonPath} format.
    * @returns {ContentCacheEntry|undefined} The cached content entry.
    */
-  getCachedContent: (lessonPath) => {
+  getCachedContent: (cacheKey) => {
     const { contentCache } = get();
-    return contentCache[lessonPath];
+    return contentCache[cacheKey];
   },
 
   /**
-   * @param {string} lessonPath - Path to the lesson content.
+   * @param {string} cacheKey - The cache key in {lang}/{lessonPath} format.
    */
-  removeCachedContent: (lessonPath) => {
+  removeCachedContent: (cacheKey) => {
     const { contentCache } = get();
     const newCache = { ...contentCache };
-    delete newCache[lessonPath];
+    delete newCache[cacheKey];
     set({ contentCache: newCache });
   },
 

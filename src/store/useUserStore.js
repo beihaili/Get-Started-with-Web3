@@ -17,6 +17,7 @@ import {
  * @typedef {Object} BadgeMetadata
  * @property {string} moduleId - The module associated with the badge.
  * @property {number} timestamp - When the badge was earned.
+ * @property {...any} [extra] - Additional metadata fields via spread.
  */
 
 /**
@@ -85,6 +86,7 @@ export const useUserStore = create(
 
       // Actions - 学习进度
       /**
+       * Mark a lesson as completed. Adds 100 XP, updates streak, updates title, and checks for special badges.
        * @param {string} lessonId - ID of the completed lesson.
        */
       markLessonComplete: (lessonId) => {

@@ -105,7 +105,7 @@ export const useSearchStore = create(
 
       // Actions - 键盘导航
       /**
-       * Highlighting next search result with circular wrap.
+       * Highlights the next search result with circular wrap.
        */
       selectNextResult: () => {
         const { selectedResultIndex, searchResults } = get();
@@ -117,7 +117,7 @@ export const useSearchStore = create(
       },
 
       /**
-       * Highlighting previous search result with circular wrap.
+       * Highlights the previous search result with circular wrap.
        */
       selectPreviousResult: () => {
         const { selectedResultIndex, searchResults } = get();
@@ -176,7 +176,7 @@ export const useSearchStore = create(
 
       // 获取当前选中的结果
       /**
-       * @returns {Object} Currently highlighted search result.
+       * @returns {Object|undefined} Currently highlighted search result.
        */
       getSelectedResult: () => {
         const { searchResults, selectedResultIndex } = get();
