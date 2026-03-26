@@ -63,7 +63,8 @@
     "moduleCompleteTitle": "{{moduleTitle}} All Complete!",
     "moduleCompleteDesc": "Congratulations on completing all lessons in this module",
     "shareAchievement": "Share Achievement",
-    "readingTime": "{{minutes}} min read"
+    "readingTime": "{{minutes}} min read",
+    "startLab": "Start Lab →"
   },
   "badges": {
     "pageTitle": "Badge Collection | Web3 Starter",
