@@ -181,9 +181,16 @@ const DashboardPage = () => {
                       <Icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-slate-900 dark:text-white">
-                        {module.title}
-                      </h3>
+                      <div className="flex items-center gap-2">
+                        <h3 className="text-xl font-bold text-slate-900 dark:text-white">
+                          {module.title}
+                        </h3>
+                        {module.id === 'module-7' && (
+                          <span className="px-2 py-0.5 text-xs rounded-full bg-rose-500/10 text-rose-400 border border-rose-500/20">
+                            🔧 实战模块
+                          </span>
+                        )}
+                      </div>
                       <p className="text-slate-500 dark:text-slate-400">
                         {t('dashboard.lessonsCount', { count: module.lessons.length })}
                       </p>
