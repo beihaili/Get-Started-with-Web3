@@ -30,4 +30,12 @@ describe('courseData', () => {
       expect(new Set(ids).size).toBe(ids.length);
     });
   });
+
+  it('lessons with labUrl should have valid GitHub URLs', () => {
+    const lessonsWithLab = COURSE_DATA.flatMap((m) => m.lessons).filter((l) => l.labUrl);
+    expect(lessonsWithLab.length).toBeGreaterThanOrEqual(2);
+    lessonsWithLab.forEach((lesson) => {
+      expect(lesson.labUrl).toMatch(/^https:\/\/github\.com\/beihaili\//);
+    });
+  });
 });

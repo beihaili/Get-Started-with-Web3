@@ -294,12 +294,14 @@ export const COURSE_DATA = [
         id: '7-1',
         title: '从零部署 ERC-20 代币',
         path: 'Web3BuilderLab/01_DeployERC20',
+        labUrl: 'https://github.com/beihaili/web3-lab-deploy-token',
         fallbackContent: FALLBACK,
       },
       {
         id: '7-2',
         title: '构建你的第一个 DApp',
         path: 'Web3BuilderLab/02_BuildFirstDApp',
+        labUrl: 'https://github.com/beihaili/web3-lab-first-dapp',
         fallbackContent: FALLBACK,
       },
       {
