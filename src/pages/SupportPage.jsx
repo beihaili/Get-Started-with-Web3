@@ -1,6 +1,7 @@
+import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Heart, Wallet, Coffee, ArrowLeft, Star } from 'lucide-react';
+import { Heart, Wallet, Coffee, ArrowLeft, Star, Copy, Check } from 'lucide-react';
 import { DONATION_LINKS, CRYPTO_WALLETS, SPONSORS } from '../config/sponsorData';
 import SeoHead from '../components/SeoHead';
 import LanguageSwitcher from '../components/LanguageSwitcher';
@@ -11,6 +12,25 @@ import LanguageSwitcher from '../components/LanguageSwitcher';
 const SupportPage = () => {
   const { lang } = useParams();
   const { t } = useTranslation();
+  const [copiedAddress, setCopiedAddress] = useState(null);
+
+  const handleCopy = async (address) => {
+    try {
+      await navigator.clipboard.writeText(address);
+      setCopiedAddress(address);
+      setTimeout(() => setCopiedAddress(null), 2000);
+    } catch {
+      // Fallback for older browsers
+      const textarea = document.createElement('textarea');
+      textarea.value = address;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+      setCopiedAddress(address);
+      setTimeout(() => setCopiedAddress(null), 2000);
+    }
+  };
 
   const siteUrl = 'https://beihaili.github.io/Get-Started-with-Web3/';
   const canonicalUrl = `${siteUrl}${lang}/support`;
@@ -101,7 +121,10 @@ const SupportPage = () => {
             {CRYPTO_WALLETS.map((wallet) => (
               <div
                 key={wallet.chain}
-                className="flex items-start gap-4 p-5 bg-slate-900/60 border border-slate-700/50 rounded-xl"
+                className="flex items-start gap-4 p-5 bg-slate-900/60 border border-slate-700/50
+                  rounded-xl cursor-pointer hover:border-cyan-500/40 transition-all group"
+                onClick={() => handleCopy(wallet.address)}
+                title="Click to copy address"
               >
                 <div
                   className="px-3 py-1.5 bg-slate-800 rounded-lg text-sm font-mono font-bold
@@ -109,9 +132,19 @@ const SupportPage = () => {
                 >
                   {wallet.chain}
                 </div>
-                <div className="min-w-0">
+                <div className="min-w-0 flex-1">
                   <div className="text-xs text-slate-400 mb-1">{wallet.network}</div>
                   <div className="font-mono text-sm text-slate-200 break-all">{wallet.address}</div>
+                </div>
+                <div className="shrink-0 mt-1">
+                  {copiedAddress === wallet.address ? (
+                    <span className="flex items-center gap-1 text-xs text-green-400">
+                      <Check className="w-4 h-4" />
+                      Copied!
+                    </span>
+                  ) : (
+                    <Copy className="w-4 h-4 text-slate-500 group-hover:text-cyan-400 transition-colors" />
+                  )}
                 </div>
               </div>
             ))}

@@ -1,5 +1,6 @@
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Heart, Wallet } from 'lucide-react';
+import { Heart, Wallet, Copy, Check } from 'lucide-react';
 import { DONATION_LINKS, CRYPTO_WALLETS } from '../config/sponsorData';
 
 /**
@@ -8,6 +9,26 @@ import { DONATION_LINKS, CRYPTO_WALLETS } from '../config/sponsorData';
  */
 const DonationSection = () => {
   const { t } = useTranslation();
+  const [copiedAddress, setCopiedAddress] = useState(null);
+
+  const handleCopy = async (address) => {
+    try {
+      await navigator.clipboard.writeText(address);
+      setCopiedAddress(address);
+      setTimeout(() => setCopiedAddress(null), 2000);
+    } catch {
+      // Fallback for older browsers
+      const textarea = document.createElement('textarea');
+      textarea.value = address;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+      setCopiedAddress(address);
+      setTimeout(() => setCopiedAddress(null), 2000);
+    }
+  };
+
   return (
     <div className="max-w-3xl mx-auto mb-16">
       <h2 className="text-2xl font-bold text-white text-center mb-2">{t('donation.title')}</h2>
@@ -49,7 +70,10 @@ const DonationSection = () => {
         {CRYPTO_WALLETS.map((wallet) => (
           <div
             key={wallet.chain}
-            className="flex items-start gap-3 p-4 bg-slate-800 border border-slate-700 rounded-xl"
+            className="flex items-start gap-3 p-4 bg-slate-800 border border-slate-700 rounded-xl
+              cursor-pointer hover:border-cyan-500/40 transition-all group"
+            onClick={() => handleCopy(wallet.address)}
+            title="Click to copy address"
           >
             <div
               className="px-2.5 py-1 bg-slate-700 rounded-md text-xs font-mono font-bold
@@ -57,9 +81,19 @@ const DonationSection = () => {
             >
               {wallet.chain}
             </div>
-            <div className="min-w-0">
+            <div className="min-w-0 flex-1">
               <div className="text-xs text-slate-400 mb-1">{wallet.network}</div>
               <div className="font-mono text-xs text-slate-200 break-all">{wallet.address}</div>
+            </div>
+            <div className="shrink-0 mt-0.5">
+              {copiedAddress === wallet.address ? (
+                <span className="flex items-center gap-1 text-xs text-green-400">
+                  <Check className="w-3.5 h-3.5" />
+                  Copied!
+                </span>
+              ) : (
+                <Copy className="w-3.5 h-3.5 text-slate-500 group-hover:text-cyan-400 transition-colors" />
+              )}
             </div>
           </div>
         ))}
