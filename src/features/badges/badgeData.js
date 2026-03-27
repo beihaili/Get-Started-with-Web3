@@ -1,4 +1,15 @@
-import { Rocket, Brain, Crown, Shield, Globe, Flame, Target, Calendar, Layers } from 'lucide-react';
+import {
+  Rocket,
+  Brain,
+  Crown,
+  Shield,
+  Globe,
+  Flame,
+  Target,
+  Calendar,
+  Layers,
+  Network,
+} from 'lucide-react';
 
 /**
  * 平台上线日期（用于 early-adopter 徽章判定）
@@ -130,7 +141,26 @@ export const ACHIEVEMENT_BADGES = {
       title: '🌍 Web3 生态专家',
       experience: 300,
       unlockedFeatures: ['多链生态数据看板', 'DeFi 收益计算器'],
-      nextBadgeHint: '恭喜完成所有模块！你已成为真正的 Web3 Builder',
+      nextBadgeHint: '继续学习跨链与 Layer 2 深度解析',
+    },
+  },
+  'module-9': {
+    id: 'l2-cross-chain-expert',
+    name: 'L2 Cross-Chain Expert',
+    title: '跨链桥梁大师',
+    description: '深入理解 Layer 2 扩容技术和跨链互操作性',
+    icon: Network,
+    rarity: 'Epic',
+    color: 'from-pink-500 to-fuchsia-500',
+    glowColor: 'shadow-pink-500/50',
+    borderColor: 'border-pink-500',
+    bgColor: 'bg-pink-500/10',
+    requirement: '完成跨链与 Layer 2 深度解析的所有 5 个课程',
+    rewards: {
+      title: '🌉 跨链桥梁大师',
+      experience: 300,
+      unlockedFeatures: ['L2 Gas 费对比工具', '跨链桥安全评估'],
+      nextBadgeHint: '继续学习 DAO 与去中心化治理',
     },
   },
 };

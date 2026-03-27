@@ -1,4 +1,4 @@
-import { BookOpen, BrainCircuit, Shield, Globe, Cpu, Layers } from 'lucide-react';
+import { BookOpen, BrainCircuit, Shield, Globe, Cpu, Layers, Network } from 'lucide-react';
 
 // GitHub 配置
 export const GITHUB_USERNAME = 'beihaili';
@@ -280,6 +280,44 @@ export const COURSE_DATA = [
         id: '6-6',
         title: 'Web3 实用工具大全',
         path: '其它学习资源整理/实用工具',
+        fallbackContent: FALLBACK,
+      },
+    ],
+  },
+  {
+    id: 'module-9',
+    title: '跨链与 Layer 2 深度解析',
+    icon: Network,
+    color: 'from-pink-400 to-fuchsia-400',
+    lessons: [
+      {
+        id: '9-1',
+        title: '为什么需要扩容',
+        path: 'L2CrossChain/01_WhyScaling',
+        fallbackContent: FALLBACK,
+      },
+      {
+        id: '9-2',
+        title: 'Rollup 原理详解',
+        path: 'L2CrossChain/02_RollupPrinciples',
+        fallbackContent: FALLBACK,
+      },
+      {
+        id: '9-3',
+        title: '主流 L2 生态对比',
+        path: 'L2CrossChain/03_L2Ecosystem',
+        fallbackContent: FALLBACK,
+      },
+      {
+        id: '9-4',
+        title: '跨链桥与互操作性',
+        path: 'L2CrossChain/04_CrossChainBridges',
+        fallbackContent: FALLBACK,
+      },
+      {
+        id: '9-5',
+        title: 'L2 实操指南',
+        path: 'L2CrossChain/05_L2PracticalGuide',
         fallbackContent: FALLBACK,
       },
     ],

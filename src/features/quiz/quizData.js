@@ -1782,6 +1782,257 @@ export const QUIZ_BANK = {
         'OpenZeppelin 提供了业界标准的安全合约库，包括 ERC-20、ERC-721 等代币标准的参考实现，被大量项目采用。',
     },
   ],
+  // Module 9: 跨链与 Layer 2 深度解析
+  '9-1': [
+    // 为什么需要扩容
+    {
+      question: '区块链不可能三角指的是哪三个特性无法同时完美实现？',
+      options: [
+        '速度、费用、安全性',
+        '去中心化、安全性、可扩展性',
+        '隐私、透明、效率',
+        '兼容性、安全性、去中心化',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'Vitalik 提出的区块链不可能三角指去中心化、安全性和可扩展性三者无法同时最优化，这是理解扩容问题的根本框架。',
+    },
+    {
+      question: '以太坊主网当前的吞吐量大约是多少 TPS？',
+      options: ['约 100 TPS', '约 15 TPS', '约 1000 TPS', '约 1 TPS'],
+      correctAnswer: 1,
+      explanation:
+        '以太坊主网为了保障去中心化和安全性，吞吐量被限制在约 15 TPS，这是推动 L2 扩容的根本原因。',
+    },
+    {
+      question: '以太坊最终选择的扩容路线是什么？',
+      options: ['增大区块容量', '执行分片', '以 Rollup 为中心的路线图', '迁移到新链'],
+      correctAnswer: 2,
+      explanation:
+        '2020 年 Vitalik 发表文章确立了以 Rollup 为中心的路线图，L1 专注结算和数据可用性，L2 负责执行。',
+    },
+    {
+      question: 'EIP-4844 升级引入了什么新特性来降低 Rollup 成本？',
+      options: ['更大的区块', 'Blob 数据类型', '更快的出块时间', '新的共识算法'],
+      correctAnswer: 1,
+      explanation:
+        'EIP-4844 引入了 Blob 数据类型，为 Rollup 提供独立的数据存储空间和费用市场，将数据发布成本降低约 90-95%。',
+    },
+    {
+      question: '2020 年 DeFi Summer 期间，以太坊 Gas 费飙升的根本原因是什么？',
+      options: [
+        '以太坊节点数量减少',
+        '矿工人为抬高价格',
+        '区块空间供不应求，交易通过竞价获取打包权',
+        '以太坊代码出现 bug',
+      ],
+      correctAnswer: 2,
+      explanation:
+        '以太坊的 Gas 机制本质上是拍卖市场，当区块空间供不应求时，用户需要出更高的 Gas 价格来竞争有限的区块空间。',
+    },
+  ],
+  '9-2': [
+    // Rollup 原理详解
+    {
+      question: 'Rollup 的核心理念可以概括为？',
+      options: [
+        '把所有计算都放在链上',
+        '把计算搬到链下，把数据留在链上',
+        '完全脱离主链独立运行',
+        '用更快的共识算法替代 PoS',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'Rollup 在 L2 执行交易（链下计算），但将交易数据和证明提交回 L1（链上数据），从而继承 L1 的安全性。',
+    },
+    {
+      question: 'Optimistic Rollup 从 L2 提款到 L1 通常需要等待多长时间？',
+      options: ['即时到账', '约 1 小时', '约 7 天', '约 30 天'],
+      correctAnswer: 2,
+      explanation:
+        'Optimistic Rollup 采用欺诈证明机制，需要 7 天的挑战窗口期，期间任何人都可以提交欺诈证明来质疑不正确的状态。',
+    },
+    {
+      question: 'ZK Rollup 相比 Optimistic Rollup 的主要优势是什么？',
+      options: [
+        'EVM 兼容性更好',
+        '不需要等待挑战期，提交即确认',
+        '开发成本更低',
+        '支持更多编程语言',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'ZK Rollup 用数学证明保证状态正确性，不需要挑战期，提款可以在证明验证后立即完成，通常几分钟到几小时。',
+    },
+    {
+      question: 'Validium 模式与标准 Rollup 的主要区别是什么？',
+      options: ['不使用任何证明', '交易数据存储在链下而非 L1', '不需要排序器', '只支持 NFT 交易'],
+      correctAnswer: 1,
+      explanation:
+        'Validium 使用 ZK 有效性证明但将数据存储在链下（由 DAC 管理），大幅降低成本，但数据可用性安全性低于标准 Rollup。',
+    },
+    {
+      question: 'ZK-STARK 相比 ZK-SNARK 的一个关键优势是什么？',
+      options: ['证明大小更小', '不需要可信设置且具有量子抗性', '验证速度更快', '支持更多编程语言'],
+      correctAnswer: 1,
+      explanation:
+        'ZK-STARK 的全称是 Scalable Transparent Argument of Knowledge，其中 Transparent 意味着不需要可信设置仪式，同时具备量子抗性。',
+    },
+  ],
+  '9-3': [
+    // 主流 L2 生态对比
+    {
+      question: '目前 TVL 最高的以太坊 L2 是哪个？',
+      options: ['Optimism', 'Base', 'Arbitrum', 'zkSync'],
+      correctAnswer: 2,
+      explanation:
+        'Arbitrum 是目前 TVL 最高的以太坊 L2，拥有最丰富的 DeFi 生态，GMX、Camelot 等原生协议是其生态亮点。',
+    },
+    {
+      question: 'OP Stack 是什么？',
+      options: [
+        '一种新的共识算法',
+        '一个模块化的开源 L2 技术栈',
+        'Optimism 的代币标准',
+        '一个跨链桥协议',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'OP Stack 是 Optimism 推出的模块化开源 L2 技术栈，Base、Zora 等多条链都基于 OP Stack 构建，共同组成 Superchain。',
+    },
+    {
+      question: 'Base 相比其他 L2 的独特优势是什么？',
+      options: [
+        '使用 ZK 证明',
+        '有自己的原生代币',
+        '依托 Coinbase 的用户基础和合规法币入金通道',
+        '支持 Cairo 编程语言',
+      ],
+      correctAnswer: 2,
+      explanation:
+        'Base 由 Coinbase 基于 OP Stack 构建，拥有超过 1 亿 Coinbase 注册用户的潜在导入和合规法币入金通道，这是其独特的竞争优势。',
+    },
+    {
+      question: 'zkSync Era 的一大创新特色是什么？',
+      options: [
+        '使用 Cairo 编程语言',
+        '协议级别的原生账户抽象',
+        '21 个超级节点共识',
+        '支持比特币跨链',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'zkSync Era 在协议层实现了原生账户抽象，每个账户都是智能合约账户，支持 Gas 代付、社交恢复、批量交易等高级功能。',
+    },
+    {
+      question: 'StarkNet 使用什么编程语言编写智能合约？',
+      options: ['Solidity', 'Rust', 'Cairo', 'Move'],
+      correctAnswer: 2,
+      explanation:
+        'StarkNet 使用专门为 STARK 证明系统设计的 Cairo 语言，虽然需要开发者学习新语言，但能实现更高效的 ZK 证明生成。',
+    },
+  ],
+  '9-4': [
+    // 跨链桥与互操作性
+    {
+      question: 'Lock-and-Mint 跨链桥模式的工作原理是什么？',
+      options: [
+        '直接销毁源链代币并在目标链铸造',
+        '在源链锁定资产，在目标链铸造等值的包装代币',
+        '通过原子交换直接交换两条链上的资产',
+        '将资产转入中心化交易所再提到另一条链',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'Lock-and-Mint 是最常见的跨链模式：在源链合约中锁定原始资产，在目标链铸造等值的包装版（Wrapped）代币。',
+    },
+    {
+      question: '以下哪个跨链桥安全事件损失最大？',
+      options: [
+        'Wormhole ($320M)',
+        'Nomad ($190M)',
+        'Ronin Bridge ($625M)',
+        'Harmony Horizon ($100M)',
+      ],
+      correctAnswer: 2,
+      explanation:
+        'Ronin Bridge（Axie Infinity 侧链桥）在 2022 年 3 月遭受朝鲜黑客组织 Lazarus Group 攻击，损失约 6.25 亿美元，是历史上最大的跨链桥安全事件。',
+    },
+    {
+      question: '跨链桥中安全等级最高的是哪种类型？',
+      options: ['外部验证桥', '原生桥（Rollup 官方桥）', '乐观验证桥', '多签桥'],
+      correctAnswer: 1,
+      explanation:
+        '原生桥（如 Arbitrum 和 Optimism 官方桥）的安全性等同于 L1 本身，因为跨链消息的验证由以太坊共识保证。',
+    },
+    {
+      question: 'LayerZero V2 使用什么机制来验证跨链消息？',
+      options: [
+        '单一 Oracle',
+        'DVN（去中心化验证网络），应用可自选验证者组合',
+        '比特币矿工验证',
+        '中心化服务器',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'LayerZero V2 引入了 DVN（Decentralized Verifier Networks），取代了 V1 的 Oracle + Relayer 模型，每个应用可以选择自己信任的 DVN 组合。',
+    },
+    {
+      question: '使用跨链桥时，以下哪个是最佳安全实践？',
+      options: [
+        '一次性转移所有资产以节省 Gas',
+        '只使用最新上线的桥',
+        '分批转移大额资产，先用小额测试',
+        '选择手续费最低的桥',
+      ],
+      correctAnswer: 2,
+      explanation:
+        '分批转移和先用小额测试是跨链桥使用的基本安全实践，可以有效降低因桥故障或攻击导致的资产损失风险。',
+    },
+  ],
+  '9-5': [
+    // L2 实操指南
+    {
+      question: '使用 Arbitrum 官方桥从 L1 存款到 L2 大约需要多长时间？',
+      options: ['即时到账', '约 10-15 分钟', '约 1 小时', '约 7 天'],
+      correctAnswer: 1,
+      explanation:
+        'L1→L2 存款方向通常只需 10-15 分钟（等待以太坊确认后 Arbitrum 确认）。7 天等待期只适用于 L2→L1 提款方向。',
+    },
+    {
+      question: '在 L2 上使用 DeFi 前，需要确保钱包中有什么用于支付 Gas？',
+      options: ['USDC', 'ARB 代币', 'ETH', '任何代币都可以'],
+      correctAnswer: 2,
+      explanation:
+        '大部分以太坊 L2（Arbitrum、Optimism、Base 等）使用 ETH 支付 Gas 费用，需要确保钱包中有足够的 ETH 作为 Gas 储备。',
+    },
+    {
+      question: 'EIP-4844 升级后，L2 上一笔 Uniswap 交换的 Gas 费大约是多少？',
+      options: ['$3-30', '$0.50-1.00', '$0.01-0.10', '完全免费'],
+      correctAnswer: 2,
+      explanation:
+        'EIP-4844 升级后，Arbitrum 等 L2 上的 Uniswap 交换 Gas 费大幅降低至约 $0.01-0.10，相比 L1 的 $3-30 降低了约 100-300 倍。',
+    },
+    {
+      question: '对于大额 DeFi 交易（$1000+），最推荐使用哪条 L2？',
+      options: ['Base', 'StarkNet', 'Arbitrum', 'zkSync'],
+      correctAnswer: 2,
+      explanation:
+        'Arbitrum 拥有所有 L2 中最深的 DeFi 流动性，大额交易的滑点最低，主流协议（Uniswap、Aave、GMX 等）都有部署。',
+    },
+    {
+      question: '在 L2 上使用 DeFi 时，以下哪个不是常见的"坑"？',
+      options: [
+        '包装代币与原生代币混淆',
+        '忘记留 ETH 作为 Gas 费',
+        'L2 的交易无法在区块浏览器上查看',
+        '排序器单点故障风险',
+      ],
+      correctAnswer: 2,
+      explanation:
+        'L2 的交易完全可以在对应的区块浏览器上查看（如 Arbiscan、Basescan 等）。常见的坑包括代币混淆、Gas 储备不足和排序器风险。',
+    },
+  ],
   // 默认通用题目
   default: [
     {
