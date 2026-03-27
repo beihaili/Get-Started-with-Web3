@@ -2568,6 +2568,280 @@ export const QUIZ_BANK = {
       explanation: '分散资金降低单点风险，定期检查和撤销不必要的代币授权减少被攻击面。',
     },
   ],
+  '10-1': [
+    // DAO 是什么
+    {
+      question: 'DAO 的全称是什么？',
+      options: [
+        'Digital Autonomous Organization',
+        'Decentralized Autonomous Organization',
+        'Distributed Application Object',
+        'Decentralized Application Ontology',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'DAO 是 Decentralized Autonomous Organization（去中心化自治组织）的缩写，由智能合约驱动、社区成员共同治理。',
+    },
+    {
+      question: '2016 年 The DAO 事件中，黑客利用了什么漏洞？',
+      options: ['私钥泄露', '重入攻击（Reentrancy Attack）', '51% 攻击', '闪电贷攻击'],
+      correctAnswer: 1,
+      explanation: 'The DAO 的智能合约存在重入攻击漏洞，黑客利用此漏洞盗走了约 360 万个 ETH。',
+    },
+    {
+      question: 'The DAO 事件后，以太坊社区的处理结果是什么？',
+      options: [
+        '什么都没做',
+        '实施硬分叉回滚攻击交易，产生了 ETH 和 ETC 两条链',
+        '关闭了以太坊网络',
+        '修改了比特币协议',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '以太坊社区投票决定硬分叉回滚攻击交易，形成了以太坊（ETH）和以太坊经典（ETC）两条链。',
+    },
+    {
+      question: '以下哪种不是 DAO 的核心特征？',
+      options: ['透明性', '无许可参与', '中心化管理', '代码即规则'],
+      correctAnswer: 2,
+      explanation:
+        'DAO 的核心特征包括透明性、无许可参与、代码即规则等，中心化管理恰恰是 DAO 要摒弃的。',
+    },
+    {
+      question: '以下哪个是协议 DAO 的代表？',
+      options: ['Friends With Benefits', 'PleasrDAO', 'MakerDAO', 'ConstitutionDAO'],
+      correctAnswer: 2,
+      explanation:
+        'MakerDAO 是典型的协议 DAO，管理着 DAI 稳定币协议的参数和运营。FWB 是社交 DAO，PleasrDAO 是收藏 DAO。',
+    },
+  ],
+  '10-2': [
+    // 治理机制设计
+    {
+      question: '一币一票（One Token, One Vote）机制的最大缺点是什么？',
+      options: [
+        '投票速度太慢',
+        '大户（Whale）投票权过大，可能导致寡头治理',
+        '不支持 ERC-20 代币',
+        '需要太多 Gas 费',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '一币一票的最大问题是富人治理——持有大量代币的大户投票权远超普通用户，可能导致决策被少数人控制。',
+    },
+    {
+      question: '委托治理（Delegated Voting）的关键特性是什么？',
+      options: [
+        '委托后代币自动转移给代表',
+        '委托只转移投票权，代币仍在原持有者地址，且可随时撤销',
+        '委托后不能撤回',
+        '只有大户才能委托',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '委托治理只转移投票权而不转移代币，且委托者可以随时收回投票权，重新自己投票或更换代表。',
+    },
+    {
+      question: '时间锁（Timelock）在 DAO 治理中的作用是什么？',
+      options: [
+        '加快提案执行速度',
+        '在投票通过和实际执行之间设置等待期，给用户退出窗口',
+        '锁定代币不让交易',
+        '限制投票时间',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '时间锁在投票通过和执行之间设置强制等待期（如 48 小时），让用户有时间审查结果并在必要时撤出资金。',
+    },
+    {
+      question: '二次方投票（Quadratic Voting）中，获得 10 票需要多少个代币？',
+      options: ['10 个', '20 个', '50 个', '100 个'],
+      correctAnswer: 3,
+      explanation: '二次方投票中，投票成本等于票数的平方。10 票的成本 = 10² = 100 个代币。',
+    },
+    {
+      question: 'Snapshot 链下投票的最大优势是什么？',
+      options: [
+        '投票结果直接在链上执行',
+        '零 Gas 费，使用签名而非链上交易',
+        '只有大户才能参与',
+        '投票不可被查看',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'Snapshot 使用 EIP-712 签名而非链上交易进行投票，因此完全不需要 Gas 费，显著降低了参与门槛。',
+    },
+  ],
+  '10-3': [
+    // DAO 工具生态
+    {
+      question: 'Safe（Gnosis Safe）多签钱包的核心功能是什么？',
+      options: [
+        '自动执行交易',
+        '要求多个签名者中的指定数量共同批准才能执行交易',
+        '加密私钥',
+        '自动生成代币',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'Safe 是多签钱包，要求多个签名者中的指定数量（如 3/5）共同批准才能执行交易，是 DAO 国库管理的标配工具。',
+    },
+    {
+      question: 'OpenZeppelin Governor 合约中，GovernorVotesQuorumFraction(4) 表示什么？',
+      options: [
+        '需要 4 个人投票',
+        '法定人数为代币总供应量的 4%',
+        '投票持续 4 天',
+        '提案需要 4 个赞成票',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'GovernorVotesQuorumFraction(4) 设置法定人数为代币总供应量的 4%，提案需要达到这个投票量才有效。',
+    },
+    {
+      question: 'Coordinape 的工作原理是什么？',
+      options: [
+        '由管理员分配奖励',
+        '成员互相用 GIVE 代币评估贡献，按收到的 GIVE 比例分配奖励',
+        '根据代码提交量自动计算',
+        '所有人平均分配',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'Coordinape 让成员互相分配 GIVE 代币来评估彼此的贡献，最终按收到的 GIVE 比例分配这一轮的奖励资金。',
+    },
+    {
+      question: 'Nouns Builder 创建的 DAO 采用什么独特的机制？',
+      options: [
+        '每月空投代币',
+        '每日自动拍卖一个 NFT，拍卖收入进入国库，NFT 持有者投票治理',
+        '通过质押获得治理权',
+        '由创始人指定成员',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'Nouns Builder 采用 Nouns 模式：每天自动拍卖一个 NFT，拍卖收入 100% 进入 DAO 国库，NFT 持有者拥有投票权。',
+    },
+    {
+      question: '对于小型 DAO（< 50 人），推荐的工具组合是什么？',
+      options: [
+        'Governor + Tally + Llama',
+        'Safe 多签 + Snapshot + Discord',
+        '只用 Discord',
+        'Aragon + Hedgey + SourceCred',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '小型 DAO 应从简单开始：Safe 多签管理资金、Snapshot 零 Gas 费投票、Discord 日常沟通，成本低且上手快。',
+    },
+  ],
+  '10-4': [
+    // 知名 DAO 案例分析
+    {
+      question: 'MakerDAO 的紧急关停机制需要多少 MKR 才能触发？',
+      options: ['1,000 MKR', '10,000 MKR', '50,000 MKR', '100,000 MKR'],
+      correctAnswer: 2,
+      explanation:
+        'MakerDAO 的紧急关停需要 50,000 MKR（约占总供应量的 5%）来触发，既确保了严肃性又保留了应急能力。',
+    },
+    {
+      question: '2020 年 Uniswap 空投 UNI 代币时，每个符合条件的地址获得了多少？',
+      options: ['100 UNI', '200 UNI', '400 UNI', '1,000 UNI'],
+      correctAnswer: 2,
+      explanation:
+        '2020 年 9 月，Uniswap 向约 251,534 个曾使用过 Uniswap V1 或 V2 的地址各空投了 400 个 UNI。',
+    },
+    {
+      question: 'ConstitutionDAO 最终竞拍失败的直接原因是什么？',
+      options: [
+        '筹集的资金不够',
+        '对冲基金 Citadel CEO Ken Griffin 以更高价格竞拍成功',
+        '苏富比取消了拍卖',
+        '社区投票决定放弃',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'ConstitutionDAO 出价到 4,300 万美元，但 Citadel CEO Ken Griffin 以 4,320 万美元胜出。',
+    },
+    {
+      question: 'Nouns DAO 的 CC0 策略意味着什么？',
+      options: [
+        '只有 Nouns 持有者能使用品牌',
+        '任何人都可以无许可、免费使用 Nouns 的品牌和图像',
+        '需要付费授权使用',
+        '只在特定国家可用',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'CC0（Creative Commons Zero）意味着放弃所有版权，任何人都可以自由使用 Nouns 的品牌、图像和代码。',
+    },
+    {
+      question: 'Lido DAO 推出双重治理（Dual Governance）的目的是什么？',
+      options: [
+        '增加 LDO 代币的价值',
+        '让 stETH 持有者拥有否决权，防止 LDO 大户损害用户利益',
+        '加快投票速度',
+        '减少节点运营商数量',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '双重治理让实际的协议用户（stETH 持有者）拥有否决权，防止 LDO 大户做出损害用户利益的决策。',
+    },
+  ],
+  '10-5': [
+    // DAO 的挑战与未来
+    {
+      question: '大多数 DAO 的投票参与率通常在什么范围？',
+      options: ['30-50%', '20-30%', '10-20%', '低于 10%'],
+      correctAnswer: 3,
+      explanation:
+        '大多数 DAO 的投票参与率长期低于 10%，有些甚至不到 5%，远低于传统选举的 55-65%。',
+    },
+    {
+      question: 'Beanstalk 闪电贷治理攻击中，攻击者盗走了约多少资金？',
+      options: ['1,000 万美元', '5,000 万美元', '1.82 亿美元', '5 亿美元'],
+      correctAnswer: 2,
+      explanation:
+        '2022 年 4 月，攻击者通过闪电贷借入大量资金购买治理代币，投票通过恶意提案，盗走了约 1.82 亿美元。',
+    },
+    {
+      question: '怀俄明州 DAO 法案的核心贡献是什么？',
+      options: [
+        '禁止 DAO 在美国运营',
+        '允许 DAO 注册为 DAO LLC，成员责任限制在出资范围内',
+        '要求所有 DAO 向 SEC 注册',
+        '强制 DAO 使用特定区块链',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '2021 年怀俄明州成为美国第一个允许 DAO 注册为 DAO LLC 的州，成员责任被限制在出资范围内。',
+    },
+    {
+      question: '渐进去中心化（Progressive Decentralization）的核心理念是什么？',
+      options: [
+        '从一开始就完全去中心化',
+        '永远保持中心化',
+        '分阶段逐步将控制权移交给社区',
+        '只在法律要求时才去中心化',
+      ],
+      correctAnswer: 2,
+      explanation:
+        '渐进去中心化主张不在项目初期完全去中心化，而是分阶段逐步移交控制权，平衡效率和去中心化。',
+    },
+    {
+      question: '以下哪项不是 AI + DAO 融合的潜在应用？',
+      options: [
+        'AI 自动为复杂提案生成简明摘要',
+        'AI 模拟提案执行后的潜在影响',
+        'AI 完全替代人类进行所有治理决策',
+        'AI 监控投票模式检测治理攻击',
+      ],
+      correctAnswer: 2,
+      explanation:
+        'AI 在 DAO 中应扮演辅助角色（如摘要、模拟、监控），而非完全替代人类决策，保持人类的最终控制权至关重要。',
+    },
+  ],
+
   // 默认通用题目
   default: [
     {

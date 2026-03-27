@@ -17,6 +17,7 @@ const SOURCE_FOLDERS = [
   'Web3BuilderLab',
   'DeFiDeepDive',
   'L2CrossChain',
+  'DAOGovernance',
   '其它学习资源整理/DeFi',
   '其它学习资源整理/Etherum',
   '其它学习资源整理/Layer2',

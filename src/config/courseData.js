@@ -8,6 +8,7 @@ import {
   Wrench,
   Landmark,
   Network,
+  Vote,
 } from 'lucide-react';
 
 // GitHub 配置
@@ -400,6 +401,44 @@ export const COURSE_DATA = [
         id: '9-5',
         title: 'L2 实操指南',
         path: 'L2CrossChain/05_L2PracticalGuide',
+        fallbackContent: FALLBACK,
+      },
+    ],
+  },
+  {
+    id: 'module-10',
+    title: 'DAO 与去中心化治理',
+    icon: Vote,
+    color: 'from-amber-400 to-yellow-400',
+    lessons: [
+      {
+        id: '10-1',
+        title: 'DAO 是什么',
+        path: 'DAOGovernance/01_WhatIsDAO',
+        fallbackContent: FALLBACK,
+      },
+      {
+        id: '10-2',
+        title: '治理机制设计',
+        path: 'DAOGovernance/02_GovernanceMechanisms',
+        fallbackContent: FALLBACK,
+      },
+      {
+        id: '10-3',
+        title: 'DAO 工具生态',
+        path: 'DAOGovernance/03_DAOTools',
+        fallbackContent: FALLBACK,
+      },
+      {
+        id: '10-4',
+        title: '知名 DAO 案例分析',
+        path: 'DAOGovernance/04_DAOCaseStudies',
+        fallbackContent: FALLBACK,
+      },
+      {
+        id: '10-5',
+        title: 'DAO 的挑战与未来',
+        path: 'DAOGovernance/05_DAOChallenges',
         fallbackContent: FALLBACK,
       },
     ],
