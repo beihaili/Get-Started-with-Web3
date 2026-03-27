@@ -9,6 +9,7 @@ import {
   Calendar,
   Layers,
   Wrench,
+  Landmark,
   Network,
 } from 'lucide-react';
 
@@ -162,6 +163,25 @@ export const ACHIEVEMENT_BADGES = {
       experience: 300,
       unlockedFeatures: ['Builder Showcase 展示权', 'Build Challenge 参赛权'],
       nextBadgeHint: '试试构建自己的 Web3 项目并提交到 Showcase！',
+    },
+  },
+  'module-8': {
+    id: 'defi-expert',
+    name: 'DeFi Expert',
+    title: 'DeFi 专家',
+    description: '深入理解 DeFi 协议原理，掌握去中心化金融的核心机制',
+    icon: Landmark,
+    rarity: 'Epic',
+    color: 'from-violet-500 to-purple-500',
+    glowColor: 'shadow-violet-500/50',
+    borderColor: 'border-violet-500',
+    bgColor: 'bg-violet-500/10',
+    requirement: '完成 DeFi 深度解析的所有 5 个课程',
+    rewards: {
+      title: '🏦 DeFi 专家',
+      experience: 300,
+      unlockedFeatures: ['DeFi 协议分析工具', '收益率计算器'],
+      nextBadgeHint: '继续学习跨链与 Layer 2 深度解析',
     },
   },
   'module-9': {

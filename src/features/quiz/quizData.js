@@ -2274,6 +2274,300 @@ export const QUIZ_BANK = {
         '敏感操作（如铸币、暂停合约、提取资金）必须通过链上访问控制保护。OpenZeppelin 的 Ownable 和 AccessControl 提供了成熟的权限管理方案，前端验证可以被绕过，不能作为安全保障。',
     },
   ],
+  // Module 8: DeFi 深度解析
+  '8-1': [
+    {
+      question: 'DeFi 的全称是什么？',
+      options: [
+        'Digital Finance',
+        'Decentralized Finance',
+        'Distributed Finance',
+        'Direct Finance',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'DeFi 是 Decentralized Finance（去中心化金融）的缩写，指构建在公共区块链上的金融服务和应用。',
+    },
+    {
+      question: 'DeFi 中的"Money Legos"（金钱乐高）指的是什么概念？',
+      options: [
+        '代币的碎片化',
+        '不同 DeFi 协议可以像乐高积木一样自由组合，创造新金融产品',
+        '用乐高积木形状的 NFT 代表资产',
+        '一种特殊的代币标准',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '可组合性（Composability）是 DeFi 的核心特性，不同协议部署在同一区块链上，共享执行环境和代币标准，可以自由组合创造新产品。',
+    },
+    {
+      question: 'TVL（Total Value Locked）衡量的是什么？',
+      options: [
+        '协议的每日交易量',
+        '锁定在 DeFi 协议智能合约中的资产总价值',
+        '协议的年化收益率',
+        '协议的用户数量',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'TVL 是衡量 DeFi 协议和生态健康程度的核心指标，表示有多少资产被锁定在某个协议的智能合约中。',
+    },
+    {
+      question: '以下哪项不是 DeFi 相比传统金融的核心优势？',
+      options: [
+        '无许可（Permissionless）——任何人都可以访问',
+        '透明（Transparent）——代码开源，交易链上可查',
+        '有存款保险保障',
+        '全球化（Borderless）——不受地理边界限制',
+      ],
+      correctAnswer: 2,
+      explanation:
+        'DeFi 目前没有传统银行体系中的存款保险机制。无许可、透明和全球化是 DeFi 的核心优势。',
+    },
+    {
+      question: 'DeFi 技术栈架构中，"结算层"指的是什么？',
+      options: [
+        '前端用户界面',
+        '底层区块链（如以太坊），提供安全性和最终确认性',
+        '聚合器平台（如 1inch）',
+        'ERC-20 代币标准',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '结算层是 DeFi 技术栈的最底层，由区块链提供安全性和最终确认性。以太坊是最主要的 DeFi 结算层。',
+    },
+  ],
+  '8-2': [
+    {
+      question: 'Uniswap 使用的恒定乘积做市商公式是什么？',
+      options: ['x + y = k', 'x * y = k', 'x / y = k', 'x ^ y = k'],
+      correctAnswer: 1,
+      explanation:
+        'Uniswap 使用恒定乘积公式 x * y = k，其中 x 和 y 分别是池中两种代币的数量，k 是常数。',
+    },
+    {
+      question: '在 AMM 中，"无常损失"（Impermanent Loss）是什么？',
+      options: [
+        '由于手续费导致的交易损失',
+        '相比简单持有代币，将其放入流动性池可能导致的价值损失',
+        '由于 Gas 费波动导致的损失',
+        '因为代币价格下跌造成的投资损失',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '无常损失是指相比 HODL 两种代币，将它们放入 AMM 流动性池可能导致的价值差异。价格偏离越大，无常损失越大。',
+    },
+    {
+      question: 'Uniswap V3 相比 V2 的最大创新是什么？',
+      options: [
+        '支持更多代币种类',
+        '集中流动性——LP 可以选择在特定价格区间提供流动性',
+        '完全去除手续费',
+        '引入订单簿模式',
+      ],
+      correctAnswer: 1,
+      explanation: 'V3 允许 LP 选择提供流动性的价格区间（集中流动性），大幅提升了资本效率。',
+    },
+    {
+      question: '为什么大额交易在 AMM 中会产生较大的滑点？',
+      options: [
+        '因为手续费随交易金额线性增长',
+        '因为交易金额占池子比例越大，对池中代币比例的改变越大，价格偏移越多',
+        '因为矿工会对大额交易收取更高费用',
+        '因为大额交易需要更长的确认时间',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '在 AMM 中，交易金额占池子的比例越大，对池中代币比例的改变越大，导致实际成交价格偏离预期价格越多。',
+    },
+    {
+      question: 'LP Token 代表什么？',
+      options: [
+        '一种治理代币',
+        '流动性提供者在流动性池中的份额凭证',
+        '交易手续费的收据',
+        '交易所的会员资格',
+      ],
+      correctAnswer: 1,
+      explanation: 'LP Token 是流动性提供者在池中的份额凭证，类似于基金份额。',
+    },
+  ],
+  '8-3': [
+    {
+      question: 'DeFi 借贷协议为什么要求超额抵押？',
+      options: [
+        '为了增加协议收入',
+        '因为匿名环境下无法进行信用评估，超额抵押是确保贷款安全的唯一方式',
+        '因为加密资产价值太高',
+        '这是以太坊协议的强制要求',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '在 DeFi 的匿名世界里，智能合约无法评估借款人信用，也无法通过法律追偿。超额抵押提供了价格下跌时的缓冲空间。',
+    },
+    {
+      question: '健康因子（Health Factor）低于多少时会触发清算？',
+      options: ['0.5', '1.0', '1.5', '2.0'],
+      correctAnswer: 1,
+      explanation: '当健康因子低于 1.0 时，仓位会被清算。建议始终保持 HF > 2。',
+    },
+    {
+      question: '闪电贷（Flash Loan）的核心特性是什么？',
+      options: [
+        '需要极高的抵押品',
+        '在同一笔交易内借款并还款，无需抵押品',
+        '只能借出少量资金',
+        '需要等待 7 天才能获得贷款',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '闪电贷利用区块链交易的原子性，在一笔交易中完成借款和还款。如果未能还款，整笔交易回滚。',
+    },
+    {
+      question: 'Aave 利率模型中，当利用率超过最优值后会发生什么？',
+      options: [
+        '利率停止变化',
+        '利率急剧上升，激励还款和新存款',
+        '利率开始下降以吸引借款',
+        '协议暂停所有借款',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '当利用率超过最优值后，利率急剧上升，激励借款人偿还贷款，同时吸引新存款人存入资金。',
+    },
+    {
+      question: '清算人（Liquidator）通过什么方式获利？',
+      options: [
+        '从协议金库中获取奖金',
+        '代替借款人偿还部分债务，并以折扣价获得借款人的抵押品',
+        '收取借款人的利息',
+        '获得治理代币奖励',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '清算人偿还借款人的部分债务，作为回报获得对应价值加清算奖励（通常 5-10%）的抵押品。',
+    },
+  ],
+  '8-4': [
+    {
+      question: '以下哪种不是稳定币的主要类型？',
+      options: [
+        '法币抵押稳定币（如 USDT、USDC）',
+        '加密资产抵押稳定币（如 DAI）',
+        '工作量证明稳定币',
+        '算法稳定币',
+      ],
+      correctAnswer: 2,
+      explanation:
+        '稳定币主要有三种类型：法币抵押、加密资产抵押和算法稳定币。不存在"工作量证明稳定币"。',
+    },
+    {
+      question: 'USDC 在 2023 年 3 月为什么短暂脱锚？',
+      options: [
+        'Circle 公司破产',
+        'Circle 有 $33 亿储备存在倒闭的硅谷银行（SVB），引发恐慌',
+        '以太坊网络拥堵',
+        '美联储宣布禁止稳定币',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '2023 年 3 月硅谷银行倒闭时，Circle 有 $33 亿储备存在 SVB，引发了市场恐慌和 USDC 抛售。',
+    },
+    {
+      question: 'MakerDAO 的 DAI 如何维持 $1 的锚定？',
+      options: [
+        '由美元储备 1:1 支撑',
+        '通过超额抵押铸造、套利激励和 DSR 等经济机制',
+        '由政府担保',
+        '固定算法锁定价格',
+      ],
+      correctAnswer: 1,
+      explanation: 'DAI 通过超额抵押铸造、市场套利机制和 DSR 等工具调节供需来维持锚定。',
+    },
+    {
+      question: 'UST/LUNA 崩盘的根本原因是什么？',
+      options: [
+        '黑客攻击了 Terra 区块链',
+        'UST 和 LUNA 之间形成了循环论证的价值支撑，一旦信心崩溃就进入死亡螺旋',
+        '美国政府冻结了所有 UST',
+        'Terra 的代码有严重 Bug',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'UST 的价值依赖于人们对 LUNA 的信心，而 LUNA 的价值依赖于 UST 的锚定。这是循环论证——一旦信心崩塌就进入死亡螺旋。',
+    },
+    {
+      question: '欧盟 MiCA 法案对稳定币有什么要求？',
+      options: [
+        '完全禁止所有稳定币',
+        '法币抵押稳定币必须持有 1:1 高质量储备并定期接受审计',
+        '只允许欧元稳定币',
+        '不对稳定币做任何监管',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'MiCA 要求法币抵押稳定币持有 1:1 的高质量储备、定期接受独立审计，并实质上禁止了无抵押的算法稳定币。',
+    },
+  ],
+  '8-5': [
+    {
+      question: '闪电贷攻击为什么在 DeFi 中特别有效？',
+      options: [
+        '因为闪电贷速度快',
+        '因为攻击者可以零成本借出数亿美元在一笔交易内操纵市场',
+        '因为闪电贷只在特定协议上可用',
+        '因为闪电贷手续费很低',
+      ],
+      correctAnswer: 1,
+      explanation: '闪电贷让攻击者无需自有资金就能借出巨量资金，在一笔原子交易内完成整个攻击流程。',
+    },
+    {
+      question: '以下哪项不是 Rug Pull 的常见手法？',
+      options: [
+        '项目方撤出流动性池中的所有资金',
+        '利用隐藏的 mint 函数铸造大量代币并抛售',
+        '通过去中心化治理投票决定项目方向',
+        '在合约中设置反抛售机制让用户只能买不能卖',
+      ],
+      correctAnswer: 2,
+      explanation: '去中心化治理投票是正常的协议治理行为，不是 Rug Pull。',
+    },
+    {
+      question: '评估 DeFi 协议安全性时，以下哪项最不重要？',
+      options: [
+        '是否经过知名安全公司审计',
+        '管理员密钥是否使用多签',
+        '协议 Twitter 粉丝数量',
+        '代码是否开源并在区块链浏览器上验证',
+      ],
+      correctAnswer: 2,
+      explanation:
+        'Twitter 粉丝数量容易被操控且与安全性无关。审计报告、多签管理和代码开源验证是评估协议安全性的关键因素。',
+    },
+    {
+      question: '重入攻击的核心原理是什么？',
+      options: [
+        '通过暴力破解合约密码',
+        '恶意合约在回调中反复调用目标合约的函数，在状态更新前多次提取资金',
+        '伪造交易签名',
+        '攻击区块链共识机制',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '重入攻击利用合约在转账时触发外部调用的特性，在余额更新前多次提取资金。防御方式包括 Checks-Effects-Interactions 模式。',
+    },
+    {
+      question: '以下哪个是保护 DeFi 资产的最佳实践？',
+      options: [
+        '将所有资产集中在一个协议中',
+        '给所有协议设置无限授权',
+        '分散资金到不同协议和链，定期用 revoke.cash 检查和撤销不需要的授权',
+        '只使用最新上线的协议',
+      ],
+      correctAnswer: 2,
+      explanation: '分散资金降低单点风险，定期检查和撤销不必要的代币授权减少被攻击面。',
+    },
+  ],
   // 默认通用题目
   default: [
     {

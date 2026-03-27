@@ -1,4 +1,14 @@
-import { BookOpen, BrainCircuit, Shield, Globe, Cpu, Layers, Wrench, Network } from 'lucide-react';
+import {
+  BookOpen,
+  BrainCircuit,
+  Shield,
+  Globe,
+  Cpu,
+  Layers,
+  Wrench,
+  Landmark,
+  Network,
+} from 'lucide-react';
 
 // GitHub 配置
 export const GITHUB_USERNAME = 'beihaili';
@@ -314,6 +324,44 @@ export const COURSE_DATA = [
         id: '7-4',
         title: '智能合约安全实战',
         path: 'Web3BuilderLab/04_SmartContractSecurity',
+        fallbackContent: FALLBACK,
+      },
+    ],
+  },
+  {
+    id: 'module-8',
+    title: 'DeFi 深度解析',
+    icon: Landmark,
+    color: 'from-violet-400 to-purple-400',
+    lessons: [
+      {
+        id: '8-1',
+        title: 'DeFi 核心概念与架构',
+        path: 'DeFiDeepDive/01_CoreConcepts',
+        fallbackContent: FALLBACK,
+      },
+      {
+        id: '8-2',
+        title: 'AMM 与去中心化交易所',
+        path: 'DeFiDeepDive/02_AMMAndDEX',
+        fallbackContent: FALLBACK,
+      },
+      {
+        id: '8-3',
+        title: '借贷协议原理',
+        path: 'DeFiDeepDive/03_LendingProtocols',
+        fallbackContent: FALLBACK,
+      },
+      {
+        id: '8-4',
+        title: '稳定币全景',
+        path: 'DeFiDeepDive/04_Stablecoins',
+        fallbackContent: FALLBACK,
+      },
+      {
+        id: '8-5',
+        title: 'DeFi 风险与安全',
+        path: 'DeFiDeepDive/05_DeFiRisks',
         fallbackContent: FALLBACK,
       },
     ],
