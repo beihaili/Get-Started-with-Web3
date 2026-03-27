@@ -1,0 +1,764 @@
+<!DOCTYPE html><html lang="zh-CN" class="dark"><head>
+    <meta charset="UTF-8">
+    <script>
+      // Sync theme from localStorage before first paint to prevent FOUC
+      try {
+        const stored = JSON.parse(localStorage.getItem('web3-theme-store'));
+        if (!stored || stored.state.theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {
+        document.documentElement.classList.add('dark');
+      }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>构建你的第一个 DApp | Web3 Builder 实战 | Web3 Starter</title>
+
+    <!-- SEO基础标签 -->
+    <meta name="description" content="构建你的第一个 DApp - Web3 Builder 实战 教程">
+    <meta name="keywords" content="Web3, 区块链, 比特币, 教程, 入门, blockchain, bitcoin, tutorial, 加密货币, cryptocurrency, 以太坊, ethereum">
+    <meta name="author" content="Bei Hai">
+    <link rel="canonical" href="https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-7/7-2">
+
+    <!-- Open Graph (社交分享) -->
+    <meta property="og:title" content="构建你的第一个 DApp | Web3 Builder 实战 | Web3 Starter">
+    <meta property="og:description" content="构建你的第一个 DApp - Web3 Builder 实战 教程">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-7/7-2">
+    <meta property="og:site_name" content="Get Started With Web3">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:image" content="https://beihaili.github.io/Get-Started-with-Web3/logo.png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@bhbtc1337">
+    <meta name="twitter:title" content="Get Started With Web3 - Web3区块链入门教程">
+    <meta name="twitter:description" content="开源Web3教育平台，系统化学习Web3和比特币技术">
+    <meta name="twitter:image" content="https://beihaili.github.io/Get-Started-with-Web3/logo.png">
+
+    <!-- JSON-LD 结构化数据 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Get Started With Web3",
+      "description": "开源Web3教育平台，系统化学习Web3和比特币技术。包含21讲比特币技术课程和6讲Web3快速入门。",
+      "provider": {
+        "@type": "Organization",
+        "name": "Get Started With Web3",
+        "url": "https://beihaili.github.io/Get-Started-with-Web3/"
+      },
+      "inLanguage": "zh-CN",
+      "isAccessibleForFree": true,
+      "url": "https://beihaili.github.io/Get-Started-with-Web3/",
+      "image": "https://beihaili.github.io/Get-Started-with-Web3/logo.png",
+      "hasCourseInstance": [
+        {
+          "@type": "CourseInstance",
+          "name": "Web3 快速入门",
+          "courseMode": "online"
+        },
+        {
+          "@type": "CourseInstance",
+          "name": "比特币技术深度解析",
+          "courseMode": "online"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Cloudflare Web Analytics -->
+    <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;e9421c23377646fd87f949f35958cbf6&quot;}"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/Get-Started-with-Web3/favicon.svg">
+
+    <!-- PWA相关 -->
+    <link rel="manifest" href="/Get-Started-with-Web3/manifest.json">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/Get-Started-with-Web3/logo.png">
+    <script type="module" crossorigin="" src="/Get-Started-with-Web3/assets/index-69154090.js"></script>
+    <link rel="modulepreload" crossorigin="" href="/Get-Started-with-Web3/assets/markdown-423020bc.js">
+    <link rel="modulepreload" crossorigin="" href="/Get-Started-with-Web3/assets/react-vendor-5e67d862.js">
+    <link rel="modulepreload" crossorigin="" href="/Get-Started-with-Web3/assets/ui-693f6edb.js">
+    <link rel="modulepreload" crossorigin="" href="/Get-Started-with-Web3/assets/store-fb978561.js">
+    <link rel="stylesheet" href="/Get-Started-with-Web3/assets/index-b257051a.css">
+  <link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/LandingPage-cf8f6f09.js"><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/HashVisualizer-f962f4ae.js"><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/useUserStore-13ba6bc0.js"><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/sponsorData-38203181.js"><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/SeoHead-55c749d5.js"><link rel="alternate" hreflang="zh" href="https://beihaili.github.io/Get-Started-with-Web3/zh"><script type="application/ld+json" data-seo-head="true">{"@context":"https://schema.org","@type":"Article","name":"构建你的第一个 DApp | Web3 Builder 实战 | Web3 Starter","description":"构建你的第一个 DApp - Web3 Builder 实战 教程","url":"https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-7/7-2","isPartOf":{"@type":"Course","name":"Web3 Builder 实战"}}</script><script type="application/ld+json" data-platform-ld="true">{"@context":"https://schema.org","@type":"WebSite","name":"Get Started with Web3","url":"https://beihaili.github.io/Get-Started-with-Web3/","publisher":{"@type":"Organization","name":"Get Started with Web3","url":"https://github.com/beihaili/Get-Started-with-Web3"}}</script><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/ReaderPage-0f878545.js"><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/ShareCard-12fe9b15.js"><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/ThemeToggle-334c11fd.js"><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/MobileNav-4a16c95c.js"><link rel="alternate" hreflang="en" href="https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-7/7-2"></head>
+  <body>
+    <!-- SPA路由恢复脚本 -->
+    <script>
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+
+    <div id="root"><div class="app"><div class="min-h-screen bg-slate-50 dark:bg-slate-950"><nav aria-label="课程导航" class="sticky top-0 z-10 border-b border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-md"><div class="container mx-auto px-4 py-4 flex items-center justify-between"><a class="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-cyan-400 transition-colors" href="/Get-Started-with-Web3/zh/dashboard"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left w-5 h-5" aria-hidden="true"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg><span>返回课程</span></a><div class="flex items-center gap-4"><div class="hidden sm:flex items-center gap-4"><span class="text-slate-500 dark:text-slate-400 text-sm">Web3 Builder 实战</span><button class="px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors text-sm font-medium">标记为已完成</button><button aria-label="Switch to light mode" class="p-2 rounded-lg text-slate-400 hover:text-cyan-400 hover:bg-slate-800/50 dark:hover:bg-slate-800/50 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun w-5 h-5" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg></button><button class="flex items-center gap-1 rounded-lg px-2 py-1 text-sm text-slate-400 transition-colors hover:bg-slate-800 hover:text-white" title="Switch to English"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe h-4 w-4" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg><span>EN</span></button></div><div class="flex sm:hidden items-center gap-2"><button class="px-3 py-1.5 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors text-sm font-medium">标记为已完成</button><button aria-label="Open menu" class="sm:hidden p-2 text-slate-500 dark:text-slate-400 hover:text-cyan-500 dark:hover:text-cyan-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu w-5 h-5" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg></button></div></div></div></nav><main class="container mx-auto px-4 py-8 max-w-4xl"><div class="p-8 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-700/50 rounded-xl"><div class="mb-8"><div class="inline-block px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-full mb-4"><span class="text-cyan-400 text-sm font-medium">Web3 Builder 实战</span></div><span class="text-slate-500 dark:text-slate-400 text-sm">预计阅读 33 分钟</span><h1 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">构建你的第一个 DApp</h1></div><div class="mb-8"><a href="https://github.com/beihaili/web3-lab-first-dapp/generate" target="_blank" rel="noopener noreferrer" aria-label="开始实战 →" class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-rose-500 to-orange-500 hover:from-rose-600 hover:to-orange-600 text-white rounded-lg font-medium transition-all"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wrench w-4 h-4" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z"></path></svg>开始实战 →</a></div><div class="prose dark:prose-invert max-w-none"><div class="font-sans text-base markdown-content"><h1 class="text-3xl md:text-4xl font-black text-white mt-12 mb-8 border-b border-slate-800 pb-4">构建你的第一个 DApp</h1>
+<p class="mb-4 text-slate-300 leading-7">![status](<a href="https://img.shields.io/badge/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">https://img.shields.io/badge/ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> 状态 - 已完成 - success)
+![author](<a href="https://img.shields.io/badge/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">https://img.shields.io/badge/ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> 作者 - beihaili-blue)
+![date](<a href="https://img.shields.io/badge/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">https://img.shields.io/badge/ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> 日期 - 2025--06-orange)
+![difficulty](<a href="https://img.shields.io/badge/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">https://img.shields.io/badge/ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> 难度 - 中级 - yellow)</p>
+<blockquote class="border-l-4 border-cyan-500/30 bg-slate-900/50 p-4 text-slate-400 rounded-r-lg my-4 text-base italic">
+<p class="mb-4 text-slate-300 leading-7">💡 DApp（去中心化应用）是 Web3 世界的核心载体。与传统 Web 应用不同，DApp 的后端逻辑运行在区块链上，用户通过钱包与智能合约直接交互，无需信任中间人。本课将带你从零开始，用 React + wagmi 构建一个能连接钱包、读取链上数据的完整 DApp。</p>
+</blockquote>
+<div align="center">
+<a href="https://twitter.com/bhbtc1337" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">🐦 Twitter <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> |
+<a href="https://forms.gle/QMBwL6LwZyQew1tX8" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">💬 微信交流群  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> |
+<a href="https://github.com/beihaili/Get-Started-with-Web3" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">⭐ GitHub <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a>
+</div>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">目录</h2>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[前言](# 前言)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[DApp 架构概述](#dapp - 架构概述)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[创建项目](# 创建项目)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[配置 wagmi](# 配置 - wagmi)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[包装应用](# 包装应用)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[实现钱包连接](# 实现钱包连接)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[读取智能合约数据（进阶）](# 读取智能合约数据进阶)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[动手实战](# 动手实战)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[常见问题](# 常见问题)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[总结](# 总结)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[延伸阅读](# 延伸阅读)</div></li>
+</ul>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">前言</h2>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>什么是 DApp？</h3>
+<p class="mb-4 text-slate-300 leading-7">DApp（Decentralized Application）即去中心化应用。它和你平时使用的微信、淘宝等传统 Web 应用有一个根本性的区别：</p>
+<p class="mb-4 text-slate-300 leading-7">** 传统 Web 应用：**</p>
+<div class="relative my-6 group"><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">用户 → 前端界面 → 后端服务器 → 数据库
+          ↑
+     服务器控制一切
+</code></pre></div>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">你的数据存储在公司的服务器上。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">公司可以随时修改规则、冻结你的账户。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">你必须信任这家公司不会作恶。</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">DApp：</strong></p>
+<div class="relative my-6 group"><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">用户 → 前端界面 → 钱包签名 → 区块链（智能合约）
+          ↑
+     代码即法律，规则公开透明
+</code></pre></div>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">核心逻辑运行在区块链上的智能合约中，任何人都可以审计。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">用户通过钱包（而非账号密码）控制自己的资产和数据。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">一旦部署，合约规则无法被单方面篡改。</div></li>
+</ul>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>本课目标</h3>
+<p class="mb-4 text-slate-300 leading-7">完成本课后，你将能够：</p>
+<ol class="ml-2 mb-4 space-y-1 counter-reset-list">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">理解 DApp 的前端架构和关键依赖库。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">使用 React + wagmi 搭建一个完整的 DApp 项目。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">实现钱包连接、断开、余额查询等核心功能。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">读取链上智能合约数据（以 USDT 的 totalSupply 为例）。</div></li>
+</ol>
+<p class="mb-4 text-slate-300 leading-7">** 前置知识：**</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">完成「Web3 快速入门」模块，了解钱包和区块链基础。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">具备基本的 React 和 JavaScript 开发经验。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">已安装 MetaMask 钱包并连接到以太坊主网或测试网。</div></li>
+</ul>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">DApp 架构概述</h2>
+<p class="mb-4 text-slate-300 leading-7">一个典型的 DApp 前端由以下几层组成：</p>
+<div class="relative my-6 group"><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">┌─────────────────────────────────────────────────┐
+│                   用户 (User)                     │
+│         在浏览器中打开 DApp 页面                     │
+└────────────────────┬────────────────────────────┘
+                     │ 交互
+┌────────────────────▼────────────────────────────┐
+│              前端 (React App)                     │
+│   UI 界面 + wagmi hooks + 状态管理                 │
+└────────────────────┬────────────────────────────┘
+                     │ 调用
+┌────────────────────▼────────────────────────────┐
+│             钱包 (MetaMask)                       │
+│   管理私钥、签名交易、授权操作                       │
+└────────────────────┬────────────────────────────┘
+                     │ JSON-RPC
+┌────────────────────▼────────────────────────────┐
+│           RPC 节点 (Alchemy / Infura)            │
+│   将请求转发到区块链网络                             │
+└────────────────────┬────────────────────────────┘
+                     │
+┌────────────────────▼────────────────────────────┐
+│              区块链 (Ethereum)                    │
+│   智能合约存储和执行、交易验证和记录                   │
+└─────────────────────────────────────────────────┘
+</code></pre></div>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>关键库介绍</h3>
+<p class="mb-4 text-slate-300 leading-7">构建现代 DApp 前端，我们需要三个核心库：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="my-6 overflow-x-auto rounded-lg border border-slate-700"><table class="w-full text-sm"><thead><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">库</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">作用</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">类比</th></tr></thead><tbody><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">wagmi</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">React Hooks 形式的以太坊交互库</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">就像 React Query 之于 REST API</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">viem</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">底层以太坊交互库（wagmi 的基础）</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">就像 axios 之于 HTTP</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">@tanstack/react-query</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">异步状态管理和缓存</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">管理链上数据的请求、缓存、刷新</td></tr></tbody></table></div>
+<p class="mb-4 text-slate-300 leading-7">** 为什么选择 wagmi 而不是 ethers.js？**</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">wagmi 提供了声明式的 React Hooks，代码更简洁。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">内置连接状态管理、自动重连、多链切换。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">与 React 的渲染模型完美契合，不需要手动处理 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">useEffect</code> 中的异步逻辑。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">社区活跃，已成为 DApp 前端的事实标准。</div></li>
+</ul>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">创建项目</h2>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>第一步：初始化 Vite + React 项目</h3>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code># 创建项目
+npm create vite@latest my-dapp -- --template react
+
+# 进入项目目录
+cd my-dapp
+
+# 安装核心依赖
+npm install wagmi viem@2.x @tanstack/react-query</code></pre></div></pre></div>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>第二步：了解项目结构</h3>
+<p class="mb-4 text-slate-300 leading-7">安装完成后，你的项目结构如下：</p>
+<div class="relative my-6 group"><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">my-dapp/
+├── public/
+├── src/
+│   ├── App.jsx          # 主组件（稍后改写）
+│   ├── main.jsx         # 入口文件（需要包装 Provider）
+│   ├── wagmi.js         # wagmi 配置文件（新建）
+│   └── App.css          # 样式文件
+├── index.html
+├── package.json
+└── vite.config.js
+</code></pre></div>
+<p class="mb-4 text-slate-300 leading-7">我们将新建 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">src/wagmi.js</code> 存放配置，修改 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">src/main.jsx</code> 添加 Provider，重写 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">src/App.jsx</code> 实现核心功能。</p>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">配置 wagmi</h2>
+<p class="mb-4 text-slate-300 leading-7">在 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">src/</code> 目录下新建 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">wagmi.js</code> 文件。这是整个 DApp 的区块链连接配置：</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">javascript</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">javascript</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>//src/wagmi.js
+import { http, createConfig } from 'wagmi';
+import { mainnet, sepolia } from 'wagmi/chains';
+import { injected, walletConnect } from 'wagmi/connectors';
+
+/**
+ * wagmi 配置
+ * - chains: 支持的区块链网络
+ * - connectors: 钱包连接方式
+ * - transports: 与区块链通信的方式
+ */
+export const config = createConfig ({
+  chains: [mainnet, sepolia],
+  connectors: [
+    //injected 连接器：自动检测浏览器中安装的钱包（如 MetaMask）
+    injected (),
+    // WalletConnect：通过扫码连接移动端钱包（需要 projectId）
+    // 前往 https://cloud.walletconnect.com/ 免费获取 projectId
+    walletConnect ({
+      projectId: 'YOUR_WALLETCONNECT_PROJECT_ID',
+    }),
+  ],
+  transports: {
+    // 每条链需要配置独立的 transport（通信方式）
+    [mainnet.id]: http (),   // 使用默认的公共 RPC
+    [sepolia.id]: http (),   // 测试网也用默认 RPC
+  },
+});</code></pre></div></pre></div>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>核心概念解析</h3>
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">Connector（连接器）是什么？</strong></p>
+<p class="mb-4 text-slate-300 leading-7">Connector 是钱包和 DApp 之间的桥梁。不同的连接方式对应不同的 connector：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="my-6 overflow-x-auto rounded-lg border border-slate-700"><table class="w-full text-sm"><thead><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Connector</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">说明</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">典型场景</th></tr></thead><tbody><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">injected ()</code></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">检测浏览器插件钱包</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">MetaMask、Rabby、Coinbase Wallet 等</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">walletConnect ()</code></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">通过 WalletConnect 协议连接</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">手机端钱包扫码连接</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">coinbaseWallet ()</code></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Coinbase Wallet 专用连接器</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Coinbase 钱包用户</td></tr></tbody></table></div>
+<p class="mb-4 text-slate-300 leading-7"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">injected ()</code> 是最常用的 —— 当用户安装了 MetaMask 浏览器插件后，MetaMask 会在 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">window.ethereum</code> 上注入一个 Provider 对象，<code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">injected ()</code> 连接器正是通过它与钱包通信。</p>
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">Transport（传输方式）是什么？</strong></p>
+<p class="mb-4 text-slate-300 leading-7">Transport 决定了 DApp 如何与区块链节点通信：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">http ()</code></strong>：通过 HTTP JSON-RPC 请求与节点通信，最常用、最稳定。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">webSocket ()</code></strong>：通过 WebSocket 长连接通信，适合需要实时监听事件的场景。</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">默认情况下 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">http ()</code> 不传参数会使用链的公共 RPC。如果你需要更快更稳定的连接，可以传入 Alchemy 或 Infura 的 URL：</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">javascript</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">javascript</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>import { http } from 'wagmi';
+
+// 使用 Alchemy 提供的 RPC
+http ('https://eth-mainnet.g.alchemy.com/v2/YOUR_ALCHEMY_KEY')</code></pre></div></pre></div>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">包装应用</h2>
+<p class="mb-4 text-slate-300 leading-7">wagmi 使用 React 的 Provider 模式来向整个组件树提供区块链连接能力。我们需要修改 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">src/main.jsx</code>：</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">jsx</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">jsx</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>//src/main.jsx
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { WagmiProvider } from 'wagmi';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { config } from './wagmi';
+import App from './App';
+import './index.css';
+
+// 创建 React Query 客户端实例，用于管理链上数据的缓存
+const queryClient = new QueryClient ();
+
+ReactDOM.createRoot (document.getElementById ('root')).render (
+  &lt;React.StrictMode&gt;
+    {/* WagmiProvider 提供区块链连接配置 */}
+    &lt;WagmiProvider config={config}&gt;
+      {/* QueryClientProvider 提供数据缓存和请求管理 */}
+      &lt;QueryClientProvider client={queryClient}&gt;
+        &lt;App /&gt;
+      &lt;/QueryClientProvider&gt;
+    &lt;/WagmiProvider&gt;
+  &lt;/React.StrictMode&gt;
+);</code></pre></div></pre></div>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>为什么需要 Provider 模式？</h3>
+<p class="mb-4 text-slate-300 leading-7">如果你用过 React，应该对 Context 不陌生。Provider 模式的核心思想是：** 把共享状态放在组件树的顶层，任何子组件都可以直接访问，而不需要层层传递 props。**</p>
+<p class="mb-4 text-slate-300 leading-7">在 DApp 中，「当前连接的钱包地址」「当前所在的链」这些信息几乎每个组件都可能用到。如果不用 Provider，你需要把这些数据从顶层一路传下去 —— 这就是所谓的 "prop drilling" 问题。</p>
+<p class="mb-4 text-slate-300 leading-7">两层 Provider 的职责分工：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">WagmiProvider</code></strong>：管理钱包连接状态、链信息、合约交互等区块链相关状态。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">QueryClientProvider</code></strong>：管理异步请求的缓存、重试、刷新等 —— 链上数据请求本质也是异步请求。</div></li>
+</ul>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">实现钱包连接</h2>
+<p class="mb-4 text-slate-300 leading-7">现在来到最核心的部分 —— 重写 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">src/App.jsx</code>，实现完整的钱包连接功能：</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">jsx</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">jsx</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>//src/App.jsx
+import { useAccount, useConnect, useDisconnect, useBalance } from 'wagmi';
+
+function App () {
+  //useAccount: 获取当前钱包连接状态和地址
+  const { address, isConnected, chain } = useAccount ();
+
+  //useConnect: 获取可用的连接器，并提供连接方法
+  const { connectors, connect, isPending } = useConnect ();
+
+  //useDisconnect: 提供断开连接的方法
+  const { disconnect } = useDisconnect ();
+
+  //useBalance: 查询指定地址的 ETH 余额
+  // 只有在连接状态下才查询，避免无效请求
+  const { data: balance } = useBalance ({
+    address: address,
+    query: { enabled: isConnected },
+  });
+
+  // 未连接状态：显示可用的钱包列表
+  if (!isConnected) {
+    return (
+      &lt;div style={{ padding: '2rem', maxWidth: '480px', margin: '0 auto' }}&gt;
+        &lt;h1&gt;🌐 My First DApp&lt;/h1&gt;
+        &lt;p &gt; 请选择一个钱包进行连接：&lt;/p&gt;
+
+        {connectors.map ((connector) =&gt; (
+          &lt;button
+            key={connector.uid}
+            onClick={() =&gt; connect ({ connector })}
+            disabled={isPending}
+            style={{
+              display: 'block',
+              width: '100%',
+              padding: '12px 16px',
+              margin: '8px 0',
+              fontSize: '16px',
+              cursor: isPending ? 'wait' : 'pointer',
+              borderRadius: '8px',
+              border: '1px solid #ccc',
+              background: isPending ? '#f0f0f0' : '#fff',
+            }}
+          &gt;
+            {connector.name}
+            {isPending &amp;&amp; ' (连接中...)'}
+          &lt;/button&gt;
+        ))}
+      &lt;/div&gt;
+    );
+  }
+
+  // 已连接状态：显示账户信息
+  return (
+    &lt;div style={{ padding: '2rem', maxWidth: '480px', margin: '0 auto' }}&gt;
+      &lt;h1&gt;🌐 My First DApp&lt;/h1&gt;
+
+      {/* 账户信息 */}
+      &lt;div style={{
+        padding: '16px',
+        borderRadius: '12px',
+        background: '#f8f9fa',
+        marginBottom: '16px',
+      }}&gt;
+        &lt;p&gt;&lt;strong &gt; 钱包地址：&lt;/strong&gt;&lt;/p&gt;
+        &lt;code style={{ fontSize: '14px', wordBreak: 'break-all' }}&gt;
+          {address}
+        &lt;/code&gt;
+
+        &lt;p style={{ marginTop: '12px' }}&gt;
+          &lt;strong &gt; 当前网络：&lt;/strong&gt; {chain?.name ?? ' 未知 '}
+        &lt;/p&gt;
+
+        &lt;p&gt;
+          &lt;strong&gt;ETH 余额：&lt;/strong&gt;{' '}
+          {balance
+            ? `${parseFloat (balance.formatted).toFixed (4)} ${balance.symbol}`
+            : ' 加载中...'}
+        &lt;/p&gt;
+      &lt;/div&gt;
+
+      {/* 断开连接按钮 */}
+      &lt;button
+        onClick={() =&gt; disconnect ()}
+        style={{
+          width: '100%',
+          padding: '12px',
+          fontSize: '16px',
+          cursor: 'pointer',
+          borderRadius: '8px',
+          border: 'none',
+          background: '#e74c3c',
+          color: '#fff',
+        }}
+      &gt;
+        断开连接
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default App;</code></pre></div></pre></div>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>关键 Hooks 详解</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="my-6 overflow-x-auto rounded-lg border border-slate-700"><table class="w-full text-sm"><thead><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Hook</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">功能</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">返回值</th></tr></thead><tbody><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">useAccount ()</code></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">获取当前账户状态</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">address</code>（地址）、<code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">isConnected</code>（是否已连接）、<code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">chain</code>（当前链）</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">useConnect ()</code></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">连接钱包</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">connectors</code>（可用连接器列表）、<code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">connect ()</code>（连接方法）、<code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">isPending</code>（是否连接中）</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">useDisconnect ()</code></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">断开钱包</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">disconnect ()</code>（断开方法）</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">useBalance ()</code></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">查询原生代币余额</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">data</code>（余额数据，含 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">formatted</code> 和 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">symbol</code>）</td></tr></tbody></table></div>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>运行效果</h3>
+<p class="mb-4 text-slate-300 leading-7">启动开发服务器：</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>npm run dev</code></pre></div></pre></div>
+<p class="mb-4 text-slate-300 leading-7">打开浏览器访问 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">http://localhost:5173</code>，你将看到：</p>
+<ol class="ml-2 mb-4 space-y-1 counter-reset-list">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 未连接状态 **：页面显示所有可用的钱包连接器按钮（如 "MetaMask"、"WalletConnect"）。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 点击 MetaMask**：MetaMask 弹出授权窗口，要求你确认连接。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 连接成功 **：页面显示你的钱包地址、当前网络名称和 ETH 余额。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 点击「断开连接」**：回到未连接状态。</div></li>
+</ol>
+<p class="mb-4 text-slate-300 leading-7">这就是一个最基础的 DApp 了 —— 仅用几十行代码，你就实现了钱包连接和链上数据读取。</p>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">读取智能合约数据（进阶）</h2>
+<p class="mb-4 text-slate-300 leading-7">连接钱包只是第一步。DApp 的核心价值在于与智能合约交互。接下来我们用 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">useReadContract</code> hook 读取链上合约数据。</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>示例：读取 USDT 的总发行量</h3>
+<p class="mb-4 text-slate-300 leading-7">USDT（Tether）是最广泛使用的稳定币之一。它是一个部署在以太坊上的 ERC-20 合约，我们可以调用它的 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">totalSupply ()</code> 函数查询总发行量。</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>ABI 是什么？</h3>
+<p class="mb-4 text-slate-300 leading-7">ABI（Application Binary Interface）是智能合约的接口描述，告诉前端「这个合约有哪些函数、接受什么参数、返回什么类型」。你可以把它理解为合约的 API 文档。</p>
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">ABI 从哪里获取？</strong></p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Etherscan</strong>：在合约页面的 "Contract" → "ABI" 标签下复制。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">**npm 包 **：一些知名合约（如 ERC-20）有标准化的 ABI 包。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 编译产物 **：如果你自己写的合约，编译后会自动生成 ABI。</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">对于读取 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">totalSupply</code>，我们只需要 ABI 中关于该函数的定义：</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">javascript</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">javascript</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>// ERC-20 标准中 totalSupply 函数的 ABI 片段
+const erc20Abi = [
+  {
+    type: 'function',
+    name: 'totalSupply',
+    stateMutability: 'view',   //view 表示只读，不消耗 gas
+    inputs: [],                 // 无输入参数
+    outputs: [
+      { name: '', type: 'uint256' },  // 返回 uint256 类型的数值
+    ],
+  },
+];</code></pre></div></pre></div>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>完整代码：合约数据读取组件</h3>
+<p class="mb-4 text-slate-300 leading-7">新建 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">src/ContractReader.jsx</code>：</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">jsx</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">jsx</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>//src/ContractReader.jsx
+import { useReadContract } from 'wagmi';
+import { formatUnits } from 'viem';
+
+// USDT 合约地址（以太坊主网）
+const USDT_ADDRESS = '0xdAC17F958D2ee523a2206206994597C13D831ec7';
+
+// 只需要包含我们要调用的函数的 ABI
+const erc20Abi = [
+  {
+    type: 'function',
+    name: 'totalSupply',
+    stateMutability: 'view',
+    inputs: [],
+    outputs: [{ name: '', type: 'uint256' }],
+  },
+  {
+    type: 'function',
+    name: 'symbol',
+    stateMutability: 'view',
+    inputs: [],
+    outputs: [{ name: '', type: 'string' }],
+  },
+  {
+    type: 'function',
+    name: 'decimals',
+    stateMutability: 'view',
+    inputs: [],
+    outputs: [{ name: '', type: 'uint8' }],
+  },
+];
+
+function ContractReader () {
+  // 读取 USDT 总发行量
+  const { data: totalSupply, isLoading: isLoadingSupply } = useReadContract ({
+    address: USDT_ADDRESS,
+    abi: erc20Abi,
+    functionName: 'totalSupply',
+  });
+
+  // 读取 USDT 代币符号
+  const { data: symbol, isLoading: isLoadingSymbol } = useReadContract ({
+    address: USDT_ADDRESS,
+    abi: erc20Abi,
+    functionName: 'symbol',
+  });
+
+  // 读取 USDT 的小数位数
+  const { data: decimals, isLoading: isLoadingDecimals } = useReadContract ({
+    address: USDT_ADDRESS,
+    abi: erc20Abi,
+    functionName: 'decimals',
+  });
+
+  const isLoading = isLoadingSupply || isLoadingSymbol || isLoadingDecimals;
+
+  return (
+    &lt;div style={{
+      padding: '16px',
+      borderRadius: '12px',
+      background: '#eef6ff',
+      marginTop: '16px',
+    }}&gt;
+      &lt;h3&gt;📊 链上合约数据 &lt;/h3&gt;
+      &lt;p&gt;&lt;strong &gt; 合约：&lt;/strong&gt; USDT (Tether)&lt;/p&gt;
+      &lt;p&gt;
+        &lt;strong &gt; 合约地址：&lt;/strong&gt;{' '}
+        &lt;a
+          href={`https://etherscan.io/address/${USDT_ADDRESS}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ fontSize: '13px' }}
+        &gt;
+          {USDT_ADDRESS.slice (0, 10)}...{USDT_ADDRESS.slice (-8)}
+        &lt;/a&gt;
+      &lt;/p&gt;
+
+      {isLoading ? (
+        &lt;p&gt;⏳ 正在从区块链读取数据...&lt;/p&gt;
+      ) : (
+        &lt;&gt;
+          &lt;p&gt;
+            &lt;strong &gt; 代币符号：&lt;/strong&gt; {symbol}
+          &lt;/p&gt;
+          &lt;p&gt;
+            &lt;strong &gt; 小数位数：&lt;/strong&gt; {decimals?.toString ()}
+          &lt;/p&gt;
+          &lt;p&gt;
+            &lt;strong &gt; 总发行量：&lt;/strong&gt;{' '}
+            {totalSupply &amp;&amp; decimals
+              ? `${Number (formatUnits (totalSupply, decimals)).toLocaleString ()} ${symbol}`
+              : ' 读取失败 '}
+          &lt;/p&gt;
+        &lt;/&gt;
+      )}
+    &lt;/div&gt;
+  );
+}
+
+export default ContractReader;</code></pre></div></pre></div>
+<p class="mb-4 text-slate-300 leading-7">然后在 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">App.jsx</code> 的已连接状态区域中引入该组件：</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">jsx</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">jsx</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>// 在 App.jsx 顶部添加导入
+import ContractReader from './ContractReader';
+
+// 在「断开连接」按钮上方添加
+&lt;ContractReader /&gt;</code></pre></div></pre></div>
+<p class="mb-4 text-slate-300 leading-7">运行后，当你连接钱包并处于以太坊主网时，页面会实时显示 USDT 的代币符号、小数位数和总发行量 —— 这些数据都是直接从链上智能合约读取的，没有经过任何中间服务器。</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>useReadContract 详解</h3>
+<p class="mb-4 text-slate-300 leading-7"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">useReadContract</code> 是 wagmi 中最常用的合约读取 hook，核心参数如下：</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">javascript</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">javascript</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>const { data, isLoading, isError, error, refetch } = useReadContract ({
+  address: '0x...',          // 合约地址
+  abi: [...],                // 合约 ABI
+  functionName: 'balanceOf', // 要调用的函数名
+  args: ['0x...'],           // 函数参数（可选）
+  chainId: 1,                // 指定链 ID（可选，默认当前链）
+  query: {
+    enabled: true,           // 是否启用查询（可用于条件查询）
+    refetchInterval: 10000,  // 自动刷新间隔（毫秒）
+  },
+});</code></pre></div></pre></div>
+<p class="mb-4 text-slate-300 leading-7">它底层使用 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">@tanstack/react-query</code> 管理请求状态，因此自带缓存、去重、重试、自动刷新等能力 —— 你不需要自己写 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">useEffect</code> + <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">useState</code> 来处理异步逻辑。</p>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">🧪 动手实战</h2>
+<p class="mb-4 text-slate-300 leading-7">本课配有 Lab 实战环境，你可以在浏览器中直接编写和运行代码。</p>
+<p class="mb-4 text-slate-300 leading-7">** 实战任务：**</p>
+<ol class="ml-2 mb-4 space-y-1 counter-reset-list">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">搭建完整的 DApp 项目并连接 MetaMask 钱包。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">显示当前连接的钱包地址和 ETH 余额。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">读取任意 ERC-20 合约的 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">name</code>、<code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">symbol</code> 和 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">totalSupply</code>。</div></li>
+</ol>
+<p class="mb-4 text-slate-300 leading-7">点击课程页面的「开始实战」按钮，进入交互式实战环境。</p>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">常见问题</h2>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>❓ 点击连接按钮后 MetaMask 没有弹出窗口？</h3>
+<p class="mb-4 text-slate-300 leading-7">** 原因：** <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">injected ()</code> 连接器需要检测到 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">window.ethereum</code> 对象。如果 MetaMask 未安装或被其他钱包插件覆盖，可能无法弹出。</p>
+<p class="mb-4 text-slate-300 leading-7">** 解决方案：**</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">确认 MetaMask 浏览器插件已安装并启用。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">检查是否有多个钱包插件冲突（Rabby、Coinbase Wallet 等可能覆盖 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">window.ethereum</code>）。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">在 MetaMask 设置中确认当前网站未被阻止。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">尝试刷新页面后重新连接。</div></li>
+</ul>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>❓ 切换网络后页面数据没有更新？</h3>
+<p class="mb-4 text-slate-300 leading-7">wagmi 已经内置了链变更的自动处理。当用户在 MetaMask 中切换网络时，<code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">useAccount</code> 返回的 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">chain</code> 会自动更新，相关的 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">useBalance</code> 和 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">useReadContract</code> 查询也会自动重新请求。</p>
+<p class="mb-4 text-slate-300 leading-7">如果你发现数据没有刷新，可能是因为：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">目标链没有在 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">wagmi.js</code> 的 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">chains</code> 中配置。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">目标链没有配置对应的 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">transport</code>。</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">确保你的配置中包含所有需要支持的链：</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">javascript</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">javascript</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>import { mainnet, sepolia, polygon } from 'wagmi/chains';
+
+export const config = createConfig ({
+  chains: [mainnet, sepolia, polygon],
+  transports: {
+    [mainnet.id]: http (),
+    [sepolia.id]: http (),
+    [polygon.id]: http (),
+  },
+  //...
+});</code></pre></div></pre></div>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>❓ 如何将 DApp 部署到 Vercel？</h3>
+<p class="mb-4 text-slate-300 leading-7">你的 DApp 本质上就是一个 Vite + React 项目，部署流程和普通前端项目完全相同：</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code># 1. 将代码推送到 GitHub
+git init
+git add .
+git commit -m "feat: my first dapp"
+git remote add origin https://github.com/your-name/my-dapp.git
+git push -u origin main
+
+# 2. 前往 vercel.com 导入 GitHub 仓库
+# 3. Vercel 会自动检测 Vite 框架，直接点击 Deploy
+
+# 或者使用 Vercel CLI 部署
+npm install -g vercel
+vercel</code></pre></div></pre></div>
+<p class="mb-4 text-slate-300 leading-7">部署后，用户访问你的网站时只需要有 MetaMask 插件，就能与你的 DApp 交互 —— 不需要你运行任何后端服务器。</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>❓ 公共 RPC 速度很慢怎么办？</h3>
+<p class="mb-4 text-slate-300 leading-7">默认的公共 RPC 节点有请求频率限制，高峰时段可能延迟较高。推荐使用专业的 RPC 服务：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Alchemy</strong>：<a href="https://www.alchemy.com/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">https://www.alchemy.com/ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> （免费额度充足，推荐新手使用）</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Infura</strong>：<a href="https://infura.io/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">https://infura.io/ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> （ConsenSys 旗下，老牌稳定）</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">QuickNode</strong>：<a href="https://www.quicknode.com/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">https://www.quicknode.com/ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">注册后获取 API Key，替换 transport 配置即可：</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">javascript</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">javascript</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>transports: {
+  [mainnet.id]: http ('https://eth-mainnet.g.alchemy.com/v2/YOUR_KEY'),
+  [sepolia.id]: http ('https://eth-sepolia.g.alchemy.com/v2/YOUR_KEY'),
+},</code></pre></div></pre></div>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">总结</h2>
+<p class="mb-4 text-slate-300 leading-7">在本课中，我们从零构建了一个完整的 DApp 前端，涵盖了以下核心知识点：</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>🏗️ 架构层面</h3>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">DApp 与传统 Web 应用的根本区别：后端逻辑运行在区块链上，用户通过钱包控制资产。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">前端 → 钱包 → RPC 节点 → 区块链的完整数据流。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">wagmi + viem + React Query 的现代 DApp 技术栈。</div></li>
+</ul>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>💻 实践层面</h3>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">使用 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">createConfig</code> 配置链、连接器和传输方式。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">使用 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">WagmiProvider</code> + <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">QueryClientProvider</code> 包装应用。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">使用 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">useAccount</code>、<code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">useConnect</code>、<code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">useDisconnect</code>、<code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">useBalance</code> 实现钱包交互。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">使用 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">useReadContract</code> 读取智能合约数据。</div></li>
+</ul>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>🔑 核心理念</h3>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 声明式交互 **：用 React Hooks 描述「要什么数据」，而不是手动管理异步请求流程。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 合约即 API**：ABI 就是合约的接口文档，<code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">useReadContract</code> 就是调用合约的 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">fetch</code>。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 钱包即身份 **：不再需要账号密码，钱包地址就是用户的唯一身份标识。</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">下一步，你可以尝试：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">调用合约的写入函数（<code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">useWriteContract</code>），发起链上交易。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">监听合约事件（<code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">useWatchContractEvent</code>），实时获取链上变更。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">集成 ConnectKit 或 RainbowKit，获得更美观的钱包连接 UI。</div></li>
+</ul>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">延伸阅读</h2>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="https://wagmi.sh/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">wagmi 官方文档 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> — 完整的 API 参考和示例</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="https://viem.sh/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">viem 文档 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> — 底层以太坊交互库文档</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="https://ethereum.org/en/developers/tutorials/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Ethereum.org DApp 教程 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> — 以太坊官方开发者教程</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="https://docs.walletconnect.com/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">WalletConnect 文档 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> — 多钱包连接协议</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="https://university.alchemy.com/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Alchemy University <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> — 免费的 Web3 开发课程</div></li>
+</ul>
+<hr class="my-8 border-slate-800">
+<div align="center">
+<a href="https://github.com/beihaili/Get-Started-with-Web3" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">🏠 返回主页  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> |
+<a href="https://twitter.com/bhbtc1337" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">🐦 关注作者  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> |
+<a href="https://forms.gle/QMBwL6LwZyQew1tX8" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">📝 加入交流群  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a>
+</div></div></div><div class="mt-8 pt-8 border-t border-slate-200 dark:border-slate-700"><div class="space-y-4"><div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 text-center"><div class="flex items-center justify-center gap-2 mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-circuit w-6 h-6 text-purple-400" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M9 13a4.5 4.5 0 0 0 3-4"></path><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path d="M6 18a4 4 0 0 1-1.967-.516"></path><path d="M12 13h4"></path><path d="M12 18h6a2 2 0 0 1 2 2v1"></path><path d="M12 8h8"></path><path d="M16 8V5a2 2 0 0 1 2-2"></path><circle cx="16" cy="13" r=".5"></circle><circle cx="18" cy="3" r=".5"></circle><circle cx="20" cy="21" r=".5"></circle><circle cx="20" cy="8" r=".5"></circle></svg><h4 class="text-white font-bold">闯关测验</h4></div><p class="text-slate-300 mb-6">完成 <strong>5 道题目</strong>，需要<strong> 全部答对 </strong>才能通关下一章节</p><button class="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-bold py-3 px-8 rounded-lg transition-all transform hover:scale-105 shadow-lg shadow-purple-500/20">🚀 开始挑战</button></div></div></div><div class="flex gap-4 mt-8 pt-8 border-t border-slate-200 dark:border-slate-700"><a class="px-4 sm:px-6 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-900 dark:text-white rounded-lg transition-colors text-sm sm:text-base" href="/Get-Started-with-Web3/zh/learn/module-7/7-1">← <span class="hidden sm:inline">上一讲</span><span class="sm:hidden">上一</span></a><a class="px-4 sm:px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors ml-auto text-sm sm:text-base" href="/Get-Started-with-Web3/zh/learn/module-7/7-3"><span class="hidden sm:inline">下一讲</span><span class="sm:hidden">下一</span> →</a></div><div class="mt-8 pt-8 border-t border-slate-700 flex flex-col items-center gap-3"><p class="text-slate-400 text-sm">如果这节课对你有帮助，欢迎支持作者继续创作 ☕</p><a href="https://buymeacoffee.com/beihai" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-pink-500 to-orange-500
+          hover:from-pink-400 hover:to-orange-400 text-white font-semibold rounded-full
+          transition-all hover:scale-105 shadow-lg shadow-pink-500/20"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart w-4 h-4" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg>感谢作者 · Buy Me a Coffee</a></div></div></main><div class="fixed bottom-6 right-6 z-50"><button aria-label="AI 助教" class="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white p-4 rounded-full shadow-2xl shadow-purple-500/20 transition-all transform hover:scale-105"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-circuit w-6 h-6" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M9 13a4.5 4.5 0 0 0 3-4"></path><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path d="M6 18a4 4 0 0 1-1.967-.516"></path><path d="M12 13h4"></path><path d="M12 18h6a2 2 0 0 1 2 2v1"></path><path d="M12 8h8"></path><path d="M16 8V5a2 2 0 0 1 2-2"></path><circle cx="16" cy="13" r=".5"></circle><circle cx="18" cy="3" r=".5"></circle><circle cx="20" cy="21" r=".5"></circle><circle cx="20" cy="8" r=".5"></circle></svg></button></div></div></div></div>
+    
+  
+</body></html>

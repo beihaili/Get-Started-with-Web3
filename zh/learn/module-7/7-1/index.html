@@ -1,0 +1,917 @@
+<!DOCTYPE html><html lang="zh-CN" class="dark"><head>
+    <meta charset="UTF-8">
+    <script>
+      // Sync theme from localStorage before first paint to prevent FOUC
+      try {
+        const stored = JSON.parse(localStorage.getItem('web3-theme-store'));
+        if (!stored || stored.state.theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {
+        document.documentElement.classList.add('dark');
+      }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>从零部署 ERC-20 代币 | Web3 Builder 实战 | Web3 Starter</title>
+
+    <!-- SEO基础标签 -->
+    <meta name="description" content="从零部署 ERC-20 代币 - Web3 Builder 实战 教程">
+    <meta name="keywords" content="Web3, 区块链, 比特币, 教程, 入门, blockchain, bitcoin, tutorial, 加密货币, cryptocurrency, 以太坊, ethereum">
+    <meta name="author" content="Bei Hai">
+    <link rel="canonical" href="https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-7/7-1">
+
+    <!-- Open Graph (社交分享) -->
+    <meta property="og:title" content="从零部署 ERC-20 代币 | Web3 Builder 实战 | Web3 Starter">
+    <meta property="og:description" content="从零部署 ERC-20 代币 - Web3 Builder 实战 教程">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-7/7-1">
+    <meta property="og:site_name" content="Get Started With Web3">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:image" content="https://beihaili.github.io/Get-Started-with-Web3/logo.png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@bhbtc1337">
+    <meta name="twitter:title" content="Get Started With Web3 - Web3区块链入门教程">
+    <meta name="twitter:description" content="开源Web3教育平台，系统化学习Web3和比特币技术">
+    <meta name="twitter:image" content="https://beihaili.github.io/Get-Started-with-Web3/logo.png">
+
+    <!-- JSON-LD 结构化数据 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Get Started With Web3",
+      "description": "开源Web3教育平台，系统化学习Web3和比特币技术。包含21讲比特币技术课程和6讲Web3快速入门。",
+      "provider": {
+        "@type": "Organization",
+        "name": "Get Started With Web3",
+        "url": "https://beihaili.github.io/Get-Started-with-Web3/"
+      },
+      "inLanguage": "zh-CN",
+      "isAccessibleForFree": true,
+      "url": "https://beihaili.github.io/Get-Started-with-Web3/",
+      "image": "https://beihaili.github.io/Get-Started-with-Web3/logo.png",
+      "hasCourseInstance": [
+        {
+          "@type": "CourseInstance",
+          "name": "Web3 快速入门",
+          "courseMode": "online"
+        },
+        {
+          "@type": "CourseInstance",
+          "name": "比特币技术深度解析",
+          "courseMode": "online"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Cloudflare Web Analytics -->
+    <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;e9421c23377646fd87f949f35958cbf6&quot;}"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/Get-Started-with-Web3/favicon.svg">
+
+    <!-- PWA相关 -->
+    <link rel="manifest" href="/Get-Started-with-Web3/manifest.json">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/Get-Started-with-Web3/logo.png">
+    <script type="module" crossorigin="" src="/Get-Started-with-Web3/assets/index-69154090.js"></script>
+    <link rel="modulepreload" crossorigin="" href="/Get-Started-with-Web3/assets/markdown-423020bc.js">
+    <link rel="modulepreload" crossorigin="" href="/Get-Started-with-Web3/assets/react-vendor-5e67d862.js">
+    <link rel="modulepreload" crossorigin="" href="/Get-Started-with-Web3/assets/ui-693f6edb.js">
+    <link rel="modulepreload" crossorigin="" href="/Get-Started-with-Web3/assets/store-fb978561.js">
+    <link rel="stylesheet" href="/Get-Started-with-Web3/assets/index-b257051a.css">
+  <link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/LandingPage-cf8f6f09.js"><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/HashVisualizer-f962f4ae.js"><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/useUserStore-13ba6bc0.js"><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/sponsorData-38203181.js"><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/SeoHead-55c749d5.js"><link rel="alternate" hreflang="zh" href="https://beihaili.github.io/Get-Started-with-Web3/zh"><script type="application/ld+json" data-seo-head="true">{"@context":"https://schema.org","@type":"Article","name":"从零部署 ERC-20 代币 | Web3 Builder 实战 | Web3 Starter","description":"从零部署 ERC-20 代币 - Web3 Builder 实战 教程","url":"https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-7/7-1","isPartOf":{"@type":"Course","name":"Web3 Builder 实战"}}</script><script type="application/ld+json" data-platform-ld="true">{"@context":"https://schema.org","@type":"WebSite","name":"Get Started with Web3","url":"https://beihaili.github.io/Get-Started-with-Web3/","publisher":{"@type":"Organization","name":"Get Started with Web3","url":"https://github.com/beihaili/Get-Started-with-Web3"}}</script><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/ReaderPage-0f878545.js"><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/ShareCard-12fe9b15.js"><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/ThemeToggle-334c11fd.js"><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/MobileNav-4a16c95c.js"><link rel="alternate" hreflang="en" href="https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-7/7-1"></head>
+  <body>
+    <!-- SPA路由恢复脚本 -->
+    <script>
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+
+    <div id="root"><div class="app"><div class="min-h-screen bg-slate-50 dark:bg-slate-950"><nav aria-label="课程导航" class="sticky top-0 z-10 border-b border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-md"><div class="container mx-auto px-4 py-4 flex items-center justify-between"><a class="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-cyan-400 transition-colors" href="/Get-Started-with-Web3/zh/dashboard"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left w-5 h-5" aria-hidden="true"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg><span>返回课程</span></a><div class="flex items-center gap-4"><div class="hidden sm:flex items-center gap-4"><span class="text-slate-500 dark:text-slate-400 text-sm">Web3 Builder 实战</span><button class="px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors text-sm font-medium">标记为已完成</button><button aria-label="Switch to light mode" class="p-2 rounded-lg text-slate-400 hover:text-cyan-400 hover:bg-slate-800/50 dark:hover:bg-slate-800/50 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun w-5 h-5" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg></button><button class="flex items-center gap-1 rounded-lg px-2 py-1 text-sm text-slate-400 transition-colors hover:bg-slate-800 hover:text-white" title="Switch to English"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe h-4 w-4" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg><span>EN</span></button></div><div class="flex sm:hidden items-center gap-2"><button class="px-3 py-1.5 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors text-sm font-medium">标记为已完成</button><button aria-label="Open menu" class="sm:hidden p-2 text-slate-500 dark:text-slate-400 hover:text-cyan-500 dark:hover:text-cyan-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu w-5 h-5" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg></button></div></div></div></nav><main class="container mx-auto px-4 py-8 max-w-4xl"><div class="p-8 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-700/50 rounded-xl"><div class="mb-8"><div class="inline-block px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-full mb-4"><span class="text-cyan-400 text-sm font-medium">Web3 Builder 实战</span></div><span class="text-slate-500 dark:text-slate-400 text-sm">预计阅读 39 分钟</span><h1 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">从零部署 ERC-20 代币</h1></div><div class="mb-8"><a href="https://github.com/beihaili/web3-lab-deploy-token/generate" target="_blank" rel="noopener noreferrer" aria-label="开始实战 →" class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-rose-500 to-orange-500 hover:from-rose-600 hover:to-orange-600 text-white rounded-lg font-medium transition-all"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wrench w-4 h-4" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z"></path></svg>开始实战 →</a></div><div class="prose dark:prose-invert max-w-none"><div class="font-sans text-base markdown-content"><h1 class="text-3xl md:text-4xl font-black text-white mt-12 mb-8 border-b border-slate-800 pb-4">从零部署 ERC-20 代币</h1>
+<p class="mb-4 text-slate-300 leading-7">![status](<a href="https://img.shields.io/badge/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">https://img.shields.io/badge/ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> 状态 - 已完成 - success)
+![author](<a href="https://img.shields.io/badge/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">https://img.shields.io/badge/ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> 作者 - beihaili-blue)
+![date](<a href="https://img.shields.io/badge/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">https://img.shields.io/badge/ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> 日期 - 2025--06-orange)
+![difficulty](<a href="https://img.shields.io/badge/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">https://img.shields.io/badge/ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> 难度 - 中级 - yellow)</p>
+<blockquote class="border-l-4 border-cyan-500/30 bg-slate-900/50 p-4 text-slate-400 rounded-r-lg my-4 text-base italic">
+<p class="mb-4 text-slate-300 leading-7">💡 ERC-20 是以太坊上最基础、最广泛的代币标准，从 USDT 到 UNI，从 LINK 到 SHIB，几乎所有你在交易所见过的代币都遵循这个标准。本课将带你从零开始，用 Foundry 工具链编写、测试并部署一个属于你自己的 ERC-20 代币。这不仅是学习智能合约开发的最佳起点，也是理解 DeFi 世界运转逻辑的钥匙。</p>
+</blockquote>
+<div align="center">
+<a href="https://twitter.com/bhbtc1337" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">🐦 关注作者 Twitter <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> |
+<a href="https://forms.gle/QMBwL6LwZyQew1tX8" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">💬 加入微信交流群  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> |
+<a href="https://github.com/beihaili/Get-Started-with-Web3" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">⭐ GitHub 仓库  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a>
+</div>
+<hr class="my-8 border-slate-800">
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">目录</h2>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[前言](# 前言)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[ERC-20 标准详解](#erc-20 - 标准详解)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[开发环境搭建](# 开发环境搭建)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[编写 MyToken 合约](# 编写 - mytoken - 合约)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[编写测试](# 编写测试)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[部署到测试网](# 部署到测试网)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[在 Etherscan 上验证合约](# 在 - etherscan - 上验证合约)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[动手实战](# 动手实战)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[总结](# 总结)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[延伸阅读](# 延伸阅读)</div></li>
+</ul>
+<hr class="my-8 border-slate-800">
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">前言</h2>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>什么是 ERC-20？</h3>
+<p class="mb-4 text-slate-300 leading-7">ERC-20（Ethereum Request for Comments 20）是以太坊上最广泛采用的代币标准。它由 Fabian Vogelsteller 和 Vitalik Buterin 在 2015 年提出，定义了一组统一的接口，让所有遵循该标准的代币能够被钱包、交易所和其他智能合约无缝识别和交互。</p>
+<p class="mb-4 text-slate-300 leading-7">** 为什么 ERC-20 如此重要？**</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">🔄 ** 互操作性 **：任何遵循 ERC-20 的代币都能被 MetaMask、Uniswap 等工具自动支持，不需要额外适配。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">💱 **DEX 上架 **：Uniswap、SushiSwap 等去中心化交易所天然支持 ERC-20 代币，你的代币部署后就可以创建交易对。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">🏦 ** 钱包兼容 **：所有主流钱包（MetaMask、Rainbow、Trust Wallet 等）都能一键添加 ERC-20 代币。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">📋 ** 标准化 **：开发者只需学习一套接口，就能与成千上万种代币交互。</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">** 现实中的 ERC-20 代币案例：**</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="my-6 overflow-x-auto rounded-lg border border-slate-700"><table class="w-full text-sm"><thead><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">代币</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">用途</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">市值量级</th></tr></thead><tbody><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">USDT / USDC</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">稳定币</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">千亿美元</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">UNI</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Uniswap 治理代币</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">数十亿美元</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">LINK</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Chainlink 预言机代币</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">数十亿美元</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">SHIB</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Meme 代币</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">数十亿美元</td></tr></tbody></table></div>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>本课目标</h3>
+<p class="mb-4 text-slate-300 leading-7">完成本课后，你将能够：</p>
+<ol class="ml-2 mb-4 space-y-1 counter-reset-list">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">理解 ERC-20 标准的 6 个核心函数和 2 个事件</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">使用 Foundry 从零搭建 Solidity 开发环境</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">继承 OpenZeppelin 合约库编写一个完整的 ERC-20 代币</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">编写单元测试覆盖核心逻辑</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">将合约部署到 Sepolia 测试网并在 Etherscan 上验证</div></li>
+</ol>
+<hr class="my-8 border-slate-800">
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">ERC-20 标准详解</h2>
+<p class="mb-4 text-slate-300 leading-7">ERC-20 标准定义了 **6 个核心函数 ** 和 **2 个事件 **，这是所有 ERC-20 代币必须实现的接口。</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>标准接口一览</h3>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+/**
+ * @title IERC20 - ERC-20 代币标准接口
+ * @dev 参见 https://eips.ethereum.org/EIPS/eip-20
+ */
+interface IERC20 {
+    // ============ 查询函数 ============
+
+    /// @notice 返回代币的总发行量
+    function totalSupply () external view returns (uint256);
+
+    /// @notice 查询某个地址的代币余额
+    /// @param account 要查询的地址
+    function balanceOf (address account) external view returns (uint256);
+
+    /// @notice 查询 owner 授权给 spender 的剩余额度
+    /// @param owner 代币持有者
+    /// @param spender 被授权者
+    function allowance (address owner, address spender) external view returns (uint256);
+
+    // ============ 操作函数 ============
+
+    /// @notice 直接转账：从调用者地址转代币给接收者
+    /// @param to 接收地址
+    /// @param amount 转账金额
+    function transfer (address to, uint256 amount) external returns (bool);
+
+    /// @notice 授权：允许 spender 从调用者地址代扣最多 amount 的代币
+    /// @param spender 被授权的地址
+    /// @param amount 授权额度
+    function approve (address spender, uint256 amount) external returns (bool);
+
+    /// @notice 代扣转账：spender 从 from 地址转代币到 to 地址（需先获得授权）
+    /// @param from 代币来源地址
+    /// @param to 接收地址
+    /// @param amount 转账金额
+    function transferFrom (address from, address to, uint256 amount) external returns (bool);
+
+    // ============ 事件 ============
+
+    /// @notice 代币转移时触发（包括铸造和销毁）
+    event Transfer (address indexed from, address indexed to, uint256 value);
+
+    /// @notice 授权额度变更时触发
+    event Approval (address indexed owner, address indexed spender, uint256 value);
+}</code></pre></div></pre></div>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>核心函数详解</h3>
+<p class="mb-4 text-slate-300 leading-7">我们把 6 个函数分为两类来理解：</p>
+<p class="mb-4 text-slate-300 leading-7">** 查询类（view 函数，不消耗 gas）：**</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="my-6 overflow-x-auto rounded-lg border border-slate-700"><table class="w-full text-sm"><thead><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">函数</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">作用</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">类比</th></tr></thead><tbody><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">totalSupply ()</code></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">返回代币总供应量</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">查看银行发行了多少货币</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">balanceOf (address)</code></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">查询某地址余额</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">查看你的银行卡余额</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">allowance (owner, spender)</code></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">查询授权额度</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">查看你给别人设置的代扣上限</td></tr></tbody></table></div>
+<p class="mb-4 text-slate-300 leading-7">** 操作类（写入函数，消耗 gas）：**</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="my-6 overflow-x-auto rounded-lg border border-slate-700"><table class="w-full text-sm"><thead><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">函数</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">作用</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">类比</th></tr></thead><tbody><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">transfer (to, amount)</code></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">直接转账</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">直接给朋友转账</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">approve (spender, amount)</code></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">设置授权额度</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">给水电公司设置自动代扣上限</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">transferFrom (from, to, amount)</code></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">代扣转账</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">水电公司从你账户扣费</td></tr></tbody></table></div>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>为什么需要 approve + transferFrom？</h3>
+<p class="mb-4 text-slate-300 leading-7">你可能会想：有了 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">transfer</code> 为什么还需要 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">approve</code> 和 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">transferFrom</code> 这两步操作？</p>
+<p class="mb-4 text-slate-300 leading-7">这是因为智能合约无法主动「拉取」你的代币。当你在 Uniswap 上兑换代币时，流程是这样的：</p>
+<div class="relative my-6 group"><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">第 1 步：你调用 approve (uniswapRouter, 1000)
+        → 授权 Uniswap 路由合约最多动用你的 1000 个代币
+
+第 2 步：你调用 Uniswap 的 swap 函数
+        → Uniswap 内部调用 transferFrom (你的地址，流动性池，500)
+        → 从你的账户转 500 个代币到流动性池
+        → 同时把对应的另一种代币转给你
+</code></pre></div>
+<p class="mb-4 text-slate-300 leading-7">这种「先授权，再代扣」的模式，是整个 DeFi 生态运转的基础。</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>两个事件</h3>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">**Transfer 事件 **：每当代币发生转移时自动发出，区块浏览器和钱包靠监听这个事件来更新余额显示。当 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">from</code> 为零地址时表示铸造，<code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">to</code> 为零地址时表示销毁。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">**Approval 事件 **：每当授权额度发生变化时发出，DApp 靠它来追踪授权状态。</div></li>
+</ul>
+<hr class="my-8 border-slate-800">
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">开发环境搭建</h2>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>Foundry 是什么？</h3>
+<p class="mb-4 text-slate-300 leading-7">Foundry 是一套用 Rust 编写的高性能 Solidity 开发工具链，由 Paradigm 团队维护。它包含四个核心工具：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="my-6 overflow-x-auto rounded-lg border border-slate-700"><table class="w-full text-sm"><thead><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">工具</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">作用</th></tr></thead><tbody><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">forge</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">编译、测试、部署智能合约</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">cast</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">与链上合约交互（调用函数、查询数据）</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">anvil</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">本地以太坊节点（用于开发测试）</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">chisel</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">交互式 Solidity REPL</td></tr></tbody></table></div>
+<p class="mb-4 text-slate-300 leading-7">** 与其他工具的对比：**</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="my-6 overflow-x-auto rounded-lg border border-slate-700"><table class="w-full text-sm"><thead><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">特性</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Foundry</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Hardhat</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Remix</th></tr></thead><tbody><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">语言</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Rust（极快）</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">JavaScript</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">浏览器</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">测试语言</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Solidity</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">JavaScript</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">手动</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">编译速度</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">极快</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">较快</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">中等</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Fuzz Testing</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">内置</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">需插件</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">不支持</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">适合场景</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">专业开发</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">全栈 DApp</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">快速原型</td></tr></tbody></table></div>
+<p class="mb-4 text-slate-300 leading-7">Foundry 的最大优势是 ** 用 Solidity 写测试 **—— 和合约同一种语言，不需要在 JS 和 Solidity 之间切换思维。</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>安装 Foundry</h3>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code># 一键安装 Foundry
+curl -L https://foundry.paradigm.xyz | bash
+
+# 安装完成后执行 foundryup 拉取最新版本
+foundryup</code></pre></div></pre></div>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>验证安装</h3>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code># 检查各工具版本
+forge --version
+# 输出示例：forge 0.2.0 (xxxxxxx 2025-xx-xx)
+
+cast --version
+# 输出示例：cast 0.2.0 (xxxxxxx 2025-xx-xx)
+
+anvil --version
+# 输出示例：anvil 0.2.0 (xxxxxxx 2025-xx-xx)</code></pre></div></pre></div>
+<p class="mb-4 text-slate-300 leading-7">如果三个命令都正常输出版本号，说明安装成功。</p>
+<hr class="my-8 border-slate-800">
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">编写 MyToken 合约</h2>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>第一步：初始化项目</h3>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code># 创建新项目
+forge init my-token &amp;&amp; cd my-token
+
+# 查看项目结构
+tree -L 2</code></pre></div></pre></div>
+<p class="mb-4 text-slate-300 leading-7">Foundry 生成的项目结构如下：</p>
+<div class="relative my-6 group"><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">my-token/
+├── foundry.toml          # 项目配置文件
+├── lib/                  # 依赖库目录
+│   └── forge-std/        # Foundry 标准测试库
+├── script/               # 部署脚本
+│   └── Counter.s.sol
+├── src/                  # 合约源码
+│   └── Counter.sol
+└── test/                 # 测试文件
+    └── Counter.t.sol
+</code></pre></div>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>第二步：安装 OpenZeppelin</h3>
+<p class="mb-4 text-slate-300 leading-7">OpenZeppelin 是经过大量审计的智能合约标准库，我们不需要从零实现 ERC-20 的每一个细节，继承 OpenZeppelin 的实现即可。</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code># 安装 OpenZeppelin Contracts v5
+forge install OpenZeppelin/openzeppelin-contracts --no-commit</code></pre></div></pre></div>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>第三步：配置 remappings</h3>
+<p class="mb-4 text-slate-300 leading-7">在项目根目录创建 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">remappings.txt</code>，让 Foundry 知道如何找到 OpenZeppelin 的代码：</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code># 创建 remappings.txt
+echo '@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/' &gt; remappings.txt</code></pre></div></pre></div>
+<p class="mb-4 text-slate-300 leading-7">也可以在 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">foundry.toml</code> 中配置：</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">toml</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">toml</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+remappings = ["@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/"]</code></pre></div></pre></div>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>第四步：编写合约</h3>
+<p class="mb-4 text-slate-300 leading-7">删除默认的 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">Counter.sol</code>，创建 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">src/MyToken.sol</code>：</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+
+/**
+ * @title MyToken - 一个简单的 ERC-20 代币
+ * @author beihaili
+ * @notice 用于学习 ERC-20 标准的示例合约
+ * @dev 继承 OpenZeppelin 的 ERC20 和 Ownable 合约
+ *
+ * 功能说明：
+ * - 部署时铸造固定数量的初始代币给部署者
+ * - 合约所有者可以额外铸造代币（可选功能）
+ * - 继承 ERC20 的所有标准功能（transfer, approve, transferFrom 等）
+ */
+contract MyToken is ERC20, Ownable {
+    /// @notice 代币精度，与 ETH 保持一致（18 位小数）
+    uint8 private constant DECIMALS = 18;
+
+    /**
+     * @notice 构造函数：部署合约时设置代币名称、符号和初始供应量
+     * @param name_ 代币全称，例如 "My Awesome Token"
+     * @param symbol_ 代币符号，例如 "MAT"
+     * @param initialSupply 初始供应量（以最小单位计算，会自动乘以 10^18）
+     *
+     * @dev 示例：如果 initialSupply = 1_000_000，实际铸造 1,000,000 * 10^18 个最小单位
+     *      这意味着代币总量为 100 万个，每个代币可被拆分到 18 位小数
+     */
+    constructor (
+        string memory name_,
+        string memory symbol_,
+        uint256 initialSupply
+    ) ERC20 (name_, symbol_) Ownable (msg.sender) {
+        //_mint 是 OpenZeppelin ERC20 的内部函数
+        //msg.sender 是部署合约的地址，所有初始代币都铸造给部署者
+        _mint (msg.sender, initialSupply * 10 ** decimals ());
+    }
+
+    /**
+     * @notice 铸造新代币（仅合约所有者可调用）
+     * @param to 接收新代币的地址
+     * @param amount 铸造数量（最小单位）
+     *
+     * @dev 这个函数通过 Ownable 的 onlyOwner 修饰符限制权限
+     *      只有部署合约的地址（owner）才能调用
+     *      注意：这里的 amount 是最小单位，不会自动乘以 decimals
+     */
+    function mint (address to, uint256 amount) external onlyOwner {
+        _mint (to, amount);
+    }
+}</code></pre></div></pre></div>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>逐行代码解读</h3>
+<p class="mb-4 text-slate-300 leading-7">让我们逐段拆解这个合约：</p>
+<p class="mb-4 text-slate-300 leading-7">**1. 许可证和版本声明 **</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;</code></pre></div></pre></div>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">SPDX-License-Identifier</code> 声明开源许可证，MIT 是最宽松的许可。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">pragma solidity ^0.8.20</code> 指定编译器版本，<code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">^</code> 表示兼容 0.8.20 及以上的 0.8.x 版本。我们使用 0.8.20+ 是因为 OpenZeppelin v5 需要这个版本。</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">**2. 导入依赖 **</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";</code></pre></div></pre></div>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">ERC20.sol</code> 包含了 ERC-20 标准的完整实现（totalSupply、balanceOf、transfer 等全部函数）。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">Ownable.sol</code> 提供了所有权管理功能（onlyOwner 修饰符、transferOwnership 等）。</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">**3. 合约继承 **</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>contract MyToken is ERC20, Ownable {</code></pre></div></pre></div>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Solidity 的 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">is</code> 关键字实现多继承。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">我们的合约同时继承了 ERC20 的全部代币功能和 Ownable 的权限管理功能。</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">**4. 构造函数 **</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>constructor (
+    string memory name_,
+    string memory symbol_,
+    uint256 initialSupply
+) ERC20 (name_, symbol_) Ownable (msg.sender) {
+    _mint (msg.sender, initialSupply * 10 ** decimals ());
+}</code></pre></div></pre></div>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">构造函数只在部署时执行一次。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">ERC20 (name_, symbol_)</code> 调用父合约的构造函数设置代币名称和符号。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">Ownable (msg.sender)</code> 把合约所有者设为部署者。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">_mint</code> 铸造初始代币。<code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">decimals ()</code> 返回 18，所以 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">1_000_000 * 10^18</code> 就是 100 万个代币。</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">**5. 铸造函数 **</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>function mint (address to, uint256 amount) external onlyOwner {
+    _mint (to, amount);
+}</code></pre></div></pre></div>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">external</code> 表示只能从外部调用（比 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">public</code> 稍省 gas）。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">onlyOwner</code> 是 Ownable 提供的修饰符，非 owner 调用会 revert。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">这个函数让 owner 可以增发代币，实际项目中需要谨慎使用。</div></li>
+</ul>
+<hr class="my-8 border-slate-800">
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">编写测试</h2>
+<p class="mb-4 text-slate-300 leading-7">Foundry 的测试用 Solidity 编写，这是它最大的优势之一 —— 用同一种语言写合约和测试，不需要在 JS 和 Solidity 之间切换。</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>测试基础</h3>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">测试合约继承 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">forge-std/Test.sol</code></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">setUp ()</code> 函数在每个测试用例前自动执行</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">测试函数必须以 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">test</code> 前缀开头（如 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">testTransfer</code>）</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">以 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">testFail</code> 开头的函数预期会 revert</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">使用 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">assertEq</code>、<code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">assertTrue</code>、<code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">assertGt</code> 等断言函数</div></li>
+</ul>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>完整测试代码</h3>
+<p class="mb-4 text-slate-300 leading-7">删除默认的 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">Counter.t.sol</code>，创建 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">test/MyToken.t.sol</code>：</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+import "forge-std/Test.sol";
+import "../src/MyToken.sol";
+
+/**
+ * @title MyToken 测试合约
+ * @dev 覆盖代币名称、符号、总供应量、转账、授权等核心场景
+ */
+contract MyTokenTest is Test {
+    MyToken public token;
+
+    // 测试用地址
+    address public deployer = address (1);
+    address public alice = address (2);
+    address public bob = address (3);
+
+    // 初始供应量：100 万个代币
+    uint256 public constant INITIAL_SUPPLY = 1_000_000;
+
+    /// @notice 每个测试用例前自动执行
+    function setUp () public {
+        // 以 deployer 身份部署合约
+        vm.prank (deployer);
+        token = new MyToken ("My Awesome Token", "MAT", INITIAL_SUPPLY);
+    }
+
+    // ============ 基础属性测试 ============
+
+    /// @notice 测试代币名称是否正确
+    function testName () public view {
+        assertEq (token.name (), "My Awesome Token");
+    }
+
+    /// @notice 测试代币符号是否正确
+    function testSymbol () public view {
+        assertEq (token.symbol (), "MAT");
+    }
+
+    /// @notice 测试总供应量是否正确
+    function testTotalSupply () public view {
+        // INITIAL_SUPPLY * 10^18
+        assertEq (token.totalSupply (), INITIAL_SUPPLY * 10 ** 18);
+    }
+
+    /// @notice 测试部署者是否收到了全部初始代币
+    function testDeployerBalance () public view {
+        assertEq (token.balanceOf (deployer), INITIAL_SUPPLY * 10 ** 18);
+    }
+
+    // ============ 转账测试 ============
+
+    /// @notice 测试正常转账
+    function testTransfer () public {
+        uint256 amount = 1000 * 10 ** 18; // 转 1000 个代币
+
+        //deployer 转 1000 MAT 给 alice
+        vm.prank (deployer);
+        bool success = token.transfer (alice, amount);
+
+        // 断言转账成功
+        assertTrue (success);
+        // 断言 alice 收到代币
+        assertEq (token.balanceOf (alice), amount);
+        // 断言 deployer 余额减少
+        assertEq (token.balanceOf (deployer), (INITIAL_SUPPLY * 10 ** 18) - amount);
+    }
+
+    /// @notice 测试余额不足时转账应 revert
+    function testTransferInsufficientBalance () public {
+        uint256 amount = 1000 * 10 ** 18;
+
+        //alice 没有代币，尝试转账应该失败
+        vm.prank (alice);
+        vm.expectRevert (); // 预期下一次调用会 revert
+        token.transfer (bob, amount);
+    }
+
+    // ============ 授权与代扣测试 ============
+
+    /// @notice 测试 approve + transferFrom 流程
+    function testApproveAndTransferFrom () public {
+        uint256 amount = 500 * 10 ** 18;
+
+        //deployer 授权 alice 可代扣 500 MAT
+        vm.prank (deployer);
+        token.approve (alice, amount);
+
+        // 验证授权额度
+        assertEq (token.allowance (deployer, alice), amount);
+
+        //alice 使用授权从 deployer 转代币给 bob
+        vm.prank (alice);
+        token.transferFrom (deployer, bob, amount);
+
+        // 验证余额
+        assertEq (token.balanceOf (bob), amount);
+        // 验证授权额度已消耗
+        assertEq (token.allowance (deployer, alice), 0);
+    }
+
+    // ============ Owner 铸造测试 ============
+
+    /// @notice 测试 owner 可以铸造新代币
+    function testMintByOwner () public {
+        uint256 mintAmount = 5000 * 10 ** 18;
+
+        vm.prank (deployer);
+        token.mint (alice, mintAmount);
+
+        assertEq (token.balanceOf (alice), mintAmount);
+        // 总供应量应增加
+        assertEq (token.totalSupply (), (INITIAL_SUPPLY * 10 ** 18) + mintAmount);
+    }
+
+    /// @notice 测试非 owner 不能铸造
+    function testMintByNonOwnerReverts () public {
+        vm.prank (alice);
+        vm.expectRevert (); // 非 owner 调用 mint 应 revert
+        token.mint (alice, 1000 * 10 ** 18);
+    }
+}</code></pre></div></pre></div>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>运行测试</h3>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code># 运行所有测试（-vv 显示详细日志）
+forge test -vv</code></pre></div></pre></div>
+<p class="mb-4 text-slate-300 leading-7">你应该看到类似这样的输出：</p>
+<div class="relative my-6 group"><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">[⠊] Compiling...
+[⠊] Compiling 1 files with Solc 0.8.28
+[⠒] Solc 0.8.28 finished in 1.23s
+Compiler run successful!
+
+Ran 7 tests for test/MyToken.t.sol:MyTokenTest
+[PASS] testApproveAndTransferFrom () (gas: 52341)
+[PASS] testDeployerBalance () (gas: 10521)
+[PASS] testMintByNonOwnerReverts () (gas: 12105)
+[PASS] testMintByOwner () (gas: 36742)
+[PASS] testName () (gas: 9823)
+[PASS] testSymbol () (gas: 9801)
+[PASS] testTotalSupply () (gas: 10478)
+[PASS] testTransfer () (gas: 38123)
+[PASS] testTransferInsufficientBalance () (gas: 14892)
+
+Suite result: ok. 7 passed; 0 failed; 0 skipped; finished in 2.81ms
+</code></pre></div>
+<p class="mb-4 text-slate-300 leading-7">所有 7 个测试通过，说明我们的合约逻辑正确。</p>
+<p class="mb-4 text-slate-300 leading-7">** 测试输出解读：**</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">[PASS]</code> 表示测试通过</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">括号中的 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">gas</code> 是该测试消耗的 gas 量</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">-vv</code> 会显示 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">emit</code> 事件和 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">console.log</code> 输出；使用 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">-vvvv</code> 可以看到完整的 EVM 执行 trace</div></li>
+</ul>
+<hr class="my-8 border-slate-800">
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">部署到测试网</h2>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>第一步：编写部署脚本</h3>
+<p class="mb-4 text-slate-300 leading-7">删除默认的 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">Counter.s.sol</code>，创建 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">script/Deploy.s.sol</code>：</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+import "forge-std/Script.sol";
+import "../src/MyToken.sol";
+
+/**
+ * @title 部署脚本
+ * @dev 使用 forge script 命令执行
+ *
+ * 部署参数：
+ * - 代币名称：My Awesome Token
+ * - 代币符号：MAT
+ * - 初始供应量：1,000,000（100 万个代币）
+ */
+contract DeployMyToken is Script {
+    function run () external {
+        // 从环境变量读取私钥
+        uint256 deployerPrivateKey = vm.envUint ("PRIVATE_KEY");
+
+        // 开始广播交易（后续的合约调用会被发送到链上）
+        vm.startBroadcast (deployerPrivateKey);
+
+        // 部署合约
+        MyToken token = new MyToken (
+            "My Awesome Token", // 代币名称
+            "MAT",             // 代币符号
+            1_000_000          // 初始供应量：100 万
+        );
+
+        // 打印部署地址
+        console.log ("MyToken deployed at:", address (token));
+
+        vm.stopBroadcast ();
+    }
+}</code></pre></div></pre></div>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>第二步：获取 Sepolia 测试网 ETH</h3>
+<p class="mb-4 text-slate-300 leading-7">部署合约需要支付 gas 费，在测试网上你可以免费获取测试 ETH：</p>
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">Sepolia 水龙头（Faucet）：</strong></p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Google Cloud Faucet：<a href="https://cloud.google.com/application/web3/faucet/ethereum/sepolia" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">https://cloud.google.com/application/web3/faucet/ethereum/sepolia <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Alchemy Faucet：<a href="https://sepoliafaucet.com/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">https://sepoliafaucet.com/ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Infura Faucet：<a href="https://www.infura.io/faucet/sepolia" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">https://www.infura.io/faucet/sepolia <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">通常每次可以领取 0.5 ETH，足够部署好几个合约了。</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>第三步：配置 RPC 和私钥</h3>
+<p class="mb-4 text-slate-300 leading-7">你需要一个 Sepolia 的 RPC URL。可以在 <a href="https://www.alchemy.com/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Alchemy <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> 或 <a href="https://www.infura.io/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Infura <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> 免费申请。</p>
+<p class="mb-4 text-slate-300 leading-7">创建 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">.env</code> 文件存放敏感信息：</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code># .env 文件（⚠️ 务必添加到 .gitignore！）
+PRIVATE_KEY = 你的私钥
+SEPOLIA_RPC_URL=https://eth-sepolia.g.alchemy.com/v2 / 你的 API 密钥
+ETHERSCAN_API_KEY = 你的 Etherscan_API 密钥</code></pre></div></pre></div>
+<blockquote class="border-l-4 border-cyan-500/30 bg-slate-900/50 p-4 text-slate-400 rounded-r-lg my-4 text-base italic">
+<p class="mb-4 text-slate-300 leading-7">⚠️ ** 安全警告：**</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 永远不要 ** 在命令行中直接暴露持有真实资产的私钥</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 永远不要 ** 把 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">.env</code> 文件提交到 Git 仓库</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">测试时请使用 ** 专用的测试钱包 **，不要使用你的主钱包</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Foundry 也支持 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">--keystore</code> 和 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">--ledger</code> 等更安全的方式管理私钥</div></li>
+</ul>
+</blockquote>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>第四步：执行部署</h3>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code># 加载环境变量
+source .env
+
+# 部署到 Sepolia 测试网
+forge script script/Deploy.s.sol:DeployMyToken \
+    --rpc-url $SEPOLIA_RPC_URL \
+    --private-key $PRIVATE_KEY \
+    --broadcast</code></pre></div></pre></div>
+<p class="mb-4 text-slate-300 leading-7">** 命令参数解析：**</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="my-6 overflow-x-auto rounded-lg border border-slate-700"><table class="w-full text-sm"><thead><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">参数</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">作用</th></tr></thead><tbody><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">script/Deploy.s.sol:DeployMyToken</code></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">指定部署脚本和合约名</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">--rpc-url</code></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">目标网络的 RPC 端点</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">--private-key</code></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">部署者的私钥（或使用 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">--keystore</code>）</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">--broadcast</code></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">实际发送交易（不加这个参数只是模拟）</td></tr></tbody></table></div>
+<p class="mb-4 text-slate-300 leading-7">部署成功后你会看到：</p>
+<div class="relative my-6 group"><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">== Logs ==
+  MyToken deployed at: 0x1234...abcd
+
+## Setting up 1 EVM.
+
+Chain 11155111
+
+Estimated gas price: 3.5 gwei
+Estimated total gas used for script: 876543
+Estimated amount required: 0.003067 ETH
+
+###
+Finding wallets for all the necessary addresses...
+##
+Sending transactions [1/1].
+⠁ [00:00:05] Waiting for tx hash...
+##### sepolia
+✅  Hash: 0xabcd...1234
+Contract Address: 0x1234...abcd
+Block: 12345678
+Paid: 0.002345 ETH (876543 gas * 2.67 gwei)
+</code></pre></div>
+<p class="mb-4 text-slate-300 leading-7">记下 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">Contract Address</code>，后续验证和添加代币都需要用到。</p>
+<hr class="my-8 border-slate-800">
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">在 Etherscan 上验证合约</h2>
+<p class="mb-4 text-slate-300 leading-7">验证合约意味着把源代码上传到 Etherscan，让任何人都能查看你的合约代码、通过 Etherscan 界面直接调用函数。</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>执行验证</h3>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code># 验证合约
+forge verify-contract \
+    &lt; 你的合约地址 &gt; \
+    src/MyToken.sol:MyToken \
+    --chain sepolia \
+    --etherscan-api-key $ETHERSCAN_API_KEY \
+    --constructor-args $(cast abi-encode "constructor (string,string,uint256)" "My Awesome Token" "MAT" 1000000)</code></pre></div></pre></div>
+<p class="mb-4 text-slate-300 leading-7">** 参数说明：**</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">&lt; 你的合约地址 &gt;</code>：部署时返回的合约地址</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">src/MyToken.sol:MyToken</code>：源文件路径和合约名</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">--chain sepolia</code>：目标网络</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">--constructor-args</code>：构造函数的 ABI 编码参数（用 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">cast abi-encode</code> 生成）</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">也可以在部署时一步完成部署 + 验证：</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>forge script script/Deploy.s.sol:DeployMyToken \
+    --rpc-url $SEPOLIA_RPC_URL \
+    --private-key $PRIVATE_KEY \
+    --broadcast \
+    --verify \
+    --etherscan-api-key $ETHERSCAN_API_KEY</code></pre></div></pre></div>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>验证后的好处</h3>
+<ol class="ml-2 mb-4 space-y-1 counter-reset-list">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 源码公开 **：Etherscan 上会显示绿色对勾 ✅，表示合约已验证。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Read Contract</strong>：任何人都可以在 Etherscan 上直接查询 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">totalSupply</code>、<code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">balanceOf</code> 等只读函数。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Write Contract</strong>：连接钱包后可以直接在 Etherscan 上调用 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">transfer</code>、<code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">approve</code> 等写入函数。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 信任度提升 **：用户可以阅读源码确认合约行为，极大提升项目透明度。</div></li>
+</ol>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>在 MetaMask 中添加代币</h3>
+<ol class="ml-2 mb-4 space-y-1 counter-reset-list">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">打开 MetaMask，确保网络切换到 **Sepolia 测试网 **</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">点击 <strong class="text-white font-bold">Import Tokens</strong>（导入代币）</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">输入你的合约地址，MetaMask 会自动识别代币名称和符号</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">确认添加后，你就能在钱包中看到你的 MAT 代币余额了</div></li>
+</ol>
+<hr class="my-8 border-slate-800">
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">🧪 动手实战</h2>
+<p class="mb-4 text-slate-300 leading-7">本课配有 **Lab 实战环境 **，帮助你在真实的开发环境中动手操作。</p>
+<p class="mb-4 text-slate-300 leading-7">** 如何开始：**</p>
+<ol class="ml-2 mb-4 space-y-1 counter-reset-list">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">在课程页面点击 <strong class="text-white font-bold">"开始实战"</strong> 按钮</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">系统会自动为你 fork 一个包含脚手架代码的模板仓库</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">按照 Lab 中的分步指引完成合约编写、测试和部署</div></li>
+</ol>
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">Lab 与本课文的关系：</strong></p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">📖 ** 本课文 ** = 知识讲解，帮助你理解原理和概念</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">🔧 <strong class="text-white font-bold">Lab</strong> = 动手操作指南，提供完整的代码模板和逐步指引</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">两者互相配合：先读课文理解原理，再进入 Lab 动手实践。</p>
+<hr class="my-8 border-slate-800">
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">总结</h2>
+<p class="mb-4 text-slate-300 leading-7">在本课中，我们完成了一个完整的 ERC-20 代币从编写到部署的全流程：</p>
+<ol class="ml-2 mb-4 space-y-1 counter-reset-list">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">
+<p class="mb-4 text-slate-300 leading-7">**ERC-20 标准 **：理解了 6 个核心函数（totalSupply、balanceOf、transfer、approve、transferFrom、allowance）和 2 个事件（Transfer、Approval）的作用和设计逻辑。</p>
+</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">
+<p class="mb-4 text-slate-300 leading-7">**Foundry 工具链 **：学会了使用 forge init 初始化项目、forge install 管理依赖、forge test 运行测试、forge script 部署合约。</p>
+</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">OpenZeppelin</strong>：学会了通过继承 OpenZeppelin 的审计过的合约库来快速构建安全的代币合约，避免重复造轮子。</p>
+</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">
+<p class="mb-4 text-slate-300 leading-7">** 测试驱动开发 **：用 Solidity 编写了 7 个测试用例，覆盖了名称、符号、总供应量、转账、余额不足 revert、授权代扣、权限控制等核心场景。</p>
+</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">
+<p class="mb-4 text-slate-300 leading-7">** 部署与验证 **：将合约部署到 Sepolia 测试网，并在 Etherscan 上验证源码，最后在 MetaMask 中添加了自定义代币。</p>
+</div></li>
+</ol>
+<p class="mb-4 text-slate-300 leading-7">ERC-20 是进入智能合约开发世界的最佳起点。掌握了这个标准之后，你可以继续探索 ERC-721（NFT）、ERC-1155（多代币标准）、DeFi 协议开发等更高级的主题。</p>
+<hr class="my-8 border-slate-800">
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">延伸阅读</h2>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="https://eips.ethereum.org/EIPS/eip-20" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">EIP-20 标准原文 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> — ERC-20 的正式规范文档</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="https://docs.openzeppelin.com/contracts/5.x/erc20" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">OpenZeppelin ERC20 文档 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> — OpenZeppelin v5 的 ERC20 实现文档</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="https://book.getfoundry.sh/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Foundry Book <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> — Foundry 官方文档，涵盖从入门到高级用法</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="https://solidity-by-example.org/app/erc20/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Solidity by Example - ERC20 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> — 不使用库的纯手写 ERC-20 实现</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="https://wizard.openzeppelin.com/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">OpenZeppelin Contracts Wizard <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> — 在线可视化生成 ERC-20 / ERC-721 等合约代码</div></li>
+</ul>
+<hr class="my-8 border-slate-800">
+<div align="center">
+<a href="https://github.com/beihaili/Get-Started-with-Web3" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">🏠 返回主页  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> |
+<a href="https://twitter.com/bhbtc1337" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">🐦 关注作者  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> |
+<a href="https://forms.gle/QMBwL6LwZyQew1tX8" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">📝 加入交流群  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a>
+</div></div></div><div class="mt-8 pt-8 border-t border-slate-200 dark:border-slate-700"><div class="space-y-4"><div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 text-center"><div class="flex items-center justify-center gap-2 mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-circuit w-6 h-6 text-purple-400" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M9 13a4.5 4.5 0 0 0 3-4"></path><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path d="M6 18a4 4 0 0 1-1.967-.516"></path><path d="M12 13h4"></path><path d="M12 18h6a2 2 0 0 1 2 2v1"></path><path d="M12 8h8"></path><path d="M16 8V5a2 2 0 0 1 2-2"></path><circle cx="16" cy="13" r=".5"></circle><circle cx="18" cy="3" r=".5"></circle><circle cx="20" cy="21" r=".5"></circle><circle cx="20" cy="8" r=".5"></circle></svg><h4 class="text-white font-bold">闯关测验</h4></div><p class="text-slate-300 mb-6">完成 <strong>5 道题目</strong>，需要<strong> 全部答对 </strong>才能通关下一章节</p><button class="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-bold py-3 px-8 rounded-lg transition-all transform hover:scale-105 shadow-lg shadow-purple-500/20">🚀 开始挑战</button></div></div></div><div class="flex gap-4 mt-8 pt-8 border-t border-slate-200 dark:border-slate-700"><div class="px-4 sm:px-6 py-2 bg-slate-100/50 dark:bg-slate-800/50 text-slate-600 rounded-lg cursor-not-allowed text-sm sm:text-base">← <span class="hidden sm:inline">上一讲</span><span class="sm:hidden">上一</span></div><a class="px-4 sm:px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors ml-auto text-sm sm:text-base" href="/Get-Started-with-Web3/zh/learn/module-7/7-2"><span class="hidden sm:inline">下一讲</span><span class="sm:hidden">下一</span> →</a></div><div class="mt-8 pt-8 border-t border-slate-700 flex flex-col items-center gap-3"><p class="text-slate-400 text-sm">如果这节课对你有帮助，欢迎支持作者继续创作 ☕</p><a href="https://buymeacoffee.com/beihai" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-pink-500 to-orange-500
+          hover:from-pink-400 hover:to-orange-400 text-white font-semibold rounded-full
+          transition-all hover:scale-105 shadow-lg shadow-pink-500/20"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart w-4 h-4" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg>感谢作者 · Buy Me a Coffee</a></div></div></main><div class="fixed bottom-6 right-6 z-50"><button aria-label="AI 助教" class="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white p-4 rounded-full shadow-2xl shadow-purple-500/20 transition-all transform hover:scale-105"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-circuit w-6 h-6" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M9 13a4.5 4.5 0 0 0 3-4"></path><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path d="M6 18a4 4 0 0 1-1.967-.516"></path><path d="M12 13h4"></path><path d="M12 18h6a2 2 0 0 1 2 2v1"></path><path d="M12 8h8"></path><path d="M16 8V5a2 2 0 0 1 2-2"></path><circle cx="16" cy="13" r=".5"></circle><circle cx="18" cy="3" r=".5"></circle><circle cx="20" cy="21" r=".5"></circle><circle cx="20" cy="8" r=".5"></circle></svg></button></div></div></div></div>
+    
+  
+</body></html>

@@ -1,0 +1,819 @@
+<!DOCTYPE html><html lang="zh-CN" class="dark"><head>
+    <meta charset="UTF-8">
+    <script>
+      // Sync theme from localStorage before first paint to prevent FOUC
+      try {
+        const stored = JSON.parse(localStorage.getItem('web3-theme-store'));
+        if (!stored || stored.state.theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {
+        document.documentElement.classList.add('dark');
+      }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能合约安全实战 | Web3 Builder 实战 | Web3 Starter</title>
+
+    <!-- SEO基础标签 -->
+    <meta name="description" content="智能合约安全实战 - Web3 Builder 实战 教程">
+    <meta name="keywords" content="Web3, 区块链, 比特币, 教程, 入门, blockchain, bitcoin, tutorial, 加密货币, cryptocurrency, 以太坊, ethereum">
+    <meta name="author" content="Bei Hai">
+    <link rel="canonical" href="https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-7/7-4">
+
+    <!-- Open Graph (社交分享) -->
+    <meta property="og:title" content="智能合约安全实战 | Web3 Builder 实战 | Web3 Starter">
+    <meta property="og:description" content="智能合约安全实战 - Web3 Builder 实战 教程">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-7/7-4">
+    <meta property="og:site_name" content="Get Started With Web3">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:image" content="https://beihaili.github.io/Get-Started-with-Web3/logo.png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@bhbtc1337">
+    <meta name="twitter:title" content="Get Started With Web3 - Web3区块链入门教程">
+    <meta name="twitter:description" content="开源Web3教育平台，系统化学习Web3和比特币技术">
+    <meta name="twitter:image" content="https://beihaili.github.io/Get-Started-with-Web3/logo.png">
+
+    <!-- JSON-LD 结构化数据 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Get Started With Web3",
+      "description": "开源Web3教育平台，系统化学习Web3和比特币技术。包含21讲比特币技术课程和6讲Web3快速入门。",
+      "provider": {
+        "@type": "Organization",
+        "name": "Get Started With Web3",
+        "url": "https://beihaili.github.io/Get-Started-with-Web3/"
+      },
+      "inLanguage": "zh-CN",
+      "isAccessibleForFree": true,
+      "url": "https://beihaili.github.io/Get-Started-with-Web3/",
+      "image": "https://beihaili.github.io/Get-Started-with-Web3/logo.png",
+      "hasCourseInstance": [
+        {
+          "@type": "CourseInstance",
+          "name": "Web3 快速入门",
+          "courseMode": "online"
+        },
+        {
+          "@type": "CourseInstance",
+          "name": "比特币技术深度解析",
+          "courseMode": "online"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Cloudflare Web Analytics -->
+    <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;e9421c23377646fd87f949f35958cbf6&quot;}"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/Get-Started-with-Web3/favicon.svg">
+
+    <!-- PWA相关 -->
+    <link rel="manifest" href="/Get-Started-with-Web3/manifest.json">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/Get-Started-with-Web3/logo.png">
+    <script type="module" crossorigin="" src="/Get-Started-with-Web3/assets/index-69154090.js"></script>
+    <link rel="modulepreload" crossorigin="" href="/Get-Started-with-Web3/assets/markdown-423020bc.js">
+    <link rel="modulepreload" crossorigin="" href="/Get-Started-with-Web3/assets/react-vendor-5e67d862.js">
+    <link rel="modulepreload" crossorigin="" href="/Get-Started-with-Web3/assets/ui-693f6edb.js">
+    <link rel="modulepreload" crossorigin="" href="/Get-Started-with-Web3/assets/store-fb978561.js">
+    <link rel="stylesheet" href="/Get-Started-with-Web3/assets/index-b257051a.css">
+  <link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/LandingPage-cf8f6f09.js"><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/HashVisualizer-f962f4ae.js"><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/useUserStore-13ba6bc0.js"><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/sponsorData-38203181.js"><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/SeoHead-55c749d5.js"><link rel="alternate" hreflang="zh" href="https://beihaili.github.io/Get-Started-with-Web3/zh"><script type="application/ld+json" data-seo-head="true">{"@context":"https://schema.org","@type":"Article","name":"智能合约安全实战 | Web3 Builder 实战 | Web3 Starter","description":"智能合约安全实战 - Web3 Builder 实战 教程","url":"https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-7/7-4","isPartOf":{"@type":"Course","name":"Web3 Builder 实战"}}</script><script type="application/ld+json" data-platform-ld="true">{"@context":"https://schema.org","@type":"WebSite","name":"Get Started with Web3","url":"https://beihaili.github.io/Get-Started-with-Web3/","publisher":{"@type":"Organization","name":"Get Started with Web3","url":"https://github.com/beihaili/Get-Started-with-Web3"}}</script><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/ReaderPage-0f878545.js"><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/ShareCard-12fe9b15.js"><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/ThemeToggle-334c11fd.js"><link rel="modulepreload" as="script" crossorigin="" href="/Get-Started-with-Web3/assets/MobileNav-4a16c95c.js"><link rel="alternate" hreflang="en" href="https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-7/7-4"></head>
+  <body>
+    <!-- SPA路由恢复脚本 -->
+    <script>
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+
+    <div id="root"><div class="app"><div class="min-h-screen bg-slate-50 dark:bg-slate-950"><nav aria-label="课程导航" class="sticky top-0 z-10 border-b border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-md"><div class="container mx-auto px-4 py-4 flex items-center justify-between"><a class="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-cyan-400 transition-colors" href="/Get-Started-with-Web3/zh/dashboard"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left w-5 h-5" aria-hidden="true"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg><span>返回课程</span></a><div class="flex items-center gap-4"><div class="hidden sm:flex items-center gap-4"><span class="text-slate-500 dark:text-slate-400 text-sm">Web3 Builder 实战</span><button class="px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors text-sm font-medium">标记为已完成</button><button aria-label="Switch to light mode" class="p-2 rounded-lg text-slate-400 hover:text-cyan-400 hover:bg-slate-800/50 dark:hover:bg-slate-800/50 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun w-5 h-5" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg></button><button class="flex items-center gap-1 rounded-lg px-2 py-1 text-sm text-slate-400 transition-colors hover:bg-slate-800 hover:text-white" title="Switch to English"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe h-4 w-4" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg><span>EN</span></button></div><div class="flex sm:hidden items-center gap-2"><button class="px-3 py-1.5 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors text-sm font-medium">标记为已完成</button><button aria-label="Open menu" class="sm:hidden p-2 text-slate-500 dark:text-slate-400 hover:text-cyan-500 dark:hover:text-cyan-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu w-5 h-5" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg></button></div></div></div></nav><main class="container mx-auto px-4 py-8 max-w-4xl"><div class="p-8 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-700/50 rounded-xl"><div class="mb-8"><div class="inline-block px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-full mb-4"><span class="text-cyan-400 text-sm font-medium">Web3 Builder 实战</span></div><span class="text-slate-500 dark:text-slate-400 text-sm">预计阅读 38 分钟</span><h1 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">智能合约安全实战</h1></div><div class="prose dark:prose-invert max-w-none"><div class="font-sans text-base markdown-content"><h1 class="text-3xl md:text-4xl font-black text-white mt-12 mb-8 border-b border-slate-800 pb-4">智能合约安全实战</h1>
+<p class="mb-4 text-slate-300 leading-7">![status](<a href="https://img.shields.io/badge/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">https://img.shields.io/badge/ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> 状态 - 已完成 - success)
+![author](<a href="https://img.shields.io/badge/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">https://img.shields.io/badge/ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> 作者 - beihaili-blue)
+![date](<a href="https://img.shields.io/badge/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">https://img.shields.io/badge/ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> 日期 - 2025--06-orange)
+![difficulty](<a href="https://img.shields.io/badge/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">https://img.shields.io/badge/ <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> 难度 - 高级 - red)</p>
+<blockquote class="border-l-4 border-cyan-500/30 bg-slate-900/50 p-4 text-slate-400 rounded-r-lg my-4 text-base italic">
+<p class="mb-4 text-slate-300 leading-7">💡 智能合约一旦部署就无法修改，而它管理的往往是真金白银。一个小小的漏洞可能导致数百万美元的损失。本课将带你深入了解真实世界中最常见的智能合约漏洞，学会如何编写安全的 Solidity 代码，并掌握基本的审计方法与工具。欢迎关注作者 <a href="https://twitter.com/bhbtc1337" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Twitter <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a>、加入 <a href="https://forms.gle/QMBwL6LwZyQew1tX8" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">交流群 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a>、或在 <a href="https://github.com/beihaili/Get-Started-with-Web3" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">GitHub <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> 上贡献内容。</p>
+</blockquote>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">目录</h2>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[前言](# 前言)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[常见漏洞类型](# 常见漏洞类型)
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[重入攻击 (Reentrancy)](# 重入攻击 - reentrancy)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[整数溢出与下溢 (Integer Overflow/Underflow)](# 整数溢出与下溢 - integer-overflowunderflow)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[权限控制漏洞](# 权限控制漏洞)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[其他常见漏洞](# 其他常见漏洞)</div></li>
+</ul>
+</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[安全开发最佳实践](# 安全开发最佳实践)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[自动化审计工具](# 自动化审计工具)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[如何阅读审计报告](# 如何阅读审计报告)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[总结](# 总结)</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">[延伸阅读](# 延伸阅读)</div></li>
+</ul>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">前言</h2>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>为什么智能合约安全如此重要？</h3>
+<p class="mb-4 text-slate-300 leading-7">传统软件出了 bug 可以打补丁、发新版本。但智能合约不同 —— 它部署在区块链上之后，代码就永远无法更改。更关键的是，智能合约直接掌管着用户的资金，攻击者不需要入侵服务器、不需要社会工程学，只需要找到代码中的一个逻辑漏洞，就能在一笔交易中卷走所有资金。</p>
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">DeFi 攻击历史触目惊心：</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="my-6 overflow-x-auto rounded-lg border border-slate-700"><table class="w-full text-sm"><thead><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">事件</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">时间</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">损失金额</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">漏洞类型</th></tr></thead><tbody><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">The DAO</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">2016 年</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">~6000 万美元</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">重入攻击</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Parity 钱包</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">2017 年</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">~1.5 亿美元</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">权限控制</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">bZx 闪电贷攻击</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">2020 年</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">~800 万美元</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">预言机操纵</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Ronin Bridge</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">2022 年</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">~6.2 亿美元</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">私钥泄露</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Euler Finance</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">2023 年</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">~1.97 亿美元</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">逻辑漏洞</td></tr></tbody></table></div>
+<p class="mb-4 text-slate-300 leading-7">据统计，自 DeFi 兴起以来，因智能合约漏洞和安全事件造成的累计损失已超过 ** 数十亿美元 **。</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>本课目标</h3>
+<p class="mb-4 text-slate-300 leading-7">学完本课，你将能够：</p>
+<ol class="ml-2 mb-4 space-y-1 counter-reset-list">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 识别 ** 最常见的智能合约漏洞类型</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 编写 ** 遵循安全最佳实践的 Solidity 代码</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 使用 ** Slither、Mythril 等自动化工具进行初步审计</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 阅读 ** 专业安全审计报告并理解其中的发现</div></li>
+</ol>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">常见漏洞类型</h2>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>重入攻击 (Reentrancy)</h3>
+<p class="mb-4 text-slate-300 leading-7">重入攻击是智能合约历史上最著名、最具破坏力的漏洞类型。2016 年 The DAO 事件中，攻击者利用重入漏洞盗走了约 6000 万美元的 ETH，最终导致以太坊社区分裂，硬分叉出了 Ethereum Classic (ETC)。</p>
+<p class="mb-4 text-slate-300 leading-7">** 原理：** 当合约 A 向合约 B 发送 ETH 时，会触发合约 B 的 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">receive ()</code> 或 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">fallback ()</code> 函数。如果合约 A 在发送 ETH ** 之后 ** 才更新状态（比如扣减余额），那么合约 B 可以在回调函数中 ** 再次调用 ** 合约 A 的提款函数 —— 此时余额还没被扣减，于是可以反复提款。</p>
+<p class="mb-4 text-slate-300 leading-7">** 漏洞代码示例：**</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+/// @title 有重入漏洞的保险库合约
+/// @notice 这是一个反面教材，请勿在生产环境使用
+contract VulnerableVault {
+    mapping (address =&gt; uint256) public balances;
+
+    /// @notice 用户存入 ETH
+    function deposit () external payable {
+        balances [msg.sender] += msg.value;
+    }
+
+    /// @notice 用户提取全部余额 —— 存在重入漏洞！
+    function withdraw () external {
+        uint256 amount = balances [msg.sender];
+        require (amount &gt; 0, "No balance");
+
+        // 危险：先发送 ETH，再更新状态
+        (bool success, ) = msg.sender.call {value: amount}("");
+        require (success, "Transfer failed");
+
+        // 此行在回调中被绕过 —— 攻击者反复调用 withdraw ()
+        // 时，balances 还没被清零
+        balances [msg.sender] = 0;
+    }
+}</code></pre></div></pre></div>
+<p class="mb-4 text-slate-300 leading-7">** 攻击合约：**</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+interface IVulnerableVault {
+    function deposit () external payable;
+    function withdraw () external;
+}
+
+/// @title 重入攻击合约
+contract Attacker {
+    IVulnerableVault public vault;
+    address public owner;
+
+    constructor (address _vault) {
+        vault = IVulnerableVault (_vault);
+        owner = msg.sender;
+    }
+
+    /// @notice 发起攻击：先存入 1 ETH，然后提款触发重入
+    function attack () external payable {
+        require (msg.value &gt;= 1 ether, "Need at least 1 ETH");
+        vault.deposit {value: 1 ether}();
+        vault.withdraw ();
+    }
+
+    /// @notice 每次收到 ETH 时自动触发，反复调用 withdraw
+    receive () external payable {
+        if (address (vault).balance &gt;= 1 ether) {
+            vault.withdraw (); // 重入！此时 balances 尚未清零
+        }
+    }
+
+    /// @notice 攻击者取回所有盗取的资金
+    function collectStolenFunds () external {
+        require (msg.sender == owner);
+        payable (owner).transfer (address (this).balance);
+    }
+}</code></pre></div></pre></div>
+<p class="mb-4 text-slate-300 leading-7">** 修复后的安全代码：**</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
+
+/// @title 安全的保险库合约
+/// @notice 使用 Checks-Effects-Interactions 模式 + ReentrancyGuard
+contract SecureVault is ReentrancyGuard {
+    mapping (address =&gt; uint256) public balances;
+
+    function deposit () external payable {
+        balances [msg.sender] += msg.value;
+    }
+
+    /// @notice 安全的提款函数
+    function withdraw () external nonReentrant {
+        uint256 amount = balances [msg.sender];
+        require (amount &gt; 0, "No balance");          // Checks: 检查条件
+
+        balances [msg.sender] = 0;                   // Effects: 先更新状态
+
+        (bool success, ) = msg.sender.call {value: amount}(""); // Interactions: 最后外部调用
+        require (success, "Transfer failed");
+    }
+}</code></pre></div></pre></div>
+<p class="mb-4 text-slate-300 leading-7">** 防御要点：**</p>
+<ol class="ml-2 mb-4 space-y-1 counter-reset-list">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">**Checks-Effects-Interactions 模式 **：先检查条件 → 再更新状态 → 最后进行外部调用</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 使用 OpenZeppelin ReentrancyGuard**：通过 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">nonReentrant</code> 修饰符添加互斥锁</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 避免使用 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">call</code> 发送大额资金时不加保护 **</div></li>
+</ol>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>整数溢出与下溢 (Integer Overflow/Underflow)</h3>
+<p class="mb-4 text-slate-300 leading-7">在 Solidity 0.8 之前，整数运算不会自动检查溢出。一个 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">uint8</code> 类型的变量值为 255 时，加 1 会变成 0（溢出）；值为 0 时，减 1 会变成 255（下溢）。这在 DeFi 中可能导致灾难性后果 —— 比如余额从 0 突然变成天文数字。</p>
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">Solidity 0.8 之前的危险行为：</strong></p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.7.6; // 注意：0.8 之前的版本
+
+/// @title 有整数溢出漏洞的代币合约
+/// @notice 这是反面教材，展示 0.8 之前的危险行为
+contract VulnerableToken {
+    mapping (address =&gt; uint256) public balances;
+    uint256 public totalSupply;
+
+    constructor (uint256 _initialSupply) {
+        balances [msg.sender] = _initialSupply;
+        totalSupply = _initialSupply;
+    }
+
+    /// @notice 转账函数 —— 存在下溢漏洞
+    function transfer (address _to, uint256 _value) public {
+        // 在 0.8 之前，如果 balances [msg.sender] = 0 而 _value = 1，
+        // 那么 0 - 1 不会 revert，而是变成 2^256 - 1（一个天文数字）
+        require (balances [msg.sender] - _value &gt;= 0); // 这个检查永远为 true！
+        balances [msg.sender] -= _value;  // 下溢：余额变成超大数字
+        balances [_to] += _value;
+    }
+}</code></pre></div></pre></div>
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">SafeMath 的历史作用：</strong></p>
+<p class="mb-4 text-slate-300 leading-7">在 Solidity 0.8 之前，开发者使用 OpenZeppelin 的 SafeMath 库来防止溢出：</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>// Solidity 0.8 之前的解决方案
+import "@openzeppelin/contracts/math/SafeMath.sol";
+
+contract SafeToken {
+    using SafeMath for uint256;
+
+    mapping (address =&gt; uint256) public balances;
+
+    function transfer (address _to, uint256 _value) public {
+        // SafeMath 会在溢出时自动 revert
+        balances [msg.sender] = balances [msg.sender].sub (_value);
+        balances [_to] = balances [_to].add (_value);
+    }
+}</code></pre></div></pre></div>
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">Solidity 0.8+ 的改进：</strong></p>
+<p class="mb-4 text-slate-300 leading-7">从 Solidity 0.8 开始，编译器 ** 默认 ** 会检查所有算术运算的溢出，溢出时自动 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">revert</code>。但要注意 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">unchecked</code> 块：</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ModernToken {
+    mapping (address =&gt; uint256) public balances;
+
+    function transfer (address _to, uint256 _value) public {
+        // 0.8+ 默认安全：如果余额不足会自动 revert
+        balances [msg.sender] -= _value;
+        balances [_to] += _value;
+    }
+
+    /// @notice unchecked 块会跳过溢出检查 —— 使用时必须格外小心
+    function riskyIncrement (uint256 x) public pure returns (uint256) {
+        unchecked {
+            return x + 1; // 如果 x = type (uint256).max，会溢出为 0！
+        }
+    }
+}</code></pre></div></pre></div>
+<p class="mb-4 text-slate-300 leading-7">** 注意事项：**</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Solidity 0.8+ 的 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">unchecked</code> 块通常用于节省 gas（比如循环计数器 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">i++</code>），但 ** 绝不能 ** 对用户输入的数据使用 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">unchecked</code></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">审计时要特别关注 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">unchecked</code> 块中的算术运算</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">如果项目中混合使用 0.7 和 0.8 版本的合约，要格外注意版本差异</div></li>
+</ul>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>权限控制漏洞</h3>
+<p class="mb-4 text-slate-300 leading-7">权限控制是智能合约安全的基石。如果关键函数缺少适当的访问控制，任何人都可以调用管理员才能执行的操作，比如铸造代币、转移资金、暂停合约等。</p>
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">2017 年 Parity 钱包事件：</strong> 由于初始化函数缺少访问控制，攻击者调用了多签钱包库合约的 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">initWallet ()</code> 函数让自己成为了所有者，然后将库合约自毁（<code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">selfdestruct</code>），导致所有依赖该库的钱包中的 ETH ** 永久锁死 **，损失约 1.5 亿美元。</p>
+<p class="mb-4 text-slate-300 leading-7">** 漏洞代码 —— 缺少权限检查：**</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+/// @title 有权限漏洞的代币合约
+contract VulnerableAdmin {
+    mapping (address =&gt; uint256) public balances;
+    address public owner;
+
+    constructor () {
+        owner = msg.sender;
+    }
+
+    /// @notice 铸造新代币 —— 任何人都能调用！
+    function mint (address _to, uint256 _amount) external {
+        // 缺少 onlyOwner 检查 —— 这是一个严重漏洞
+        balances [_to] += _amount;
+    }
+
+    /// @notice 紧急提取所有资金 —— 同样没有权限控制
+    function emergencyWithdraw () external {
+        payable (msg.sender).transfer (address (this).balance);
+    }
+}</code></pre></div></pre></div>
+<p class="mb-4 text-slate-300 leading-7"><strong class="text-white font-bold">tx.origin 与 msg.sender 的陷阱：</strong></p>
+<p class="mb-4 text-slate-300 leading-7"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">tx.origin</code> 是交易的最初发起者（永远是一个 EOA 外部账户），而 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">msg.sender</code> 是直接调用者（可以是合约）。使用 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">tx.origin</code> 进行权限控制是一个经典陷阱：</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+/// @title tx.origin 权限漏洞示例
+contract TxOriginVictim {
+    address public owner;
+
+    constructor () {
+        owner = msg.sender;
+    }
+
+    /// @notice 危险！使用 tx.origin 进行身份验证
+    function transferOwnership (address _newOwner) external {
+        // 如果 owner 调用了恶意合约，恶意合约再调用此函数，
+        //tx.origin 仍然是 owner，检查会通过！
+        require (tx.origin == owner, "Not owner");
+        owner = _newOwner;
+    }
+}
+
+/// @title 利用 tx.origin 的攻击合约
+contract TxOriginAttacker {
+    TxOriginVictim public victim;
+    address public attacker;
+
+    constructor (address _victim) {
+        victim = TxOriginVictim (_victim);
+        attacker = msg.sender;
+    }
+
+    /// @notice 当 owner 向此合约发送 ETH 时触发攻击
+    receive () external payable {
+        //tx.origin 是 owner（因为 owner 发起了这笔交易）
+        //msg.sender 是本合约（但 victim 检查的是 tx.origin）
+        victim.transferOwnership (attacker);
+    }
+}</code></pre></div></pre></div>
+<p class="mb-4 text-slate-300 leading-7">** 修复后的安全代码：**</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/access/AccessControl.sol";
+
+/// @title 使用 OpenZeppelin 的安全权限管理
+contract SecureAdmin is AccessControl {
+    bytes32 public constant MINTER_ROLE = keccak256 ("MINTER_ROLE");
+    bytes32 public constant PAUSER_ROLE = keccak256 ("PAUSER_ROLE");
+
+    mapping (address =&gt; uint256) public balances;
+
+    constructor (address admin) {
+        _grantRole (DEFAULT_ADMIN_ROLE, admin);
+        _grantRole (MINTER_ROLE, admin);
+    }
+
+    /// @notice 只有 MINTER_ROLE 可以铸造
+    function mint (address _to, uint256 _amount) external onlyRole (MINTER_ROLE) {
+        balances [_to] += _amount;
+    }
+
+    /// @notice 只有管理员可以紧急提取
+    function emergencyWithdraw () external onlyRole (DEFAULT_ADMIN_ROLE) {
+        payable (msg.sender).transfer (address (this).balance);
+    }
+}</code></pre></div></pre></div>
+<p class="mb-4 text-slate-300 leading-7">** 权限控制的核心原则：**</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">永远使用 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">msg.sender</code> 而不是 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">tx.origin</code> 做身份验证</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">使用 OpenZeppelin 的 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">Ownable</code> 或 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">AccessControl</code> 进行角色管理</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">关键操作（铸币、暂停、升级、资金提取）必须有严格的权限守卫</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">考虑使用 ** 多签 (Multisig)** 和 ** 时间锁 (Timelock)** 保护最高权限</div></li>
+</ul>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>其他常见漏洞</h3>
+<p class="mb-4 text-slate-300 leading-7">除了上述三大经典漏洞，还有几类在 DeFi 中频繁出现的攻击向量：</p>
+<p class="mb-4 text-slate-300 leading-7">** 前端运行 / MEV (Front-running)：**</p>
+<p class="mb-4 text-slate-300 leading-7">在以太坊中，用户的交易在被打包进区块之前会先进入公开的交易池（mempool）。矿工或 MEV Bot 可以看到你的交易内容，然后在你的交易之前插入自己的交易获利。</p>
+<div class="relative my-6 group"><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">用户提交大额 Swap 交易 → 进入 mempool（公开可见）
+    ↓
+MEV Bot 发现机会 → 在用户交易之前买入（推高价格）
+    ↓
+用户交易执行 → 以更高价格成交
+    ↓
+MEV Bot 卖出获利 → "三明治攻击" 完成
+</code></pre></div>
+<p class="mb-4 text-slate-300 leading-7">防御手段：使用 Flashbots Protect、设置合理的 slippage tolerance、或使用 commit-reveal 方案。</p>
+<p class="mb-4 text-slate-300 leading-7">** 闪电贷攻击 (Flash Loan Attack)：**</p>
+<p class="mb-4 text-slate-300 leading-7">闪电贷是 DeFi 独有的创新 —— 在一笔交易中借入巨额资金、执行操作、然后归还，全程无需抵押。攻击者利用闪电贷瞬间获得巨大的资金杠杆，操纵市场价格或利用协议逻辑漏洞获利。</p>
+<div class="relative my-6 group"><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">1. 攻击者从 Aave/dYdX 闪电贷借入 1000 万 USDC
+2. 用大额资金操纵某个 DEX 的代币价格
+3. 以被操纵的价格在目标协议中获利
+4. 归还闪电贷 + 手续费
+5. 攻击者净赚差价
+</code></pre></div>
+<p class="mb-4 text-slate-300 leading-7">** 预言机操纵 (Oracle Manipulation)：**</p>
+<p class="mb-4 text-slate-300 leading-7">许多 DeFi 协议依赖预言机获取外部价格数据。如果协议直接使用单一 DEX 的即时价格（现货价格）作为预言机，攻击者可以通过闪电贷操纵该 DEX 的价格来欺骗协议。</p>
+<p class="mb-4 text-slate-300 leading-7">防御手段：使用 Chainlink 等去中心化预言机、采用 TWAP（时间加权平均价格）、多源聚合报价。</p>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">安全开发最佳实践</h2>
+<p class="mb-4 text-slate-300 leading-7">遵循以下实践可以大幅降低合约漏洞风险：</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>1. 最小权限原则</h3>
+<p class="mb-4 text-slate-300 leading-7">每个函数、每个角色只应拥有完成其任务所需的 ** 最小权限 **。管理员的权力越大，合约被攻击后的损失就越大。</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>2. Checks-Effects-Interactions 模式</h3>
+<p class="mb-4 text-slate-300 leading-7">这是 Solidity 开发中最重要的设计模式：</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>function safeOperation () external {
+    // 1. Checks —— 所有条件检查放在最前面
+    require (balances [msg.sender] &gt;= amount, "Insufficient balance");
+    require (amount &gt; 0, "Amount must be positive");
+
+    // 2. Effects —— 更新所有状态变量
+    balances [msg.sender] -= amount;
+    totalWithdrawn += amount;
+
+    // 3. Interactions —— 最后才进行外部调用
+    (bool success, ) = msg.sender.call {value: amount}("");
+    require (success, "Transfer failed");
+}</code></pre></div></pre></div>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>3. 使用经过审计的开源库</h3>
+<p class="mb-4 text-slate-300 leading-7">** 不要重新发明轮子。** OpenZeppelin Contracts 是行业标准，经过多轮审计和社区验证：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">ReentrancyGuard</code> — 防重入</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">Ownable</code> / <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">AccessControl</code> — 权限管理</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">Pausable</code> — 紧急暂停</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">SafeERC20</code> — 安全的 ERC-20 交互</div></li>
+</ul>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>4. 编写全面的测试</h3>
+<p class="mb-4 text-slate-300 leading-7">测试是安全的第一道防线。好的测试应该覆盖：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">正常路径（happy path）</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">边界条件（零值、最大值、空地址）</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">权限检查（非授权用户应该被拒绝）</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">攻击场景（重入、溢出等）</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Fuzz testing（随机输入发现意外行为）</div></li>
+</ul>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>5. 代码审查清单</h3>
+<p class="mb-4 text-slate-300 leading-7">每次提交合约代码时，对照以下清单逐项检查：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><input disabled="" type="checkbox"> 所有外部调用都在状态更新 ** 之后 ** 吗？（Checks-Effects-Interactions）</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><input disabled="" type="checkbox"> 关键函数是否有适当的访问控制修饰符？</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><input disabled="" type="checkbox"> 是否使用了 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">tx.origin</code> 做身份验证？（应该用 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">msg.sender</code>）</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><input disabled="" type="checkbox"> <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">unchecked</code> 块中是否有用户可控的输入？</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><input disabled="" type="checkbox"> 外部合约调用的返回值是否都被检查了？</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><input disabled="" type="checkbox"> 循环中是否有可能因 gas 耗尽而 revert 的操作？</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><input disabled="" type="checkbox"> 合约是否正确处理了 ETH 和 ERC-20 的发送失败？</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><input disabled="" type="checkbox"> 是否有合适的事件 (event) 记录关键操作？</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><input disabled="" type="checkbox"> 是否考虑了合约升级和紧急暂停机制？</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><input disabled="" type="checkbox"> 所有 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">public</code> / <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">external</code> 函数都是有意暴露的吗？</div></li>
+</ul>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">自动化审计工具</h2>
+<p class="mb-4 text-slate-300 leading-7">手动审计是不可替代的，但自动化工具可以快速发现常见漏洞，是安全流程中不可缺少的一环。</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>Slither — 静态分析利器</h3>
+<p class="mb-4 text-slate-300 leading-7">Slither 是由 Trail of Bits 开发的 Solidity 静态分析框架，速度快、误报率低，是最常用的审计工具之一。</p>
+<p class="mb-4 text-slate-300 leading-7">** 安装与运行：**</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code># 安装 Slither
+pip install slither-analyzer
+
+# 对单个合约文件运行分析
+slither contracts/MyContract.sol
+
+# 对 Foundry/Hardhat 项目运行
+slither .
+
+# 只显示高危和中危问题
+slither . --filter-paths "node_modules" --exclude-informational --exclude-low</code></pre></div></pre></div>
+<p class="mb-4 text-slate-300 leading-7">** 输出解读示例：**</p>
+<div class="relative my-6 group"><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">MyContract.withdraw (uint256) (contracts/MyContract.sol#45-52)
+  sends eth to arbitrary user
+  Dangerous calls:
+    - (success) = msg.sender.call {value: amount}() (contracts/MyContract.sol#50)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#functions-that-send-ether-to-arbitrary-destinations
+
+INFO:Detectors:
+Reentrancy in MyContract.withdraw (uint256) (contracts/MyContract.sol#45-52):
+  External calls:
+    - (success) = msg.sender.call {value: amount}() (#50)
+  State variables written after the call:
+    - balances [msg.sender] = 0 (#51)
+</code></pre></div>
+<p class="mb-4 text-slate-300 leading-7">Slither 会明确指出：哪个函数、哪一行、什么类型的风险，并附上参考文档链接。</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>Mythril — 符号执行引擎</h3>
+<p class="mb-4 text-slate-300 leading-7">Mythril 使用符号执行和约束求解来发现深层漏洞，适合捕捉复杂的逻辑问题。</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code># 安装 Mythril
+pip install mythril
+
+# 分析合约
+myth analyze contracts/MyContract.sol
+
+# 指定 Solidity 版本
+myth analyze contracts/MyContract.sol --solv 0.8.20
+
+# 设置更深的搜索深度（耗时更长，发现更多）
+myth analyze contracts/MyContract.sol --execution-timeout 300</code></pre></div></pre></div>
+<p class="mb-4 text-slate-300 leading-7">Mythril 会尝试构造 ** 真实的攻击路径 **：如果它发现一条可以导致资金损失的交易序列，会直接输出该序列。</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>Foundry Fuzz Testing — 模糊测试</h3>
+<p class="mb-4 text-slate-300 leading-7">Foundry 内置的 fuzz testing 功能可以用随机输入自动测试合约，是发现边界情况的利器：</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">solidity</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+import "forge-std/Test.sol";
+import "../src/SecureVault.sol";
+
+contract SecureVaultFuzzTest is Test {
+    SecureVault vault;
+    address user = address (0x1);
+
+    function setUp () public {
+        vault = new SecureVault ();
+    }
+
+    /// @notice Fuzz 测试：存入任意金额后，余额应该正确
+    function testFuzz_DepositUpdatesBalance (uint96 amount) public {
+        vm.assume (amount &gt; 0); // 排除零值
+        vm.deal (user, amount);
+        vm.prank (user);
+        vault.deposit {value: amount}();
+        assertEq (vault.balances (user), amount);
+    }
+
+    /// @notice Fuzz 测试：不能提取超过余额的金额
+    function testFuzz_CannotWithdrawMoreThanBalance (uint96 depositAmt) public {
+        vm.assume (depositAmt &gt; 0);
+        vm.deal (user, depositAmt);
+        vm.prank (user);
+        vault.deposit {value: depositAmt}();
+
+        // 余额正确
+        assertEq (vault.balances (user), depositAmt);
+
+        // 提取后余额归零
+        vm.prank (user);
+        vault.withdraw ();
+        assertEq (vault.balances (user), 0);
+    }
+
+    /// @notice Fuzz 测试：没有存款的用户不能提取
+    function testFuzz_NoBalanceCannotWithdraw (address randomUser) public {
+        vm.assume (randomUser != address (0));
+        vm.assume (vault.balances (randomUser) == 0);
+        vm.prank (randomUser);
+        vm.expectRevert ("No balance");
+        vault.withdraw ();
+    }
+}</code></pre></div></pre></div>
+<p class="mb-4 text-slate-300 leading-7">** 运行 fuzz test：**</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">bash</div><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code># 运行所有 fuzz 测试（默认 256 轮随机输入）
+forge test --match-contract SecureVaultFuzzTest
+
+# 增加随机轮数以获得更高覆盖率
+forge test --match-contract SecureVaultFuzzTest --fuzz-runs 10000
+
+# 查看详细输出
+forge test --match-contract SecureVaultFuzzTest -vvvv</code></pre></div></pre></div>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>工具对比</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="my-6 overflow-x-auto rounded-lg border border-slate-700"><table class="w-full text-sm"><thead><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">特性</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Slither</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Mythril</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Foundry Fuzz</th></tr></thead><tbody><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">分析方法</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">静态分析</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">符号执行</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">模糊测试</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">速度</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">极快（秒级）</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">较慢（分钟级）</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">中等</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">擅长发现</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">常见模式漏洞</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">复杂逻辑漏洞</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">边界条件问题</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">误报率</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">低</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">中</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">极低</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">学习曲线</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">低</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">中</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">低</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">最佳使用场景</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">CI/CD 集成，快速扫描</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">深度分析关键合约</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">开发阶段持续测试</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">安装</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">pip install slither-analyzer</code></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">pip install mythril</code></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">内置于 Foundry</td></tr></tbody></table></div>
+<p class="mb-4 text-slate-300 leading-7">** 最佳实践：** 三种工具结合使用。开发时用 Foundry fuzz testing 持续测试，提交前用 Slither 快速扫描，关键合约上线前用 Mythril 做深度分析。</p>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">如何阅读审计报告</h2>
+<p class="mb-4 text-slate-300 leading-7">无论你是开发者还是用户，阅读审计报告的能力都至关重要。对开发者来说，它帮助你理解和修复问题；对用户来说，它帮助你评估一个协议是否值得信任。</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>审计报告的标准结构</h3>
+<p class="mb-4 text-slate-300 leading-7">一份专业的审计报告通常包含以下部分：</p>
+<ol class="ml-2 mb-4 space-y-1 counter-reset-list">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Executive Summary（摘要）</strong>：项目概述、审计范围、关键发现统计</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Scope（审计范围）</strong>：审计了哪些合约、哪个 commit、使用了什么工具</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Findings（发现）</strong>：按严重程度排列的所有问题</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Recommendations（建议）</strong>：针对每个问题的修复建议</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Appendix（附录）</strong>：工具输出、测试覆盖率等补充信息</div></li>
+</ol>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>严重程度分级</h3>
+<p class="mb-4 text-slate-300 leading-7">审计发现按以下标准分为五个等级：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="my-6 overflow-x-auto rounded-lg border border-slate-700"><table class="w-full text-sm"><thead><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">等级</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">含义</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">示例</th></tr></thead><tbody><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">Critical</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">可直接导致资金损失</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">重入攻击、权限绕过</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">High</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">严重影响协议功能或安全</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">价格操纵、逻辑错误</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">Medium</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">可能在特定条件下造成损害</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">缺少事件日志、边界未检查</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">Low</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">最佳实践偏差，风险较小</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">gas 优化、代码风格</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><strong class="text-white font-bold">Informational</strong></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">建议性改进，无安全风险</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">注释缺失、命名不规范</td></tr></tbody></table></div>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>解读真实审计报告示例</h3>
+<p class="mb-4 text-slate-300 leading-7">以下是一个简化的审计发现条目，展示专业报告的写法：</p>
+<div class="relative my-6 group"><button aria-label="复制代码" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="复制代码"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">[H-01] 提款函数存在重入风险
+
+严重程度: High
+状态：已确认 (Confirmed)
+
+描述:
+    Vault.sol 第 45 行的 withdraw () 函数在外部调用（第 50 行）之后
+    才更新用户余额状态（第 51 行），违反了 Checks-Effects-Interactions
+    模式。恶意合约可以在 receive () 回调中重复调用 withdraw ()，在单笔
+    交易中提取超过其余额的资金。
+
+影响:
+    攻击者可以提取合约中的全部 ETH 余额。截至审计时，合约持有 1,250 ETH
+    （约 400 万美元）。
+
+复现步骤:
+    1. 部署攻击合约，实现 receive () 中回调 withdraw ()
+    2. 调用 deposit () 存入 1 ETH
+    3. 调用 withdraw () 触发重入循环
+    4. 预期结果：攻击者获得远超 1 ETH 的资金
+
+建议修复:
+    - 将 balances [msg.sender] = 0 移至外部调用之前
+    - 添加 OpenZeppelin ReentrancyGuard 的 nonReentrant 修饰符
+</code></pre></div>
+<p class="mb-4 text-slate-300 leading-7">** 阅读审计报告时的关键问题：**</p>
+<ol class="ml-2 mb-4 space-y-1 counter-reset-list">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Critical 和 High 级别的发现是否都已修复？</strong> 如果还有未修复的高危问题，应极其谨慎</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 审计覆盖了全部合约代码吗？** 注意审计范围之外的合约</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 审计之后代码是否有改动？** 审计报告只对特定 commit 有效</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 审计机构的声誉如何？** Trail of Bits、OpenZeppelin、Consensys Diligence、Spearbit 等是业内知名机构</div></li>
+</ol>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">总结</h2>
+<p class="mb-4 text-slate-300 leading-7">智能合约安全不是可选的附加项，而是 Web3 开发的 ** 核心要求 **。回顾本课的关键要点：</p>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>核心漏洞类型</h3>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 重入攻击 **：永远遵循 Checks-Effects-Interactions 模式，关键函数加 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">nonReentrant</code></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 整数溢出 **：使用 Solidity 0.8+，谨慎使用 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">unchecked</code> 块</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">** 权限控制 **：使用 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">msg.sender</code> 而非 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">tx.origin</code>，善用 OpenZeppelin AccessControl</div></li>
+</ul>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>安全开发流程</h3>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">使用经过审计的 OpenZeppelin 库，不要重复造轮子</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">编写全面的测试（包括 fuzz testing 和攻击场景模拟）</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">每次提交代码时对照安全清单检查</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">使用 Slither + Mythril + Foundry fuzz 三层防护</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">上线前请专业团队进行安全审计</div></li>
+</ul>
+<h3 class="text-xl md:text-2xl font-bold text-cyan-400 mt-8 mb-4 flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-5 h-5 shrink-0" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>安全意识</h3>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">智能合约安全是一个 ** 持续学习 ** 的过程 —— 新的攻击向量不断出现</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">参与 CTF 竞赛（如 Damn Vulnerable DeFi）是提升实战能力的最好方式</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">阅读 Rekt.news 上的真实攻击分析，从历史中学习</div></li>
+</ul>
+<blockquote class="border-l-4 border-cyan-500/30 bg-slate-900/50 p-4 text-slate-400 rounded-r-lg my-4 text-base italic">
+<p class="mb-4 text-slate-300 leading-7">安全不是目的地，而是旅程。每一个 DeFi 开发者都有责任让这个生态变得更安全。</p>
+</blockquote>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">延伸阅读</h2>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="https://swcregistry.io/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">SWC Registry <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> — 智能合约弱点分类标准，涵盖所有已知漏洞类型</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="https://docs.openzeppelin.com/contracts/5.x/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">OpenZeppelin Contracts <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> — 安全最佳实践与经过审计的合约库</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="https://www.damnvulnerabledefi.xyz/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Damn Vulnerable DeFi <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> — 智能合约安全 CTF 练习平台，强烈推荐</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="https://rekt.news/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Rekt.news <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> — DeFi 安全事件新闻与深度分析</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="https://consensys.github.io/smart-contract-best-practices/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Consensys 智能合约最佳实践 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> — 全面的安全开发指南</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="https://book.getfoundry.sh/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Foundry Book <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> — Foundry 官方文档，包含 fuzz testing 教程</div></li>
+</ul>
+<hr class="my-8 border-slate-800">
+<div align="center">
+<a href="https://github.com/beihaili/Get-Started-with-Web3" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">🏠 返回主页  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> |
+<a href="https://twitter.com/bhbtc1337" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">🐦 关注作者  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> |
+<a href="https://forms.gle/QMBwL6LwZyQew1tX8" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">📝 加入交流群  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a>
+</div></div></div><div class="mt-8 pt-8 border-t border-slate-200 dark:border-slate-700"><div class="space-y-4"><div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 text-center"><div class="flex items-center justify-center gap-2 mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-circuit w-6 h-6 text-purple-400" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M9 13a4.5 4.5 0 0 0 3-4"></path><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path d="M6 18a4 4 0 0 1-1.967-.516"></path><path d="M12 13h4"></path><path d="M12 18h6a2 2 0 0 1 2 2v1"></path><path d="M12 8h8"></path><path d="M16 8V5a2 2 0 0 1 2-2"></path><circle cx="16" cy="13" r=".5"></circle><circle cx="18" cy="3" r=".5"></circle><circle cx="20" cy="21" r=".5"></circle><circle cx="20" cy="8" r=".5"></circle></svg><h4 class="text-white font-bold">闯关测验</h4></div><p class="text-slate-300 mb-6">完成 <strong>5 道题目</strong>，需要<strong> 全部答对 </strong>才能通关下一章节</p><button class="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-bold py-3 px-8 rounded-lg transition-all transform hover:scale-105 shadow-lg shadow-purple-500/20">🚀 开始挑战</button></div></div></div><div class="flex gap-4 mt-8 pt-8 border-t border-slate-200 dark:border-slate-700"><a class="px-4 sm:px-6 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-900 dark:text-white rounded-lg transition-colors text-sm sm:text-base" href="/Get-Started-with-Web3/zh/learn/module-7/7-3">← <span class="hidden sm:inline">上一讲</span><span class="sm:hidden">上一</span></a><div class="px-4 sm:px-6 py-2 bg-slate-100/50 dark:bg-slate-800/50 text-slate-600 rounded-lg cursor-not-allowed ml-auto text-sm sm:text-base"><span class="hidden sm:inline">下一讲</span><span class="sm:hidden">下一</span> →</div></div><div class="mt-8 pt-8 border-t border-slate-700 flex flex-col items-center gap-3"><p class="text-slate-400 text-sm">如果这节课对你有帮助，欢迎支持作者继续创作 ☕</p><a href="https://buymeacoffee.com/beihai" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-pink-500 to-orange-500
+          hover:from-pink-400 hover:to-orange-400 text-white font-semibold rounded-full
+          transition-all hover:scale-105 shadow-lg shadow-pink-500/20"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart w-4 h-4" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg>感谢作者 · Buy Me a Coffee</a></div></div></main><div class="fixed bottom-6 right-6 z-50"><button aria-label="AI 助教" class="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white p-4 rounded-full shadow-2xl shadow-purple-500/20 transition-all transform hover:scale-105"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-circuit w-6 h-6" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M9 13a4.5 4.5 0 0 0 3-4"></path><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path d="M6 18a4 4 0 0 1-1.967-.516"></path><path d="M12 13h4"></path><path d="M12 18h6a2 2 0 0 1 2 2v1"></path><path d="M12 8h8"></path><path d="M16 8V5a2 2 0 0 1 2-2"></path><circle cx="16" cy="13" r=".5"></circle><circle cx="18" cy="3" r=".5"></circle><circle cx="20" cy="21" r=".5"></circle><circle cx="20" cy="8" r=".5"></circle></svg></button></div></div></div></div>
+    
+  
+</body></html>
