@@ -2,8 +2,8 @@ import { describe, it, expect } from 'vitest';
 import { COURSE_DATA } from '../courseData';
 
 describe('courseData', () => {
-  it('should have 7 modules', () => {
-    expect(COURSE_DATA).toHaveLength(7);
+  it('should have 8 modules', () => {
+    expect(COURSE_DATA).toHaveLength(8);
   });
 
   it('module-7 should have correct structure', () => {
