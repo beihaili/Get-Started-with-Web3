@@ -15,6 +15,7 @@ const SOURCE_FOLDERS = [
   'GetStartedWithBitcoin',
   'Web3Thoughts',
   'Web3BuilderLab',
+  'DeFiDeepDive',
   'L2CrossChain',
   '其它学习资源整理/DeFi',
   '其它学习资源整理/Etherum',
