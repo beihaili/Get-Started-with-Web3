@@ -20,13 +20,13 @@ import { persist } from 'zustand/middleware';
  * @property {function(string): void} setSearchQuery - Update search query.
  * @property {function(Object[]): void} setSearchResults - Update search results.
  * @property {function(): void} clearSearch - Reset search query and results.
- * @property {function(): void} selectNextResult - Highlight the next search result.
- * @property {function(): void} selectPreviousResult - Highlight the previous search result.
+ * @property {function(): void} selectNextResult - Highlights the next search result.
+ * @property {function(): void} selectPreviousResult - Highlights the previous search result.
  * @property {function(number): void} setSelectedResultIndex - Directly set the highlighted index.
  * @property {function(string): void} addToHistory - Add a query to the search history.
  * @property {function(): void} clearHistory - Clear all search history.
  * @property {function(string): void} removeFromHistory - Remove a specific item from history.
- * @property {function(): Object} getSelectedResult - Get currently highlighted search result.
+ * @property {function(): Object|undefined} getSelectedResult - Get currently highlighted search result.
  */
 
 /**

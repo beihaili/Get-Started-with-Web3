@@ -26,8 +26,8 @@ import { create } from 'zustand';
  * @property {function(): void} clearActiveLesson - Clear the currently active lesson.
  * @property {function(string, string): Promise<string>} fetchLessonContent - Fetch lesson content with caching and deduplication.
  * @property {function(): void} clearCache - Clear the entire content cache.
- * @property {function(string): ContentCacheEntry} getCachedContent - Get content from cache.
- * @property {function(string): void} removeCachedContent - Remove specific content from cache.
+ * @property {function(string): ContentCacheEntry} getCachedContent - Get content from cache using a cache key in {lang}/{lessonPath} format.
+ * @property {function(string): void} removeCachedContent - Remove specific content from cache using a cache key in {lang}/{lessonPath} format.
  * @property {function(): number} getCacheSize - Get the number of entries in the cache.
  * @property {function(): void} cleanOldCache - Remove cache entries older than 7 days.
  */
