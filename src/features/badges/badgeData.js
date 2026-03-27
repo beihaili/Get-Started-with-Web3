@@ -11,6 +11,7 @@ import {
   Wrench,
   Landmark,
   Network,
+  Vote,
 } from 'lucide-react';
 
 /**
@@ -201,6 +202,25 @@ export const ACHIEVEMENT_BADGES = {
       experience: 300,
       unlockedFeatures: ['L2 Gas 费对比工具', '跨链桥安全评估'],
       nextBadgeHint: '继续学习 DAO 与去中心化治理',
+    },
+  },
+  'module-10': {
+    id: 'dao-governance-master',
+    name: 'DAO Governance Master',
+    title: 'DAO 治理大师',
+    description: '掌握去中心化治理的理论与实践，理解 DAO 的运作机制',
+    icon: Vote,
+    rarity: 'Epic',
+    color: 'from-amber-500 to-yellow-500',
+    glowColor: 'shadow-amber-500/50',
+    borderColor: 'border-amber-500',
+    bgColor: 'bg-amber-500/10',
+    requirement: '完成 DAO 与去中心化治理的所有 5 个课程',
+    rewards: {
+      title: '🗳️ DAO 治理大师',
+      experience: 300,
+      unlockedFeatures: ['治理提案分析工具', 'DAO 创建向导'],
+      nextBadgeHint: '尝试参与一个真实 DAO 的治理投票！',
     },
   },
 };
