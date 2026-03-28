@@ -1,5 +1,7 @@
 # 比特币学习资源和信息源整理
 
+> 购买 BTC / ETH / USDT 等加密货币推荐 [币安](https://www.binance.com/zh-CN)[注册链接](https://www.bsmkweb.cc/register?ref=39797374)
+
 ## 📚 比特币深度学习与技术资讯
 
 ### 核心资讯平台

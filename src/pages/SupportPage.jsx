@@ -1,7 +1,7 @@
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Heart, Wallet, Coffee, ArrowLeft, Star } from 'lucide-react';
-import { DONATION_LINKS, CRYPTO_WALLETS, SPONSORS } from '../config/sponsorData';
+import { Heart, Wallet, Coffee, ArrowLeft, Star, ArrowUpRight } from 'lucide-react';
+import { DONATION_LINKS, CRYPTO_WALLETS, SPONSORS, AFFILIATE_LINKS } from '../config/sponsorData';
 import SeoHead from '../components/SeoHead';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 
@@ -126,7 +126,44 @@ const SupportPage = () => {
           </div>
         </section>
 
-        {/* Section 3: Sponsors */}
+        {/* Section 3: Affiliate exchanges */}
+        {AFFILIATE_LINKS.length > 0 && (
+          <section className="mb-10">
+            <h2 className="flex items-center gap-2 text-xl font-bold text-slate-900 dark:text-white mb-5">
+              <ArrowUpRight className="w-5 h-5 text-yellow-400" />
+              {t('support.affiliateTitle')}
+            </h2>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {AFFILIATE_LINKS.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener sponsored noreferrer"
+                  className="flex items-center gap-4 p-5 bg-white/60 dark:bg-slate-900/60 border border-slate-200/50 dark:border-slate-700/50
+                    hover:border-yellow-500/40 rounded-xl transition-all hover:scale-[1.02] group"
+                >
+                  <div
+                    className="w-11 h-11 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500
+                      flex items-center justify-center shrink-0 shadow-md shadow-yellow-500/20"
+                  >
+                    <ArrowUpRight className="w-5 h-5 text-white" />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="text-slate-900 dark:text-white font-semibold group-hover:text-yellow-400 transition-colors">
+                      {lang === 'zh' ? link.nameZh : link.name}
+                    </div>
+                    <div className="text-slate-500 dark:text-slate-400 text-xs">
+                      {lang === 'zh' ? link.descriptionZh : link.description}
+                    </div>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Section 4: Sponsors */}
         <section className="mb-12">
           <h2 className="flex items-center gap-2 text-xl font-bold text-slate-900 dark:text-white mb-5">
             <Star className="w-5 h-5 text-yellow-400" />

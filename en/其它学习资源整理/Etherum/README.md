@@ -13,7 +13,7 @@
 >
 > Open-sourced on GitHub: [Get-Started-with-Web3](https://github.com/beihaili/Get-Started-with-Web3)
 >
-> Buy BTC / ETH / USDT and other cryptocurrencies on [Binance](https://www.binance.com/zh-CN) [Registration Link](https://accounts.marketwebb.me/register?ref=39797374)
+> Buy BTC / ETH / USDT and other cryptocurrencies on [Binance](https://www.binance.com/zh-CN) [Registration Link](https://www.bsmkweb.cc/register?ref=39797374)
 
 ## Table of Contents
 

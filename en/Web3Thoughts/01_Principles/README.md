@@ -7,6 +7,8 @@
 ![](https://img.shields.io/badge/Category-Web3%20Thoughts-green)
 ![](https://img.shields.io/badge/Status-Continuously%20Updated-orange)
 
+> Recommended exchange for buying BTC / ETH / USDT: [Binance](https://www.binance.com/en) [Registration Link](https://www.bsmkweb.cc/register?ref=39797374)
+
 ## Preface: Why Principles Matter
 
 In the Web3 world, following some fundamental principles is crucial. Just as Ray Dalio wrote his *Principles* and CZ wrote his, I would like to share my guiding principles for the Web3 space.

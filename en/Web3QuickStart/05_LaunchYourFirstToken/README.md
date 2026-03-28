@@ -6,6 +6,8 @@
 ![difficulty](https://img.shields.io/badge/Difficulty-Beginner-brightgreen)
 
 > 💡 This tutorial will guide you through quickly launching your first meme coin on the Solana blockchain via the Pump.fun platform — no coding required. The entire process takes just a few minutes, making it an excellent hands-on exercise for Web3 beginners.
+>
+> Recommended exchange for buying BTC / ETH / USDT: [Binance](https://www.binance.com/en) [Registration Link](https://www.bsmkweb.cc/register?ref=39797374)
 
 ## Table of Contents
 

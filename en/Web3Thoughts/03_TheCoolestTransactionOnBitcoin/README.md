@@ -7,6 +7,8 @@
 ![](https://img.shields.io/badge/Category-Bitcoin%20Transactions-green)
 ![](https://img.shields.io/badge/Status-Archived-purple)
 
+> Recommended exchange for buying BTC / ETH / USDT: [Binance](https://www.binance.com/en) [Registration Link](https://www.bsmkweb.cc/register?ref=39797374)
+
 ## Preface: When a Transaction Becomes Art
 
 Most transactions on the blockchain are simple transfers of value. However, within the Bitcoin ecosystem, masterfully crafted "Easter egg transactions" occasionally appear. These leverage protocol quirks, historical events, technical curiosities, and cultural memes to create artworks specifically designed for Bitcoin maximalists.

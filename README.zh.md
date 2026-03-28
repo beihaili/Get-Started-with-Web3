@@ -145,6 +145,18 @@ npm run dev
 
 ---
 
+## 支持本项目 / Support
+
+如果本项目对你有帮助，欢迎支持我们：
+
+- **GitHub Sponsors**: [github.com/sponsors/beihaili](https://github.com/sponsors/beihaili)
+- **Buy Me a Coffee**: [buymeacoffee.com/beihaili](https://buymeacoffee.com/beihaili)
+- **ETH / EVM**: `0xb7Cd29C78B97cdf0A6e6FFC9268d43eDc3eCa649`
+- **BTC**: `1GihPqLkjJNK2fzCMSicc9mLapKeGy3Vv1`
+- **币安**: [注册链接（返佣 20%）](https://www.bsmkweb.cc/register?ref=39797374)
+
+---
+
 ## 社区 / Community
 
 - **Twitter**: [@bhbtc1337](https://twitter.com/bhbtc1337)

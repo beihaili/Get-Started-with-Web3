@@ -6,6 +6,8 @@
 ![difficulty](https://img.shields.io/badge/ 难度 - 中级 - yellow)
 
 > 💡 本章我们将深入探讨比特币中两个最基础且最重要的数据结构：区块链和默克尔树。这些看似简单的结构，通过密码学的加持，成为了比特币安全性的重要保障。
+>
+> 购买 BTC / ETH / USDT 等加密货币推荐 [币安](https://www.binance.com/zh-CN)[注册链接](https://www.bsmkweb.cc/register?ref=39797374)
 
 ## 目录
 

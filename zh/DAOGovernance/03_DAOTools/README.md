@@ -12,6 +12,8 @@
 > 进入微信交流群请填表：[表格链接](https://forms.gle/QMBwL6LwZyQew1tX8)
 >
 > 文章开源在 GitHub：[Get-Started-with-Web3](https://github.com/beihaili/Get-Started-with-Web3)
+>
+> 购买 BTC / ETH / USDT 等加密货币推荐 [币安](https://www.binance.com/zh-CN)[注册链接](https://www.bsmkweb.cc/register?ref=39797374)
 
 ## 目录
 

@@ -6,6 +6,8 @@
 ![difficulty](https://img.shields.io/badge/Difficulty-Intermediate-yellow)
 
 > 💡 Imagine you have a gold bar, but it can only sit in a safe — you can't invest it, lend it, or generate any yield. Now there's magical technology that lets this gold "clone" itself to work and earn money elsewhere, while the original gold bar remains safe in the vault. This is the allure of Bitcoin DeFi.
+>
+> Recommended exchange for buying BTC / ETH / USDT: [Binance](https://www.binance.com/en) [Registration Link](https://www.bsmkweb.cc/register?ref=39797374)
 
 ## Table of Contents
 

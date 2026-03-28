@@ -6,6 +6,8 @@
 ![difficulty](https://img.shields.io/badge/Difficulty-Intermediate-yellow)
 
 > 💡 Imagine a magical clock that rings precisely every 10 minutes, no matter how many people are in the room. When there are more people, the bell becomes harder to ring; when there are fewer, it becomes easier. This is the secret of Bitcoin's difficulty adjustment.
+>
+> Recommended exchange for buying BTC / ETH / USDT: [Binance](https://www.binance.com/en) [Registration Link](https://www.bsmkweb.cc/register?ref=39797374)
 
 ## Table of Contents
 

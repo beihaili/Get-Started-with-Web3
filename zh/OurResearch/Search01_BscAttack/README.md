@@ -11,6 +11,8 @@
 ---
 
 > 📜 ** 研究报告摘要 **：本文研究了 BSC 链上发生的攻击原因及其可能造成的危害，全面分析了攻击机制和防范措施，由北航区块链协会研究团队撰写。
+>
+> 购买 BTC / ETH / USDT 等加密货币推荐 [币安](https://www.binance.com/zh-CN)[注册链接](https://www.bsmkweb.cc/register?ref=39797374)
 
 ## 🌐 背景
 

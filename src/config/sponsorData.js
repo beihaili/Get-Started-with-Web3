@@ -34,5 +34,14 @@ export const CRYPTO_WALLETS = [
 /** 赞助商（按等级分类，留空供未来使用） */
 export const SPONSORS = { gold: [], silver: [], bronze: [] };
 
-/** 联盟推广链接（留空供未来使用） */
-export const AFFILIATE_LINKS = [];
+/** 联盟推广链接 */
+export const AFFILIATE_LINKS = [
+  {
+    name: 'Binance',
+    nameZh: '币安',
+    url: 'https://www.bsmkweb.cc/register?ref=39797374',
+    description: '20% fee rebate',
+    descriptionZh: '注册返佣 20%',
+    icon: 'ArrowUpRight',
+  },
+];

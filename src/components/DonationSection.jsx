@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import { Heart, Wallet } from 'lucide-react';
-import { DONATION_LINKS, CRYPTO_WALLETS } from '../config/sponsorData';
+import { Heart, Wallet, ArrowUpRight } from 'lucide-react';
+import { DONATION_LINKS, CRYPTO_WALLETS, AFFILIATE_LINKS } from '../config/sponsorData';
 
 /**
  * 捐赠区块（首页展示）
@@ -39,6 +39,35 @@ const DonationSection = () => {
           </a>
         ))}
       </div>
+
+      {/* 推荐交易所 */}
+      {AFFILIATE_LINKS.length > 0 && (
+        <div className="grid sm:grid-cols-2 gap-4 mb-6">
+          {AFFILIATE_LINKS.map((link) => (
+            <a
+              key={link.name}
+              href={link.url}
+              target="_blank"
+              rel="noopener sponsored noreferrer"
+              className="flex items-center gap-3 p-4 bg-slate-800 border border-slate-700
+                hover:border-yellow-500/40 rounded-xl transition-all hover:scale-105 group"
+            >
+              <div
+                className="w-10 h-10 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500
+                  flex items-center justify-center shrink-0"
+              >
+                <ArrowUpRight className="w-5 h-5 text-white" />
+              </div>
+              <div>
+                <div className="text-white font-semibold group-hover:text-yellow-400 transition-colors">
+                  {link.nameZh} {link.name}
+                </div>
+                <div className="text-slate-400 text-xs">{link.descriptionZh}</div>
+              </div>
+            </a>
+          ))}
+        </div>
+      )}
 
       {/* 加密货币钱包 */}
       <div className="space-y-3">

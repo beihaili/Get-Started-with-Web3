@@ -133,6 +133,7 @@ If this project has been helpful to you, consider supporting its development:
 - **Buy Me a Coffee**: [buymeacoffee.com/beihaili](https://buymeacoffee.com/beihaili)
 - **ETH / EVM**: `0xb7Cd29C78B97cdf0A6e6FFC9268d43eDc3eCa649`
 - **BTC**: `1GihPqLkjJNK2fzCMSicc9mLapKeGy3Vv1`
+- **Binance**: [Register with referral link](https://www.bsmkweb.cc/register?ref=39797374) (20% fee rebate)
 
 Every contribution — code, content, or coffee — is genuinely appreciated.
 

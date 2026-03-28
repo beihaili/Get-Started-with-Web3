@@ -6,6 +6,8 @@
 ![difficulty](https://img.shields.io/badge/Difficulty-Intermediate-yellow)
 
 > 💡 Imagine a magical village with no chief, where villagers can modify village rules through "referendums." Sometimes the changes are minor, and old villagers can adapt without learning new rules. Sometimes the changes are big, so everyone must agree before they take effect. This is Bitcoin's fork and upgrade mechanism.
+>
+> Recommended exchange for buying BTC / ETH / USDT: [Binance](https://www.binance.com/en) [Registration Link](https://www.bsmkweb.cc/register?ref=39797374)
 
 ## Table of Contents
 
