@@ -1,9 +1,9 @@
 # 第 13 讲：难度调整 —— 比特币的智能时钟
 
-![status](https://img.shields.io/badge/ 状态 - 已完成 - success)
-![author](https://img.shields.io/badge/ 作者 - beihaili-blue)
-![date](https://img.shields.io/badge/ 日期 - 2025--09-orange)
-![difficulty](https://img.shields.io/badge/ 难度 - 中级 - yellow)
+![status](https://img.shields.io/badge/状态-已完成-success)
+![author](https://img.shields.io/badge/作者-beihaili-blue)
+![date](https://img.shields.io/badge/日期-2025--09-orange)
+![difficulty](https://img.shields.io/badge/难度-中级-yellow)
 
 > 💡 想象一个神奇的时钟，无论房间里的人多还是少，它都能精确地每 10 分钟响一次铃。人多时，铃铛变得更难敲响；人少时，铃铛变得更容易敲响。这就是比特币难度调整的奥秘。
 
