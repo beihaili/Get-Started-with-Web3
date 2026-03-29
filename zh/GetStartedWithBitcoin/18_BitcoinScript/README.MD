@@ -1,9 +1,9 @@
 # 第 18 讲：Bitcoin Script 脚本系统
 
-![status](https://img.shields.io/badge/ 状态 - 已完成 - success)
-![author](https://img.shields.io/badge/ 作者 - beihaili-blue)
-![date](https://img.shields.io/badge/ 日期 - 2025--09-orange)
-![difficulty](https://img.shields.io/badge/ 难度 - 中级 - yellow)
+![status](https://img.shields.io/badge/状态-已完成-success)
+![author](https://img.shields.io/badge/作者-beihaili-blue)
+![date](https://img.shields.io/badge/日期-2025--09-orange)
+![difficulty](https://img.shields.io/badge/难度-中级-yellow)
 
 > 💡 想象比特币是一台自动贩卖机，你不仅可以投币买东西，还可以设置各种条件：「只有两个人同时插钥匙才能打开」、「只有在特定时间才能使用」、「必须输入正确密码」。这就是比特币脚本的魅力 —— 让数字货币变得可编程。
 
