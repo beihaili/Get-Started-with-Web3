@@ -1,9 +1,9 @@
 # 第 16 讲：比特币 RPC 应用开发指南
 
-![status](https://img.shields.io/badge/ 状态 - 已完成 - success)
-![author](https://img.shields.io/badge/ 作者 - beihaili-blue)
-![date](https://img.shields.io/badge/ 日期 - 2025--06-orange)
-![difficulty](https://img.shields.io/badge/ 难度 - 中级 - yellow)
+![status](https://img.shields.io/badge/状态-已完成-success)
+![author](https://img.shields.io/badge/作者-beihaili-blue)
+![date](https://img.shields.io/badge/日期-2025--06-orange)
+![difficulty](https://img.shields.io/badge/难度-中级-yellow)
 
 > 🔥 本教程将带领您通过 RPC 接口与比特币区块链交互，从基础概念到实用应用开发，让您接触比特币编程的真实力量。
 
