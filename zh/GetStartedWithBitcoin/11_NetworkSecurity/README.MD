@@ -1,9 +1,9 @@
 # 第 11 讲：网络安全与攻击防护
 
-![status](https://img.shields.io/badge/ 状态 - 已完成 - success)
-![author](https://img.shields.io/badge/ 作者 - beihaili-blue)
-![date](https://img.shields.io/badge/ 日期 - 2025--09-orange)
-![difficulty](https://img.shields.io/badge/ 难度 - 中级 - yellow)
+![status](https://img.shields.io/badge/状态-已完成-success)
+![author](https://img.shields.io/badge/作者-beihaili-blue)
+![date](https://img.shields.io/badge/日期-2025--09-orange)
+![difficulty](https://img.shields.io/badge/难度-中级-yellow)
 
 > 💡 想象一个村庄里的金库，没有银行、没有警察、没有政府保护，却能安全存放几千亿美元的财富。这听起来很疯狂？但比特币做到了。本章用最简单的方式解释这个「无人看守的金库」如何抵御全世界的小偷。
 
