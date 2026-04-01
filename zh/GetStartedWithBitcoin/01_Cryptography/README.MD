@@ -1,9 +1,9 @@
 # 第 01 讲：比特币密码学基础
 
-![status](https://img.shields.io/badge/ 状态 - 已完成 - success)
-![author](https://img.shields.io/badge/ 作者 - beihaili-blue)
-![date](https://img.shields.io/badge/ 日期 - 2025--06-orange)
-![difficulty](https://img.shields.io/badge/ 难度 - 高级 - red)
+![status](https://img.shields.io/badge/状态-已完成-success)
+![author](https://img.shields.io/badge/作者-beihaili-blue)
+![date](https://img.shields.io/badge/日期-2025--06-orange)
+![difficulty](https://img.shields.io/badge/难度-高级-red)
 
 > 💡 想象一下，如果你有一种魔法能让任何人都无法伪造你的签名，任何数据都无法被悄悄篡改，这就是密码学的力量。比特币正是建立在这些「数学魔法」之上，让数字世界拥有了现实世界的安全性。
 >

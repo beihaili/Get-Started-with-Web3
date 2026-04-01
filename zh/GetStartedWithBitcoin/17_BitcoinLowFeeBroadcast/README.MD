@@ -1,9 +1,9 @@
 # 第 17 讲：比特币开发工具
 
-![status](https://img.shields.io/badge/ 状态 - 已完成 - success)
-![author](https://img.shields.io/badge/ 作者 - Beihaili-blue)
-![date](https://img.shields.io/badge/ 日期 - 2024--07-orange)
-![difficulty](https://img.shields.io/badge/ 难度 - 中级 - yellow)
+![status](https://img.shields.io/badge/状态-已完成-success)
+![author](https://img.shields.io/badge/作者-Beihaili-blue)
+![date](https://img.shields.io/badge/日期-2024--07-orange)
+![difficulty](https://img.shields.io/badge/难度-中级-yellow)
 
 > 💡 比特币网络手续费时常波动，当费率处于低谷时，是整理钱包中「粉尘」 UTXO 、甚至发送一些「时间胶囊」交易的绝佳时机。本教程将带你构建一个可以通过自己全节点广播 ** 任意低费率 ** 交易的强大工具。
 

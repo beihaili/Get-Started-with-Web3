@@ -1,8 +1,8 @@
 # GetStartedWithBitcoin - 比特币技术入门系列
 
-![status](https://img.shields.io/badge/ 状态 - 持续更新中 - yellow)
-![contributors](https://img.shields.io/badge/ 欢迎 - 贡献者加入 - blue)
-![difficulty](https://img.shields.io/badge/ 难度 - 初级到高级 - brightgreen)
+![status](https://img.shields.io/badge/状态-持续更新中-yellow)
+![contributors](https://img.shields.io/badge/欢迎-贡献者加入-blue)
+![difficulty](https://img.shields.io/badge/难度-初级到高级-brightgreen)
 
 > 🚀 这是一个系统性的比特币技术学习路径，按照技术栈分层设计，从密码学基础到协议实现，适合所有想要深入理解比特币技术的学习者。
 
