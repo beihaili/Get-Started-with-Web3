@@ -1,9 +1,9 @@
 # 第 08 讲：区块链数据结构 —— 从链表到默克尔树
 
-![status](https://img.shields.io/badge/ 状态 - 已完成 - success)
-![author](https://img.shields.io/badge/ 作者 - beihaili-blue)
-![date](https://img.shields.io/badge/ 日期 - 2025--06-orange)
-![difficulty](https://img.shields.io/badge/ 难度 - 中级 - yellow)
+![status](https://img.shields.io/badge/状态-已完成-success)
+![author](https://img.shields.io/badge/作者-beihaili-blue)
+![date](https://img.shields.io/badge/日期-2025--06-orange)
+![difficulty](https://img.shields.io/badge/难度-中级-yellow)
 
 > 💡 本章我们将深入探讨比特币中两个最基础且最重要的数据结构：区块链和默克尔树。这些看似简单的结构，通过密码学的加持，成为了比特币安全性的重要保障。
 
