@@ -1,9 +1,9 @@
 # 第 12 讲：工作量证明与挖矿
 
-![status](https://img.shields.io/badge/ 状态 - 已完成 - success)
-![author](https://img.shields.io/badge/ 作者 - beihaili-blue)
-![date](https://img.shields.io/badge/ 日期 - 2025--09-orange)
-![difficulty](https://img.shields.io/badge/ 难度 - 中级 - yellow)
+![status](https://img.shields.io/badge/状态-已完成-success)
+![author](https://img.shields.io/badge/作者-beihaili-blue)
+![date](https://img.shields.io/badge/日期-2025--09-orange)
+![difficulty](https://img.shields.io/badge/难度-中级-yellow)
 
 > 💡 想象一个村庄，村民们都在找金子，但金子被埋在地下，需要不停挖掘才能找到。每当有人找到金子，整个村庄都会为他鼓掌，因为这证明了他确实付出了劳动。这就是比特币挖矿的真实写照。
 
