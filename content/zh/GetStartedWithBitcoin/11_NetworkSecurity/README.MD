@@ -6,6 +6,8 @@
 ![difficulty](https://img.shields.io/badge/难度-中级-yellow)
 
 > 💡 想象一个村庄里的金库，没有银行、没有警察、没有政府保护，却能安全存放几千亿美元的财富。这听起来很疯狂？但比特币做到了。本章用最简单的方式解释这个「无人看守的金库」如何抵御全世界的小偷。
+>
+> 购买 BTC / ETH / USDT 等加密货币推荐 [币安](https://www.binance.com/zh-CN)[注册链接](https://www.bsmkweb.cc/register?ref=39797374)
 
 ## 目录
 

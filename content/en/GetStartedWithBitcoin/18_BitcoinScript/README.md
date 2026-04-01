@@ -6,6 +6,8 @@
 ![difficulty](https://img.shields.io/badge/Difficulty-Intermediate-yellow)
 
 > 💡 Imagine Bitcoin is a vending machine — you can not only insert coins to buy things but also set various conditions: "only two people turning keys simultaneously can open it," "only usable at a specific time," "must enter the correct password." This is the power of Bitcoin Script — making digital currency programmable.
+>
+> Recommended exchange for buying BTC / ETH / USDT: [Binance](https://www.binance.com/en) [Registration Link](https://www.bsmkweb.cc/register?ref=39797374)
 
 ## Table of Contents
 

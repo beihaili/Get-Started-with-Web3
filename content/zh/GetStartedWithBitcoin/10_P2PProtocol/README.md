@@ -6,6 +6,8 @@
 ![difficulty](https://img.shields.io/badge/难度-中级-yellow)
 
 > 💡 比特币 P2P 网络是去中心化的核心，让全世界的节点能够在没有中心服务器的情况下协同工作。本章将用最直观的方式解释这个「没有中心的网络」是如何运行的。
+>
+> 购买 BTC / ETH / USDT 等加密货币推荐 [币安](https://www.binance.com/zh-CN)[注册链接](https://www.bsmkweb.cc/register?ref=39797374)
 
 ## 目录
 

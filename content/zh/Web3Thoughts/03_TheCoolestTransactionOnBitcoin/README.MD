@@ -7,6 +7,8 @@
 ![](https://img.shields.io/badge/ 分类 - 比特币交易 - green)
 ![](https://img.shields.io/badge/ 状态 - 已归档 - purple)
 
+> 购买 BTC / ETH / USDT 等加密货币推荐 [币安](https://www.binance.com/zh-CN)[注册链接](https://www.bsmkweb.cc/register?ref=39797374)
+
 ## 🌟 前言：当交易也成为艺术
 
 区块链上的每笔交易，通常只是简单的资金流转。但在比特币生态内，偶尔也会出现一些极具匠心的「彩蛋交易」 —— 它们借助协议细节、历史事件、技术趣味与文化梗，打造出属于比特币原教旨主义者的艺术品。

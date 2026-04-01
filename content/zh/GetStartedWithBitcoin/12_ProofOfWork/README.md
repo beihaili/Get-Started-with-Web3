@@ -6,6 +6,8 @@
 ![difficulty](https://img.shields.io/badge/难度-中级-yellow)
 
 > 💡 想象一个村庄，村民们都在找金子，但金子被埋在地下，需要不停挖掘才能找到。每当有人找到金子，整个村庄都会为他鼓掌，因为这证明了他确实付出了劳动。这就是比特币挖矿的真实写照。
+>
+> 购买 BTC / ETH / USDT 等加密货币推荐 [币安](https://www.binance.com/zh-CN)[注册链接](https://www.bsmkweb.cc/register?ref=39797374)
 
 ## 目录
 

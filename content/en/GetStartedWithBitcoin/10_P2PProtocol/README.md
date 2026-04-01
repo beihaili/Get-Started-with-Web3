@@ -6,6 +6,8 @@
 ![difficulty](https://img.shields.io/badge/Difficulty-Intermediate-yellow)
 
 > 💡 The Bitcoin peer-to-peer(P2P) network is the core of decentralization, enabling nodes around the world to work together without a central server. This chapter will explain in the most intuitive way how this "centralized network" operates.
+>
+> Recommended exchange for buying BTC / ETH / USDT: [Binance](https://www.binance.com/en) [Registration Link](https://www.bsmkweb.cc/register?ref=39797374)
 
 ## Table of Contents
 

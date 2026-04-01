@@ -6,6 +6,8 @@
 ![difficulty](https://img.shields.io/badge/ 难度 - 初级 - brightgreen)
 
 > 💡 本教程将指导您如何在 Solana 链上通过 Pump.fun 平台快速发行自己的第一个 Meme 币，无需编写任何代码。整个过程只需几分钟即可完成，是 Web3 新手入门的绝佳实践。
+>
+> 购买 BTC / ETH / USDT 等加密货币推荐 [币安](https://www.binance.com/zh-CN)[注册链接](https://www.bsmkweb.cc/register?ref=39797374)
 
 ## 目录
 

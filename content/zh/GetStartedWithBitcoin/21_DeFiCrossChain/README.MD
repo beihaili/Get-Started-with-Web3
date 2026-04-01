@@ -6,6 +6,8 @@
 ![difficulty](https://img.shields.io/badge/难度-中级-yellow)
 
 > 💡 想象你有一块黄金，但它只能放在保险箱里看着，不能用来投资、借贷或产生任何收益。现在有了神奇的技术，让这块黄金可以「分身」到其他地方工作赚钱，原来的黄金还在保险箱里安全无恙。这就是比特币 DeFi 的魅力。
+>
+> 购买 BTC / ETH / USDT 等加密货币推荐 [币安](https://www.binance.com/zh-CN)[注册链接](https://www.bsmkweb.cc/register?ref=39797374)
 
 ## 目录
 

@@ -13,6 +13,8 @@
 <a href="https://github.com/beihaili/Get-Started-with-Web3">⭐ GitHub 仓库 </a>
 </div>
 
+> 购买 BTC / ETH / USDT 等加密货币推荐 [币安](https://www.binance.com/zh-CN)[注册链接](https://www.bsmkweb.cc/register?ref=39797374)
+
 ---
 
 ## 目录

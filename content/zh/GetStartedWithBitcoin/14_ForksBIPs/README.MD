@@ -6,6 +6,8 @@
 ![difficulty](https://img.shields.io/badge/难度-中级-yellow)
 
 > 💡 想象一个神奇的村庄，没有村长，但村民们能够通过「全民公投」的方式来决定修改村规。有时候改动很小，老村民不用学新规就能适应；有时候改动很大，需要所有人都同意才能执行。这就是比特币的分叉和升级机制。
+>
+> 购买 BTC / ETH / USDT 等加密货币推荐 [币安](https://www.binance.com/zh-CN)[注册链接](https://www.bsmkweb.cc/register?ref=39797374)
 
 ## 目录
 

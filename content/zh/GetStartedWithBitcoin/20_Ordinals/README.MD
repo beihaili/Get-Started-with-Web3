@@ -6,6 +6,8 @@
 ![difficulty](https://img.shields.io/badge/难度-中级-yellow)
 
 > 💡 想象一下，如果每一粒沙子都能刻上独特的标记，成为独一无二的艺术品。比特币 Ordinals 协议就是这样的魔法，它让比特币网络中的每一聪都能承载数据，变成数字世界的「收藏品」。
+>
+> 购买 BTC / ETH / USDT 等加密货币推荐 [币安](https://www.binance.com/zh-CN)[注册链接](https://www.bsmkweb.cc/register?ref=39797374)
 
 ## 目录
 

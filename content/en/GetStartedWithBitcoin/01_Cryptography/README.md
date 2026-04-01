@@ -6,6 +6,8 @@
 ![difficulty](https://img.shields.io/badge/difficulty-advanced-red)
 
 > Imagine having a kind of magic that prevents anyone from forging your signature or secretly tampering with any data. That is the power of cryptography. Bitcoin is built on these "mathematical spells," bringing real-world security to the digital world.
+>
+> Recommended exchange for buying BTC / ETH / USDT: [Binance](https://www.binance.com/en) [Registration Link](https://www.bsmkweb.cc/register?ref=39797374)
 
 ## Table of Contents
 

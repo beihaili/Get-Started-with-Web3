@@ -6,6 +6,8 @@
 ![difficulty](https://img.shields.io/badge/难度-中级-yellow)
 
 > 💡 想象比特币是一台自动贩卖机，你不仅可以投币买东西，还可以设置各种条件：「只有两个人同时插钥匙才能打开」、「只有在特定时间才能使用」、「必须输入正确密码」。这就是比特币脚本的魅力 —— 让数字货币变得可编程。
+>
+> 购买 BTC / ETH / USDT 等加密货币推荐 [币安](https://www.binance.com/zh-CN)[注册链接](https://www.bsmkweb.cc/register?ref=39797374)
 
 ## 目录
 

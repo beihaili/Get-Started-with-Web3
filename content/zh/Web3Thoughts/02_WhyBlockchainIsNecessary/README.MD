@@ -7,6 +7,8 @@
 ![](https://img.shields.io/badge/ 分类 - Web3 思考 - green)
 ![](https://img.shields.io/badge/ 状态 - 已发布 - orange)
 
+> 购买 BTC / ETH / USDT 等加密货币推荐 [币安](https://www.binance.com/zh-CN)[注册链接](https://www.bsmkweb.cc/register?ref=39797374)
+
 ## 🔮 《主权个人》的核心预见
 
 《主权个人》这本书在 1997 年出版，却惊人地预见了包括互联网、加密货币和区块链在内的众多技术变革及其社会影响。本文将结合这本「预言之书」的洞见，探讨为什么区块链技术是必然且必须的技术发展方向。

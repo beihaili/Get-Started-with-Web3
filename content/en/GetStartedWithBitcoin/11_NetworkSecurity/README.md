@@ -6,6 +6,8 @@
 ![difficulty](https://img.shields.io/badge/Difficulty-Intermediate-yellow)
 
 > 💡 Imagine a village vault with no banks, no police, no government protection, yet safely storing hundreds of billions of dollars worth of wealth. This sounds crazy? But Bitcoin has done exactly that. This chapter explains in the simplest way how this "unguarded vault" defends against thieves from around the world.
+>
+> Recommended exchange for buying BTC / ETH / USDT: [Binance](https://www.binance.com/en) [Registration Link](https://www.bsmkweb.cc/register?ref=39797374)
 
 ## Table of Contents
 

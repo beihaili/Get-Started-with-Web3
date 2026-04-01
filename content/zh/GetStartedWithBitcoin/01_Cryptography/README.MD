@@ -6,6 +6,8 @@
 ![difficulty](https://img.shields.io/badge/难度-高级-red)
 
 > 💡 想象一下，如果你有一种魔法能让任何人都无法伪造你的签名，任何数据都无法被悄悄篡改，这就是密码学的力量。比特币正是建立在这些「数学魔法」之上，让数字世界拥有了现实世界的安全性。
+>
+> 购买 BTC / ETH / USDT 等加密货币推荐 [币安](https://www.binance.com/zh-CN)[注册链接](https://www.bsmkweb.cc/register?ref=39797374)
 
 ## 目录
 

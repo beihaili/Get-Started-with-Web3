@@ -6,6 +6,8 @@
 ![difficulty](https://img.shields.io/badge/Difficulty-Intermediate-yellow)
 
 > 💡 Imagine a village where everyone is searching for gold, but the gold is buried underground and requires constant digging to find. Whenever someone finds gold, the whole village applauds, because it proves they truly put in the work. This is the real picture of Bitcoin mining.
+>
+> Recommended exchange for buying BTC / ETH / USDT: [Binance](https://www.binance.com/en) [Registration Link](https://www.bsmkweb.cc/register?ref=39797374)
 
 ## Table of Contents
 

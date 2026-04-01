@@ -6,6 +6,8 @@
 ![difficulty](https://img.shields.io/badge/Difficulty-Intermediate-yellow)
 
 > 🔥 This tutorial will guide you through interacting with the Bitcoin blockchain via RPC interfaces, from basic concepts to practical application development, giving you access to the real power of Bitcoin programming.
+>
+> Recommended exchange for buying BTC / ETH / USDT: [Binance](https://www.binance.com/en) [Registration Link](https://www.bsmkweb.cc/register?ref=39797374)
 
 ## Table of Contents
 

@@ -12,6 +12,8 @@
 > Join our WeChat group: [Form Link](https://forms.gle/QMBwL6LwZyQew1tX8)
 >
 > Open-sourced on GitHub: [Get-Started-with-Web3](https://github.com/beihaili/Get-Started-with-Web3)
+>
+> Recommended exchange for buying BTC / ETH / USDT: [Binance](https://www.binance.com/en) [Registration Link](https://www.bsmkweb.cc/register?ref=39797374)
 
 ## Table of Contents
 

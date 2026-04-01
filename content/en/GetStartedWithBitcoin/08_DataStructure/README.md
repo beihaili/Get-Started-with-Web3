@@ -6,6 +6,8 @@
 ![difficulty](https://img.shields.io/badge/difficulty-intermediate-yellow)
 
 > In this chapter, we'll dive deep into the two most fundamental and important data structures in Bitcoin: the blockchain and the Merkle tree. These seemingly simple structures, empowered by cryptography, become a crucial pillar of Bitcoin's security.
+>
+> Recommended exchange for buying BTC / ETH / USDT: [Binance](https://www.binance.com/en) [Registration Link](https://www.bsmkweb.cc/register?ref=39797374)
 
 ## Table of Contents
 

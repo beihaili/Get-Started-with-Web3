@@ -6,6 +6,8 @@
 ![difficulty](https://img.shields.io/badge/ 难度 - 高级 - red)
 
 > 💡 智能合约一旦部署就无法修改，而它管理的往往是真金白银。一个小小的漏洞可能导致数百万美元的损失。本课将带你深入了解真实世界中最常见的智能合约漏洞，学会如何编写安全的 Solidity 代码，并掌握基本的审计方法与工具。欢迎关注作者 [Twitter](https://twitter.com/bhbtc1337)、加入 [交流群](https://forms.gle/QMBwL6LwZyQew1tX8)、或在 [GitHub](https://github.com/beihaili/Get-Started-with-Web3) 上贡献内容。
+>
+> 购买 BTC / ETH / USDT 等加密货币推荐 [币安](https://www.binance.com/zh-CN)[注册链接](https://www.bsmkweb.cc/register?ref=39797374)
 
 ## 目录
 

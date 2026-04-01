@@ -7,6 +7,8 @@
 ![](https://img.shields.io/badge/ 分类 - Web3 思考 - green)
 ![](https://img.shields.io/badge/ 状态 - 持续更新 - orange)
 
+> 购买 BTC / ETH / USDT 等加密货币推荐 [币安](https://www.binance.com/zh-CN)[注册链接](https://www.bsmkweb.cc/register?ref=39797374)
+
 ## 🌟 前言：原则的重要性
 
 在 Web3 世界中，遵循一些基本原则至关重要。正如 Ray Dalio 写了他的《原则》，CZ 写了他的原则，我也想分享我在 Web3 领域的指导原则。

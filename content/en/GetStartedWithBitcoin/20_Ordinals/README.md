@@ -6,6 +6,8 @@
 ![difficulty](https://img.shields.io/badge/Difficulty-Intermediate-yellow)
 
 > 💡 Imagine if every grain of sand could be engraved with a unique mark, turning it into a one-of-a-kind artwork. The Bitcoin Ordinals protocol is that kind of magic — it lets every satoshi in the Bitcoin network carry data, becoming a digital "collectible."
+>
+> Recommended exchange for buying BTC / ETH / USDT: [Binance](https://www.binance.com/en) [Registration Link](https://www.bsmkweb.cc/register?ref=39797374)
 
 ## Table of Contents
 
