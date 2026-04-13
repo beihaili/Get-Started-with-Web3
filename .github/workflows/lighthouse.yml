@@ -7,6 +7,12 @@ on:
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
+    # Needed by the `Format Lighthouse results as PR comment` step below.
+    # Without this, Dependabot PRs get a read-only GITHUB_TOKEN and the
+    # comment call fails with `Resource not accessible by integration`.
+    permissions:
+      contents: read
+      pull-requests: write
     steps:
       - uses: actions/checkout@v6
 
@@ -40,6 +46,9 @@ jobs:
 
       - name: Format Lighthouse results as PR comment
         if: always()
+        # Posting the comment is a nice-to-have summary; if token perms
+        # are ever tightened again, don't fail the whole workflow.
+        continue-on-error: true
         uses: actions/github-script@v8
         with:
           script: |
