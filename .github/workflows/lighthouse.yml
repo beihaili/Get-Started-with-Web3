@@ -49,7 +49,7 @@ jobs:
         # Posting the comment is a nice-to-have summary; if token perms
         # are ever tightened again, don't fail the whole workflow.
         continue-on-error: true
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             const fs = require('fs');
