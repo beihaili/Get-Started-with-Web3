@@ -2,10 +2,7 @@
   "ci": {
     "collect": {
       "staticDistDir": "./dist",
-      "url": [
-        "/Get-Started-with-Web3/zh/",
-        "/Get-Started-with-Web3/zh/dashboard"
-      ]
+      "url": ["/index.html"]
     },
     "assert": {
       "assertions": {

@@ -28,7 +28,15 @@ jobs:
         cache: 'npm'
 
     - name: Install Dependencies 📦
-      run: npm ci
+      # On pull_request (incl. Dependabot): use `npm install` so transient
+      # lockfile drift doesn't block CI. On push to main / manual dispatch:
+      # use strict `npm ci` to guarantee reproducible production builds.
+      run: |
+        if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+          npm install --no-audit --no-fund
+        else
+          npm ci
+        fi
 
     - name: Install Playwright Chromium 🎭
       run: npx playwright install chromium
