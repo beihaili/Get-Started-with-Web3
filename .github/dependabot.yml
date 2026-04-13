@@ -8,11 +8,20 @@ updates:
     open-pull-requests-limit: 5
     labels:
       - "dependencies"
+    # Only group minor/patch updates. Major updates get their own PR
+    # so breaking changes (e.g. tailwind v3→v4, react-router v6→v7) can be
+    # reviewed and migrated individually.
     groups:
-      dev-dependencies:
+      dev-dependencies-minor:
         dependency-type: "development"
-      production-dependencies:
+        update-types:
+          - "minor"
+          - "patch"
+      production-dependencies-minor:
         dependency-type: "production"
+        update-types:
+          - "minor"
+          - "patch"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
