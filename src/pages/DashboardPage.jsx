@@ -9,10 +9,11 @@ import LanguageSwitcher from '../components/LanguageSwitcher';
 import ThemeToggle from '../components/ThemeToggle';
 import MobileNav from '../components/MobileNav';
 import SeoHead from '../components/SeoHead';
+import ProgressExport from '../components/ProgressExport';
 
 /**
- * 仪表板页面
- * 显示课程列表和学习进度
+ * Dashboard page showing course list and learning progress.
+ * Users can view their XP, badges, streak, and export progress as JSON.
  */
 const DashboardPage = () => {
   const { lang } = useParams();
@@ -100,9 +101,12 @@ const DashboardPage = () => {
       <main className="container mx-auto px-4 py-8">
         {/* User Stats */}
         <div className="mb-8 p-6 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-700/50 rounded-xl">
-          <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
-            {t('dashboard.overviewTitle')}
-          </h2>
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
+              {t('dashboard.overviewTitle')}
+            </h2>
+            <ProgressExport />
+          </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-full bg-cyan-500/10 flex items-center justify-center">
@@ -187,7 +191,7 @@ const DashboardPage = () => {
                         </h3>
                         {module.id === 'module-7' && (
                           <span className="px-2 py-0.5 text-xs rounded-full bg-rose-500/10 text-rose-400 border border-rose-500/20">
-                            🔧 实战模块
+                            NEW
                           </span>
                         )}
                       </div>
@@ -233,9 +237,9 @@ const DashboardPage = () => {
                             {lesson.title}
                           </span>
                           {isCompleted ? (
-                            <span className="text-green-400">✓</span>
+                            <span className="text-green-400">*</span>
                           ) : (
-                            <span className="text-cyan-400">→</span>
+                            <span className="text-cyan-400">*</span>
                           )}
                         </div>
                       </Link>
