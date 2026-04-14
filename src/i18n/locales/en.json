@@ -7,13 +7,13 @@
     "dashboard": "Dashboard",
     "badges": "My Badges",
     "searchCourses": "Search courses",
-    "searchPlaceholder": "⌘K",
+    "searchPlaceholder": "Ctrl+K",
     "glossary": "Glossary"
   },
   "landing": {
-    "heroBadge": "{{count}} lessons · Open Source & Free",
+    "heroBadge": "{{count}} lessons | Open Source & Free",
     "subtitle": "The most systematic Bitcoin and Web3 learning platform in the Chinese-speaking world. Master core blockchain technology from scratch.",
-    "studyStreak": "🔥 {{count}}-day study streak",
+    "studyStreak": "?? {{count}}-day study streak",
     "startLearning": "Start Learning",
     "statsModules": "Course Modules",
     "statsLessons": "Total Lessons",
@@ -43,7 +43,9 @@
     "statCompleted": "Completed Courses",
     "statStreak": "Study Streak",
     "streakDays": "{{count}} days",
-    "lessonsCount": "{{count}} lessons"
+    "lessonsCount": "{{count}} lessons",
+    "exportProgress": "Export Progress",
+    "exportDone": "Exported!"
   },
   "reader": {
     "pageDescSuffix": "tutorial",
@@ -64,14 +66,14 @@
     "moduleCompleteDesc": "Congratulations on completing all lessons in this module",
     "shareAchievement": "Share Achievement",
     "readingTime": "{{minutes}} min read",
-    "startLab": "Start Lab →"
+    "startLab": "Start Lab *"
   },
   "badges": {
     "pageTitle": "Badge Collection | Web3 Starter",
     "pageDesc": "Web3 learning platform badge collection, view earned learning achievement badges",
     "titleLabel": "Title",
     "xpLabel": "Experience",
-    "galleryTitle": "🏆 Badge Gallery",
+    "galleryTitle": "?? Badge Gallery",
     "collectionRate": "Collection rate: {{rate}}% ({{earned}}/{{total}})",
     "noBadgesTitle": "No badges yet",
     "noBadgesDesc": "Complete course lessons to unlock beautiful badges and rich rewards!",
@@ -84,7 +86,7 @@
   },
   "ai": {
     "title": "AI Tutor",
-    "greeting": "👋 Hello! I'm your AI tutor. Feel free to ask me anything about the course~",
+    "greeting": "?? Hello! I'm your AI tutor. Feel free to ask me anything about the course~",
     "apiKeyAlert": "AI Tutor requires a Gemini API Key to be configured.",
     "placeholder": "Ask me anything...",
     "thinking": "Thinking...",
@@ -97,7 +99,7 @@
   "quiz": {
     "title": "Challenge Quiz",
     "description": "Complete <strong>{{count}} questions</strong>, you need to get <strong>all correct</strong> to unlock the next chapter",
-    "startChallenge": "🚀 Start Challenge",
+    "startChallenge": "?? Start Challenge",
     "questionProgress": "Question {{current}} / {{total}}",
     "score": "Score: {{score}}/{{total}}",
     "selectAnswer": "Select an answer",
@@ -108,10 +110,10 @@
     "viewResult": "View Results",
     "perfectTitle": "Perfect Score!",
     "perfectDesc": "Congratulations, you got all {{count}} questions right! You've mastered the core knowledge of this chapter.",
-    "unlockNext": "✅ Unlock Next Chapter",
+    "unlockNext": "* Unlock Next Chapter",
     "needMoreTitle": "Keep Trying",
     "needMoreDesc": "You got {{score}}/{{total}} correct. You need all correct to proceed to the next chapter. Try again!",
-    "retry": "🔄 Retry",
+    "retry": "?? Retry",
     "skipDebug": "Skip (Debug)"
   },
   "search": {
@@ -120,8 +122,8 @@
     "inputLabel": "Search courses",
     "closeLabel": "Close search",
     "noResults": "No matching courses found",
-    "hintNavigate": "↑↓ Navigate",
-    "hintSelect": "↵ Select",
+    "hintNavigate": "?? Navigate",
+    "hintSelect": "* Select",
     "hintClose": "Esc Close"
   },
   "share": {
@@ -134,7 +136,7 @@
     "download": "Save Image",
     "generating": "Generating...",
     "shareTwitter": "Share on Twitter",
-    "twitterText": "I earned {{count}} badge{{plural}} and {{xp}} XP on Get Started with Web3! 🚀\n\nJoin me and learn blockchain from scratch:"
+    "twitterText": "I earned {{count}} badge{{plural}} and {{xp}} XP on Get Started with Web3! ??\n\nJoin me and learn blockchain from scratch:"
   },
   "articles": {
     "pageTitle": "All Course Articles | Web3 Starter",
@@ -164,7 +166,7 @@
   },
   "donation": {
     "title": "Support This Project",
-    "subtitle": "This tutorial is completely free and open source. If it has been helpful to you, please consider supporting the author to keep it updated ✨",
+    "subtitle": "This tutorial is completely free and open source. If it has been helpful to you, please consider supporting the author to keep it updated ?",
     "cryptoLabel": "Crypto tips"
   },
   "sponsor": {
@@ -174,8 +176,8 @@
     "noSponsors": "Support open-source Web3 education"
   },
   "thankAuthor": {
-    "message": "If this lesson was helpful, please consider supporting the author ☕",
-    "buttonText": "Support Author · Buy Me a Coffee"
+    "message": "If this lesson was helpful, please consider supporting the author ?",
+    "buttonText": "Support Author ?? Buy Me a Coffee"
   },
   "error": {
     "title": "Page Error",
