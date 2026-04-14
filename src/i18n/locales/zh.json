@@ -165,7 +165,9 @@
   "donation": {
     "title": "支持本项目",
     "subtitle": "本教程完全免费开源，如果对你有帮助，欢迎支持作者持续更新 ✨",
-    "cryptoLabel": "加密货币打赏"
+    "cryptoLabel": "加密货币打赏",
+    "copyAddress": "点击复制地址",
+    "copied": "已复制！"
   },
   "sponsor": {
     "title": "我们的赞助商",

@@ -1,9 +1,10 @@
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Heart, Wallet, Coffee, ArrowLeft, Star, ArrowUpRight } from 'lucide-react';
+import { Heart, Wallet, Coffee, ArrowLeft, Star, ArrowUpRight, Copy, Check } from 'lucide-react';
 import { DONATION_LINKS, CRYPTO_WALLETS, SPONSORS, AFFILIATE_LINKS } from '../config/sponsorData';
 import SeoHead from '../components/SeoHead';
 import LanguageSwitcher from '../components/LanguageSwitcher';
+import { useClipboard } from '../utils/useClipboard';
 
 /**
  * 支持页面 — 展示捐赠渠道、加密货币钱包地址和赞助商信息
@@ -11,6 +12,7 @@ import LanguageSwitcher from '../components/LanguageSwitcher';
 const SupportPage = () => {
   const { lang } = useParams();
   const { t } = useTranslation();
+  const { copied, copy } = useClipboard();
 
   const siteUrl = 'https://beihaili.github.io/Get-Started-with-Web3/';
   const canonicalUrl = `${siteUrl}${lang}/support`;
@@ -103,9 +105,13 @@ const SupportPage = () => {
           </h2>
           <div className="space-y-3">
             {CRYPTO_WALLETS.map((wallet) => (
-              <div
+              <button
                 key={wallet.chain}
-                className="flex items-start gap-4 p-5 bg-white/60 dark:bg-slate-900/60 border border-slate-200/50 dark:border-slate-700/50 rounded-xl"
+                type="button"
+                onClick={() => copy(wallet.address)}
+                title={t('donation.copyAddress')}
+                className="w-full flex items-start gap-4 p-5 bg-white/60 dark:bg-slate-900/60 border border-slate-200/50 dark:border-slate-700/50 rounded-xl
+                  text-left cursor-pointer hover:border-cyan-500/40 transition-all group"
               >
                 <div
                   className="px-3 py-1.5 bg-slate-100 dark:bg-slate-800 rounded-lg text-sm font-mono font-bold
@@ -113,7 +119,7 @@ const SupportPage = () => {
                 >
                   {wallet.chain}
                 </div>
-                <div className="min-w-0">
+                <div className="min-w-0 flex-1">
                   <div className="text-xs text-slate-500 dark:text-slate-400 mb-1">
                     {wallet.network}
                   </div>
@@ -121,7 +127,17 @@ const SupportPage = () => {
                     {wallet.address}
                   </div>
                 </div>
-              </div>
+                <div className="shrink-0 mt-1">
+                  {copied === wallet.address ? (
+                    <span className="flex items-center gap-1 text-xs text-green-400">
+                      <Check className="w-4 h-4" />
+                      {t('donation.copied')}
+                    </span>
+                  ) : (
+                    <Copy className="w-4 h-4 text-slate-500 group-hover:text-cyan-400 transition-colors" />
+                  )}
+                </div>
+              </button>
             ))}
           </div>
         </section>
