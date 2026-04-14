@@ -4,15 +4,16 @@ import { BrainCircuit, CheckCircle, X } from 'lucide-react';
 import { QUIZ_BANK } from './quizData';
 
 /**
- * 3道题全对通关测验系统
- * 从原App.jsx迁移 (lines 1973-2325)
+ * 3棰樺叏閫氬叧娴嬮獙绯荤粺
+ * 閿洏瀵艰埅鏀寔: Arrow Up/Down 鍒囨崲閫夐」, Enter/Space 纭
  */
 const MultiQuiz = ({ lessonId, onPass }) => {
   const { t } = useTranslation();
-  const [quizState, setQuizState] = useState('idle'); // idle, active, completed
+  const [quizState, setQuizState] = useState('idle');
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const [focusedIndex, setFocusedIndex] = useState(0);
   const [showFeedback, setShowFeedback] = useState(false);
   const [score, setScore] = useState(0);
 
@@ -23,12 +24,14 @@ const MultiQuiz = ({ lessonId, onPass }) => {
     setCurrentQuestion(0);
     setAnswers([]);
     setSelectedAnswer(null);
+    setFocusedIndex(0);
     setShowFeedback(false);
     setScore(0);
   };
 
   const selectAnswer = (answerIndex) => {
     setSelectedAnswer(answerIndex);
+    setFocusedIndex(answerIndex);
   };
 
   const submitAnswer = () => {
@@ -39,11 +42,7 @@ const MultiQuiz = ({ lessonId, onPass }) => {
       correct: isCorrect,
     };
     setAnswers(newAnswers);
-
-    if (isCorrect) {
-      setScore((prev) => prev + 1);
-    }
-
+    if (isCorrect) setScore((prev) => prev + 1);
     setShowFeedback(true);
   };
 
@@ -51,9 +50,9 @@ const MultiQuiz = ({ lessonId, onPass }) => {
     if (currentQuestion < currentQuiz.length - 1) {
       setCurrentQuestion((prev) => prev + 1);
       setSelectedAnswer(null);
+      setFocusedIndex(0);
       setShowFeedback(false);
     } else {
-      // 测验结束
       setQuizState('completed');
     }
   };
@@ -63,11 +62,42 @@ const MultiQuiz = ({ lessonId, onPass }) => {
     setCurrentQuestion(0);
     setAnswers([]);
     setSelectedAnswer(null);
+    setFocusedIndex(0);
     setShowFeedback(false);
     setScore(0);
   };
 
-  // 检查是否全对
+  const handleOptionKeyDown = (e, index) => {
+    const optionCount = currentQuiz[currentQuestion].options.length;
+
+    if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+      e.preventDefault();
+      const next = (index + 1) % optionCount;
+      setFocusedIndex(next);
+      document.querySelector(`[data-quiz-option="${next}"]`)?.focus();
+    } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+      e.preventDefault();
+      const prev = (index - 1 + optionCount) % optionCount;
+      setFocusedIndex(prev);
+      document.querySelector(`[data-quiz-option="${prev}"]`)?.focus();
+    } else if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      selectAnswer(index);
+      // Auto-submit after selection if no feedback showing
+      if (!showFeedback && selectedAnswer !== null) {
+        // submit after selecting
+        setTimeout(() => {
+          const isCorrect = index === currentQuiz[currentQuestion].correctAnswer;
+          const newAnswers = [...answers];
+          newAnswers[currentQuestion] = { selected: index, correct: isCorrect };
+          setAnswers(newAnswers);
+          if (isCorrect) setScore((prev) => prev + 1);
+          setShowFeedback(true);
+        }, 0);
+      }
+    }
+  };
+
   const isPerfectScore = score === currentQuiz.length;
 
   if (quizState === 'idle') {
@@ -101,7 +131,7 @@ const MultiQuiz = ({ lessonId, onPass }) => {
     return (
       <div className="space-y-6">
         <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
-          {/* 进度条 */}
+          {/* Progress */}
           <div className="flex items-center justify-between mb-6">
             <span className="text-sm text-slate-400">
               {t('quiz.questionProgress', {
@@ -125,25 +155,44 @@ const MultiQuiz = ({ lessonId, onPass }) => {
             <>
               <h5 className="text-lg font-semibold text-white mb-6">{currentQ.question}</h5>
 
-              <div className="space-y-3 mb-6" role="radiogroup" aria-label={t('quiz.selectAnswer')}>
-                {currentQ.options.map((option, index) => (
-                  <button
-                    key={index}
-                    role="radio"
-                    aria-checked={selectedAnswer === index}
-                    onClick={() => selectAnswer(index)}
-                    className={`w-full text-left p-4 rounded-lg border transition-all ${
-                      selectedAnswer === index
-                        ? 'border-cyan-500 bg-cyan-500/20 text-cyan-200 shadow-lg shadow-cyan-500/10'
-                        : 'border-slate-600 bg-slate-700/50 text-slate-300 hover:border-slate-500 hover:bg-slate-700/80'
-                    }`}
-                  >
-                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-slate-600 text-white text-sm font-mono mr-3">
-                      {String.fromCharCode(65 + index)}
-                    </span>
-                    {option}
-                  </button>
-                ))}
+              <div
+                className="space-y-3 mb-6"
+                role="radiogroup"
+                aria-label={t('quiz.selectAnswer')}
+              >
+                {currentQ.options.map((option, index) => {
+                  const isSelected = selectedAnswer === index;
+                  const isFocused = focusedIndex === index;
+                  return (
+                    <button
+                      key={index}
+                      role="radio"
+                      aria-checked={isSelected}
+                      aria-label={`Option ${String.fromCharCode(65 + index)}: ${option}`}
+                      tabIndex={isFocused ? 0 : -1}
+                      data-quiz-option={index}
+                      onClick={() => selectAnswer(index)}
+                      onKeyDown={(e) => handleOptionKeyDown(e, index)}
+                      onFocus={() => setFocusedIndex(index)}
+                      className={[
+                        'w-full text-left p-4 rounded-lg border transition-all',
+                        isSelected
+                          ? 'border-cyan-500 bg-cyan-500/20 text-cyan-200 shadow-lg shadow-cyan-500/10'
+                          : 'border-slate-600 bg-slate-700/50 text-slate-300 hover:border-slate-500 hover:bg-slate-700/80',
+                        isFocused
+                          ? 'outline-none ring-2 ring-purple-400 ring-offset-2 ring-offset-slate-900'
+                          : '',
+                      ]
+                        .filter(Boolean)
+                        .join(' ')}
+                    >
+                      <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-slate-600 text-white text-sm font-mono mr-3">
+                        {String.fromCharCode(65 + index)}
+                      </span>
+                      {option}
+                    </button>
+                  );
+                })}
               </div>
 
               <button
@@ -203,7 +252,7 @@ const MultiQuiz = ({ lessonId, onPass }) => {
         >
           {isPerfectScore ? (
             <>
-              <div className="text-6xl mb-4">🎉</div>
+              <div className="text-6xl mb-4">馃弳</div>
               <h3 className="text-2xl font-bold text-green-400 mb-2">{t('quiz.perfectTitle')}</h3>
               <p className="text-green-300 mb-6">
                 {t('quiz.perfectDesc', { count: currentQuiz.length })}
@@ -220,7 +269,7 @@ const MultiQuiz = ({ lessonId, onPass }) => {
             </>
           ) : (
             <>
-              <div className="text-6xl mb-4">😔</div>
+              <div className="text-6xl mb-4">馃摎</div>
               <h3 className="text-2xl font-bold text-orange-400 mb-2">{t('quiz.needMoreTitle')}</h3>
               <p className="text-orange-300 mb-6">
                 {t('quiz.needMoreDesc', { score, total: currentQuiz.length })}
