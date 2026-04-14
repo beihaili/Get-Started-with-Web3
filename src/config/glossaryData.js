@@ -102,7 +102,67 @@ export const GLOSSARY_DATA = [
     term: '区块浏览器 (Block Explorer)',
     definition: '查看区块链上所有交易、地址、区块信息的工具。如 Etherscan、Mempool.space。',
     category: '工具',
+  },,
+
+  {
+    term: `MEV（最大可提取值）`,
+    definition: `Maximal Extractable Value，矿工/验证者在区块内通过重组交易顺序可提取的最大价值总和。包括三明治攻击、冰冻糖浆等策略。`,
+    category: `DeFi`,
   },
+
+  {
+    term: `EIP-4844 / Blob`,
+    definition: `以太坊 Danksharding 升级的第一步（Proto-Danksharding），引入 blob 携带额外数据，大幅降低 L2 交易费用（降幅可达 10-100x）。`,
+    category: `以太坊`,
+  },
+
+  {
+    term: `Intents（意图）`,
+    definition: `用户表达"想要的结果"而非执行步骤，由求解器自动寻找最优路径执行。Anoma 和 CowSwap 是典型代表。`,
+    category: `DeFi`,
+  },
+
+  {
+    term: `账户抽象 / ERC-4337`,
+    definition: `将以太坊账户从 EOA 升级为智能合约账户，支持自定义验证逻辑、社交恢复、多签钱包等复杂功能。`,
+    category: `以太坊`,
+  },
+
+  {
+    term: `隐秘地址（Stealth Address）`,
+    definition: `一种隐私协议，用户每次接收资产时使用临时一次性地址，查看者无法将接收方与真实身份关联。`,
+    category: `隐私`,
+  },
+
+  {
+    term: `Rollup（对比侧链）`,
+    definition: `Rollup 将交易执行搬到链下但将数据提交到 L1，享有 L1 安全性；侧链自有共识，安全性低于 Rollup。`,
+    category: `L2`,
+  },
+
+  {
+    term: `数据可用性（DA）`,
+    definition: `Data Availability，确保区块数据对所有验证者可见。Celestia 和 Ethereum Danksharding 是两种主流 DA 解决方案。`,
+    category: `L2`,
+  },
+
+  {
+    term: `再质押 / EigenLayer`,
+    definition: `EigenLayer 允许 ETH 质押者将已质押的 ETH 再次用于其他中间件的安保，实现质押复用并获得额外收益。`,
+    category: `DeFi`,
+  },
+
+  {
+    term: `流动性质押代币（LST）`,
+    definition: `Liquid Staking Token，质押 ETH 后获得的流动性凭证（如 stETH），可二次参与 DeFi 收益，同时保留质押收益权。`,
+    category: `DeFi`,
+  },
+
+  {
+    term: `空投耕种（Airdrop Farming）`,
+    definition: `用户通过主动使用协议、执行特定操作来最大化获得未来空投代币的概率。`,
+    category: `DeFi`,
+  }
 ];
 
 export const GLOSSARY_CATEGORIES = [
