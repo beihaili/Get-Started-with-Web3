@@ -1,4 +1,4 @@
-import { useState, useCallback, useMemo, memo } from 'react';
+import { useState, useCallback, useMemo, memo, _count } from 'react';
 import { useTranslation } from 'react-i18next';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -6,8 +6,7 @@ import rehypeRaw from 'rehype-raw';
 import { ExternalLink, ChevronRight, Copy, Check } from 'lucide-react';
 
 /**
- * Markdown 渲染器组件
- * 基于 react-markdown，完整支持 GFM (GitHub Flavored Markdown)
+ * Markdown renderer powered by react-markdown with GFM support.
  */
 
 const CopyButton = ({ text }) => {
@@ -32,9 +31,13 @@ const CopyButton = ({ text }) => {
   );
 };
 
+// Track image index across renders for first-image LCP optimization
+let _imgCount = 0;
+
 const MarkdownRendererInner = ({ content, basePath = '' }) => {
+  _imgCount = 0;
+
   const components = useMemo(() => {
-    // 处理图片路径
     const resolveImageSrc = (src) => {
       if (!src) return src;
       if (src.startsWith('http')) return src;
@@ -42,7 +45,6 @@ const MarkdownRendererInner = ({ content, basePath = '' }) => {
     };
 
     return {
-      // 标题
       h1: ({ children }) => (
         <h1 className="text-3xl md:text-4xl font-black text-white mt-12 mb-8 border-b border-slate-800 pb-4">
           {children}
@@ -69,9 +71,7 @@ const MarkdownRendererInner = ({ content, basePath = '' }) => {
         <h6 className="text-sm font-bold text-slate-300 mt-3 mb-1">{children}</h6>
       ),
 
-      // 段落
       p: ({ children, node }) => {
-        // 检测是否是纯图片段落
         const hasOnlyImages =
           node.children?.length > 0 &&
           node.children.every(
@@ -83,7 +83,6 @@ const MarkdownRendererInner = ({ content, basePath = '' }) => {
         return <p className="mb-4 text-slate-300 leading-7">{children}</p>;
       },
 
-      // 链接
       a: ({ href, children }) => (
         <a
           href={href}
@@ -95,25 +94,30 @@ const MarkdownRendererInner = ({ content, basePath = '' }) => {
         </a>
       ),
 
-      // 图片
-      img: ({ src, alt, width }) => (
-        <span className="inline-flex m-1 align-middle">
-          <img
-            src={resolveImageSrc(src)}
-            alt={alt || 'Image'}
-            loading="lazy"
-            className="rounded-lg max-w-full h-auto shadow-lg"
-            style={{ maxHeight: '500px', width: width ? `${width}px` : 'auto' }}
-          />
-        </span>
-      ),
+      // img: lazy load + async decoding; first image gets eager + high priority for LCP
+      img: ({ src, alt, width, height }) => {
+        const isFirst = _imgCount === 0;
+        _imgCount++;
+        return (
+          <span className="inline-flex m-1 align-middle">
+            <img
+              src={resolveImageSrc(src)}
+              alt={alt || 'Image'}
+              loading={isFirst ? 'eager' : 'lazy'}
+              fetchPriority={isFirst ? 'high' : undefined}
+              decoding="async"
+              width={width}
+              height={height}
+              className="rounded-lg max-w-full h-auto shadow-lg"
+              style={{ maxHeight: '500px', width: width ? `${width}px` : 'auto' }}
+            />
+          </span>
+        );
+      },
 
-      // 粗体
       strong: ({ children }) => <strong className="text-white font-bold">{children}</strong>,
 
-      // 行内代码
       code: ({ children, className, node, ...props }) => {
-        // 多行代码块 (由 pre > code 结构包裹时 className 会包含语言)
         const isCodeBlock = className || (node?.position && props.inline === undefined);
         if (isCodeBlock && className) {
           const lang = className?.replace('language-', '') || '';
@@ -132,7 +136,6 @@ const MarkdownRendererInner = ({ content, basePath = '' }) => {
             </div>
           );
         }
-        // 行内代码
         return (
           <code className="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">
             {children}
@@ -140,9 +143,7 @@ const MarkdownRendererInner = ({ content, basePath = '' }) => {
         );
       },
 
-      // pre 标签（包裹代码块）
       pre: ({ children, node }) => {
-        // 获取代码内容用于复制
         const codeNode = node?.children?.[0];
         const codeText = codeNode?.children?.[0]?.value || '';
         const lang = codeNode?.properties?.className?.[0]?.replace('language-', '') || '';
@@ -162,7 +163,6 @@ const MarkdownRendererInner = ({ content, basePath = '' }) => {
         );
       },
 
-      // 列表
       ul: ({ children }) => <ul className="ml-2 mb-4 space-y-1">{children}</ul>,
       ol: ({ children }) => <ol className="ml-2 mb-4 space-y-1 counter-reset-list">{children}</ol>,
       li: ({ children, ordered, index }) => {
@@ -184,14 +184,12 @@ const MarkdownRendererInner = ({ content, basePath = '' }) => {
         );
       },
 
-      // 引用
       blockquote: ({ children }) => (
         <blockquote className="border-l-4 border-cyan-500/30 bg-slate-900/50 p-4 text-slate-400 rounded-r-lg my-4 text-base italic">
           {children}
         </blockquote>
       ),
 
-      // 表格
       table: ({ children }) => (
         <div className="my-6 overflow-x-auto rounded-lg border border-slate-700">
           <table className="w-full text-sm">{children}</table>
@@ -213,10 +211,7 @@ const MarkdownRendererInner = ({ content, basePath = '' }) => {
         <td className="px-4 py-3 text-slate-300 border-b border-slate-800">{children}</td>
       ),
 
-      // 水平线
       hr: () => <hr className="my-8 border-slate-800" />,
-
-      // 分隔
       br: () => <br />,
     };
   }, [basePath]);
