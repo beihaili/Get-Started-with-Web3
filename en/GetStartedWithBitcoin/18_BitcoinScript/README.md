@@ -368,3 +368,150 @@ Mastering Bitcoin Script enables you to: understand Bitcoin transactions at the 
 <a href="https://twitter.com/bhbtc1337">🐦 Follow the Author</a> |
 <a href="https://forms.gle/QMBwL6LwZyQew1tX8">📝 Join the Discussion</a>
 </div>
+
+
+## Workshop: Bitcoin Script Examples with Stack State
+Below are concrete Bitcoin Script examples showing exactly what happens at each opcode, with the stack state annotated at every step.
+
+### Example 1: P2PKH -- Pay to Public Key Hash
+
+The most common Bitcoin transaction type. Sending BTC to an address starting with `1`.
+
+**Locking Script (scriptPubKey):**
+```bitcoin-script
+OP_DUP           // stack: []
+OP_HASH160       // stack: []
+<pubKeyHash>     // stack: [<pubKeyHash>]
+OP_EQUALVERIFY   // stack: [<pubKeyHash>, <pubKeyHash>]  -- verifies they match, pops both
+OP_CHECKSIG      // stack: [<sig>, <pubKey>]  -- verifies signature, pushes 1 (true) or 0
+```
+
+**Unlocking Script (scriptSig):**
+```bitcoin-script
+<signature>       // stack: [<sig>]
+<pubKey>         // stack: [<sig>, <pubKey>]
+```
+
+**Full Execution Trace:**
+
+| Step | Opcode | Action | Stack After |
+|------|--------|--------|------------|
+| 1 | `<signature>` | Push signature onto stack | `[<sig>]` |
+| 2 | `<pubKey>` | Push public key | `[<sig>, <pubKey>]` |
+| 3 | `OP_DUP` | Duplicate top element | `[<sig>, <pubKey>, <pubKey>]` |
+| 4 | `OP_HASH160` | SHA256+RIPEMD160 the pubKey | `[<sig>, <pubKey>, <pubKeyHash>]` |
+| 5 | `<pubKeyHash>` | Push the expected hash | `[<sig>, <pubKey>, <pubKeyHash>, <expectedHash>]` |
+| 6 | `OP_EQUALVERIFY` | Compare top two; fail if mismatch | `[<sig>, <pubKey>]` |
+| 7 | `OP_CHECKSIG` | Verify `<sig>` signs tx using `<pubKey>` | `[1]` |
+
+---
+
+### Example 2: 2-of-3 Multisig
+
+A 2-of-3 multisig requires any 2 of 3 private keys to authorize a spend. Common for corporate treasuries or family funds.
+
+**Locking Script:**
+```bitcoin-script
+OP_2             // stack: [] -- push 2 (threshold)
+<pubKey1>        // stack: [2, <pubKey1>]
+<pubKey2>        // stack: [2, <pubKey1>, <pubKey2>]
+<pubKey3>        // stack: [2, <pubKey1>, <pubKey2>, <pubKey3>]
+OP_3             // stack: [2, <pubKey1>, <pubKey2>, <pubKey3>, 3] -- number of keys
+OP_CHECKMULTISIG // verifies 2 sigs against 3 pubKeys, pushes 1 or 0
+```
+
+**Unlocking Script:**
+```bitcoin-script
+OP_0             // stack: [] -- mandatory dummy element (historical bug)
+<sig1>           // stack: [0, <sig1>]
+<sig2>           // stack: [0, <sig1>, <sig2>]
+```
+
+**Execution Trace:**
+
+| Step | Opcode | Action | Stack After |
+|------|--------|--------|------------|
+| 1 | `OP_0` | Push required dummy (historical quirk) | `[0]` |
+| 2 | `<sig1>` | Push first signature | `[0, <sig1>]` |
+| 3 | `<sig2>` | Push second signature | `[0, <sig1>, <sig2>]` |
+| 4-7 | `OP_2 ... OP_3` | Push threshold (2) and all 3 pubKeys | `[0, <sig1>, <sig2>, 2, <pubKey1>, <pubKey2>, <pubKey3>, 3]` |
+| 8 | `OP_CHECKMULTISIG` | Verify at least 2 of 3 sigs are valid | `[1]` |
+
+> **Note:** The leading `OP_0` is required due to a long-standing bug in `OP_CHECKMULTISIG` that pops one extra item from the stack.
+
+---
+
+### Example 3: Pay-to-Script-Hash (P2SH)
+
+P2SH wraps any locking script inside a hash. The spender only needs to provide the hash -- they do not need to know the actual script contents.
+
+**Locking Script (on the blockchain):**
+```bitcoin-script
+OP_HASH160       // stack: []
+<redeemScriptHash> // stack: [<redeemScriptHash>]
+OP_EQUAL          // compares presented script hash with stored hash
+```
+
+**Unlocking Script (providing the full redeem script):**
+```bitcoin-script
+<sig1>           // stack: [<sig1>]
+<sig2>           // stack: [<sig1>, <sig2>]
+<redeemScript>    // stack: [<sig1>, <sig2>, <redeemScript>] -- the full original script
+```
+
+**Execution:**
+
+| Step | Opcode | Stack After |
+|------|--------|------------|
+| 1 | `<sig1>` | `[<sig1>]` |
+| 2 | `<sig2>` | `[<sig1>, <sig2>]` |
+| 3 | `<redeemScript>` | `[<sig1>, <sig2>, <redeemScript>]` |
+| 4 | `OP_HASH160` (inside redeemScript) | `[<sig1>, <sig2>, <redeemScriptHash>]` |
+| 5 | `<redeemScriptHash>` (from lock) | `[<sig1>, <sig2>, <redeemScriptHash>, <expectedHash>]` |
+| 6 | `OP_EQUAL` | `[1]` |
+
+---
+
+### Example 4: CheckLockTimeVerify (CLTV) -- Time-Locked Spending
+
+CLTV sets an absolute locktime -- coins can only be spent after a specified Unix timestamp or block height. This example shows a time-locked refund: Bob can spend after the deadline, but Alice can reclaim before it.
+
+**Locking Script:**
+```bitcoin-script
+<locktime>        // stack: [<locktime>] -- Unix timestamp or block height
+OP_CHECKLOCKTIMEVERIFY // checks current time is >= locktime, then pops it
+OP_DROP           // removes the consumed locktime value from stack
+OP_DUP            // duplicates top for hashing
+OP_HASH160        // hashes the duplicated value
+<pubKeyHash>      // push expected pubKey hash
+OP_EQUALVERIFY    // verify hashes match
+OP_CHECKSIG       // verify the signature
+```
+
+**Execution Trace (after lock has expired):**
+
+| Step | Opcode | Stack After |
+|------|--------|------------|
+| 1 | `<sig>` | `[<sig>]` |
+| 2 | `<pubKey>` | `[<sig>, <pubKey>]` |
+| 3 | `<locktime>` | `[<sig>, <pubKey>, 1735689600]` |
+| 4 | `OP_CHECKLOCKTIMEVERIFY` | Checks current time >= locktime, **passes**, pops | `[<sig>, <pubKey>]` |
+| 5 | `OP_DROP` | Removes top stack item | `[<sig>]` |
+| 6 | `OP_DUP` | Duplicates top | `[<sig>, <sig>]` |
+| 7 | `OP_HASH160` | Hashes the sig | `[<sig>, <sigHash>]` |
+| 8 | `<pubKeyHash>` | Push expected hash | `[<sig>, <sigHash>, <pubKeyHash>]` |
+| 9 | `OP_EQUALVERIFY` | Verifies hashes match | `[<sig>]` |
+| 10 | `OP_CHECKSIG` | Verifies signature | `[1]` |
+
+> **Practice:** Try modifying the P2PKH example to add a `OP_CHECKLOCKTIMEVERIFY` timelock, requiring the transaction to be broadcast after a certain block height!
+
+---
+
+### Quick Reference: How to Read Stack Annotations
+
+- **Stack: []** -- Empty stack at start
+- **Stack: [A]** -- One item (A) on the stack
+- **Stack: [A, B]** -- B is on top, A is below it
+- **Pop** -- Removes the top item
+- **Push X** -- Adds X to the top
+- **--> result** -- Shows what the operation produces
