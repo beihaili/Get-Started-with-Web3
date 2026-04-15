@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
-import { Heart, Wallet, ArrowUpRight } from 'lucide-react';
+import { Heart, Wallet, ArrowUpRight, Copy, Check } from 'lucide-react';
 import { DONATION_LINKS, CRYPTO_WALLETS, AFFILIATE_LINKS } from '../config/sponsorData';
+import { useClipboard } from '../utils/useClipboard';
 
 /**
  * 捐赠区块（首页展示）
@@ -8,6 +9,7 @@ import { DONATION_LINKS, CRYPTO_WALLETS, AFFILIATE_LINKS } from '../config/spons
  */
 const DonationSection = () => {
   const { t } = useTranslation();
+  const { copied, copy } = useClipboard();
   return (
     <div className="max-w-3xl mx-auto mb-16">
       <h2 className="text-2xl font-bold text-white text-center mb-2">{t('donation.title')}</h2>
@@ -76,9 +78,13 @@ const DonationSection = () => {
           <span>{t('donation.cryptoLabel')}</span>
         </div>
         {CRYPTO_WALLETS.map((wallet) => (
-          <div
+          <button
             key={wallet.chain}
-            className="flex items-start gap-3 p-4 bg-slate-800 border border-slate-700 rounded-xl"
+            type="button"
+            onClick={() => copy(wallet.address)}
+            title={t('donation.copyAddress')}
+            className="w-full flex items-start gap-3 p-4 bg-slate-800 border border-slate-700 rounded-xl
+              text-left cursor-pointer hover:border-cyan-500/40 transition-all group"
           >
             <div
               className="px-2.5 py-1 bg-slate-700 rounded-md text-xs font-mono font-bold
@@ -86,11 +92,21 @@ const DonationSection = () => {
             >
               {wallet.chain}
             </div>
-            <div className="min-w-0">
+            <div className="min-w-0 flex-1">
               <div className="text-xs text-slate-400 mb-1">{wallet.network}</div>
               <div className="font-mono text-xs text-slate-200 break-all">{wallet.address}</div>
             </div>
-          </div>
+            <div className="shrink-0 mt-0.5">
+              {copied === wallet.address ? (
+                <span className="flex items-center gap-1 text-xs text-green-400">
+                  <Check className="w-3.5 h-3.5" />
+                  {t('donation.copied')}
+                </span>
+              ) : (
+                <Copy className="w-3.5 h-3.5 text-slate-500 group-hover:text-cyan-400 transition-colors" />
+              )}
+            </div>
+          </button>
         ))}
       </div>
     </div>
