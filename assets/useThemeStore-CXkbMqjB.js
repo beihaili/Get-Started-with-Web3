@@ -1,0 +1,1 @@
+import{n as e,t}from"./store-C_8ty9MS.js";var m=e(t((e,t)=>({theme:"dark",toggleTheme:()=>e(e=>({theme:"dark"===e.theme?"light":"dark"})),setTheme:t=>e({theme:t}),isDark:()=>"dark"===t().theme}),{name:"web3-theme-store",partialize:e=>({theme:e.theme})}));export{m as t};
