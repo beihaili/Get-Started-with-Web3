@@ -1,0 +1,50 @@
+name: Claude Code Review
+
+# Triggers (the action itself filters comments via `trigger_phrase: '@claude'` below —
+# this workflow runs on every matching event and short-circuits inside the action if
+# the body doesn't contain the trigger phrase):
+#   - pull_request opened/synchronize/reopened -> automatic first-pass review
+#   - issue_comment / pull_request_review_comment (created) -> on-demand answer
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  issue_comment:
+    types: [created]
+  pull_request_review_comment:
+    types: [created]
+
+# Minimal permissions. Note: dropping `issues: write` means @claude on a pure issue
+# (not a PR) comment can be read but not replied to. Add it back if/when we want
+# Claude to answer standalone-issue threads.
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  claude:
+    # Without these guards:
+    #   - Dependabot PRs would burn API budget on dep bumps that rarely need LLM review
+    #   - fork PRs would run but silently fail to post (GITHUB_TOKEN can't write to forks);
+    #     we invert the check to `fork != false` so an unknown/missing field defaults to
+    #     "treat as fork, skip" rather than running and failing silently
+    #   - bot-authored comments could create reply loops; we use `user.type == 'Bot'`
+    #     (GitHub's native flag) instead of a `[bot]` suffix check to also catch
+    #     bots with non-suffixed logins (codecov, snyk-bot, mergify, etc.)
+    if: >-
+      !(github.event_name == 'pull_request' && (
+        github.event.pull_request.user.login == 'dependabot[bot]' ||
+        github.event.pull_request.head.repo.fork != false
+      )) &&
+      !(github.event.comment != null && github.event.comment.user.type == 'Bot')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          trigger_phrase: '@claude'
+          # Reduce --max-turns (currently 5) if API spend climbs.
+          claude_args: --model claude-opus-4-6 --max-turns 5
