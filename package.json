@@ -50,7 +50,7 @@
     "react-dom": "^19.2.5",
     "react-i18next": "^16.5.8",
     "react-markdown": "^10.1.0",
-    "react-router-dom": "^7.14.0",
+    "react-router-dom": "^7.14.1",
     "rehype-raw": "^7.0.0",
     "remark-gfm": "^4.0.1",
     "zustand": "^4.5.0"
