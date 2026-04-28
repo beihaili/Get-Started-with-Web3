@@ -13,11 +13,11 @@ on:
   pull_request_review_comment:
     types: [created]
 
-# Minimal permissions. Note: dropping `issues: write` means @claude on a pure issue
-# (not a PR) comment can be read but not replied to. Add it back if/when we want
-# Claude to answer standalone-issue threads.
+# Minimal permissions needed for OIDC auth plus PR/issue replies.
 permissions:
   contents: read
+  id-token: write
+  issues: write
   pull-requests: write
 
 jobs:
