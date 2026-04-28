@@ -1,9 +1,9 @@
 # AMM 与去中心化交易所
 
-![status](https://img.shields.io/badge/ 状态 - 已完成 - success)
-![author](https://img.shields.io/badge/ 作者 - beihaili-blue)
-![date](https://img.shields.io/badge/ 日期 - 2025--06-orange)
-![difficulty](https://img.shields.io/badge/ 难度 - 中级 - yellow)
+![status](https://img.shields.io/badge/% E7%8A% B6% E6%80%81-% E5% B7% B2% E5% AE%8C% E6%88%90-success)
+![author](https://img.shields.io/badge/% E4% BD%9C% E8%80%85-beihaili-blue)
+![date](https://img.shields.io/badge/% E6%97% A5% E6%9C%9F-2025--06-orange)
+![difficulty](https://img.shields.io/badge/% E9%9A% BE% E5% BA% A6-% E4% B8% AD% E7% BA% A7-yellow)
 
 > 💡 本课将深入解析去中心化交易所（DEX）的核心机制 —— 自动做市商（AMM）。你将理解 Uniswap 的恒定乘积公式、流动性提供的完整流程，以及无常损失这个每个 LP 必须面对的概念。
 >

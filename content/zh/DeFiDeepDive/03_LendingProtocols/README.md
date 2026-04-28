@@ -1,9 +1,9 @@
 # 借贷协议原理
 
-![status](https://img.shields.io/badge/ 状态 - 已完成 - success)
-![author](https://img.shields.io/badge/ 作者 - beihaili-blue)
-![date](https://img.shields.io/badge/ 日期 - 2025--06-orange)
-![difficulty](https://img.shields.io/badge/ 难度 - 中级 - yellow)
+![status](https://img.shields.io/badge/% E7%8A% B6% E6%80%81-% E5% B7% B2% E5% AE%8C% E6%88%90-success)
+![author](https://img.shields.io/badge/% E4% BD%9C% E8%80%85-beihaili-blue)
+![date](https://img.shields.io/badge/% E6%97% A5% E6%9C%9F-2025--06-orange)
+![difficulty](https://img.shields.io/badge/% E9%9A% BE% E5% BA% A6-% E4% B8% AD% E7% BA% A7-yellow)
 
 > 💡 本课将带你理解 DeFi 借贷协议的工作原理。从 Aave 和 Compound 的核心机制，到超额抵押、清算和利率模型，再到 "闪电贷" 这个只有在区块链上才可能存在的魔法 —— 全面掌握 DeFi 借贷的知识体系。
 >
