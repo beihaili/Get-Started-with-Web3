@@ -21,4 +21,38 @@ describe('estimateReadingTime', () => {
     expect(estimateReadingTime('hello', 'en')).toBe(1);
     expect(estimateReadingTime('你好', 'zh')).toBe(1);
   });
+
+  it('should return 0 for blank markdown', () => {
+    // Blank input has no readable content, so it should behave like an empty string.
+    expect(estimateReadingTime('   \n\t  ', 'zh')).toBe(0);
+    expect(estimateReadingTime('   \n\t  ', 'en')).toBe(0);
+  });
+
+  it('should ignore fenced code blocks when estimating markdown reading time', () => {
+    const code = Array(800).fill('const value = expensiveComputation();').join('\n');
+    const markdown = ['Short intro paragraph.', '```js', code, '```'].join('\n');
+
+    expect(estimateReadingTime(markdown, 'en')).toBe(1);
+  });
+
+  it('should count Chinese characters and English words separately in mixed content', () => {
+    const chinese = '中'.repeat(400);
+    const english = Array(200).fill('word').join(' ');
+
+    expect(estimateReadingTime(`${chinese}\n\n${english}`, 'zh')).toBe(2);
+  });
+
+  it('should count markdown image alt text without counting the image URL', () => {
+    const longUrl = `https://example.com/${'path/'.repeat(300)}diagram.png`;
+    const markdown = `![区块链流程图](${longUrl})`;
+
+    expect(estimateReadingTime(markdown, 'zh')).toBe(1);
+  });
+
+  it('should ignore very long inline URLs', () => {
+    const longUrl = `https://example.com/${'very-long-segment/'.repeat(300)}`;
+    const markdown = `参考资料：${longUrl}`;
+
+    expect(estimateReadingTime(markdown, 'zh')).toBe(1);
+  });
 });
