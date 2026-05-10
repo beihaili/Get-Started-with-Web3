@@ -1,0 +1,109 @@
+{
+  "schemaVersion": "2026-05-09",
+  "generatedAt": "2026-05-10T06:25:27.200Z",
+  "repository": {
+    "name": "Get-Started-with-Web3",
+    "owner": "beihaili",
+    "branch": "main",
+    "homepage": "https://beihaili.github.io/Get-Started-with-Web3/",
+    "sourceUrl": "https://github.com/beihaili/Get-Started-with-Web3"
+  },
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "counts": {
+    "modules": 10,
+    "lessons": 93,
+    "glossaryEntries": 20,
+    "tools": 8,
+    "futurePaidTools": 2
+  },
+  "artifacts": {
+    "manifest": "ai/manifest.json",
+    "contentIndex": "ai/content-index.json",
+    "llmsTxt": "ai/llms.txt",
+    "public": {
+      "llmsTxt": "https://beihaili.github.io/Get-Started-with-Web3/llms.txt",
+      "manifest": "https://beihaili.github.io/Get-Started-with-Web3/ai/manifest.json",
+      "contentIndex": "https://beihaili.github.io/Get-Started-with-Web3/ai/content-index.json"
+    }
+  },
+  "mcp": {
+    "command": "npm run mcp:web3",
+    "transport": "stdio",
+    "readOnly": true
+  },
+  "tools": [
+    {
+      "name": "search_web3_content",
+      "title": "Search Web3 Course Content",
+      "description": "Search lesson titles, headings, excerpts, and glossary definitions.",
+      "x402": {
+        "enabled": false
+      }
+    },
+    {
+      "name": "read_web3_lesson",
+      "title": "Read Web3 Lesson",
+      "description": "Read a full lesson by language and lesson identifier.",
+      "x402": {
+        "enabled": false
+      }
+    },
+    {
+      "name": "get_learning_path",
+      "title": "Get Learning Path",
+      "description": "Return role-based learning paths for beginners, builders, researchers, and investors.",
+      "x402": {
+        "enabled": false
+      }
+    },
+    {
+      "name": "lookup_web3_glossary",
+      "title": "Lookup Web3 Glossary",
+      "description": "Search concise glossary entries for Web3 concepts.",
+      "x402": {
+        "enabled": false
+      }
+    },
+    {
+      "name": "compose_web3_context",
+      "title": "Compose Web3 Context",
+      "description": "Build a bounded context pack with citations for a topic.",
+      "x402": {
+        "enabled": false
+      }
+    },
+    {
+      "name": "list_monetizable_tools",
+      "title": "List Monetizable Tools",
+      "description": "List future x402-ready paid tool metadata. Local MCP does not enforce payment.",
+      "x402": {
+        "enabled": false
+      }
+    },
+    {
+      "name": "generate_personalized_web3_plan",
+      "title": "Generate Personalized Web3 Plan",
+      "description": "Future paid remote tool that turns learner goals and background into a tailored Web3 study plan.",
+      "x402": {
+        "enabled": true,
+        "priceUsd": 0.25,
+        "network": "base",
+        "route": "/mcp/tools/generate_personalized_web3_plan"
+      }
+    },
+    {
+      "name": "audit_learning_answer",
+      "title": "Audit Learning Answer",
+      "description": "Future paid remote tool that reviews a learner answer against repository lessons with cited corrections.",
+      "x402": {
+        "enabled": true,
+        "priceUsd": 0.1,
+        "network": "base",
+        "route": "/mcp/tools/audit_learning_answer"
+      }
+    }
+  ]
+}
