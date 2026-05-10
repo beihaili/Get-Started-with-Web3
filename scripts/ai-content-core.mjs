@@ -1,4 +1,4 @@
-import { existsSync } from 'node:fs';
+import { readdirSync } from 'node:fs';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { GLOSSARY_DATA } from '../src/config/glossaryData.js';
@@ -407,16 +407,26 @@ export function createLlmsTxt(index) {
 }
 
 function findLessonReadme(projectRoot, lang, lessonPath) {
+  const lessonDir = path.join(projectRoot, lang, lessonPath);
+  let entries;
+
+  try {
+    entries = readdirSync(lessonDir, { withFileTypes: true });
+  } catch {
+    return null;
+  }
+
   for (const fileName of CONTENT_EXTENSIONS) {
-    const relativePath = path.join(lang, lessonPath, fileName);
-    const absolutePath = path.join(projectRoot, relativePath);
-    if (existsSync(absolutePath)) {
+    const entry = entries.find((candidate) => candidate.isFile() && candidate.name === fileName);
+    if (entry) {
+      const relativePath = path.join(lang, lessonPath, entry.name);
       return {
-        absolutePath,
+        absolutePath: path.join(projectRoot, relativePath),
         relativePath: normalizePath(relativePath),
       };
     }
   }
+
   return null;
 }
 

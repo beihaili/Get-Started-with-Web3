@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2026-05-09",
-  "generatedAt": "2026-05-10T06:10:47.192Z",
+  "generatedAt": "2026-05-10T06:19:19.701Z",
   "repository": {
     "name": "Get-Started-with-Web3",
     "owner": "beihaili",
@@ -878,10 +878,10 @@
       "title": "创建第一个 Web3 身份",
       "path": "Web3QuickStart/01_FirstWeb3Identity",
       "labUrl": null,
-      "sourcePath": "zh/Web3QuickStart/01_FirstWeb3Identity/README.md",
+      "sourcePath": "zh/Web3QuickStart/01_FirstWeb3Identity/README.MD",
       "citation": {
-        "file": "zh/Web3QuickStart/01_FirstWeb3Identity/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3QuickStart/01_FirstWeb3Identity/README.md",
+        "file": "zh/Web3QuickStart/01_FirstWeb3Identity/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3QuickStart/01_FirstWeb3Identity/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-1/1-1"
       },
       "excerpt": "创建你的第一个 Web3 身份 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言 Web3 简述 小狐狸钱包 MetaMask 简述 使用 MetaMask 创建第一个 Web3 身份 常见问题 总结 前言 还记得第一次接触互联网时的那种兴奋和好奇吗？今天，我们站在了另一个技术革命的起点 —— Web3。这个全新的网络世界不再由科技巨头控制，而是由每一个参与者共同拥有。作为一名 Web3 新人，我深知迈出第一步的重要性和挑战。希望通过这篇文章，能让你轻松",
@@ -1240,10 +1240,10 @@
       "title": "体验第一笔交易",
       "path": "Web3QuickStart/02_FirstWeb3Transaction",
       "labUrl": null,
-      "sourcePath": "zh/Web3QuickStart/02_FirstWeb3Transaction/README.md",
+      "sourcePath": "zh/Web3QuickStart/02_FirstWeb3Transaction/README.MD",
       "citation": {
-        "file": "zh/Web3QuickStart/02_FirstWeb3Transaction/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3QuickStart/02_FirstWeb3Transaction/README.md",
+        "file": "zh/Web3QuickStart/02_FirstWeb3Transaction/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3QuickStart/02_FirstWeb3Transaction/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-1/1-2"
       },
       "excerpt": "发送第一笔 Web3 交易 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言 交易是什么 0 成本在测试网上发出第一笔交易 （选做）在主网上发出第一笔交易 常见问题 总结 前言 还记得第一次用手机转账给朋友的经历吗？那种成功完成操作的成就感是始终让人难忘的。今天，我们将在 Web3 世界中体验更加有意义的一步 —— 第一笔区块链交易。 与传统银行交易不同，Web3 交易不需要任何中间人，不需要等待周末或者节假日，更不需要担心国际汇款的高额手续费。今天，我",
@@ -1410,10 +1410,10 @@
       "title": "体验第一个 DApp",
       "path": "Web3QuickStart/03_FirstWeb3Dapp",
       "labUrl": null,
-      "sourcePath": "zh/Web3QuickStart/03_FirstWeb3Dapp/README.md",
+      "sourcePath": "zh/Web3QuickStart/03_FirstWeb3Dapp/README.MD",
       "citation": {
-        "file": "zh/Web3QuickStart/03_FirstWeb3Dapp/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3QuickStart/03_FirstWeb3Dapp/README.md",
+        "file": "zh/Web3QuickStart/03_FirstWeb3Dapp/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3QuickStart/03_FirstWeb3Dapp/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-1/1-3"
       },
       "excerpt": "使用 Web3 的第一个 DApp 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言 DApp 是什么 运行 DApp 的流程 使用 Web3 的第一个 DApp 常见问题 总结 前言 还记得第一次使用手机应用时的惊喜和喜悦吗？每一个新应用都代表着一个新世界的打开。在 Web3 世界中，这些应用被称为「DApps」（去中心化应用），它们有着异曲同工的力量 —— 能够彻底改变金融、社交和其他领域的运作方式。 今天，我们将一起探索如何使用您的第一个 Web3",
@@ -1740,10 +1740,10 @@
       "title": "常用 Web3 网站",
       "path": "Web3QuickStart/04_UsefulWeb3Sites",
       "labUrl": null,
-      "sourcePath": "zh/Web3QuickStart/04_UsefulWeb3Sites/README.md",
+      "sourcePath": "zh/Web3QuickStart/04_UsefulWeb3Sites/README.MD",
       "citation": {
-        "file": "zh/Web3QuickStart/04_UsefulWeb3Sites/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3QuickStart/04_UsefulWeb3Sites/README.md",
+        "file": "zh/Web3QuickStart/04_UsefulWeb3Sites/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3QuickStart/04_UsefulWeb3Sites/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-1/1-4"
       },
       "excerpt": "新手常用的 Web3 工具类网站 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言 区块链浏览器 数字资产行情网站 DeFi 工具 靠谱的交易所网站 常见问题 总结 前言 初次进入 Web3 世界的感觉，就像正在斩草开路的探险家 —— 周围是陌生而神秘的热带雨林，充满了未知与机遇。没有指南，每一步都可能迷失方向；没有工具，即使最简单的探索也变得困难。 我们所有人都经历过这样的迷茫，我也是如此。正因为这些经历，我特意整理了这份「生存工具箱」 —— 经过时间",
@@ -1950,10 +1950,10 @@
       "title": "发行你的第一个代币",
       "path": "Web3QuickStart/05_LaunchYourFirstToken",
       "labUrl": null,
-      "sourcePath": "zh/Web3QuickStart/05_LaunchYourFirstToken/README.md",
+      "sourcePath": "zh/Web3QuickStart/05_LaunchYourFirstToken/README.MD",
       "citation": {
-        "file": "zh/Web3QuickStart/05_LaunchYourFirstToken/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3QuickStart/05_LaunchYourFirstToken/README.md",
+        "file": "zh/Web3QuickStart/05_LaunchYourFirstToken/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3QuickStart/05_LaunchYourFirstToken/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-1/1-5"
       },
       "excerpt": "如何在 Pump.fun 上发行你的第一个 Meme 币 💡 本教程将指导您如何在 Solana 链上通过 Pump.fun 平台快速发行自己的第一个 Meme 币，无需编写任何代码。整个过程只需几分钟即可完成，是 Web3 新手入门的绝佳实践。 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 背景介绍 准备工作 创建代币步骤 管理和推广您的代币 常见问题解答 总结 背景介绍 什么是 Pump.fun？ 🚀 Pump.fun 是基于 Solana 链的一个一站式发币和交易平台，让任何人都能以极低的成本和门槛发行自己的代币。这些代币通常被称为「模因币」(Meme coins) 或「社区币」，可以反映特定主题、事件或社区。 Pump.fun 平台的独特之处在于： 特点 描述 : : : 极低成本 仅需 0.02 SOL 即可完成代币发行 用户友好 无需编程知识，点击几下即可完成 自动流动性 自动在 R",
@@ -2208,10 +2208,10 @@
       "title": "Web3 安全基础",
       "path": "Web3QuickStart/06_Web3Security",
       "labUrl": null,
-      "sourcePath": "zh/Web3QuickStart/06_Web3Security/README.md",
+      "sourcePath": "zh/Web3QuickStart/06_Web3Security/README.MD",
       "citation": {
-        "file": "zh/Web3QuickStart/06_Web3Security/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3QuickStart/06_Web3Security/README.md",
+        "file": "zh/Web3QuickStart/06_Web3Security/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3QuickStart/06_Web3Security/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-1/1-6"
       },
       "excerpt": "Web3 安全防护与防骗指南 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 📖 前言 「在 Web3 的世界里，你就是自己的银行。银行的安全完全由你来负责。」 欢迎来到 Web3 最重要的一课 —— 安全防护！如果你已经学完了前面几讲，相信你已经： 创建了自己的 Web3 身份（钱包） 进行了第一笔 Web3 交易 体验了 DApp 的魅力 但在深入 Web3 世界之前，你 必须 掌握基本的安全知识。在传统世界里，如果你的银行卡被盗刷，银行可能会帮你追回损失；但在 Web3 世界里， 一旦私钥泄露或资产被盗，几乎无法找回 。 🚨 重要提醒 ：Web3 世界充",
@@ -2570,10 +2570,10 @@
       "title": "Web3 交易所入门",
       "path": "Web3QuickStart/07_Web3CEX",
       "labUrl": null,
-      "sourcePath": "zh/Web3QuickStart/07_Web3CEX/README.md",
+      "sourcePath": "zh/Web3QuickStart/07_Web3CEX/README.MD",
       "citation": {
-        "file": "zh/Web3QuickStart/07_Web3CEX/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3QuickStart/07_Web3CEX/README.md",
+        "file": "zh/Web3QuickStart/07_Web3CEX/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3QuickStart/07_Web3CEX/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-1/1-7"
       },
       "excerpt": "Web3 交易所入门 — 中心化交易所 (CEX) 全面指南 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 📖 前言 「中心化交易所是大多数人进入加密世界的第一站，也是连接法币与加密货币之间最重要的桥梁。」 欢迎来到 Web3 入门系列的第七讲 —— 中心化交易所 (CEX) 全面指南！ 如果你已经学习了前面的课程，你已经了解了钱包、链上交易、DApp 和安全知识。但在实际操作中，绝大多数用户接触加密货币的 第一步 就是通过中心化交易所。无论是将法币兑换为加密货币，还是进行日常交易，CEX 都扮演着不可或缺的角色。 在 Web3 世界中，虽然去中心化是核心理念",
@@ -2932,10 +2932,10 @@
       "title": "第01讲 密码学基础",
       "path": "GetStartedWithBitcoin/01_Cryptography",
       "labUrl": null,
-      "sourcePath": "zh/GetStartedWithBitcoin/01_Cryptography/README.md",
+      "sourcePath": "zh/GetStartedWithBitcoin/01_Cryptography/README.MD",
       "citation": {
-        "file": "zh/GetStartedWithBitcoin/01_Cryptography/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/01_Cryptography/README.md",
+        "file": "zh/GetStartedWithBitcoin/01_Cryptography/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/01_Cryptography/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-2/2-1"
       },
       "excerpt": "第 01 讲：比特币密码学基础 💡 想象一下，如果你有一种魔法能让任何人都无法伪造你的签名，任何数据都无法被悄悄篡改，这就是密码学的力量。比特币正是建立在这些「数学魔法」之上，让数字世界拥有了现实世界的安全性。 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言：为什么比特币需要密码学？ 哈希函数：数字世界的指纹 数字签名：证明你就是你 椭圆曲线加密：数学的神奇魔法 比特币地址：从私钥到收款码 HD 钱包：一个助记词管理所有资产 安全实践：如何保护你的密钥 常见问题 结语 前言：为什么比特币需要密码学？ 想象一下，如果我给你一张纸条，上面写着「张三欠李四 100 元」，你会相信吗？可能不会，因为： 你不知道这是不是张三亲自写的 李四可能会把「100」改成「1000」 其他人也可以伪造同样的欠条 这就是传统数字世界面临的三大难题： 身份认证、防篡改、防伪造 。 比特币作为数字货币，必须解决这些问题。",
@@ -3294,10 +3294,10 @@
       "title": "第02讲 比特币概览",
       "path": "GetStartedWithBitcoin/02_Overview",
       "labUrl": null,
-      "sourcePath": "zh/GetStartedWithBitcoin/02_Overview/README.md",
+      "sourcePath": "zh/GetStartedWithBitcoin/02_Overview/README.MD",
       "citation": {
-        "file": "zh/GetStartedWithBitcoin/02_Overview/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/02_Overview/README.md",
+        "file": "zh/GetStartedWithBitcoin/02_Overview/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/02_Overview/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-2/2-2"
       },
       "excerpt": "第 02 讲：比特币概述 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC/ETH/USDT 等加密货币推荐 币安注册链接 目录 前言 比特币是什么 比特币有什么价值 比特币系统是如何运作的 常见问题 结语 前言 当你第一次听到比特币的时候，你可能会感到好奇、困惑或者说怀疑。这很正常！每一个改变世界的革命性创新在初期都会面临这些挑战。就像互联网萌芽的早期，很少有人能预见它将如何重塑我们的世界。 比特币是区块链最成功的应用，没有之一。在这篇入门文章中，我们将一同探索比特币的基本概念，它的价值来源，以及它如何改变我们对货币和",
@@ -3632,10 +3632,10 @@
       "title": "第03讲 比特币交易结构",
       "path": "GetStartedWithBitcoin/03_BitcoinTx",
       "labUrl": null,
-      "sourcePath": "zh/GetStartedWithBitcoin/03_BitcoinTx/README.md",
+      "sourcePath": "zh/GetStartedWithBitcoin/03_BitcoinTx/README.MD",
       "citation": {
-        "file": "zh/GetStartedWithBitcoin/03_BitcoinTx/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/03_BitcoinTx/README.md",
+        "file": "zh/GetStartedWithBitcoin/03_BitcoinTx/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/03_BitcoinTx/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-2/2-3"
       },
       "excerpt": "第 03 讲：比特币交易基础 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC/ETH/USDT 等加密货币推荐 币安注册链接 目录 前言：为什么银行的记账方式不适合比特币？ UTXO 模型：现金 vs 银行账户的哲学 交易结构：数字化的现金流转 输入与输出：钱从哪里来到哪里去 交易验证：数学如何保证安全 实际操作：手把手创建交易 常见问题 结语 前言：为什么银行的记账方式不适合比特币？ 想象你在管理一个完全没有信任的环境中的资金流转 —— 比如一群互不认识的人之间要记录借贷关系，但没有任何中央机构来监督。 传统银行方式",
@@ -3994,10 +3994,10 @@
       "title": "第04讲 多重签名 (MultiSig)",
       "path": "GetStartedWithBitcoin/04_MultiSig",
       "labUrl": null,
-      "sourcePath": "zh/GetStartedWithBitcoin/04_MultiSig/README.md",
+      "sourcePath": "zh/GetStartedWithBitcoin/04_MultiSig/README.MD",
       "citation": {
-        "file": "zh/GetStartedWithBitcoin/04_MultiSig/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/04_MultiSig/README.md",
+        "file": "zh/GetStartedWithBitcoin/04_MultiSig/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/04_MultiSig/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-2/2-4"
       },
       "excerpt": "第 04 讲：多重签名交易 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言 多重签名基础概念 多重签名技术原理 P2SH 多重签名 企业级应用场景 实战演练：创建多签钱包 常见问题 结语 前言 在前一章《比特币交易基础》中，我们学习了比特币交易的基本组成、UTXO 模型和 P2PKH 交易。现在，我们将深入探讨比特币交易系统的一个重要功能：多重签名 (MultiSig)。 多重签名是比特币技术发展的重要里程碑，它不仅增强了安全性，还为企业和机构提供了更",
@@ -4316,10 +4316,10 @@
       "title": "第05讲 隔离见证 (SegWit)",
       "path": "GetStartedWithBitcoin/05_SegWit",
       "labUrl": null,
-      "sourcePath": "zh/GetStartedWithBitcoin/05_SegWit/README.md",
+      "sourcePath": "zh/GetStartedWithBitcoin/05_SegWit/README.MD",
       "citation": {
-        "file": "zh/GetStartedWithBitcoin/05_SegWit/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/05_SegWit/README.md",
+        "file": "zh/GetStartedWithBitcoin/05_SegWit/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/05_SegWit/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-2/2-5"
       },
       "excerpt": "第 05 讲：隔离见证 (SegWit) 技术 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言：比特币为什么需要「减肥」？ 交易延展性：快递包裹被恶意篡改的烦恼 隔离见证：巧妙的包装分离术 权重系统：重新定义区块「大小」 费用优化：为什么 SegWit 更便宜 技术实现：深入 SegWit 机制 向后兼容：软分叉的智慧 常见问题 结语 前言：比特币为什么需要「减肥」？ 想象你经营一家快递公司，每天要处理数万个包裹，但运输车辆的载重有限。随着业务增长，你",
@@ -4678,10 +4678,10 @@
       "title": "第06讲 Taproot 升级详解",
       "path": "GetStartedWithBitcoin/06_Taproot",
       "labUrl": null,
-      "sourcePath": "zh/GetStartedWithBitcoin/06_Taproot/README.md",
+      "sourcePath": "zh/GetStartedWithBitcoin/06_Taproot/README.MD",
       "citation": {
-        "file": "zh/GetStartedWithBitcoin/06_Taproot/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/06_Taproot/README.md",
+        "file": "zh/GetStartedWithBitcoin/06_Taproot/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/06_Taproot/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-2/2-6"
       },
       "excerpt": "第 06 讲：Taproot 升级详解 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言 Taproot 基础概念 Schnorr 签名算法 MAST 技术详解 隐私性提升 效率优化 智能合约增强 实战演练：Taproot 交易 常见问题 结语 前言 在前一章《隔离见证 (SegWit) 技术》中，我们学习了 SegWit 如何通过数据重组解决交易延展性问题并提升网络效率。现在，我们将探索比特币技术发展的最新里程碑：Taproot 升级。 Taproot",
@@ -5040,10 +5040,10 @@
       "title": "第07讲 高级交易应用",
       "path": "GetStartedWithBitcoin/07_AdvancedTransactions",
       "labUrl": null,
-      "sourcePath": "zh/GetStartedWithBitcoin/07_AdvancedTransactions/README.md",
+      "sourcePath": "zh/GetStartedWithBitcoin/07_AdvancedTransactions/README.MD",
       "citation": {
-        "file": "zh/GetStartedWithBitcoin/07_AdvancedTransactions/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/07_AdvancedTransactions/README.md",
+        "file": "zh/GetStartedWithBitcoin/07_AdvancedTransactions/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/07_AdvancedTransactions/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-2/2-7"
       },
       "excerpt": "第 07 讲：高级交易应用 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言 复杂交易类型分析 地址格式演进 高级交易应用 实战演练：高级交易 常见问题 结语 前言 在前面的章节中，我们学习了多重签名、SegWit、Taproot 和 Ordinals 等核心技术。现在，我们将深入探讨比特币的高级交易应用，包括复杂交易类型、地址格式演进和各种高级交易场景。 本章将涵盖比特币交易系统的进阶功能，这些技术为比特币生态系统提供了强大的扩展性和灵活性，为 Lay",
@@ -5402,10 +5402,10 @@
       "title": "第08讲 区块链数据结构",
       "path": "GetStartedWithBitcoin/08_DataStructure",
       "labUrl": null,
-      "sourcePath": "zh/GetStartedWithBitcoin/08_DataStructure/README.md",
+      "sourcePath": "zh/GetStartedWithBitcoin/08_DataStructure/README.MD",
       "citation": {
-        "file": "zh/GetStartedWithBitcoin/08_DataStructure/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/08_DataStructure/README.md",
+        "file": "zh/GetStartedWithBitcoin/08_DataStructure/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/08_DataStructure/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-2/2-8"
       },
       "excerpt": "第 08 讲：区块链数据结构 —— 从链表到默克尔树 💡 本章我们将深入探讨比特币中两个最基础且最重要的数据结构：区块链和默克尔树。这些看似简单的结构，通过密码学的加持，成为了比特币安全性的重要保障。 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言：比特币如何给数据结构加上防篡改能力 哈希指针：数据结构的守护者 区块链：防篡改的链表 默克尔树：高效的数据验证 实际应用：SPV 和轻节点 常见问题 结语 前言：比特币如何给数据结构加上防篡改能力 比特币的天才之处在于：它没有发明全新的数据结构，而是 在普通数据结构的基础上，巧妙地加入了密码学元素 。 核心洞察 ： 链表 + 哈希指针 = 区块链（防篡改的链表） 二叉树 + 哈希指针 = 默克尔树（可验证的二叉树） 在传统的中心化系统中，数据的完整性由可信的中央机构保证。但在比特币这样的去中心化系统中，我们需要一种方法让每个参与者都能： 独立验证数",
@@ -5764,10 +5764,10 @@
       "title": "第09讲 比特币核心节点",
       "path": "GetStartedWithBitcoin/09_BitcoinCore",
       "labUrl": null,
-      "sourcePath": "zh/GetStartedWithBitcoin/09_BitcoinCore/README.md",
+      "sourcePath": "zh/GetStartedWithBitcoin/09_BitcoinCore/README.MD",
       "citation": {
-        "file": "zh/GetStartedWithBitcoin/09_BitcoinCore/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/09_BitcoinCore/README.md",
+        "file": "zh/GetStartedWithBitcoin/09_BitcoinCore/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/09_BitcoinCore/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-3/3-1"
       },
       "excerpt": "第 09 讲：比特币核心节点 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言 比特币节点是什么 运行比特币节点的意义 如何搭建比特币节点 常见问题 结语 前言 2009 年 1 月 3 日，一个平凡到不能再平凡的周六，芬兰赫尔辛基的一个小型服务器上，匿名开发者中本聪运行了一个名为比特币节点的程序，挖出了比特币的创世区块。当时的人们并不知道，一个全新的时代已经缓缓拉开帷幕。 我们无从得知中本聪是谁，但是我们能够清楚地看到比特币节点的源码，从而清晰地看到中",
@@ -6488,10 +6488,10 @@
       "title": "第11讲 网络安全",
       "path": "GetStartedWithBitcoin/11_NetworkSecurity",
       "labUrl": null,
-      "sourcePath": "zh/GetStartedWithBitcoin/11_NetworkSecurity/README.md",
+      "sourcePath": "zh/GetStartedWithBitcoin/11_NetworkSecurity/README.MD",
       "citation": {
-        "file": "zh/GetStartedWithBitcoin/11_NetworkSecurity/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/11_NetworkSecurity/README.md",
+        "file": "zh/GetStartedWithBitcoin/11_NetworkSecurity/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/11_NetworkSecurity/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-3/3-3"
       },
       "excerpt": "第 11 讲：网络安全与攻击防护 💡 想象一个村庄里的金库，没有银行、没有警察、没有政府保护，却能安全存放几千亿美元的财富。这听起来很疯狂？但比特币做到了。本章用最简单的方式解释这个「无人看守的金库」如何抵御全世界的小偷。 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言：为什么一个无人看守的金库能如此安全？ 安全哲学：村庄的防护智慧 常见攻击：小偷们的套路 防护机制：村庄的安全系统 钱包安全：保护你的私人保险箱 节点安全：当一个负责任的村民 实际案例：从血的教训中学习 未来挑战：新时代的威胁 常见问题解答 前言：为什么一个无人看守的金库能如此安全？ 想象一下这样一个场景： 有个村庄的金库里存放着价值几千亿美元的财富。 金库没有保安，没有围墙， 24 小时开放。 全世界的小偷都知道这个金库的位置。 但是 16 年来，没有一个小偷能成功偷走哪怕一分钱。 这听起来像天方夜谭？但这就是比特币网络的真实",
@@ -7434,10 +7434,10 @@
       "title": "第14讲 分叉机制与 BIP 流程",
       "path": "GetStartedWithBitcoin/14_ForksBIPs",
       "labUrl": null,
-      "sourcePath": "zh/GetStartedWithBitcoin/14_ForksBIPs/README.md",
+      "sourcePath": "zh/GetStartedWithBitcoin/14_ForksBIPs/README.MD",
       "citation": {
-        "file": "zh/GetStartedWithBitcoin/14_ForksBIPs/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/14_ForksBIPs/README.md",
+        "file": "zh/GetStartedWithBitcoin/14_ForksBIPs/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/14_ForksBIPs/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-3/3-6"
       },
       "excerpt": "第 14 讲：分叉机制与 BIP 流程 💡 想象一个神奇的村庄，没有村长，但村民们能够通过「全民公投」的方式来决定修改村规。有时候改动很小，老村民不用学新规就能适应；有时候改动很大，需要所有人都同意才能执行。这就是比特币的分叉和升级机制。 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言：为什么村庄需要修改规则？ 分叉类型：软改革 vs 硬改革 BIP 提案：民主决策的流程 经典案例：村庄改革的历史 激活机制：如何确保改革成功 动手实践：分析分叉影响 常见问题解答 前言：为什么村庄需要修改规则？ 你有没有想过这样一个问题：比特币运行了 16 年，但它的功能却在不断进化，这是怎么做到的？ 传统系统的升级方式： 微信升级 ：腾讯发布新版本，用户下载更新。 银行系统 ：总行决定新政策，分行执行。 政府政策 ：政府制定，民众执行。 比特币的难题： 没有 CEO 决定升级什么。 没有总部推送更新。 没有政",
@@ -7656,10 +7656,10 @@
       "title": "第15讲 比特币钱包",
       "path": "GetStartedWithBitcoin/15_BitcoinWallet",
       "labUrl": null,
-      "sourcePath": "zh/GetStartedWithBitcoin/15_BitcoinWallet/README.md",
+      "sourcePath": "zh/GetStartedWithBitcoin/15_BitcoinWallet/README.MD",
       "citation": {
-        "file": "zh/GetStartedWithBitcoin/15_BitcoinWallet/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/15_BitcoinWallet/README.md",
+        "file": "zh/GetStartedWithBitcoin/15_BitcoinWallet/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/15_BitcoinWallet/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-4/4-1"
       },
       "excerpt": "第 15 讲：比特币钱包 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言 比特币钱包基本概念 创建自己的比特币钱包 常见问题 结语 前言 当进入加密货币世界时，拥有一个安全可靠的比特币钱包是你的第一道门槛。就像你不会把现金随意放在街头一样，你的加密资产同样需要一个安全的「容器」来存储和管理。 区块链的世界被形容为一片黑暗森林，每个参与者都需要学会保护自己的财产安全，因为这里没有人会为你负责。和《三体》中的黑暗森林法则类似，区块链世界里，保护好自己的私钥",
@@ -8018,10 +8018,10 @@
       "title": "第16讲 比特币 RPC 应用开发",
       "path": "GetStartedWithBitcoin/16_BitcoinRPC",
       "labUrl": null,
-      "sourcePath": "zh/GetStartedWithBitcoin/16_BitcoinRPC/README.md",
+      "sourcePath": "zh/GetStartedWithBitcoin/16_BitcoinRPC/README.MD",
       "citation": {
-        "file": "zh/GetStartedWithBitcoin/16_BitcoinRPC/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/16_BitcoinRPC/README.md",
+        "file": "zh/GetStartedWithBitcoin/16_BitcoinRPC/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/16_BitcoinRPC/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-4/4-2"
       },
       "excerpt": "第 16 讲：比特币 RPC 应用开发指南 🔥 本教程将带领您通过 RPC 接口与比特币区块链交互，从基础概念到实用应用开发，让您接触比特币编程的真实力量。 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言：为什么程序员需要「遥控」比特币？ RPC 是什么：给比特币节点打电话 配置你的「专线电话」 学会「对话」：基本 RPC 命令 用代码连接比特币世界 构建实用应用 第三方 RPC 服务：云端的比特币节点 高级技巧与最佳实践 故障排除：当电话打不通的时候 常见问题 结语 前言：为什么程序员需要「遥控」比特币？ 想象一下，你有一台超级计算机，它连接着全球最安全的金融网络，存储着价值万亿美元的交易记录。但是，你只能通过图形界面一个按钮一个按钮地操作它。 作为程序员，你肯定想： 「我想批量查询 100 个地址的余额」 「我想自动监控某个地址的交易」 「我想建一个属于自己的区块链浏览器」 「我想让程序自",
@@ -8380,10 +8380,10 @@
       "title": "第17讲 低费率广播工具",
       "path": "GetStartedWithBitcoin/17_BitcoinLowFeeBroadcast",
       "labUrl": null,
-      "sourcePath": "zh/GetStartedWithBitcoin/17_BitcoinLowFeeBroadcast/README.md",
+      "sourcePath": "zh/GetStartedWithBitcoin/17_BitcoinLowFeeBroadcast/README.MD",
       "citation": {
-        "file": "zh/GetStartedWithBitcoin/17_BitcoinLowFeeBroadcast/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/17_BitcoinLowFeeBroadcast/README.md",
+        "file": "zh/GetStartedWithBitcoin/17_BitcoinLowFeeBroadcast/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/17_BitcoinLowFeeBroadcast/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-4/4-3"
       },
       "excerpt": "第 17 讲：比特币开发工具 💡 比特币网络手续费时常波动，当费率处于低谷时，是整理钱包中「粉尘」 UTXO 、甚至发送一些「时间胶囊」交易的绝佳时机。本教程将带你构建一个可以通过自己全节点广播 任意低费率 交易的强大工具。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言：为何要发送低费率交易？ 准备工作 核心原理：通过配置本地节点实现 步骤 1：修改 bitcoin.conf 步骤 2：编写 low fee broadcaster.py 脚本 步骤 3：运行脚本与成果展示 多节点广播与低费率交易实战经验 安全注意事项 总结 常见问题 前言：为何要发送低费率交易？ 你是否曾发现自己的比特币钱包里充满了大量零散的、价值极小的交易输出 (UTXO)？这些通常",
@@ -8742,10 +8742,10 @@
       "title": "第18讲 Bitcoin Script 脚本系统",
       "path": "GetStartedWithBitcoin/18_BitcoinScript",
       "labUrl": null,
-      "sourcePath": "zh/GetStartedWithBitcoin/18_BitcoinScript/README.md",
+      "sourcePath": "zh/GetStartedWithBitcoin/18_BitcoinScript/README.MD",
       "citation": {
-        "file": "zh/GetStartedWithBitcoin/18_BitcoinScript/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/18_BitcoinScript/README.md",
+        "file": "zh/GetStartedWithBitcoin/18_BitcoinScript/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/18_BitcoinScript/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-4/4-4"
       },
       "excerpt": "第 18 讲：Bitcoin Script 脚本系统 💡 想象比特币是一台自动贩卖机，你不仅可以投币买东西，还可以设置各种条件：「只有两个人同时插钥匙才能打开」、「只有在特定时间才能使用」、「必须输入正确密码」。这就是比特币脚本的魅力 —— 让数字货币变得可编程。 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言：比特币的可编程货币基因 Script 语言设计哲学 操作码系统详解 常见脚本模式 高级脚本应用 脚本安全性分析 实战演练：编写 Bitcoin 脚本 常见问题 结语 前言：比特币的可编程货币基因 很多人认为比特币只是「数字现金」，但实际上比特币从诞生之初就具备了可编程性。 Bitcoin Script 是比特币内置的脚本语言，它让比特币不仅仅是转账工具，更是可编程的数字合约平台。 现实世界的类比： 支票 ：可以设置收款人、金额、有效期。 信托 ：可以设置复杂的资金释放条件。 保险箱 ：",
@@ -8992,10 +8992,10 @@
       "title": "第19讲 比特币扩容与治理",
       "path": "GetStartedWithBitcoin/19_BitcoinGovernance",
       "labUrl": null,
-      "sourcePath": "zh/GetStartedWithBitcoin/19_BitcoinGovernance/README.md",
+      "sourcePath": "zh/GetStartedWithBitcoin/19_BitcoinGovernance/README.MD",
       "citation": {
-        "file": "zh/GetStartedWithBitcoin/19_BitcoinGovernance/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/19_BitcoinGovernance/README.md",
+        "file": "zh/GetStartedWithBitcoin/19_BitcoinGovernance/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/19_BitcoinGovernance/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-4/4-5"
       },
       "excerpt": "第 19 讲：比特币扩容与治理 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言 比特币扩容之争 (2015 2017) 软分叉 vs 硬分叉：技术机制详解 SegWit 激活的政治过程 比特币分裂： BTC vs BCH 比特币治理机制 升级激活机制演进 社区共识的形成 历史教训与未来展望 实战：参与比特币治理 常见问题 结语 前言 比特币作为去中心化系统，没有中央权威来决定技术升级。那么，比特币是如何进行升级的？当社区对技术路线产生分歧时，争议如何解",
@@ -9338,10 +9338,10 @@
       "title": "第20讲 Ordinals 与生态创新",
       "path": "GetStartedWithBitcoin/20_Ordinals",
       "labUrl": null,
-      "sourcePath": "zh/GetStartedWithBitcoin/20_Ordinals/README.md",
+      "sourcePath": "zh/GetStartedWithBitcoin/20_Ordinals/README.MD",
       "citation": {
-        "file": "zh/GetStartedWithBitcoin/20_Ordinals/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/20_Ordinals/README.md",
+        "file": "zh/GetStartedWithBitcoin/20_Ordinals/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/20_Ordinals/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-4/4-6"
       },
       "excerpt": "第 20 讲：Ordinals 与生态创新 💡 想象一下，如果每一粒沙子都能刻上独特的标记，成为独一无二的艺术品。比特币 Ordinals 协议就是这样的魔法，它让比特币网络中的每一聪都能承载数据，变成数字世界的「收藏品」。 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言：为什么要在聪上刻字？ Ordinals 协议基础 Inscriptions 技术详解 Taproot 脚本路径存储 数字资产应用 BRC 20 代币标准 实战演练：创建 Inscription 常见问题 结语 前言：为什么要在聪上刻字？ 你有没有收藏过硬币？每枚硬币背后都有年份、图案、甚至特殊的纪念意义。有些古币因为历史价值变得非常珍贵。 现在想象一下：如果你能在每一聪（比特币的最小单位）上「刻字」，让它承载图片、文字、甚至小游戏，这些聪是不是也会变得特别？ 这就是 Ordinals 协议的精髓： 🎨 让聪变成画布 ：在聪",
@@ -9700,10 +9700,10 @@
       "title": "第21讲 DeFi 跨链",
       "path": "GetStartedWithBitcoin/21_DeFiCrossChain",
       "labUrl": null,
-      "sourcePath": "zh/GetStartedWithBitcoin/21_DeFiCrossChain/README.md",
+      "sourcePath": "zh/GetStartedWithBitcoin/21_DeFiCrossChain/README.MD",
       "citation": {
-        "file": "zh/GetStartedWithBitcoin/21_DeFiCrossChain/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/21_DeFiCrossChain/README.md",
+        "file": "zh/GetStartedWithBitcoin/21_DeFiCrossChain/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/21_DeFiCrossChain/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-4/4-7"
       },
       "excerpt": "第 21 讲：比特币 DeFi 与跨链技术 💡 想象你有一块黄金，但它只能放在保险箱里看着，不能用来投资、借贷或产生任何收益。现在有了神奇的技术，让这块黄金可以「分身」到其他地方工作赚钱，原来的黄金还在保险箱里安全无恙。这就是比特币 DeFi 的魅力。 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言：为什么比特币需要 DeFi？ Lightning Network：比特币的支付高速公路 RGB 协议：比特币上的智能合约 原子交换：无需信任的跨链交易 比特币 DeFi 生态：从理论到实践 跨链桥接：连接多链世界 风险管理：DeFi 中的安全考量 常见问题 结语 前言：为什么比特币需要 DeFi？ 想象一下，你拥有数字黄金（比特币），但除了储存和转账，它几乎无法产生收益。这就像把黄金埋在地下，永远无法发挥其金融价值。 传统金融的启示： 银行存款 ：可以获得利息收入。 股票投资 ：可以获得分红和增值",
@@ -10042,10 +10042,10 @@
       "title": "Web3 基本原则",
       "path": "Web3Thoughts/01_Principles",
       "labUrl": null,
-      "sourcePath": "zh/Web3Thoughts/01_Principles/README.md",
+      "sourcePath": "zh/Web3Thoughts/01_Principles/README.MD",
       "citation": {
-        "file": "zh/Web3Thoughts/01_Principles/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3Thoughts/01_Principles/README.md",
+        "file": "zh/Web3Thoughts/01_Principles/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3Thoughts/01_Principles/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-5/5-1"
       },
       "excerpt": "Web3 原则：区块链世界的生存指南 🧭 在 Web3 的海洋中航行需要一套可靠的原则作为指南针。这些是我根据个人经验总结的核心原则，希望能帮助你在这个新兴世界中安全且成功地航行。 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 🌟 前言：原则的重要性 在 Web3 世界中，遵循一些基本原则至关重要。正如 Ray Dalio 写了他的《原则》，CZ 写了他的原则，我也想分享我在 Web3 领域的指导原则。 这些原则不是公理而是我个人的理解与思考，没有绝对的对错，只是一种经验分享。希望能为 Web3 新手提供一些实用指南，在这个充满机遇与风险的世界中少走弯路。 💰 投资原则：稳健与长远 1. 📊 使用比特币本位思维 原则 说明 实践建议 : : : : : : BTC 本位计价 用比特币作为投资的本位货币 评估其他资产时，考虑其相对于 BTC 的价值变化 保持币本位不缩水 确保你的投资组合比特币价值稳",
@@ -10236,10 +10236,10 @@
       "title": "为什么区块链是必须的",
       "path": "Web3Thoughts/02_WhyBlockchainIsNecessary",
       "labUrl": null,
-      "sourcePath": "zh/Web3Thoughts/02_WhyBlockchainIsNecessary/README.md",
+      "sourcePath": "zh/Web3Thoughts/02_WhyBlockchainIsNecessary/README.MD",
       "citation": {
-        "file": "zh/Web3Thoughts/02_WhyBlockchainIsNecessary/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3Thoughts/02_WhyBlockchainIsNecessary/README.md",
+        "file": "zh/Web3Thoughts/02_WhyBlockchainIsNecessary/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3Thoughts/02_WhyBlockchainIsNecessary/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-5/5-2"
       },
       "excerpt": "为什么区块链是必须的？《主权个人》读书笔记 📚 《主权个人》(The Sovereign Individual) 是由詹姆斯・戴尔・戴维森 (James Dale Davidson) 和威廉・里斯 莫格 (William Rees Mogg) 在 1997 年共同撰写的一本著作，被认为是预见比特币和区块链时代到来的预言之书。 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 🔮 《主权个人》的核心预见 《主权个人》这本书在 1997 年出版，却惊人地预见了包括互联网、加密货币和区块链在内的众多技术变革及其社会影响。本文将结合这本「预言之书」的洞见，探讨为什么区块链技术是必然且必须的技术发展方向。 💫 历史视角：工业革命到信息革命 时代变迁 核心特征 权力结构 代表技术 : : : : : : : : 农业社会 土地为核心生产资料 封建制度 灌溉、畜牧 工业社会 机器为核心生产资料 民族国家 蒸汽机、电力",
@@ -10382,10 +10382,10 @@
       "title": "比特币上最酷的交易",
       "path": "Web3Thoughts/03_TheCoolestTransactionOnBitcoin",
       "labUrl": null,
-      "sourcePath": "zh/Web3Thoughts/03_TheCoolestTransactionOnBitcoin/README.md",
+      "sourcePath": "zh/Web3Thoughts/03_TheCoolestTransactionOnBitcoin/README.MD",
       "citation": {
-        "file": "zh/Web3Thoughts/03_TheCoolestTransactionOnBitcoin/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3Thoughts/03_TheCoolestTransactionOnBitcoin/README.md",
+        "file": "zh/Web3Thoughts/03_TheCoolestTransactionOnBitcoin/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3Thoughts/03_TheCoolestTransactionOnBitcoin/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-5/5-3"
       },
       "excerpt": "区块链彩蛋解读指南：b10c...eb5d 玩了哪些「梗」？ 🧭 在比特币世界里，有些交易不只是交易，而是技术、历史与文化的多重彩蛋。这篇文章带你看懂 b10c...eb5d 这笔神级彩蛋交易背后的所有隐藏细节。 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 🌟 前言：当交易也成为艺术 区块链上的每笔交易，通常只是简单的资金流转。但在比特币生态内，偶尔也会出现一些极具匠心的「彩蛋交易」 —— 它们借助协议细节、历史事件、技术趣味与文化梗，打造出属于比特币原教旨主义者的艺术品。 b10c...eb5d 这笔交易，就是这样的神作。 💎 核心彩蛋一览 彩蛋类型 示例 说明 : : : : : : 区块高度梗 850000 对应 Mt.Gox 失窃金额 85 万枚 BTC 时间戳梗 1231006505 创世区块时间戳 TXID 靓号 b10c0000...eb5d 向开发者 b10c 致敬 Witness",
@@ -10536,10 +10536,10 @@
       "title": "DeFi 去中心化金融",
       "path": "其它学习资源整理/DeFi",
       "labUrl": null,
-      "sourcePath": "zh/其它学习资源整理/DeFi/README.md",
+      "sourcePath": "zh/其它学习资源整理/DeFi/README.MD",
       "citation": {
-        "file": "zh/其它学习资源整理/DeFi/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/%E5%85%B6%E5%AE%83%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/DeFi/README.md",
+        "file": "zh/其它学习资源整理/DeFi/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/%E5%85%B6%E5%AE%83%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/DeFi/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-6/6-1"
       },
       "excerpt": "DeFi (去中心化金融) 学习指南 💡 DeFi (Decentralized Finance) 是区块链技术最重要的应用之一。本指南从基础概念到高级应用，帮助你系统掌握去中心化金融的核心知识与实践技能。无论你是 DeFi 新手还是想要深入了解协议机制的开发者，这里都有适合你的学习路径。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 📚 目录 什么是 DeFi？ DeFi 核心概念 学习路径 🌱 入门阶段 🚀 进阶阶段 🏆 高级阶段 DeFi 协议分类详解 实战项目 必备工具与网站 安全指南 社区与资源 常见问题 FAQ 什么是 DeFi？ DeFi (Decentralized Finance，去中心化金融) 是基于区块链技术构建的金融系统，旨在重建传",
@@ -10898,10 +10898,10 @@
       "title": "以太坊生态概览",
       "path": "其它学习资源整理/Etherum",
       "labUrl": null,
-      "sourcePath": "zh/其它学习资源整理/Etherum/README.md",
+      "sourcePath": "zh/其它学习资源整理/Etherum/README.MD",
       "citation": {
-        "file": "zh/其它学习资源整理/Etherum/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/%E5%85%B6%E5%AE%83%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/Etherum/README.md",
+        "file": "zh/其它学习资源整理/Etherum/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/%E5%85%B6%E5%AE%83%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/Etherum/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-6/6-2"
       },
       "excerpt": "以太坊 (Ethereum) 学习指南 💡 以太坊是区块链技术的第二代代表，不仅是一种加密货币，更是全球去中心化应用的基础平台。本指南将带你从基础概念到深度开发，全面掌握以太坊生态系统的核心知识与实践技能。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 📚 目录 以太坊基础概念 什么是以太坊？ 以太坊 vs 比特币 核心价值与应用 技术架构深度解析 以太坊虚拟机 (EVM) 智能合约 账户系统 Gas 机制 以太坊 2.0 与共识机制 学习路径 🌱 入门阶段 🚀 进阶阶段 🏆 高级阶段 开发环境搭建 智能合约开发 DApp 开发实战 必备工具与框架 生态系统概览 安全最佳实践 学习资源汇总 常见问题 FAQ 以太坊基础概念 什么是以太坊？ 以太坊 (Eth",
@@ -11260,10 +11260,10 @@
       "title": "Layer 2 扩容技术",
       "path": "其它学习资源整理/Layer2",
       "labUrl": null,
-      "sourcePath": "zh/其它学习资源整理/Layer2/README.md",
+      "sourcePath": "zh/其它学习资源整理/Layer2/README.MD",
       "citation": {
-        "file": "zh/其它学习资源整理/Layer2/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/%E5%85%B6%E5%AE%83%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/Layer2/README.md",
+        "file": "zh/其它学习资源整理/Layer2/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/%E5%85%B6%E5%AE%83%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/Layer2/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-6/6-3"
       },
       "excerpt": "Layer 2 扩容技术学习指南 (2025 版) 💡 Layer 2 技术是以太坊扩容的核心解决方案，也是 Web3 基础设施的重要组成部分。本指南汇集 2025 年最新的 Layer 2 技术发展趋势、主要项目分析和实用开发资源，帮助开发者和投资者深入了解这个快速发展的生态系统。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 📚 目录 什么是 Layer 2？ 技术原理对比 2025 年市场格局 主要项目深度分析 开发者指南 投资与风险分析 未来发展趋势 学习资源汇总 常见问题 FAQ 什么是 Layer 2？ Layer 2 (L2) 是建立在以太坊主网 (Layer 1) 之上的扩容解决方案，旨在提高交易吞吐量、降低交易费用，同时保持以太坊主网的安全性和",
@@ -11614,10 +11614,10 @@
       "title": "新兴公链生态 (Solana/Sui/Aptos)",
       "path": "其它学习资源整理/新兴公链生态",
       "labUrl": null,
-      "sourcePath": "zh/其它学习资源整理/新兴公链生态/README.md",
+      "sourcePath": "zh/其它学习资源整理/新兴公链生态/README.MD",
       "citation": {
-        "file": "zh/其它学习资源整理/新兴公链生态/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/%E5%85%B6%E5%AE%83%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/%E6%96%B0%E5%85%B4%E5%85%AC%E9%93%BE%E7%94%9F%E6%80%81/README.md",
+        "file": "zh/其它学习资源整理/新兴公链生态/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/%E5%85%B6%E5%AE%83%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/%E6%96%B0%E5%85%B4%E5%85%AC%E9%93%BE%E7%94%9F%E6%80%81/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-6/6-4"
       },
       "excerpt": "新兴区块链生态学习指南 (2025 版) 💡 区块链技术正在快速演进，新的公链生态系统不断涌现。本指南深入分析 2025 年最具潜力的新兴区块链平台，包括 Solana, Sui, Aptos 等 Move 语言生态，以及它们在性能、开发者体验和应用场景方面的创新突破。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 📚 目录 新兴公链概述 高性能公链分析 Solana 生态深度解析 Move 语言生态系统 Cosmos 生态网络 技术创新对比 开发者生态建设 应用场景与案例 投资与风险分析 开发入门指南 生态资源汇总 未来发展趋势 常见问题 FAQ 新兴公链概述 🚀 为什么需要新兴公链？ 以太坊虽然是智能合约平台的先驱，但面临诸多挑战： 性能瓶颈 ： TPS ",
@@ -11976,10 +11976,10 @@
       "title": "AI + Web3 融合",
       "path": "其它学习资源整理/AI_Web3",
       "labUrl": null,
-      "sourcePath": "zh/其它学习资源整理/AI_Web3/README.md",
+      "sourcePath": "zh/其它学习资源整理/AI_Web3/README.MD",
       "citation": {
-        "file": "zh/其它学习资源整理/AI_Web3/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/%E5%85%B6%E5%AE%83%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/AI_Web3/README.md",
+        "file": "zh/其它学习资源整理/AI_Web3/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/%E5%85%B6%E5%AE%83%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/AI_Web3/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-6/6-5"
       },
       "excerpt": "AI + Web3 融合技术学习指南 (2025 版) 💡 AI 与 Web3 的结合正在开启去中心化智能应用的新时代。本指南汇集 2025 年最新的 AI + Web3 融合趋势、关键技术如 zkML（零知识机器学习）、AI Agent 应用，以及实用的开发框架和投资机会分析。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 📚 目录 AI + Web3 融合概述 核心技术详解 AI Agent 在 Web3 中的应用 zkML 零知识机器学习 去中心化 AI 基础设施 主要项目生态分析 开发者实战指南 投资机会与风险 未来发展趋势 学习资源汇总 常见问题 FAQ AI + Web3 融合概述 🌟 为什么是 AI + Web3？ 传统 AI 面临的核心问题： ",
@@ -12338,10 +12338,10 @@
       "title": "Web3 实用工具大全",
       "path": "其它学习资源整理/实用工具",
       "labUrl": null,
-      "sourcePath": "zh/其它学习资源整理/实用工具/README.md",
+      "sourcePath": "zh/其它学习资源整理/实用工具/README.MD",
       "citation": {
-        "file": "zh/其它学习资源整理/实用工具/README.md",
-        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/%E5%85%B6%E5%AE%83%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/README.md",
+        "file": "zh/其它学习资源整理/实用工具/README.MD",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/%E5%85%B6%E5%AE%83%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-6/6-6"
       },
       "excerpt": "Web3 实用工具与资源汇总 (2025 版) 💡 工欲善其事，必先利其器。本指南汇集 2025 年最实用的 Web3 开发工具、分析平台、交易工具和学习资源，帮助开发者、交易者和研究者快速找到适合的工具，提升工作效率。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 📚 目录 开发者工具 数据分析平台 交易与 DeFi 工具 安全审计工具 多链基础设施 NFT 与元宇宙工具 学习与研究资源 社区与媒体 API 与数据服务 移动端应用 开发者工具 🛠️ 智能合约开发框架 Hardhat ⭐⭐⭐⭐⭐ 用途 ：以太坊开发环境。 特色 ：强大的调试功能、丰富的插件生态。 支持链 ：以太坊、 Polygon, BSC, Arbitrum 等。 官网 ： hardhat.",

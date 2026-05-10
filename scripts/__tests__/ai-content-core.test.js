@@ -43,7 +43,7 @@ describe('ai-content-core', () => {
       moduleId: 'module-4',
       lessonId: '4-2',
       citation: expect.objectContaining({
-        file: 'zh/GetStartedWithBitcoin/16_BitcoinRPC/README.md',
+        file: 'zh/GetStartedWithBitcoin/16_BitcoinRPC/README.MD',
         siteUrl: expect.stringContaining('/zh/learn/module-4/4-2'),
       }),
     });
@@ -85,7 +85,7 @@ describe('ai-content-core', () => {
     const zhLesson = await readLesson(index, { lang: 'zh', moduleId: 'module-1', lessonId: '1-1' });
     expect(zhLesson.title).toBe('创建第一个 Web3 身份');
     expect(zhLesson.content).toContain('Web3');
-    expect(zhLesson.citation.file).toBe('zh/Web3QuickStart/01_FirstWeb3Identity/README.md');
+    expect(zhLesson.citation.file).toBe('zh/Web3QuickStart/01_FirstWeb3Identity/README.MD');
 
     const enLesson = await readLesson(index, { lang: 'en', moduleId: 'module-1', lessonId: '1-1' });
     expect(enLesson.title).toBe('创建第一个 Web3 身份');
