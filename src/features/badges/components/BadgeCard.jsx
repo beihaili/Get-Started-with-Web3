@@ -1,12 +1,22 @@
 import { CheckCircle } from 'lucide-react';
 import BadgeFloatingAnimation from './BadgeFloatingAnimation';
 
+const stableDelay = (value) => {
+  const input = String(value || 'badge');
+  let hash = 0;
+  for (let i = 0; i < input.length; i++) {
+    hash = (hash * 31 + input.charCodeAt(i)) % 1000;
+  }
+  return hash;
+};
+
 /**
  * 单个徽章卡片组件
  * 从原App.jsx迁移 (lines 509-610)
  */
 const BadgeCard = ({ badge, earned = false, earnedData, onClick, progress = 0 }) => {
   const Icon = badge.icon;
+  const animationDelay = stableDelay(badge.id || badge.name || badge.title);
 
   return (
     <div
@@ -73,7 +83,7 @@ const BadgeCard = ({ badge, earned = false, earnedData, onClick, progress = 0 })
 
         {/* 徽章图标 */}
         <div className="flex flex-col items-center text-center mb-4">
-          <BadgeFloatingAnimation delay={Math.random() * 1000}>
+          <BadgeFloatingAnimation delay={animationDelay}>
             <div
               className={`
               w-20 h-20 rounded-full flex items-center justify-center mb-4

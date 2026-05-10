@@ -25,6 +25,8 @@
     "cardBadgesDesc": "View learning achievements",
     "cardGitHubTitle": "GitHub",
     "cardGitHubDesc": "View source code and contribute",
+    "agentTitle": "AI Agent Entrypoints",
+    "agentDesc": "Public llms.txt, AI manifest, content index, and a local MCP server let external agents search, read, cite, and compose this Web3 learning content.",
     "interactiveTitle": "Interactive Experience",
     "learningPathTitle": "Learning Path",
     "lessonsCount": "{{count}} lessons",

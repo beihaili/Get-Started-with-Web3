@@ -47,8 +47,6 @@ const ReaderPage = () => {
     window.scrollTo(0, 0);
 
     if (!currentLesson) {
-      setError(t('reader.courseNotFound'));
-      setLoading(false);
       return;
     }
 
@@ -108,6 +106,8 @@ const ReaderPage = () => {
 
   const altLang = lang === 'en' ? 'zh' : 'en';
   const alternateUrl = `https://beihaili.github.io/Get-Started-with-Web3/${altLang}/learn/${moduleId}/${lessonId}`;
+  const displayLoading = currentLesson ? loading : false;
+  const displayError = currentLesson ? error : t('reader.courseNotFound');
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
@@ -195,12 +195,12 @@ const ReaderPage = () => {
       {/* Content */}
       <main className="container mx-auto px-4 py-8 max-w-4xl">
         <div className="p-8 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-700/50 rounded-xl">
-          {loading ? (
+          {displayLoading ? (
             <ContentSkeleton />
-          ) : error ? (
+          ) : displayError ? (
             <div className="p-6 bg-red-500/10 border border-red-500/20 rounded-lg">
               <p className="text-red-400">
-                <strong>{t('reader.loadFailedStrong')}</strong> {error}
+                <strong>{t('reader.loadFailedStrong')}</strong> {displayError}
               </p>
             </div>
           ) : (

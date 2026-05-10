@@ -5,11 +5,16 @@
   "type": "module",
   "scripts": {
     "predev": "npm run sync-content",
-    "prebuild": "npm run sync-content",
+    "prebuild": "npm run sync-content && npm run ai:index && npm run ai:publish",
     "sync-content": "node scripts/sync-content.mjs",
     "dev": "vite",
     "build": "vite build",
     "postbuild": "node scripts/generate-og-images.mjs && node scripts/generate-sitemap.mjs && node scripts/prerender.mjs",
+    "ai:index": "node scripts/generate-ai-index.mjs",
+    "ai:publish": "node scripts/publish-ai-artifacts.mjs",
+    "ai:verify": "node scripts/verify-ai-entrypoints.mjs",
+    "mcp:web3": "node scripts/web3-mcp-server.mjs",
+    "mcp:dogfood": "node scripts/dogfood-web3-mcp.mjs",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
@@ -41,6 +46,7 @@
     "url": "https://github.com/beihaili/Get-Started-with-Web3.git"
   },
   "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
     "fuse.js": "^7.3.0",
     "html2canvas": "^1.4.1",
     "i18next": "^25.8.20",
@@ -53,6 +59,7 @@
     "react-router-dom": "^7.14.2",
     "rehype-raw": "^7.0.0",
     "remark-gfm": "^4.0.1",
+    "zod": "^4.4.3",
     "zustand": "^4.5.0"
   },
   "devDependencies": {

@@ -57,6 +57,27 @@ npm run dev
 
 The dev server starts at `http://localhost:5173/Get-Started-with-Web3/`.
 
+## AI Agents and MCP
+
+This repository also exposes a machine-readable content layer for AI agents:
+
+```bash
+npm run ai:index   # regenerate ai/manifest.json, ai/content-index.json, ai/llms.txt
+npm run ai:publish # copy llms.txt and AI JSON artifacts into public/
+npm run ai:verify  # verify public AI entrypoints and x402 metadata
+npm run mcp:web3   # start the local read-only stdio MCP server
+```
+
+Public entrypoints after deployment:
+
+- `https://beihaili.github.io/Get-Started-with-Web3/llms.txt`
+- `https://beihaili.github.io/Get-Started-with-Web3/ai/manifest.json`
+- `https://beihaili.github.io/Get-Started-with-Web3/ai/content-index.json`
+
+The MCP server lets AI clients search lessons, read course content, compose cited context packs, look up glossary terms, and inspect future x402-ready paid tool metadata. Use `citation.file`, `citation.githubUrl`, and `citation.siteUrl` from tool results when answering. Local tools are read-only and do not enforce payment; x402 fields are metadata reserved for a future remote paid endpoint.
+
+Available local MCP tools: `search_web3_content`, `read_web3_lesson`, `get_learning_path`, `lookup_web3_glossary`, `compose_web3_context`, `list_monetizable_tools`.
+
 ---
 
 ## Course Structure

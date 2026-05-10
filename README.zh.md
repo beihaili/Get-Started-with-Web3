@@ -120,6 +120,27 @@ npm install
 npm run dev
 ```
 
+## AI Agent 与 MCP
+
+本仓库现在提供面向 AI Agent 的机器可读内容层：
+
+```bash
+npm run ai:index   # 重新生成 ai/manifest.json、ai/content-index.json、ai/llms.txt
+npm run ai:publish # 复制 llms.txt 和 AI JSON artifacts 到 public/
+npm run ai:verify  # 检查公开 AI 入口和 x402 元数据
+npm run mcp:web3   # 启动本地只读 stdio MCP server
+```
+
+部署后的公开入口：
+
+- `https://beihaili.github.io/Get-Started-with-Web3/llms.txt`
+- `https://beihaili.github.io/Get-Started-with-Web3/ai/manifest.json`
+- `https://beihaili.github.io/Get-Started-with-Web3/ai/content-index.json`
+
+MCP server 支持搜索课程、读取文章、组合带引用的上下文、查询术语表，以及查看未来 x402 付费工具元数据。Agent 回答时应优先使用工具返回的 `citation.file`、`citation.githubUrl` 和 `citation.siteUrl`。本地工具保持只读，不执行真实支付验证或结算；x402 字段只是为未来远程付费接口预留的元数据。
+
+当前本地 MCP 工具：`search_web3_content`、`read_web3_lesson`、`get_learning_path`、`lookup_web3_glossary`、`compose_web3_context`、`list_monetizable_tools`。
+
 **直接阅读 Markdown：** 从 [第 01 讲：创建你的第一个 Web3 身份](./zh/Web3QuickStart/01_FirstWeb3Identity/README.md) 开始
 
 ---

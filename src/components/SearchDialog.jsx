@@ -48,10 +48,7 @@ const SearchDialog = () => {
     [flatResults]
   );
 
-  // Reset selection when results change
-  useEffect(() => {
-    setSelectedIndex(0);
-  }, [flatResults]);
+  const activeIndex = flatResults.length > 0 ? Math.min(selectedIndex, flatResults.length - 1) : 0;
 
   const handleSelect = useCallback(
     (item) => {
@@ -76,18 +73,19 @@ const SearchDialog = () => {
         );
       } else if (e.key === 'Enter' && flatResults.length > 0) {
         e.preventDefault();
-        handleSelect(flatResults[selectedIndex]);
+        handleSelect(flatResults[activeIndex]);
       }
     },
-    [closeSearch, flatResults, selectedIndex, handleSelect]
+    [closeSearch, flatResults, activeIndex, handleSelect]
   );
 
   // Auto-focus input when opened
   useEffect(() => {
     if (isSearchOpen) {
-      setSelectedIndex(0);
-      setTimeout(() => inputRef.current?.focus(), 50);
+      const timer = setTimeout(() => inputRef.current?.focus(), 50);
+      return () => clearTimeout(timer);
     }
+    return undefined;
   }, [isSearchOpen]);
 
   if (!isSearchOpen) return null;
@@ -113,7 +111,10 @@ const SearchDialog = () => {
           <input
             ref={inputRef}
             value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
+            onChange={(e) => {
+              setSelectedIndex(0);
+              setSearchQuery(e.target.value);
+            }}
             onKeyDown={handleKeyDown}
             placeholder={t('search.placeholder')}
             aria-label={t('search.inputLabel')}
@@ -145,11 +146,11 @@ const SearchDialog = () => {
                   <button
                     key={item.lessonId}
                     role="option"
-                    aria-selected={idx === selectedIndex}
+                    aria-selected={idx === activeIndex}
                     onClick={() => handleSelect(item)}
                     onMouseEnter={() => setSelectedIndex(idx)}
                     className={`w-full px-4 py-3 text-left transition-colors ${
-                      idx === selectedIndex
+                      idx === activeIndex
                         ? 'bg-cyan-500/10 text-cyan-400'
                         : 'text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800'
                     }`}

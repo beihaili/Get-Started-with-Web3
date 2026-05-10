@@ -1,17 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useMemo, useState } from 'react';
 import { Hash } from 'lucide-react';
 import { styles } from '../../config/styles.js';
 
 const HashVisualizerInner = () => {
   const [input, setInput] = useState('Web3');
-  const [hash, setHash] = useState('');
 
-  useEffect(() => {
+  const hash = useMemo(() => {
     let h = 0xdeadbeef;
     for (let i = 0; i < input.length; i++) h = Math.imul(h ^ input.charCodeAt(i), 2654435761);
     const fake =
       ((h ^ (h >>> 16)) >>> 0).toString(16).padStart(8, '0') + input.length.toString(16) + 'f2a9';
-    setHash('0x' + fake.repeat(4).substring(0, 32) + '...');
+    return '0x' + fake.repeat(4).substring(0, 32) + '...';
   }, [input]);
 
   return (

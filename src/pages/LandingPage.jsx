@@ -1,7 +1,17 @@
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
-import { Rocket, BookOpen, Award, Users, Star, GitBranch } from 'lucide-react';
+import {
+  Rocket,
+  BookOpen,
+  Award,
+  Users,
+  Star,
+  GitBranch,
+  Bot,
+  FileJson,
+  Terminal,
+} from 'lucide-react';
 import { ParticleBackground } from '../components/animations';
 import { MouseSpotlight } from '../components/animations';
 import { HashVisualizer } from '../components/interactive';
@@ -189,6 +199,43 @@ const LandingPage = () => {
             </div>
           </a>
         </div>
+
+        {/* AI Agent Entry */}
+        <section className="max-w-4xl mx-auto mb-16">
+          <div className="p-6 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-700/50 rounded-xl">
+            <div className="flex flex-col md:flex-row md:items-start gap-5">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-purple-500 flex items-center justify-center shrink-0">
+                <Bot className="w-6 h-6 text-white" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
+                  {t('landing.agentTitle')}
+                </h2>
+                <p className="text-slate-500 dark:text-slate-400 mb-5">{t('landing.agentDesc')}</p>
+                <div className="grid sm:grid-cols-3 gap-3">
+                  <a
+                    href="/Get-Started-with-Web3/llms.txt"
+                    className="flex items-center gap-2 px-4 py-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm text-slate-700 dark:text-slate-200 hover:border-cyan-500/40 transition-colors"
+                  >
+                    <BookOpen className="w-4 h-4 text-cyan-400" />
+                    llms.txt
+                  </a>
+                  <a
+                    href="/Get-Started-with-Web3/ai/manifest.json"
+                    className="flex items-center gap-2 px-4 py-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm text-slate-700 dark:text-slate-200 hover:border-purple-500/40 transition-colors"
+                  >
+                    <FileJson className="w-4 h-4 text-purple-400" />
+                    manifest.json
+                  </a>
+                  <code className="flex items-center gap-2 px-4 py-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm text-slate-700 dark:text-slate-200 overflow-x-auto">
+                    <Terminal className="w-4 h-4 text-emerald-400 shrink-0" />
+                    npm run mcp:web3
+                  </code>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Interactive Demos */}
         <div className="max-w-4xl mx-auto mb-16">

@@ -41,8 +41,6 @@ const ContributorsPage = () => {
 
   useEffect(() => {
     let cancelled = false;
-    setLoading(true);
-    setError(null);
 
     fetchContributors()
       .then((data) => {

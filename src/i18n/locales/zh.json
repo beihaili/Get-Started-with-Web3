@@ -25,6 +25,8 @@
     "cardBadgesDesc": "查看学习成就",
     "cardGitHubTitle": "GitHub",
     "cardGitHubDesc": "查看源代码与贡献",
+    "agentTitle": "AI Agent 入口",
+    "agentDesc": "通过公开 llms.txt、AI manifest、内容索引和本地 MCP server，让外部 Agent 搜索、读取、引用和组合本仓库的 Web3 学习内容。",
     "interactiveTitle": "互动体验",
     "learningPathTitle": "学习路径",
     "lessonsCount": "{{count}} 讲",

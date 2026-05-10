@@ -1,0 +1,73 @@
+# Get Started with Web3 Agent Notes
+
+默认用中文交流。错误信息可保留英文，分析和说明尽量用中文。
+
+## 项目定位
+
+这是一个 Web3 学习平台，包含 Markdown 教程内容、React SPA、AI Tutor、徽章系统、SEO 构建脚本、捐赠/赞助配置，以及面向 AI Agent 的只读内容接口。
+
+## 常用命令
+
+```bash
+npm run dev             # 本地开发
+npm run build           # 生产构建
+npm test                # 全量测试
+npm run lint            # ESLint 检查
+npm run ai:index        # 生成 AI-native 内容索引
+npm run ai:publish      # 复制 AI artifacts 到 public/，供 GitHub Pages 发布
+npm run ai:verify       # 验证公开 AI 入口、MCP 工具清单和 x402 元数据
+npm run mcp:web3        # 启动本地 stdio MCP server
+```
+
+## AI-Native 内容层
+
+- `ai/manifest.json`: 服务清单，包含仓库信息、artifact 路径、MCP 命令和未来 x402 工具元数据。
+- `ai/content-index.json`: 双语课程和术语表索引，供 Agent 搜索、引用和组合上下文。
+- `ai/llms.txt`: 面向 Agent/crawler 的文本入口。
+- `public/llms.txt`: GitHub Pages 根路径公开入口，部署后为 `https://beihaili.github.io/Get-Started-with-Web3/llms.txt`。
+- `public/ai/manifest.json`: 部署后为 `https://beihaili.github.io/Get-Started-with-Web3/ai/manifest.json`。
+- `public/ai/content-index.json`: 部署后为 `https://beihaili.github.io/Get-Started-with-Web3/ai/content-index.json`。
+- `scripts/generate-ai-index.mjs`: 生成上述 artifact。
+- `scripts/publish-ai-artifacts.mjs`: 将根目录 `ai/` artifacts 复制到 `public/`。
+- `scripts/verify-ai-entrypoints.mjs`: 检查 artifacts、公开 URL、MCP 工具清单、中英文覆盖和 x402 元数据。
+- `scripts/ai-content-core.mjs`: 搜索、读取课程、生成学习路径、组合上下文等纯函数。
+
+修改课程结构、术语表或 Agent 工具元数据后，运行 `npm run ai:index && npm run ai:publish && npm run ai:verify`，并提交更新后的 `ai/` 与 `public/` artifacts。
+
+## MCP Server
+
+`scripts/web3-mcp-server.mjs` 使用官方 `@modelcontextprotocol/sdk` 暴露本地 stdio MCP server。该 server 是只读的，不应写文件、修改课程内容或执行链上操作。
+
+当前工具：
+
+- `search_web3_content`
+- `read_web3_lesson`
+- `get_learning_path`
+- `lookup_web3_glossary`
+- `compose_web3_context`
+- `list_monetizable_tools`
+
+当前资源：
+
+- `web3://manifest`
+- `web3://content-index`
+
+当前 prompts：
+
+- `web3_lesson_tutor`
+- `web3_builder_plan`
+
+## x402 预留
+
+本地 MCP server 不执行 x402 支付验证或结算。未来付费能力只通过 `manifest.tools[].x402` 元数据预留，包括 `enabled`、`priceUsd`、`network` 和 `route`。
+
+## 引用规范
+
+Agent 使用 MCP 工具回答时，应优先引用工具返回的 `citation.file`、`citation.githubUrl` 和 `citation.siteUrl`。如果组合多段上下文，使用 `compose_web3_context` 的 `citations` 列表作为来源清单。不要把本地 MCP 的 x402 元数据描述成已经启用的收费能力。
+
+## 修改注意
+
+- 新增或移动课程时，先更新 `src/config/courseData.js`，再运行 `npm run ai:index`。
+- 新增术语时，更新 `src/config/glossaryData.js`，再运行 `npm run ai:index`。
+- MCP 工具必须保持只读，返回结果需包含可引用的 `citation.file` 或 URL。
+- 修改代码后至少运行相关 Vitest；完成前运行 `npm test` 和 `npm run lint`。
