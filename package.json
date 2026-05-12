@@ -54,7 +54,7 @@
     "lucide-react": "^1.14.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
-    "react-i18next": "^16.5.8",
+    "react-i18next": "^17.0.7",
     "react-markdown": "^10.1.0",
     "react-router-dom": "^7.15.0",
     "rehype-raw": "^7.0.0",
