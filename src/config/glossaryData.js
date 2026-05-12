@@ -103,6 +103,142 @@ export const GLOSSARY_DATA = [
     definition: '查看区块链上所有交易、地址、区块信息的工具。如 Etherscan、Mempool.space。',
     category: '工具',
   },
+  {
+    term: '账户抽象 (Account Abstraction)',
+    definition:
+      '让账户拥有可编程验证和执行逻辑的设计方向，可支持批量交易、Gas 赞助、社交恢复和权限控制。',
+    category: '账户抽象',
+  },
+  {
+    term: 'ERC-4337',
+    definition:
+      '以太坊账户抽象标准，通过 UserOperation、EntryPoint、Bundler 和 Paymaster 实现智能账户交易流。',
+    category: '账户抽象',
+  },
+  {
+    term: 'EIP-7702',
+    definition:
+      'Pectra 引入的以太坊交易类型，允许 EOA 设置代码委托，从而在原地址上获得智能账户能力。',
+    category: '账户抽象',
+  },
+  {
+    term: 'UserOperation',
+    definition: 'ERC-4337 中表示用户意图执行操作的数据结构，由 Bundler 提交给 EntryPoint 执行。',
+    category: '账户抽象',
+  },
+  {
+    term: 'Bundler',
+    definition: '账户抽象基础设施，负责收集 UserOperation，并将其打包成链上交易提交。',
+    category: '账户抽象',
+  },
+  {
+    term: 'Paymaster',
+    definition: 'ERC-4337 中可代用户支付 Gas 或允许用户用其他代币付费的合约或服务。',
+    category: '账户抽象',
+  },
+  {
+    term: 'Session Key',
+    definition:
+      '由主账户授权的临时密钥，通常限制可调用合约、时间、金额和操作类型，用于降低频繁签名成本。',
+    category: '账户抽象',
+  },
+  {
+    term: 'Passkey',
+    definition: '基于 WebAuthn 和设备安全模块的认证方式，可用于改善智能钱包登录和签名体验。',
+    category: '账户抽象',
+  },
+  {
+    term: 'Blob',
+    definition: 'EIP-4844 引入的以太坊临时数据载体，主要供 Rollup 发布交易数据，降低 L2 数据成本。',
+    category: 'Layer 2',
+  },
+  {
+    term: '数据可用性 (Data Availability)',
+    definition: '确保验证者或用户能获取重建链状态所需数据的属性，是 Rollup 安全模型的关键。',
+    category: 'Layer 2',
+  },
+  {
+    term: 'PeerDAS',
+    definition:
+      '以太坊 Fusaka 升级中的数据可用性采样方案，让节点抽样验证 Blob 数据而非下载全部数据。',
+    category: 'Layer 2',
+  },
+  {
+    term: '排序器 (Sequencer)',
+    definition: 'L2 中负责接收、排序和提交交易的组件。中心化排序器可能带来审查、停机和 MEV 风险。',
+    category: 'Layer 2',
+  },
+  {
+    term: 'Optimistic Rollup',
+    definition: '默认认为 L2 状态转换正确，并通过挑战期和欺诈证明处理错误状态的 Rollup 方案。',
+    category: 'Layer 2',
+  },
+  {
+    term: 'ZK Rollup',
+    definition:
+      '通过有效性证明向 L1 证明状态转换正确的 Rollup 方案，常用于提高安全性和缩短退出时间。',
+    category: 'Layer 2',
+  },
+  {
+    term: 'Validium',
+    definition: '使用有效性证明但把数据放在链下的数据可用性方案，费用低但数据不可用风险更高。',
+    category: 'Layer 2',
+  },
+  {
+    term: 'USDS',
+    definition: 'Sky/Maker 体系中的稳定币资产，与 DAI 迁移、RWA 收益和治理参数密切相关。',
+    category: '稳定币',
+  },
+  {
+    term: 'USDe',
+    definition:
+      'Ethena 的合成美元资产，依赖现货与衍生品对冲等机制维持美元敞口，并不等同于法币储备稳定币。',
+    category: '稳定币',
+  },
+  {
+    term: 'RWA (Real World Assets)',
+    definition:
+      '真实世界资产上链，例如国债、货币基金、房地产或应收账款，可成为稳定币或 DeFi 的抵押品。',
+    category: '稳定币',
+  },
+  {
+    term: 'MiCA',
+    definition: '欧盟加密资产市场监管框架，对稳定币发行方、服务提供商、储备和披露提出统一要求。',
+    category: '稳定币',
+  },
+  {
+    term: 'GENIUS Act',
+    definition: '美国 2025 年签署的支付稳定币监管法案，为稳定币发行、储备和监督建立联邦框架。',
+    category: '稳定币',
+  },
+  {
+    term: 'MEV',
+    definition: '最大可提取价值，指区块生产者或交易排序方通过重排、插入或审查交易获得的额外收益。',
+    category: '安全',
+  },
+  {
+    term: 'Permit2',
+    definition:
+      '用于统一代币授权和签名转账的合约系统，能改善体验，但错误签名或无限授权会扩大被盗风险。',
+    category: '安全',
+  },
+  {
+    term: '私有交易 (Private Transaction)',
+    definition:
+      '不直接进入公共 mempool 的交易提交方式，可降低抢跑和地址关联风险，但依赖具体中继或节点配置。',
+    category: '安全',
+  },
+  {
+    term: 'Intent',
+    definition: '用户表达想达成的目标而非具体执行路径，由求解器或协议寻找最优交易方案。',
+    category: '基础概念',
+  },
+  {
+    term: 'Restaking',
+    definition:
+      '将已质押资产或流动性质押代币再次用于保护其他网络或服务，以换取额外收益并承担额外风险。',
+    category: 'DeFi',
+  },
 ];
 
 export const GLOSSARY_CATEGORIES = [
@@ -111,6 +247,9 @@ export const GLOSSARY_CATEGORIES = [
   '比特币',
   '以太坊',
   'DeFi',
+  'Layer 2',
+  '账户抽象',
+  '稳定币',
   '安全',
   '工具',
 ];

@@ -4,7 +4,7 @@
 
 ## 项目定位
 
-这是一个 Web3 学习平台，包含 Markdown 教程内容、React SPA、AI Tutor、徽章系统、SEO 构建脚本、捐赠/赞助配置，以及面向 AI Agent 的只读内容接口。
+这是一个 Web3 学习平台，包含 Markdown 教程内容、React SPA、AI Tutor、徽章系统、SEO 构建脚本、捐赠/赞助配置，以及面向 AI Agent 的只读内容接口。当前主课程由 `src/config/courseData.js` 驱动，覆盖 Web3 快速入门、比特币技术、以太坊与智能账户、Web3 Builder、DeFi、Layer 2/跨链、DAO 等模块。
 
 ## 常用命令
 
@@ -30,6 +30,7 @@ npm run mcp:web3        # 启动本地 stdio MCP server
 - `scripts/generate-ai-index.mjs`: 生成上述 artifact。
 - `scripts/publish-ai-artifacts.mjs`: 将根目录 `ai/` artifacts 复制到 `public/`。
 - `scripts/verify-ai-entrypoints.mjs`: 检查 artifacts、公开 URL、MCP 工具清单、中英文覆盖和 x402 元数据。
+- `scripts/check-translation-coverage.mjs`: 非阻塞检查 `zh/` 中缺失的英文翻译，支持 `README.md` 和 `README.MD` 两种文件名。
 - `scripts/ai-content-core.mjs`: 搜索、读取课程、生成学习路径、组合上下文等纯函数。
 
 修改课程结构、术语表或 Agent 工具元数据后，运行 `npm run ai:index && npm run ai:publish && npm run ai:verify`，并提交更新后的 `ai/` 与 `public/` artifacts。
@@ -67,7 +68,7 @@ Agent 使用 MCP 工具回答时，应优先引用工具返回的 `citation.file
 
 ## 修改注意
 
-- 新增或移动课程时，先更新 `src/config/courseData.js`，再运行 `npm run ai:index`。
-- 新增术语时，更新 `src/config/glossaryData.js`，再运行 `npm run ai:index`。
+- 新增或移动课程时，先更新 `src/config/courseData.js`，必要时同步 `src/features/badges/badgeData.js` 和 `zh/README.md`，再运行 `npm run ai:index`。
+- 新增术语时，更新 `src/config/glossaryData.js` 和对应测试，保持 `GLOSSARY_CATEGORIES` 与测试允许分类一致，再运行 `npm run ai:index`。
 - MCP 工具必须保持只读，返回结果需包含可引用的 `citation.file` 或 URL。
 - 修改代码后至少运行相关 Vitest；完成前运行 `npm test` 和 `npm run lint`。

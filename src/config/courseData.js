@@ -9,6 +9,7 @@ import {
   Landmark,
   Network,
   Vote,
+  WalletCards,
 } from 'lucide-react';
 
 // GitHub 配置
@@ -439,6 +440,26 @@ export const COURSE_DATA = [
         id: '10-5',
         title: 'DAO 的挑战与未来',
         path: 'DAOGovernance/05_DAOChallenges',
+        fallbackContent: FALLBACK,
+      },
+    ],
+  },
+  {
+    id: 'module-11',
+    title: '以太坊与智能账户',
+    icon: WalletCards,
+    color: 'from-sky-400 to-blue-500',
+    lessons: [
+      {
+        id: '11-1',
+        title: 'Pectra 与 Fusaka 后的以太坊',
+        path: 'EthereumSmartAccounts/01_EthereumAfterPectra',
+        fallbackContent: FALLBACK,
+      },
+      {
+        id: '11-2',
+        title: '账户抽象与智能钱包',
+        path: 'EthereumSmartAccounts/02_AccountAbstractionAndSmartWallets',
         fallbackContent: FALLBACK,
       },
     ],
