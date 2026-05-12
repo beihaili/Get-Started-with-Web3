@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2026-05-09",
-  "generatedAt": "2026-05-12T12:38:01.506Z",
+  "generatedAt": "2026-05-12T13:02:30.320Z",
   "repository": {
     "name": "Get-Started-with-Web3",
     "owner": "beihaili",
@@ -648,7 +648,7 @@
           "labUrl": null,
           "availability": {
             "zh": true,
-            "en": false
+            "en": true
           },
           "siteUrls": {
             "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-8/8-1",
@@ -662,7 +662,7 @@
           "labUrl": null,
           "availability": {
             "zh": true,
-            "en": false
+            "en": true
           },
           "siteUrls": {
             "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-8/8-2",
@@ -676,7 +676,7 @@
           "labUrl": null,
           "availability": {
             "zh": true,
-            "en": false
+            "en": true
           },
           "siteUrls": {
             "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-8/8-3",
@@ -690,7 +690,7 @@
           "labUrl": null,
           "availability": {
             "zh": true,
-            "en": false
+            "en": true
           },
           "siteUrls": {
             "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-8/8-4",
@@ -704,7 +704,7 @@
           "labUrl": null,
           "availability": {
             "zh": true,
-            "en": false
+            "en": true
           },
           "siteUrls": {
             "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-8/8-5",
@@ -13976,6 +13976,99 @@
       "characterCount": 7277
     },
     {
+      "id": "en/module-8/8-1",
+      "lang": "en",
+      "moduleId": "module-8",
+      "moduleTitle": "DeFi 深度解析",
+      "lessonId": "8-1",
+      "title": "DeFi 核心概念与架构",
+      "path": "DeFiDeepDive/01_CoreConcepts",
+      "labUrl": null,
+      "sourcePath": "en/DeFiDeepDive/01_CoreConcepts/README.md",
+      "citation": {
+        "file": "en/DeFiDeepDive/01_CoreConcepts/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/DeFiDeepDive/01_CoreConcepts/README.md",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-8/8-1"
+      },
+      "excerpt": "DeFi Core Concepts and Architecture DeFi replaces financial intermediaries with smart contracts. This lesson explains what DeFi is, how it differs from traditional finance, why composability matters, how TVL should be interpreted, and how the DeFi stack is organized. Table of Contents What DeFi Is Traditional Finance vs DeFi Smart Contracts as Financial Protocols Composability: Money Legos TVL: A Useful but Limited M",
+      "headings": [
+        {
+          "level": 1,
+          "text": "DeFi Core Concepts and Architecture"
+        },
+        {
+          "level": 2,
+          "text": "Table of Contents"
+        },
+        {
+          "level": 2,
+          "text": "What DeFi Is"
+        },
+        {
+          "level": 2,
+          "text": "Traditional Finance vs DeFi"
+        },
+        {
+          "level": 2,
+          "text": "Smart Contracts as Financial Protocols"
+        },
+        {
+          "level": 2,
+          "text": "Composability: Money Legos"
+        },
+        {
+          "level": 2,
+          "text": "TVL: A Useful but Limited Metric"
+        },
+        {
+          "level": 2,
+          "text": "Core Advantages of DeFi"
+        },
+        {
+          "level": 3,
+          "text": "Permissionless Access"
+        },
+        {
+          "level": 3,
+          "text": "Transparency"
+        },
+        {
+          "level": 3,
+          "text": "Borderless Settlement"
+        },
+        {
+          "level": 3,
+          "text": "Composability"
+        },
+        {
+          "level": 3,
+          "text": "Non-Custodial Design"
+        },
+        {
+          "level": 3,
+          "text": "Automation"
+        },
+        {
+          "level": 2,
+          "text": "The DeFi Technology Stack"
+        },
+        {
+          "level": 2,
+          "text": "A Short History of DeFi"
+        },
+        {
+          "level": 2,
+          "text": "Summary"
+        },
+        {
+          "level": 2,
+          "text": "Further Reading"
+        }
+      ],
+      "codeBlockCount": 4,
+      "characterCount": 10904
+    },
+    {
       "id": "zh/module-8/8-2",
       "lang": "zh",
       "moduleId": "module-8",
@@ -14103,6 +14196,111 @@
       ],
       "codeBlockCount": 14,
       "characterCount": 8073
+    },
+    {
+      "id": "en/module-8/8-2",
+      "lang": "en",
+      "moduleId": "module-8",
+      "moduleTitle": "DeFi 深度解析",
+      "lessonId": "8-2",
+      "title": "AMM 与去中心化交易所",
+      "path": "DeFiDeepDive/02_AMMAndDEX",
+      "labUrl": null,
+      "sourcePath": "en/DeFiDeepDive/02_AMMAndDEX/README.md",
+      "citation": {
+        "file": "en/DeFiDeepDive/02_AMMAndDEX/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/DeFiDeepDive/02_AMMAndDEX/README.md",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-8/8-2"
+      },
+      "excerpt": "AMMs and Decentralized Exchanges Automated market makers made on chain trading practical. This lesson explains order books, AMMs, the constant product formula, liquidity pools, LP tokens, slippage, impermanent loss, and the difference between Uniswap V2 and V3. Table of Contents Order Books vs AMMs The Constant Product Formula Liquidity Pools and LP Tokens Slippage and Price Impact Impermanent Loss Uniswap V2 vs V3 M",
+      "headings": [
+        {
+          "level": 1,
+          "text": "AMMs and Decentralized Exchanges"
+        },
+        {
+          "level": 2,
+          "text": "Table of Contents"
+        },
+        {
+          "level": 2,
+          "text": "Order Books vs AMMs"
+        },
+        {
+          "level": 3,
+          "text": "Order Book Model"
+        },
+        {
+          "level": 3,
+          "text": "AMM Model"
+        },
+        {
+          "level": 2,
+          "text": "The Constant Product Formula"
+        },
+        {
+          "level": 3,
+          "text": "Price Curve"
+        },
+        {
+          "level": 3,
+          "text": "Fees"
+        },
+        {
+          "level": 2,
+          "text": "Liquidity Pools and LP Tokens"
+        },
+        {
+          "level": 3,
+          "text": "Providing Liquidity"
+        },
+        {
+          "level": 3,
+          "text": "What LP Tokens Represent"
+        },
+        {
+          "level": 2,
+          "text": "Slippage and Price Impact"
+        },
+        {
+          "level": 3,
+          "text": "Slippage Protection"
+        },
+        {
+          "level": 2,
+          "text": "Impermanent Loss"
+        },
+        {
+          "level": 3,
+          "text": "Impermanent Loss Formula"
+        },
+        {
+          "level": 2,
+          "text": "Uniswap V2 vs V3"
+        },
+        {
+          "level": 3,
+          "text": "Uniswap V2"
+        },
+        {
+          "level": 3,
+          "text": "Uniswap V3"
+        },
+        {
+          "level": 2,
+          "text": "Major DEX Models"
+        },
+        {
+          "level": 2,
+          "text": "Summary"
+        },
+        {
+          "level": 2,
+          "text": "Further Reading"
+        }
+      ],
+      "codeBlockCount": 20,
+      "characterCount": 10355
     },
     {
       "id": "zh/module-8/8-3",
@@ -14240,6 +14438,115 @@
       ],
       "codeBlockCount": 18,
       "characterCount": 9344
+    },
+    {
+      "id": "en/module-8/8-3",
+      "lang": "en",
+      "moduleId": "module-8",
+      "moduleTitle": "DeFi 深度解析",
+      "lessonId": "8-3",
+      "title": "借贷协议原理",
+      "path": "DeFiDeepDive/03_LendingProtocols",
+      "labUrl": null,
+      "sourcePath": "en/DeFiDeepDive/03_LendingProtocols/README.md",
+      "citation": {
+        "file": "en/DeFiDeepDive/03_LendingProtocols/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/DeFiDeepDive/03_LendingProtocols/README.md",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-8/8-3"
+      },
+      "excerpt": "How DeFi Lending Protocols Work Lending is one of the core primitives of DeFi. This lesson explains how Aave and Compound work, why DeFi lending is overcollateralized, how health factors and liquidations protect the system, how interest rates are calculated, and why flash loans are possible. Table of Contents DeFi Lending vs Bank Lending How Aave and Compound Work Overcollateralization and Health Factor Liquidations ",
+      "headings": [
+        {
+          "level": 1,
+          "text": "How DeFi Lending Protocols Work"
+        },
+        {
+          "level": 2,
+          "text": "Table of Contents"
+        },
+        {
+          "level": 2,
+          "text": "DeFi Lending vs Bank Lending"
+        },
+        {
+          "level": 2,
+          "text": "How Aave and Compound Work"
+        },
+        {
+          "level": 3,
+          "text": "Deposit Tokens"
+        },
+        {
+          "level": 3,
+          "text": "Aave vs Compound"
+        },
+        {
+          "level": 2,
+          "text": "Overcollateralization and Health Factor"
+        },
+        {
+          "level": 3,
+          "text": "Loan-to-Value"
+        },
+        {
+          "level": 3,
+          "text": "Liquidation Threshold"
+        },
+        {
+          "level": 3,
+          "text": "Health Factor"
+        },
+        {
+          "level": 2,
+          "text": "Liquidations"
+        },
+        {
+          "level": 2,
+          "text": "Interest Rate Models"
+        },
+        {
+          "level": 2,
+          "text": "Flash Loans"
+        },
+        {
+          "level": 3,
+          "text": "Common Flash Loan Uses"
+        },
+        {
+          "level": 2,
+          "text": "Common Use Cases"
+        },
+        {
+          "level": 3,
+          "text": "Leveraged Long"
+        },
+        {
+          "level": 3,
+          "text": "Stablecoin Yield"
+        },
+        {
+          "level": 3,
+          "text": "Liquidity Without Selling"
+        },
+        {
+          "level": 3,
+          "text": "Collateral Management"
+        },
+        {
+          "level": 2,
+          "text": "Risk Management Checklist"
+        },
+        {
+          "level": 2,
+          "text": "Summary"
+        },
+        {
+          "level": 2,
+          "text": "Further Reading"
+        }
+      ],
+      "codeBlockCount": 22,
+      "characterCount": 11173
     },
     {
       "id": "zh/module-8/8-4",
@@ -14423,6 +14730,139 @@
       "characterCount": 10576
     },
     {
+      "id": "en/module-8/8-4",
+      "lang": "en",
+      "moduleId": "module-8",
+      "moduleTitle": "DeFi 深度解析",
+      "lessonId": "8-4",
+      "title": "稳定币全景",
+      "path": "DeFiDeepDive/04_Stablecoins",
+      "labUrl": null,
+      "sourcePath": "en/DeFiDeepDive/04_Stablecoins/README.md",
+      "citation": {
+        "file": "en/DeFiDeepDive/04_Stablecoins/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/DeFiDeepDive/04_Stablecoins/README.md",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-8/8-4"
+      },
+      "excerpt": "Stablecoins: Models, Risks, Regulation, and Payments Stablecoins are the base currency of DeFi and one of the most important bridges between crypto and the real economy. This lesson explains fiat backed, crypto backed, algorithmic, and synthetic stablecoins, then covers UST/LUNA, USDC depeg risk, regulation, RWA reserves, and stablecoin payments. Table of Contents Why Stablecoins Exist Three Stablecoin Models Fiat Ba",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Stablecoins: Models, Risks, Regulation, and Payments"
+        },
+        {
+          "level": 2,
+          "text": "Table of Contents"
+        },
+        {
+          "level": 2,
+          "text": "Why Stablecoins Exist"
+        },
+        {
+          "level": 2,
+          "text": "Three Stablecoin Models"
+        },
+        {
+          "level": 2,
+          "text": "Fiat-Backed Stablecoins: USDT and USDC"
+        },
+        {
+          "level": 3,
+          "text": "Basic Mechanism"
+        },
+        {
+          "level": 3,
+          "text": "USDT"
+        },
+        {
+          "level": 3,
+          "text": "USDC"
+        },
+        {
+          "level": 3,
+          "text": "Core Tradeoff"
+        },
+        {
+          "level": 2,
+          "text": "Crypto-Backed Stablecoins: DAI and USDS"
+        },
+        {
+          "level": 3,
+          "text": "Maker/Sky Vault Model"
+        },
+        {
+          "level": 3,
+          "text": "Peg Mechanisms"
+        },
+        {
+          "level": 3,
+          "text": "PSM and the Decentralization Tradeoff"
+        },
+        {
+          "level": 2,
+          "text": "Algorithmic Stablecoins"
+        },
+        {
+          "level": 3,
+          "text": "Mint/Burn Reflexivity"
+        },
+        {
+          "level": 3,
+          "text": "Partial Collateral Designs"
+        },
+        {
+          "level": 2,
+          "text": "UST/LUNA: The Stablecoin Collapse That Changed DeFi"
+        },
+        {
+          "level": 2,
+          "text": "2026 Update: Regulation, RWA, and On-Chain Payments"
+        },
+        {
+          "level": 3,
+          "text": "United States: GENIUS Act"
+        },
+        {
+          "level": 3,
+          "text": "European Union: MiCA"
+        },
+        {
+          "level": 3,
+          "text": "RWA Reserves"
+        },
+        {
+          "level": 3,
+          "text": "USDe and Synthetic Dollars"
+        },
+        {
+          "level": 3,
+          "text": "Stablecoin Payments"
+        },
+        {
+          "level": 2,
+          "text": "How to Choose and Use Stablecoins"
+        },
+        {
+          "level": 3,
+          "text": "Selection Framework"
+        },
+        {
+          "level": 3,
+          "text": "Safety Practices"
+        },
+        {
+          "level": 2,
+          "text": "Summary"
+        },
+        {
+          "level": 2,
+          "text": "Further Reading"
+        }
+      ],
+      "codeBlockCount": 11,
+      "characterCount": 15037
+    },
+    {
       "id": "zh/module-8/8-5",
       "lang": "zh",
       "moduleId": "module-8",
@@ -14574,6 +15014,187 @@
       ],
       "codeBlockCount": 19,
       "characterCount": 9671
+    },
+    {
+      "id": "en/module-8/8-5",
+      "lang": "en",
+      "moduleId": "module-8",
+      "moduleTitle": "DeFi 深度解析",
+      "lessonId": "8-5",
+      "title": "DeFi 风险与安全",
+      "path": "DeFiDeepDive/05_DeFiRisks",
+      "labUrl": null,
+      "sourcePath": "en/DeFiDeepDive/05_DeFiRisks/README.md",
+      "citation": {
+        "file": "en/DeFiDeepDive/05_DeFiRisks/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/DeFiDeepDive/05_DeFiRisks/README.md",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-8/8-5"
+      },
+      "excerpt": "DeFi Risks and Security DeFi gives users direct access to financial protocols, but it also gives users direct responsibility for risk. This lesson builds a practical risk framework covering smart contract bugs, flash loan attacks, oracle manipulation, rug pulls, MEV, bridge risk, governance attacks, protocol due diligence, and personal security habits. Table of Contents The DeFi Risk Map Smart Contract Risk Flash Loa",
+      "headings": [
+        {
+          "level": 1,
+          "text": "DeFi Risks and Security"
+        },
+        {
+          "level": 2,
+          "text": "Table of Contents"
+        },
+        {
+          "level": 2,
+          "text": "The DeFi Risk Map"
+        },
+        {
+          "level": 2,
+          "text": "Smart Contract Risk"
+        },
+        {
+          "level": 3,
+          "text": "Reentrancy"
+        },
+        {
+          "level": 3,
+          "text": "Logic Bugs"
+        },
+        {
+          "level": 3,
+          "text": "Admin and Upgrade Risk"
+        },
+        {
+          "level": 2,
+          "text": "Flash Loan Attacks"
+        },
+        {
+          "level": 3,
+          "text": "bZx-style Lesson"
+        },
+        {
+          "level": 3,
+          "text": "Pancake Bunny-style Lesson"
+        },
+        {
+          "level": 2,
+          "text": "Oracle Manipulation"
+        },
+        {
+          "level": 3,
+          "text": "Mango Markets Lesson"
+        },
+        {
+          "level": 3,
+          "text": "Safer Oracle Practices"
+        },
+        {
+          "level": 2,
+          "text": "Rug Pulls"
+        },
+        {
+          "level": 3,
+          "text": "Liquidity Pull"
+        },
+        {
+          "level": 3,
+          "text": "Unlimited Mint"
+        },
+        {
+          "level": 3,
+          "text": "Honeypot Token"
+        },
+        {
+          "level": 3,
+          "text": "Fake Protocol Frontend"
+        },
+        {
+          "level": 3,
+          "text": "Rug Pull Red Flags"
+        },
+        {
+          "level": 2,
+          "text": "Other Common Risks"
+        },
+        {
+          "level": 3,
+          "text": "MEV and Sandwich Attacks"
+        },
+        {
+          "level": 3,
+          "text": "Bridge Risk"
+        },
+        {
+          "level": 3,
+          "text": "Governance Attacks"
+        },
+        {
+          "level": 3,
+          "text": "Stablecoin Depeg Risk"
+        },
+        {
+          "level": 2,
+          "text": "How to Evaluate a DeFi Protocol"
+        },
+        {
+          "level": 3,
+          "text": "Audit and Code"
+        },
+        {
+          "level": 3,
+          "text": "Operational Security"
+        },
+        {
+          "level": 3,
+          "text": "Economic Design"
+        },
+        {
+          "level": 3,
+          "text": "Governance"
+        },
+        {
+          "level": 3,
+          "text": "Team and Ecosystem"
+        },
+        {
+          "level": 3,
+          "text": "Useful Tools"
+        },
+        {
+          "level": 2,
+          "text": "Personal Security Checklist"
+        },
+        {
+          "level": 3,
+          "text": "Wallet Separation"
+        },
+        {
+          "level": 3,
+          "text": "Test Small"
+        },
+        {
+          "level": 3,
+          "text": "Approval Hygiene"
+        },
+        {
+          "level": 3,
+          "text": "Transaction Review"
+        },
+        {
+          "level": 3,
+          "text": "Private Key Security"
+        },
+        {
+          "level": 3,
+          "text": "Ongoing Monitoring"
+        },
+        {
+          "level": 2,
+          "text": "Summary"
+        },
+        {
+          "level": 2,
+          "text": "Further Reading"
+        }
+      ],
+      "codeBlockCount": 15,
+      "characterCount": 13651
     },
     {
       "id": "zh/module-9/9-1",
