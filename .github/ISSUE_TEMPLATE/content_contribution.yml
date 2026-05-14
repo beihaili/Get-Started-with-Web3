@@ -1,0 +1,78 @@
+name: Content or Translation Contribution
+description: Improve a lesson, translation, quiz, glossary term, or source citation.
+title: '[Content] '
+labels: ['content']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for improving the Web3 curriculum. 请说明你要改进的内容、语言和学习目标。
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language / 语言
+      options:
+        - Chinese / 中文
+        - English / 英文
+        - Bilingual / 双语
+        - Not language-specific / 非语言相关
+    validations:
+      required: true
+
+  - type: input
+    id: module
+    attributes:
+      label: Module or file path / 模块或文件路径
+      placeholder: 'en/DeFiDeepDive/01_CoreConcepts/README.md'
+    validations:
+      required: true
+
+  - type: dropdown
+    id: contribution_type
+    attributes:
+      label: Contribution type / 贡献类型
+      options:
+        - Fix unclear or outdated lesson content
+        - Add source links or further reading
+        - Translate missing content
+        - Proofread existing translation
+        - Add quiz questions
+        - Add glossary terms
+        - Improve AI-native citations or context
+        - Other content improvement
+    validations:
+      required: true
+
+  - type: textarea
+    id: learner_outcome
+    attributes:
+      label: Learner outcome / 学习者收益
+      description: What should a beginner understand or do better after this change?
+      placeholder: 'After this change, learners can...'
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_change
+    attributes:
+      label: Proposed change / 计划修改
+      description: Describe the exact content change you want to make.
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources / 参考来源
+      description: Add official docs, reputable explainers, specs, or notes. Leave blank for typo-only changes.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Expected checks / 预期验证
+      options:
+        - label: Markdown preview or local app review is enough.
+        - label: This may need `npm run ai:index && npm run ai:publish && npm run ai:verify`.
+        - label: This may need `npm test`.
+        - label: I can help implement this change.

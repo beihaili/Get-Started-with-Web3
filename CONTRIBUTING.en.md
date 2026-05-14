@@ -3,136 +3,111 @@
 
 # Contributing Guide
 
-## Your First Contribution in 5 Minutes
+Thank you for contributing to **Get Started with Web3**. The project is becoming an open-source, bilingual, AI-native Web3 learning platform. Contributions include code, lesson content, translation, proofreading, quizzes, glossary entries, community distribution, and sponsor research.
 
-1. **Fork** this repository
-2. **Find an issue** labeled `good first issue` in [Issues](https://github.com/beihaili/Get-Started-with-Web3/issues)
-3. **Clone** your fork: `git clone https://github.com/YOUR_USERNAME/Get-Started-with-Web3.git`
-4. **Create a branch**: `git checkout -b fix/your-change`
-5. **Make your change** (fix a typo, improve a translation, add a quiz question)
-6. **Commit**: `git commit -m "fix: describe your change"`
-7. **Push and open a PR**: `git push origin fix/your-change`
-
-Not sure where to start? Translation proofreading is the easiest way to contribute — just find a file in `en/` and improve the English!
-
-Thank you for your interest in the **Get Started with Web3** project! We welcome all forms of contributions.
-
-## How to Participate
-
-### Reporting Issues
-
-If you find a bug or have a suggestion for improvement, please submit it in [GitHub Issues](https://github.com/beihaili/Get-Started-with-Web3/issues):
-
-1. Search for existing issues to avoid duplicates.
-2. Use the appropriate issue template (Bug Report / Feature Request).
-3. Provide as much detail as possible, including reproduction steps and screenshots.
-
-### Submitting Code
+## Your First Contribution In 5 Minutes
 
 1. Fork this repository.
-2. Create a feature branch: `git checkout -b feat/your-feature`.
-3. Commit your changes (follow the commit convention).
-4. Push to your fork: `git push origin feat/your-feature`.
-5. Create a Pull Request.
+2. Pick a task from the [Good First Issues Catalog](docs/community/good-first-issues.md), or browse open [`good first issue`](https://github.com/beihaili/Get-Started-with-Web3/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) tickets.
+3. Clone your fork: `git clone https://github.com/YOUR_USERNAME/Get-Started-with-Web3.git`
+4. Create a branch: `git checkout -b fix/your-change`
+5. Make a small, focused change.
+6. Run the matching verification command.
+7. Push and open a Pull Request.
 
-### Improving Documentation
+If you are unsure where to start, proofread an English lesson, check links, add glossary terms, add quiz questions, or improve a security warning. These are easy to review and directly improve the learner experience.
 
-- Correct errors or outdated information in tutorials.
-- Supplement code examples and explanations.
-- Improve the clarity and accuracy of the writing.
+## Contribution Tracks
 
-### Translation
+| Track            | Good work                                                     | Start here                                                    |
+| ---------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
+| Lesson content   | Fix stale facts, add sources, add examples, improve warnings  | Lesson README files under `zh/` and `en/`                     |
+| Translation      | Translate, proofread, align terminology, improve English flow | `en/Web3QuickStart/`, `en/DeFiDeepDive/`                      |
+| Quiz / Glossary  | Add questions, terms, module checks, beginner explanations    | `src/features/quiz/quizData.js`, `src/config/glossaryData.js` |
+| Product quality  | Fix UI, accessibility, mobile, search, or AI Tutor behavior   | Components and tests under `src/`                             |
+| AI-native layer  | Improve `llms.txt`, manifest, MCP, and citation quality       | `ai/`, `public/ai/`, `scripts/`                               |
+| Growth/community | Submit to awesome lists, draft posts, research sponsors       | `docs/strategy/`, `docs/community/`                           |
 
-- We are currently translating from Chinese to English (`en/` directory).
-- Feel free to translate existing tutorials or proofread existing translations.
+For the long-term path, see the [Contributor Ladder](docs/community/contributor-ladder.md).
 
-## Development Environment Setup
+## Development Setup
 
 ```bash
-# Clone the repository
 git clone https://github.com/beihaili/Get-Started-with-Web3.git
 cd Get-Started-with-Web3
-
-# Install dependencies
 npm install
-
-# Start the development server
 npm run dev
-
-# Run tests
-npm test
-
-# Run lint check
-npm run lint
 ```
 
-## Branching and Commit Conventions
+Common commands:
 
-### Branch Naming
-
-- `feat/xxx` — New feature
-- `fix/xxx` — Bug fix
-- `docs/xxx` — Documentation improvement
-- `refactor/xxx` — Code refactoring
-
-### Commit Message
-
-We use the [Conventional Commits](https://www.conventionalcommits.org/) convention:
-
+```bash
+npm test          # Vitest suite
+npm run lint      # ESLint
+npm run build     # production build, OG images, sitemap, prerender
+npm run ai:verify # verify public AI entrypoints and x402 metadata
 ```
+
+## Verification Matrix
+
+| Change type                | Run at minimum                                                |
+| -------------------------- | ------------------------------------------------------------- |
+| Markdown-only docs         | `npx prettier --check <changed-files>`                        |
+| New or moved lessons       | `npm run ai:index && npm run ai:publish && npm run ai:verify` |
+| Glossary changes           | `npm test -- src/config/__tests__/glossaryData.test.js`       |
+| Quiz or course config      | `npm test`                                                    |
+| React/UI/script changes    | `npm test && npm run lint`                                    |
+| SEO, sitemap, or prerender | `npm test && npm run build`                                   |
+| AI-native or MCP layer     | `npm test && npm run ai:verify`                               |
+
+If you cannot run a command, explain why in the PR and list what you did verify.
+
+## Content Quality Bar
+
+- Write for beginners. Do not assume the reader already understands wallets, gas, signatures, bridges, or DeFi risk.
+- Cite credible sources for protocol mechanics, security behavior, chain operations, or market structure.
+- Do not include investment advice, yield promises, token promotion, or undisclosed promotional copy.
+- Keep Chinese and English terminology aligned. Note your choice in the PR when a term is ambiguous.
+- Use relative paths and alt text when adding images or diagrams.
+
+## Branches And Commits
+
+Branch names:
+
+- `feat/xxx`: new feature
+- `fix/xxx`: bug fix
+- `docs/xxx`: documentation improvement
+- `content/xxx`: lesson content improvement
+
+Commit messages follow [Conventional Commits](https://www.conventionalcommits.org/):
+
+```text
 <type>: <description>
-
-[optional body]
 ```
 
-Common types:
-- `feat` — New feature
-- `fix` — Bug fix
-- `docs` — Documentation change
-- `style` — Code style (no functional impact)
-- `refactor` — Refactoring
-- `test` — Testing
-- `chore` — Build/tooling changes
+Examples:
 
-Example:
-```
-feat: add quiz for Bitcoin Script lesson
-fix: correct image path in SegWit tutorial
-docs: update README with new learning path
+```text
+docs: improve DeFi risk explanation
+fix: correct SegWit image path
+feat: add smart account glossary terms
 ```
 
-## Code Style
+## Pull Request Process
 
-- Use ESLint + Prettier to maintain code consistency.
-- A `lint-staged` check will automatically run before each commit.
-- Manual formatting: `npm run format`
+1. Keep the PR small and focused.
+2. Mention the affected language, module, lesson, or page.
+3. Check the validation commands you actually ran.
+4. Add screenshots for UI changes and source links for content changes.
+5. Respond to review feedback.
+6. After merge, pick another starter issue if you want to continue.
 
-## PR Process
+## Maintainer Response
 
-1. Ensure the code passes all tests: `npm test`.
-2. Ensure there are no linting errors: `npm run lint`.
-3. Fill in all necessary information in the PR template.
-4. Wait for Code Review.
-5. Make changes based on feedback.
-6. Delete the feature branch after merging.
+When maintainers are active, the target is to give starter PRs an initial response within 72 hours. Larger content or product changes may need more discussion; open an issue first when scope is unclear.
 
-## Tutorial Content Guidelines
+## Contact
 
-When writing or modifying tutorials:
-
-- Use Markdown format.
-- Place each lesson in an independent numbered directory (e.g., `01_FirstWeb3Identity/`).
-- Name the main file `README.MD`.
-- Place code examples in the `code_examples/` subdirectory.
-- Use relative paths for images.
-- Place Chinese content in the `zh/` directory and English content in the `en/` directory.
-
-## Contact Us
-
-- Twitter: [@bhbtc1337](https://twitter.com/bhbtc1337)
+- Twitter/X: [@bhbtc1337](https://twitter.com/bhbtc1337)
 - GitHub Issues: [Submit an issue](https://github.com/beihaili/Get-Started-with-Web3/issues)
-- WeChat Group: Apply via Google Form.
-
-## Acknowledgments
-
-Thanks to every contributor! Your participation makes Web3 education better.
+- WeChat group: Apply through the Google Form.
