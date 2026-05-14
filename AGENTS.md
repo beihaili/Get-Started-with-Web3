@@ -6,6 +6,20 @@
 
 这是一个 Web3 学习平台，包含 Markdown 教程内容、React SPA、AI Tutor、徽章系统、SEO 构建脚本、捐赠/赞助配置，以及面向 AI Agent 的只读内容接口。当前主课程由 `src/config/courseData.js` 驱动，覆盖 Web3 快速入门、比特币技术、以太坊与智能账户、Web3 Builder、DeFi、Layer 2/跨链、DAO 等模块。
 
+## CEO 运营目标
+
+项目当前运营目标是把 Get Started with Web3 做成具备持续增长、持续运营和收入能力的开源 Web3 学习平台。核心里程碑是达到 1000 GitHub stars，并让项目同时提升 beihai 的个人影响力。
+
+运营文档：
+
+- `docs/strategy/2026-05-14-ceo-operating-system.md`: CEO 操作系统，包含使命、北极星指标、增长闭环、变现模型、30/60/90 天路线图和外部动作审批边界。
+- `docs/strategy/2026-05-14-execution-board.md`: 执行看板，包含 KPI、工作流、前 10 个任务、内容发布队列和赞助线索。
+
+工作边界：
+
+- 可直接修改仓库内的战略文档、roadmap、运营文案、issue 模板和增长相关代码。
+- 发 Twitter/X、联系赞助商、修改 GitHub repo settings、合并 PR、推送 `main`、发布 release、变更收款地址或添加赞助商 logo 前必须先让 beihai 确认。
+
 ## 常用命令
 
 ```bash
