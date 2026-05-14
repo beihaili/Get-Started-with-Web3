@@ -11,6 +11,7 @@
     "glossary": "术语表"
   },
   "landing": {
+    "pageTitle": "Get Started with Web3 - 从入门到精通",
     "heroBadge": "{{count}} 讲系统化教程 · 开源免费",
     "subtitle": "中文世界最系统的比特币与 Web3 学习平台。从零基础到深入原理，一站式掌握区块链核心技术。",
     "studyStreak": "🔥 连续学习 {{count}} 天",

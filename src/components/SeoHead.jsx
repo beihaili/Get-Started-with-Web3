@@ -15,6 +15,9 @@ export default function SeoHead({
   moduleTitle,
 }) {
   useEffect(() => {
+    const languageTag = lang === 'zh' ? 'zh-CN' : lang || 'en';
+    const ogLocale = lang === 'zh' ? 'zh_CN' : 'en_US';
+
     document.title = title;
 
     const setMeta = (name, content) => {
@@ -30,8 +33,13 @@ export default function SeoHead({
     setMeta('description', description);
     setMeta('og:title', title);
     setMeta('og:description', description);
+    setMeta('og:type', type === 'article' ? 'article' : 'website');
     setMeta('og:url', url);
+    setMeta('og:locale', ogLocale);
+    setMeta('twitter:title', title);
+    setMeta('twitter:description', description);
     if (ogImage) setMeta('og:image', ogImage);
+    if (ogImage) setMeta('twitter:image', ogImage);
 
     // Canonical
     let canonical = document.querySelector('link[rel="canonical"]');
@@ -72,9 +80,17 @@ export default function SeoHead({
             name: title,
             description,
             url,
+            inLanguage: languageTag,
             ...(moduleTitle && { isPartOf: { '@type': 'Course', name: moduleTitle } }),
           }
-        : { '@context': 'https://schema.org', '@type': 'WebPage', name: title, description, url };
+        : {
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: title,
+            description,
+            url,
+            inLanguage: languageTag,
+          };
 
     jsonLd.textContent = JSON.stringify(data);
   }, [title, description, url, type, ogImage, lang, alternateUrl, moduleTitle]);

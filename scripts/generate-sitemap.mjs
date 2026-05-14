@@ -18,7 +18,15 @@ const BASE_URL = 'https://beihaili.github.io/Get-Started-with-Web3';
 const LANGS = ['zh', 'en'];
 
 // 每种语言下的静态页面路径
-const STATIC_PAGES = ['', '/dashboard', '/badges', '/articles', '/support', '/contributors'];
+const STATIC_PAGES = [
+  '',
+  '/dashboard',
+  '/badges',
+  '/articles',
+  '/support',
+  '/contributors',
+  '/glossary',
+];
 
 /**
  * 从 courseData.js 源码中用正则提取模块 ID 和课程 ID

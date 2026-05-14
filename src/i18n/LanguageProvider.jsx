@@ -3,6 +3,10 @@ import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 const SUPPORTED_LANGS = ['en', 'zh'];
+const HTML_LANG = {
+  en: 'en',
+  zh: 'zh-CN',
+};
 
 /**
  * Reads :lang from URL and syncs it to i18next.
@@ -14,6 +18,7 @@ export default function LanguageProvider({ children }) {
 
   useEffect(() => {
     const resolvedLang = SUPPORTED_LANGS.includes(lang) ? lang : 'en';
+    document.documentElement.lang = HTML_LANG[resolvedLang];
     if (i18n.language !== resolvedLang) {
       i18n.changeLanguage(resolvedLang);
     }

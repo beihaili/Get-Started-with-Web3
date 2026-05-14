@@ -49,9 +49,9 @@ Update weekly.
 
 **Outcome:** More organic traffic and shareable entry pages.
 
-- [ ] Fix `html lang`, `og:locale`, Twitter metadata, and JSON-LD language for `/en` pages.
-- [ ] Ensure `/zh`, `/en`, `/glossary`, `/articles`, lesson pages, `llms.txt`, and AI artifact URLs are easy to discover.
-- [ ] Add `glossary` routes to `scripts/generate-sitemap.mjs` and `scripts/prerender.mjs` if still missing.
+- [x] Fix `html lang`, `og:locale`, Twitter metadata, and JSON-LD language for `/en` pages.
+- [x] Ensure `/zh`, `/en`, `/glossary`, `/articles`, lesson pages, `llms.txt`, and AI artifact URLs are easy to discover.
+- [x] Add `glossary` routes to `scripts/generate-sitemap.mjs` and `scripts/prerender.mjs` if still missing.
 - [ ] Check public prerendered HTML after build.
 - [ ] Create `docs/strategy/awesome-list-submissions.md`.
 - [ ] Draft submissions to Web3, Bitcoin, blockchain, open-source education, and AI-agent resource lists.
@@ -110,8 +110,8 @@ Update weekly.
 
 ## First 10 Tasks
 
-1. Fix SEO language metadata for prerendered English pages.
-2. Add missing `glossary` route coverage to sitemap and prerender.
+1. Done: Fix SEO language metadata for prerendered English pages.
+2. Done: Add missing `glossary` route coverage to sitemap and prerender.
 3. Create sponsor kit.
 4. Refresh README positioning.
 5. Add AI-native quick demo to README.
