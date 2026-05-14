@@ -26,6 +26,7 @@
 - [多节点广播与低费率交易实战经验](# 多节点广播与低费率交易实战经验)
 - [安全注意事项](# 安全注意事项)
 - [总结](# 总结)
+- [2026 更新：Bitcoin Core 31.0 后的费率与 mempool](#2026-更新bitcoin-core-310-后的费率与-mempool)
 - [常见问题](# 常见问题)
 
 ## 前言：为何要发送低费率交易？
@@ -239,6 +240,85 @@ curl -s https://mempool.space/api/v1/blocks | python3 -m json.tool
 3. 查看费率趋势：如果费率在持续下降，可以再等等；如果在上升趋势中，建议尽快发送
 
 > 💡 ** 小贴士 **：在周末和节假日，比特币网络交易量通常较少，是发送低费率交易和归集 UTXO 的黄金时段。
+
+## 2026 更新：Bitcoin Core 31.0 后的费率与 mempool
+
+Bitcoin Core 31.0 对 mempool、交易替换、隐私广播和费率估算都做了重要调整。低费率广播工具不能只停留在“调低 `minrelaytxfee`”这一层，还要理解节点策略正在变得更精细。
+
+### Cluster mempool：从祖先/后代限制到交易簇
+
+过去 mempool 主要使用 ancestor/descendant 限制来控制未确认交易依赖关系。Bitcoin Core 31.0 引入 cluster mempool，把存在父子依赖关系的交易视为一个 connected component，也就是“交易簇”。
+
+这会影响三件事：
+
+1. ** 区块模板构建 **：矿工更容易根据一组相关交易的整体费率做选择。
+2. **mempool 淘汰 **：节点在内存不足时，可以更合理地判断哪些交易组合应该被淘汰。
+3. **RBF 判断 **：替换交易需要让替换后的 mempool 费率图更好，而不是只看单笔交易。
+
+对普通用户来说，含义是：低费率父交易 + 高费率子交易这类组合会越来越依赖包和簇的整体经济性。
+
+### Package relay：低费父交易可以被高费子交易带动
+
+Package relay 允许节点按“交易包”理解父子交易。Bitcoin Core 31.0 扩展了一父一子 package relay：父交易费率即使低于 `minrelaytxfee`，也可能因为子交易支付足够高费用而被一起转发。
+
+```text
+父交易：低费率，单独看不容易传播
+子交易：高费率，花费父交易输出
+整体包：平均费率足够，节点愿意转发和矿工愿意打包
+```
+
+实际使用中，这比“孤零零广播一笔 0.1 sat/vB 交易然后祈祷”更可靠。你需要考虑的是包的整体费率，而不是单笔交易费率。
+
+### `settxfee` 删除：按交易指定 fee_rate
+
+Bitcoin Core 31.0 删除了此前已废弃的 `-paytxfee` 启动项和 `settxfee` RPC。原因很直接：全局静态费率容易导致过付或欠付。
+
+新的习惯应该是：每次构造交易时明确传入 `fee_rate`。
+
+```bash
+bitcoin-cli -named fundrawtransaction \
+  hexstring="$RAW_TX" \
+  options='{"fee_rate": 1.0, "replaceable": true}'
+```
+
+或者在钱包 RPC 中使用支持 `fee_rate` 的方法，例如 `sendtoaddress`、`send`、`sendall`、`sendmany`。具体参数以当前 Bitcoin Core RPC 文档为准。
+
+### 0.1 sat/vB 费率桶：费率估算更细
+
+Bitcoin Core 31.0 把费率估算器的最低费率桶从 1 sat/vB 调整到 0.1 sat/vB，与默认 `minrelaytxfee` 对齐。这意味着在网络长期低费时，节点有机会学习并返回 sub-1 sat/vB 的估算。
+
+注意两点：
+
+- 节点升级后会重新学习费率估算数据，历史 `fee_estimates.dat` 不再直接沿用。
+- 估算器能返回低费率，不代表所有矿池都会快速打包低费率交易。
+
+### Private broadcast：广播隐私的新选项
+
+Bitcoin Core 31.0 新增 `-privatebroadcast`，可让 `sendrawtransaction` 的本地交易只通过 Tor 或 I2P 路径广播。它的目标是降低交易来源 IP 被关联的风险。
+
+适合场景：
+
+- 你运行自己的节点并关心交易来源隐私。
+- 你愿意接受更复杂的网络配置和潜在传播延迟。
+- 你不希望多笔无关交易因为同一出口 IP 被轻易关联。
+
+不适合场景：
+
+- 你没有配置 Tor/I2P。
+- 你需要极高可靠性和最快传播。
+- 你不理解隐私广播可能带来的排障复杂度。
+
+### 低费率广播的新实践建议
+
+2026 年更推荐的实践是：
+
+1. ** 优先使用 RBF **：发送时启用 replaceable，方便后续加费。
+2. ** 理解 CPFP/package relay **：不要只看父交易，关注父子包整体费率。
+3. ** 按交易指定 fee_rate **：不要依赖全局 `settxfee`。
+4. ** 先在 regtest/testnet 测试 **：确认脚本不会误选 UTXO 或误设找零。
+5. ** 小额试运行 **：主网先用极小金额验证流程。
+6. ** 观察 mempool 状态 **：低费率交易适合网络空闲期，不适合拥堵期硬发。
+7. ** 保护 RPC 和钱包 **：低费率实验不值得牺牲节点安全。
 
 ## 📖 RBF（Replace-By-Fee）详细示例
 

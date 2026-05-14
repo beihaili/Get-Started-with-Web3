@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Live learning site
+    url: https://beihaili.github.io/Get-Started-with-Web3/
+    about: Read the public curriculum before opening a content issue.
+  - name: Contributor guide
+    url: https://github.com/beihaili/Get-Started-with-Web3/blob/main/CONTRIBUTING.en.md
+    about: Learn how to make a first contribution.
+  - name: Good first issues catalog
+    url: https://github.com/beihaili/Get-Started-with-Web3/blob/main/docs/community/good-first-issues.md
+    about: Copy-ready starter issue ideas for contributors.

@@ -1,34 +1,52 @@
-## 变更描述
+## Summary / 变更摘要
 
-<!-- 简要描述这个 PR 做了什么 -->
+<!-- What changed? 哪些内容发生了变化？ -->
 
-## 变更类型
+## Type / 类型
 
-- [ ] Bug 修复
-- [ ] 新功能
-- [ ] 文档改进
-- [ ] 代码重构
-- [ ] 测试
-- [ ] 其他
+- [ ] Bug fix / Bug 修复
+- [ ] Feature / 新功能
+- [ ] Lesson content / 课程内容
+- [ ] Translation or proofreading / 翻译或校对
+- [ ] Quiz or glossary / 测验或术语表
+- [ ] AI-native artifacts or MCP / AI 入口或 MCP
+- [ ] Growth, community, or sponsorship docs / 增长、社区或赞助文档
+- [ ] Refactor or tooling / 重构或工具
 
-## 相关 Issue
+## Scope / 影响范围
 
-<!-- 如果有相关 Issue，请链接 -->
+<!-- List affected files, lessons, routes, modules, or audiences. 写清楚影响的文件、课程、页面、模块或受众。 -->
+
+## Related Issue / 相关 Issue
+
+<!-- Example: Closes #123. If no issue exists, explain why. -->
+
 Closes #
 
-## 测试
+## Verification / 验证
 
-- [ ] 本地测试通过 (`npm test`)
-- [ ] Lint 检查通过 (`npm run lint`)
-- [ ] 构建成功 (`npm run build`)
+- [ ] Markdown preview or docs-only review
+- [ ] `npx prettier --check <changed-files>`
+- [ ] `npm test`
+- [ ] `npm run lint`
+- [ ] `npm run build`
+- [ ] `npm run ai:index`
+- [ ] `npm run ai:publish`
+- [ ] `npm run ai:verify`
+- [ ] Not applicable; reason:
 
-## 截图（如适用）
+## Content And Safety / 内容与安全
 
-<!-- 如果有 UI 变更，请添加截图 -->
+- [ ] Beginner-facing wording is clear.
+- [ ] Technical claims include sources or are already covered by existing course context.
+- [ ] No investment advice, yield promises, token promotion, or undisclosed ads.
+- [ ] Chinese and English terminology stays aligned when both languages are affected.
+- [ ] AI-native changes keep MCP tools read-only and citeable.
 
-## 检查清单
+## Screenshots / 截图
 
-- [ ] 代码遵循项目的代码风格
-- [ ] 已添加必要的测试
-- [ ] 所有现有测试通过
-- [ ] 已更新相关文档
+<!-- Add screenshots for UI changes. UI 修改请提供截图。 -->
+
+## Notes For Reviewers / Reviewer 备注
+
+<!-- Anything reviewers should pay special attention to? -->

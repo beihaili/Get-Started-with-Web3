@@ -28,4 +28,28 @@ describe('SeoHead', () => {
       expect(document.title).toBe('My Title');
     });
   });
+
+  it('should set language-aware social metadata and JSON-LD language', async () => {
+    render(
+      <SeoHead
+        title="English Title"
+        description="English Description"
+        url="https://example.com/en"
+        type="webpage"
+        lang="en"
+      />
+    );
+
+    await waitFor(() => {
+      expect(document.querySelector('meta[property="og:locale"]').content).toBe('en_US');
+      expect(document.querySelector('meta[name="twitter:title"]').content).toBe('English Title');
+      expect(document.querySelector('meta[name="twitter:description"]').content).toBe(
+        'English Description'
+      );
+
+      const jsonLd = document.querySelector('script[data-seo-head]');
+      const data = JSON.parse(jsonLd.textContent);
+      expect(data.inLanguage).toBe('en');
+    });
+  });
 });

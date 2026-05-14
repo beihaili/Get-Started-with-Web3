@@ -11,6 +11,7 @@
     "glossary": "Glossary"
   },
   "landing": {
+    "pageTitle": "Get Started with Web3 - Open-source Web3 Learning Platform",
     "heroBadge": "{{count}} lessons · Open Source & Free",
     "subtitle": "The most systematic Bitcoin and Web3 learning platform in the Chinese-speaking world. Master core blockchain technology from scratch.",
     "studyStreak": "🔥 {{count}}-day study streak",
@@ -140,7 +141,7 @@
   },
   "articles": {
     "pageTitle": "All Course Articles | Web3 Starter",
-    "pageDesc": "Browse all 37 lessons on Web3 and Bitcoin, systematically master core blockchain technology",
+    "pageDesc": "Browse all 58 lessons on Web3 and Bitcoin, systematically master core blockchain technology",
     "heading": "All Course Articles",
     "subheading": "Browse all lessons by module and click to read the content",
     "lessonCount": "{{count}} lessons total",

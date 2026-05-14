@@ -1,0 +1,68 @@
+name: Growth, Community, or Distribution
+description: Suggest a distribution channel, community post, awesome-list submission, partnership, or sponsor lead.
+title: '[Growth] '
+labels: ['growth']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for growth work that can help the project reach more learners or contributors. 请避免投资建议、代币推广和未披露广告。
+
+  - type: dropdown
+    id: growth_type
+    attributes:
+      label: Growth type / 增长类型
+      options:
+        - Awesome-list submission
+        - Community post
+        - Newsletter or media pitch
+        - Workshop or study group
+        - Partnership lead
+        - Sponsor lead
+        - SEO or discoverability
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: audience
+    attributes:
+      label: Target audience / 目标受众
+      placeholder: 'English-speaking Web3 beginners, Chinese builders, AI agents, protocol educators...'
+    validations:
+      required: true
+
+  - type: input
+    id: channel
+    attributes:
+      label: Channel or URL / 渠道或链接
+      placeholder: 'https://github.com/...'
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_copy
+    attributes:
+      label: Proposed copy or action / 文案或动作
+      description: Include draft copy, submission notes, or the exact action you recommend.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_result
+    attributes:
+      label: Expected result / 预期结果
+      description: What would count as success?
+      placeholder: 'A merged awesome-list PR, 10 qualified visitors, one contributor lead...'
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: policy
+    attributes:
+      label: Policy check / 边界检查
+      options:
+        - label: This does not require changing wallet addresses, repository ownership, secrets, or payment terms.
+          required: true
+        - label: This does not make investment advice, trading claims, or token promotion.
+          required: true

@@ -22,7 +22,7 @@ describe('ai-content-core', () => {
     expect(index.schemaVersion).toBe('2026-05-09');
     expect(index.repository.name).toBe('Get-Started-with-Web3');
     expect(index.languages).toEqual(['zh', 'en']);
-    expect(index.modules).toHaveLength(10);
+    expect(index.modules).toHaveLength(11);
     expect(index.lessons.length).toBeGreaterThan(40);
     expect(index.tools.map((tool) => tool.name)).toEqual(
       expect.arrayContaining([
