@@ -19,4 +19,9 @@ describe('i18n', () => {
     );
     expect(i18n.t('landing.pageTitle', { lng: 'zh' })).toBe('Get Started with Web3 - 从入门到精通');
   });
+
+  it('should keep article index metadata aligned with the current lesson count', () => {
+    expect(i18n.t('articles.pageDesc', { lng: 'en' })).toContain('58 lessons');
+    expect(i18n.t('articles.pageDesc', { lng: 'zh' })).toContain('58 讲');
+  });
 });

@@ -1,7 +1,7 @@
 # Get Started with Web3 Sponsor Kit
 
 **Date:** 2026-05-14
-**Status:** Draft for beihai review before external use
+**Status:** Internal kit; routine external use allowed under autonomous operating policy
 **Contact:** beihai / @bhbtc1337
 
 ## One-Line Pitch
@@ -24,18 +24,18 @@ The audience is especially valuable for:
 
 As of 2026-05-14:
 
-| Metric | Value |
-| --- | ---: |
-| GitHub stars | 613 |
-| Forks | 55 |
-| Total contributors | 11 |
-| Indexed lesson entries | 106 |
-| Glossary entries | 45 |
-| GitHub 14-day views | 152 |
-| GitHub 14-day unique visitors | 65 |
-| GitHub 14-day clones | 2048 |
-| Languages | Chinese and English |
-| AI-native surfaces | `llms.txt`, AI manifest, content index, local read-only MCP |
+| Metric                        |                                                       Value |
+| ----------------------------- | ----------------------------------------------------------: |
+| GitHub stars                  |                                                         613 |
+| Forks                         |                                                          55 |
+| Total contributors            |                                                          11 |
+| Indexed lesson entries        |                                                         106 |
+| Glossary entries              |                                                          45 |
+| GitHub 14-day views           |                                                         152 |
+| GitHub 14-day unique visitors |                                                          65 |
+| GitHub 14-day clones          |                                                        2048 |
+| Languages                     |                                         Chinese and English |
+| AI-native surfaces            | `llms.txt`, AI manifest, content index, local read-only MCP |
 
 Notes:
 
@@ -45,14 +45,14 @@ Notes:
 
 ## Sponsorship Tiers
 
-| Tier | Monthly Price | Placement | Best For |
-| --- | ---: | --- | --- |
-| Supporter | $99 | Support page listing and monthly progress report mention | Small teams supporting open education |
-| Bronze | $199 | README logo/link, support page listing | Early sponsor visibility |
-| Silver | $499 | Bronze + landing page sponsor section + monthly social mention draft | Wallets, devtools, infra projects |
-| Gold | $999 | Silver + lesson-page sponsor banner + sponsor spotlight draft | Strategic partners |
+| Tier      | Monthly Price | Placement                                                            | Best For                              |
+| --------- | ------------: | -------------------------------------------------------------------- | ------------------------------------- |
+| Supporter |           $99 | Support page listing and monthly progress report mention             | Small teams supporting open education |
+| Bronze    |          $199 | README logo/link, support page listing                               | Early sponsor visibility              |
+| Silver    |          $499 | Bronze + landing page sponsor section + monthly social mention draft | Wallets, devtools, infra projects     |
+| Gold      |          $999 | Silver + lesson-page sponsor banner + sponsor spotlight draft        | Strategic partners                    |
 
-All sponsor copy, logos, and links require beihai approval before publishing.
+Sponsor copy, logos, and links are reviewed against the acceptance policy before publishing. High-risk sponsor categories still require explicit beihai confirmation.
 
 ## Placement Rules
 
@@ -108,7 +108,7 @@ Rejected by default:
 
 - Bronze deliverables.
 - Logo/link on the landing page sponsor section.
-- One monthly sponsor mention draft for beihai to approve before posting.
+- One monthly sponsor mention draft or post, recorded in the daily report.
 
 ### Gold
 
@@ -134,13 +134,13 @@ Do not overstate metrics. If a number is from GitHub traffic and only covers the
 
 Start with products that match the curriculum and have low trust risk:
 
-| Category | Why It Fits | Suggested Pitch |
-| --- | --- | --- |
-| Wallets | Beginner identity, transaction, approval and smart account lessons | Safer onboarding for first-time Web3 users |
-| RPC/API infra | Bitcoin RPC and builder labs | Reach developers while they learn |
-| Explorers/analytics | Block explorer and DeFi analytics lessons | Become the default tool students try |
-| Security tools | Scam detection and contract security content | Teach users safer habits |
-| L2 ecosystems | L2/cross-chain modules | Explain scaling with practical examples |
+| Category            | Why It Fits                                                        | Suggested Pitch                            |
+| ------------------- | ------------------------------------------------------------------ | ------------------------------------------ |
+| Wallets             | Beginner identity, transaction, approval and smart account lessons | Safer onboarding for first-time Web3 users |
+| RPC/API infra       | Bitcoin RPC and builder labs                                       | Reach developers while they learn          |
+| Explorers/analytics | Block explorer and DeFi analytics lessons                          | Become the default tool students try       |
+| Security tools      | Scam detection and contract security content                       | Teach users safer habits                   |
+| L2 ecosystems       | L2/cross-chain modules                                             | Explain scaling with practical examples    |
 
 ## Proposed Sponsor CTA
 
@@ -150,6 +150,6 @@ Start with products that match the curriculum and have low trust risk:
 
 1. Merge SEO and README positioning fixes.
 2. Add a concise sponsor section to README if not already present.
-3. Add current sponsor kit link to support page after beihai approval.
+3. Add current sponsor kit link to support page after the copy is checked against sponsor safety rules.
 4. Prepare first outreach batch of 5 warm-fit targets.
-5. Ask beihai to confirm whether sponsor conversations should use Twitter DM, email, GitHub, or Telegram.
+5. Use the lowest-friction available channel for first outreach and record the action in the daily report.

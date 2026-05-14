@@ -6,31 +6,31 @@
 
 ## Current Snapshot
 
-| Area | Status | Next Action |
-| --- | --- | --- |
-| Technical health | Healthy | Keep `npm test`, `npm run lint`, `npm run ai:verify` green |
-| GitHub growth | Under-monetized | Improve README conversion and launch distribution campaigns |
-| SEO | Partially implemented | Fix language metadata and route coverage |
-| English content | Incomplete | Close 17 missing translations or classify non-course docs |
-| AI-native layer | Strong MVP | Productize story and prepare paid-tool landing |
-| Monetization | Passive only | Create sponsor kit and sponsor outreach drafts |
-| Community | Seeded | Turn issues into a contributor ladder |
-| Personal brand | Underused | Convert every shipment into approved public posts |
+| Area             | Status                | Next Action                                                      |
+| ---------------- | --------------------- | ---------------------------------------------------------------- |
+| Technical health | Healthy               | Keep `npm test`, `npm run lint`, `npm run ai:verify` green       |
+| GitHub growth    | Under-monetized       | Improve README conversion and launch distribution campaigns      |
+| SEO              | Partially implemented | Fix language metadata and route coverage                         |
+| English content  | Incomplete            | Close 17 missing translations or classify non-course docs        |
+| AI-native layer  | Strong MVP            | Productize story and prepare paid-tool landing                   |
+| Monetization     | Passive only          | Create sponsor kit and sponsor outreach drafts                   |
+| Community        | Seeded                | Turn issues into a contributor ladder                            |
+| Personal brand   | Underused             | Convert every shipment into public posts and distribution assets |
 
 ## KPI Board
 
 Update weekly.
 
-| KPI | Baseline 2026-05-14 | Target 2026-06-14 | Target 2026-08-14 |
-| --- | ---: | ---: | ---: |
-| GitHub stars | 613 | 650 | 750 |
-| Forks | 55 | 65 | 90 |
-| Total contributors | 11 | 15 | 20 |
-| Open good first issues | 10+ | 15 | 20 |
-| 14-day GitHub unique visitors | 65 | 150 | 300 |
-| Missing English translations | 17 | 0-5 | 0 |
-| Sponsor conversations | 0 tracked | 3 | 10 |
-| Monthly revenue | Not tracked | $50+ | $200+ |
+| KPI                           | Baseline 2026-05-14 | Target 2026-06-14 | Target 2026-08-14 |
+| ----------------------------- | ------------------: | ----------------: | ----------------: |
+| GitHub stars                  |                 613 |               650 |               750 |
+| Forks                         |                  55 |                65 |                90 |
+| Total contributors            |                  11 |                15 |                20 |
+| Open good first issues        |                 10+ |                15 |                20 |
+| 14-day GitHub unique visitors |                  65 |               150 |               300 |
+| Missing English translations  |                  17 |               0-5 |                 0 |
+| Sponsor conversations         |           0 tracked |                 3 |                10 |
+| Monthly revenue               |         Not tracked |              $50+ |             $200+ |
 
 ## Workstreams
 
@@ -38,12 +38,12 @@ Update weekly.
 
 **Outcome:** More visitors convert to stars, followers, contributors, and learners.
 
-- [ ] Rewrite README opening around "open-source, bilingual, AI-native Web3 curriculum".
-- [ ] Add stronger "Star this repo" CTA without sounding spammy.
-- [ ] Add a "Who this is for" section for beginners, builders, researchers, and AI agents.
-- [ ] Add badges or links for `llms.txt`, MCP, sponsor, and contributors.
+- [x] Rewrite README opening around "open-source, bilingual, AI-native Web3 curriculum".
+- [x] Add stronger "Star this repo" CTA without sounding spammy.
+- [x] Add a "Who this is for" section for beginners, builders, researchers, and AI agents.
+- [x] Add badges or links for `llms.txt`, MCP, sponsor, and contributors.
 - [ ] Expand GitHub topic recommendations for repo settings: `ai-native`, `mcp`, `llms-txt`, `web3-education`, `bitcoin-education`, `defi`, `layer2`, `dao`.
-- [ ] Draft GitHub repo description update for user approval.
+- [x] Update GitHub repo description and topics under autonomous approval policy.
 
 ### 2. SEO And Distribution
 
@@ -53,8 +53,8 @@ Update weekly.
 - [x] Ensure `/zh`, `/en`, `/glossary`, `/articles`, lesson pages, `llms.txt`, and AI artifact URLs are easy to discover.
 - [x] Add `glossary` routes to `scripts/generate-sitemap.mjs` and `scripts/prerender.mjs` if still missing.
 - [ ] Check public prerendered HTML after build.
-- [ ] Create `docs/strategy/awesome-list-submissions.md`.
-- [ ] Draft submissions to Web3, Bitcoin, blockchain, open-source education, and AI-agent resource lists.
+- [x] Create `docs/strategy/awesome-list-submissions.md`.
+- [x] Draft submissions to Web3, Bitcoin, blockchain, open-source education, and AI-agent resource lists.
 
 ### 3. Content Product
 
@@ -70,7 +70,7 @@ Update weekly.
 
 **Outcome:** The project has a differentiated story and a path to paid tools.
 
-- [ ] Add a README quick demo showing how an agent can use `npm run mcp:web3`.
+- [x] Add a README quick demo showing how an agent can use `npm run mcp:web3`.
 - [ ] Add one copy-paste MCP client setup snippet if practical.
 - [ ] Draft landing copy for `generate_personalized_web3_plan` and `audit_learning_answer`.
 - [ ] Decide whether Phase 1 paid tool should be x402, Stripe, GitHub Sponsors gated, or manual payment.
@@ -113,13 +113,13 @@ Update weekly.
 1. Done: Fix SEO language metadata for prerendered English pages.
 2. Done: Add missing `glossary` route coverage to sitemap and prerender.
 3. Done: Create sponsor kit.
-4. Refresh README positioning.
-5. Add AI-native quick demo to README.
-6. Create awesome-list submission tracker.
+4. Done: Refresh README positioning.
+5. Done: Add AI-native quick demo to README.
+6. Done: Create awesome-list submission tracker.
 7. Add contributor ladder to CONTRIBUTING.
 8. Draft public roadmap issue.
 9. Close or classify translation coverage warnings.
-10. Draft first 4 public posts for user approval.
+10. Draft and publish first 4 low-risk public posts, with links recorded in daily reports.
 
 ## Public Post Draft Queue
 
@@ -130,13 +130,13 @@ Update weekly.
 
 ## Sponsor Lead Tracker
 
-| Sponsor | Category | Fit | Status | Next Action |
-| --- | --- | --- | --- | --- |
-| Wallet projects | Wallet/security | Beginner onboarding and wallet safety lessons | Not contacted | Draft outreach |
-| RPC/infrastructure providers | Devtool | Builder labs and Bitcoin RPC lessons | Not contacted | Draft outreach |
-| L2 ecosystems | Chain/ecosystem | L2 and bridge lessons | Not contacted | Draft outreach |
-| Security audit tools | Security | Web3 safety and smart contract security | Not contacted | Draft outreach |
-| Exchanges | Exchange/affiliate | CEX onboarding and fiat on-ramp | Not contacted | Review trust policy first |
+| Sponsor                      | Category           | Fit                                           | Status        | Next Action               |
+| ---------------------------- | ------------------ | --------------------------------------------- | ------------- | ------------------------- |
+| Wallet projects              | Wallet/security    | Beginner onboarding and wallet safety lessons | Not contacted | Draft outreach            |
+| RPC/infrastructure providers | Devtool            | Builder labs and Bitcoin RPC lessons          | Not contacted | Draft outreach            |
+| L2 ecosystems                | Chain/ecosystem    | L2 and bridge lessons                         | Not contacted | Draft outreach            |
+| Security audit tools         | Security           | Web3 safety and smart contract security       | Not contacted | Draft outreach            |
+| Exchanges                    | Exchange/affiliate | CEX onboarding and fiat on-ramp               | Not contacted | Review trust policy first |
 
 ## Reporting Template
 
@@ -146,4 +146,10 @@ Daily report should include:
 - Current metric movement if available.
 - Blockers or risks.
 - Next 1-3 actions.
-- External actions waiting for beihai approval.
+- External actions executed or queued, with any high-risk items called out.
+
+## External Action Log
+
+| Date       | Action                                                                                          | Result                                                                                                                                                                           |
+| ---------- | ----------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2026-05-14 | Updated GitHub repo description, homepage, and topics for AI-native Web3 curriculum positioning | Completed via `gh repo edit`; topics now include `ai-native`, `mcp`, `llms-txt`, `web3-education`, `bitcoin-education`, `defi`, `layer2`, `dao`, `ethereum`, `learning-platform` |

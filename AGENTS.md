@@ -15,12 +15,14 @@
 - `docs/strategy/2026-05-14-ceo-operating-system.md`: CEO 操作系统，包含使命、北极星指标、增长闭环、变现模型、30/60/90 天路线图和外部动作审批边界。
 - `docs/strategy/2026-05-14-execution-board.md`: 执行看板，包含 KPI、工作流、前 10 个任务、内容发布队列和赞助线索。
 - `docs/strategy/2026-05-14-sponsor-kit.md`: 赞助包草案，包含受众、价格、曝光权益、接受政策和月度汇报指标。
-- `docs/strategy/2026-05-14-sponsor-outreach-drafts.md`: 赞助外联话术草案；未获 beihai 批准前不得对外发送。
+- `docs/strategy/2026-05-14-sponsor-outreach-drafts.md`: 赞助外联话术草案；常规外联可自主执行，高风险赞助对象仍需单独确认。
+- `docs/strategy/2026-05-14-awesome-list-submissions.md`: awesome-list 和社区分发追踪，包含定位文案、目标列表、PR 模板和中文社区帖草案。
 
 工作边界：
 
 - 可直接修改仓库内的战略文档、roadmap、运营文案、issue 模板和增长相关代码。
-- 发 Twitter/X、联系赞助商、修改 GitHub repo settings、合并 PR、推送 `main`、发布 release、变更收款地址或添加赞助商 logo 前必须先让 beihai 确认。
+- beihai 已授权 Codex 自主批准并执行常规外部动作，包括发起增长文案草稿、联系赞助商、修改 GitHub repo 描述/topics、推送工作分支、创建 PR 和发布项目运营材料；执行后在每日汇报中留痕。
+- 高风险或不可逆动作仍需单独确认：修改收款地址、接受高风险金融/交易类赞助、删除仓库、私有化仓库、转移仓库所有权、泄露 secrets、绕过安全检查、直接推送 `main` 导致生产发布。
 
 ## 常用命令
 

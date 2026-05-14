@@ -18,19 +18,19 @@
 
 2026-05-14 的可验证基线：
 
-| Metric | Value | Notes |
-| --- | ---: | --- |
-| GitHub stars | 613 | 距离 1000 stars 还差 387 |
-| Forks | 55 | 说明仓库已有开发者复制和复用意愿 |
-| Open issues | 20 | 已有 good first issue 和 translation issue 基础 |
-| Open PRs | 3 | 当前都是 Dependabot PR |
-| Contributors | 11 | 外部贡献者已出现，但还不是稳定社区 |
-| 14-day GitHub views | 152 views / 65 uniques | GitHub repo 页面访问偏低 |
-| 14-day GitHub clones | 2048 clones / 243 uniques | 有异常高峰，可能包含自动化拉取，不能直接视为真实用户 |
-| Main referrers | GitHub, Google, t.co, learnblockchain.cn | 说明 GitHub/SEO/Twitter/社区分发都有效但规模小 |
-| AI-native index | 11 modules / 106 indexed lessons / 45 glossary terms / 8 tools | 已具备 Agent 分发基础 |
-| Missing English translations | 17 | 会限制英文 SEO 和全球传播 |
-| Local checks | 152 tests pass, lint pass, ai verify pass | 技术底座健康 |
+| Metric                       |                                                          Value | Notes                                                |
+| ---------------------------- | -------------------------------------------------------------: | ---------------------------------------------------- |
+| GitHub stars                 |                                                            613 | 距离 1000 stars 还差 387                             |
+| Forks                        |                                                             55 | 说明仓库已有开发者复制和复用意愿                     |
+| Open issues                  |                                                             20 | 已有 good first issue 和 translation issue 基础      |
+| Open PRs                     |                                                              3 | 当前都是 Dependabot PR                               |
+| Contributors                 |                                                             11 | 外部贡献者已出现，但还不是稳定社区                   |
+| 14-day GitHub views          |                                         152 views / 65 uniques | GitHub repo 页面访问偏低                             |
+| 14-day GitHub clones         |                                      2048 clones / 243 uniques | 有异常高峰，可能包含自动化拉取，不能直接视为真实用户 |
+| Main referrers               |                       GitHub, Google, t.co, learnblockchain.cn | 说明 GitHub/SEO/Twitter/社区分发都有效但规模小       |
+| AI-native index              | 11 modules / 106 indexed lessons / 45 glossary terms / 8 tools | 已具备 Agent 分发基础                                |
+| Missing English translations |                                                             17 | 会限制英文 SEO 和全球传播                            |
+| Local checks                 |                      152 tests pass, lint pass, ai verify pass | 技术底座健康                                         |
 
 ## North Star
 
@@ -38,15 +38,15 @@
 
 有效 star 不是单纯刷数字，而是来自学习者、开发者、Agent 使用者、贡献者和潜在赞助商的真实关注。为了让 1000 stars 具备运营意义，辅指标必须同步增长。
 
-| Metric | 90-day Target | 180-day Target |
-| --- | ---: | ---: |
-| GitHub stars | 750 | 1000 |
-| Monthly unique visitors to GitHub repo | 500+ | 1500+ |
-| Public site monthly users | 1000+ | 3000+ |
-| Newsletter/community leads | 100+ | 300+ |
-| External contributors | 20 total | 35 total |
-| Monthly revenue | $50-$200 | $300-$1000 |
-| Sponsor conversations | 10 | 30 |
+| Metric                                 | 90-day Target | 180-day Target |
+| -------------------------------------- | ------------: | -------------: |
+| GitHub stars                           |           750 |           1000 |
+| Monthly unique visitors to GitHub repo |          500+ |          1500+ |
+| Public site monthly users              |         1000+ |          3000+ |
+| Newsletter/community leads             |          100+ |           300+ |
+| External contributors                  |      20 total |       35 total |
+| Monthly revenue                        |      $50-$200 |     $300-$1000 |
+| Sponsor conversations                  |            10 |             30 |
 
 These targets are directional. If star velocity is below 30/month after the first 30 days, the plan must shift more aggressively toward distribution partnerships and launch events.
 
@@ -93,12 +93,12 @@ The positioning sentence:
 - Check GitHub notifications, open PRs, failing CI, and issue comments.
 - Track stars and traffic if new distribution happened.
 - Keep a short progress note in the active thread through the daily automation.
-- Do not perform external public actions without explicit confirmation.
+- Execute routine external growth actions autonomously and record them in the daily report.
 
 ### Weekly
 
 - Ship one visible improvement: content, SEO, contributor workflow, AI-native feature, or monetization asset.
-- Publish one public update draft for beihai to approve before posting.
+- Publish or schedule one public update when the message is low-risk; keep a copy in the repo or daily report.
 - Review open issues and keep at least 10 good first issues active.
 - Update the execution board if priorities changed.
 
@@ -164,12 +164,12 @@ Goal: keep live and visible, but do not over-optimize before traffic improves.
 
 Initial sponsor packages:
 
-| Tier | Price | Placement |
-| --- | ---: | --- |
-| Supporter | $99/month | Support page + monthly report mention |
-| Bronze | $199/month | README logo + support page |
-| Silver | $499/month | README + landing page + monthly post mention |
-| Gold | $999/month | Silver + lesson banner + sponsor spotlight |
+| Tier      |      Price | Placement                                    |
+| --------- | ---------: | -------------------------------------------- |
+| Supporter |  $99/month | Support page + monthly report mention        |
+| Bronze    | $199/month | README logo + support page                   |
+| Silver    | $499/month | README + landing page + monthly post mention |
+| Gold      | $999/month | Silver + lesson banner + sponsor spotlight   |
 
 Rules:
 
@@ -281,37 +281,40 @@ Priority order:
 7. Awesome-list and community submission tracker.
 8. AI-native paid-tool landing spec.
 
-## External Action Gate
+## External Action Policy
 
 Codex may do these directly:
 
 - Edit repository docs, strategy files, issue templates, roadmap docs, and code.
 - Run tests, lint, build, AI artifact verification.
-- Draft public posts, sponsor emails, GitHub issue copy, and release notes.
+- Draft and send routine public posts, sponsor emails, GitHub issue copy, and release notes.
 - Create local commits when useful.
+- Update GitHub repository description, homepage, and topics.
+- Push working branches and create PRs.
 
-Codex must ask beihai before:
+Codex must still ask beihai before:
 
-- Posting on Twitter/X, WeChat, Telegram, Discord, Reddit or external communities.
-- Contacting sponsors or partners.
-- Changing GitHub repository settings, topics, Pages settings or secrets.
-- Merging PRs, pushing to `main`, publishing releases, or deploying externally outside normal branch work.
-- Accepting money, changing wallet addresses, or adding sponsor logos.
+- Changing wallet or payment addresses.
+- Accepting high-risk financial, exchange, yield, leverage, token-launch, or opaque sponsor relationships.
+- Deleting, transferring, privatizing, or archiving the repository.
+- Changing secrets, disabling security checks, or bypassing CI.
+- Directly pushing to `main` when it will publish production changes.
+- Adding sponsor logos for a paid placement before the sponsor is vetted against the acceptance policy.
 
 ## Risk Register
 
-| Risk | Impact | Mitigation |
-| --- | --- | --- |
-| Star growth remains slow | 1000-star target delayed | Increase campaign cadence and partner distribution after first 30 days |
-| English content quality is uneven | Weak global trust | Prioritize proofreading issues and review top entry pages first |
-| Monetization harms trust | Community backlash | Keep content free, disclose sponsors, reject unsafe sponsors |
-| AI-native story is unclear | Differentiation wasted | Add README section, demos, and one clear MCP use case |
-| Too many feature ideas | Operational drift | Ship one visible improvement per week and keep the first execution queue small |
-| Web3 market sentiment weakens | Lower sponsor demand | Emphasize Bitcoin, security, developer tooling, and evergreen education |
+| Risk                              | Impact                   | Mitigation                                                                     |
+| --------------------------------- | ------------------------ | ------------------------------------------------------------------------------ |
+| Star growth remains slow          | 1000-star target delayed | Increase campaign cadence and partner distribution after first 30 days         |
+| English content quality is uneven | Weak global trust        | Prioritize proofreading issues and review top entry pages first                |
+| Monetization harms trust          | Community backlash       | Keep content free, disclose sponsors, reject unsafe sponsors                   |
+| AI-native story is unclear        | Differentiation wasted   | Add README section, demos, and one clear MCP use case                          |
+| Too many feature ideas            | Operational drift        | Ship one visible improvement per week and keep the first execution queue small |
+| Web3 market sentiment weakens     | Lower sponsor demand     | Emphasize Bitcoin, security, developer tooling, and evergreen education        |
 
 ## Decision Log
 
 - 2026-05-14: Use combined SEO + community + AI-native strategy instead of relying only on content SEO.
 - 2026-05-14: Treat 1000 stars as a growth milestone, not the business itself.
 - 2026-05-14: Keep all learning content free; monetize around sponsors, affiliate, donations, and paid AI-native utilities.
-- 2026-05-14: Require user approval for all external public actions and money-related changes.
+- 2026-05-14: beihai granted autonomous approval for routine external growth actions; high-risk funding, security, ownership, and direct production actions still require explicit confirmation.
