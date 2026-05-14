@@ -2,8 +2,8 @@ import { describe, it, expect } from 'vitest';
 import { COURSE_DATA } from '../courseData';
 
 describe('courseData', () => {
-  it('should have 10 modules', () => {
-    expect(COURSE_DATA).toHaveLength(10);
+  it('should have 11 modules', () => {
+    expect(COURSE_DATA).toHaveLength(11);
   });
 
   it('module-7 should have correct structure', () => {
@@ -36,6 +36,19 @@ describe('courseData', () => {
     expect(lessonsWithLab.length).toBeGreaterThanOrEqual(2);
     lessonsWithLab.forEach((lesson) => {
       expect(lesson.labUrl).toMatch(/^https:\/\/github\.com\/beihaili\//);
+    });
+  });
+
+  it('module-11 should cover Ethereum smart accounts', () => {
+    const mod11 = COURSE_DATA.find((m) => m.id === 'module-11');
+    expect(mod11).toBeDefined();
+    expect(mod11.title).toBe('以太坊与智能账户');
+    expect(mod11.lessons).toHaveLength(2);
+    mod11.lessons.forEach((lesson) => {
+      expect(lesson).toHaveProperty('id');
+      expect(lesson).toHaveProperty('title');
+      expect(lesson).toHaveProperty('path');
+      expect(lesson.path).toMatch(/^EthereumSmartAccounts\//);
     });
   });
 });

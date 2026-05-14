@@ -12,6 +12,7 @@ import {
   Landmark,
   Network,
   Vote,
+  WalletCards,
 } from 'lucide-react';
 
 /**
@@ -221,6 +222,25 @@ export const ACHIEVEMENT_BADGES = {
       experience: 300,
       unlockedFeatures: ['治理提案分析工具', 'DAO 创建向导'],
       nextBadgeHint: '尝试参与一个真实 DAO 的治理投票！',
+    },
+  },
+  'module-11': {
+    id: 'ethereum-smart-account-builder',
+    name: 'Ethereum Smart Account Builder',
+    title: '以太坊智能账户建设者',
+    description: '理解 Pectra、Fusaka、账户抽象和智能钱包的现代以太坊体验',
+    icon: WalletCards,
+    rarity: 'Epic',
+    color: 'from-sky-500 to-blue-500',
+    glowColor: 'shadow-sky-500/50',
+    borderColor: 'border-sky-500',
+    bgColor: 'bg-sky-500/10',
+    requirement: '完成以太坊与智能账户的所有 2 个课程',
+    rewards: {
+      title: '💳 智能账户建设者',
+      experience: 250,
+      unlockedFeatures: ['智能账户学习路径', '钱包安全检查清单'],
+      nextBadgeHint: '继续把账户抽象知识应用到真实 DApp 和钱包体验设计中',
     },
   },
 };

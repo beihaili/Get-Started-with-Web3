@@ -22,17 +22,20 @@ describe('LanguageProvider', () => {
     const wrapper = createWrapper('/en/dashboard');
     const { result } = renderHook(() => useTranslation(), { wrapper });
     expect(result.current.i18n.language).toBe('en');
+    expect(document.documentElement.lang).toBe('en');
   });
 
   it('should set i18n language from URL param (zh)', () => {
     const wrapper = createWrapper('/zh/dashboard');
     const { result } = renderHook(() => useTranslation(), { wrapper });
     expect(result.current.i18n.language).toBe('zh');
+    expect(document.documentElement.lang).toBe('zh-CN');
   });
 
   it('should fallback to en for unsupported language', () => {
     const wrapper = createWrapper('/fr/dashboard');
     const { result } = renderHook(() => useTranslation(), { wrapper });
     expect(result.current.i18n.language).toBe('en');
+    expect(document.documentElement.lang).toBe('en');
   });
 });

@@ -40,7 +40,7 @@ describe('generate-ai-index', () => {
     );
     const llmsTxt = await readFile(path.join(tempDir, 'llms.txt'), 'utf8');
 
-    expect(manifest.counts.modules).toBe(10);
+    expect(manifest.counts.modules).toBe(11);
     expect(manifest.mcp.command).toBe('npm run mcp:web3');
     expect(contentIndex.lessons.length).toBeGreaterThan(40);
     expect(llmsTxt).toContain('Get Started With Web3 AI Index');

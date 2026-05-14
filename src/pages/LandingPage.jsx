@@ -62,7 +62,7 @@ const LandingPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 relative overflow-hidden">
       <SeoHead
-        title="Get Started with Web3 - 从入门到精通"
+        title={t('landing.pageTitle')}
         description={t('landing.subtitle')}
         url={canonicalUrl}
         type="webpage"

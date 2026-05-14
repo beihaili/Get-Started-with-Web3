@@ -2,78 +2,91 @@ import { existsSync } from 'node:fs';
 import { cp, mkdir, rm, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { COURSE_DATA } from '../src/config/courseData.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const projectRoot = path.resolve(__dirname, '..');
 
-const SOURCE_ROOT = path.join(projectRoot, 'zh');
-const DEST_ROOT = path.join(projectRoot, 'public', 'content', 'zh');
-
-const SOURCE_FOLDERS = [
-  'Web3QuickStart',
-  'GetStartedWithBitcoin',
-  'Web3Thoughts',
-  'Web3BuilderLab',
-  'DeFiDeepDive',
-  'L2CrossChain',
-  'DAOGovernance',
-  '其它学习资源整理/DeFi',
-  '其它学习资源整理/Etherum',
-  '其它学习资源整理/Layer2',
-  '其它学习资源整理/新兴公链生态',
-  '其它学习资源整理/AI_Web3',
-  '其它学习资源整理/实用工具',
-];
-
 const ensureExists = async (dir) => {
   await mkdir(dir, { recursive: true });
 };
 
-const safeCopy = async (source, destination) => {
+export const getSourceFoldersFromCourseData = (courseData = COURSE_DATA) => {
+  const folders = new Set();
+
+  for (const module of courseData) {
+    for (const lesson of module.lessons || []) {
+      const parts = String(lesson.path || '')
+        .split('/')
+        .filter(Boolean);
+
+      if (parts.length === 0) {
+        continue;
+      }
+
+      if (parts[0] === '其它学习资源整理' && parts.length > 1) {
+        folders.add(parts.slice(0, 2).join('/'));
+      } else {
+        folders.add(parts[0]);
+      }
+    }
+  }
+
+  return [...folders];
+};
+
+const safeCopy = async (source, destination, logger = console) => {
   try {
     const statResult = await stat(source);
     if (!statResult.isDirectory()) {
-      console.warn(`[sync-content] Skip ${source}: not a directory`);
+      logger.warn(`[sync-content] Skip ${source}: not a directory`);
       return;
     }
   } catch (error) {
-    console.warn(`[sync-content] Skip ${source}: ${error.message}`);
+    logger.warn(`[sync-content] Skip ${source}: ${error.message}`);
     return;
   }
 
   await ensureExists(path.dirname(destination));
   await rm(destination, { recursive: true, force: true });
   await cp(source, destination, { recursive: true });
-  console.log(`[sync-content] Copied ${source} -> ${destination}`);
+  logger.log(`[sync-content] Copied ${source} -> ${destination}`);
 };
 
-const main = async () => {
-  await ensureExists(path.join(projectRoot, 'public', 'content'));
+export const syncContent = async (options = {}) => {
+  const root = options.projectRoot || projectRoot;
+  const sourceFolders = options.sourceFolders || getSourceFoldersFromCourseData(options.courseData);
+  const logger = options.logger || console;
 
-  for (const folder of SOURCE_FOLDERS) {
-    const src = path.join(SOURCE_ROOT, folder);
-    const dest = path.join(DEST_ROOT, folder);
-    await safeCopy(src, dest);
+  await ensureExists(path.join(root, 'public', 'content'));
+
+  for (const folder of sourceFolders) {
+    const src = path.join(root, 'zh', folder);
+    const dest = path.join(root, 'public', 'content', 'zh', folder);
+    await safeCopy(src, dest, logger);
   }
 
   // Sync en/ folders (skip silently if source doesn't exist)
-  const enSource = path.resolve(projectRoot, 'en');
-  const enTarget = path.resolve(projectRoot, 'public', 'content', 'en');
+  const enSource = path.resolve(root, 'en');
+  const enTarget = path.resolve(root, 'public', 'content', 'en');
 
-  for (const folder of SOURCE_FOLDERS) {
+  for (const folder of sourceFolders) {
     const src = path.join(enSource, folder);
     const dest = path.join(enTarget, folder);
     if (existsSync(src)) {
-      await safeCopy(src, dest);
+      await safeCopy(src, dest, logger);
     }
   }
 
-  console.log(`[sync-content] Completed. Content root: ${path.relative(projectRoot, DEST_ROOT)}`);
+  logger.log(
+    `[sync-content] Completed. Content root: ${path.relative(root, path.join(root, 'public', 'content', 'zh'))}`
+  );
 };
 
-main().catch((error) => {
-  console.error('[sync-content] Failed:', error);
-  process.exitCode = 1;
-});
-
+if (process.argv[1] === __filename) {
+  syncContent().catch((error) => {
+    console.error('[sync-content] Failed:', error);
+    process.exitCode = 1;
+  });
+}

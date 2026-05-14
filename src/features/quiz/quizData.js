@@ -2841,6 +2841,127 @@ export const QUIZ_BANK = {
         'AI 在 DAO 中应扮演辅助角色（如摘要、模拟、监控），而非完全替代人类决策，保持人类的最终控制权至关重要。',
     },
   ],
+  '11-1': [
+    // Pectra 与 Fusaka 后的以太坊
+    {
+      question: 'Pectra 升级中与普通 EOA 获得智能账户能力最相关的是哪个 EIP？',
+      options: ['EIP-1559', 'EIP-4844', 'EIP-7702', 'EIP-20'],
+      correctAnswer: 2,
+      explanation:
+        'EIP-7702 允许 EOA 设置代码委托，从而在原地址上获得批量交易、Gas 赞助等智能账户能力。',
+    },
+    {
+      question: 'Pectra 将验证者最大有效余额提高到 2048 ETH 的主要目的是什么？',
+      options: [
+        '提高 solo staking 的最低门槛',
+        '让大型质押运营方合并验证者并降低共识开销',
+        '取消验证者奖励',
+        '让普通转账不再需要 Gas',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'EIP-7251 提高最大有效余额，方便大型质押运营方合并验证者、减少签名传播和运维复杂度，并不改变 32 ETH 的基本参与门槛。',
+    },
+    {
+      question: 'Blob 对 L2 的核心价值是什么？',
+      options: [
+        '让 L2 不需要发布任何数据',
+        '为 Rollup 提供更便宜的专用数据发布通道',
+        '让所有交易都免费',
+        '取代智能合约',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'Blob 是 EIP-4844 引入的临时数据载体，主要用于 Rollup 发布交易数据，从而降低 L2 的 L1 数据成本。',
+    },
+    {
+      question: 'Fusaka 中 PeerDAS 解决的主要问题是什么？',
+      options: [
+        '让每个节点下载更多完整 Blob 数据',
+        '通过数据可用性采样降低节点处理 Blob 的负担',
+        '让 ETH 变成稳定币',
+        '取消 L2 排序器',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'PeerDAS 让节点抽样验证 Blob 数据，而不是每个节点下载全部数据，为 Blob 扩容和 L2 降费提供可持续路径。',
+    },
+    {
+      question: '以太坊协议升级后，普通用户最应该警惕什么？',
+      options: [
+        'ETH 必须手动升级成新 ETH',
+        '所有钱包都会自动失效',
+        '借升级名义诱导签名或迁移资产的钓鱼链接',
+        'L2 会永久停止运行',
+      ],
+      correctAnswer: 2,
+      explanation:
+        '协议升级不需要用户手动迁移 ETH。声称需要点击链接升级、领取补贴或激活钱包的页面应默认视为高风险。',
+    },
+  ],
+  '11-2': [
+    // 账户抽象与智能钱包
+    {
+      question: 'ERC-4337 中 UserOperation 表示什么？',
+      options: [
+        '普通以太坊区块',
+        '用户希望智能账户执行的操作数据结构',
+        '稳定币储备证明',
+        'L2 的排序器地址',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'UserOperation 是账户抽象交易流中的核心数据结构，描述用户希望智能账户执行的操作，并由 Bundler 提交给 EntryPoint。',
+    },
+    {
+      question: 'Bundler 在 ERC-4337 中的作用是什么？',
+      options: [
+        '保管用户助记词',
+        '收集 UserOperation 并提交到链上 EntryPoint',
+        '发行稳定币',
+        '决定以太坊区块奖励',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'Bundler 负责收集、模拟和打包 UserOperation，并把它们作为链上交易提交给 EntryPoint 合约。',
+    },
+    {
+      question: 'Paymaster 最常见的用途是什么？',
+      options: [
+        '替用户支付 Gas 或允许用户用其他代币支付手续费',
+        '提高比特币挖矿难度',
+        '生成 NFT 图片',
+        '清空用户钱包授权',
+      ],
+      correctAnswer: 0,
+      explanation:
+        'Paymaster 可以赞助用户 Gas，也可以实现用户用 USDC 等代币间接支付手续费，是改善新手体验的重要组件。',
+    },
+    {
+      question: 'Session Key 的安全设计重点是什么？',
+      options: [
+        '拥有和主私钥完全相同的权限',
+        '不设置任何过期时间',
+        '限制时间、合约、函数和金额，并允许主账户撤销',
+        '公开给所有 DApp 使用',
+      ],
+      correctAnswer: 2,
+      explanation:
+        'Session Key 应是受限临时权限，必须限制可用时间、目标合约、函数和金额，否则只是换一种形式暴露主权限。',
+    },
+    {
+      question: '为什么 EIP-7702 授权比普通消息签名更敏感？',
+      options: [
+        '它只能用于测试网',
+        '它可能让 EOA 设置代码委托，改变账户后续执行逻辑',
+        '它会自动提高 ETH 余额',
+        '它不需要用户确认',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'EIP-7702 授权可能让 EOA 委托给指定智能账户逻辑，因此用户必须确认委托目标、代码可信度、链 ID 和撤销方式。',
+    },
+  ],
 
   // 默认通用题目
   default: [

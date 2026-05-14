@@ -6,7 +6,7 @@
 [![GitHub license](https://img.shields.io/github/license/beihaili/Get-Started-with-Web3)](https://github.com/beihaili/Get-Started-with-Web3/blob/main/LICENSE)
 [![Contributors](https://img.shields.io/github/contributors/beihaili/Get-Started-with-Web3)](https://github.com/beihaili/Get-Started-with-Web3/graphs/contributors)
 
-** 中文世界最系统的比特币与 Web3 开源学习平台。** 27 讲体系化教程，覆盖从 Web3 入门到比特币底层原理的完整知识体系。
+** 中文世界最系统的比特币与 Web3 开源学习平台。** 11 个模块、58 讲体系化教程，覆盖从 Web3 入门、以太坊智能账户、比特币底层原理到 DeFi、L2、DAO 和 Builder 实战的完整知识体系。
 
 ** 在线学习平台（推荐）：** https://beihaili.github.io/Get-Started-with-Web3/
 
@@ -14,15 +14,15 @@
 
 ## 学习路径
 
-建议按顺序学习：** 先完成 Web3 快速入门 ** → ** 再深入比特币技术 **。
+建议按顺序学习：** 先完成 Web3 快速入门 ** → ** 理解以太坊与智能账户 ** → ** 再深入比特币技术、DeFi、L2 和 Builder 实战 **。
 
-有编程基础的开发者可以直接进入比特币技术系列。
+有编程基础的开发者可以直接进入以太坊与智能账户、Web3 Builder 实战或比特币技术系列。
 
 ---
 
-## 1. Web3 快速入门（6 讲）
+## 1. Web3 快速入门（7 讲）
 
-从零开始，无需编程基础，6 讲掌握 Web3 核心操作。
+从零开始，无需编程基础，7 讲掌握 Web3 核心操作。
 
 | 讲次 | 主题 | 关键内容 |
 |------|------|----------|
@@ -30,12 +30,24 @@
 | 02 | [进行你的第一笔 Web3 交易](Web3QuickStart/02_FirstWeb3Transaction/README.md) | 转账操作、Gas 费、交易确认机制 |
 | 03 | [构建你的第一个 Web3 DApp](Web3QuickStart/03_FirstWeb3Dapp/README.md) | 钱包连接、智能合约交互 |
 | 04 | [有用的 Web3 站点](Web3QuickStart/04_UsefulWeb3Sites/README.md) | 区块浏览器、DeFi 工具、信息聚合站点 |
-| 05 | [发行你的第一个代币](Web3QuickStart/05_LaunchYourFirstToken/README.md) | ERC-20 代币发行全流程 |
+| 05 | [发行你的第一个代币](Web3QuickStart/05_LaunchYourFirstToken/README.MD) | Pump.fun、Solana 钱包、Meme 币风险 |
 | 06 | [Web3 安全防护与防骗指南](Web3QuickStart/06_Web3Security/README.md) | 常见骗局识别、资产保护、安全最佳实践 |
+| 07 | [Web3 交易所入门](Web3QuickStart/07_Web3CEX/README.MD) | CEX 入金、提币、链选择和交易安全 |
 
 ---
 
-## 2. 比特币技术入门（21 讲）
+## 2. 以太坊与智能账户（2 讲）
+
+理解 Pectra、Fusaka 后的以太坊路线，以及账户抽象如何改变钱包和 DApp 体验。
+
+| 讲次 | 主题 | 关键内容 |
+|------|------|----------|
+| 01 | [Pectra 与 Fusaka 后的以太坊](EthereumSmartAccounts/01_EthereumAfterPectra/README.md) | EIP-7702、Blob、PeerDAS、L2 扩容路线 |
+| 02 | [账户抽象与智能钱包](EthereumSmartAccounts/02_AccountAbstractionAndSmartWallets/README.md) | ERC-4337、Bundler、Paymaster、Session Key |
+
+---
+
+## 3. 比特币技术入门（21 讲）
 
 按 **5 层技术架构 ** 组织，从密码学基础到生态应用。每一讲都包含原理讲解 + 生活化类比 + 配套代码。
 
@@ -89,7 +101,7 @@
 
 ---
 
-## 3. Web3 思考集
+## 4. Web3 思考集
 
 | 主题 | 简介 |
 |------|------|
@@ -97,20 +109,29 @@
 | [为什么区块链是必须的？](Web3Thoughts/02_WhyBlockchainIsNecessary/README.MD) | 《主权个人》读书笔记 |
 | [区块链彩蛋解读](Web3Thoughts/03_TheCoolestTransactionOnBitcoin/README.MD) | b10c...eb5d 交易中的隐藏彩蛋 |
 
-## 4. 其它学习资源
+## 5. 进阶专题模块
+
+| 主题 | 简介 |
+|------|------|
+| [Web3 Builder 实战](Web3BuilderLab/01_DeployERC20/README.md) | 从部署代币、构建 DApp 到合约安全实战 |
+| [DeFi 深度解析](DeFiDeepDive/01_CoreConcepts/README.md) | AMM、借贷、稳定币和 DeFi 风险 |
+| [跨链与 Layer 2 深度解析](L2CrossChain/01_WhyScaling/README.md) | Rollup、L2 生态、跨链桥和实操指南 |
+| [DAO 与去中心化治理](DAOGovernance/01_WhatIsDAO/README.md) | DAO 机制、工具、案例和治理挑战 |
+
+## 6. 其它学习资源
 
 | 主题 | 简介 |
 |------|------|
 | [以太坊学习指南](其它学习资源整理 / Etherum/README.MD) | 以太坊生态入门资源 |
 | [DeFi 学习指南](其它学习资源整理 / DeFi/README.MD) | DeFi 协议与工具 |
 
-## 5. Web3 工作机会
+## 7. Web3 工作机会
 
 | 主题 | 简介 |
 |------|------|
 | [工作机会和面试技巧](Web3WorkOpportunities/README.md) | Web3 求职方向与准备 |
 
-## 6. 研究报告
+## 8. 研究报告
 
 | 主题 | 简介 |
 |------|------|

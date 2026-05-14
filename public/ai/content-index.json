@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2026-05-09",
-  "generatedAt": "2026-05-10T06:19:19.701Z",
+  "generatedAt": "2026-05-12T13:02:30.320Z",
   "repository": {
     "name": "Get-Started-with-Web3",
     "owner": "beihaili",
@@ -585,7 +585,7 @@
           "labUrl": "https://github.com/beihaili/web3-lab-deploy-token",
           "availability": {
             "zh": true,
-            "en": false
+            "en": true
           },
           "siteUrls": {
             "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-7/7-1",
@@ -599,7 +599,7 @@
           "labUrl": "https://github.com/beihaili/web3-lab-first-dapp",
           "availability": {
             "zh": true,
-            "en": false
+            "en": true
           },
           "siteUrls": {
             "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-7/7-2",
@@ -613,7 +613,7 @@
           "labUrl": null,
           "availability": {
             "zh": true,
-            "en": false
+            "en": true
           },
           "siteUrls": {
             "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-7/7-3",
@@ -627,7 +627,7 @@
           "labUrl": null,
           "availability": {
             "zh": true,
-            "en": false
+            "en": true
           },
           "siteUrls": {
             "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-7/7-4",
@@ -648,7 +648,7 @@
           "labUrl": null,
           "availability": {
             "zh": true,
-            "en": false
+            "en": true
           },
           "siteUrls": {
             "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-8/8-1",
@@ -662,7 +662,7 @@
           "labUrl": null,
           "availability": {
             "zh": true,
-            "en": false
+            "en": true
           },
           "siteUrls": {
             "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-8/8-2",
@@ -676,7 +676,7 @@
           "labUrl": null,
           "availability": {
             "zh": true,
-            "en": false
+            "en": true
           },
           "siteUrls": {
             "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-8/8-3",
@@ -690,7 +690,7 @@
           "labUrl": null,
           "availability": {
             "zh": true,
-            "en": false
+            "en": true
           },
           "siteUrls": {
             "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-8/8-4",
@@ -704,7 +704,7 @@
           "labUrl": null,
           "availability": {
             "zh": true,
-            "en": false
+            "en": true
           },
           "siteUrls": {
             "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-8/8-5",
@@ -863,6 +863,41 @@
           "siteUrls": {
             "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-10/10-5",
             "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-10/10-5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "module-11",
+      "title": "以太坊与智能账户",
+      "lessonCount": 2,
+      "lessons": [
+        {
+          "id": "11-1",
+          "title": "Pectra 与 Fusaka 后的以太坊",
+          "path": "EthereumSmartAccounts/01_EthereumAfterPectra",
+          "labUrl": null,
+          "availability": {
+            "zh": true,
+            "en": true
+          },
+          "siteUrls": {
+            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-11/11-1",
+            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-11/11-1"
+          }
+        },
+        {
+          "id": "11-2",
+          "title": "账户抽象与智能钱包",
+          "path": "EthereumSmartAccounts/02_AccountAbstractionAndSmartWallets",
+          "labUrl": null,
+          "availability": {
+            "zh": true,
+            "en": true
+          },
+          "siteUrls": {
+            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-11/11-2",
+            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-11/11-2"
           }
         }
       ]
@@ -1246,7 +1281,7 @@
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3QuickStart/02_FirstWeb3Transaction/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-1/1-2"
       },
-      "excerpt": "发送第一笔 Web3 交易 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言 交易是什么 0 成本在测试网上发出第一笔交易 （选做）在主网上发出第一笔交易 常见问题 总结 前言 还记得第一次用手机转账给朋友的经历吗？那种成功完成操作的成就感是始终让人难忘的。今天，我们将在 Web3 世界中体验更加有意义的一步 —— 第一笔区块链交易。 与传统银行交易不同，Web3 交易不需要任何中间人，不需要等待周末或者节假日，更不需要担心国际汇款的高额手续费。今天，我",
+      "excerpt": "发送第一笔 Web3 交易 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言 交易是什么 0 成本在测试网上发出第一笔交易 2026 更新：交易生命周期与安全检查 （选做）在主网上发出第一笔交易 常见问题 总结 前言 还记得第一次用手机转账给朋友的经历吗？那种成功完成操作的成就感是始终让人难忘的。今天，我们将在 Web3 世界中体验更加有意义的一步 —— 第一笔区块链交易。 与传统银行交易不同，Web3 交易不需要任何中间人，不需要等待周末或者节假日，更",
       "headings": [
         {
           "level": 1,
@@ -1286,6 +1321,30 @@
         },
         {
           "level": 2,
+          "text": "2026 更新：交易生命周期与安全检查"
+        },
+        {
+          "level": 3,
+          "text": "交易字段怎么看"
+        },
+        {
+          "level": 3,
+          "text": "Nonce：为什么交易会“排队”"
+        },
+        {
+          "level": 3,
+          "text": "交易失败不等于资产被偷"
+        },
+        {
+          "level": 3,
+          "text": "L2 交易和主网交易有什么不同"
+        },
+        {
+          "level": 3,
+          "text": "发送前的 30 秒安全检查"
+        },
+        {
+          "level": 2,
           "text": "（选做）在主网上发出第一笔交易"
         },
         {
@@ -1313,8 +1372,8 @@
           "text": "总结"
         }
       ],
-      "codeBlockCount": 0,
-      "characterCount": 4672
+      "codeBlockCount": 2,
+      "characterCount": 6568
     },
     {
       "id": "en/module-1/1-2",
@@ -1746,7 +1805,7 @@
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3QuickStart/04_UsefulWeb3Sites/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-1/1-4"
       },
-      "excerpt": "新手常用的 Web3 工具类网站 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言 区块链浏览器 数字资产行情网站 DeFi 工具 靠谱的交易所网站 常见问题 总结 前言 初次进入 Web3 世界的感觉，就像正在斩草开路的探险家 —— 周围是陌生而神秘的热带雨林，充满了未知与机遇。没有指南，每一步都可能迷失方向；没有工具，即使最简单的探索也变得困难。 我们所有人都经历过这样的迷茫，我也是如此。正因为这些经历，我特意整理了这份「生存工具箱」 —— 经过时间",
+      "excerpt": "新手常用的 Web3 工具类网站 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言 区块链浏览器 数字资产行情网站 DeFi 工具 靠谱的交易所网站 2026 Web3 工具地图 常见问题 总结 前言 初次进入 Web3 世界的感觉，就像正在斩草开路的探险家 —— 周围是陌生而神秘的热带雨林，充满了未知与机遇。没有指南，每一步都可能迷失方向；没有工具，即使最简单的探索也变得困难。 我们所有人都经历过这样的迷茫，我也是如此。正因为这些经历，我特意整理了这份",
       "headings": [
         {
           "level": 1,
@@ -1765,52 +1824,36 @@
           "text": "一、区块链浏览器"
         },
         {
-          "level": 3,
-          "text": "1. [Etherscan](https://etherscan.io/)"
-        },
-        {
-          "level": 3,
-          "text": "2. [PolygonScan](https://polygonscan.com/)"
-        },
-        {
-          "level": 3,
-          "text": "3. [xxxscan](https://xxxscan.com/)"
-        },
-        {
-          "level": 3,
-          "text": "4. [Mempool](https://mempool.space/)"
-        },
-        {
           "level": 2,
           "text": "二、数字资产行情网站"
-        },
-        {
-          "level": 3,
-          "text": "1. [CoinMarketCap](https://coinmarketcap.com/)"
-        },
-        {
-          "level": 3,
-          "text": "2. [CoinGecko](https://www.coingecko.com/)"
         },
         {
           "level": 2,
           "text": "三、DeFi 工具"
         },
         {
-          "level": 3,
-          "text": "1. [DefiLlama](https://defillama.com/)"
-        },
-        {
           "level": 2,
           "text": "四、靠谱的交易所网站"
         },
         {
-          "level": 3,
-          "text": "1. [Binance](https://www.binance.com/)"
+          "level": 2,
+          "text": "2026 Web3 工具地图"
         },
         {
           "level": 3,
-          "text": "2. [OKX](https://www.okx.com/)"
+          "text": "钱包与安全"
+        },
+        {
+          "level": 3,
+          "text": "开发与合约"
+        },
+        {
+          "level": 3,
+          "text": "L2 与跨链"
+        },
+        {
+          "level": 3,
+          "text": "研究与信息源"
         },
         {
           "level": 2,
@@ -1834,7 +1877,7 @@
         }
       ],
       "codeBlockCount": 0,
-      "characterCount": 3584
+      "characterCount": 5811
     },
     {
       "id": "en/module-1/1-4",
@@ -2365,20 +2408,20 @@
           "text": "持续关注安全动态"
         },
         {
-          "level": 2,
-          "text": "🎯 安全检查清单"
+          "level": 3,
+          "text": "2026 需要重点理解的新风险"
         },
         {
-          "level": 3,
-          "text": "📋 日常安全检查（每周）"
+          "level": 4,
+          "text": "1. Permit / Permit2 签名钓鱼"
         },
         {
-          "level": 3,
-          "text": "📋 深度安全检查（每月）"
+          "level": 4,
+          "text": "2. EIP-7702 授权钓鱼"
         }
       ],
       "codeBlockCount": 21,
-      "characterCount": 6963
+      "characterCount": 8205
     },
     {
       "id": "en/module-1/1-6",
@@ -8386,7 +8429,7 @@
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/17_BitcoinLowFeeBroadcast/README.MD",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-4/4-3"
       },
-      "excerpt": "第 17 讲：比特币开发工具 💡 比特币网络手续费时常波动，当费率处于低谷时，是整理钱包中「粉尘」 UTXO 、甚至发送一些「时间胶囊」交易的绝佳时机。本教程将带你构建一个可以通过自己全节点广播 任意低费率 交易的强大工具。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言：为何要发送低费率交易？ 准备工作 核心原理：通过配置本地节点实现 步骤 1：修改 bitcoin.conf 步骤 2：编写 low fee broadcaster.py 脚本 步骤 3：运行脚本与成果展示 多节点广播与低费率交易实战经验 安全注意事项 总结 常见问题 前言：为何要发送低费率交易？ 你是否曾发现自己的比特币钱包里充满了大量零散的、价值极小的交易输出 (UTXO)？这些通常",
+      "excerpt": "第 17 讲：比特币开发工具 💡 比特币网络手续费时常波动，当费率处于低谷时，是整理钱包中「粉尘」 UTXO 、甚至发送一些「时间胶囊」交易的绝佳时机。本教程将带你构建一个可以通过自己全节点广播 任意低费率 交易的强大工具。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言：为何要发送低费率交易？ 准备工作 核心原理：通过配置本地节点实现 步骤 1：修改 bitcoin.conf 步骤 2：编写 low fee broadcaster.py 脚本 步骤 3：运行脚本与成果展示 多节点广播与低费率交易实战经验 安全注意事项 总结 2026 更新：Bitcoin Core 31.0 后的费率与 mempool 常见问题 前言：为何要发送低费率交易？ 你是否曾发",
       "headings": [
         {
           "level": 1,
@@ -8474,6 +8517,34 @@
         },
         {
           "level": 2,
+          "text": "2026 更新：Bitcoin Core 31.0 后的费率与 mempool"
+        },
+        {
+          "level": 3,
+          "text": "Cluster mempool：从祖先/后代限制到交易簇"
+        },
+        {
+          "level": 3,
+          "text": "Package relay：低费父交易可以被高费子交易带动"
+        },
+        {
+          "level": 3,
+          "text": "settxfee 删除：按交易指定 feerate"
+        },
+        {
+          "level": 3,
+          "text": "0.1 sat/vB 费率桶：费率估算更细"
+        },
+        {
+          "level": 3,
+          "text": "Private broadcast：广播隐私的新选项"
+        },
+        {
+          "level": 3,
+          "text": "低费率广播的新实践建议"
+        },
+        {
+          "level": 2,
           "text": "📖 RBF（Replace-By-Fee）详细示例"
         },
         {
@@ -8519,38 +8590,10 @@
         {
           "level": 1,
           "text": "新的交易 ID 会在 bumpfee 的返回结果中"
-        },
-        {
-          "level": 1,
-          "text": "查看新交易状态"
-        },
-        {
-          "level": 3,
-          "text": "🔑 RBF 的常见应用场景"
-        },
-        {
-          "level": 2,
-          "text": "📖 CPFP（Child-Pays-For-Parent）详细示例"
-        },
-        {
-          "level": 3,
-          "text": "🔑 CPFP 与 RBF 的对比"
-        },
-        {
-          "level": 3,
-          "text": "🔑 CPFP 实操步骤"
-        },
-        {
-          "level": 1,
-          "text": "Bob 查看自己钱包中的未确认交易"
-        },
-        {
-          "level": 1,
-          "text": "参数：最小确认数 = 0，最大确认数 = 0（仅显示未确认）"
         }
       ],
-      "codeBlockCount": 15,
-      "characterCount": 13220
+      "codeBlockCount": 17,
+      "characterCount": 15369
     },
     {
       "id": "en/module-4/4-3",
@@ -12873,6 +12916,79 @@
       "characterCount": 19335
     },
     {
+      "id": "en/module-7/7-1",
+      "lang": "en",
+      "moduleId": "module-7",
+      "moduleTitle": "Web3 Builder 实战",
+      "lessonId": "7-1",
+      "title": "从零部署 ERC-20 代币",
+      "path": "Web3BuilderLab/01_DeployERC20",
+      "labUrl": "https://github.com/beihaili/web3-lab-deploy-token",
+      "sourcePath": "en/Web3BuilderLab/01_DeployERC20/README.md",
+      "citation": {
+        "file": "en/Web3BuilderLab/01_DeployERC20/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/Web3BuilderLab/01_DeployERC20/README.md",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-7/7-1"
+      },
+      "excerpt": "Deploy an ERC 20 Token From Scratch This lab walks you through building, testing, deploying, and verifying a simple ERC 20 token with Foundry and OpenZeppelin. The goal is not to encourage launching meaningless tokens. The goal is to understand the token standard that powers much of Web3. Table of Contents What ERC 20 Is What You Will Build Development Environment Create the Token Contract Write Tests Deploy to Sepol",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Deploy an ERC-20 Token From Scratch"
+        },
+        {
+          "level": 2,
+          "text": "Table of Contents"
+        },
+        {
+          "level": 2,
+          "text": "What ERC-20 Is"
+        },
+        {
+          "level": 2,
+          "text": "What You Will Build"
+        },
+        {
+          "level": 2,
+          "text": "Development Environment"
+        },
+        {
+          "level": 2,
+          "text": "Create the Token Contract"
+        },
+        {
+          "level": 2,
+          "text": "Write Tests"
+        },
+        {
+          "level": 2,
+          "text": "Deploy to Sepolia"
+        },
+        {
+          "level": 2,
+          "text": "Verify on Etherscan"
+        },
+        {
+          "level": 2,
+          "text": "Hands-On Tasks"
+        },
+        {
+          "level": 2,
+          "text": "Common Mistakes"
+        },
+        {
+          "level": 2,
+          "text": "Summary"
+        },
+        {
+          "level": 2,
+          "text": "Further Reading"
+        }
+      ],
+      "codeBlockCount": 14,
+      "characterCount": 8553
+    },
+    {
       "id": "zh/module-7/7-2",
       "lang": "zh",
       "moduleId": "module-7",
@@ -13052,6 +13168,95 @@
       ],
       "codeBlockCount": 17,
       "characterCount": 16986
+    },
+    {
+      "id": "en/module-7/7-2",
+      "lang": "en",
+      "moduleId": "module-7",
+      "moduleTitle": "Web3 Builder 实战",
+      "lessonId": "7-2",
+      "title": "构建你的第一个 DApp",
+      "path": "Web3BuilderLab/02_BuildFirstDApp",
+      "labUrl": "https://github.com/beihaili/web3-lab-first-dapp",
+      "sourcePath": "en/Web3BuilderLab/02_BuildFirstDApp/README.md",
+      "citation": {
+        "file": "en/Web3BuilderLab/02_BuildFirstDApp/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/Web3BuilderLab/02_BuildFirstDApp/README.md",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-7/7-2"
+      },
+      "excerpt": "Build Your First DApp This lab builds a minimal React DApp that connects a wallet and reads contract data. The goal is to understand the frontend architecture behind most EVM applications: wallet connection, chain configuration, contract ABI, reads, writes, and user state. Table of Contents What a DApp Is Architecture Overview Create the Project Configure wagmi Wrap the App With Providers Implement Wallet Connection ",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Build Your First DApp"
+        },
+        {
+          "level": 2,
+          "text": "Table of Contents"
+        },
+        {
+          "level": 2,
+          "text": "What a DApp Is"
+        },
+        {
+          "level": 2,
+          "text": "Architecture Overview"
+        },
+        {
+          "level": 2,
+          "text": "Create the Project"
+        },
+        {
+          "level": 2,
+          "text": "Configure wagmi"
+        },
+        {
+          "level": 2,
+          "text": "Wrap the App With Providers"
+        },
+        {
+          "level": 2,
+          "text": "Implement Wallet Connection"
+        },
+        {
+          "level": 2,
+          "text": "Read Contract Data"
+        },
+        {
+          "level": 2,
+          "text": "Production Checklist"
+        },
+        {
+          "level": 2,
+          "text": "Common Questions"
+        },
+        {
+          "level": 3,
+          "text": "Why does MetaMask not open?"
+        },
+        {
+          "level": 3,
+          "text": "Why does data not update after switching networks?"
+        },
+        {
+          "level": 3,
+          "text": "Should I use RainbowKit?"
+        },
+        {
+          "level": 3,
+          "text": "How do I deploy the frontend?"
+        },
+        {
+          "level": 2,
+          "text": "Summary"
+        },
+        {
+          "level": 2,
+          "text": "Further Reading"
+        }
+      ],
+      "codeBlockCount": 10,
+      "characterCount": 8947
     },
     {
       "id": "zh/module-7/7-3",
@@ -13235,6 +13440,119 @@
       "characterCount": 12352
     },
     {
+      "id": "en/module-7/7-3",
+      "lang": "en",
+      "moduleId": "module-7",
+      "moduleTitle": "Web3 Builder 实战",
+      "lessonId": "7-3",
+      "title": "如何阅读区块浏览器",
+      "path": "Web3BuilderLab/03_ReadBlockExplorer",
+      "labUrl": null,
+      "sourcePath": "en/Web3BuilderLab/03_ReadBlockExplorer/README.md",
+      "citation": {
+        "file": "en/Web3BuilderLab/03_ReadBlockExplorer/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/Web3BuilderLab/03_ReadBlockExplorer/README.md",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-7/7-3"
+      },
+      "excerpt": "How to Read a Block Explorer A block explorer is the most important debugging tool in Web3. It tells you what actually happened on chain, not what a website claimed happened. This lab teaches you how to read Ethereum transactions, Bitcoin transactions, smart contracts, approvals, and wallet activity. Table of Contents What a Block Explorer Is Read an Ethereum Transaction Read a Bitcoin Transaction Inspect a Smart Con",
+      "headings": [
+        {
+          "level": 1,
+          "text": "How to Read a Block Explorer"
+        },
+        {
+          "level": 2,
+          "text": "Table of Contents"
+        },
+        {
+          "level": 2,
+          "text": "What a Block Explorer Is"
+        },
+        {
+          "level": 2,
+          "text": "Read an Ethereum Transaction"
+        },
+        {
+          "level": 3,
+          "text": "Token Transfers"
+        },
+        {
+          "level": 3,
+          "text": "Logs and Events"
+        },
+        {
+          "level": 2,
+          "text": "Read a Bitcoin Transaction"
+        },
+        {
+          "level": 3,
+          "text": "Change Output"
+        },
+        {
+          "level": 3,
+          "text": "SegWit and Taproot"
+        },
+        {
+          "level": 2,
+          "text": "Inspect a Smart Contract"
+        },
+        {
+          "level": 3,
+          "text": "Verified Source Code"
+        },
+        {
+          "level": 3,
+          "text": "Read Contract"
+        },
+        {
+          "level": 3,
+          "text": "Write Contract"
+        },
+        {
+          "level": 2,
+          "text": "Track Wallets and Large Holders"
+        },
+        {
+          "level": 2,
+          "text": "Approval and Token Transfer Safety"
+        },
+        {
+          "level": 2,
+          "text": "Common Questions"
+        },
+        {
+          "level": 3,
+          "text": "What should I do if a transaction is pending?"
+        },
+        {
+          "level": 3,
+          "text": "What does “Internal Transaction” mean?"
+        },
+        {
+          "level": 3,
+          "text": "Why did I pay gas for a failed transaction?"
+        },
+        {
+          "level": 3,
+          "text": "Why does a contract show “Proxy”?"
+        },
+        {
+          "level": 3,
+          "text": "Why does a token appear in my wallet that I never bought?"
+        },
+        {
+          "level": 2,
+          "text": "Summary"
+        },
+        {
+          "level": 2,
+          "text": "Further Reading"
+        }
+      ],
+      "codeBlockCount": 3,
+      "characterCount": 9106
+    },
+    {
       "id": "zh/module-7/7-4",
       "lang": "zh",
       "moduleId": "module-7",
@@ -13416,6 +13734,127 @@
       "characterCount": 18527
     },
     {
+      "id": "en/module-7/7-4",
+      "lang": "en",
+      "moduleId": "module-7",
+      "moduleTitle": "Web3 Builder 实战",
+      "lessonId": "7-4",
+      "title": "智能合约安全实战",
+      "path": "Web3BuilderLab/04_SmartContractSecurity",
+      "labUrl": null,
+      "sourcePath": "en/Web3BuilderLab/04_SmartContractSecurity/README.md",
+      "citation": {
+        "file": "en/Web3BuilderLab/04_SmartContractSecurity/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/Web3BuilderLab/04_SmartContractSecurity/README.md",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-7/7-4"
+      },
+      "excerpt": "Smart Contract Security in Practice Smart contracts often protect real funds. A small logic bug can become a complete loss in one transaction. This lab teaches the most common Solidity vulnerabilities, secure coding habits, automated audit tools, and how to read an audit report. Table of Contents Why Security Matters Common Vulnerabilities Secure Development Practices Automated Audit Tools How to Read an Audit Report",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Smart Contract Security in Practice"
+        },
+        {
+          "level": 2,
+          "text": "Table of Contents"
+        },
+        {
+          "level": 2,
+          "text": "Why Security Matters"
+        },
+        {
+          "level": 2,
+          "text": "Common Vulnerabilities"
+        },
+        {
+          "level": 3,
+          "text": "Reentrancy"
+        },
+        {
+          "level": 3,
+          "text": "Integer Overflow and Underflow"
+        },
+        {
+          "level": 3,
+          "text": "Access Control Bugs"
+        },
+        {
+          "level": 3,
+          "text": "tx.origin Authentication"
+        },
+        {
+          "level": 3,
+          "text": "Oracle Manipulation"
+        },
+        {
+          "level": 3,
+          "text": "Front-Running and MEV"
+        },
+        {
+          "level": 3,
+          "text": "Unchecked External Calls"
+        },
+        {
+          "level": 2,
+          "text": "Secure Development Practices"
+        },
+        {
+          "level": 3,
+          "text": "Use Minimal Privilege"
+        },
+        {
+          "level": 3,
+          "text": "Follow Checks-Effects-Interactions"
+        },
+        {
+          "level": 3,
+          "text": "Use Audited Libraries"
+        },
+        {
+          "level": 3,
+          "text": "Write Hostile Tests"
+        },
+        {
+          "level": 2,
+          "text": "Automated Audit Tools"
+        },
+        {
+          "level": 3,
+          "text": "Slither"
+        },
+        {
+          "level": 3,
+          "text": "Mythril"
+        },
+        {
+          "level": 3,
+          "text": "Foundry Fuzzing and Invariants"
+        },
+        {
+          "level": 3,
+          "text": "Tool Comparison"
+        },
+        {
+          "level": 2,
+          "text": "How to Read an Audit Report"
+        },
+        {
+          "level": 2,
+          "text": "Practical Security Checklist"
+        },
+        {
+          "level": 2,
+          "text": "Summary"
+        },
+        {
+          "level": 2,
+          "text": "Further Reading"
+        }
+      ],
+      "codeBlockCount": 18,
+      "characterCount": 18294
+    },
+    {
       "id": "zh/module-8/8-1",
       "lang": "zh",
       "moduleId": "module-8",
@@ -13535,6 +13974,99 @@
       ],
       "codeBlockCount": 3,
       "characterCount": 7277
+    },
+    {
+      "id": "en/module-8/8-1",
+      "lang": "en",
+      "moduleId": "module-8",
+      "moduleTitle": "DeFi 深度解析",
+      "lessonId": "8-1",
+      "title": "DeFi 核心概念与架构",
+      "path": "DeFiDeepDive/01_CoreConcepts",
+      "labUrl": null,
+      "sourcePath": "en/DeFiDeepDive/01_CoreConcepts/README.md",
+      "citation": {
+        "file": "en/DeFiDeepDive/01_CoreConcepts/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/DeFiDeepDive/01_CoreConcepts/README.md",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-8/8-1"
+      },
+      "excerpt": "DeFi Core Concepts and Architecture DeFi replaces financial intermediaries with smart contracts. This lesson explains what DeFi is, how it differs from traditional finance, why composability matters, how TVL should be interpreted, and how the DeFi stack is organized. Table of Contents What DeFi Is Traditional Finance vs DeFi Smart Contracts as Financial Protocols Composability: Money Legos TVL: A Useful but Limited M",
+      "headings": [
+        {
+          "level": 1,
+          "text": "DeFi Core Concepts and Architecture"
+        },
+        {
+          "level": 2,
+          "text": "Table of Contents"
+        },
+        {
+          "level": 2,
+          "text": "What DeFi Is"
+        },
+        {
+          "level": 2,
+          "text": "Traditional Finance vs DeFi"
+        },
+        {
+          "level": 2,
+          "text": "Smart Contracts as Financial Protocols"
+        },
+        {
+          "level": 2,
+          "text": "Composability: Money Legos"
+        },
+        {
+          "level": 2,
+          "text": "TVL: A Useful but Limited Metric"
+        },
+        {
+          "level": 2,
+          "text": "Core Advantages of DeFi"
+        },
+        {
+          "level": 3,
+          "text": "Permissionless Access"
+        },
+        {
+          "level": 3,
+          "text": "Transparency"
+        },
+        {
+          "level": 3,
+          "text": "Borderless Settlement"
+        },
+        {
+          "level": 3,
+          "text": "Composability"
+        },
+        {
+          "level": 3,
+          "text": "Non-Custodial Design"
+        },
+        {
+          "level": 3,
+          "text": "Automation"
+        },
+        {
+          "level": 2,
+          "text": "The DeFi Technology Stack"
+        },
+        {
+          "level": 2,
+          "text": "A Short History of DeFi"
+        },
+        {
+          "level": 2,
+          "text": "Summary"
+        },
+        {
+          "level": 2,
+          "text": "Further Reading"
+        }
+      ],
+      "codeBlockCount": 4,
+      "characterCount": 10904
     },
     {
       "id": "zh/module-8/8-2",
@@ -13664,6 +14196,111 @@
       ],
       "codeBlockCount": 14,
       "characterCount": 8073
+    },
+    {
+      "id": "en/module-8/8-2",
+      "lang": "en",
+      "moduleId": "module-8",
+      "moduleTitle": "DeFi 深度解析",
+      "lessonId": "8-2",
+      "title": "AMM 与去中心化交易所",
+      "path": "DeFiDeepDive/02_AMMAndDEX",
+      "labUrl": null,
+      "sourcePath": "en/DeFiDeepDive/02_AMMAndDEX/README.md",
+      "citation": {
+        "file": "en/DeFiDeepDive/02_AMMAndDEX/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/DeFiDeepDive/02_AMMAndDEX/README.md",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-8/8-2"
+      },
+      "excerpt": "AMMs and Decentralized Exchanges Automated market makers made on chain trading practical. This lesson explains order books, AMMs, the constant product formula, liquidity pools, LP tokens, slippage, impermanent loss, and the difference between Uniswap V2 and V3. Table of Contents Order Books vs AMMs The Constant Product Formula Liquidity Pools and LP Tokens Slippage and Price Impact Impermanent Loss Uniswap V2 vs V3 M",
+      "headings": [
+        {
+          "level": 1,
+          "text": "AMMs and Decentralized Exchanges"
+        },
+        {
+          "level": 2,
+          "text": "Table of Contents"
+        },
+        {
+          "level": 2,
+          "text": "Order Books vs AMMs"
+        },
+        {
+          "level": 3,
+          "text": "Order Book Model"
+        },
+        {
+          "level": 3,
+          "text": "AMM Model"
+        },
+        {
+          "level": 2,
+          "text": "The Constant Product Formula"
+        },
+        {
+          "level": 3,
+          "text": "Price Curve"
+        },
+        {
+          "level": 3,
+          "text": "Fees"
+        },
+        {
+          "level": 2,
+          "text": "Liquidity Pools and LP Tokens"
+        },
+        {
+          "level": 3,
+          "text": "Providing Liquidity"
+        },
+        {
+          "level": 3,
+          "text": "What LP Tokens Represent"
+        },
+        {
+          "level": 2,
+          "text": "Slippage and Price Impact"
+        },
+        {
+          "level": 3,
+          "text": "Slippage Protection"
+        },
+        {
+          "level": 2,
+          "text": "Impermanent Loss"
+        },
+        {
+          "level": 3,
+          "text": "Impermanent Loss Formula"
+        },
+        {
+          "level": 2,
+          "text": "Uniswap V2 vs V3"
+        },
+        {
+          "level": 3,
+          "text": "Uniswap V2"
+        },
+        {
+          "level": 3,
+          "text": "Uniswap V3"
+        },
+        {
+          "level": 2,
+          "text": "Major DEX Models"
+        },
+        {
+          "level": 2,
+          "text": "Summary"
+        },
+        {
+          "level": 2,
+          "text": "Further Reading"
+        }
+      ],
+      "codeBlockCount": 20,
+      "characterCount": 10355
     },
     {
       "id": "zh/module-8/8-3",
@@ -13803,6 +14440,115 @@
       "characterCount": 9344
     },
     {
+      "id": "en/module-8/8-3",
+      "lang": "en",
+      "moduleId": "module-8",
+      "moduleTitle": "DeFi 深度解析",
+      "lessonId": "8-3",
+      "title": "借贷协议原理",
+      "path": "DeFiDeepDive/03_LendingProtocols",
+      "labUrl": null,
+      "sourcePath": "en/DeFiDeepDive/03_LendingProtocols/README.md",
+      "citation": {
+        "file": "en/DeFiDeepDive/03_LendingProtocols/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/DeFiDeepDive/03_LendingProtocols/README.md",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-8/8-3"
+      },
+      "excerpt": "How DeFi Lending Protocols Work Lending is one of the core primitives of DeFi. This lesson explains how Aave and Compound work, why DeFi lending is overcollateralized, how health factors and liquidations protect the system, how interest rates are calculated, and why flash loans are possible. Table of Contents DeFi Lending vs Bank Lending How Aave and Compound Work Overcollateralization and Health Factor Liquidations ",
+      "headings": [
+        {
+          "level": 1,
+          "text": "How DeFi Lending Protocols Work"
+        },
+        {
+          "level": 2,
+          "text": "Table of Contents"
+        },
+        {
+          "level": 2,
+          "text": "DeFi Lending vs Bank Lending"
+        },
+        {
+          "level": 2,
+          "text": "How Aave and Compound Work"
+        },
+        {
+          "level": 3,
+          "text": "Deposit Tokens"
+        },
+        {
+          "level": 3,
+          "text": "Aave vs Compound"
+        },
+        {
+          "level": 2,
+          "text": "Overcollateralization and Health Factor"
+        },
+        {
+          "level": 3,
+          "text": "Loan-to-Value"
+        },
+        {
+          "level": 3,
+          "text": "Liquidation Threshold"
+        },
+        {
+          "level": 3,
+          "text": "Health Factor"
+        },
+        {
+          "level": 2,
+          "text": "Liquidations"
+        },
+        {
+          "level": 2,
+          "text": "Interest Rate Models"
+        },
+        {
+          "level": 2,
+          "text": "Flash Loans"
+        },
+        {
+          "level": 3,
+          "text": "Common Flash Loan Uses"
+        },
+        {
+          "level": 2,
+          "text": "Common Use Cases"
+        },
+        {
+          "level": 3,
+          "text": "Leveraged Long"
+        },
+        {
+          "level": 3,
+          "text": "Stablecoin Yield"
+        },
+        {
+          "level": 3,
+          "text": "Liquidity Without Selling"
+        },
+        {
+          "level": 3,
+          "text": "Collateral Management"
+        },
+        {
+          "level": 2,
+          "text": "Risk Management Checklist"
+        },
+        {
+          "level": 2,
+          "text": "Summary"
+        },
+        {
+          "level": 2,
+          "text": "Further Reading"
+        }
+      ],
+      "codeBlockCount": 22,
+      "characterCount": 11173
+    },
+    {
       "id": "zh/module-8/8-4",
       "lang": "zh",
       "moduleId": "module-8",
@@ -13817,7 +14563,7 @@
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/DeFiDeepDive/04_Stablecoins/README.md",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-8/8-4"
       },
-      "excerpt": "稳定币全景 💡 稳定币是 DeFi 的基石和血液，其市值超过 1500 亿美元。本课将全面解析三种主要稳定币模式 —— 法币抵押、加密资产抵押和算法稳定币，并通过 UST/LUNA 崩盘案例揭示其中的风险。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 为什么需要稳定币 稳定币的三种模式 法币抵押稳定币：USDT 和 USDC 加密资产抵押稳定币：DAI 算法稳定币：机制与挑战 UST/LUNA 崩盘：史上最大的稳定币灾难 稳定币监管趋势 如何选择和使用稳定币 总结 延伸阅读 为什么需要稳定币 在加密世界中，比特币和以太坊的价格波动可以在一天内超过 10 20%。这种波动性对投资者来说是机会，但对日常使用来说是灾难。想象一下： 你用 1 BTC 买了一台电脑",
+      "excerpt": "稳定币全景 💡 稳定币是 DeFi 的基石和血液，也是链上支付、跨境结算和 RWA 的核心入口。本课将全面解析主要稳定币模式，并通过 UST/LUNA 崩盘、USDC 脱锚、监管落地和合成美元案例揭示其中的风险。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 为什么需要稳定币 稳定币的三种模式 法币抵押稳定币：USDT 和 USDC 加密资产抵押稳定币：DAI 算法稳定币：机制与挑战 UST/LUNA 崩盘：史上最大的稳定币灾难 2026 更新：监管、RWA 与链上支付 稳定币监管趋势 如何选择和使用稳定币 总结 延伸阅读 为什么需要稳定币 在加密世界中，比特币和以太坊的价格波动可以在一天内超过 10 20%。这种波动性对投资者来说是机会，但对日常使用来说是",
       "headings": [
         {
           "level": 1,
@@ -13921,6 +14667,34 @@
         },
         {
           "level": 2,
+          "text": "2026 更新：监管、RWA 与链上支付"
+        },
+        {
+          "level": 3,
+          "text": "美国 GENIUS Act：支付稳定币进入联邦监管框架"
+        },
+        {
+          "level": 3,
+          "text": "欧盟 MiCA：稳定币规则先行落地"
+        },
+        {
+          "level": 3,
+          "text": "RWA：稳定币背后的资产正在变化"
+        },
+        {
+          "level": 3,
+          "text": "USDS / Sky：DAI 的新阶段"
+        },
+        {
+          "level": 3,
+          "text": "USDe：合成美元不是传统稳定币"
+        },
+        {
+          "level": 3,
+          "text": "稳定币支付：从交易对到结算网络"
+        },
+        {
+          "level": 2,
           "text": "稳定币监管趋势"
         },
         {
@@ -13950,14 +14724,143 @@
         {
           "level": 2,
           "text": "总结"
-        },
-        {
-          "level": 2,
-          "text": "延伸阅读"
         }
       ],
       "codeBlockCount": 9,
-      "characterCount": 8517
+      "characterCount": 10576
+    },
+    {
+      "id": "en/module-8/8-4",
+      "lang": "en",
+      "moduleId": "module-8",
+      "moduleTitle": "DeFi 深度解析",
+      "lessonId": "8-4",
+      "title": "稳定币全景",
+      "path": "DeFiDeepDive/04_Stablecoins",
+      "labUrl": null,
+      "sourcePath": "en/DeFiDeepDive/04_Stablecoins/README.md",
+      "citation": {
+        "file": "en/DeFiDeepDive/04_Stablecoins/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/DeFiDeepDive/04_Stablecoins/README.md",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-8/8-4"
+      },
+      "excerpt": "Stablecoins: Models, Risks, Regulation, and Payments Stablecoins are the base currency of DeFi and one of the most important bridges between crypto and the real economy. This lesson explains fiat backed, crypto backed, algorithmic, and synthetic stablecoins, then covers UST/LUNA, USDC depeg risk, regulation, RWA reserves, and stablecoin payments. Table of Contents Why Stablecoins Exist Three Stablecoin Models Fiat Ba",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Stablecoins: Models, Risks, Regulation, and Payments"
+        },
+        {
+          "level": 2,
+          "text": "Table of Contents"
+        },
+        {
+          "level": 2,
+          "text": "Why Stablecoins Exist"
+        },
+        {
+          "level": 2,
+          "text": "Three Stablecoin Models"
+        },
+        {
+          "level": 2,
+          "text": "Fiat-Backed Stablecoins: USDT and USDC"
+        },
+        {
+          "level": 3,
+          "text": "Basic Mechanism"
+        },
+        {
+          "level": 3,
+          "text": "USDT"
+        },
+        {
+          "level": 3,
+          "text": "USDC"
+        },
+        {
+          "level": 3,
+          "text": "Core Tradeoff"
+        },
+        {
+          "level": 2,
+          "text": "Crypto-Backed Stablecoins: DAI and USDS"
+        },
+        {
+          "level": 3,
+          "text": "Maker/Sky Vault Model"
+        },
+        {
+          "level": 3,
+          "text": "Peg Mechanisms"
+        },
+        {
+          "level": 3,
+          "text": "PSM and the Decentralization Tradeoff"
+        },
+        {
+          "level": 2,
+          "text": "Algorithmic Stablecoins"
+        },
+        {
+          "level": 3,
+          "text": "Mint/Burn Reflexivity"
+        },
+        {
+          "level": 3,
+          "text": "Partial Collateral Designs"
+        },
+        {
+          "level": 2,
+          "text": "UST/LUNA: The Stablecoin Collapse That Changed DeFi"
+        },
+        {
+          "level": 2,
+          "text": "2026 Update: Regulation, RWA, and On-Chain Payments"
+        },
+        {
+          "level": 3,
+          "text": "United States: GENIUS Act"
+        },
+        {
+          "level": 3,
+          "text": "European Union: MiCA"
+        },
+        {
+          "level": 3,
+          "text": "RWA Reserves"
+        },
+        {
+          "level": 3,
+          "text": "USDe and Synthetic Dollars"
+        },
+        {
+          "level": 3,
+          "text": "Stablecoin Payments"
+        },
+        {
+          "level": 2,
+          "text": "How to Choose and Use Stablecoins"
+        },
+        {
+          "level": 3,
+          "text": "Selection Framework"
+        },
+        {
+          "level": 3,
+          "text": "Safety Practices"
+        },
+        {
+          "level": 2,
+          "text": "Summary"
+        },
+        {
+          "level": 2,
+          "text": "Further Reading"
+        }
+      ],
+      "codeBlockCount": 11,
+      "characterCount": 15037
     },
     {
       "id": "zh/module-8/8-5",
@@ -14111,6 +15014,187 @@
       ],
       "codeBlockCount": 19,
       "characterCount": 9671
+    },
+    {
+      "id": "en/module-8/8-5",
+      "lang": "en",
+      "moduleId": "module-8",
+      "moduleTitle": "DeFi 深度解析",
+      "lessonId": "8-5",
+      "title": "DeFi 风险与安全",
+      "path": "DeFiDeepDive/05_DeFiRisks",
+      "labUrl": null,
+      "sourcePath": "en/DeFiDeepDive/05_DeFiRisks/README.md",
+      "citation": {
+        "file": "en/DeFiDeepDive/05_DeFiRisks/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/DeFiDeepDive/05_DeFiRisks/README.md",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-8/8-5"
+      },
+      "excerpt": "DeFi Risks and Security DeFi gives users direct access to financial protocols, but it also gives users direct responsibility for risk. This lesson builds a practical risk framework covering smart contract bugs, flash loan attacks, oracle manipulation, rug pulls, MEV, bridge risk, governance attacks, protocol due diligence, and personal security habits. Table of Contents The DeFi Risk Map Smart Contract Risk Flash Loa",
+      "headings": [
+        {
+          "level": 1,
+          "text": "DeFi Risks and Security"
+        },
+        {
+          "level": 2,
+          "text": "Table of Contents"
+        },
+        {
+          "level": 2,
+          "text": "The DeFi Risk Map"
+        },
+        {
+          "level": 2,
+          "text": "Smart Contract Risk"
+        },
+        {
+          "level": 3,
+          "text": "Reentrancy"
+        },
+        {
+          "level": 3,
+          "text": "Logic Bugs"
+        },
+        {
+          "level": 3,
+          "text": "Admin and Upgrade Risk"
+        },
+        {
+          "level": 2,
+          "text": "Flash Loan Attacks"
+        },
+        {
+          "level": 3,
+          "text": "bZx-style Lesson"
+        },
+        {
+          "level": 3,
+          "text": "Pancake Bunny-style Lesson"
+        },
+        {
+          "level": 2,
+          "text": "Oracle Manipulation"
+        },
+        {
+          "level": 3,
+          "text": "Mango Markets Lesson"
+        },
+        {
+          "level": 3,
+          "text": "Safer Oracle Practices"
+        },
+        {
+          "level": 2,
+          "text": "Rug Pulls"
+        },
+        {
+          "level": 3,
+          "text": "Liquidity Pull"
+        },
+        {
+          "level": 3,
+          "text": "Unlimited Mint"
+        },
+        {
+          "level": 3,
+          "text": "Honeypot Token"
+        },
+        {
+          "level": 3,
+          "text": "Fake Protocol Frontend"
+        },
+        {
+          "level": 3,
+          "text": "Rug Pull Red Flags"
+        },
+        {
+          "level": 2,
+          "text": "Other Common Risks"
+        },
+        {
+          "level": 3,
+          "text": "MEV and Sandwich Attacks"
+        },
+        {
+          "level": 3,
+          "text": "Bridge Risk"
+        },
+        {
+          "level": 3,
+          "text": "Governance Attacks"
+        },
+        {
+          "level": 3,
+          "text": "Stablecoin Depeg Risk"
+        },
+        {
+          "level": 2,
+          "text": "How to Evaluate a DeFi Protocol"
+        },
+        {
+          "level": 3,
+          "text": "Audit and Code"
+        },
+        {
+          "level": 3,
+          "text": "Operational Security"
+        },
+        {
+          "level": 3,
+          "text": "Economic Design"
+        },
+        {
+          "level": 3,
+          "text": "Governance"
+        },
+        {
+          "level": 3,
+          "text": "Team and Ecosystem"
+        },
+        {
+          "level": 3,
+          "text": "Useful Tools"
+        },
+        {
+          "level": 2,
+          "text": "Personal Security Checklist"
+        },
+        {
+          "level": 3,
+          "text": "Wallet Separation"
+        },
+        {
+          "level": 3,
+          "text": "Test Small"
+        },
+        {
+          "level": 3,
+          "text": "Approval Hygiene"
+        },
+        {
+          "level": 3,
+          "text": "Transaction Review"
+        },
+        {
+          "level": 3,
+          "text": "Private Key Security"
+        },
+        {
+          "level": 3,
+          "text": "Ongoing Monitoring"
+        },
+        {
+          "level": 2,
+          "text": "Summary"
+        },
+        {
+          "level": 2,
+          "text": "Further Reading"
+        }
+      ],
+      "codeBlockCount": 15,
+      "characterCount": 13651
     },
     {
       "id": "zh/module-9/9-1",
@@ -14329,7 +15413,7 @@
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/L2CrossChain/03_L2Ecosystem/README.md",
         "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-9/9-3"
       },
-      "excerpt": "主流 L2 生态对比 💡 当前以太坊 L2 生态百花齐放，各大 Rollup 在技术架构、生态建设和发展策略上各有千秋。本课深入对比 Arbitrum、Optimism、Base、zkSync 和 StarkNet 五大主流 L2，帮你建立全面的生态认知。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 Arbitrum Optimism Base zkSync StarkNet 各 L2 综合对比 总结 延伸阅读 Arbitrum 技术架构 Arbitrum 由 Offchain Labs 团队开发，是目前 TVL 最高的以太坊 L2，采用 Optimistic Rollup 技术。 核心技术栈 ： ArbOS ：Arbitrum 的操作系统层，运行在 L2",
+      "excerpt": "主流 L2 生态对比 💡 当前以太坊 L2 生态百花齐放，各大 Rollup 在技术架构、生态建设和发展策略上各有千秋。本课深入对比 Arbitrum、Optimism、Base、zkSync 和 StarkNet 五大主流 L2，帮你建立全面的生态认知。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 Arbitrum Optimism Base zkSync StarkNet 2026 更新：Blob、PeerDAS 与 L2 风险分层 各 L2 综合对比 总结 延伸阅读 Arbitrum 技术架构 Arbitrum 由 Offchain Labs 团队开发，是目前 TVL 最高的以太坊 L2，采用 Optimistic Rollup 技术。 核心技术栈 ",
       "headings": [
         {
           "level": 1,
@@ -14429,6 +15513,38 @@
         },
         {
           "level": 2,
+          "text": "2026 更新：Blob、PeerDAS 与 L2 风险分层"
+        },
+        {
+          "level": 3,
+          "text": "Blob 经济：L2 为什么变便宜"
+        },
+        {
+          "level": 3,
+          "text": "PeerDAS：扩容不应牺牲节点可运行性"
+        },
+        {
+          "level": 3,
+          "text": "OP Superchain 与应用链趋势"
+        },
+        {
+          "level": 3,
+          "text": "Base：消费级 L2 的代表"
+        },
+        {
+          "level": 3,
+          "text": "ZK Rollup：技术强，但生态和兼容性仍是挑战"
+        },
+        {
+          "level": 3,
+          "text": "Alt-DA、Validium 和 Rollup 不完全一样"
+        },
+        {
+          "level": 3,
+          "text": "选择 L2 的风险框架"
+        },
+        {
+          "level": 2,
           "text": "各 L2 综合对比"
         },
         {
@@ -14452,8 +15568,8 @@
           "text": "延伸阅读"
         }
       ],
-      "codeBlockCount": 6,
-      "characterCount": 9068
+      "codeBlockCount": 7,
+      "characterCount": 11411
     },
     {
       "id": "zh/module-9/9-4",
@@ -15633,6 +16749,562 @@
       ],
       "codeBlockCount": 13,
       "characterCount": 10838
+    },
+    {
+      "id": "zh/module-11/11-1",
+      "lang": "zh",
+      "moduleId": "module-11",
+      "moduleTitle": "以太坊与智能账户",
+      "lessonId": "11-1",
+      "title": "Pectra 与 Fusaka 后的以太坊",
+      "path": "EthereumSmartAccounts/01_EthereumAfterPectra",
+      "labUrl": null,
+      "sourcePath": "zh/EthereumSmartAccounts/01_EthereumAfterPectra/README.md",
+      "citation": {
+        "file": "zh/EthereumSmartAccounts/01_EthereumAfterPectra/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/EthereumSmartAccounts/01_EthereumAfterPectra/README.md",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-11/11-1"
+      },
+      "excerpt": "Pectra 与 Fusaka 后的以太坊 以太坊已经不再只是“一条智能合约公链”。它正在变成一个以 L1 为安全和结算层、以 Rollup 为主要执行层、以智能账户改善用户体验的模块化网络。本课从 Pectra 和 Fusaka 两次升级出发，解释 2026 年学习以太坊时必须重新建立的技术地图。 目录 为什么以太坊仍在升级 从 Dencun 到 Pectra 再到 Fusaka Pectra 改变了什么 Fusaka 改变了什么 对普通用户的影响 对开发者的影响 对 L2 和 Rollup 的影响 学习检查清单 总结 延伸阅读 为什么以太坊仍在升级 如果你只把以太坊理解成“能部署智能合约的链”，会很难解释为什么它还要持续升级。更准确的理解是： 以太坊 L1 负责最小化、可信中立、抗审查的结算和数据可用性；大量用户操作逐步迁移到 L2、钱包和应用层。 这意味着以太坊升级的重点不再只是“让 L1 每秒处理更多普通交易”，而是同时",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Pectra 与 Fusaka 后的以太坊"
+        },
+        {
+          "level": 2,
+          "text": "目录"
+        },
+        {
+          "level": 2,
+          "text": "为什么以太坊仍在升级"
+        },
+        {
+          "level": 2,
+          "text": "从 Dencun 到 Pectra 再到 Fusaka"
+        },
+        {
+          "level": 2,
+          "text": "Pectra 改变了什么"
+        },
+        {
+          "level": 3,
+          "text": "EIP-7702：EOA 可以拥有智能账户能力"
+        },
+        {
+          "level": 3,
+          "text": "EIP-7251：验证者最大有效余额提高到 2048 ETH"
+        },
+        {
+          "level": 3,
+          "text": "Blob 目标上调：Rollup 数据容量变大"
+        },
+        {
+          "level": 3,
+          "text": "其他值得知道的 Pectra 变化"
+        },
+        {
+          "level": 2,
+          "text": "Fusaka 改变了什么"
+        },
+        {
+          "level": 3,
+          "text": "PeerDAS：节点不再需要下载所有 Blob"
+        },
+        {
+          "level": 3,
+          "text": "BPO：Blob 参数可以渐进调整"
+        },
+        {
+          "level": 3,
+          "text": "为什么 Fusaka 对用户也重要"
+        },
+        {
+          "level": 2,
+          "text": "对普通用户的影响"
+        },
+        {
+          "level": 3,
+          "text": "你的 ETH 不需要“升级”"
+        },
+        {
+          "level": 3,
+          "text": "钱包体验会变好，但签名风险也变复杂"
+        },
+        {
+          "level": 3,
+          "text": "L2 费用会更稳定，但不会永远免费"
+        },
+        {
+          "level": 2,
+          "text": "对开发者的影响"
+        },
+        {
+          "level": 3,
+          "text": "不要再简单假设 EOA “没有代码”"
+        },
+        {
+          "level": 3,
+          "text": "DApp 要支持更复杂的钱包能力"
+        },
+        {
+          "level": 3,
+          "text": "L2 开发要理解 Blob 经济"
+        },
+        {
+          "level": 2,
+          "text": "对 L2 和 Rollup 的影响"
+        },
+        {
+          "level": 2,
+          "text": "学习检查清单"
+        },
+        {
+          "level": 2,
+          "text": "总结"
+        },
+        {
+          "level": 2,
+          "text": "延伸阅读"
+        }
+      ],
+      "codeBlockCount": 5,
+      "characterCount": 7111
+    },
+    {
+      "id": "en/module-11/11-1",
+      "lang": "en",
+      "moduleId": "module-11",
+      "moduleTitle": "以太坊与智能账户",
+      "lessonId": "11-1",
+      "title": "Pectra 与 Fusaka 后的以太坊",
+      "path": "EthereumSmartAccounts/01_EthereumAfterPectra",
+      "labUrl": null,
+      "sourcePath": "en/EthereumSmartAccounts/01_EthereumAfterPectra/README.md",
+      "citation": {
+        "file": "en/EthereumSmartAccounts/01_EthereumAfterPectra/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/EthereumSmartAccounts/01_EthereumAfterPectra/README.md",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-11/11-1"
+      },
+      "excerpt": "Ethereum After Pectra and Fusaka Ethereum is no longer just “a smart contract chain.” It is becoming a modular network where L1 provides security, settlement, and data availability; Rollups handle most execution; and smart accounts improve user experience. This lesson uses the Pectra and Fusaka upgrades to rebuild the Ethereum mental model for 2026. Table of Contents Why Ethereum Is Still Upgrading From Dencun to Pec",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Ethereum After Pectra and Fusaka"
+        },
+        {
+          "level": 2,
+          "text": "Table of Contents"
+        },
+        {
+          "level": 2,
+          "text": "Why Ethereum Is Still Upgrading"
+        },
+        {
+          "level": 2,
+          "text": "From Dencun to Pectra to Fusaka"
+        },
+        {
+          "level": 2,
+          "text": "What Pectra Changed"
+        },
+        {
+          "level": 3,
+          "text": "EIP-7702: EOAs Can Gain Smart Account Capabilities"
+        },
+        {
+          "level": 3,
+          "text": "EIP-7251: Validator Effective Balance Can Increase to 2048 ETH"
+        },
+        {
+          "level": 3,
+          "text": "Higher Blob Target: More Data Capacity for Rollups"
+        },
+        {
+          "level": 3,
+          "text": "Other Pectra Changes Worth Knowing"
+        },
+        {
+          "level": 2,
+          "text": "What Fusaka Changed"
+        },
+        {
+          "level": 3,
+          "text": "PeerDAS: Nodes No Longer Need Every Blob"
+        },
+        {
+          "level": 3,
+          "text": "BPO: Gradual Blob Parameter Changes"
+        },
+        {
+          "level": 3,
+          "text": "Why Fusaka Matters to Users"
+        },
+        {
+          "level": 2,
+          "text": "Impact on Users"
+        },
+        {
+          "level": 3,
+          "text": "Your ETH Does Not Need an “Upgrade”"
+        },
+        {
+          "level": 3,
+          "text": "Wallet UX Improves, but Signature Risk Becomes More Complex"
+        },
+        {
+          "level": 3,
+          "text": "L2 Fees Become More Stable, Not Permanently Free"
+        },
+        {
+          "level": 2,
+          "text": "Impact on Developers"
+        },
+        {
+          "level": 3,
+          "text": "Do Not Assume EOAs Have No Code"
+        },
+        {
+          "level": 3,
+          "text": "DApps Must Support More Wallet Capabilities"
+        },
+        {
+          "level": 3,
+          "text": "L2 Development Requires Blob Economics"
+        },
+        {
+          "level": 2,
+          "text": "Impact on L2s and Rollups"
+        },
+        {
+          "level": 2,
+          "text": "Learning Checklist"
+        },
+        {
+          "level": 2,
+          "text": "Summary"
+        },
+        {
+          "level": 2,
+          "text": "Further Reading"
+        }
+      ],
+      "codeBlockCount": 5,
+      "characterCount": 14686
+    },
+    {
+      "id": "zh/module-11/11-2",
+      "lang": "zh",
+      "moduleId": "module-11",
+      "moduleTitle": "以太坊与智能账户",
+      "lessonId": "11-2",
+      "title": "账户抽象与智能钱包",
+      "path": "EthereumSmartAccounts/02_AccountAbstractionAndSmartWallets",
+      "labUrl": null,
+      "sourcePath": "zh/EthereumSmartAccounts/02_AccountAbstractionAndSmartWallets/README.md",
+      "citation": {
+        "file": "zh/EthereumSmartAccounts/02_AccountAbstractionAndSmartWallets/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/EthereumSmartAccounts/02_AccountAbstractionAndSmartWallets/README.md",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-11/11-2"
+      },
+      "excerpt": "账户抽象与智能钱包 Web3 最大的用户体验问题，不是“没有足够多的 DApp”，而是普通账户太难用：助记词难保管、Gas 难理解、授权难判断、交易步骤太多。账户抽象试图把钱包从“私钥签名工具”升级为“可编程账户系统”。 目录 为什么普通钱包体验不好 EOA、合约账户和智能账户 ERC 4337 的工作流 EIP 7702 带来的变化 Paymaster、Bundler 和 Session Key Passkey 与社交恢复 智能账户的新风险 新手实践路线 学习检查清单 总结 延伸阅读 为什么普通钱包体验不好 传统 EOA 钱包的设计非常纯粹： 这种模型安全、简单、可验证，但对普通用户很不友好： 问题 用户感受 典型后果 助记词备份困难 12 或 24 个英文单词像天书 截图、云盘保存、被盗 必须持有原生 Gas 想用 USDC 却还要先买 ETH 新用户第一步就卡住 操作步骤多 授权一次、交易一次、再确认一次 用户误签或中途放",
+      "headings": [
+        {
+          "level": 1,
+          "text": "账户抽象与智能钱包"
+        },
+        {
+          "level": 2,
+          "text": "目录"
+        },
+        {
+          "level": 2,
+          "text": "为什么普通钱包体验不好"
+        },
+        {
+          "level": 2,
+          "text": "EOA、合约账户和智能账户"
+        },
+        {
+          "level": 3,
+          "text": "EOA：Externally Owned Account"
+        },
+        {
+          "level": 3,
+          "text": "合约账户"
+        },
+        {
+          "level": 3,
+          "text": "智能账户"
+        },
+        {
+          "level": 2,
+          "text": "ERC-4337 的工作流"
+        },
+        {
+          "level": 3,
+          "text": "核心组件"
+        },
+        {
+          "level": 3,
+          "text": "UserOperation 包含什么"
+        },
+        {
+          "level": 3,
+          "text": "ERC-4337 能实现什么"
+        },
+        {
+          "level": 2,
+          "text": "EIP-7702 带来的变化"
+        },
+        {
+          "level": 3,
+          "text": "它解决了什么"
+        },
+        {
+          "level": 3,
+          "text": "它不等于“随便签一次就安全”"
+        },
+        {
+          "level": 2,
+          "text": "Paymaster、Bundler 和 Session Key"
+        },
+        {
+          "level": 3,
+          "text": "Paymaster：谁来替用户付 Gas"
+        },
+        {
+          "level": 3,
+          "text": "Bundler：把 UserOperation 送上链"
+        },
+        {
+          "level": 3,
+          "text": "Session Key：给临时钥匙，而不是交出主钥匙"
+        },
+        {
+          "level": 2,
+          "text": "Passkey 与社交恢复"
+        },
+        {
+          "level": 3,
+          "text": "Passkey"
+        },
+        {
+          "level": 3,
+          "text": "社交恢复"
+        },
+        {
+          "level": 2,
+          "text": "智能账户的新风险"
+        },
+        {
+          "level": 3,
+          "text": "1. 授权更难读懂"
+        },
+        {
+          "level": 3,
+          "text": "2. “免费 Gas”可能诱导误签"
+        },
+        {
+          "level": 3,
+          "text": "3. 钱包实现本身变成安全关键"
+        },
+        {
+          "level": 3,
+          "text": "4. 兼容性问题会导致隐藏风险"
+        },
+        {
+          "level": 2,
+          "text": "新手实践路线"
+        },
+        {
+          "level": 3,
+          "text": "第一阶段：理解概念"
+        },
+        {
+          "level": 3,
+          "text": "第二阶段：使用现成智能钱包"
+        },
+        {
+          "level": 3,
+          "text": "第三阶段：开发一个最小示例"
+        },
+        {
+          "level": 3,
+          "text": "第四阶段：补安全模型"
+        },
+        {
+          "level": 2,
+          "text": "学习检查清单"
+        },
+        {
+          "level": 2,
+          "text": "总结"
+        },
+        {
+          "level": 2,
+          "text": "延伸阅读"
+        }
+      ],
+      "codeBlockCount": 4,
+      "characterCount": 7370
+    },
+    {
+      "id": "en/module-11/11-2",
+      "lang": "en",
+      "moduleId": "module-11",
+      "moduleTitle": "以太坊与智能账户",
+      "lessonId": "11-2",
+      "title": "账户抽象与智能钱包",
+      "path": "EthereumSmartAccounts/02_AccountAbstractionAndSmartWallets",
+      "labUrl": null,
+      "sourcePath": "en/EthereumSmartAccounts/02_AccountAbstractionAndSmartWallets/README.md",
+      "citation": {
+        "file": "en/EthereumSmartAccounts/02_AccountAbstractionAndSmartWallets/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/EthereumSmartAccounts/02_AccountAbstractionAndSmartWallets/README.md",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-11/11-2"
+      },
+      "excerpt": "Account Abstraction and Smart Wallets Web3’s biggest user experience problem is not a lack of DApps. It is that raw accounts are hard to use: seed phrases are hard to protect, gas is confusing, approvals are dangerous, and every workflow takes too many signatures. Account abstraction aims to upgrade wallets from “private key signing tools” into programmable account systems. Table of Contents Why Normal Wallets Feel B",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Account Abstraction and Smart Wallets"
+        },
+        {
+          "level": 2,
+          "text": "Table of Contents"
+        },
+        {
+          "level": 2,
+          "text": "Why Normal Wallets Feel Bad"
+        },
+        {
+          "level": 2,
+          "text": "EOAs, Contract Accounts, and Smart Accounts"
+        },
+        {
+          "level": 3,
+          "text": "EOA: Externally Owned Account"
+        },
+        {
+          "level": 3,
+          "text": "Contract Account"
+        },
+        {
+          "level": 3,
+          "text": "Smart Account"
+        },
+        {
+          "level": 2,
+          "text": "The ERC-4337 Workflow"
+        },
+        {
+          "level": 3,
+          "text": "Core Components"
+        },
+        {
+          "level": 3,
+          "text": "What a UserOperation Contains"
+        },
+        {
+          "level": 3,
+          "text": "What ERC-4337 Enables"
+        },
+        {
+          "level": 2,
+          "text": "What EIP-7702 Changes"
+        },
+        {
+          "level": 3,
+          "text": "What It Solves"
+        },
+        {
+          "level": 3,
+          "text": "It Does Not Mean “Any Signature Is Safe”"
+        },
+        {
+          "level": 2,
+          "text": "Paymasters, Bundlers, and Session Keys"
+        },
+        {
+          "level": 3,
+          "text": "Paymaster: Who Pays Gas"
+        },
+        {
+          "level": 3,
+          "text": "Bundler: Sending UserOperations On-Chain"
+        },
+        {
+          "level": 3,
+          "text": "Session Key: A Temporary Key, Not the Master Key"
+        },
+        {
+          "level": 2,
+          "text": "Passkeys and Social Recovery"
+        },
+        {
+          "level": 3,
+          "text": "Passkeys"
+        },
+        {
+          "level": 3,
+          "text": "Social Recovery"
+        },
+        {
+          "level": 2,
+          "text": "New Smart Account Risks"
+        },
+        {
+          "level": 3,
+          "text": "1. Authorization Is Harder to Read"
+        },
+        {
+          "level": 3,
+          "text": "2. “Free Gas” Can Encourage Bad Signatures"
+        },
+        {
+          "level": 3,
+          "text": "3. Wallet Implementations Become Security Critical"
+        },
+        {
+          "level": 3,
+          "text": "4. Compatibility Issues Create Hidden Risk"
+        },
+        {
+          "level": 2,
+          "text": "Beginner Practice Path"
+        },
+        {
+          "level": 3,
+          "text": "Stage 1: Understand Concepts"
+        },
+        {
+          "level": 3,
+          "text": "Stage 2: Use Existing Smart Wallets"
+        },
+        {
+          "level": 3,
+          "text": "Stage 3: Build a Minimal Example"
+        },
+        {
+          "level": 3,
+          "text": "Stage 4: Study the Security Model"
+        },
+        {
+          "level": 2,
+          "text": "Learning Checklist"
+        },
+        {
+          "level": 2,
+          "text": "Summary"
+        },
+        {
+          "level": 2,
+          "text": "Further Reading"
+        }
+      ],
+      "codeBlockCount": 4,
+      "characterCount": 15701
     }
   ],
   "glossary": [
@@ -15850,6 +17522,281 @@
       "term": "区块浏览器 (Block Explorer)",
       "definition": "查看区块链上所有交易、地址、区块信息的工具。如 Etherscan、Mempool.space。",
       "category": "工具",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "账户抽象 (Account Abstraction)",
+      "definition": "让账户拥有可编程验证和执行逻辑的设计方向，可支持批量交易、Gas 赞助、社交恢复和权限控制。",
+      "category": "账户抽象",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "ERC-4337",
+      "definition": "以太坊账户抽象标准，通过 UserOperation、EntryPoint、Bundler 和 Paymaster 实现智能账户交易流。",
+      "category": "账户抽象",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "EIP-7702",
+      "definition": "Pectra 引入的以太坊交易类型，允许 EOA 设置代码委托，从而在原地址上获得智能账户能力。",
+      "category": "账户抽象",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "UserOperation",
+      "definition": "ERC-4337 中表示用户意图执行操作的数据结构，由 Bundler 提交给 EntryPoint 执行。",
+      "category": "账户抽象",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "Bundler",
+      "definition": "账户抽象基础设施，负责收集 UserOperation，并将其打包成链上交易提交。",
+      "category": "账户抽象",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "Paymaster",
+      "definition": "ERC-4337 中可代用户支付 Gas 或允许用户用其他代币付费的合约或服务。",
+      "category": "账户抽象",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "Session Key",
+      "definition": "由主账户授权的临时密钥，通常限制可调用合约、时间、金额和操作类型，用于降低频繁签名成本。",
+      "category": "账户抽象",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "Passkey",
+      "definition": "基于 WebAuthn 和设备安全模块的认证方式，可用于改善智能钱包登录和签名体验。",
+      "category": "账户抽象",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "Blob",
+      "definition": "EIP-4844 引入的以太坊临时数据载体，主要供 Rollup 发布交易数据，降低 L2 数据成本。",
+      "category": "Layer 2",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "数据可用性 (Data Availability)",
+      "definition": "确保验证者或用户能获取重建链状态所需数据的属性，是 Rollup 安全模型的关键。",
+      "category": "Layer 2",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "PeerDAS",
+      "definition": "以太坊 Fusaka 升级中的数据可用性采样方案，让节点抽样验证 Blob 数据而非下载全部数据。",
+      "category": "Layer 2",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "排序器 (Sequencer)",
+      "definition": "L2 中负责接收、排序和提交交易的组件。中心化排序器可能带来审查、停机和 MEV 风险。",
+      "category": "Layer 2",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "Optimistic Rollup",
+      "definition": "默认认为 L2 状态转换正确，并通过挑战期和欺诈证明处理错误状态的 Rollup 方案。",
+      "category": "Layer 2",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "ZK Rollup",
+      "definition": "通过有效性证明向 L1 证明状态转换正确的 Rollup 方案，常用于提高安全性和缩短退出时间。",
+      "category": "Layer 2",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "Validium",
+      "definition": "使用有效性证明但把数据放在链下的数据可用性方案，费用低但数据不可用风险更高。",
+      "category": "Layer 2",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "USDS",
+      "definition": "Sky/Maker 体系中的稳定币资产，与 DAI 迁移、RWA 收益和治理参数密切相关。",
+      "category": "稳定币",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "USDe",
+      "definition": "Ethena 的合成美元资产，依赖现货与衍生品对冲等机制维持美元敞口，并不等同于法币储备稳定币。",
+      "category": "稳定币",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "RWA (Real World Assets)",
+      "definition": "真实世界资产上链，例如国债、货币基金、房地产或应收账款，可成为稳定币或 DeFi 的抵押品。",
+      "category": "稳定币",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "MiCA",
+      "definition": "欧盟加密资产市场监管框架，对稳定币发行方、服务提供商、储备和披露提出统一要求。",
+      "category": "稳定币",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "GENIUS Act",
+      "definition": "美国 2025 年签署的支付稳定币监管法案，为稳定币发行、储备和监督建立联邦框架。",
+      "category": "稳定币",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "MEV",
+      "definition": "最大可提取价值，指区块生产者或交易排序方通过重排、插入或审查交易获得的额外收益。",
+      "category": "安全",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "Permit2",
+      "definition": "用于统一代币授权和签名转账的合约系统，能改善体验，但错误签名或无限授权会扩大被盗风险。",
+      "category": "安全",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "私有交易 (Private Transaction)",
+      "definition": "不直接进入公共 mempool 的交易提交方式，可降低抢跑和地址关联风险，但依赖具体中继或节点配置。",
+      "category": "安全",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "Intent",
+      "definition": "用户表达想达成的目标而非具体执行路径，由求解器或协议寻找最优交易方案。",
+      "category": "基础概念",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "Restaking",
+      "definition": "将已质押资产或流动性质押代币再次用于保护其他网络或服务，以换取额外收益并承担额外风险。",
+      "category": "DeFi",
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
