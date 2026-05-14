@@ -17,6 +17,14 @@
 - `docs/strategy/2026-05-14-sponsor-kit.md`: 赞助包草案，包含受众、价格、曝光权益、接受政策和月度汇报指标。
 - `docs/strategy/2026-05-14-sponsor-outreach-drafts.md`: 赞助外联话术草案；常规外联可自主执行，高风险赞助对象仍需单独确认。
 - `docs/strategy/2026-05-14-awesome-list-submissions.md`: awesome-list 和社区分发追踪，包含定位文案、目标列表、PR 模板和中文社区帖草案。
+- `docs/community/contributor-ladder.md`: 贡献者成长路径，定义 first-time contributor、repeat contributor、reviewer、module steward 和 community/sponsor ally。
+- `docs/community/good-first-issues.md`: 可复制到 GitHub Issues 的 starter issue 清单，包含标签、背景、验收标准和验证方式。
+
+社区入口：
+
+- `CONTRIBUTING.md` / `CONTRIBUTING.en.md`: 双语贡献指南，维护贡献路径、验证矩阵和内容质量标准。
+- `.github/ISSUE_TEMPLATE/`: Bug、feature、content/translation、growth/community 分流模板。
+- `.github/PULL_REQUEST_TEMPLATE.md`: PR 验证和内容安全检查清单。
 
 工作边界：
 

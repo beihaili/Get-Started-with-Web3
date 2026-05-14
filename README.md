@@ -157,7 +157,9 @@ Good first contributions:
 
 Start here:
 
-- [Contributing guide](CONTRIBUTING.md)
+- [Contributing guide](CONTRIBUTING.en.md)
+- [Contributor ladder](docs/community/contributor-ladder.md)
+- [Good first issues catalog](docs/community/good-first-issues.md)
 - [Open good first issues](https://github.com/beihaili/Get-Started-with-Web3/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
 - [All issues](https://github.com/beihaili/Get-Started-with-Web3/issues)
 

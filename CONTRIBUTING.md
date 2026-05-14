@@ -3,136 +3,111 @@
 
 # 贡献指南
 
-## Your First Contribution in 5 Minutes
+感谢你参与 **Get Started with Web3**。这个项目的目标是做成开源、双语、AI-native 的 Web3 学习平台。贡献不只包括写代码，也包括翻译、校对、课程资料、测验、术语表、社区传播和赞助线索。
 
-1. **Fork** this repository
-2. **Find an issue** labeled `good first issue` in [Issues](https://github.com/beihaili/Get-Started-with-Web3/issues)
-3. **Clone** your fork: `git clone https://github.com/YOUR_USERNAME/Get-Started-with-Web3.git`
-4. **Create a branch**: `git checkout -b fix/your-change`
-5. **Make your change** (fix a typo, improve a translation, add a quiz question)
-6. **Commit**: `git commit -m "fix: describe your change"`
-7. **Push and open a PR**: `git push origin fix/your-change`
+## 5 分钟完成第一次贡献
 
-Not sure where to start? Translation proofreading is the easiest way to contribute — just find a file in `en/` and improve the English!
+1. Fork 本仓库。
+2. 从 [Good First Issues Catalog](docs/community/good-first-issues.md) 选一个任务，或查看 GitHub 上的 [`good first issue`](https://github.com/beihaili/Get-Started-with-Web3/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)。
+3. 克隆你的 fork：`git clone https://github.com/YOUR_USERNAME/Get-Started-with-Web3.git`
+4. 创建分支：`git checkout -b fix/your-change`
+5. 提交小而清晰的修改。
+6. 本地运行对应验证命令。
+7. Push 并打开 Pull Request。
 
-感谢你对 **Get Started with Web3** 项目的关注！我们欢迎所有形式的贡献。
+不知道从哪里开始时，优先做英文校对、链接检查、术语补充、测验题或安全提示改进。这些任务最容易 review，也最能直接提升学习体验。
 
-## 如何参与
+## 贡献路径
 
-### 报告问题
+| 路径            | 适合做什么                                    | 推荐起点                                                      |
+| --------------- | --------------------------------------------- | ------------------------------------------------------------- |
+| 课程内容        | 修正过时信息、补来源、增加示例、改安全提示    | `zh/`、`en/` 下的 lesson README                               |
+| 翻译与校对      | 中英文互译、术语统一、改善英文表达            | `en/Web3QuickStart/`、`en/DeFiDeepDive/`                      |
+| Quiz / Glossary | 添加测验题、术语解释、模块练习                | `src/features/quiz/quizData.js`、`src/config/glossaryData.js` |
+| 产品体验        | 修 UI、可访问性、移动端、搜索、AI Tutor 体验  | `src/` 下对应组件和测试                                       |
+| AI-native       | 改进 `llms.txt`、AI manifest、MCP 和引用质量  | `ai/`、`public/ai/`、`scripts/`                               |
+| 增长与社区      | awesome-list 投稿、社区帖、赞助研究、案例传播 | `docs/strategy/`、`docs/community/`                           |
 
-如果你发现了 Bug 或有改进建议，请在 [GitHub Issues](https://github.com/beihaili/Get-Started-with-Web3/issues) 中提交：
+更多长期协作方式见 [Contributor Ladder](docs/community/contributor-ladder.md)。
 
-1. 搜索现有 Issue，避免重复提交
-2. 使用对应的 Issue 模板（Bug 报告 / 功能请求）
-3. 尽可能提供详细的复现步骤和截图
-
-### 提交代码
-
-1. Fork 本仓库
-2. 创建功能分支：`git checkout -b feat/your-feature`
-3. 提交更改（遵循提交规范）
-4. 推送到你的 Fork：`git push origin feat/your-feature`
-5. 创建 Pull Request
-
-### 改进文档
-
-- 修正教程中的错误或过时信息
-- 补充代码示例和说明
-- 改善行文的清晰度和准确性
-
-### 翻译
-
-- 我们正在从中文翻译到英文（`en/` 目录）
-- 欢迎翻译现有教程或校对已有翻译
-
-## 开发环境搭建
+## 开发环境
 
 ```bash
-# 克隆仓库
 git clone https://github.com/beihaili/Get-Started-with-Web3.git
 cd Get-Started-with-Web3
-
-# 安装依赖
 npm install
-
-# 启动开发服务器
 npm run dev
-
-# 运行测试
-npm test
-
-# 运行 lint 检查
-npm run lint
 ```
+
+常用命令：
+
+```bash
+npm test          # 全量 Vitest
+npm run lint      # ESLint
+npm run build     # 生产构建、OG、sitemap、prerender
+npm run ai:verify # 验证公开 AI entrypoints 和 x402 元数据
+```
+
+## 验证矩阵
+
+| 修改类型                  | 至少运行                                                      |
+| ------------------------- | ------------------------------------------------------------- |
+| 只改 Markdown 文档        | `npx prettier --check <changed-files>`                        |
+| 新增或移动课程            | `npm run ai:index && npm run ai:publish && npm run ai:verify` |
+| 修改术语表                | `npm test -- src/config/__tests__/glossaryData.test.js`       |
+| 修改 quiz 或课程配置      | `npm test`                                                    |
+| 修改 React/UI/脚本        | `npm test && npm run lint`                                    |
+| 修改 SEO、sitemap、预渲染 | `npm test && npm run build`                                   |
+| 修改 AI-native/MCP 层     | `npm test && npm run ai:verify`                               |
+
+如果你无法运行某个命令，请在 PR 中说明原因和你已经完成的检查。
+
+## 内容质量要求
+
+- 面向初学者解释，不假设读者已经懂钱包、Gas、签名、桥或 DeFi 风险。
+- 涉及协议机制、安全风险、链上操作或市场结构时，尽量引用可信来源。
+- 不写投资建议、收益承诺、代币喊单或无披露的推广内容。
+- 中英文术语保持一致；不确定时在 PR 中说明你的选择。
+- 新增图片或图表时使用相对路径，并提供 alt text。
 
 ## 分支与提交规范
 
-### 分支命名
+分支命名：
 
-- `feat/xxx` — 新功能
-- `fix/xxx` — Bug 修复
-- `docs/xxx` — 文档改进
-- `refactor/xxx` — 代码重构
+- `feat/xxx`：新功能
+- `fix/xxx`：Bug 修复
+- `docs/xxx`：文档改进
+- `content/xxx`：课程内容改进
 
-### 提交信息
+提交信息遵循 [Conventional Commits](https://www.conventionalcommits.org/)：
 
-我们使用 [Conventional Commits](https://www.conventionalcommits.org/) 规范：
-
-```
+```text
 <type>: <description>
-
-[optional body]
 ```
-
-常用 type：
-- `feat` — 新功能
-- `fix` — Bug 修复
-- `docs` — 文档变更
-- `style` — 代码样式（不影响功能）
-- `refactor` — 重构
-- `test` — 测试
-- `chore` — 构建/工具变更
 
 示例：
-```
-feat: add quiz for Bitcoin Script lesson
-fix: correct image path in SegWit tutorial
-docs: update README with new learning path
-```
 
-## 代码风格
-
-- 使用 ESLint + Prettier 保持代码一致性
-- 提交前会自动运行 lint-staged 检查
-- 手动格式化：`npm run format`
+```text
+docs: improve DeFi risk explanation
+fix: correct SegWit image path
+feat: add smart account glossary terms
+```
 
 ## PR 流程
 
-1. 确保代码通过所有测试：`npm test`
-2. 确保没有 lint 错误：`npm run lint`
-3. 填写 PR 模板中的所有必要信息
-4. 等待 Code Review
-5. 根据反馈进行修改
-6. 合并后删除功能分支
+1. 保持 PR 小而聚焦。
+2. 在 PR 描述里写清楚影响的语言、模块、lesson 或页面。
+3. 勾选实际运行过的验证命令。
+4. UI 修改提供截图；内容修改提供来源或说明。
+5. 根据 review 反馈修改。
+6. 合并后可继续挑选下一条 starter issue。
 
-## 教程内容规范
+## 维护者响应
 
-编写或修改教程时：
+Starter PR 在维护者活跃时目标是 72 小时内给出初次响应。大型内容或产品改动可能需要更多上下文，请先开 issue 讨论范围。
 
-- 使用 Markdown 格式
-- 每课放在独立的编号目录中（如 `01_FirstWeb3Identity/`）
-- 主文件命名为 `README.MD`
-- 代码示例放在 `code_examples/` 子目录
-- 图片使用相对路径引用
-- 中文内容放在 `zh/` 目录，英文放在 `en/` 目录
+## 联系
 
-## 联系我们
-
-- Twitter: [@bhbtc1337](https://twitter.com/bhbtc1337)
+- Twitter/X: [@bhbtc1337](https://twitter.com/bhbtc1337)
 - GitHub Issues: [提交问题](https://github.com/beihaili/Get-Started-with-Web3/issues)
-- 微信群：通过 Google Form 申请加入
-
-## 致谢
-
-感谢每一位贡献者！你的参与让 Web3 教育变得更好。
+- WeChat group: 通过 Google Form 申请加入
