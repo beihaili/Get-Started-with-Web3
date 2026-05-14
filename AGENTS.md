@@ -14,6 +14,8 @@
 
 - `docs/strategy/2026-05-14-ceo-operating-system.md`: CEO 操作系统，包含使命、北极星指标、增长闭环、变现模型、30/60/90 天路线图和外部动作审批边界。
 - `docs/strategy/2026-05-14-execution-board.md`: 执行看板，包含 KPI、工作流、前 10 个任务、内容发布队列和赞助线索。
+- `docs/strategy/2026-05-14-sponsor-kit.md`: 赞助包草案，包含受众、价格、曝光权益、接受政策和月度汇报指标。
+- `docs/strategy/2026-05-14-sponsor-outreach-drafts.md`: 赞助外联话术草案；未获 beihai 批准前不得对外发送。
 
 工作边界：
 

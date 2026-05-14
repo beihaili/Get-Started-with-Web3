@@ -80,10 +80,10 @@ Update weekly.
 
 **Outcome:** First revenue is reachable without damaging trust.
 
-- [ ] Create sponsor kit document with audience, placements, pricing, rules, and contact flow.
-- [ ] Add sponsor analytics snapshot section; initially use GitHub traffic and public repo metrics.
-- [ ] Draft 3 sponsor outreach templates: wallet, infrastructure, exchange/affiliate.
-- [ ] Draft sponsor acceptance policy.
+- [x] Create sponsor kit document with audience, placements, pricing, rules, and contact flow.
+- [x] Add sponsor analytics snapshot section; initially use GitHub traffic and public repo metrics.
+- [x] Draft 3 sponsor outreach templates: wallet, infrastructure, exchange/affiliate.
+- [x] Draft sponsor acceptance policy.
 - [ ] Track sponsor leads in a simple Markdown table until volume justifies a CRM.
 - [ ] Review donation and affiliate disclosures.
 
@@ -112,7 +112,7 @@ Update weekly.
 
 1. Done: Fix SEO language metadata for prerendered English pages.
 2. Done: Add missing `glossary` route coverage to sitemap and prerender.
-3. Create sponsor kit.
+3. Done: Create sponsor kit.
 4. Refresh README positioning.
 5. Add AI-native quick demo to README.
 6. Create awesome-list submission tracker.
