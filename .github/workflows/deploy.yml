@@ -2,9 +2,9 @@ name: Deploy Web3 Learning Platform
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
   # 允许手动触发部署
   workflow_dispatch:
@@ -18,65 +18,65 @@ jobs:
       pull-requests: write
 
     steps:
-    - name: Checkout 📁
-      uses: actions/checkout@v6
+      - name: Checkout 📁
+        uses: actions/checkout@v6
 
-    - name: Setup Node.js 🟢
-      uses: actions/setup-node@v6
-      with:
-        node-version: '20'
-        cache: 'npm'
+      - name: Setup Node.js 🟢
+        uses: actions/setup-node@v6
+        with:
+          node-version: '20'
+          cache: 'npm'
 
-    - name: Install Dependencies 📦
-      # On pull_request (incl. Dependabot): use `npm install` so transient
-      # lockfile drift doesn't block CI. On push to main / manual dispatch:
-      # use strict `npm ci` to guarantee reproducible production builds.
-      run: |
-        if [[ "${{ github.event_name }}" == "pull_request" ]]; then
-          npm install --no-audit --no-fund
-        else
-          npm ci
-        fi
+      - name: Install Dependencies 📦
+        # On pull_request (incl. Dependabot): use `npm install` so transient
+        # lockfile drift doesn't block CI. On push to main / manual dispatch:
+        # use strict `npm ci` to guarantee reproducible production builds.
+        run: |
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            npm install --no-audit --no-fund
+          else
+            npm ci
+          fi
 
-    - name: Install Playwright Chromium 🎭
-      run: npx playwright install chromium
+      - name: Install Playwright Chromium 🎭
+        run: npx playwright install chromium
 
-    - name: Run Tests 🧪
-      run: npm test
+      - name: Run Tests 🧪
+        run: npm test
 
-    - name: Check translation coverage
-      run: node scripts/check-translation-coverage.mjs
+      - name: Check translation coverage
+        run: node scripts/check-translation-coverage.mjs
 
-    - name: Build Application 🔨
-      run: npm run build
-      env:
-        VITE_GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        VITE_GITHUB_USERNAME: ${{ vars.GITHUB_USERNAME || 'beihaili' }}
-        VITE_GITHUB_REPO: ${{ vars.GITHUB_REPO || 'Get-Started-with-Web3' }}
-        VITE_GITHUB_BRANCH: ${{ vars.GITHUB_BRANCH || 'main' }}
+      - name: Build Application 🔨
+        run: npm run build
+        env:
+          VITE_GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          VITE_GITHUB_USERNAME: ${{ vars.GITHUB_USERNAME || 'beihaili' }}
+          VITE_GITHUB_REPO: ${{ vars.GITHUB_REPO || 'Get-Started-with-Web3' }}
+          VITE_GITHUB_BRANCH: ${{ vars.GITHUB_BRANCH || 'main' }}
 
-    - name: Deploy to GitHub Pages 🚀
-      if: github.ref == 'refs/heads/main'
-      uses: peaceiris/actions-gh-pages@v4
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist
+      - name: Deploy to GitHub Pages 🚀
+        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v4.1.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
 
-    - name: Comment PR with Preview Link 💬
-      if: github.event_name == 'pull_request'
-      uses: actions/github-script@v9
-      with:
-        script: |
-          github.rest.issues.createComment({
-            issue_number: context.issue.number,
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            body: '📦 **构建成功！** 在合并到 main 分支后将自动部署到生产环境。'
-          })
+      - name: Comment PR with Preview Link 💬
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v9
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '📦 **构建成功！** 在合并到 main 分支后将自动部署到生产环境。'
+            })
 
-    - name: Output deployment URL 🌐
-      if: github.ref == 'refs/heads/main'
-      run: |
-        echo "🚀 部署完成！"
-        echo "📍 网站地址: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
-        echo "⏰ 部署时间: $(date '+%Y-%m-%d %H:%M:%S')"
+      - name: Output deployment URL 🌐
+        if: github.ref == 'refs/heads/main'
+        run: |
+          echo "🚀 部署完成！"
+          echo "📍 网站地址: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+          echo "⏰ 部署时间: $(date '+%Y-%m-%d %H:%M:%S')"
