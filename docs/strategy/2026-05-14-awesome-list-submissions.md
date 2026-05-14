@@ -35,7 +35,7 @@ Do not submit to spammy lists, paid-only lists, or repositories with no recent m
 
 | Target                       | Category          | Fit                                       | Status      | Next Action                                 |
 | ---------------------------- | ----------------- | ----------------------------------------- | ----------- | ------------------------------------------- |
-| awesome-web3                 | Web3              | Broad Web3 learning resource              | Not started | Find maintained repo and contribution rules |
+| awesome-web3                 | Web3              | Broad Web3 learning resource              | Submitted   | Track useWeb3/awesome-web3#6                |
 | awesome-blockchain           | Blockchain        | General blockchain education              | Not started | Find maintained repo and contribution rules |
 | awesome-bitcoin              | Bitcoin           | Bitcoin modules and RPC lessons           | Not started | Find best-fit section                       |
 | awesome-ethereum             | Ethereum          | Ethereum and smart account lessons        | Not started | Find best-fit section                       |
@@ -83,3 +83,9 @@ GitHub: https://github.com/beihaili/Get-Started-with-Web3
 - If a submission is rejected, note the reason and whether to retry.
 - If a list is unmaintained, mark it as skipped instead of spending more time.
 - Use current repo star count at the time of posting.
+
+## Submission Log
+
+| Date       | Target               | Link                                           | Status    | Notes                                                                  |
+| ---------- | -------------------- | ---------------------------------------------- | --------- | ---------------------------------------------------------------------- |
+| 2026-05-14 | useWeb3/awesome-web3 | https://github.com/useWeb3/awesome-web3/pull/6 | Submitted | Added Get Started with Web3 to Courses. Repo stars at submission: 614. |
