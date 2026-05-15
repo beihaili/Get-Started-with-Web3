@@ -3,12 +3,31 @@ import { useTranslation } from 'react-i18next';
 import { BrainCircuit, CheckCircle, X } from 'lucide-react';
 import { QUIZ_BANK } from './quizData';
 
+function getLocalizedQuestion(question, language) {
+  const lang = language?.split('-')[0];
+  const localized = question.translations?.[lang];
+
+  if (!localized) {
+    return question;
+  }
+
+  return {
+    ...question,
+    question: localized.question || question.question,
+    options:
+      Array.isArray(localized.options) && localized.options.length === question.options.length
+        ? localized.options
+        : question.options,
+    explanation: localized.explanation || question.explanation,
+  };
+}
+
 /**
  * 3道题全对通关测验系统
  * 从原App.jsx迁移 (lines 1973-2325)
  */
 const MultiQuiz = ({ lessonId, onPass }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [quizState, setQuizState] = useState('idle'); // idle, active, completed
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState([]);
@@ -96,7 +115,7 @@ const MultiQuiz = ({ lessonId, onPass }) => {
   }
 
   if (quizState === 'active') {
-    const currentQ = currentQuiz[currentQuestion];
+    const currentQ = getLocalizedQuestion(currentQuiz[currentQuestion], i18n.language);
 
     return (
       <div className="space-y-6">

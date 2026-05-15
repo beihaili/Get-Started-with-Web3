@@ -2339,34 +2339,29 @@ export const QUIZ_BANK = {
   ],
   '8-2': [
     {
-      question: 'Uniswap 使用的恒定乘积做市商公式是什么？',
-      options: ['x + y = k', 'x * y = k', 'x / y = k', 'x ^ y = k'],
-      correctAnswer: 1,
-      explanation:
-        'Uniswap 使用恒定乘积公式 x * y = k，其中 x 和 y 分别是池中两种代币的数量，k 是常数。',
-    },
-    {
-      question: '在 AMM 中，"无常损失"（Impermanent Loss）是什么？',
+      question: 'AMM（自动做市商）的含义和 x · y = k 恒定乘积公式说明了什么？',
       options: [
-        '由于手续费导致的交易损失',
-        '相比简单持有代币，将其放入流动性池可能导致的价值损失',
-        '由于 Gas 费波动导致的损失',
-        '因为代币价格下跌造成的投资损失',
+        'AMM 通过订单簿撮合买卖双方，x · y = k 表示交易所利润固定',
+        'AMM 是 Automated Market Maker，池中两种资产数量乘积在交易后保持为常数 k',
+        'AMM 是账户管理模块，x · y = k 表示 Gas 费上限',
+        'AMM 只适用于中心化交易所，x · y = k 表示用户数量不变',
       ],
       correctAnswer: 1,
       explanation:
-        '无常损失是指相比 HODL 两种代币，将它们放入 AMM 流动性池可能导致的价值差异。价格偏离越大，无常损失越大。',
-    },
-    {
-      question: 'Uniswap V3 相比 V2 的最大创新是什么？',
-      options: [
-        '支持更多代币种类',
-        '集中流动性——LP 可以选择在特定价格区间提供流动性',
-        '完全去除手续费',
-        '引入订单簿模式',
-      ],
-      correctAnswer: 1,
-      explanation: 'V3 允许 LP 选择提供流动性的价格区间（集中流动性），大幅提升了资本效率。',
+        'AMM 是 Automated Market Maker（自动做市商）。在恒定乘积模型中，x 和 y 分别是池中两种资产数量，交易会改变比例，但会让 x · y 维持在同一个常数 k 附近。',
+      translations: {
+        en: {
+          question: 'What does AMM stand for, and what does the x · y = k invariant mean?',
+          options: [
+            'AMM matches buyers and sellers with an order book, and x · y = k means exchange profit is fixed',
+            'AMM means Automated Market Maker, and the product of the two pool reserves stays constant after trades',
+            'AMM means Account Management Module, and x · y = k means the gas limit is fixed',
+            'AMM only applies to centralized exchanges, and x · y = k means user count is constant',
+          ],
+          explanation:
+            'AMM stands for Automated Market Maker. In the constant product model, x and y are the two asset reserves, and trades change their ratio while keeping x · y near the constant k.',
+        },
+      },
     },
     {
       question: '为什么大额交易在 AMM 中会产生较大的滑点？',
@@ -2378,7 +2373,70 @@ export const QUIZ_BANK = {
       ],
       correctAnswer: 1,
       explanation:
-        '在 AMM 中，交易金额占池子的比例越大，对池中代币比例的改变越大，导致实际成交价格偏离预期价格越多。',
+        '在 AMM 中，交易金额占池子的比例越大，对池中代币比例的改变越大，实际成交价格就越偏离交易前看到的价格。',
+      translations: {
+        en: {
+          question: 'What causes larger slippage in an AMM trade?',
+          options: [
+            'Trading fees always rise linearly with trade size',
+            'A large trade changes the pool reserve ratio more, so the execution price moves farther from the quoted price',
+            'Validators charge a special fee for large trades',
+            'Large trades always need more block confirmations',
+          ],
+          explanation:
+            'Slippage grows when the trade is large relative to pool depth. The swap moves the reserve ratio, so the average execution price differs from the pre-trade quote.',
+        },
+      },
+    },
+    {
+      question: 'ETH/USDC 池中 ETH 大幅上涨时，LP 相比简单持有更容易在哪一侧吃亏？',
+      options: [
+        'LP 会持有更少上涨的 ETH、更多 USDC，错过部分 ETH 上涨收益',
+        'LP 会自动持有更多上涨的 ETH，因此没有无常损失',
+        'LP 的损失只来自 Gas 费，与价格变化无关',
+        'LP Token 会被销毁，导致本金全部归零',
+      ],
+      correctAnswer: 0,
+      explanation:
+        '当 ETH 相对 USDC 上涨时，套利交易会让池子卖出 ETH、买入 USDC。LP 最终持有更少的上涨资产，可能跑输相对持有初始 ETH+USDC 的组合。',
+      translations: {
+        en: {
+          question:
+            'If ETH rises sharply in an ETH/USDC pool, where does impermanent loss usually come from for the LP?',
+          options: [
+            'The LP ends up with less of the rising ETH and more USDC, missing part of the ETH upside versus holding',
+            'The LP automatically holds more of the rising ETH, so impermanent loss cannot happen',
+            'The loss only comes from gas fees and has nothing to do with price movement',
+            'The LP token is burned, making the principal go to zero',
+          ],
+          explanation:
+            'When ETH rises against USDC, arbitrage rebalances the pool by removing ETH and adding USDC. The LP can underperform simply holding the starting ETH and USDC mix because they hold less of the asset that rose.',
+        },
+      },
+    },
+    {
+      question: 'Uniswap V3 相比 V2 的最大创新是什么？',
+      options: [
+        '支持更多代币种类',
+        '集中流动性——LP 可以选择在特定价格区间提供流动性',
+        '完全去除手续费',
+        '引入订单簿模式',
+      ],
+      correctAnswer: 1,
+      explanation: 'V3 允许 LP 选择提供流动性的价格区间（集中流动性），大幅提升了资本效率。',
+      translations: {
+        en: {
+          question: 'What is Uniswap V3’s biggest innovation compared with V2?',
+          options: [
+            'It supports more token symbols',
+            'Concentrated liquidity, where LPs choose the price ranges where their capital is active',
+            'It removes trading fees entirely',
+            'It replaces AMMs with an order book',
+          ],
+          explanation:
+            'Uniswap V3 introduced concentrated liquidity. LPs can allocate capital to specific price ranges, which can improve capital efficiency but also requires more active risk management.',
+        },
+      },
     },
     {
       question: 'LP Token 代表什么？',
@@ -2390,6 +2448,19 @@ export const QUIZ_BANK = {
       ],
       correctAnswer: 1,
       explanation: 'LP Token 是流动性提供者在池中的份额凭证，类似于基金份额。',
+      translations: {
+        en: {
+          question: 'What does an LP token represent?',
+          options: [
+            'A governance token',
+            'A receipt for a liquidity provider’s share of the pool',
+            'A receipt for one trade’s fee',
+            'An exchange membership pass',
+          ],
+          explanation:
+            'An LP token represents the liquidity provider’s claim on their share of the pool, similar to a fund share.',
+        },
+      },
     },
   ],
   '8-3': [

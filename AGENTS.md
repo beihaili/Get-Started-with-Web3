@@ -69,6 +69,12 @@ npm run mcp:web3        # 启动本地 stdio MCP server
 - `src/utils/progressExport.js`: 导出 schema 与浏览器下载逻辑，当前 payload 为 `{ version, exportedAt, data }`，`data` 只包含 `useUserStore` 中的非敏感学习进度字段。
 - `src/utils/mergeProgress.js`: 导入 schema 校验、进度归一化和纯合并逻辑；合并规则需保持可测试，避免在 UI 组件里写业务合并逻辑。
 
+## 测验题库
+
+- `src/features/quiz/quizData.js`: 每个 lesson id 对应 5 道选择题；顶层 `question`、`options`、`explanation` 是中文默认内容。
+- `src/features/quiz/MultiQuiz.jsx`: 渲染时会按当前 i18n 语言读取可选 `translations.<lang>` 字段；缺失时回退到顶层中文内容。新增英文题面时优先补 `translations.en.question`、`translations.en.options` 和 `translations.en.explanation`，不要改变 `lessonId` / `onPass` 接口。
+- `src/features/quiz/__tests__/quizData.test.js`: 维护题库结构、题数、重复题和重点课程本地化断言。新增 quiz 数据结构约定时先补测试。
+
 ## MCP Server
 
 `scripts/web3-mcp-server.mjs` 使用官方 `@modelcontextprotocol/sdk` 暴露本地 stdio MCP server。该 server 是只读的，不应写文件、修改课程内容或执行链上操作。
