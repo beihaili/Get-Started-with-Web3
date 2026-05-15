@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { useContentStore } from '../useContentStore';
 
 beforeEach(() => {
@@ -7,6 +7,70 @@ beforeEach(() => {
     pendingFetches: {},
     contentLoading: false,
     fetchError: null,
+  });
+});
+
+afterEach(() => {
+  vi.restoreAllMocks();
+});
+
+describe('fetchLessonContent', () => {
+  it('falls back to GitHub raw content when the local markdown request returns SPA HTML', async () => {
+    vi.spyOn(globalThis, 'fetch')
+      .mockResolvedValueOnce(
+        new Response('<!doctype html><html><head></head><body>SPA fallback</body></html>', {
+          status: 200,
+          headers: { 'Content-Type': 'text/html' },
+        })
+      )
+      .mockResolvedValueOnce(
+        new Response('Not Found', {
+          status: 404,
+          headers: { 'Content-Type': 'text/plain' },
+        })
+      )
+      .mockResolvedValueOnce(
+        new Response('# Lesson Markdown', {
+          status: 200,
+          headers: { 'Content-Type': 'text/plain' },
+        })
+      );
+
+    const content = await useContentStore
+      .getState()
+      .fetchLessonContent('zh', 'GetStartedWithBitcoin/03_BitcoinTx');
+
+    expect(content).toBe('# Lesson Markdown');
+    expect(fetch).toHaveBeenNthCalledWith(
+      3,
+      'https://raw.githubusercontent.com/beihaili/Get-Started-with-Web3/main/zh/GetStartedWithBitcoin/03_BitcoinTx/README.md'
+    );
+  });
+
+  it('tries uppercase README.MD before falling back to GitHub raw content', async () => {
+    vi.spyOn(globalThis, 'fetch')
+      .mockResolvedValueOnce(
+        new Response('<!doctype html><html><head></head><body>SPA fallback</body></html>', {
+          status: 200,
+          headers: { 'Content-Type': 'text/html' },
+        })
+      )
+      .mockResolvedValueOnce(
+        new Response('# Local Uppercase Markdown', {
+          status: 200,
+          headers: { 'Content-Type': 'text/plain' },
+        })
+      );
+
+    const content = await useContentStore
+      .getState()
+      .fetchLessonContent('zh', 'GetStartedWithBitcoin/03_BitcoinTx');
+
+    expect(content).toBe('# Local Uppercase Markdown');
+    expect(fetch).toHaveBeenNthCalledWith(
+      2,
+      '/Get-Started-with-Web3/content/zh/GetStartedWithBitcoin/03_BitcoinTx/README.MD'
+    );
   });
 });
 

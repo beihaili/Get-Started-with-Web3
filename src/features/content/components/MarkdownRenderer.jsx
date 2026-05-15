@@ -32,7 +32,24 @@ const CopyButton = ({ text }) => {
   );
 };
 
-const MarkdownRendererInner = ({ content, basePath = '' }) => {
+const mergeClassNames = (...classNames) => classNames.filter(Boolean).join(' ');
+
+const normalizeImageMetadataKey = (src, imageMetadataBase) => {
+  if (!src || src.startsWith('http') || src.startsWith('/')) {
+    return null;
+  }
+
+  const cleanSrc = src.split('#')[0].split('?')[0].replace(/^\.\//, '');
+  const cleanBase = imageMetadataBase.replace(/^\/+|\/+$/g, '');
+  return [cleanBase, cleanSrc].filter(Boolean).join('/');
+};
+
+const MarkdownRendererInner = ({
+  content,
+  basePath = '',
+  imageMetadata = {},
+  imageMetadataBase = '',
+}) => {
   const components = useMemo(() => {
     // 处理图片路径
     const resolveImageSrc = (src) => {
@@ -96,17 +113,40 @@ const MarkdownRendererInner = ({ content, basePath = '' }) => {
       ),
 
       // 图片
-      img: ({ src, alt, width }) => (
-        <span className="inline-flex m-1 align-middle">
-          <img
-            src={resolveImageSrc(src)}
-            alt={alt || 'Image'}
-            loading="lazy"
-            className="rounded-lg max-w-full h-auto shadow-lg"
-            style={{ maxHeight: '500px', width: width ? `${width}px` : 'auto' }}
-          />
-        </span>
-      ),
+      img: ({
+        src,
+        alt,
+        width,
+        height,
+        className,
+        loading,
+        decoding,
+        style,
+        node: _node,
+        ...props
+      }) => {
+        const metadataKey = normalizeImageMetadataKey(src, imageMetadataBase);
+        const dimensions = metadataKey ? imageMetadata[metadataKey] : null;
+        const imageWidth = width || dimensions?.width;
+        const imageHeight = height || dimensions?.height;
+        const imageStyle = style && typeof style === 'object' ? style : {};
+
+        return (
+          <span className="inline-flex m-1 align-middle">
+            <img
+              {...props}
+              src={resolveImageSrc(src)}
+              alt={alt || 'Image'}
+              loading={loading || 'lazy'}
+              decoding={decoding || 'async'}
+              width={imageWidth || undefined}
+              height={imageHeight || undefined}
+              className={mergeClassNames('rounded-lg max-w-full h-auto shadow-lg', className)}
+              style={{ maxHeight: '500px', ...imageStyle }}
+            />
+          </span>
+        );
+      },
 
       // 粗体
       strong: ({ children }) => <strong className="text-white font-bold">{children}</strong>,
@@ -219,7 +259,7 @@ const MarkdownRendererInner = ({ content, basePath = '' }) => {
       // 分隔
       br: () => <br />,
     };
-  }, [basePath]);
+  }, [basePath, imageMetadata, imageMetadataBase]);
 
   return (
     <div className="font-sans text-base markdown-content">

@@ -56,6 +56,7 @@ npm run mcp:web3        # 启动本地 stdio MCP server
 - `scripts/generate-ai-index.mjs`: 生成上述 artifact。
 - `scripts/publish-ai-artifacts.mjs`: 将根目录 `ai/` artifacts 复制到 `public/`。
 - `scripts/verify-ai-entrypoints.mjs`: 检查 artifacts、公开 URL、MCP 工具清单、中英文覆盖和 x402 元数据。
+- `scripts/sync-content.mjs`: 将中英文课程内容复制到 `public/content/`，并生成 `public/content/image-metadata.json`，供课程图片渲染时补充 `width` / `height`。
 - `scripts/check-translation-coverage.mjs`: 非阻塞检查 `zh/` 中缺失的英文翻译，支持 `README.md` 和 `README.MD` 两种文件名。
 - `scripts/ai-content-core.mjs`: 搜索、读取课程、生成学习路径、组合上下文等纯函数。
 

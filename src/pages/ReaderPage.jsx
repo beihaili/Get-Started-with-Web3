@@ -28,12 +28,14 @@ const ReaderPage = () => {
   const { t } = useTranslation();
   const { markLessonComplete, getLessonProgress, recordQuizScore, checkModuleBadges } =
     useUserStore();
-  const { fetchLessonContent } = useContentStore();
+  const { fetchLessonContent, basePath: publicBasePath } = useContentStore();
 
   const [content, setContent] = useState('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [basePath, setBasePath] = useState('');
+  const [imageMetadata, setImageMetadata] = useState({});
+  const [imageMetadataBase, setImageMetadataBase] = useState('');
   const [showShareCard, setShowShareCard] = useState(false);
 
   const lessonKey = `${moduleId}-${lessonId}`;
@@ -59,20 +61,29 @@ const ReaderPage = () => {
         setContent(lessonContent || currentLesson.fallbackContent || t('reader.loadingFallback'));
 
         // 设置图片基础路径 (includes lang prefix for correct asset resolution)
-        const pathParts = currentLesson.path.split('/');
-        const base = pathParts.slice(0, -1).join('/') + '/';
-        setBasePath(`/Get-Started-with-Web3/${lang}/${base}`);
+        const base = `${currentLesson.path.replace(/\/+$/, '')}/`;
+        setBasePath(`${publicBasePath}content/${lang}/${base}`);
+        setImageMetadataBase(`${lang}/${base}`);
+
+        try {
+          const metadataResponse = await fetch(`${publicBasePath}content/image-metadata.json`);
+          setImageMetadata(metadataResponse.ok ? await metadataResponse.json() : {});
+        } catch (metadataError) {
+          console.warn('Failed to load image metadata:', metadataError);
+          setImageMetadata({});
+        }
       } catch (err) {
         console.error('Failed to load lesson:', err);
         setError(err.message);
         setContent(currentLesson.fallbackContent || t('reader.loadFailedFallback'));
+        setImageMetadata({});
       } finally {
         setLoading(false);
       }
     };
 
     loadContent();
-  }, [lang, moduleId, lessonId, currentLesson, fetchLessonContent, t]);
+  }, [lang, moduleId, lessonId, currentLesson, fetchLessonContent, publicBasePath, t]);
 
   const handleMarkComplete = (score, total) => {
     if (score !== undefined && total !== undefined) {
@@ -241,7 +252,12 @@ const ReaderPage = () => {
 
               {/* Markdown Content */}
               <div className="prose dark:prose-invert max-w-none">
-                <MarkdownRenderer content={content} basePath={basePath} />
+                <MarkdownRenderer
+                  content={content}
+                  basePath={basePath}
+                  imageMetadata={imageMetadata}
+                  imageMetadataBase={imageMetadataBase}
+                />
               </div>
 
               {/* Quiz Section */}

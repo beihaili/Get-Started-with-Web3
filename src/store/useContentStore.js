@@ -9,6 +9,18 @@ import { create } from 'zustand';
  */
 const MAX_CACHE_ENTRIES = 50;
 
+const looksLikeHtmlDocument = (content) => {
+  const normalized = content.trimStart().toLowerCase();
+  return normalized.startsWith('<!doctype html') || normalized.startsWith('<html');
+};
+
+const getLessonContentUrls = (basePath, lang, lessonPath) => [
+  `${basePath}content/${lang}/${lessonPath}/README.md`,
+  `${basePath}content/${lang}/${lessonPath}/README.MD`,
+  `https://raw.githubusercontent.com/beihaili/Get-Started-with-Web3/main/${lang}/${lessonPath}/README.md`,
+  `https://raw.githubusercontent.com/beihaili/Get-Started-with-Web3/main/${lang}/${lessonPath}/README.MD`,
+];
+
 export const useContentStore = create((set, get) => ({
   // 当前选中的模块和课程
   activeModule: null,
@@ -63,21 +75,29 @@ export const useContentStore = create((set, get) => ({
       set({ contentLoading: true, fetchError: null });
 
       try {
-        // 尝试从本地public目录加载
-        const localUrl = `${get().basePath}content/${lang}/${lessonPath}/README.md`;
-        let response = await fetch(localUrl);
+        let content = null;
+        let lastStatus = 'unknown';
 
-        // 如果本地加载失败，尝试从GitHub Raw加载
-        if (!response.ok) {
-          const githubUrl = `https://raw.githubusercontent.com/beihaili/Get-Started-with-Web3/main/${lang}/${lessonPath}/README.md`;
-          response = await fetch(githubUrl);
+        for (const url of getLessonContentUrls(get().basePath, lang, lessonPath)) {
+          const response = await fetch(url);
+          lastStatus = response.status;
+
+          if (!response.ok) {
+            continue;
+          }
+
+          const responseText = await response.text();
+          if (looksLikeHtmlDocument(responseText)) {
+            continue;
+          }
+
+          content = responseText;
+          break;
         }
 
-        if (!response.ok) {
-          throw new Error(`Failed to fetch content: ${response.status}`);
+        if (content === null) {
+          throw new Error(`Failed to fetch content: ${lastStatus}`);
         }
-
-        const content = await response.text();
 
         // 缓存内容（带上限淘汰）
         const currentCache = { ...get().contentCache };
