@@ -142,6 +142,8 @@ Update weekly.
 
 ## Reporting Template
 
+Daily reports live in `docs/operations/` and use `docs/operations/templates/daily-report-template.md`.
+
 Daily report should include:
 
 - Completed since last report.
