@@ -1,0 +1,12 @@
+{
+  "closeLabel": "Close",
+  "achievementCard": "Learning Achievement Card",
+  "studyStreak": "{{count}}-day streak",
+  "startJourney": "Start your learning journey",
+  "badgeCollection": "Badge Collection",
+  "learningProgress": "Learning Progress",
+  "download": "Save Image",
+  "generating": "Generating...",
+  "shareTwitter": "Share on Twitter",
+  "twitterText": "I earned {{count}} badge{{plural}} and {{xp}} XP on Get Started with Web3! 🚀\n\nJoin me and learn blockchain from scratch:"
+}

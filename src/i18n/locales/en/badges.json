@@ -1,0 +1,16 @@
+{
+  "pageTitle": "Badge Collection | Web3 Starter",
+  "pageDesc": "Web3 learning platform badge collection, view earned learning achievement badges",
+  "titleLabel": "Title",
+  "xpLabel": "Experience",
+  "galleryTitle": "🏆 Badge Gallery",
+  "collectionRate": "Collection rate: {{rate}}% ({{earned}}/{{total}})",
+  "noBadgesTitle": "No badges yet",
+  "noBadgesDesc": "Complete course lessons to unlock beautiful badges and rich rewards!",
+  "startLearning": "Start Learning",
+  "specialAchievements": "Special Achievements",
+  "earnedCount": "Earned",
+  "unlockedCount": "Locked",
+  "completionRate": "Completion",
+  "shareAchievement": "Share Achievement"
+}

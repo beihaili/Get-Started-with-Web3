@@ -1,0 +1,10 @@
+{
+  "dialogLabel": "Search courses",
+  "placeholder": "Search courses...",
+  "inputLabel": "Search courses",
+  "closeLabel": "Close search",
+  "noResults": "No matching courses found",
+  "hintNavigate": "↑↓ Navigate",
+  "hintSelect": "↵ Select",
+  "hintClose": "Esc Close"
+}

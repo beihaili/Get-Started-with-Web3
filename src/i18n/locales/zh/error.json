@@ -1,0 +1,8 @@
+{
+  "title": "页面出错了",
+  "message": "抱歉，页面遇到了意外错误。请尝试重新加载或返回首页。",
+  "reload": "重新加载",
+  "reloadLabel": "重新加载页面",
+  "backHome": "返回首页",
+  "backHomeLabel": "返回首页"
+}

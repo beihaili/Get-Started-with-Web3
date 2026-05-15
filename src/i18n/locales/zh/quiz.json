@@ -1,0 +1,20 @@
+{
+  "title": "闯关测验",
+  "description": "完成 <strong>{{count}} 道题目</strong>，需要<strong> 全部答对 </strong>才能通关下一章节",
+  "startChallenge": "🚀 开始挑战",
+  "questionProgress": "题目 {{current}} / {{total}}",
+  "score": "得分: {{score}}/{{total}}",
+  "selectAnswer": "选择答案",
+  "confirmAnswer": "确认答案",
+  "correct": "回答正确！",
+  "wrong": "回答错误",
+  "nextQuestion": "下一题",
+  "viewResult": "查看结果",
+  "perfectTitle": "完美通关！",
+  "perfectDesc": "恭喜你全部答对 {{count}} 道题目！你已经掌握了本章节的核心知识。",
+  "unlockNext": "✅ 解锁下一章节",
+  "needMoreTitle": "还需努力",
+  "needMoreDesc": "你答对了 {{score}}/{{total}} 题。需要全部答对才能进入下一章节，再试一次吧！",
+  "retry": "🔄 重新挑战",
+  "skipDebug": "跳过 (调试用)"
+}

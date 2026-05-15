@@ -102,6 +102,7 @@ Update weekly.
 
 **Outcome:** Growth changes do not break the platform.
 
+- [x] Split i18n locale payload by route/feature namespace and validate main bundle shrinkage for [#93](https://github.com/beihaili/Get-Started-with-Web3/issues/93).
 - [ ] Keep Dependabot PRs under control; evaluate Tailwind/ESLint major upgrades separately.
 - [ ] Run `npm test`, `npm run lint`, and `npm run ai:verify` before claiming work is complete.
 - [ ] Run `npm run build` before shipping SEO/prerender changes.

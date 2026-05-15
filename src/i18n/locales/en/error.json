@@ -1,0 +1,8 @@
+{
+  "title": "Page Error",
+  "message": "Sorry, the page encountered an unexpected error. Please try reloading or return to the home page.",
+  "reload": "Reload",
+  "reloadLabel": "Reload page",
+  "backHome": "Back to Home",
+  "backHomeLabel": "Return to home page"
+}
