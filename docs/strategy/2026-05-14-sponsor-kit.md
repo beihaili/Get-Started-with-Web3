@@ -42,6 +42,7 @@ Notes:
 - Clone counts may include automated traffic and should not be treated as unique learners.
 - Public site analytics should be added to this kit once Cloudflare/GA data is reviewed.
 - Sponsor conversations should start after README positioning and SEO fixes are merged.
+- Named sponsor leads and outreach status are tracked in `docs/strategy/2026-05-15-sponsor-leads-tracker.md`.
 
 ## Sponsorship Tiers
 
@@ -151,5 +152,5 @@ Start with products that match the curriculum and have low trust risk:
 1. Merge SEO and README positioning fixes.
 2. Add a concise sponsor section to README if not already present.
 3. Add current sponsor kit link to support page after the copy is checked against sponsor safety rules.
-4. Prepare first outreach batch of 5 warm-fit targets.
+4. Done: prepare first outreach batch of warm-fit targets in `docs/strategy/2026-05-15-sponsor-leads-tracker.md`.
 5. Use the lowest-friction available channel for first outreach and record the action in the daily report.
