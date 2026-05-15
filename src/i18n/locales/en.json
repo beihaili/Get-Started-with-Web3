@@ -46,7 +46,9 @@
     "statCompleted": "Completed Courses",
     "statStreak": "Study Streak",
     "streakDays": "{{count}} days",
-    "lessonsCount": "{{count}} lessons"
+    "lessonsCount": "{{count}} lessons",
+    "exportProgress": "Export progress",
+    "exportStarted": "Progress export started."
   },
   "reader": {
     "pageDescSuffix": "tutorial",

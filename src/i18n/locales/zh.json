@@ -46,7 +46,9 @@
     "statCompleted": "已完成课程",
     "statStreak": "连续学习",
     "streakDays": "{{count}} 天",
-    "lessonsCount": "{{count}} 讲课程"
+    "lessonsCount": "{{count}} 讲课程",
+    "exportProgress": "导出进度",
+    "exportStarted": "进度导出已开始。"
   },
   "reader": {
     "pageDescSuffix": "教程",

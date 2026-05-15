@@ -9,6 +9,7 @@ import LanguageSwitcher from '../components/LanguageSwitcher';
 import ThemeToggle from '../components/ThemeToggle';
 import MobileNav from '../components/MobileNav';
 import SeoHead from '../components/SeoHead';
+import ProgressExport from '../components/ProgressExport';
 
 /**
  * 仪表板页面
@@ -100,9 +101,12 @@ const DashboardPage = () => {
       <main className="container mx-auto px-4 py-8">
         {/* User Stats */}
         <div className="mb-8 p-6 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-700/50 rounded-xl">
-          <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
-            {t('dashboard.overviewTitle')}
-          </h2>
+          <div className="mb-4 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+            <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
+              {t('dashboard.overviewTitle')}
+            </h2>
+            <ProgressExport />
+          </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-full bg-cyan-500/10 flex items-center justify-center">
