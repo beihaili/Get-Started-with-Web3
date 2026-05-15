@@ -61,6 +61,12 @@ npm run mcp:web3        # 启动本地 stdio MCP server
 
 修改课程结构、术语表或 Agent 工具元数据后，运行 `npm run ai:index && npm run ai:publish && npm run ai:verify`，并提交更新后的 `ai/` 与 `public/` artifacts。
 
+## 学习进度导出
+
+- `src/components/ProgressExport.jsx`: Dashboard 概览区的学习进度 JSON 导出按钮，所有文案走 `dashboard.*` i18n key。
+- `src/utils/progressExport.js`: 导出 schema 与浏览器下载逻辑，当前 payload 为 `{ version, exportedAt, data }`，`data` 只包含 `useUserStore` 中的非敏感学习进度字段。
+- 后续实现导入进度时，应优先复用 `progressExport.js` 的 schema 字段，避免导入/导出结构分叉。
+
 ## MCP Server
 
 `scripts/web3-mcp-server.mjs` 使用官方 `@modelcontextprotocol/sdk` 暴露本地 stdio MCP server。该 server 是只读的，不应写文件、修改课程内容或执行链上操作。
