@@ -65,6 +65,8 @@ Bitcoin wallets can be classified along two dimensions:
 
 Browser extension wallets are among the most convenient hot wallets, ideal for daily use:
 
+> ⚠️ **Security checkpoint before installing**: Do not install a wallet from a search ad, random tutorial link, Telegram/Discord DM, or "support" message. Type the official domain manually, verify the browser extension publisher, and start with a separate browser profile if you plan to interact with experimental apps.
+
 1. **Choose a wallet plugin**: Recommended to use widely adopted open-source wallet plugins such as [UniSat](https://unisat.io/). Homepage shown below:
 <div align="center"> <img src="./img/1.png" width = 600 /> </div>
 
@@ -81,9 +83,13 @@ Browser extension wallets are among the most convenient hot wallets, ideal for d
 <div align="center"> <img src="./img/6.png" width = 600 /> </div>
   Open the plugin and select "Create New Wallet." Follow the prompts to set a strong password and carefully save the wallet's mnemonic phrase. After creating the wallet, you'll set a password used to view the private key on this machine.
 
+   > ⚠️ **Password vs. seed phrase**: The wallet password only protects this local app installation. Anyone who gets the seed phrase can restore and spend the wallet elsewhere without knowing that password. Never paste the seed phrase into websites, cloud notes, screenshots, AI chat tools, or customer-support forms.
+
 4. **Back up your mnemonic phrase**: The mnemonic phrase is the only way to recover your wallet — it must be kept safe and never lost or exposed. After backing up the mnemonic, the second step will ask you to select a wallet address:
 <div align="center"> <img src="./img/7.png" width = 600 /> </div>
   Different address types serve different use cases with different transaction fees. You can start with the default first address type for lower fees. For special scenarios like Ordinals protocol transactions, you'll need a Taproot address — this can be flexibly changed in wallet settings later.
+
+   > ✅ **Recovery drill**: Before receiving meaningful funds, create a small test wallet first, write down the seed phrase, restore it on a trusted second device or fresh profile, and confirm the same receiving address appears. This catches backup mistakes before real assets are involved.
 
 5. **Start using it**: After creation, you can use the wallet to generate Bitcoin addresses, and receive and send Bitcoin.
 <div align="center"> <img src="./img/8.png" width = 600 /> </div>
@@ -91,6 +97,8 @@ Browser extension wallets are among the most convenient hot wallets, ideal for d
 ### DIY Cold Wallet from an Old Phone
 
 An old phone can be repurposed into a high-security cold wallet for long-term Bitcoin storage.
+
+> ⚠️ **Use this only if you understand the trade-off**: A DIY cold wallet is not automatically equivalent to a hardware wallet. If the phone was previously infected, if the wallet app download is tampered with, or if the phone later reconnects to the internet, the setup can fail. For large balances, prefer a reputable hardware wallet or multisig setup after practicing with small amounts.
 
 1. **Preparation**: Find an old phone and factory reset it to ensure no malware. (Optional) Physically damage the phone's signal transmission/reception module.
 2. **Install a wallet app**: Install an offline-capable wallet app like [Bither Wallet](https://www.bitcoin.com/zh-cn/btc-wallet/).
