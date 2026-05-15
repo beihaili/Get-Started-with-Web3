@@ -14,6 +14,7 @@ const ensureExists = async (dir) => {
 
 const IMAGE_EXTENSIONS = new Set(['.gif', '.jpeg', '.jpg', '.png']);
 const IMAGE_METADATA_FILE = 'image-metadata.json';
+const README_FILE_PATTERN = /^README\.md$/i;
 
 const isImageFile = (filePath) => IMAGE_EXTENSIONS.has(path.extname(filePath).toLowerCase());
 
@@ -131,6 +132,91 @@ const writeImageMetadata = async (contentRoot, logger = console) => {
   logger.log(`[sync-content] Wrote ${Object.keys(metadata).length} image metadata entries`);
 };
 
+const cleanLocalAssetReference = (rawReference) => {
+  const reference = rawReference.split(/[?#]/)[0].trim();
+
+  if (
+    !reference ||
+    /^(?:[a-z][a-z0-9+.-]*:)?\/\//i.test(reference) ||
+    /^(?:data|mailto|tel):/i.test(reference) ||
+    reference.startsWith('#')
+  ) {
+    return null;
+  }
+
+  const normalized = path.normalize(reference);
+  if (path.isAbsolute(normalized) || normalized.startsWith('..')) {
+    return null;
+  }
+
+  return normalized;
+};
+
+const extractLocalImageReferences = (content) => {
+  const references = new Set();
+  const markdownImagePattern = /!\[[^\]]*]\(([^)\s]+)(?:\s+["'][^"']*["'])?\)/g;
+  const htmlImagePattern = /<img\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/gi;
+
+  for (const pattern of [markdownImagePattern, htmlImagePattern]) {
+    for (const match of content.matchAll(pattern)) {
+      const reference = cleanLocalAssetReference(match[1]);
+      if (reference && isImageFile(reference)) {
+        references.add(reference);
+      }
+    }
+  }
+
+  return [...references];
+};
+
+const copyMissingReferencedImages = async (fallbackFolder, targetFolder, logger = console) => {
+  const visit = async (dir) => {
+    const entries = await readdir(dir, { withFileTypes: true });
+
+    for (const entry of entries) {
+      const entryPath = path.join(dir, entry.name);
+
+      if (entry.isDirectory()) {
+        await visit(entryPath);
+        continue;
+      }
+
+      if (!entry.isFile() || !README_FILE_PATTERN.test(entry.name)) {
+        continue;
+      }
+
+      const content = await readFile(entryPath, 'utf8');
+      const readmeDir = path.dirname(entryPath);
+
+      for (const reference of extractLocalImageReferences(content)) {
+        const targetImage = path.resolve(readmeDir, reference);
+        const targetRelative = path.relative(targetFolder, targetImage);
+
+        if (targetRelative.startsWith('..') || path.isAbsolute(targetRelative)) {
+          continue;
+        }
+
+        if (existsSync(targetImage)) {
+          continue;
+        }
+
+        const fallbackImage = path.join(fallbackFolder, targetRelative);
+        if (!existsSync(fallbackImage)) {
+          continue;
+        }
+
+        await ensureExists(path.dirname(targetImage));
+        await cp(fallbackImage, targetImage);
+        logger.log(
+          `[sync-content] Copied fallback image ${fallbackImage} -> ${targetImage}`
+        );
+      }
+    }
+  };
+
+  await visit(targetFolder);
+};
+
 export const getSourceFoldersFromCourseData = (courseData = COURSE_DATA) => {
   const folders = new Set();
 
@@ -196,6 +282,7 @@ export const syncContent = async (options = {}) => {
     const dest = path.join(enTarget, folder);
     if (existsSync(src)) {
       await safeCopy(src, dest, logger);
+      await copyMissingReferencedImages(path.join(root, 'zh', folder), dest, logger);
     }
   }
 

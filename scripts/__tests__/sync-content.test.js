@@ -114,6 +114,57 @@ describe('sync-content', () => {
       height: 360,
     });
   });
+
+  it('fills missing English lesson images from the matching Chinese lesson assets', async () => {
+    tempDir = await mkdtemp(path.join(os.tmpdir(), 'web3-sync-content-'));
+    const zhLessonDir = path.join(tempDir, 'zh', 'Web3QuickStart', '02_FirstWeb3Transaction');
+    const enLessonDir = path.join(tempDir, 'en', 'Web3QuickStart', '02_FirstWeb3Transaction');
+    const image = createPngHeader(800, 450);
+
+    await mkdir(path.join(zhLessonDir, 'img'), { recursive: true });
+    await mkdir(enLessonDir, { recursive: true });
+    await writeFile(path.join(zhLessonDir, 'README.MD'), '# 中文\n', 'utf8');
+    await writeFile(path.join(zhLessonDir, 'img', '01.png'), image);
+    await writeFile(
+      path.join(enLessonDir, 'README.md'),
+      '# English\n\n<div><img src="./img/01.png" /></div>\n',
+      'utf8'
+    );
+
+    await syncContent({
+      projectRoot: tempDir,
+      courseData: [
+        {
+          lessons: [{ path: 'Web3QuickStart/02_FirstWeb3Transaction' }],
+        },
+      ],
+      logger: { log() {}, warn() {}, error() {} },
+    });
+
+    await expect(
+      readFile(
+        path.join(
+          tempDir,
+          'public',
+          'content',
+          'en',
+          'Web3QuickStart',
+          '02_FirstWeb3Transaction',
+          'img',
+          '01.png'
+        )
+      )
+    ).resolves.toEqual(image);
+
+    const metadata = JSON.parse(
+      await readFile(path.join(tempDir, 'public', 'content', 'image-metadata.json'), 'utf8')
+    );
+
+    expect(metadata['en/Web3QuickStart/02_FirstWeb3Transaction/img/01.png']).toEqual({
+      width: 800,
+      height: 450,
+    });
+  });
 });
 
 const createPngHeader = (width, height) => {

@@ -58,7 +58,7 @@ npm run mcp:web3        # 启动本地 stdio MCP server
 - `scripts/generate-ai-index.mjs`: 生成上述 artifact。
 - `scripts/publish-ai-artifacts.mjs`: 将根目录 `ai/` artifacts 复制到 `public/`。
 - `scripts/verify-ai-entrypoints.mjs`: 检查 artifacts、公开 URL、MCP 工具清单、中英文覆盖和 x402 元数据。
-- `scripts/sync-content.mjs`: 将中英文课程内容复制到 `public/content/`，并生成 `public/content/image-metadata.json`，供课程图片渲染时补充 `width` / `height`。
+- `scripts/sync-content.mjs`: 将中英文课程内容复制到 `public/content/`，为英文课程补齐对应中文课程中存在但英文目录缺失的本地图片资产，并生成 `public/content/image-metadata.json`，供课程图片渲染时补充 `width` / `height`。
 - `scripts/check-translation-coverage.mjs`: 非阻塞检查 `zh/` 中缺失的英文翻译，支持 `README.md` 和 `README.MD` 两种文件名。
 - `scripts/ai-content-core.mjs`: 搜索、读取课程、生成学习路径、组合上下文等纯函数。
 
@@ -130,6 +130,7 @@ Agent 使用 MCP 工具回答时，应优先引用工具返回的 `citation.file
 ## 修改注意
 
 - 新增或移动课程时，先更新 `src/config/courseData.js`，必要时同步 `src/features/badges/badgeData.js` 和 `zh/README.md`，再运行 `npm run ai:index`。
+- 英文课程 README 可以复用对应中文课程目录下的本地图片；`npm run sync-content` 会按 README 中的本地图片引用补齐缺失英文发布资产。若英文课程需要不同图片，直接放到 `en/` 对应目录，脚本不会覆盖已有英文图片。
 - 新增术语时，更新 `src/config/glossaryData.js` 和对应测试，保持 `GLOSSARY_CATEGORIES` 与测试允许分类一致，再运行 `npm run ai:index`。
 - MCP 工具必须保持只读，返回结果需包含可引用的 `citation.file` 或 URL。
 - 修改代码后至少运行相关 Vitest；完成前运行 `npm test` 和 `npm run lint`。
