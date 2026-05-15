@@ -1,6 +1,68 @@
 import { describe, it, expect } from 'vitest';
 import { GLOSSARY_DATA } from '../glossaryData';
 
+const plannedExpansionTerms = [
+  {
+    term: 'EIP-4844',
+    englishQuery: 'proto-danksharding',
+    chineseQuery: '临时数据',
+  },
+  {
+    term: 'Stealth Address',
+    englishQuery: 'stealth',
+    chineseQuery: '隐身地址',
+  },
+  {
+    term: 'Rollup',
+    englishQuery: 'rollup',
+    chineseQuery: '侧链',
+  },
+  {
+    term: 'Sidechain',
+    englishQuery: 'sidechain',
+    chineseQuery: '独立共识',
+  },
+  {
+    term: 'LST',
+    englishQuery: 'liquid staking',
+    chineseQuery: '流动性质押',
+  },
+  {
+    term: 'Airdrop Farming',
+    englishQuery: 'airdrop',
+    chineseQuery: '空投农场',
+  },
+  {
+    term: 'Solver',
+    englishQuery: 'solver',
+    chineseQuery: '求解器',
+  },
+  {
+    term: 'Slashing',
+    englishQuery: 'slashing',
+    chineseQuery: '罚没',
+  },
+  {
+    term: 'Bridge',
+    englishQuery: 'bridge',
+    chineseQuery: '跨链桥',
+  },
+  {
+    term: 'Oracle',
+    englishQuery: 'oracle',
+    chineseQuery: '预言机',
+  },
+];
+
+const findByQuery = (query) => {
+  const normalizedQuery = query.toLowerCase();
+  return GLOSSARY_DATA.filter(
+    (item) =>
+      item.term.toLowerCase().includes(normalizedQuery) ||
+      item.definition.toLowerCase().includes(normalizedQuery)
+  );
+};
+
 describe('glossaryData', () => {
   it('should have at least 40 terms', () => {
     expect(GLOSSARY_DATA.length).toBeGreaterThanOrEqual(40);
@@ -40,5 +102,18 @@ describe('glossaryData', () => {
     expect(categories).toContain('Layer 2');
     expect(categories).toContain('稳定币');
     expect(categories).toContain('安全');
+  });
+
+  it('includes the planned Web3 glossary expansion terms', () => {
+    plannedExpansionTerms.forEach(({ term }) => {
+      expect(GLOSSARY_DATA.some((item) => item.term.includes(term))).toBe(true);
+    });
+  });
+
+  it('finds each planned expansion term by English and Chinese keywords', () => {
+    plannedExpansionTerms.forEach(({ term, englishQuery, chineseQuery }) => {
+      expect(findByQuery(englishQuery).some((item) => item.term.includes(term))).toBe(true);
+      expect(findByQuery(chineseQuery).some((item) => item.term.includes(term))).toBe(true);
+    });
   });
 });
