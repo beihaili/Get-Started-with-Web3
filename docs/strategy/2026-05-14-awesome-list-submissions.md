@@ -45,8 +45,8 @@ Do not submit to spammy lists, paid-only lists, or repositories with no recent m
 | awesome-mcp                  | MCP               | Read-only Web3 curriculum MCP             | Submitted   | Track TensorBlock/awesome-mcp-servers#544   |
 | awesome-llms-txt             | AI agent content  | Public `llms.txt` entrypoint              | Not started | Check if education repos are accepted       |
 | awesome-ai-agents            | AI agents         | Agent-readable curriculum                 | Not started | Check if MCP resources are accepted         |
-| learnblockchain.cn/community | Chinese community | Existing referrer and strong audience fit | Not started | Prepare Chinese community post              |
-| Twitter/X thread             | Personal brand    | Fastest direct distribution               | Not started | Use public post draft queue                 |
+| learnblockchain.cn/community | Chinese community | Existing referrer and strong audience fit | Drafted     | Publish from public post draft queue        |
+| Twitter/X thread             | Personal brand    | Fastest direct distribution               | Drafted     | Publish from public post draft queue        |
 
 ## Pull Request Template For Awesome Lists
 
