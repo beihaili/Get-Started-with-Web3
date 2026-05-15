@@ -71,12 +71,24 @@ npm run mcp:web3        # 启动本地 stdio MCP server
 - 新增页面或新的懒加载 UI 区块时，同步补齐中英文 section 文件，并更新 `getRouteI18nSections()` 的路由映射；namespace 加载失败必须保留 `console.warn` 级别告警。
 - 修改 i18n 结构后优先跑 `npx vitest run src/i18n/__tests__/i18n.test.js`，完成前仍需跑 `npm test`、`npm run lint` 和 `npm run build`。
 
+## 样式构建
+
+- 本项目使用 Tailwind CSS v4。`src/index.css` 必须使用 `@import 'tailwindcss';`，并通过 `@config '../tailwind.config.js';` 显式加载现有配置；不要改回 v3 的 `@tailwind base/components/utilities` 指令，否则生产 CSS 会缺失颜色、间距和字体等主题 utility。
+- 暗色模式由 `html.dark` 驱动，`src/index.css` 中的 `@custom-variant dark (&:where(.dark, .dark *));` 需要保留，避免 `dark:*` 变体退回到系统媒体查询。
+- 修改 Tailwind / CSS 入口后，除 `npm run build` 外，还要用浏览器截图确认至少一个核心页面的按钮、背景、间距和暗色模式真实生效。
+
 ## 学习进度导入/导出
 
 - `src/components/ProgressExport.jsx`: Dashboard 概览区的学习进度 JSON 导出按钮，所有文案走 `dashboard.*` i18n key。
 - `src/components/ProgressImport.jsx`: Dashboard 概览区的学习进度 JSON 导入按钮，负责文件选择、错误提示，以及本地已有进度时的替换/合并/取消对话框。
 - `src/utils/progressExport.js`: 导出 schema 与浏览器下载逻辑，当前 payload 为 `{ version, exportedAt, data }`，`data` 只包含 `useUserStore` 中的非敏感学习进度字段。
 - `src/utils/mergeProgress.js`: 导入 schema 校验、进度归一化和纯合并逻辑；合并规则需保持可测试，避免在 UI 组件里写业务合并逻辑。
+
+## Reader 移动端体验
+
+- `src/pages/ReaderPage.jsx`: 移动端课程阅读页包含课程列表 drawer、上/下一课按钮和左右滑动切课。桌面布局应保持稳定，不要把移动 drawer 变成桌面默认侧栏。
+- `src/hooks/useSwipe.js`: 共享水平滑动检测 hook；默认阈值为 80px，纵向位移大于横向时忽略，并忽略从 `pre` / `code` / `[data-swipe-ignore]` 内开始的手势，避免破坏代码块横向滚动。
+- 修改 Reader 移动端交互后，优先跑 `npx vitest run src/hooks/__tests__/useSwipe.test.jsx src/pages/__tests__/ReaderPage.mobile.test.jsx`，并用移动视口做一次浏览器 smoke。
 
 ## 测验题库
 
