@@ -50,6 +50,33 @@ describe('Quiz data structure', () => {
     expect(QUIZ_BANK.default).toBeDefined();
     expect(QUIZ_BANK.default.length).toBe(5);
   });
+
+  it('DeFi DEX quiz has English copy for every question', () => {
+    const dexQuiz = QUIZ_BANK['8-2'];
+
+    for (const question of dexQuiz) {
+      expect(question.translations?.en).toEqual({
+        question: expect.any(String),
+        options: expect.any(Array),
+        explanation: expect.any(String),
+      });
+      expect(question.translations.en.question.length).toBeGreaterThan(0);
+      expect(question.translations.en.options).toHaveLength(4);
+      expect(question.translations.en.explanation.length).toBeGreaterThan(0);
+    }
+  });
+
+  it('DeFi DEX quiz covers AMM invariant, slippage, and impermanent loss scenario', () => {
+    const dexQuiz = QUIZ_BANK['8-2'];
+    const firstQuestion = `${dexQuiz[0].question} ${dexQuiz[0].translations?.en?.question ?? ''}`;
+    const allCopy = JSON.stringify(dexQuiz);
+
+    expect(firstQuestion).toMatch(/AMM/);
+    expect(firstQuestion).toMatch(/x\s*[·*]\s*y\s*=\s*k/i);
+    expect(allCopy).toMatch(/滑点|slippage/i);
+    expect(allCopy).toMatch(/无常损失|impermanent loss/i);
+    expect(allCopy).toMatch(/相对持有|holding/i);
+  });
 });
 
 describe('Quiz data uniqueness', () => {
