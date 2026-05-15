@@ -16,6 +16,8 @@
 
 ## Completed
 
+- Learner mobile UX: prepared mobile reader drawer and swipe navigation for [#87](https://github.com/beihaili/Get-Started-with-Web3/issues/87), including a shared `useSwipe` hook that preserves vertical scroll and code-block horizontal scroll.
+- Platform styling: corrected the Tailwind CSS v4 entrypoint so production builds generate theme utilities for colors, spacing, typography, and class-based dark mode; this surfaced during the #87 mobile visual smoke.
 - Platform performance: prepared i18n namespace lazy loading for [#93](https://github.com/beihaili/Get-Started-with-Web3/issues/93), splitting UI locale payloads by route/feature while preserving existing `t('section.key')` calls. Local Vite main entry dropped from 107.59 kB / gzip 36.50 kB to 96.65 kB / gzip 32.04 kB.
 - Content: merged [#135](https://github.com/beihaili/Get-Started-with-Web3/pull/135), adding English-localized DeFi DEX quiz copy and stronger AMM, slippage, and impermanent-loss coverage. Closed [#89](https://github.com/beihaili/Get-Started-with-Web3/issues/89).
 - Platform performance: merged [#134](https://github.com/beihaili/Get-Started-with-Web3/pull/134), adding lesson-image lazy loading and generated image dimensions. Closed [#92](https://github.com/beihaili/Get-Started-with-Web3/issues/92).
@@ -37,6 +39,8 @@
 | Local build for #135 | Success | `npm run build` | Prerendered 131/131 routes |
 | Local validation for #93 branch | Success | `npm test`, `npm run lint`, `npm run build` | 178 tests passed; ESLint clean; build generated 59 OG images and prerendered 131/131 routes |
 | Browser smoke for #93 branch | Success | Playwright against local preview | `/en`, `/en/dashboard`, `/en/learn/module-8/8-2`, `/zh`, `/zh/glossary`, search modal, and language switch rendered without i18n key leaks or namespace load errors |
+| Local validation for #87 branch | Success | `npx vitest run src/hooks/__tests__/useSwipe.test.jsx src/pages/__tests__/ReaderPage.mobile.test.jsx`, `npm test`, `npm run lint`, `npm run build` | 5 targeted tests passed; 30 files and 183 tests passed; ESLint clean; build generated complete Tailwind CSS and prerendered 131/131 routes |
+| Browser smoke for #87 branch | Success | Playwright mobile viewport against local preview | Lesson drawer opens under 768px, traps focus, closes on Escape, swipes left/right navigate lessons, and code-block horizontal swipes do not navigate |
 | AI entrypoints | Success | `npm run ai:verify` | Source/public artifacts, MCP tools, `llms.txt`, and x402 metadata verified |
 | Production smoke | Success | `https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-8/8-2/` | English AMM quiz question rendered; no console or page errors |
 
@@ -64,12 +68,12 @@
 - Stars did not move yet: current count remains 614, so distribution and public-post execution remain the main growth bottleneck.
 - External PR #544 is still `CHANGES_REQUESTED/BLOCKED` even though the requested update was posted. This needs monitoring, not repeated comments yet.
 - Translation/proofreading issues remain open for modules 2, 4, and 5-6; English content quality is still a conversion risk for global learners.
-- Mobile navigation/search overlay UX still has rough edges and remains a good follow-up under [#87](https://github.com/beihaili/Get-Started-with-Web3/issues/87); this was not changed in the i18n payload branch.
+- Mobile reader UX is now locally verified in the [#87](https://github.com/beihaili/Get-Started-with-Web3/issues/87) branch; remaining work is PR review, CI, merge, and production smoke.
 - Sponsor lead tracker now has named leads, but no outreach has been sent yet. First messages still need a current metrics refresh and exact channel selection.
 
 ## Next Operating Block
 
-1. Ship/review the [#93](https://github.com/beihaili/Get-Started-with-Web3/issues/93) i18n payload PR, then move to [#87](https://github.com/beihaili/Get-Started-with-Web3/issues/87) for mobile reader UX.
+1. Open, review, and ship the [#87](https://github.com/beihaili/Get-Started-with-Web3/issues/87) mobile reader UX PR, then convert it into a short public update once deployed.
 2. Monitor [TensorBlock/awesome-mcp-servers#544](https://github.com/TensorBlock/awesome-mcp-servers/pull/544); if no reviewer response after a reasonable window, leave one concise follow-up.
 3. Prepare first sponsor outreach packet for Safe, Reown, or QuickNode; send only after metrics and sponsor-kit link are refreshed.
 

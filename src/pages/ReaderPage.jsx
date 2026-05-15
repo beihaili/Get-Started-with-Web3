@@ -1,10 +1,10 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowLeft, CheckCircle, Share2, Award, Wrench } from 'lucide-react';
+import { ArrowLeft, CheckCircle, Share2, Award, Wrench, List, X } from 'lucide-react';
 import ThankAuthorButton from '../components/ThankAuthorButton';
 import { useUserStore } from '../store/useUserStore';
 import { useContentStore } from '../store/useContentStore';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { MarkdownRenderer } from '../features/content';
 import { AiTutor } from '../features/ai-tutor';
 import { MultiQuiz, QUIZ_BANK } from '../features/quiz';
@@ -18,6 +18,19 @@ import SeoHead from '../components/SeoHead';
 import ContentSkeleton from '../components/ContentSkeleton';
 import ScrollToTop from '../components/ScrollToTop';
 import { estimateReadingTime } from '../utils/readingTime';
+import { useSwipe } from '../hooks/useSwipe';
+
+function getFocusableElements(container) {
+  if (!container) {
+    return [];
+  }
+
+  return Array.from(
+    container.querySelectorAll(
+      'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    )
+  );
+}
 
 /**
  * 课程阅读页面
@@ -25,6 +38,7 @@ import { estimateReadingTime } from '../utils/readingTime';
  */
 const ReaderPage = () => {
   const { lang, moduleId, lessonId } = useParams();
+  const navigate = useNavigate();
   const { t } = useTranslation();
   const { markLessonComplete, getLessonProgress, recordQuizScore, checkModuleBadges } =
     useUserStore();
@@ -37,6 +51,10 @@ const ReaderPage = () => {
   const [imageMetadata, setImageMetadata] = useState({});
   const [imageMetadataBase, setImageMetadataBase] = useState('');
   const [showShareCard, setShowShareCard] = useState(false);
+  const [isLessonDrawerOpen, setIsLessonDrawerOpen] = useState(false);
+  const drawerRef = useRef(null);
+  const closeDrawerButtonRef = useRef(null);
+  const previousFocusRef = useRef(null);
 
   const lessonKey = `${moduleId}-${lessonId}`;
   const isCompleted = getLessonProgress(lessonKey);
@@ -101,6 +119,67 @@ const ReaderPage = () => {
       ? currentModule.lessons[currentLessonIndex + 1]
       : null;
 
+  const navigateToLesson = useCallback(
+    (lesson) => {
+      if (!lesson) {
+        return;
+      }
+
+      setIsLessonDrawerOpen(false);
+      navigate(`/${lang}/learn/${moduleId}/${lesson.id}`);
+    },
+    [lang, moduleId, navigate]
+  );
+
+  const swipeHandlers = useSwipe({
+    onSwipeLeft: () => navigateToLesson(nextLesson),
+    onSwipeRight: () => navigateToLesson(prevLesson),
+  });
+
+  useEffect(() => {
+    if (!isLessonDrawerOpen) {
+      return undefined;
+    }
+
+    previousFocusRef.current = document.activeElement;
+    const focusTimer = window.setTimeout(() => closeDrawerButtonRef.current?.focus(), 0);
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setIsLessonDrawerOpen(false);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.clearTimeout(focusTimer);
+      document.removeEventListener('keydown', handleKeyDown);
+      previousFocusRef.current?.focus?.();
+    };
+  }, [isLessonDrawerOpen]);
+
+  const handleDrawerKeyDown = (event) => {
+    if (event.key !== 'Tab') {
+      return;
+    }
+
+    const focusableElements = getFocusableElements(drawerRef.current);
+    if (focusableElements.length === 0) {
+      return;
+    }
+
+    const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
+
+    if (event.shiftKey && document.activeElement === firstElement) {
+      event.preventDefault();
+      lastElement.focus();
+    } else if (!event.shiftKey && document.activeElement === lastElement) {
+      event.preventDefault();
+      firstElement.focus();
+    }
+  };
+
   // Check if all lessons in this module are completed
   const { getModuleProgress } = useUserStore();
   const moduleLessonKeys = currentModule?.lessons.map((l) => `${moduleId}-${l.id}`) || [];
@@ -147,7 +226,7 @@ const ReaderPage = () => {
 
           <div className="flex items-center gap-4">
             {/* Desktop nav */}
-            <div className="hidden sm:flex items-center gap-4">
+            <div className="hidden md:flex items-center gap-4">
               <span className="text-slate-500 dark:text-slate-400 text-sm">
                 {currentModule?.title}
               </span>
@@ -171,7 +250,7 @@ const ReaderPage = () => {
               <LanguageSwitcher />
             </div>
             {/* Mobile: mark-complete button stays visible + hamburger */}
-            <div className="flex sm:hidden items-center gap-2">
+            <div className="flex md:hidden items-center gap-2">
               {isCompleted ? (
                 <div className="flex items-center gap-1 px-3 py-1.5 bg-green-500/10 border border-green-500/20 rounded-lg">
                   <CheckCircle className="w-4 h-4 text-green-400" />
@@ -184,6 +263,13 @@ const ReaderPage = () => {
                   {t('reader.markComplete')}
                 </button>
               )}
+              <button
+                onClick={() => setIsLessonDrawerOpen(true)}
+                aria-label={t('reader.openLessonList')}
+                className="p-2 rounded-lg border border-slate-200 bg-white/80 text-slate-600 transition-colors hover:text-cyan-500 dark:border-slate-700 dark:bg-slate-900/80 dark:text-slate-300 dark:hover:text-cyan-400"
+              >
+                <List className="w-5 h-5" />
+              </button>
               <MobileNav
                 items={[
                   {
@@ -203,8 +289,75 @@ const ReaderPage = () => {
         </div>
       </nav>
 
+      {isLessonDrawerOpen && (
+        <div className="z-40 md:hidden" style={{ position: 'fixed', inset: 0 }}>
+          <div
+            className="bg-black/50"
+            style={{ position: 'absolute', inset: 0 }}
+            onClick={() => setIsLessonDrawerOpen(false)}
+          />
+          <aside
+            ref={drawerRef}
+            role="dialog"
+            aria-modal="true"
+            aria-label={t('reader.lessonListLabel', { moduleTitle: currentModule?.title })}
+            onKeyDown={handleDrawerKeyDown}
+            className="flex flex-col border-r border-slate-200 bg-white shadow-2xl dark:border-slate-700 dark:bg-slate-950"
+            style={{
+              position: 'absolute',
+              left: 0,
+              top: 0,
+              height: '100%',
+              width: '20rem',
+              maxWidth: '86vw',
+            }}
+          >
+            <div className="flex items-start justify-between gap-3 border-b border-slate-200 p-4 dark:border-slate-800">
+              <div>
+                <p className="text-xs font-medium uppercase tracking-wide text-cyan-500">
+                  {t('reader.lessonList')}
+                </p>
+                <h2 className="mt-1 text-base font-bold text-slate-900 dark:text-white">
+                  {currentModule?.title}
+                </h2>
+              </div>
+              <button
+                ref={closeDrawerButtonRef}
+                onClick={() => setIsLessonDrawerOpen(false)}
+                aria-label={t('reader.closeLessonList')}
+                className="rounded-lg p-2 text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <nav className="min-h-0 flex-1 overflow-y-auto p-3" aria-label={t('reader.lessonList')}>
+              {currentModule?.lessons.map((lesson) => {
+                const active = lesson.id === lessonId;
+
+                return (
+                  <Link
+                    key={lesson.id}
+                    to={`/${lang}/learn/${moduleId}/${lesson.id}`}
+                    onClick={() => setIsLessonDrawerOpen(false)}
+                    aria-current={active ? 'page' : undefined}
+                    className={`block rounded-lg px-3 py-3 text-sm transition-colors ${
+                      active
+                        ? 'bg-cyan-500/10 text-cyan-700 ring-1 ring-cyan-500/20 dark:text-cyan-300'
+                        : 'text-slate-700 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800'
+                    }`}
+                  >
+                    {lesson.title}
+                  </Link>
+                );
+              })}
+            </nav>
+          </aside>
+        </div>
+      )}
+
       {/* Content */}
-      <main className="container mx-auto px-4 py-8 max-w-4xl">
+      <main className="container mx-auto px-4 py-8 max-w-4xl" {...swipeHandlers}>
         <div className="p-8 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-700/50 rounded-xl">
           {displayLoading ? (
             <ContentSkeleton />

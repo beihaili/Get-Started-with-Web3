@@ -103,6 +103,8 @@ Update weekly.
 **Outcome:** Growth changes do not break the platform.
 
 - [x] Split i18n locale payload by route/feature namespace and validate main bundle shrinkage for [#93](https://github.com/beihaili/Get-Started-with-Web3/issues/93).
+- [x] Improve mobile reader UX with a lesson drawer and swipe navigation for [#87](https://github.com/beihaili/Get-Started-with-Web3/issues/87).
+- [x] Correct Tailwind CSS v4 entrypoint so production builds emit full theme utilities and class-based dark mode styles.
 - [ ] Keep Dependabot PRs under control; evaluate Tailwind/ESLint major upgrades separately.
 - [ ] Run `npm test`, `npm run lint`, and `npm run ai:verify` before claiming work is complete.
 - [ ] Run `npm run build` before shipping SEO/prerender changes.
