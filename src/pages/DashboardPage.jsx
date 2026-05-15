@@ -10,6 +10,7 @@ import ThemeToggle from '../components/ThemeToggle';
 import MobileNav from '../components/MobileNav';
 import SeoHead from '../components/SeoHead';
 import ProgressExport from '../components/ProgressExport';
+import ProgressImport from '../components/ProgressImport';
 
 /**
  * 仪表板页面
@@ -105,7 +106,10 @@ const DashboardPage = () => {
             <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
               {t('dashboard.overviewTitle')}
             </h2>
-            <ProgressExport />
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-start">
+              <ProgressExport />
+              <ProgressImport />
+            </div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="flex items-center gap-3">

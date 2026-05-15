@@ -48,7 +48,19 @@
     "streakDays": "{{count}} days",
     "lessonsCount": "{{count}} lessons",
     "exportProgress": "Export progress",
-    "exportStarted": "Progress export started."
+    "exportStarted": "Progress export started.",
+    "importProgress": "Import progress",
+    "importFileLabel": "Import progress file",
+    "importInvalidJson": "Could not read this progress file. Choose a valid JSON export.",
+    "importUnsupportedVersion": "This progress file uses an unsupported version.",
+    "imported": "Progress imported.",
+    "importMerged": "Progress merged.",
+    "importCanceled": "Progress import canceled.",
+    "importDialogTitle": "Import progress",
+    "importDialogDesc": "Local progress already exists. Replace it, merge it, or cancel.",
+    "importReplace": "Replace",
+    "importMerge": "Merge",
+    "importCancel": "Cancel"
   },
   "reader": {
     "pageDescSuffix": "tutorial",

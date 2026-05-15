@@ -48,7 +48,19 @@
     "streakDays": "{{count}} 天",
     "lessonsCount": "{{count}} 讲课程",
     "exportProgress": "导出进度",
-    "exportStarted": "进度导出已开始。"
+    "exportStarted": "进度导出已开始。",
+    "importProgress": "导入进度",
+    "importFileLabel": "导入进度文件",
+    "importInvalidJson": "无法读取这个进度文件，请选择有效的 JSON 导出文件。",
+    "importUnsupportedVersion": "这个进度文件使用了不支持的版本。",
+    "imported": "进度已导入。",
+    "importMerged": "进度已合并。",
+    "importCanceled": "进度导入已取消。",
+    "importDialogTitle": "导入进度",
+    "importDialogDesc": "本地已经有学习进度。你可以替换、合并或取消。",
+    "importReplace": "替换",
+    "importMerge": "合并",
+    "importCancel": "取消"
   },
   "reader": {
     "pageDescSuffix": "教程",
