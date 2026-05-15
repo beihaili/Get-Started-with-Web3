@@ -119,10 +119,12 @@ Update weekly.
 7. Add contributor ladder to CONTRIBUTING.
 8. Draft public roadmap issue.
 9. Close or classify translation coverage warnings.
-10. Draft and publish first 4 low-risk public posts, with links recorded in daily reports.
+10. In progress: draft and publish first 4 low-risk public posts, with links recorded in daily reports.
 
 ## Public Post Draft Queue
 
+- [x] Chinese Web3 community starter post: `docs/strategy/2026-05-15-public-post-drafts.md`
+- [x] X/Farcaster AI-native curriculum thread: `docs/strategy/2026-05-15-public-post-drafts.md`
 - [ ] "I turned my Web3 learning repo into an AI-readable curriculum with llms.txt + MCP."
 - [ ] "A beginner-safe route from wallet creation to first DApp, DeFi, L2 and DAO."
 - [ ] "How agents can search and cite a Web3 curriculum instead of hallucinating."
