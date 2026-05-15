@@ -239,6 +239,65 @@ export const GLOSSARY_DATA = [
       '将已质押资产或流动性质押代币再次用于保护其他网络或服务，以换取额外收益并承担额外风险。',
     category: 'DeFi',
   },
+  {
+    term: 'EIP-4844 (Proto-Danksharding / 原型分片)',
+    definition:
+      '以太坊 Dencun 升级引入的 Blob 交易方案，为 Rollup 提供成本更低的临时数据可用性空间。',
+    category: 'Layer 2',
+  },
+  {
+    term: '隐身地址 (Stealth Address)',
+    definition: '为每次收款生成一次性地址的隐私技术，让外部观察者更难把多笔收款关联到同一接收者。',
+    category: '安全',
+  },
+  {
+    term: 'Rollup（汇总扩容）',
+    definition:
+      '把大量交易在链下执行或聚合，再把结果和必要数据提交到 L1 的扩容方案；不同于侧链，它通常继承 L1 的部分安全性。',
+    category: 'Layer 2',
+  },
+  {
+    term: '侧链 (Sidechain)',
+    definition:
+      '与主链并行运行、拥有独立共识和验证者集合的区块链，可扩展应用空间但安全性不直接等同于主链。',
+    category: 'Layer 2',
+  },
+  {
+    term: '流动性质押代币 (Liquid Staking Token, LST)',
+    definition:
+      '代表已质押资产及其收益权的可转让代币，例如 stETH 或 rETH；它提升资金效率，也会引入脱锚和罚没风险。',
+    category: 'DeFi',
+  },
+  {
+    term: '空投农场 (Airdrop Farming)',
+    definition:
+      '为了提高未来空投资格而系统性使用协议、跨链、交易或完成任务的行为，可能带来女巫过滤、成本和安全风险。',
+    category: 'DeFi',
+  },
+  {
+    term: '求解器 (Solver)',
+    definition:
+      '在 Intent 或批量拍卖系统中寻找最优执行路径的参与者，常负责撮合订单、路由流动性和提交结算交易。',
+    category: 'DeFi',
+  },
+  {
+    term: '罚没 (Slashing)',
+    definition:
+      '权益证明网络对验证者违规、离线或双签等行为扣除质押资产的惩罚机制，用来约束验证者诚实参与。',
+    category: '以太坊',
+  },
+  {
+    term: '跨链桥 (Bridge)',
+    definition:
+      '连接不同区块链或 L2 的协议，用于转移资产或消息；桥的信任模型差异很大，是常见安全风险点。',
+    category: 'Layer 2',
+  },
+  {
+    term: '预言机 (Oracle)',
+    definition:
+      '把链下价格、事件或随机数等外部数据提供给智能合约的系统，解决合约无法直接读取链外信息的问题。',
+    category: '工具',
+  },
 ];
 
 export const GLOSSARY_CATEGORIES = [
