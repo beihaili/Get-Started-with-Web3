@@ -64,6 +64,13 @@ npm run mcp:web3        # 启动本地 stdio MCP server
 
 修改课程结构、术语表或 Agent 工具元数据后，运行 `npm run ai:index && npm run ai:publish && npm run ai:verify`，并提交更新后的 `ai/` 与 `public/` artifacts。
 
+## 国际化与命名空间
+
+- UI 文案按页面/功能拆分在 `src/i18n/locales/{en,zh}/{section}.json`。保留 `t('section.key')` 调用方式，不要改成多 namespace 的 `t` 调用。
+- `common` 和 `nav` 由 `src/i18n/index.js` eager load；路由级文案由 `src/i18n/namespaceLoaders.js` 和 `src/i18n/useI18nSections.js` 按需加载，搜索弹窗在打开时加载 `search` section。
+- 新增页面或新的懒加载 UI 区块时，同步补齐中英文 section 文件，并更新 `getRouteI18nSections()` 的路由映射；namespace 加载失败必须保留 `console.warn` 级别告警。
+- 修改 i18n 结构后优先跑 `npx vitest run src/i18n/__tests__/i18n.test.js`，完成前仍需跑 `npm test`、`npm run lint` 和 `npm run build`。
+
 ## 学习进度导入/导出
 
 - `src/components/ProgressExport.jsx`: Dashboard 概览区的学习进度 JSON 导出按钮，所有文案走 `dashboard.*` i18n key。

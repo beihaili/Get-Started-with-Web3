@@ -5,7 +5,13 @@ import DashboardPage from '../DashboardPage';
 import LanguageProvider from '../../i18n/LanguageProvider';
 import { useUserStore } from '../../store/useUserStore';
 import { buildProgressExport } from '../../utils/progressExport';
-import '../../i18n';
+import i18n from '../../i18n';
+import { loadI18nSections } from '../../i18n/namespaceLoaders';
+
+async function prepareDashboardTranslations() {
+  await i18n.changeLanguage('en');
+  await loadI18nSections(i18n, ['dashboard'], 'en');
+}
 
 function renderDashboard(initialEntry = '/en/dashboard') {
   render(
@@ -42,7 +48,9 @@ describe('DashboardPage progress export', () => {
     vi.restoreAllMocks();
   });
 
-  beforeEach(() => {
+  beforeEach(async () => {
+    await prepareDashboardTranslations();
+
     localStorage.clear();
     useUserStore.setState({
       progress: { 'module-1-1-1': true, 'module-2-2-1': true },
@@ -127,7 +135,9 @@ describe('DashboardPage progress import', () => {
     vi.restoreAllMocks();
   });
 
-  beforeEach(() => {
+  beforeEach(async () => {
+    await prepareDashboardTranslations();
+
     useUserStore.setState({
       progress: {},
       earnedBadges: {},

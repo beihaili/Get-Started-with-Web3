@@ -16,6 +16,7 @@
 
 ## Completed
 
+- Platform performance: prepared i18n namespace lazy loading for [#93](https://github.com/beihaili/Get-Started-with-Web3/issues/93), splitting UI locale payloads by route/feature while preserving existing `t('section.key')` calls. Local Vite main entry dropped from 107.59 kB / gzip 36.50 kB to 96.65 kB / gzip 32.04 kB.
 - Content: merged [#135](https://github.com/beihaili/Get-Started-with-Web3/pull/135), adding English-localized DeFi DEX quiz copy and stronger AMM, slippage, and impermanent-loss coverage. Closed [#89](https://github.com/beihaili/Get-Started-with-Web3/issues/89).
 - Platform performance: merged [#134](https://github.com/beihaili/Get-Started-with-Web3/pull/134), adding lesson-image lazy loading and generated image dimensions. Closed [#92](https://github.com/beihaili/Get-Started-with-Web3/issues/92).
 - Content depth: merged [#133](https://github.com/beihaili/Get-Started-with-Web3/pull/133), expanding the Web3 glossary.
@@ -34,6 +35,8 @@
 | Local tests for #135 | Success | `npm test`: 28 files, 176 tests | Ran before PR and again after commit |
 | Local lint for #135 | Success | `npm run lint` | No ESLint output |
 | Local build for #135 | Success | `npm run build` | Prerendered 131/131 routes |
+| Local validation for #93 branch | Success | `npm test`, `npm run lint`, `npm run build` | 178 tests passed; ESLint clean; build generated 59 OG images and prerendered 131/131 routes |
+| Browser smoke for #93 branch | Success | Playwright against local preview | `/en`, `/en/dashboard`, `/en/learn/module-8/8-2`, `/zh`, `/zh/glossary`, search modal, and language switch rendered without i18n key leaks or namespace load errors |
 | AI entrypoints | Success | `npm run ai:verify` | Source/public artifacts, MCP tools, `llms.txt`, and x402 metadata verified |
 | Production smoke | Success | `https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-8/8-2/` | English AMM quiz question rendered; no console or page errors |
 
@@ -61,11 +64,12 @@
 - Stars did not move yet: current count remains 614, so distribution and public-post execution remain the main growth bottleneck.
 - External PR #544 is still `CHANGES_REQUESTED/BLOCKED` even though the requested update was posted. This needs monitoring, not repeated comments yet.
 - Translation/proofreading issues remain open for modules 2, 4, and 5-6; English content quality is still a conversion risk for global learners.
+- Mobile navigation/search overlay UX still has rough edges and remains a good follow-up under [#87](https://github.com/beihaili/Get-Started-with-Web3/issues/87); this was not changed in the i18n payload branch.
 - Sponsor lead tracker now has named leads, but no outreach has been sent yet. First messages still need a current metrics refresh and exact channel selection.
 
 ## Next Operating Block
 
-1. Pick one growth-facing product issue: [#93](https://github.com/beihaili/Get-Started-with-Web3/issues/93) for i18n payload performance or [#87](https://github.com/beihaili/Get-Started-with-Web3/issues/87) for mobile reader UX.
+1. Ship/review the [#93](https://github.com/beihaili/Get-Started-with-Web3/issues/93) i18n payload PR, then move to [#87](https://github.com/beihaili/Get-Started-with-Web3/issues/87) for mobile reader UX.
 2. Monitor [TensorBlock/awesome-mcp-servers#544](https://github.com/TensorBlock/awesome-mcp-servers/pull/544); if no reviewer response after a reasonable window, leave one concise follow-up.
 3. Prepare first sponsor outreach packet for Safe, Reown, or QuickNode; send only after metrics and sponsor-kit link are refreshed.
 

@@ -1,0 +1,12 @@
+{
+  "closeLabel": "关闭",
+  "achievementCard": "Learning Achievement Card",
+  "studyStreak": "{{count}} 天连续学习",
+  "startJourney": "开始学习之旅",
+  "badgeCollection": "徽章收集",
+  "learningProgress": "学习进度",
+  "download": "保存图片",
+  "generating": "生成中...",
+  "shareTwitter": "分享到 Twitter",
+  "twitterText": "I earned {{count}} badge{{plural}} and {{xp}} XP on Get Started with Web3! 🚀\n\nJoin me and learn blockchain from scratch:"
+}

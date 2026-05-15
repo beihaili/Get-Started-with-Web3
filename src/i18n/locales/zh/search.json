@@ -1,0 +1,10 @@
+{
+  "dialogLabel": "搜索课程",
+  "placeholder": "搜索课程...",
+  "inputLabel": "搜索课程",
+  "closeLabel": "关闭搜索",
+  "noResults": "没有找到匹配的课程",
+  "hintNavigate": "↑↓ 导航",
+  "hintSelect": "↵ 选择",
+  "hintClose": "Esc 关闭"
+}

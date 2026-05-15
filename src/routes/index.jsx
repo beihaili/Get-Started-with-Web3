@@ -1,11 +1,13 @@
-import { createBrowserRouter, Navigate, Outlet, useParams } from 'react-router-dom';
-import { lazy, Suspense, useEffect } from 'react';
+import { createBrowserRouter, Navigate, Outlet, useLocation, useParams } from 'react-router-dom';
+import { lazy, Suspense, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import ErrorBoundary from '../components/ErrorBoundary';
 import SearchDialog from '../components/SearchDialog';
 import { useSearchStore } from '../store/useSearchStore';
 import { useThemeStore } from '../store/useThemeStore';
 import LanguageProvider from '../i18n/LanguageProvider';
+import { getRouteI18nSections } from '../i18n/namespaceLoaders';
+import { useI18nSections } from '../i18n/useI18nSections';
 
 // Lazy load pages for code splitting
 const LandingPage = lazy(() => import('../pages/LandingPage'));
@@ -36,6 +38,15 @@ const SuspenseWrapper = ({ children }) => (
     <ErrorBoundary>{children}</ErrorBoundary>
   </Suspense>
 );
+
+const RouteNamespaceLoader = ({ children }) => {
+  const { lang } = useParams();
+  const location = useLocation();
+  const sections = useMemo(() => getRouteI18nSections(location.pathname), [location.pathname]);
+  const sectionsReady = useI18nSections(sections, lang);
+
+  return sectionsReady ? children : <PageLoader />;
+};
 
 /** Syncs theme store to the <html> element's class list */
 const ThemeApplier = ({ children }) => {
@@ -124,7 +135,9 @@ export const router = createBrowserRouter(
       element: (
         <ThemeApplier>
           <LanguageProvider>
-            <RootLayout />
+            <RouteNamespaceLoader>
+              <RootLayout />
+            </RouteNamespaceLoader>
           </LanguageProvider>
         </ThemeApplier>
       ),

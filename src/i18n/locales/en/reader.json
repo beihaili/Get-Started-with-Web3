@@ -1,0 +1,21 @@
+{
+  "pageDescSuffix": "tutorial",
+  "navLabel": "Course navigation",
+  "completed": "Completed",
+  "markComplete": "Mark as Complete",
+  "loadingContent": "Loading course content...",
+  "loadFailed": "Failed to load:",
+  "loadFailedStrong": "Load failed:",
+  "courseNotFound": "Course not found",
+  "loadingFallback": "# Loading content...",
+  "loadFailedFallback": "# Failed to load content",
+  "prevLesson": "Previous",
+  "prevLessonFull": "Previous Lesson",
+  "nextLesson": "Next",
+  "nextLessonFull": "Next Lesson",
+  "moduleCompleteTitle": "{{moduleTitle}} All Complete!",
+  "moduleCompleteDesc": "Congratulations on completing all lessons in this module",
+  "shareAchievement": "Share Achievement",
+  "readingTime": "{{minutes}} min read",
+  "startLab": "Start Lab →"
+}

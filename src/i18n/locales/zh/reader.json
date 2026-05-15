@@ -1,0 +1,21 @@
+{
+  "pageDescSuffix": "教程",
+  "navLabel": "课程导航",
+  "completed": "已完成",
+  "markComplete": "标记为已完成",
+  "loadingContent": "加载课程内容中...",
+  "loadFailed": "加载失败：",
+  "loadFailedStrong": "加载失败：",
+  "courseNotFound": "课程不存在",
+  "loadingFallback": "# 内容加载中...",
+  "loadFailedFallback": "# 内容加载失败",
+  "prevLesson": "上一",
+  "prevLessonFull": "上一讲",
+  "nextLesson": "下一",
+  "nextLessonFull": "下一讲",
+  "moduleCompleteTitle": "{{moduleTitle}} 全部完成！",
+  "moduleCompleteDesc": "恭喜你完成了本模块的所有课程",
+  "shareAchievement": "分享学习成就",
+  "readingTime": "预计阅读 {{minutes}} 分钟",
+  "startLab": "开始实战 →"
+}

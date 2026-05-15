@@ -2,6 +2,7 @@ import { describe, it, expect, afterEach, vi } from 'vitest';
 import { fireEvent, render, screen } from '@testing-library/react';
 import MultiQuiz from '../MultiQuiz';
 import i18n from '../../../i18n';
+import { loadI18nSections } from '../../../i18n/namespaceLoaders';
 
 describe('MultiQuiz localization', () => {
   afterEach(async () => {
@@ -10,6 +11,7 @@ describe('MultiQuiz localization', () => {
 
   it('renders English question copy when the current language is English', async () => {
     await i18n.changeLanguage('en');
+    await loadI18nSections(i18n, ['quiz'], 'en');
 
     render(<MultiQuiz lessonId="8-2" onPass={vi.fn()} />);
     fireEvent.click(screen.getByRole('button', { name: /Start Challenge/i }));

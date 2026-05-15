@@ -1,0 +1,20 @@
+{
+  "title": "Challenge Quiz",
+  "description": "Complete <strong>{{count}} questions</strong>, you need to get <strong>all correct</strong> to unlock the next chapter",
+  "startChallenge": "🚀 Start Challenge",
+  "questionProgress": "Question {{current}} / {{total}}",
+  "score": "Score: {{score}}/{{total}}",
+  "selectAnswer": "Select an answer",
+  "confirmAnswer": "Confirm Answer",
+  "correct": "Correct!",
+  "wrong": "Wrong",
+  "nextQuestion": "Next Question",
+  "viewResult": "View Results",
+  "perfectTitle": "Perfect Score!",
+  "perfectDesc": "Congratulations, you got all {{count}} questions right! You've mastered the core knowledge of this chapter.",
+  "unlockNext": "✅ Unlock Next Chapter",
+  "needMoreTitle": "Keep Trying",
+  "needMoreDesc": "You got {{score}}/{{total}} correct. You need all correct to proceed to the next chapter. Try again!",
+  "retry": "🔄 Retry",
+  "skipDebug": "Skip (Debug)"
+}

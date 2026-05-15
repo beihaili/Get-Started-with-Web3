@@ -5,6 +5,7 @@ import Fuse from 'fuse.js';
 import { Search, X } from 'lucide-react';
 import { useSearchStore } from '../store/useSearchStore';
 import { COURSE_DATA } from '../config/courseData';
+import { useI18nSections } from '../i18n/useI18nSections';
 
 const SearchDialog = () => {
   const navigate = useNavigate();
@@ -12,6 +13,7 @@ const SearchDialog = () => {
   const { t } = useTranslation();
   const inputRef = useRef(null);
   const { isSearchOpen, searchQuery, closeSearch, setSearchQuery, addToHistory } = useSearchStore();
+  const searchTranslationsReady = useI18nSections(isSearchOpen ? ['search'] : [], lang);
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   // Build Fuse.js index once
@@ -88,7 +90,7 @@ const SearchDialog = () => {
     return undefined;
   }, [isSearchOpen]);
 
-  if (!isSearchOpen) return null;
+  if (!isSearchOpen || !searchTranslationsReady) return null;
 
   let globalIndex = 0;
 
