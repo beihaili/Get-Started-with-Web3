@@ -19,6 +19,7 @@
 - `docs/strategy/2026-05-14-awesome-list-submissions.md`: awesome-list 和社区分发追踪，包含定位文案、目标列表、PR 模板和中文社区帖草案。
 - `docs/community/contributor-ladder.md`: 贡献者成长路径，定义 first-time contributor、repeat contributor、reviewer、module steward 和 community/sponsor ally。
 - `docs/community/good-first-issues.md`: 可复制到 GitHub Issues 的 starter issue 清单，包含标签、背景、验收标准和验证方式。
+- `docs/operations/`: 每日运营汇报目录；`README.md` 定义 cadence、数据源和风险边界，`templates/daily-report-template.md` 是每日汇报模板，按 `YYYY-MM-DD-daily-report.md` 记录实际进展、指标、部署、外部分发、赞助线索和下一步。
 
 社区入口：
 
