@@ -47,16 +47,16 @@ This does not mean DeFi is automatically safer. It changes the trust model. You 
 
 ## Traditional Finance vs DeFi
 
-| Dimension | Traditional finance | DeFi |
-|-----------|---------------------|------|
-| Access | Bank account, identity checks, geography, credit score | Wallet address and network access |
-| Business hours | Usually limited by banking hours | 24/7/365 |
-| Transparency | Internal ledgers are private | Transactions and many contracts are public |
-| Settlement | Often days for cross-border flows | Seconds to minutes depending on chain |
-| Custody | Institutions hold assets | Users can self-custody assets |
-| Intermediaries | Banks, brokers, clearing houses | Smart contracts and validators |
-| Innovation | Permissioned and slow | Open-source and composable |
-| Support | Customer service and legal remedies | Mostly self-service and risk management |
+| Dimension      | Traditional finance                                    | DeFi                                       |
+| -------------- | ------------------------------------------------------ | ------------------------------------------ |
+| Access         | Bank account, identity checks, geography, credit score | Wallet address and network access          |
+| Business hours | Usually limited by banking hours                       | 24/7/365                                   |
+| Transparency   | Internal ledgers are private                           | Transactions and many contracts are public |
+| Settlement     | Often days for cross-border flows                      | Seconds to minutes depending on chain      |
+| Custody        | Institutions hold assets                               | Users can self-custody assets              |
+| Intermediaries | Banks, brokers, clearing houses                        | Smart contracts and validators             |
+| Innovation     | Permissioned and slow                                  | Open-source and composable                 |
+| Support        | Customer service and legal remedies                    | Mostly self-service and risk management    |
 
 Example: sending dollar value internationally.
 
@@ -244,17 +244,17 @@ Frontend layer:
 
 ## A Short History of DeFi
 
-| Year | Milestone | Why it mattered |
-|------|-----------|-----------------|
-| 2017 | MakerDAO and DAI | Early decentralized stablecoin system |
-| 2018 | Uniswap V1 | Popularized AMMs for on-chain trading |
-| 2020 | Compound liquidity mining | Started DeFi Summer and token incentives |
-| 2020 | Yearn Finance | Made yield aggregation mainstream |
-| 2021 | Uniswap V3 | Introduced concentrated liquidity |
-| 2022 | Terra/UST collapse | Showed systemic risk in algorithmic stablecoins |
-| 2023 | Real yield narrative | Shifted focus toward sustainable protocol revenue |
-| 2024 | RWA growth | Brought Treasury bills and tokenized assets on-chain |
-| 2025-2026 | Stablecoin regulation | Moved stablecoins toward regulated payment infrastructure |
+| Year      | Milestone                 | Why it mattered                                           |
+| --------- | ------------------------- | --------------------------------------------------------- |
+| 2017      | MakerDAO and DAI          | Early decentralized stablecoin system                     |
+| 2018      | Uniswap V1                | Popularized AMMs for on-chain trading                     |
+| 2020      | Compound liquidity mining | Started DeFi Summer and token incentives                  |
+| 2020      | Yearn Finance             | Made yield aggregation mainstream                         |
+| 2021      | Uniswap V3                | Introduced concentrated liquidity                         |
+| 2022      | Terra/UST collapse        | Showed systemic risk in algorithmic stablecoins           |
+| 2023      | Real yield narrative      | Shifted focus toward sustainable protocol revenue         |
+| 2024      | RWA growth                | Brought Treasury bills and tokenized assets on-chain      |
+| 2025-2026 | Stablecoin regulation     | Moved stablecoins toward regulated payment infrastructure |
 
 ## Summary
 
@@ -271,7 +271,11 @@ The next lessons go deeper into AMMs, lending markets, stablecoins, and risk man
 ## Further Reading
 
 - [Ethereum.org - DeFi](https://ethereum.org/en/defi/)
+- [EIP-20 - ERC-20 Token Standard](https://eips.ethereum.org/EIPS/eip-20)
+- [Uniswap Docs - How Uniswap Works](https://developers.uniswap.org/docs/get-started/concepts/how-uniswap-works)
+- [Aave Docs - Aave 101](https://aave.com/docs/aave-101)
+- [Lido Docs - Introduction](https://docs.lido.fi/)
+- [Sky Protocol Docs - USDS](https://developers.sky.money/protocol/tokens/usds/)
 - [DefiLlama](https://defillama.com/)
 - [The Defiant](https://thedefiant.io/)
 - [Finematics - DeFi videos](https://www.youtube.com/c/Finematics)
-
