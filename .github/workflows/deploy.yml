@@ -62,17 +62,57 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
 
+      - name: Upload PR build artifact 📦
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr-${{ github.event.pull_request.number }}-dist
+          path: ./dist
+          if-no-files-found: error
+          retention-days: 7
+
       - name: Comment PR with Preview Link 💬
         if: github.event_name == 'pull_request'
         uses: actions/github-script@v9
         with:
           script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: '📦 **构建成功！** 在合并到 main 分支后将自动部署到生产环境。'
-            })
+            const marker = '<!-- pr-preview-artifact-link -->';
+            const runUrl = `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}`;
+            const body = [
+              marker,
+              '📦 **构建成功！** PR 构建产物已上传，可从 Actions run 页面下载 `dist` artifact 进行本地预览。',
+              '',
+              `- 🔎 [打开本次 Actions run / 下载构建产物](${runUrl})`,
+              '- 🚀 合并到 `main` 后会自动部署到生产环境。',
+            ].join('\n');
+
+            const { owner, repo } = context.repo;
+            const issue_number = context.issue.number;
+            const comments = await github.rest.issues.listComments({
+              owner,
+              repo,
+              issue_number,
+              per_page: 100,
+            });
+            const previousComment = comments.data.find((comment) => (
+              comment.user?.type === 'Bot' && comment.body?.includes(marker)
+            ));
+
+            if (previousComment) {
+              await github.rest.issues.updateComment({
+                owner,
+                repo,
+                comment_id: previousComment.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number,
+                body,
+              });
+            }
 
       - name: Output deployment URL 🌐
         if: github.ref == 'refs/heads/main'

@@ -27,6 +27,7 @@
 - `CONTRIBUTING.md` / `CONTRIBUTING.en.md`: 双语贡献指南，维护贡献路径、验证矩阵和内容质量标准。
 - `.github/ISSUE_TEMPLATE/`: Bug、feature、content/translation、growth/community 分流模板。
 - `.github/PULL_REQUEST_TEMPLATE.md`: PR 验证和内容安全检查清单。
+- `.github/workflows/deploy.yml`: PR 构建会上传 `dist` artifact，并用固定 marker 更新同一条 PR 评论，方便评审者从 Actions run 下载构建产物；合并到 `main` 后才部署 GitHub Pages。
 
 工作边界：
 
