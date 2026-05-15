@@ -1,0 +1,1 @@
+var e="支持本项目",t="本教程完全免费开源，如果对你有帮助，欢迎支持作者持续更新 ✨",a="加密货币打赏",d="点击复制地址",l="已复制！",o={title:e,subtitle:t,cryptoLabel:a,copyAddress:d,copied:l};export{l as copied,d as copyAddress,a as cryptoLabel,o as default,t as subtitle,e as title};

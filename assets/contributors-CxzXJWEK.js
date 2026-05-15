@@ -1,0 +1,1 @@
+var e="Contributors",r="认识共同建设这个平台的人们",a="项目贡献者",o="次贡献",t="加载贡献者中...",i="贡献者列表加载失败",n={pageTitle:e,pageDesc:r,heading:a,contributions:"次贡献",loading:t,error:i};export{o as contributions,n as default,i as error,a as heading,t as loading,r as pageDesc,e as pageTitle};

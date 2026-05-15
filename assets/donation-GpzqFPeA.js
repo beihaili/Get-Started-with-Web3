@@ -1,0 +1,1 @@
+var e="Support This Project",t="This tutorial is completely free and open source. If it has been helpful to you, please consider supporting the author to keep it updated ✨",o="Crypto tips",p="Click to copy address",s="Copied!",i={title:e,subtitle:t,cryptoLabel:o,copyAddress:p,copied:s};export{s as copied,p as copyAddress,o as cryptoLabel,i as default,t as subtitle,e as title};

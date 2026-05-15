@@ -1,0 +1,1 @@
+var e="搜索课程",l="搜索课程...",a="搜索课程",t="关闭搜索",i="没有找到匹配的课程",o="↑↓ 导航",s="↵ 选择",n="Esc 关闭",c={dialogLabel:e,placeholder:l,inputLabel:a,closeLabel:t,noResults:i,hintNavigate:o,hintSelect:s,hintClose:n};export{t as closeLabel,c as default,e as dialogLabel,n as hintClose,o as hintNavigate,s as hintSelect,a as inputLabel,i as noResults,l as placeholder};

@@ -1,0 +1,1 @@
+var e="页面出错了",a="抱歉，页面遇到了意外错误。请尝试重新加载或返回首页。",l="重新加载",o="重新加载页面",b="返回首页",r="返回首页",t={title:e,message:a,reload:l,reloadLabel:o,backHome:b,backHomeLabel:r};export{b as backHome,r as backHomeLabel,t as default,a as message,l as reload,o as reloadLabel,e as title};

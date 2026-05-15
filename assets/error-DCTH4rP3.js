@@ -1,0 +1,1 @@
+var e="Page Error",a="Sorry, the page encountered an unexpected error. Please try reloading or return to the home page.",o="Reload",r="Reload page",t="Back to Home",l="Return to home page",d={title:e,message:a,reload:o,reloadLabel:r,backHome:t,backHomeLabel:l};export{t as backHome,l as backHomeLabel,d as default,a as message,o as reload,r as reloadLabel,e as title};

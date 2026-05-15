@@ -1,0 +1,1 @@
+var e="复制代码",o="复制代码",a={copyCode:e,copyCodeTitle:o};export{e as copyCode,o as copyCodeTitle,a as default};

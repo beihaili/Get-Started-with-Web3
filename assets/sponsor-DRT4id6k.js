@@ -1,0 +1,1 @@
+var o="Our Sponsors",e="Become a Sponsor",r="Powered by",p="Support open-source Web3 education",s={title:o,becomeSponsor:e,poweredBy:r,noSponsors:p};export{e as becomeSponsor,s as default,p as noSponsors,r as poweredBy,o as title};

@@ -1,0 +1,1 @@
+var e="我们的赞助商",o="成为赞助商",r="由以下赞助商支持",p="支持开源 Web3 教育",s={title:e,becomeSponsor:o,poweredBy:r,noSponsors:p};export{o as becomeSponsor,s as default,p as noSponsors,r as poweredBy,e as title};

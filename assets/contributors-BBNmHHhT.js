@@ -1,0 +1,1 @@
+var o="Contributors",t="Meet the people who built this platform",r="Our Contributors",i="contributions",e="Loading contributors...",a="Failed to load contributors",n={pageTitle:o,pageDesc:t,heading:r,contributions:i,loading:e,error:a};export{i as contributions,n as default,a as error,r as heading,e as loading,t as pageDesc,o as pageTitle};

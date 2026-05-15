@@ -1,0 +1,1 @@
+var e="支持本项目",o="帮助我们打造最好的开源 Web3 教育平台",t="捐赠",a="加密货币钱包",i="赞助商",l="暂无赞助商，欢迎成为第一位！",s="返回首页",p="推荐交易所",n={pageTitle:e,pageDesc:o,donationTitle:"捐赠",cryptoTitle:a,sponsorsTitle:"赞助商",noSponsors:l,backHome:s,affiliateTitle:p};export{p as affiliateTitle,s as backHome,a as cryptoTitle,n as default,t as donationTitle,l as noSponsors,o as pageDesc,e as pageTitle,i as sponsorsTitle};

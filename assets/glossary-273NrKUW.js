@@ -1,0 +1,1 @@
+var e="Web3 Glossary",l="{{count}} key terms to help you navigate Web3",t="Search terms...",a="All",s="No matching terms",r={title:e,subtitle:l,searchPlaceholder:t,all:"All",noResults:s};export{a as all,r as default,s as noResults,t as searchPlaceholder,l as subtitle,e as title};

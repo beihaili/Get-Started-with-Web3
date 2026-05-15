@@ -1,0 +1,1 @@
+var o="Copy code",e="Copy code",d={copyCode:o,copyCodeTitle:e};export{o as copyCode,e as copyCodeTitle,d as default};

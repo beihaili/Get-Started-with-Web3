@@ -1,0 +1,1 @@
+var e="如果这节课对你有帮助，欢迎支持作者继续创作 ☕",a="感谢作者 · Buy Me a Coffee",t={message:e,buttonText:a};export{a as buttonText,t as default,e as message};

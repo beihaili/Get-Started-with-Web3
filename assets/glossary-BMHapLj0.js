@@ -1,0 +1,1 @@
+var e="Web3 术语表",l="{{count}} 个核心术语，助你快速理解 Web3 世界",t="搜索术语...",a="全部",s="没有匹配的术语",o={title:e,subtitle:l,searchPlaceholder:t,all:"全部",noResults:s};export{a as all,o as default,s as noResults,t as searchPlaceholder,l as subtitle,e as title};
