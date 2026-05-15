@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2026-05-09",
-  "generatedAt": "2026-05-15T01:32:30.440Z",
+  "generatedAt": "2026-05-15T01:53:38.716Z",
   "repository": {
     "name": "Get-Started-with-Web3",
     "owner": "beihaili",
@@ -14066,7 +14066,7 @@
         }
       ],
       "codeBlockCount": 4,
-      "characterCount": 10904
+      "characterCount": 12110
     },
     {
       "id": "zh/module-8/8-2",
