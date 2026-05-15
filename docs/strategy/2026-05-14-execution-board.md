@@ -84,7 +84,7 @@ Update weekly.
 - [x] Add sponsor analytics snapshot section; initially use GitHub traffic and public repo metrics.
 - [x] Draft 3 sponsor outreach templates: wallet, infrastructure, exchange/affiliate.
 - [x] Draft sponsor acceptance policy.
-- [ ] Track sponsor leads in a simple Markdown table until volume justifies a CRM.
+- [x] Track sponsor leads in a simple Markdown table until volume justifies a CRM: `docs/strategy/2026-05-15-sponsor-leads-tracker.md`.
 - [ ] Review donation and affiliate disclosures.
 
 ### 6. Contributor Community
@@ -132,13 +132,16 @@ Update weekly.
 
 ## Sponsor Lead Tracker
 
-| Sponsor                      | Category           | Fit                                           | Status        | Next Action               |
-| ---------------------------- | ------------------ | --------------------------------------------- | ------------- | ------------------------- |
-| Wallet projects              | Wallet/security    | Beginner onboarding and wallet safety lessons | Not contacted | Draft outreach            |
-| RPC/infrastructure providers | Devtool            | Builder labs and Bitcoin RPC lessons          | Not contacted | Draft outreach            |
-| L2 ecosystems                | Chain/ecosystem    | L2 and bridge lessons                         | Not contacted | Draft outreach            |
-| Security audit tools         | Security           | Web3 safety and smart contract security       | Not contacted | Draft outreach            |
-| Exchanges                    | Exchange/affiliate | CEX onboarding and fiat on-ramp               | Not contacted | Review trust policy first |
+Detailed tracker: `docs/strategy/2026-05-15-sponsor-leads-tracker.md`.
+
+| Sponsor | Category | Fit | Status | Next Action |
+| --- | --- | --- | --- | --- |
+| Safe Ecosystem Foundation | Smart accounts / grants | Account abstraction, wallet recovery, security education | Queued | Prepare grant-style impact memo |
+| Reown / WalletConnect | Wallet UX / connectivity infra | Wallet connection safety and onboarding UX | Queued | Personalize wallet sponsor outreach |
+| QuickNode | RPC / infrastructure | Builder labs, RPC lessons, developer onboarding | Queued | Personalize infrastructure sponsor outreach |
+| Blockaid or Blowfish | Security tooling | Scam, approval, signing, and transaction-warning education | Queued | Pick one first security outreach |
+| Ethereum Foundation ESP | Public goods / grants | AI-native open-source Ethereum learning resources | Researching | Package public-goods impact memo |
+| Exchanges | Exchange / affiliate | CEX onboarding and fiat on-ramp | Hold | Requires explicit trust-policy review before contact |
 
 ## Reporting Template
 
