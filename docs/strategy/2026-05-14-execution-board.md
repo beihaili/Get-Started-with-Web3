@@ -106,6 +106,7 @@ Update weekly.
 - [x] Improve mobile reader UX with a lesson drawer and swipe navigation for [#87](https://github.com/beihaili/Get-Started-with-Web3/issues/87).
 - [x] Correct Tailwind CSS v4 entrypoint so production builds emit full theme utilities and class-based dark mode styles.
 - [x] Add `sync-content` fallback coverage so English lessons do not ship broken local image references when the corresponding Chinese assets exist.
+- [x] Prepare PR build artifact comments for [#40](https://github.com/beihaili/Get-Started-with-Web3/issues/40) so contributors can download reviewed builds from the Actions run.
 - [ ] Keep Dependabot PRs under control; evaluate Tailwind/ESLint major upgrades separately.
 - [ ] Run `npm test`, `npm run lint`, and `npm run ai:verify` before claiming work is complete.
 - [ ] Run `npm run build` before shipping SEO/prerender changes.
@@ -138,14 +139,14 @@ Update weekly.
 
 Detailed tracker: `docs/strategy/2026-05-15-sponsor-leads-tracker.md`.
 
-| Sponsor | Category | Fit | Status | Next Action |
-| --- | --- | --- | --- | --- |
-| Safe Ecosystem Foundation | Smart accounts / grants | Account abstraction, wallet recovery, security education | Queued | Prepare grant-style impact memo |
-| Reown / WalletConnect | Wallet UX / connectivity infra | Wallet connection safety and onboarding UX | Queued | Personalize wallet sponsor outreach |
-| QuickNode | RPC / infrastructure | Builder labs, RPC lessons, developer onboarding | Queued | Personalize infrastructure sponsor outreach |
-| Blockaid or Blowfish | Security tooling | Scam, approval, signing, and transaction-warning education | Queued | Pick one first security outreach |
-| Ethereum Foundation ESP | Public goods / grants | AI-native open-source Ethereum learning resources | Researching | Package public-goods impact memo |
-| Exchanges | Exchange / affiliate | CEX onboarding and fiat on-ramp | Hold | Requires explicit trust-policy review before contact |
+| Sponsor                   | Category                       | Fit                                                        | Status      | Next Action                                          |
+| ------------------------- | ------------------------------ | ---------------------------------------------------------- | ----------- | ---------------------------------------------------- |
+| Safe Ecosystem Foundation | Smart accounts / grants        | Account abstraction, wallet recovery, security education   | Queued      | Prepare grant-style impact memo                      |
+| Reown / WalletConnect     | Wallet UX / connectivity infra | Wallet connection safety and onboarding UX                 | Queued      | Personalize wallet sponsor outreach                  |
+| QuickNode                 | RPC / infrastructure           | Builder labs, RPC lessons, developer onboarding            | Queued      | Personalize infrastructure sponsor outreach          |
+| Blockaid or Blowfish      | Security tooling               | Scam, approval, signing, and transaction-warning education | Queued      | Pick one first security outreach                     |
+| Ethereum Foundation ESP   | Public goods / grants          | AI-native open-source Ethereum learning resources          | Researching | Package public-goods impact memo                     |
+| Exchanges                 | Exchange / affiliate           | CEX onboarding and fiat on-ramp                            | Hold        | Requires explicit trust-policy review before contact |
 
 ## Reporting Template
 
