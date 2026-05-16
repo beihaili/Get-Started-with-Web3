@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { BrainCircuit, CheckCircle, X } from 'lucide-react';
 import { QUIZ_BANK } from './quizData';
@@ -34,6 +34,8 @@ const MultiQuiz = ({ lessonId, onPass }) => {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [showFeedback, setShowFeedback] = useState(false);
   const [score, setScore] = useState(0);
+  const [focusedAnswer, setFocusedAnswer] = useState(0);
+  const optionRefs = useRef([]);
 
   const currentQuiz = QUIZ_BANK[lessonId] || QUIZ_BANK['default'];
 
@@ -42,12 +44,42 @@ const MultiQuiz = ({ lessonId, onPass }) => {
     setCurrentQuestion(0);
     setAnswers([]);
     setSelectedAnswer(null);
+    setFocusedAnswer(0);
     setShowFeedback(false);
     setScore(0);
   };
 
   const selectAnswer = (answerIndex) => {
     setSelectedAnswer(answerIndex);
+    setFocusedAnswer(answerIndex);
+  };
+
+  const focusAnswer = (answerIndex) => {
+    setFocusedAnswer(answerIndex);
+    requestAnimationFrame(() => {
+      optionRefs.current[answerIndex]?.focus();
+    });
+  };
+
+  const handleOptionKeyDown = (event) => {
+    const lastIndex = currentQuiz[currentQuestion].options.length - 1;
+
+    if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
+      event.preventDefault();
+      focusAnswer(focusedAnswer === lastIndex ? 0 : focusedAnswer + 1);
+      return;
+    }
+
+    if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
+      event.preventDefault();
+      focusAnswer(focusedAnswer === 0 ? lastIndex : focusedAnswer - 1);
+      return;
+    }
+
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      selectAnswer(focusedAnswer);
+    }
   };
 
   const submitAnswer = () => {
@@ -70,6 +102,7 @@ const MultiQuiz = ({ lessonId, onPass }) => {
     if (currentQuestion < currentQuiz.length - 1) {
       setCurrentQuestion((prev) => prev + 1);
       setSelectedAnswer(null);
+      setFocusedAnswer(0);
       setShowFeedback(false);
     } else {
       // 测验结束
@@ -82,6 +115,7 @@ const MultiQuiz = ({ lessonId, onPass }) => {
     setCurrentQuestion(0);
     setAnswers([]);
     setSelectedAnswer(null);
+    setFocusedAnswer(0);
     setShowFeedback(false);
     setScore(0);
   };
@@ -144,18 +178,28 @@ const MultiQuiz = ({ lessonId, onPass }) => {
             <>
               <h5 className="text-lg font-semibold text-white mb-6">{currentQ.question}</h5>
 
-              <div className="space-y-3 mb-6" role="radiogroup" aria-label={t('quiz.selectAnswer')}>
+              <div
+                className="space-y-3 mb-6"
+                role="radiogroup"
+                aria-label={t('quiz.selectAnswer')}
+                onKeyDown={handleOptionKeyDown}
+              >
                 {currentQ.options.map((option, index) => (
                   <button
                     key={index}
+                    ref={(el) => {
+                      optionRefs.current[index] = el;
+                    }}
                     role="radio"
                     aria-checked={selectedAnswer === index}
+                    tabIndex={focusedAnswer === index ? 0 : -1}
+                    onFocus={() => setFocusedAnswer(index)}
                     onClick={() => selectAnswer(index)}
                     className={`w-full text-left p-4 rounded-lg border transition-all ${
                       selectedAnswer === index
                         ? 'border-cyan-500 bg-cyan-500/20 text-cyan-200 shadow-lg shadow-cyan-500/10'
                         : 'border-slate-600 bg-slate-700/50 text-slate-300 hover:border-slate-500 hover:bg-slate-700/80'
-                    }`}
+                    } focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900`}
                   >
                     <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-slate-600 text-white text-sm font-mono mr-3">
                       {String.fromCharCode(65 + index)}
