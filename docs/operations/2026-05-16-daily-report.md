@@ -36,10 +36,10 @@
 
 ## External Distribution
 
-| Target                            | Status                  | Evidence                                                               | Next action                                                                                      |
-| --------------------------------- | ----------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| TensorBlock `awesome-mcp-servers` | Open, waiting re-review | [PR #544](https://github.com/TensorBlock/awesome-mcp-servers/pull/544) | Reviewer requested docs mirror entry; update posted on 2026-05-15 01:02:45 UTC. Wait, then nudge |
-| Public post queue                 | Drafted                 | `docs/strategy/2026-05-15-public-post-drafts.md`                       | Publish one low-risk post after the external PR is unblocked or next content PR lands            |
+| Target                            | Status                 | Evidence                                                               | Next action                                                                                          |
+| --------------------------------- | ---------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| TensorBlock `awesome-mcp-servers` | Open, follow-up posted | [PR #544](https://github.com/TensorBlock/awesome-mcp-servers/pull/544) | Docs mirror entry was added in `4a57ae6`; concise re-review follow-up posted on 2026-05-16 06:20 UTC |
+| Public post queue                 | Drafted                | `docs/strategy/2026-05-15-public-post-drafts.md`                       | Publish one low-risk post after the external PR is unblocked or next content PR lands                |
 
 ## Sponsor And Revenue
 
@@ -53,13 +53,13 @@
 ## Blockers And Risks
 
 - Stars stayed at 614; the 1000-star goal still needs external distribution and public-post execution, not only repository maintenance.
-- External MCP-list PR #544 remains `CHANGES_REQUESTED/BLOCKED`; repeated comments before reviewer response may hurt signal quality.
+- External MCP-list PR #544 remains `CHANGES_REQUESTED/BLOCKED`; one follow-up has now been posted, so wait for reviewer response before any further comments.
 - Open issue backlog is down to 8, but English proofreading issues #13/#15/#16 remain a conversion-quality risk.
 - Sponsor outreach has not been sent; the next message needs current metrics and a clear sponsor-kit link.
 
 ## Next Operating Block
 
-1. Monitor [TensorBlock/awesome-mcp-servers#544](https://github.com/TensorBlock/awesome-mcp-servers/pull/544); leave one concise follow-up if there is still no response after a reasonable window.
+1. Monitor [TensorBlock/awesome-mcp-servers#544](https://github.com/TensorBlock/awesome-mcp-servers/pull/544) for reviewer response after the 2026-05-16 follow-up.
 2. Pick the next beginner-friendly issue from #35, #84, or #85, or review any new contributor PR within 24 hours.
 3. Prepare the first low-risk sponsor outreach packet for Safe, Reown, or QuickNode.
 
