@@ -44,6 +44,12 @@ This model is secure, simple, and verifiable, but it is unfriendly for ordinary 
 | All-or-nothing permission | The main private key controls everything | One phishing event can drain all assets |
 | Weak recovery | Device loss relies on seed phrase backup | Social recovery and limits are missing |
 
+### Interactive: Estimate an EIP-1559 Gas Fee
+
+Before Paymasters can hide gas from users, builders still need to understand what an Ethereum transaction costs. Try changing the gas limit, priority tip, and max fee cap below to see how EIP-1559 turns them into an effective gas price.
+
+<gas-fee-calculator></gas-fee-calculator>
+
 Account abstraction does not lower the need for security. It turns accounts into programmable objects so wallets can implement real-world rules:
 
 - Maximum daily transfer limits.
