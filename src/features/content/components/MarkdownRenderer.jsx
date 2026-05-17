@@ -4,7 +4,7 @@ import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import { ExternalLink, ChevronRight, Copy, Check } from 'lucide-react';
-import { MerkleTreeBuilder } from '../../../components/interactive';
+import { GasFeeCalculator, MerkleTreeBuilder } from '../../../components/interactive';
 
 /**
  * Markdown 渲染器组件
@@ -94,6 +94,12 @@ const MarkdownRendererInner = ({
           node.children?.length === 1 && node.children[0]?.tagName === 'merkle-tree-builder';
         if (hasOnlyMerkleTreeBuilder) {
           return <MerkleTreeBuilder lang={lang} />;
+        }
+
+        const hasOnlyGasFeeCalculator =
+          node.children?.length === 1 && node.children[0]?.tagName === 'gas-fee-calculator';
+        if (hasOnlyGasFeeCalculator) {
+          return <GasFeeCalculator lang={lang} />;
         }
 
         // 检测是否是纯图片段落
@@ -268,6 +274,7 @@ const MarkdownRendererInner = ({
       br: () => <br />,
 
       'merkle-tree-builder': () => <MerkleTreeBuilder lang={lang} />,
+      'gas-fee-calculator': () => <GasFeeCalculator lang={lang} />,
     };
   }, [basePath, imageMetadata, imageMetadataBase, lang]);
 
