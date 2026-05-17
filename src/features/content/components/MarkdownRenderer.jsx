@@ -4,6 +4,7 @@ import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import { ExternalLink, ChevronRight, Copy, Check } from 'lucide-react';
+import { MerkleTreeBuilder } from '../../../components/interactive';
 
 /**
  * Markdown 渲染器组件
@@ -49,6 +50,7 @@ const MarkdownRendererInner = ({
   basePath = '',
   imageMetadata = {},
   imageMetadataBase = '',
+  lang = 'en',
 }) => {
   const components = useMemo(() => {
     // 处理图片路径
@@ -88,6 +90,12 @@ const MarkdownRendererInner = ({
 
       // 段落
       p: ({ children, node }) => {
+        const hasOnlyMerkleTreeBuilder =
+          node.children?.length === 1 && node.children[0]?.tagName === 'merkle-tree-builder';
+        if (hasOnlyMerkleTreeBuilder) {
+          return <MerkleTreeBuilder lang={lang} />;
+        }
+
         // 检测是否是纯图片段落
         const hasOnlyImages =
           node.children?.length > 0 &&
@@ -258,8 +266,10 @@ const MarkdownRendererInner = ({
 
       // 分隔
       br: () => <br />,
+
+      'merkle-tree-builder': () => <MerkleTreeBuilder lang={lang} />,
     };
-  }, [basePath, imageMetadata, imageMetadataBase]);
+  }, [basePath, imageMetadata, imageMetadataBase, lang]);
 
   return (
     <div className="font-sans text-base markdown-content">

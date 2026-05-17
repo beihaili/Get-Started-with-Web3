@@ -54,3 +54,11 @@ describe('MarkdownRenderer images', () => {
     expect(image).toHaveAttribute('decoding', 'async');
   });
 });
+
+describe('MarkdownRenderer interactive components', () => {
+  it('renders the Merkle tree builder custom element', async () => {
+    render(<MarkdownRenderer lang="en" content="<merkle-tree-builder></merkle-tree-builder>" />);
+
+    expect(await screen.findByRole('heading', { name: 'Merkle Tree Builder' })).toBeInTheDocument();
+  });
+});
