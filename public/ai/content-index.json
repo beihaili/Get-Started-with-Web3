@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2026-05-09",
-  "generatedAt": "2026-05-17T07:28:51.020Z",
+  "generatedAt": "2026-05-17T09:23:01.771Z",
   "repository": {
     "name": "Get-Started-with-Web3",
     "owner": "beihaili",
@@ -17022,6 +17022,10 @@
           "text": "为什么普通钱包体验不好"
         },
         {
+          "level": 3,
+          "text": "互动：估算一笔 EIP-1559 Gas 费用"
+        },
+        {
           "level": 2,
           "text": "EOA、合约账户和智能账户"
         },
@@ -17147,7 +17151,7 @@
         }
       ],
       "codeBlockCount": 4,
-      "characterCount": 7370
+      "characterCount": 7549
     },
     {
       "id": "en/module-11/11-2",
@@ -17177,6 +17181,10 @@
         {
           "level": 2,
           "text": "Why Normal Wallets Feel Bad"
+        },
+        {
+          "level": 3,
+          "text": "Interactive: Estimate an EIP-1559 Gas Fee"
         },
         {
           "level": 2,
@@ -17304,7 +17312,7 @@
         }
       ],
       "codeBlockCount": 4,
-      "characterCount": 15701
+      "characterCount": 16029
     }
   ],
   "glossary": [

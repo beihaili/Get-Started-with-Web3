@@ -94,8 +94,9 @@ npm run mcp:web3        # 启动本地 stdio MCP server
 ## 课程互动组件
 
 - `src/components/interactive/`: 放置可复用互动学习组件，并通过 `src/components/interactive/index.js` 统一导出。
-- `src/features/content/components/MarkdownRenderer.jsx`: 支持课程 Markdown 中的 `<merkle-tree-builder></merkle-tree-builder>` 自定义元素，渲染为 `MerkleTreeBuilder`。新增 Markdown 可嵌入互动组件时，优先补 MarkdownRenderer 映射和对应测试，不要在 `ReaderPage.jsx` 里按 lesson id 硬编码。
+- `src/features/content/components/MarkdownRenderer.jsx`: 支持课程 Markdown 中的 `<merkle-tree-builder></merkle-tree-builder>` 和 `<gas-fee-calculator></gas-fee-calculator>` 自定义元素，分别渲染为 `MerkleTreeBuilder` 和 `GasFeeCalculator`。新增 Markdown 可嵌入互动组件时，优先补 MarkdownRenderer 映射和对应测试，不要在 `ReaderPage.jsx` 里按 lesson id 硬编码。
 - `src/utils/merkleTree.js`: Merkle 树 SHA-256 计算纯函数，使用浏览器原生 Web Crypto API；组件只负责输入、状态和展示。修改 Merkle 逻辑后优先跑 `npx vitest run src/utils/__tests__/merkleTree.test.js src/components/interactive/__tests__/MerkleTreeBuilder.test.jsx src/features/content/components/__tests__/MarkdownRenderer.test.jsx`。
+- `src/utils/gasFee.js`: EIP-1559 Gas 费用计算、base fee RPC 读取和 ETH/USD 免 key 价格读取逻辑；组件必须保留离线默认值和用户可见的 RPC 错误提示。修改 Gas 费用逻辑后优先跑 `npx vitest run src/utils/__tests__/gasFee.test.js src/components/interactive/__tests__/GasFeeCalculator.test.jsx src/features/content/components/__tests__/MarkdownRenderer.test.jsx`。
 
 ## 测验题库
 

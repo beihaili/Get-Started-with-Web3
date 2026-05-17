@@ -61,4 +61,10 @@ describe('MarkdownRenderer interactive components', () => {
 
     expect(await screen.findByRole('heading', { name: 'Merkle Tree Builder' })).toBeInTheDocument();
   });
+
+  it('renders the gas fee calculator custom element', () => {
+    render(<MarkdownRenderer lang="en" content="<gas-fee-calculator></gas-fee-calculator>" />);
+
+    expect(screen.getByRole('heading', { name: 'Gas Fee Calculator' })).toBeInTheDocument();
+  });
 });
