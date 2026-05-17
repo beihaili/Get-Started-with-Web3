@@ -410,6 +410,7 @@ const ReaderPage = () => {
                   basePath={basePath}
                   imageMetadata={imageMetadata}
                   imageMetadataBase={imageMetadataBase}
+                  lang={lang}
                 />
               </div>
 

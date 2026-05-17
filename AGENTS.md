@@ -91,6 +91,12 @@ npm run mcp:web3        # 启动本地 stdio MCP server
 - `src/hooks/useSwipe.js`: 共享水平滑动检测 hook；默认阈值为 80px，纵向位移大于横向时忽略，并忽略从 `pre` / `code` / `[data-swipe-ignore]` 内开始的手势，避免破坏代码块横向滚动。
 - 修改 Reader 移动端交互后，优先跑 `npx vitest run src/hooks/__tests__/useSwipe.test.jsx src/pages/__tests__/ReaderPage.mobile.test.jsx`，并用移动视口做一次浏览器 smoke。
 
+## 课程互动组件
+
+- `src/components/interactive/`: 放置可复用互动学习组件，并通过 `src/components/interactive/index.js` 统一导出。
+- `src/features/content/components/MarkdownRenderer.jsx`: 支持课程 Markdown 中的 `<merkle-tree-builder></merkle-tree-builder>` 自定义元素，渲染为 `MerkleTreeBuilder`。新增 Markdown 可嵌入互动组件时，优先补 MarkdownRenderer 映射和对应测试，不要在 `ReaderPage.jsx` 里按 lesson id 硬编码。
+- `src/utils/merkleTree.js`: Merkle 树 SHA-256 计算纯函数，使用浏览器原生 Web Crypto API；组件只负责输入、状态和展示。修改 Merkle 逻辑后优先跑 `npx vitest run src/utils/__tests__/merkleTree.test.js src/components/interactive/__tests__/MerkleTreeBuilder.test.jsx src/features/content/components/__tests__/MarkdownRenderer.test.jsx`。
+
 ## 测验题库
 
 - `src/features/quiz/quizData.js`: 每个 lesson id 对应 5 道选择题；顶层 `question`、`options`、`explanation` 是中文默认内容。
