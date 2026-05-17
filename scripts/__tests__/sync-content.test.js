@@ -1,4 +1,4 @@
-import { mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
+import { mkdir, mkdtemp, readdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { Buffer } from 'node:buffer';
 import os from 'node:os';
 import path from 'node:path';
@@ -86,6 +86,42 @@ describe('sync-content', () => {
         'utf8'
       )
     ).resolves.toContain('English');
+  });
+
+  it('publishes canonical README.md aliases for uppercase source readmes', async () => {
+    tempDir = await mkdtemp(path.join(os.tmpdir(), 'web3-sync-content-'));
+    const lessonDir = path.join(tempDir, 'zh', 'Web3QuickStart', '01_FirstWeb3Identity');
+    await mkdir(lessonDir, { recursive: true });
+    await writeFile(path.join(lessonDir, 'README.MD'), '# 中文大写 README\n', 'utf8');
+
+    await syncContent({
+      projectRoot: tempDir,
+      courseData: [
+        {
+          lessons: [{ path: 'Web3QuickStart/01_FirstWeb3Identity' }],
+        },
+      ],
+      logger: { log() {}, warn() {}, error() {} },
+    });
+
+    const publishedDir = path.join(
+      tempDir,
+      'public',
+      'content',
+      'zh',
+      'Web3QuickStart',
+      '01_FirstWeb3Identity'
+    );
+
+    await expect(readFile(path.join(publishedDir, 'README.md'), 'utf8')).resolves.toContain(
+      '中文大写 README'
+    );
+
+    if (await supportsCaseDistinctReadmes(tempDir)) {
+      await expect(readdir(publishedDir)).resolves.toEqual(
+        expect.arrayContaining(['README.MD', 'README.md'])
+      );
+    }
   });
 
   it('writes image dimension metadata for copied lesson images', async () => {
@@ -176,4 +212,14 @@ const createPngHeader = (width, height) => {
   buffer.writeUInt32BE(width, 16);
   buffer.writeUInt32BE(height, 20);
   return buffer;
+};
+
+const supportsCaseDistinctReadmes = async (root) => {
+  const probeDir = path.join(root, 'case-probe');
+  await mkdir(probeDir, { recursive: true });
+  await writeFile(path.join(probeDir, 'README.MD'), 'upper', 'utf8');
+  await writeFile(path.join(probeDir, 'README.md'), 'lower', 'utf8');
+  const entries = await readdir(probeDir);
+
+  return entries.includes('README.MD') && entries.includes('README.md');
 };
