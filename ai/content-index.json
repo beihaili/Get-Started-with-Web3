@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2026-05-09",
-  "generatedAt": "2026-05-16T07:00:56.469Z",
+  "generatedAt": "2026-05-17T07:43:53.693Z",
   "repository": {
     "name": "Get-Started-with-Web3",
     "owner": "beihaili",
@@ -3009,6 +3009,10 @@
         },
         {
           "level": 3,
+          "text": "互动：从交易列表构建 Merkle 树"
+        },
+        {
+          "level": 3,
           "text": "比特币中的实际应用"
         },
         {
@@ -3138,14 +3142,10 @@
         {
           "level": 3,
           "text": "❓ 助记词被别人知道了怎么办？"
-        },
-        {
-          "level": 3,
-          "text": "❓ 一个私钥能生成多个地址吗？"
         }
       ],
       "codeBlockCount": 27,
-      "characterCount": 9890
+      "characterCount": 10049
     },
     {
       "id": "en/module-2/2-1",
@@ -3187,6 +3187,10 @@
         {
           "level": 3,
           "text": "The Magical Properties of Hash Functions"
+        },
+        {
+          "level": 3,
+          "text": "Interactive: Build a Merkle Tree from Transactions"
         },
         {
           "level": 3,
@@ -3319,14 +3323,10 @@
         {
           "level": 3,
           "text": "What should I do if someone learns my mnemonic?"
-        },
-        {
-          "level": 3,
-          "text": "Can one private key generate multiple addresses?"
         }
       ],
       "codeBlockCount": 27,
-      "characterCount": 21998
+      "characterCount": 22322
     },
     {
       "id": "zh/module-2/2-2",

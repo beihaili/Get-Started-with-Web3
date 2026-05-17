@@ -56,6 +56,12 @@ Think of a hash function as a "sausage-making machine": you put a whole pig in, 
 3. **Tiny change, completely different result**: If the pig is missing a single hair, the resulting sausages are entirely different
 4. **One-way and irreversible**: Looking at the sausages, you can never reconstruct what the original pig looked like
 
+### Interactive: Build a Merkle Tree from Transactions
+
+The builder below hashes each transaction with SHA-256, combines hashes pairwise, and repeats the process until it reaches a Merkle Root. Edit any transaction to see how one small change propagates to the final root hash.
+
+<merkle-tree-builder></merkle-tree-builder>
+
 ### Practical Applications in Bitcoin
 
 **Scenario 1 - Block Linking (The Secret of Tamper Resistance)**
