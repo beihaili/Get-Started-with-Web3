@@ -14,6 +14,7 @@ const ensureExists = async (dir) => {
 
 const IMAGE_EXTENSIONS = new Set(['.gif', '.jpeg', '.jpg', '.png']);
 const IMAGE_METADATA_FILE = 'image-metadata.json';
+const CANONICAL_README_FILE = 'README.md';
 const README_FILE_PATTERN = /^README\.md$/i;
 
 const isImageFile = (filePath) => IMAGE_EXTENSIONS.has(path.extname(filePath).toLowerCase());
@@ -217,6 +218,39 @@ const copyMissingReferencedImages = async (fallbackFolder, targetFolder, logger 
   await visit(targetFolder);
 };
 
+const ensureCanonicalReadmeAliases = async (targetFolder, logger = console) => {
+  const visit = async (dir) => {
+    const entries = await readdir(dir, { withFileTypes: true });
+
+    for (const entry of entries) {
+      const entryPath = path.join(dir, entry.name);
+
+      if (entry.isDirectory()) {
+        await visit(entryPath);
+        continue;
+      }
+
+      if (
+        !entry.isFile() ||
+        !README_FILE_PATTERN.test(entry.name) ||
+        entry.name === CANONICAL_README_FILE
+      ) {
+        continue;
+      }
+
+      const canonicalPath = path.join(dir, CANONICAL_README_FILE);
+      if (existsSync(canonicalPath)) {
+        continue;
+      }
+
+      await cp(entryPath, canonicalPath);
+      logger.log(`[sync-content] Added canonical README alias ${entryPath} -> ${canonicalPath}`);
+    }
+  };
+
+  await visit(targetFolder);
+};
+
 export const getSourceFoldersFromCourseData = (courseData = COURSE_DATA) => {
   const folders = new Set();
 
@@ -246,17 +280,18 @@ const safeCopy = async (source, destination, logger = console) => {
     const statResult = await stat(source);
     if (!statResult.isDirectory()) {
       logger.warn(`[sync-content] Skip ${source}: not a directory`);
-      return;
+      return false;
     }
   } catch (error) {
     logger.warn(`[sync-content] Skip ${source}: ${error.message}`);
-    return;
+    return false;
   }
 
   await ensureExists(path.dirname(destination));
   await rm(destination, { recursive: true, force: true });
   await cp(source, destination, { recursive: true });
   logger.log(`[sync-content] Copied ${source} -> ${destination}`);
+  return true;
 };
 
 export const syncContent = async (options = {}) => {
@@ -270,7 +305,9 @@ export const syncContent = async (options = {}) => {
   for (const folder of sourceFolders) {
     const src = path.join(root, 'zh', folder);
     const dest = path.join(contentRoot, 'zh', folder);
-    await safeCopy(src, dest, logger);
+    if (await safeCopy(src, dest, logger)) {
+      await ensureCanonicalReadmeAliases(dest, logger);
+    }
   }
 
   // Sync en/ folders (skip silently if source doesn't exist)
@@ -280,9 +317,9 @@ export const syncContent = async (options = {}) => {
   for (const folder of sourceFolders) {
     const src = path.join(enSource, folder);
     const dest = path.join(enTarget, folder);
-    if (existsSync(src)) {
-      await safeCopy(src, dest, logger);
+    if (existsSync(src) && (await safeCopy(src, dest, logger))) {
       await copyMissingReferencedImages(path.join(root, 'zh', folder), dest, logger);
+      await ensureCanonicalReadmeAliases(dest, logger);
     }
   }
 
