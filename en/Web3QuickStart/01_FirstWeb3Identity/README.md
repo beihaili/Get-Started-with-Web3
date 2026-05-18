@@ -27,11 +27,11 @@
 
 ## Introduction
 
-Remember the excitement and curiosity you felt the first time you used the internet? Today, we stand at the starting point of another technological revolution — Web3. This brand-new digital world is no longer controlled by tech giants but is collectively owned by every participant. As a Web3 newcomer myself, I understand the importance and challenge of taking that first step. I hope this article will help you easily obtain your first Web3 identity and open the door to the digital future!
+Remember the excitement and curiosity you felt the first time you used the internet? Today, we are standing at the beginning of another technological revolution: Web3. This new digital world is not controlled only by tech giants; it is collectively owned by its participants. As a Web3 newcomer myself, I understand both the importance and the challenge of taking the first step. I hope this article helps you create your first Web3 identity and open the door to the digital future.
 
 ## A Brief Overview of Web3
 
-`Web3` is an open network where anyone can build applications without relying on any centralized services. Technically, `Web3` is a decentralized network built on blockchain technology. A more practical description of the current state is: add the MetaMask browser extension to a Web2 website, and it becomes a `Web3` website 😂.
+`Web3` is an open network where anyone can build applications without relying on centralized services. Technically, it is a decentralized network built on blockchain technology. A practical way to understand the current state is: add the MetaMask browser extension to a Web2 website, and it starts to feel like a `Web3` website 😂.
 
 Imagine the internet as a giant shopping mall:
 - Web1 was the era when you could only window-shop
@@ -73,7 +73,7 @@ Click the `MetaMask` browser extension, click "Get Started", click "I Agree", cl
 
 ### Step 3: Back Up Your MetaMask Account
 
-When you first create an account, you'll be prompted to back up your seed phrase. We recommend finding a quiet place to write it down on paper, or store it in a password manager like 1Password. If you choose to copy the seed phrase to your computer, make sure to encrypt it.
+When you first create an account, you'll be prompted to back up your seed phrase. We recommend finding a quiet place and writing it down on paper, or storing it in a password manager like 1Password. If you choose to copy the seed phrase to your computer, make sure to encrypt it.
 
 <div align="center"> <img src="./img/6.png" width = 600 /> </div>
 
@@ -93,7 +93,7 @@ Earlier we quickly walked through the three-step creation process. Now let's go 
 
 ### 🔑 Download and Installation
 
-1. **Open Chrome browser** and visit the official MetaMask website: [https://metamask.io](https://metamask.io)
+1. **Open the Chrome browser** and visit the official MetaMask website: [https://metamask.io](https://metamask.io)
 
 > ⚠️ **Important**: Make sure the URL is `metamask.io`. Do not click on ad links from search engines! Many users have lost assets after installing fake MetaMask extensions.
 
