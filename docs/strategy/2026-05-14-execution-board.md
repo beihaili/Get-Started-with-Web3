@@ -11,7 +11,7 @@
 | Technical health | Healthy               | Keep `npm test`, `npm run lint`, `npm run ai:verify` green                |
 | GitHub growth    | Under-monetized       | Improve README conversion and launch distribution campaigns               |
 | SEO              | Partially implemented | Fix language metadata and route coverage                                  |
-| English content  | Incomplete            | Close 17 missing translations or classify non-course docs                 |
+| English content  | Incomplete            | Close 16 missing translations or classify non-course docs                 |
 | AI-native layer  | Strong MVP            | Productize story and prepare paid-tool landing                            |
 | Monetization     | Passive only          | Create sponsor kit and sponsor outreach drafts                            |
 | Community        | Converting            | Keep accepted contributor PRs moving into recognition and backlog refresh |
@@ -60,8 +60,9 @@ Update weekly.
 
 **Outcome:** The curriculum feels complete and current enough to recommend.
 
-- [ ] Finish or classify the 17 missing English translations.
+- [ ] Finish or classify the 16 missing English translations.
 - [ ] Prioritize English proofreading for the highest-intent pages: README, Web3 Quick Start, Bitcoin, DeFi, L2, AI-native entry.
+- [x] Start Layer 2 English coverage with `en/L2CrossChain/01_WhyScaling/README.md`.
 - [ ] Create a content calendar with one public content theme per week.
 - [ ] Turn newly added content modules into changelog/release notes.
 - [ ] Add "Last updated" or freshness signals where valuable.
@@ -110,6 +111,7 @@ Update weekly.
 - [x] Prepare PR build artifact comments for [#40](https://github.com/beihaili/Get-Started-with-Web3/issues/40) so contributors can download reviewed builds from the Actions run.
 - [ ] Keep Dependabot PRs under control; evaluate Tailwind/ESLint major upgrades separately.
 - [ ] Run `npm test`, `npm run lint`, and `npm run ai:verify` before claiming work is complete.
+- [x] Expose translation coverage checks through `npm run translation:check`.
 - [ ] Run `npm run build` before shipping SEO/prerender changes.
 - [ ] Update `AGENTS.md` when architecture, commands, or operating docs change.
 - [ ] Avoid adding heavy wallet or payment dependencies until a specific monetization experiment requires them.

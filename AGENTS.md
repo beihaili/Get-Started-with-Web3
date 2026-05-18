@@ -51,6 +51,7 @@ npm run lint            # ESLint 检查
 npm run ai:index        # 生成 AI-native 内容索引
 npm run ai:publish      # 复制 AI artifacts 到 public/，供 GitHub Pages 发布
 npm run ai:verify       # 验证公开 AI 入口、MCP 工具清单和 x402 元数据
+npm run translation:check # 非阻塞检查 zh/ 中缺失的英文翻译
 npm run mcp:web3        # 启动本地 stdio MCP server
 ```
 

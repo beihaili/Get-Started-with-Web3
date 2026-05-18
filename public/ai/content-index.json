@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2026-05-09",
-  "generatedAt": "2026-05-18T04:35:11.103Z",
+  "generatedAt": "2026-05-18T06:02:04.253Z",
   "repository": {
     "name": "Get-Started-with-Web3",
     "owner": "beihaili",
@@ -725,7 +725,7 @@
           "labUrl": null,
           "availability": {
             "zh": true,
-            "en": false
+            "en": true
           },
           "siteUrls": {
             "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-9/9-1",
@@ -15304,6 +15304,95 @@
       ],
       "codeBlockCount": 5,
       "characterCount": 6564
+    },
+    {
+      "id": "en/module-9/9-1",
+      "lang": "en",
+      "moduleId": "module-9",
+      "moduleTitle": "跨链与 Layer 2 深度解析",
+      "lessonId": "9-1",
+      "title": "为什么需要扩容",
+      "path": "L2CrossChain/01_WhyScaling",
+      "labUrl": null,
+      "sourcePath": "en/L2CrossChain/01_WhyScaling/README.md",
+      "citation": {
+        "file": "en/L2CrossChain/01_WhyScaling/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/L2CrossChain/01_WhyScaling/README.md",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-9/9-1"
+      },
+      "excerpt": "Why Scaling Is Needed The blockchain trilemma is one of the core challenges of public chain design: decentralization, security, and scalability cannot all be maximized at the same time. This lesson reviews Ethereum's congestion history, the competing scaling paths, and why Rollups became the center of Ethereum's scaling roadmap. Follow me on Twitter: @bhbtc1337 Join the WeChat group: Form Link Articles are open sourc",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Why Scaling Is Needed"
+        },
+        {
+          "level": 2,
+          "text": "Table of Contents"
+        },
+        {
+          "level": 2,
+          "text": "The Blockchain Trilemma"
+        },
+        {
+          "level": 2,
+          "text": "Ethereum's History of Gas Wars"
+        },
+        {
+          "level": 3,
+          "text": "2017: CryptoKitties Congested Ethereum"
+        },
+        {
+          "level": 3,
+          "text": "2020: DeFi Summer and Gas Fee Mania"
+        },
+        {
+          "level": 3,
+          "text": "2021: NFT Mint Peaks"
+        },
+        {
+          "level": 3,
+          "text": "The Economics Behind Gas Fee Spikes"
+        },
+        {
+          "level": 2,
+          "text": "The Real User Experience and Cost of On-chain Congestion"
+        },
+        {
+          "level": 2,
+          "text": "Competing Scaling Paths"
+        },
+        {
+          "level": 3,
+          "text": "Option 1: Larger Blocks"
+        },
+        {
+          "level": 3,
+          "text": "Option 2: Sharding"
+        },
+        {
+          "level": 3,
+          "text": "Option 3: Sidechains"
+        },
+        {
+          "level": 3,
+          "text": "Option 4: Layer 2 Rollups"
+        },
+        {
+          "level": 2,
+          "text": "Ethereum's Rollup-centric Roadmap"
+        },
+        {
+          "level": 2,
+          "text": "Summary"
+        },
+        {
+          "level": 2,
+          "text": "Further Reading"
+        }
+      ],
+      "codeBlockCount": 5,
+      "characterCount": 13496
     },
     {
       "id": "zh/module-9/9-2",
