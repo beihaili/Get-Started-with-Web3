@@ -13,6 +13,7 @@
     "ai:index": "node scripts/generate-ai-index.mjs",
     "ai:publish": "node scripts/publish-ai-artifacts.mjs",
     "ai:verify": "node scripts/verify-ai-entrypoints.mjs",
+    "translation:check": "node scripts/check-translation-coverage.mjs",
     "mcp:web3": "node scripts/web3-mcp-server.mjs",
     "mcp:dogfood": "node scripts/dogfood-web3-mcp.mjs",
     "preview": "vite preview",
