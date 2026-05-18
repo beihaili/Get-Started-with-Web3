@@ -72,7 +72,7 @@ Update weekly.
 
 - [x] Add a README quick demo showing how an agent can use `npm run mcp:web3`.
 - [x] Add one copy-paste MCP client setup snippet in README and AI artifacts.
-- [ ] Draft landing copy for `generate_personalized_web3_plan` and `audit_learning_answer`.
+- [x] Draft landing copy for `generate_personalized_web3_plan` and `audit_learning_answer`.
 - [ ] Decide whether Phase 1 paid tool should be x402, Stripe, GitHub Sponsors gated, or manual payment.
 - [ ] Keep local MCP free and clearly marked read-only.
 

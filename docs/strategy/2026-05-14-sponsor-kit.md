@@ -43,6 +43,7 @@ Notes:
 - Clone counts may include automated traffic and should not be treated as unique learners.
 - Public site analytics should be added to this kit once Cloudflare/GA data is reviewed.
 - Sponsor conversations should use the 2026-05-18 interactive learning release as the current proof point.
+- Future hosted AI tool copy is drafted in `docs/strategy/2026-05-18-paid-ai-tools-landing-copy.md`; it is not a live paid product and should be framed as a productization roadmap only.
 - Named sponsor leads and outreach status are tracked in `docs/strategy/2026-05-15-sponsor-leads-tracker.md`.
 
 ## Sponsorship Tiers
@@ -155,3 +156,4 @@ Start with products that match the curriculum and have low trust risk:
 3. Add current sponsor kit link to support page after the copy is checked against sponsor safety rules.
 4. Done: prepare first outreach batch of warm-fit targets in `docs/strategy/2026-05-15-sponsor-leads-tracker.md`.
 5. Use the lowest-friction available channel for first outreach and record the action in the daily report.
+6. Use the paid AI tools draft only as future-product context until beihai explicitly approves payment, wallet, or x402 activation.
