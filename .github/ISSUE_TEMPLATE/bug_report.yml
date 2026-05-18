@@ -64,6 +64,20 @@ body:
       label: URL or file path / 链接或文件路径
       placeholder: 'https://beihaili.github.io/Get-Started-with-Web3/... or en/...'
 
+  - type: textarea
+    id: expected_files
+    attributes:
+      label: Expected files or area / 预计涉及文件或区域
+      description: Optional. Add likely files, lessons, routes, or components if you know them.
+      placeholder: 'src/pages/..., en/..., scripts/...'
+
+  - type: textarea
+    id: definition_of_done
+    attributes:
+      label: Definition of done / 完成标准
+      description: What result would prove the bug is fixed?
+      placeholder: 'The page no longer..., the broken link opens, the test reproduces and passes...'
+
   - type: dropdown
     id: browser
     attributes:
@@ -101,4 +115,5 @@ body:
     attributes:
       label: Contribution / 贡献意向
       options:
+        - label: This could be a `good first issue` if the fix is small and reproducible.
         - label: I can help fix this bug.

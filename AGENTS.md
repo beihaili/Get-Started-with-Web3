@@ -29,6 +29,7 @@
 - `.github/ISSUE_TEMPLATE/`: Bug、feature、content/translation、growth/community 分流模板。
 - `.github/PULL_REQUEST_TEMPLATE.md`: PR 验证和内容安全检查清单。
 - `.github/workflows/deploy.yml`: PR 构建会上传 `dist` artifact，并用固定 marker 更新同一条 PR 评论，方便评审者从 Actions run 下载构建产物；合并到 `main` 后才部署 GitHub Pages。
+- GitHub Issue [#156](https://github.com/beihaili/Get-Started-with-Web3/issues/156): 已 pin 的公开 1000-star roadmap；维护 starter issue 队列、翻译、分发、AI-native 和赞助动作时同步参考。
 
 工作边界：
 

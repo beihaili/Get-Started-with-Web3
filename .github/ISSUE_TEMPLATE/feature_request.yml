@@ -34,6 +34,22 @@ body:
     validations:
       required: true
 
+  - type: textarea
+    id: expected_files
+    attributes:
+      label: Expected files or areas / 预计涉及文件或区域
+      description: List likely files, routes, docs, modules, or pages if you know them.
+      placeholder: 'src/pages/..., docs/..., en/...'
+
+  - type: textarea
+    id: definition_of_done
+    attributes:
+      label: Definition of done / 完成标准
+      description: What must be true before this issue can be closed?
+      placeholder: 'A PR is merged that..., tests pass, docs are updated...'
+    validations:
+      required: true
+
   - type: dropdown
     id: category
     attributes:
@@ -70,5 +86,6 @@ body:
     attributes:
       label: Contribution / 贡献意向
       options:
+        - label: This could be a `good first issue` if maintainers agree.
         - label: I can help design this.
         - label: I can help implement this.

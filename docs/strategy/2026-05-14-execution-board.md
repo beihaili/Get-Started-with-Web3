@@ -14,7 +14,7 @@
 | English content  | Incomplete            | Close 17 missing translations or classify non-course docs        |
 | AI-native layer  | Strong MVP            | Productize story and prepare paid-tool landing                   |
 | Monetization     | Passive only          | Create sponsor kit and sponsor outreach drafts                   |
-| Community        | Seeded                | Turn issues into a contributor ladder                            |
+| Community        | Seeded                | Keep the pinned roadmap and 10+ starter issues current           |
 | Personal brand   | Underused             | Convert every shipment into public posts and distribution assets |
 
 ## KPI Board
@@ -91,10 +91,10 @@ Update weekly.
 
 **Outcome:** External contributors can help without heavy hand-holding.
 
-- [ ] Create public roadmap issue draft.
-- [ ] Improve issue templates with "expected files", "definition of done", and "good first issue candidate".
-- [ ] Keep 10-20 good first issues active.
-- [ ] Add contributor ladder to CONTRIBUTING docs.
+- [x] Create public roadmap issue draft and pin it in GitHub: [#156](https://github.com/beihaili/Get-Started-with-Web3/issues/156).
+- [x] Improve issue templates with "expected files", "definition of done", and "good first issue candidate".
+- [x] Keep 10-20 good first issues active; 10 open as of 2026-05-18.
+- [x] Add contributor ladder to CONTRIBUTING docs.
 - [ ] Draft monthly contributor spotlight template.
 - [ ] Ensure contributor page has a reason to share.
 
@@ -121,8 +121,8 @@ Update weekly.
 4. Done: Refresh README positioning.
 5. Done: Add AI-native quick demo to README.
 6. Done: Create awesome-list submission tracker.
-7. Add contributor ladder to CONTRIBUTING.
-8. Draft public roadmap issue.
+7. Done: Add contributor ladder to CONTRIBUTING.
+8. Done: Draft and pin public roadmap issue [#156](https://github.com/beihaili/Get-Started-with-Web3/issues/156).
 9. Close or classify translation coverage warnings.
 10. In progress: draft and publish first 4 low-risk public posts, with links recorded in daily reports.
 
@@ -162,6 +162,7 @@ Daily report should include:
 
 ## External Action Log
 
-| Date       | Action                                                                                          | Result                                                                                                                                                                           |
-| ---------- | ----------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2026-05-14 | Updated GitHub repo description, homepage, and topics for AI-native Web3 curriculum positioning | Completed via `gh repo edit`; topics now include `ai-native`, `mcp`, `llms-txt`, `web3-education`, `bitcoin-education`, `defi`, `layer2`, `dao`, `ethereum`, `learning-platform` |
+| Date       | Action                                                                                          | Result                                                                                                                                                                                                                                                                                      |
+| ---------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2026-05-14 | Updated GitHub repo description, homepage, and topics for AI-native Web3 curriculum positioning | Completed via `gh repo edit`; topics now include `ai-native`, `mcp`, `llms-txt`, `web3-education`, `bitcoin-education`, `defi`, `layer2`, `dao`, `ethereum`, `learning-platform`                                                                                                            |
+| 2026-05-18 | Pinned public 1000-star roadmap issue and seeded contributor starter backlog                    | Created [#156](https://github.com/beihaili/Get-Started-with-Web3/issues/156) and six new good-first issues [#157](https://github.com/beihaili/Get-Started-with-Web3/issues/157)-[#162](https://github.com/beihaili/Get-Started-with-Web3/issues/162), bringing open good-first issues to 10 |
