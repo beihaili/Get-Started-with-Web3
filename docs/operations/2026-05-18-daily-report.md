@@ -2,7 +2,7 @@
 
 **Date:** 2026-05-18
 **Owner:** beihai + Codex
-**Reporting window:** 2026-05-18 12:33 CST snapshot; GitHub timestamps are UTC unless noted.
+**Reporting window:** 2026-05-18 12:52 CST snapshot; GitHub timestamps are UTC unless noted.
 
 ## KPI Snapshot
 
@@ -12,7 +12,7 @@
 | Forks             |      57 |                  55 |       +2 | `gh repo view beihaili/Get-Started-with-Web3`           |
 | Watchers          |       3 |                   3 |        0 | `gh repo view beihaili/Get-Started-with-Web3`           |
 | Open PRs          |       0 |                   0 |        0 | `gh pr list --state open`                               |
-| Open issues       |      10 |                   5 |       +5 | `gh issue list --state open --limit 200`                |
+| Open issues       |      11 |                   5 |       +6 | `gh issue list --state open --limit 200`                |
 | Good first issues |      10 |                   4 |       +6 | `gh issue list --state open --label "good first issue"` |
 
 ## Completed
@@ -21,7 +21,7 @@
 - Public post queue: added reusable X/Farcaster, Chinese community, and short-form product update copy anchored to the release link.
 - Distribution tracker: marked GitHub Release as published and moved Twitter/X plus learnblockchain.cn/community targets to ready-to-publish status.
 - Sponsor and revenue: drafted a Safe/Reown impact memo using the interactive learning release, current GitHub metrics, and official Safe/Reown positioning.
-- Sponsor kit: refreshed current metrics to 614 stars, 12 contributors, 55 glossary entries, 147 GitHub views, and 4569 GitHub clones over the latest 14-day window.
+- Sponsor kit: refreshed current metrics to 614 stars, 13 contributors, 55 glossary entries, 147 GitHub views, and 4569 GitHub clones over the latest 14-day window.
 - Content product: added step-by-step Bitcoin Script examples for P2PKH, P2SH, 2-of-3 multisig, and CLTV to close the substance of #34.
 - Community: created and pinned the public 1000-star roadmap issue [#156](https://github.com/beihaili/Get-Started-with-Web3/issues/156).
 - Community: seeded six new contributor-ready good-first issues [#157](https://github.com/beihaili/Get-Started-with-Web3/issues/157)-[#162](https://github.com/beihaili/Get-Started-with-Web3/issues/162), bringing the open good-first issue queue to 10.
@@ -39,7 +39,7 @@
 
 | Surface                  | Status   | Evidence                                                                                                                                                                                                                                                                              | Notes                                                                     |
 | ------------------------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| Latest production deploy | Success  | [Run 26013635462](https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26013635462)                                                                                                                                                                                         | `docs: proofread first Web3 identity lesson` completed on main            |
+| Latest production deploy | Success  | [Run 26014040847](https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26014040847)                                                                                                                                                                                         | `docs: record community contribution loop` completed on main              |
 | Release publication      | Success  | [interactive-learning-2026-05-18](https://github.com/beihaili/Get-Started-with-Web3/releases/tag/interactive-learning-2026-05-18)                                                                                                                                                     | Public GitHub product update published at 614 stars                       |
 | Production smoke         | Success  | `/en/learn/module-11/11-2` and `/zh/.../11-2`                                                                                                                                                                                                                                         | Gas calculator rendered after latest Pages deploy; bad responses: 0       |
 | Sponsor memo             | Drafted  | `docs/strategy/2026-05-18-safe-reown-impact-memo.md`                                                                                                                                                                                                                                  | No outreach sent yet                                                      |
@@ -102,4 +102,4 @@
 - Contributor spotlight template: `docs/community/contributor-spotlight-template.md`
 - Donation and affiliate disclosure review: `docs/strategy/2026-05-18-donation-affiliate-disclosure-review.md`
 - Paid AI tools landing copy: `docs/strategy/2026-05-18-paid-ai-tools-landing-copy.md`
-- Latest main deploy: https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26013635462
+- Latest main deploy: https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26014040847
