@@ -4,7 +4,7 @@ This repository exposes bilingual Web3 learning content for AI agents.
 
 Source: https://github.com/beihaili/Get-Started-with-Web3
 Homepage: https://beihaili.github.io/Get-Started-with-Web3/
-Generated: 2026-05-18T02:14:17.344Z
+Generated: 2026-05-18T02:37:44.537Z
 
 ## Artifacts
 - Manifest: ai/manifest.json
@@ -14,6 +14,21 @@ Generated: 2026-05-18T02:14:17.344Z
 - Command: npm run mcp:web3
 - Transport: stdio
 - Mode: read-only
+- Client config: replace cwd before use.
+```json
+{
+  "mcpServers": {
+    "get-started-with-web3": {
+      "command": "npm",
+      "args": [
+        "run",
+        "mcp:web3"
+      ],
+      "cwd": "/absolute/path/to/Get-Started-with-Web3"
+    }
+  }
+}
+```
 
 ## Tools
 - search_web3_content: Search lesson titles, headings, excerpts, and glossary definitions. (free)

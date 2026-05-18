@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2026-05-09",
-  "generatedAt": "2026-05-18T02:14:17.344Z",
+  "generatedAt": "2026-05-18T02:37:44.537Z",
   "repository": {
     "name": "Get-Started-with-Web3",
     "owner": "beihaili",
@@ -32,7 +32,20 @@
   "mcp": {
     "command": "npm run mcp:web3",
     "transport": "stdio",
-    "readOnly": true
+    "readOnly": true,
+    "clientConfig": {
+      "mcpServers": {
+        "get-started-with-web3": {
+          "command": "npm",
+          "args": [
+            "run",
+            "mcp:web3"
+          ],
+          "cwd": "/absolute/path/to/Get-Started-with-Web3"
+        }
+      }
+    },
+    "clientConfigNote": "Replace cwd with your local repository path before pasting this into an MCP client that supports mcpServers JSON."
   },
   "tools": [
     {
