@@ -174,6 +174,7 @@ npm run mcp:web3
 - [贡献指南](CONTRIBUTING.md)
 - [贡献者成长路径](docs/community/contributor-ladder.md)
 - [贡献者 Spotlight 模板](docs/community/contributor-spotlight-template.md)
+- [贡献者 Spotlights](docs/community/spotlights/README.md)
 - [Good first issues 清单](docs/community/good-first-issues.md)
 - [good first issues](https://github.com/beihaili/Get-Started-with-Web3/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
 - [所有 issues](https://github.com/beihaili/Get-Started-with-Web3/issues)
