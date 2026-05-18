@@ -1,0 +1,1 @@
+var e="支持本项目",t="本教程完全免费开源，如果对你有帮助，欢迎支持作者持续更新 ✨",s="支持链接完全可选；联盟链接会在使用处披露，且不会影响课程结论或安全提示。",d="加密货币打赏",l="点击复制地址",o="已复制！",r={title:e,subtitle:t,disclosure:s,cryptoLabel:d,copyAddress:l,copied:o};export{o as copied,l as copyAddress,d as cryptoLabel,r as default,s as disclosure,t as subtitle,e as title};
