@@ -2,7 +2,7 @@
 
 **Date:** 2026-05-18
 **Owner:** beihai + Codex
-**Reporting window:** 2026-05-18 08:37 CST snapshot; GitHub timestamps are UTC unless noted.
+**Reporting window:** 2026-05-18 09:38 CST snapshot; GitHub timestamps are UTC unless noted.
 
 ## KPI Snapshot
 
@@ -21,16 +21,18 @@
 - Distribution tracker: marked GitHub Release as published and moved Twitter/X plus learnblockchain.cn/community targets to ready-to-publish status.
 - Sponsor and revenue: drafted a Safe/Reown impact memo using the interactive learning release, current GitHub metrics, and official Safe/Reown positioning.
 - Sponsor kit: refreshed current metrics to 614 stars, 12 contributors, 55 glossary entries, 147 GitHub views, and 4569 GitHub clones over the latest 14-day window.
+- Content product: added step-by-step Bitcoin Script examples for P2PKH, P2SH, 2-of-3 multisig, and CLTV to close the substance of #34.
 - Operations hygiene: started the 2026-05-18 daily report with current metrics, release evidence, and next operating block.
 
 ## Deploy And Verification
 
 | Surface                  | Status  | Evidence                                                                                                                          | Notes                                                               |
 | ------------------------ | ------- | --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| Latest production deploy | Success | [Run 26007659892](https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26007659892)                                     | `docs: publish interactive learning update plan` completed on main  |
+| Latest production deploy | Success | [Run 26008404381](https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26008404381)                                     | `docs: draft safe reown impact memo` completed on main              |
 | Release publication      | Success | [interactive-learning-2026-05-18](https://github.com/beihaili/Get-Started-with-Web3/releases/tag/interactive-learning-2026-05-18) | Public GitHub product update published at 614 stars                 |
 | Production smoke         | Success | `/en/learn/module-11/11-2` and `/zh/.../11-2`                                                                                     | Gas calculator rendered after latest Pages deploy; bad responses: 0 |
 | Sponsor memo             | Drafted | `docs/strategy/2026-05-18-safe-reown-impact-memo.md`                                                                              | No outreach sent yet                                                |
+| Content verification     | Success | `npm test`, `npm run lint`, `npm run ai:verify`, `npm run build`                                                                  | Bitcoin Script examples and regenerated AI artifacts validated      |
 | Formatting               | Success | `npx prettier --check`                                                                                                            | Public post, tracker, and daily report Markdown use Prettier style  |
 | Whitespace               | Success | `git diff --check`                                                                                                                | No whitespace errors                                                |
 
@@ -63,7 +65,7 @@
 
 1. Publish the Draft 3 X/Farcaster thread and Chinese community post, then record links and visible metrics.
 2. Send the Safe or Reown memo through the chosen channel, then record the sent link/date and any reply.
-3. Start [#34](https://github.com/beihaili/Get-Started-with-Web3/issues/34) or reshape it into a contributor-friendly code-example issue.
+3. Merge the [#34](https://github.com/beihaili/Get-Started-with-Web3/issues/34) Bitcoin Script examples PR, then move to the next contributor-friendly content issue.
 
 ## Evidence Links
 
@@ -73,4 +75,4 @@
 - Safe/Reown impact memo: `docs/strategy/2026-05-18-safe-reown-impact-memo.md`
 - Merkle feature PR: https://github.com/beihaili/Get-Started-with-Web3/pull/148
 - Gas fee calculator PR: https://github.com/beihaili/Get-Started-with-Web3/pull/151
-- Latest main deploy: https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26007659892
+- Latest main deploy: https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26008404381
