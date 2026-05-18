@@ -143,6 +143,18 @@ export const GLOSSARY_DATA = [
     category: '账户抽象',
   },
   {
+    term: '智能账户 (Smart Account)',
+    definition:
+      '可编程的钱包账户类型，能内置批量交易、权限控制、社交恢复和 Gas 代付等能力，比传统 EOA 更灵活。',
+    category: '账户抽象',
+  },
+  {
+    term: '恢复模块 (Recovery Module)',
+    definition:
+      '用于在设备丢失或密钥泄露后恢复智能账户控制权的机制，常见方式包括社交恢复、延迟恢复和多重验证。',
+    category: '账户抽象',
+  },
+  {
     term: 'Passkey',
     definition: '基于 WebAuthn 和设备安全模块的认证方式，可用于改善智能钱包登录和签名体验。',
     category: '账户抽象',
