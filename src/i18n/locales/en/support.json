@@ -6,5 +6,11 @@
   "sponsorsTitle": "Our Sponsors",
   "noSponsors": "No sponsors yet. Be the first!",
   "backHome": "Back to Home",
-  "affiliateTitle": "Recommended Exchanges"
+  "affiliateTitle": "Affiliate Links",
+  "disclosureTitle": "Trust and disclosure",
+  "disclosureBody": "Support, sponsorship, and affiliate links help fund maintenance, translations, new lessons, and AI-native tooling. They do not influence lesson conclusions, security warnings, or curriculum order.",
+  "donationDisclosure": "Donation platforms are optional support channels. They do not buy placement, endorsements, or control over educational content.",
+  "cryptoDisclosure": "Crypto tips are irreversible. Verify the address, network, and asset before sending; this page will not ask for seed phrases, private keys, or wallet signatures.",
+  "affiliateDisclosure": "Affiliate links may generate commission or referral benefits for the author. Exchange links are not investment advice, trading recommendations, or a suggestion to use leverage.",
+  "sponsorDisclosure": "Paid sponsor placements are disclosed when present. Sponsors cannot change lesson conclusions or remove safety warnings."
 }

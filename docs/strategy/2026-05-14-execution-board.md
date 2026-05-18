@@ -85,7 +85,7 @@ Update weekly.
 - [x] Draft 3 sponsor outreach templates: wallet, infrastructure, exchange/affiliate.
 - [x] Draft sponsor acceptance policy.
 - [x] Track sponsor leads in a simple Markdown table until volume justifies a CRM: `docs/strategy/2026-05-15-sponsor-leads-tracker.md`.
-- [ ] Review donation and affiliate disclosures.
+- [x] Review donation and affiliate disclosures.
 
 ### 6. Contributor Community
 

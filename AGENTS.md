@@ -17,6 +17,7 @@
 - `docs/strategy/2026-05-14-sponsor-kit.md`: 赞助包草案，包含受众、价格、曝光权益、接受政策和月度汇报指标。
 - `docs/strategy/2026-05-14-sponsor-outreach-drafts.md`: 赞助外联话术草案；常规外联可自主执行，高风险赞助对象仍需单独确认。
 - `docs/strategy/2026-05-15-sponsor-leads-tracker.md`: 具名赞助/资助线索 tracker，记录公开来源、fit score、建议外联角度、渠道、状态和风险边界；发送外联后必须同步每日运营汇报。
+- `docs/strategy/2026-05-18-donation-affiliate-disclosure-review.md`: 捐赠、赞助、联盟链接和加密货币打赏的披露审查记录；新增或扩大 affiliate、payment、wallet、x402 相关入口前必须保持公开披露并确认风险边界。
 - `docs/strategy/2026-05-18-safe-reown-impact-memo.md`: 面向 Safe Ecosystem Foundation 和 Reown / WalletConnect 的资助/赞助 impact memo 草案，包含当前指标、官方来源、建议 ask、外联话术和发送前检查清单；尚未发送外联。
 - `docs/strategy/2026-05-18-paid-ai-tools-landing-copy.md`: 未来 hosted AI 工具 landing copy 草案，覆盖 `generate_personalized_web3_plan` 和 `audit_learning_answer` 的定位、CTA、边界文案、FAQ 和 launch checklist；不得描述为已上线付费能力。
 - `docs/strategy/2026-05-14-awesome-list-submissions.md`: awesome-list 和社区分发追踪，包含定位文案、目标列表、PR 模板和中文社区帖草案。
