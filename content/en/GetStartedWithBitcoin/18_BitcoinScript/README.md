@@ -26,11 +26,13 @@
 Many think Bitcoin is merely "digital cash," but Bitcoin has been programmable since birth. Bitcoin Script is Bitcoin's built-in scripting language, making Bitcoin not just a transfer tool but a programmable digital contract platform.
 
 **Real-world analogies:**
+
 - **Checks**: Can set payee, amount, expiration date.
 - **Trusts**: Can set complex fund release conditions.
 - **Safe deposit boxes**: Can require multiple keys simultaneously.
 
 **Bitcoin Script capabilities:**
+
 - **Conditional payments**: Funds spendable only when specific conditions are met.
 - **Multisignature**: Requires multiple signatures to move funds.
 - **Timelocks**: Funds usable only after a specific time.
@@ -243,6 +245,132 @@ def standard_script_patterns():
     }
 ```
 
+### Step-by-Step Script Examples
+
+The examples below use `[bottom ... top]` stack notation. They are simplified for learning: real signatures commit to a transaction digest, and modern wallets often wrap these patterns in SegWit or Taproot formats.
+
+#### 1. P2PKH: pay to a public-key hash
+
+P2PKH is the classic "send to this Bitcoin address" pattern. The spender must reveal a public key that hashes to the locked address and provide a valid signature for that key.
+
+```text
+// Unlocking script (scriptSig)
+<signature> <pubkey>
+
+// Locking script (scriptPubKey)
+OP_DUP OP_HASH160 <pubkey_hash> OP_EQUALVERIFY OP_CHECKSIG
+```
+
+```text
+<signature>        // stack: [signature]
+<pubkey>           // stack: [signature, pubkey]
+OP_DUP             // stack: [signature, pubkey, pubkey]
+OP_HASH160         // stack: [signature, pubkey, HASH160(pubkey)]
+<pubkey_hash>      // stack: [signature, pubkey, HASH160(pubkey), pubkey_hash]
+OP_EQUALVERIFY     // stack: [signature, pubkey] ; fail if hashes differ
+OP_CHECKSIG        // stack: [true] ; signature must match pubkey and transaction digest
+```
+
+Why it works:
+
+- `OP_HASH160` proves the revealed public key belongs to the locked address.
+- `OP_EQUALVERIFY` stops execution immediately if the public-key hash is wrong.
+- `OP_CHECKSIG` proves the spender controls the private key.
+
+#### 2. P2SH: pay to a script hash
+
+P2SH hides the detailed conditions until spend time. The locking script only stores `HASH160(redeemScript)`, then the spender reveals the redeem script and any data needed to satisfy it.
+
+```text
+// Redeem script used in this example
+<pubkey> OP_CHECKSIG
+
+// Unlocking script
+<signature> <redeemScript>
+
+// P2SH locking script
+OP_HASH160 <redeem_script_hash> OP_EQUAL
+```
+
+```text
+<signature>             // stack: [signature]
+<redeemScript>          // stack: [signature, redeemScript]
+OP_HASH160              // stack: [signature, HASH160(redeemScript)]
+<redeem_script_hash>    // stack: [signature, HASH160(redeemScript), redeem_script_hash]
+OP_EQUAL                // stack: [signature, true] ; P2SH wrapper passes if hashes match
+```
+
+After the wrapper succeeds, P2SH rules evaluate the revealed redeem script with the remaining stack:
+
+```text
+<pubkey>                // stack: [signature, pubkey]
+OP_CHECKSIG             // stack: [true] ; redeem script condition is satisfied
+```
+
+Why it works:
+
+- The sender only needs a short script hash, similar to a normal address.
+- The spender carries the script complexity and reveals it only when spending.
+- If the redeem script hash is wrong, the script never reaches the second stage.
+
+#### 3. 2-of-3 multisig
+
+A 2-of-3 multisig output lets any two of three key holders spend. The example below uses Alice and Carol's signatures; Bob does not need to sign.
+
+```text
+// Unlocking script
+OP_0 <alice_sig> <carol_sig>
+
+// Locking script or P2SH redeem script
+OP_2 <alice_pubkey> <bob_pubkey> <carol_pubkey> OP_3 OP_CHECKMULTISIG
+```
+
+```text
+OP_0                  // stack: [dummy] ; historical CHECKMULTISIG extra item
+<alice_sig>           // stack: [dummy, alice_sig]
+<carol_sig>           // stack: [dummy, alice_sig, carol_sig]
+OP_2                  // stack: [dummy, alice_sig, carol_sig, 2]
+<alice_pubkey>        // stack: [dummy, alice_sig, carol_sig, 2, alice_pubkey]
+<bob_pubkey>          // stack: [dummy, alice_sig, carol_sig, 2, alice_pubkey, bob_pubkey]
+<carol_pubkey>        // stack: [dummy, alice_sig, carol_sig, 2, alice_pubkey, bob_pubkey, carol_pubkey]
+OP_3                  // stack: [dummy, alice_sig, carol_sig, 2, alice_pubkey, bob_pubkey, carol_pubkey, 3]
+OP_CHECKMULTISIG      // stack: [true] ; two valid signatures matched in pubkey order
+```
+
+Why it works:
+
+- `OP_2` sets the required signature count.
+- `OP_3` sets the number of candidate public keys.
+- `OP_0` is required because `OP_CHECKMULTISIG` consumes one extra unused stack item for historical compatibility.
+- Signatures must appear in the same relative order as their matching public keys.
+
+#### 4. Absolute timelock with CLTV
+
+`OP_CHECKLOCKTIMEVERIFY` (CLTV) makes an output unspendable until the spending transaction's `nLockTime` reaches a required block height or timestamp. Values below `500,000,000` are interpreted as block heights; values at or above that threshold are interpreted as Unix timestamps.
+
+```text
+// Unlocking script
+<signature>
+
+// Locking script: spend only at or after block 840000
+<840000> OP_CHECKLOCKTIMEVERIFY OP_DROP <pubkey> OP_CHECKSIG
+```
+
+```text
+<signature>              // stack: [signature]
+<840000>                 // stack: [signature, 840000]
+OP_CHECKLOCKTIMEVERIFY   // stack: [signature, 840000] ; tx.nLockTime must be >= 840000
+OP_DROP                  // stack: [signature]
+<pubkey>                 // stack: [signature, pubkey]
+OP_CHECKSIG              // stack: [true] ; signature still required after the lock expires
+```
+
+Why it works:
+
+- CLTV checks the transaction-level locktime without removing the locktime value.
+- `OP_DROP` removes the locktime value so the final signature check sees `[signature, pubkey]`.
+- The spending input must use a non-final sequence value; otherwise CLTV is bypassed and validation fails.
+
 ## Advanced Script Applications
 
 ### Atomic Swap Script (HTLC)
@@ -320,21 +448,26 @@ class BitcoinScriptBuilder:
 ## FAQ
 
 ### ❓ Why isn't Bitcoin Script Turing-complete?
+
 **Design considerations:** Prevents infinite loops (DoS attacks), ensures bounded execution time, reduces implementation complexity, and guarantees consensus consistency across all nodes.
 
 ### ❓ Can Bitcoin Script implement smart contracts?
+
 **Yes, but with limitations:**
+
 - **Can implement**: Multisig wallets, timelocked payments, hash-locked conditional payments, escrow, atomic swaps, payment channels.
 - **Cannot implement**: Complex state management, dynamic data storage, external data feeds (oracles), complex computation, loops/recursion.
 - **vs. Ethereum**: Bitcoin Script is simple, secure, limited; Ethereum Solidity is Turing-complete, powerful, complex.
 
 ### ❓ How to debug Bitcoin scripts?
+
 - **Bitcoin Core testnet**: Validate scripts in a test environment.
 - **Script simulators**: Simulate execution offline.
 - **Stack tracing**: Record stack state at each step.
 - **Unit testing**: Write test cases to verify logic.
 
 ### ❓ Do ordinary users need to learn Bitcoin Script?
+
 - **Normal transfers**: Not at all — wallets handle it automatically.
 - **Multisig**: Basic understanding helpful, but tools exist.
 - **Advanced applications**: Lightning Network, atomic swaps — good to understand.
@@ -345,18 +478,21 @@ class BitcoinScriptBuilder:
 Bitcoin Script is the core of Bitcoin's programmability, achieving a clever balance between security and functionality:
 
 ### 🏛️ Design Philosophy
+
 - **Security first**: Willing to limit features to ensure security.
 - **Simple and reliable**: Achieving reliability through simplicity.
 - **Deterministic execution**: Ensuring network consensus consistency.
 - **Extensible**: Adding new features through soft forks.
 
 ### 🔧 Technical Features
+
 - **Stack-based execution**: Simple, efficient execution model.
 - **Limited opcodes**: Carefully selected operation set.
 - **Conditional logic**: Supports complex payment conditions.
 - **Cryptography integration**: Built-in signature and hash operations.
 
 ### 🚀 Practical Value
+
 Mastering Bitcoin Script enables you to: understand Bitcoin transactions at the lowest level, design complex payment conditions and smart contracts, analyze and audit script security, and develop Layer 2 applications.
 
 > 🌟 **Code practice**: Complete script examples for this chapter: [script_examples.py](./script_examples.py)

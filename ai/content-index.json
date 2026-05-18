@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2026-05-09",
-  "generatedAt": "2026-05-18T01:17:58.625Z",
+  "generatedAt": "2026-05-18T01:49:09.143Z",
   "repository": {
     "name": "Get-Started-with-Web3",
     "owner": "beihaili",
@@ -8971,6 +8971,26 @@
           "text": "Standard Script Types"
         },
         {
+          "level": 3,
+          "text": "Step-by-Step Script Examples"
+        },
+        {
+          "level": 4,
+          "text": "1. P2PKH: pay to a public-key hash"
+        },
+        {
+          "level": 4,
+          "text": "2. P2SH: pay to a script hash"
+        },
+        {
+          "level": 4,
+          "text": "3. 2-of-3 multisig"
+        },
+        {
+          "level": 4,
+          "text": "4. Absolute timelock with CLTV"
+        },
+        {
           "level": 2,
           "text": "Advanced Script Applications"
         },
@@ -9023,8 +9043,8 @@
           "text": "🚀 Practical Value"
         }
       ],
-      "codeBlockCount": 7,
-      "characterCount": 14789
+      "codeBlockCount": 16,
+      "characterCount": 19974
     },
     {
       "id": "zh/module-4/4-5",
