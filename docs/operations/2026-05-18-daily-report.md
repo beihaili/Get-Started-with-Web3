@@ -2,7 +2,7 @@
 
 **Date:** 2026-05-18
 **Owner:** beihai + Codex
-**Reporting window:** 2026-05-18 12:52 CST snapshot; GitHub timestamps are UTC unless noted.
+**Reporting window:** 2026-05-18 13:26 CST snapshot; GitHub timestamps are UTC unless noted.
 
 ## KPI Snapshot
 
@@ -33,6 +33,7 @@
 - Community contribution: reviewed, approved, and merged [#167](https://github.com/beihaili/Get-Started-with-Web3/pull/167) from `leno23`, closing [#159](https://github.com/beihaili/Get-Started-with-Web3/issues/159) and proving the good-first proofreading loop can convert.
 - Community backlog: created replacement starter issue [#169](https://github.com/beihaili/Get-Started-with-Web3/issues/169) so the open good-first queue stays at 10 after #159 closed.
 - Community recognition: created the first contributor spotlight for `leno23` using public PR/issue evidence, and linked the spotlights index from both READMEs.
+- Community roadmap: posted the first contributor spotlight update to pinned roadmap issue [#156](https://github.com/beihaili/Get-Started-with-Web3/issues/156#issuecomment-4474624411), tying [#167](https://github.com/beihaili/Get-Started-with-Web3/pull/167), [#159](https://github.com/beihaili/Get-Started-with-Web3/issues/159), and [#169](https://github.com/beihaili/Get-Started-with-Web3/issues/169) into the public 1000-star operating loop.
 - AI-native maintenance: regenerated `ai/` and `public/ai/` artifacts after the English lesson copy edit so indexed lesson metadata stays aligned with source content.
 - Operations hygiene: started the 2026-05-18 daily report with current metrics, release evidence, and next operating block.
 
@@ -40,14 +41,14 @@
 
 | Surface                  | Status    | Evidence                                                                                                                                                                                                                                                                              | Notes                                                                     |
 | ------------------------ | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| Latest production deploy | Success   | [Run 26014040847](https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26014040847)                                                                                                                                                                                         | `docs: record community contribution loop` completed on main              |
+| Latest production deploy | Success   | [Run 26014972804](https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26014972804)                                                                                                                                                                                         | `docs: publish first contributor spotlight` completed on main             |
 | Release publication      | Success   | [interactive-learning-2026-05-18](https://github.com/beihaili/Get-Started-with-Web3/releases/tag/interactive-learning-2026-05-18)                                                                                                                                                     | Public GitHub product update published at 614 stars                       |
 | Production smoke         | Success   | `/en/learn/module-11/11-2` and `/zh/.../11-2`                                                                                                                                                                                                                                         | Gas calculator rendered after latest Pages deploy; bad responses: 0       |
 | Sponsor memo             | Drafted   | `docs/strategy/2026-05-18-safe-reown-impact-memo.md`                                                                                                                                                                                                                                  | No outreach sent yet                                                      |
 | Content verification     | Success   | `npm test`, `npm run lint`, `npm run ai:verify`, `npm run build`                                                                                                                                                                                                                      | Bitcoin Script examples and regenerated AI artifacts validated            |
 | Community backlog        | Success   | [#156](https://github.com/beihaili/Get-Started-with-Web3/issues/156), [#157](https://github.com/beihaili/Get-Started-with-Web3/issues/157)-[#162](https://github.com/beihaili/Get-Started-with-Web3/issues/162), [#169](https://github.com/beihaili/Get-Started-with-Web3/issues/169) | Public roadmap pinned; 10 open good-first issues active after #159 closed |
 | Contributor PR loop      | Success   | [#167](https://github.com/beihaili/Get-Started-with-Web3/pull/167), [#159](https://github.com/beihaili/Get-Started-with-Web3/issues/159)                                                                                                                                              | First Web3 identity lesson proofread by external contributor              |
-| Contributor spotlight    | Published | `docs/community/spotlights/2026-05-first-contributor-spotlight.md`, `docs/community/contributor-spotlight-template.md`, `/contributors`                                                                                                                                               | First spotlight uses public PR/issue evidence only; no rewards promised   |
+| Contributor spotlight    | Published | `docs/community/spotlights/2026-05-first-contributor-spotlight.md`, `docs/community/contributor-spotlight-template.md`, `/contributors`, [#156 update](https://github.com/beihaili/Get-Started-with-Web3/issues/156#issuecomment-4474624411)                                          | First spotlight uses public PR/issue evidence only; no rewards promised   |
 | Contributor page smoke   | Success   | `npm test`, `npm run lint`, `npm run build`, Playwright desktop/mobile smoke                                                                                                                                                                                                          | CTA links and recognition boundary visible on `/en/contributors`          |
 | Donation disclosure      | Reviewed  | `docs/strategy/2026-05-18-donation-affiliate-disclosure-review.md`, `/support`                                                                                                                                                                                                        | Affiliate, sponsor, donation, and crypto-tip boundaries documented        |
 | AI-native setup          | Success   | `README.md`, `README.zh.md`, `ai/llms.txt`, `ai/manifest.json`                                                                                                                                                                                                                        | MCP client config snippet added; local AI verification passed             |
@@ -60,6 +61,7 @@
 | Target                            | Status               | Evidence                                                                                       | Next action                                                            |
 | --------------------------------- | -------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
 | GitHub Release                    | Published            | https://github.com/beihaili/Get-Started-with-Web3/releases/tag/interactive-learning-2026-05-18 | Track release views/stars if GitHub exposes useful engagement          |
+| GitHub roadmap issue              | Updated              | https://github.com/beihaili/Get-Started-with-Web3/issues/156#issuecomment-4474624411           | Keep updating as starter issues close and contributor spotlights ship  |
 | Twitter/X thread                  | Ready                | `docs/strategy/2026-05-15-public-post-drafts.md`                                               | Publish Draft 3 from beihai account                                    |
 | learnblockchain.cn/community      | Ready                | `docs/strategy/2026-05-15-public-post-drafts.md`                                               | Publish Chinese community post when convenient                         |
 | TensorBlock `awesome-mcp-servers` | Waiting for reviewer | [PR #544](https://github.com/TensorBlock/awesome-mcp-servers/pull/544)                         | Avoid repeat pings until reviewer responds to the 2026-05-16 follow-up |
@@ -79,14 +81,14 @@
 - GitHub Discussions are disabled, so GitHub-native community updates currently need to use Releases, Issues, PR comments, or README/docs.
 - Translation coverage still reports 17 missing-English warnings; the visible contributor backlog remains useful but incomplete.
 - Sponsor outreach has not been sent; Safe/Reown memo is now ready, but actual sending still needs a human channel or connector.
-- Starter issue queue is healthy at 10 open good-first issues after #169 backfilled the closed #159; contributor recognition now has a real accepted PR and first spotlight artifact.
+- Starter issue queue is healthy at 10 open good-first issues after #169 backfilled the closed #159; contributor recognition now has a real accepted PR, first spotlight artifact, and public roadmap update.
 - Paid AI tool copy is only a draft; enabling hosted payment, x402 enforcement, affiliate expansion, or any wallet/payment flow still requires explicit confirmation.
 
 ## Next Operating Block
 
 1. Publish the Draft 3 X/Farcaster thread and Chinese community post, then record links and visible metrics.
 2. Send the Safe or Reown memo through the chosen channel, then record the sent link/date and any reply.
-3. Post the contributor spotlight update to the pinned roadmap issue, then keep the roadmap updated as more starter issues close.
+3. Keep the roadmap updated as more starter issues close and future contributor spotlights ship.
 4. Decide whether Phase 1 paid-tool validation should use waitlist/manual access, GitHub Sponsors, Stripe, or an x402 hosted experiment.
 
 ## Evidence Links
@@ -98,10 +100,11 @@
 - Merkle feature PR: https://github.com/beihaili/Get-Started-with-Web3/pull/148
 - Gas fee calculator PR: https://github.com/beihaili/Get-Started-with-Web3/pull/151
 - Public roadmap issue: https://github.com/beihaili/Get-Started-with-Web3/issues/156
+- Public roadmap spotlight update: https://github.com/beihaili/Get-Started-with-Web3/issues/156#issuecomment-4474624411
 - Contributor PR: https://github.com/beihaili/Get-Started-with-Web3/pull/167
 - Replacement starter issue: https://github.com/beihaili/Get-Started-with-Web3/issues/169
 - Contributor spotlight template: `docs/community/contributor-spotlight-template.md`
 - First contributor spotlight: `docs/community/spotlights/2026-05-first-contributor-spotlight.md`
 - Donation and affiliate disclosure review: `docs/strategy/2026-05-18-donation-affiliate-disclosure-review.md`
 - Paid AI tools landing copy: `docs/strategy/2026-05-18-paid-ai-tools-landing-copy.md`
-- Latest main deploy: https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26014040847
+- Latest main deploy: https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26014972804
