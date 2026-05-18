@@ -2,7 +2,7 @@
 
 **Date:** 2026-05-18
 **Owner:** beihai + Codex
-**Reporting window:** 2026-05-18 10:01 CST snapshot; GitHub timestamps are UTC unless noted.
+**Reporting window:** 2026-05-18 10:25 CST snapshot; GitHub timestamps are UTC unless noted.
 
 ## KPI Snapshot
 
@@ -26,6 +26,7 @@
 - Community: created and pinned the public 1000-star roadmap issue [#156](https://github.com/beihaili/Get-Started-with-Web3/issues/156).
 - Community: seeded six new contributor-ready good-first issues [#157](https://github.com/beihaili/Get-Started-with-Web3/issues/157)-[#162](https://github.com/beihaili/Get-Started-with-Web3/issues/162), bringing the open good-first issue queue to 10.
 - Community infrastructure: updated issue templates to request expected files, definition of done, and good-first-issue suitability.
+- AI-native productization: added a copy-paste MCP client configuration snippet to both READMEs and generated AI artifacts, and corrected README glossary count to 55.
 - Operations hygiene: started the 2026-05-18 daily report with current metrics, release evidence, and next operating block.
 
 ## Deploy And Verification
@@ -38,6 +39,7 @@
 | Sponsor memo             | Drafted | `docs/strategy/2026-05-18-safe-reown-impact-memo.md`                                                                                                                                                            | No outreach sent yet                                                |
 | Content verification     | Success | `npm test`, `npm run lint`, `npm run ai:verify`, `npm run build`                                                                                                                                                | Bitcoin Script examples and regenerated AI artifacts validated      |
 | Community backlog        | Success | [#156](https://github.com/beihaili/Get-Started-with-Web3/issues/156), [#157](https://github.com/beihaili/Get-Started-with-Web3/issues/157)-[#162](https://github.com/beihaili/Get-Started-with-Web3/issues/162) | Public roadmap pinned; 10 open good-first issues active             |
+| AI-native setup          | Success | `README.md`, `README.zh.md`, `ai/llms.txt`, `ai/manifest.json`                                                                                                                                                  | MCP client config snippet added; local AI verification passed       |
 | Formatting               | Success | `npx prettier --check`                                                                                                                                                                                          | Public post, tracker, and daily report Markdown use Prettier style  |
 | Whitespace               | Success | `git diff --check`                                                                                                                                                                                              | No whitespace errors                                                |
 
@@ -72,6 +74,7 @@
 1. Publish the Draft 3 X/Farcaster thread and Chinese community post, then record links and visible metrics.
 2. Send the Safe or Reown memo through the chosen channel, then record the sent link/date and any reply.
 3. Draft the monthly contributor spotlight template and keep the pinned roadmap updated as issues close.
+4. Draft landing copy for `generate_personalized_web3_plan` and `audit_learning_answer`.
 
 ## Evidence Links
 

@@ -52,7 +52,7 @@ npm run mcp:web3        # 启动本地 stdio MCP server
 
 ## AI-Native 内容层
 
-- `ai/manifest.json`: 服务清单，包含仓库信息、artifact 路径、MCP 命令和未来 x402 工具元数据。
+- `ai/manifest.json`: 服务清单，包含仓库信息、artifact 路径、MCP 命令、可复制的 `mcpServers` client config 示例和未来 x402 工具元数据。
 - `ai/content-index.json`: 双语课程和术语表索引，供 Agent 搜索、引用和组合上下文。
 - `ai/llms.txt`: 面向 Agent/crawler 的文本入口。
 - `public/llms.txt`: GitHub Pages 根路径公开入口，部署后为 `https://beihaili.github.io/Get-Started-with-Web3/llms.txt`。

@@ -42,8 +42,14 @@ describe('generate-ai-index', () => {
 
     expect(manifest.counts.modules).toBe(11);
     expect(manifest.mcp.command).toBe('npm run mcp:web3');
+    expect(manifest.mcp.clientConfig.mcpServers['get-started-with-web3']).toMatchObject({
+      command: 'npm',
+      args: ['run', 'mcp:web3'],
+      cwd: '/absolute/path/to/Get-Started-with-Web3',
+    });
     expect(contentIndex.lessons.length).toBeGreaterThan(40);
     expect(llmsTxt).toContain('Get Started With Web3 AI Index');
+    expect(llmsTxt).toContain('"get-started-with-web3"');
     expect(llmsTxt).not.toMatch(/TBD|TODO|placeholder/i);
   });
 });
