@@ -19,15 +19,18 @@
 - External distribution: published a GitHub Release for the interactive learning update: Merkle Tree Builder plus EIP-1559 Gas Fee Calculator.
 - Public post queue: added reusable X/Farcaster, Chinese community, and short-form product update copy anchored to the release link.
 - Distribution tracker: marked GitHub Release as published and moved Twitter/X plus learnblockchain.cn/community targets to ready-to-publish status.
+- Sponsor and revenue: drafted a Safe/Reown impact memo using the interactive learning release, current GitHub metrics, and official Safe/Reown positioning.
+- Sponsor kit: refreshed current metrics to 614 stars, 12 contributors, 55 glossary entries, 147 GitHub views, and 4569 GitHub clones over the latest 14-day window.
 - Operations hygiene: started the 2026-05-18 daily report with current metrics, release evidence, and next operating block.
 
 ## Deploy And Verification
 
 | Surface                  | Status  | Evidence                                                                                                                          | Notes                                                               |
 | ------------------------ | ------- | --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| Latest production deploy | Success | [Run 25987625216](https://github.com/beihaili/Get-Started-with-Web3/actions/runs/25987625216)                                     | `docs: update 2026-05-17 operations report` completed on main       |
+| Latest production deploy | Success | [Run 26007659892](https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26007659892)                                     | `docs: publish interactive learning update plan` completed on main  |
 | Release publication      | Success | [interactive-learning-2026-05-18](https://github.com/beihaili/Get-Started-with-Web3/releases/tag/interactive-learning-2026-05-18) | Public GitHub product update published at 614 stars                 |
 | Production smoke         | Success | `/en/learn/module-11/11-2` and `/zh/.../11-2`                                                                                     | Gas calculator rendered after latest Pages deploy; bad responses: 0 |
+| Sponsor memo             | Drafted | `docs/strategy/2026-05-18-safe-reown-impact-memo.md`                                                                              | No outreach sent yet                                                |
 | Formatting               | Success | `npx prettier --check`                                                                                                            | Public post, tracker, and daily report Markdown use Prettier style  |
 | Whitespace               | Success | `git diff --check`                                                                                                                | No whitespace errors                                                |
 
@@ -42,24 +45,24 @@
 
 ## Sponsor And Revenue
 
-| Lead / Channel            | Status | Next action                                                                          | Risk notes                                        |
-| ------------------------- | ------ | ------------------------------------------------------------------------------------ | ------------------------------------------------- |
-| Safe Ecosystem Foundation | Queued | Convert interactive smart-account and gas-fee work into a grant-style impact memo    | Low trust risk; education aligned                 |
-| Reown / WalletConnect     | Queued | Personalize wallet UX and connection-safety outreach around beginner-safe onboarding | Avoid implying wallet endorsement                 |
-| QuickNode                 | Queued | Personalize infrastructure sponsor outreach around RPC and builder lessons           | Do not promise developer acquisition numbers yet  |
-| Exchanges / affiliate     | Hold   | Requires explicit trust-policy review before contact                                 | High trust risk; user confirmation still required |
+| Lead / Channel            | Status       | Next action                                                                                                             | Risk notes                                        |
+| ------------------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| Safe Ecosystem Foundation | Memo drafted | Send grant-style memo through the appropriate Safe grants channel after channel/account confirmation                    | Low trust risk; education aligned                 |
+| Reown / WalletConnect     | Memo drafted | Send wallet UX and onboarding memo through Reown Sales/Partnership or DevRel channel after channel/account confirmation | Avoid implying wallet endorsement                 |
+| QuickNode                 | Queued       | Personalize infrastructure sponsor outreach around RPC and builder lessons                                              | Do not promise developer acquisition numbers yet  |
+| Exchanges / affiliate     | Hold         | Requires explicit trust-policy review before contact                                                                    | High trust risk; user confirmation still required |
 
 ## Blockers And Risks
 
 - Growth is still flat at 614 stars; distribution must now move from prepared copy to actually published posts.
 - GitHub Discussions are disabled, so GitHub-native community updates currently need to use Releases, Issues, PR comments, or README/docs.
 - Translation coverage still reports 17 missing-English warnings; the visible contributor backlog remains useful but incomplete.
-- Sponsor outreach has not been sent; use the interactive-learning release as the next credible proof point.
+- Sponsor outreach has not been sent; Safe/Reown memo is now ready, but actual sending still needs a human channel or connector.
 
 ## Next Operating Block
 
 1. Publish the Draft 3 X/Farcaster thread and Chinese community post, then record links and visible metrics.
-2. Prepare a one-page Safe/Reown sponsor or grant memo using the interactive learning release as evidence.
+2. Send the Safe or Reown memo through the chosen channel, then record the sent link/date and any reply.
 3. Start [#34](https://github.com/beihaili/Get-Started-with-Web3/issues/34) or reshape it into a contributor-friendly code-example issue.
 
 ## Evidence Links
@@ -67,6 +70,7 @@
 - Repository: https://github.com/beihaili/Get-Started-with-Web3
 - Production site: https://beihaili.github.io/Get-Started-with-Web3/
 - Interactive learning release: https://github.com/beihaili/Get-Started-with-Web3/releases/tag/interactive-learning-2026-05-18
+- Safe/Reown impact memo: `docs/strategy/2026-05-18-safe-reown-impact-memo.md`
 - Merkle feature PR: https://github.com/beihaili/Get-Started-with-Web3/pull/148
 - Gas fee calculator PR: https://github.com/beihaili/Get-Started-with-Web3/pull/151
-- Latest main deploy: https://github.com/beihaili/Get-Started-with-Web3/actions/runs/25987625216
+- Latest main deploy: https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26007659892

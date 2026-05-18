@@ -22,18 +22,19 @@ The audience is especially valuable for:
 
 ## Current Project Snapshot
 
-As of 2026-05-14:
+As of 2026-05-18:
 
 | Metric                        |                                                       Value |
 | ----------------------------- | ----------------------------------------------------------: |
-| GitHub stars                  |                                                         613 |
+| GitHub stars                  |                                                         614 |
 | Forks                         |                                                          55 |
-| Total contributors            |                                                          11 |
+| Total contributors            |                                                          12 |
 | Indexed lesson entries        |                                                         106 |
-| Glossary entries              |                                                          45 |
-| GitHub 14-day views           |                                                         152 |
-| GitHub 14-day unique visitors |                                                          65 |
-| GitHub 14-day clones          |                                                        2048 |
+| Glossary entries              |                                                          55 |
+| GitHub 14-day views           |                                                         147 |
+| GitHub 14-day unique visitors |                                                          72 |
+| GitHub 14-day clones          |                                                        4569 |
+| GitHub 14-day unique cloners  |                                                         551 |
 | Languages                     |                                         Chinese and English |
 | AI-native surfaces            | `llms.txt`, AI manifest, content index, local read-only MCP |
 
@@ -41,7 +42,7 @@ Notes:
 
 - Clone counts may include automated traffic and should not be treated as unique learners.
 - Public site analytics should be added to this kit once Cloudflare/GA data is reviewed.
-- Sponsor conversations should start after README positioning and SEO fixes are merged.
+- Sponsor conversations should use the 2026-05-18 interactive learning release as the current proof point.
 - Named sponsor leads and outreach status are tracked in `docs/strategy/2026-05-15-sponsor-leads-tracker.md`.
 
 ## Sponsorship Tiers
