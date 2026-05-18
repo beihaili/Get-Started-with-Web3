@@ -174,6 +174,7 @@ Start here:
 - [Contributing guide](CONTRIBUTING.en.md)
 - [Contributor ladder](docs/community/contributor-ladder.md)
 - [Contributor spotlight template](docs/community/contributor-spotlight-template.md)
+- [Contributor spotlights](docs/community/spotlights/README.md)
 - [Good first issues catalog](docs/community/good-first-issues.md)
 - [Open good first issues](https://github.com/beihaili/Get-Started-with-Web3/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
 - [All issues](https://github.com/beihaili/Get-Started-with-Web3/issues)
