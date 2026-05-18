@@ -50,6 +50,8 @@ Every monthly growth report should include:
 - Best community posts, submissions, or partner leads.
 - Star count, fork count, contributor count, and sponsor pipeline movement.
 
+Use `docs/community/contributor-spotlight-template.md` when turning this recognition loop into a public monthly update.
+
 ## Maintainer Checklist
 
 - Label starter work with `good first issue` only when the issue has clear acceptance criteria.

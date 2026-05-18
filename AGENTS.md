@@ -21,6 +21,7 @@
 - `docs/strategy/2026-05-18-paid-ai-tools-landing-copy.md`: 未来 hosted AI 工具 landing copy 草案，覆盖 `generate_personalized_web3_plan` 和 `audit_learning_answer` 的定位、CTA、边界文案、FAQ 和 launch checklist；不得描述为已上线付费能力。
 - `docs/strategy/2026-05-14-awesome-list-submissions.md`: awesome-list 和社区分发追踪，包含定位文案、目标列表、PR 模板和中文社区帖草案。
 - `docs/community/contributor-ladder.md`: 贡献者成长路径，定义 first-time contributor、repeat contributor、reviewer、module steward 和 community/sponsor ally。
+- `docs/community/contributor-spotlight-template.md`: 月度贡献者 spotlight 模板，用于把公开 PR、issue、社区分发和增长指标转化为 GitHub/社交更新；不能承诺代币奖励、付费曝光或金融背书。
 - `docs/community/good-first-issues.md`: 可复制到 GitHub Issues 的 starter issue 清单，包含标签、背景、验收标准和验证方式。
 - `docs/operations/`: 每日运营汇报目录；`README.md` 定义 cadence、数据源和风险边界，`templates/daily-report-template.md` 是每日汇报模板，按 `YYYY-MM-DD-daily-report.md` 记录实际进展、指标、部署、外部分发、赞助线索和下一步。
 

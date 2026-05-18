@@ -1,7 +1,13 @@
 {
   "pageTitle": "Contributors",
-  "pageDesc": "认识共同建设这个平台的人们",
+  "pageDesc": "认识一起建设这个开源 Web3 学习平台的人们",
   "heading": "项目贡献者",
+  "spotlightEyebrow": "月度贡献者 Spotlight",
+  "spotlightHeading": "你的第一个有效 PR 可以成为公开项目进展",
+  "spotlightDesc": "当贡献让课程更清晰、更安全、更完整或更容易传播时，合并后的贡献有机会进入月度 spotlight、roadmap 更新和社区帖子。",
+  "spotlightPrimaryCta": "选择入门任务",
+  "spotlightSecondaryCta": "查看成长路径",
+  "spotlightShareNote": "贡献者认可只基于公开工作和学习者价值；项目不会承诺代币奖励、付费曝光或金融背书。",
   "contributions": "次贡献",
   "loading": "加载贡献者中...",
   "error": "贡献者列表加载失败"
