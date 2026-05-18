@@ -50,7 +50,7 @@ If this repo helps you learn or teach Web3, please [star the project](https://gi
 | Course modules  | 11 modules                                                                    |
 | Lessons         | 58 lessons in the React course map                                            |
 | AI-native index | 106 indexed bilingual lesson entries                                          |
-| Glossary        | 45 Web3 terms                                                                 |
+| Glossary        | 55 Web3 terms                                                                 |
 | Languages       | Chinese first, English in progress                                            |
 | App features    | AI Tutor, search, quizzes, badges, XP, dark/light mode, PWA/offline support   |
 | Agent surfaces  | `llms.txt`, AI manifest, content index, local read-only MCP server            |
@@ -119,6 +119,20 @@ Example agent workflow:
 
 ```bash
 npm run mcp:web3
+```
+
+For MCP clients that accept an `mcpServers` JSON block, copy this config and replace `cwd` with your local repository path:
+
+```json
+{
+  "mcpServers": {
+    "get-started-with-web3": {
+      "command": "npm",
+      "args": ["run", "mcp:web3"],
+      "cwd": "/absolute/path/to/Get-Started-with-Web3"
+    }
+  }
+}
 ```
 
 Then connect an MCP client and use:

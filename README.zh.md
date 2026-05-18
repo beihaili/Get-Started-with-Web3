@@ -50,7 +50,7 @@ Web3 的学习资料长期分散在钱包教程、协议文档、安全提醒、
 | 课程模块       | 11 个                                                  |
 | React 课程地图 | 58 讲                                                  |
 | AI-native 索引 | 106 条双语课程索引记录                                 |
-| 术语表         | 45 个 Web3 术语                                        |
+| 术语表         | 55 个 Web3 术语                                        |
 | 语言           | 中文优先，英文持续补齐                                 |
 | App 功能       | AI Tutor、搜索、测验、徽章、XP、深浅色模式、PWA/离线   |
 | Agent 入口     | `llms.txt`、AI manifest、内容索引、本地只读 MCP server |
@@ -119,6 +119,20 @@ Agent 使用方式：
 
 ```bash
 npm run mcp:web3
+```
+
+如果你的 MCP client 支持 `mcpServers` JSON 配置，可以复制下面的配置，并把 `cwd` 替换成本仓库的本地绝对路径：
+
+```json
+{
+  "mcpServers": {
+    "get-started-with-web3": {
+      "command": "npm",
+      "args": ["run", "mcp:web3"],
+      "cwd": "/absolute/path/to/Get-Started-with-Web3"
+    }
+  }
+}
 ```
 
 然后在 MCP client 中调用：

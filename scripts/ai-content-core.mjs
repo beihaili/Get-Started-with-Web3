@@ -2,7 +2,12 @@ import { readdirSync } from 'node:fs';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { GLOSSARY_DATA } from '../src/config/glossaryData.js';
-import { COURSE_DATA, GITHUB_BRANCH, GITHUB_REPO, GITHUB_USERNAME } from '../src/config/courseData.js';
+import {
+  COURSE_DATA,
+  GITHUB_BRANCH,
+  GITHUB_REPO,
+  GITHUB_USERNAME,
+} from '../src/config/courseData.js';
 
 export const AI_SCHEMA_VERSION = '2026-05-09';
 export const LANGUAGES = ['zh', 'en'];
@@ -12,6 +17,16 @@ export const PUBLIC_AI_ENTRYPOINTS = {
   llmsTxt: `${SITE_BASE_URL}/llms.txt`,
   manifest: `${SITE_BASE_URL}/ai/manifest.json`,
   contentIndex: `${SITE_BASE_URL}/ai/content-index.json`,
+};
+
+export const LOCAL_MCP_CLIENT_CONFIG = {
+  mcpServers: {
+    'get-started-with-web3': {
+      command: 'npm',
+      args: ['run', 'mcp:web3'],
+      cwd: '/absolute/path/to/Get-Started-with-Web3',
+    },
+  },
 };
 
 const DEFAULT_PROJECT_ROOT = path.resolve(process.cwd());
@@ -33,7 +48,8 @@ const TOOL_CATALOG = [
   {
     name: 'get_learning_path',
     title: 'Get Learning Path',
-    description: 'Return role-based learning paths for beginners, builders, researchers, and investors.',
+    description:
+      'Return role-based learning paths for beginners, builders, researchers, and investors.',
     x402: { enabled: false },
   },
   {
@@ -155,7 +171,10 @@ export async function buildAiIndex(options = {}) {
         labUrl: lesson.labUrl || null,
         availability,
         siteUrls: Object.fromEntries(
-          LANGUAGES.map((lang) => [lang, `${SITE_BASE_URL}/${lang}/learn/${module.id}/${lesson.id}`])
+          LANGUAGES.map((lang) => [
+            lang,
+            `${SITE_BASE_URL}/${lang}/learn/${module.id}/${lesson.id}`,
+          ])
         ),
       });
     }
@@ -256,7 +275,9 @@ export async function readLesson(index, options = {}) {
   const lesson = findIndexedLesson(index, { ...options, lang });
 
   if (!lesson) {
-    throw new Error(`Lesson not found for lang=${lang}, moduleId=${options.moduleId || ''}, lessonId=${options.lessonId || ''}, path=${options.path || ''}`);
+    throw new Error(
+      `Lesson not found for lang=${lang}, moduleId=${options.moduleId || ''}, lessonId=${options.lessonId || ''}, path=${options.path || ''}`
+    );
   }
 
   const absolutePath = path.join(index.projectRoot || DEFAULT_PROJECT_ROOT, lesson.sourcePath);
@@ -322,7 +343,8 @@ export async function composeContext(index, options = {}) {
   let usedChars = 0;
 
   for (const result of search.results) {
-    const title = result.type === 'lesson' ? `${result.moduleTitle} / ${result.title}` : result.term;
+    const title =
+      result.type === 'lesson' ? `${result.moduleTitle} / ${result.title}` : result.term;
     const body = result.type === 'lesson' ? result.excerpt : result.definition;
     const citation = result.citation;
     const block = `## ${title}\n${body}\nCitation: ${citation.file}`;
@@ -367,6 +389,9 @@ export function createManifest(index) {
       command: 'npm run mcp:web3',
       transport: 'stdio',
       readOnly: true,
+      clientConfig: LOCAL_MCP_CLIENT_CONFIG,
+      clientConfigNote:
+        'Replace cwd with your local repository path before pasting this into an MCP client that supports mcpServers JSON.',
     },
     tools: index.tools,
   };
@@ -391,10 +416,16 @@ export function createLlmsTxt(index) {
     '- Command: npm run mcp:web3',
     '- Transport: stdio',
     '- Mode: read-only',
+    '- Client config: replace cwd before use.',
+    '```json',
+    JSON.stringify(LOCAL_MCP_CLIENT_CONFIG, null, 2),
+    '```',
     '',
     '## Tools',
     ...index.tools.map((tool) => {
-      const price = tool.x402.enabled ? `future x402 $${tool.x402.priceUsd} on ${tool.x402.network}` : 'free';
+      const price = tool.x402.enabled
+        ? `future x402 $${tool.x402.priceUsd} on ${tool.x402.network}`
+        : 'free';
       return `- ${tool.name}: ${tool.description} (${price})`;
     }),
     '',
