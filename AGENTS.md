@@ -17,6 +17,7 @@
 - `docs/strategy/2026-05-14-sponsor-kit.md`: 赞助包草案，包含受众、价格、曝光权益、接受政策和月度汇报指标。
 - `docs/strategy/2026-05-14-sponsor-outreach-drafts.md`: 赞助外联话术草案；常规外联可自主执行，高风险赞助对象仍需单独确认。
 - `docs/strategy/2026-05-15-sponsor-leads-tracker.md`: 具名赞助/资助线索 tracker，记录公开来源、fit score、建议外联角度、渠道、状态和风险边界；发送外联后必须同步每日运营汇报。
+- `docs/strategy/2026-05-18-safe-reown-impact-memo.md`: 面向 Safe Ecosystem Foundation 和 Reown / WalletConnect 的资助/赞助 impact memo 草案，包含当前指标、官方来源、建议 ask、外联话术和发送前检查清单；尚未发送外联。
 - `docs/strategy/2026-05-14-awesome-list-submissions.md`: awesome-list 和社区分发追踪，包含定位文案、目标列表、PR 模板和中文社区帖草案。
 - `docs/community/contributor-ladder.md`: 贡献者成长路径，定义 first-time contributor、repeat contributor、reviewer、module steward 和 community/sponsor ally。
 - `docs/community/good-first-issues.md`: 可复制到 GitHub Issues 的 starter issue 清单，包含标签、背景、验收标准和验证方式。
