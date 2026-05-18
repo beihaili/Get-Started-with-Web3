@@ -49,11 +49,27 @@ body:
       required: true
 
   - type: textarea
+    id: expected_files
+    attributes:
+      label: Expected files or tracking location / 预计涉及文件或追踪位置
+      description: Where should this be recorded if accepted?
+      placeholder: 'docs/strategy/..., docs/operations/YYYY-MM-DD-daily-report.md, GitHub issue link...'
+
+  - type: textarea
     id: expected_result
     attributes:
       label: Expected result / 预期结果
       description: What would count as success?
       placeholder: 'A merged awesome-list PR, 10 qualified visitors, one contributor lead...'
+    validations:
+      required: true
+
+  - type: textarea
+    id: definition_of_done
+    attributes:
+      label: Definition of done / 完成标准
+      description: What exact proof should close this issue?
+      placeholder: 'The external submission URL is recorded and the daily report links the result.'
     validations:
       required: true
 
@@ -66,3 +82,4 @@ body:
           required: true
         - label: This does not make investment advice, trading claims, or token promotion.
           required: true
+        - label: This could be a `good first issue` if the task is only research, copy, or tracking.

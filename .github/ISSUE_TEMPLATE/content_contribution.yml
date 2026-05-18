@@ -62,6 +62,25 @@ body:
       required: true
 
   - type: textarea
+    id: expected_files
+    attributes:
+      label: Expected files / 预计涉及文件
+      description: List the lesson, quiz, glossary, AI artifact, or docs files you expect to edit.
+      placeholder: |
+        en/DeFiDeepDive/...
+        src/features/quiz/quizData.js
+        src/config/glossaryData.js
+
+  - type: textarea
+    id: definition_of_done
+    attributes:
+      label: Definition of done / 完成标准
+      description: What exact result should a maintainer verify before closing this issue?
+      placeholder: 'The selected lesson has 3-5 source links and all links open.'
+    validations:
+      required: true
+
+  - type: textarea
     id: sources
     attributes:
       label: Sources / 参考来源
@@ -75,4 +94,5 @@ body:
         - label: Markdown preview or local app review is enough.
         - label: This may need `npm run ai:index && npm run ai:publish && npm run ai:verify`.
         - label: This may need `npm test`.
+        - label: This could be a `good first issue` if scope stays small.
         - label: I can help implement this change.
