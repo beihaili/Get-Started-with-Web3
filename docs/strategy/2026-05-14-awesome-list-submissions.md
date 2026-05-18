@@ -45,8 +45,9 @@ Do not submit to spammy lists, paid-only lists, or repositories with no recent m
 | awesome-mcp                  | MCP               | Read-only Web3 curriculum MCP             | Submitted   | Track TensorBlock/awesome-mcp-servers#544   |
 | awesome-llms-txt             | AI agent content  | Public `llms.txt` entrypoint              | Not started | Check if education repos are accepted       |
 | awesome-ai-agents            | AI agents         | Agent-readable curriculum                 | Not started | Check if MCP resources are accepted         |
-| learnblockchain.cn/community | Chinese community | Existing referrer and strong audience fit | Drafted     | Publish from public post draft queue        |
-| Twitter/X thread             | Personal brand    | Fastest direct distribution               | Drafted     | Publish from public post draft queue        |
+| GitHub Release               | Product update    | Low-risk public update for watchers       | Published   | Track release engagement                    |
+| learnblockchain.cn/community | Chinese community | Existing referrer and strong audience fit | Ready       | Publish interactive-learning update draft   |
+| Twitter/X thread             | Personal brand    | Fastest direct distribution               | Ready       | Publish interactive-learning update thread  |
 
 ## Pull Request Template For Awesome Lists
 
@@ -86,7 +87,8 @@ GitHub: https://github.com/beihaili/Get-Started-with-Web3
 
 ## Submission Log
 
-| Date       | Target                          | Link                                                        | Status    | Notes                                                                                                           |
-| ---------- | ------------------------------- | ----------------------------------------------------------- | --------- | --------------------------------------------------------------------------------------------------------------- |
-| 2026-05-14 | useWeb3/awesome-web3            | https://github.com/useWeb3/awesome-web3/pull/6              | Closed    | Added Get Started with Web3 to Courses. Closed by maintainer without comment. Repo stars at submission: 614.    |
-| 2026-05-14 | TensorBlock/awesome-mcp-servers | https://github.com/TensorBlock/awesome-mcp-servers/pull/544 | Submitted | Added the read-only Web3 curriculum MCP server to Knowledge Management & Memory. Repo stars at submission: 614. |
+| Date       | Target                          | Link                                                                                           | Status    | Notes                                                                                                           |
+| ---------- | ------------------------------- | ---------------------------------------------------------------------------------------------- | --------- | --------------------------------------------------------------------------------------------------------------- |
+| 2026-05-14 | useWeb3/awesome-web3            | https://github.com/useWeb3/awesome-web3/pull/6                                                 | Closed    | Added Get Started with Web3 to Courses. Closed by maintainer without comment. Repo stars at submission: 614.    |
+| 2026-05-14 | TensorBlock/awesome-mcp-servers | https://github.com/TensorBlock/awesome-mcp-servers/pull/544                                    | Submitted | Added the read-only Web3 curriculum MCP server to Knowledge Management & Memory. Repo stars at submission: 614. |
+| 2026-05-18 | GitHub Release                  | https://github.com/beihaili/Get-Started-with-Web3/releases/tag/interactive-learning-2026-05-18 | Published | Released Merkle Tree Builder and EIP-1559 Gas Fee Calculator product update. Repo stars at publication: 614.    |
