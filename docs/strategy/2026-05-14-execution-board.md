@@ -95,8 +95,8 @@ Update weekly.
 - [x] Improve issue templates with "expected files", "definition of done", and "good first issue candidate".
 - [x] Keep 10-20 good first issues active; 10 open as of 2026-05-18.
 - [x] Add contributor ladder to CONTRIBUTING docs.
-- [ ] Draft monthly contributor spotlight template.
-- [ ] Ensure contributor page has a reason to share.
+- [x] Draft monthly contributor spotlight template.
+- [x] Ensure contributor page has a reason to share.
 
 ### 7. Technical Stewardship
 

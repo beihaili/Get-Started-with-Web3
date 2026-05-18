@@ -2,7 +2,7 @@
 
 **Date:** 2026-05-18
 **Owner:** beihai + Codex
-**Reporting window:** 2026-05-18 10:47 CST snapshot; GitHub timestamps are UTC unless noted.
+**Reporting window:** 2026-05-18 11:20 CST snapshot; GitHub timestamps are UTC unless noted.
 
 ## KPI Snapshot
 
@@ -28,18 +28,21 @@
 - Community infrastructure: updated issue templates to request expected files, definition of done, and good-first-issue suitability.
 - AI-native productization: added a copy-paste MCP client configuration snippet to both READMEs and generated AI artifacts, and corrected README glossary count to 55.
 - AI-native monetization: drafted landing-page copy for future hosted `generate_personalized_web3_plan` and `audit_learning_answer` tools, with explicit language that the local MCP remains free and read-only.
+- Community recognition: added a monthly contributor spotlight template and upgraded the contributors page with a starter-issue CTA, contributor ladder link, and conservative recognition boundary.
 - Operations hygiene: started the 2026-05-18 daily report with current metrics, release evidence, and next operating block.
 
 ## Deploy And Verification
 
 | Surface                  | Status  | Evidence                                                                                                                                                                                                        | Notes                                                               |
 | ------------------------ | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| Latest production deploy | Success | [Run 26010527068](https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26010527068)                                                                                                                   | `docs: add mcp client setup snippet` completed on main              |
+| Latest production deploy | Success | [Run 26011146731](https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26011146731)                                                                                                                   | `docs: draft paid AI tools landing copy` completed on main          |
 | Release publication      | Success | [interactive-learning-2026-05-18](https://github.com/beihaili/Get-Started-with-Web3/releases/tag/interactive-learning-2026-05-18)                                                                               | Public GitHub product update published at 614 stars                 |
 | Production smoke         | Success | `/en/learn/module-11/11-2` and `/zh/.../11-2`                                                                                                                                                                   | Gas calculator rendered after latest Pages deploy; bad responses: 0 |
 | Sponsor memo             | Drafted | `docs/strategy/2026-05-18-safe-reown-impact-memo.md`                                                                                                                                                            | No outreach sent yet                                                |
 | Content verification     | Success | `npm test`, `npm run lint`, `npm run ai:verify`, `npm run build`                                                                                                                                                | Bitcoin Script examples and regenerated AI artifacts validated      |
 | Community backlog        | Success | [#156](https://github.com/beihaili/Get-Started-with-Web3/issues/156), [#157](https://github.com/beihaili/Get-Started-with-Web3/issues/157)-[#162](https://github.com/beihaili/Get-Started-with-Web3/issues/162) | Public roadmap pinned; 10 open good-first issues active             |
+| Contributor spotlight    | Drafted | `docs/community/contributor-spotlight-template.md`, `/contributors`                                                                                                                                             | Monthly recognition loop prepared; no rewards promised              |
+| Contributor page smoke   | Success | `npm test`, `npm run lint`, `npm run build`, Playwright desktop/mobile smoke                                                                                                                                    | CTA links and recognition boundary visible on `/en/contributors`    |
 | AI-native setup          | Success | `README.md`, `README.zh.md`, `ai/llms.txt`, `ai/manifest.json`                                                                                                                                                  | MCP client config snippet added; local AI verification passed       |
 | Paid AI tool copy        | Drafted | `docs/strategy/2026-05-18-paid-ai-tools-landing-copy.md`                                                                                                                                                        | Landing copy drafted; no payment enabled                            |
 | Formatting               | Success | `npx prettier --check`                                                                                                                                                                                          | Public post, tracker, and daily report Markdown use Prettier style  |
@@ -69,14 +72,14 @@
 - GitHub Discussions are disabled, so GitHub-native community updates currently need to use Releases, Issues, PR comments, or README/docs.
 - Translation coverage still reports 17 missing-English warnings; the visible contributor backlog remains useful but incomplete.
 - Sponsor outreach has not been sent; Safe/Reown memo is now ready, but actual sending still needs a human channel or connector.
-- Starter issue queue is healthy at 10 open good-first issues, but it now needs review responsiveness if external contributors arrive.
+- Starter issue queue is healthy at 10 open good-first issues; contributor recognition now has a template, but it needs real PR activity before the first spotlight can be published.
 - Paid AI tool copy is only a draft; enabling hosted payment, x402 enforcement, or any wallet/payment flow still requires explicit confirmation.
 
 ## Next Operating Block
 
 1. Publish the Draft 3 X/Farcaster thread and Chinese community post, then record links and visible metrics.
 2. Send the Safe or Reown memo through the chosen channel, then record the sent link/date and any reply.
-3. Draft the monthly contributor spotlight template and keep the pinned roadmap updated as issues close.
+3. Keep the pinned roadmap updated as issues close, and use the contributor spotlight template after the next public contribution cycle.
 4. Decide whether Phase 1 paid-tool validation should use waitlist/manual access, GitHub Sponsors, Stripe, or an x402 hosted experiment.
 
 ## Evidence Links
@@ -88,5 +91,6 @@
 - Merkle feature PR: https://github.com/beihaili/Get-Started-with-Web3/pull/148
 - Gas fee calculator PR: https://github.com/beihaili/Get-Started-with-Web3/pull/151
 - Public roadmap issue: https://github.com/beihaili/Get-Started-with-Web3/issues/156
+- Contributor spotlight template: `docs/community/contributor-spotlight-template.md`
 - Paid AI tools landing copy: `docs/strategy/2026-05-18-paid-ai-tools-landing-copy.md`
-- Latest main deploy: https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26010527068
+- Latest main deploy: https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26011146731
