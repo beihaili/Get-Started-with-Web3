@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2026-05-09",
-  "generatedAt": "2026-05-17T09:23:01.771Z",
+  "generatedAt": "2026-05-18T01:31:48.414Z",
   "repository": {
     "name": "Get-Started-with-Web3",
     "owner": "beihaili",
@@ -8,10 +8,7 @@
     "homepage": "https://beihaili.github.io/Get-Started-with-Web3/",
     "sourceUrl": "https://github.com/beihaili/Get-Started-with-Web3"
   },
-  "languages": [
-    "zh",
-    "en"
-  ],
+  "languages": ["zh", "en"],
   "counts": {
     "modules": 11,
     "lessons": 106,
