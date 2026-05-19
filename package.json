@@ -61,7 +61,7 @@
     "rehype-raw": "^7.0.0",
     "remark-gfm": "^4.0.1",
     "zod": "^4.4.3",
-    "zustand": "^4.5.0"
+    "zustand": "^5.0.13"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.6.0",
