@@ -6,16 +6,16 @@
 
 ## Current Snapshot
 
-| Area             | Status                 | Next Action                                                                      |
-| ---------------- | ---------------------- | -------------------------------------------------------------------------------- |
-| Technical health | Healthy, with PR queue | Keep `npm test`, `npm run lint`, `npm run ai:verify` green and triage 3 open PRs |
-| GitHub growth    | Under-monetized        | Improve README conversion and launch distribution campaigns                      |
-| SEO              | Partially implemented  | Fix language metadata and route coverage                                         |
-| English content  | Incomplete             | Close 15 missing translations or classify non-course docs                        |
-| AI-native layer  | Strong MVP             | Productize story and prepare paid-tool landing                                   |
-| Monetization     | Passive only           | Create sponsor kit and sponsor outreach drafts                                   |
-| Community        | Converting             | Keep accepted contributor PRs moving into recognition and backlog refresh        |
-| Personal brand   | Underused              | Convert every shipment into public posts and distribution assets                 |
+| Area             | Status                | Next Action                                                                                      |
+| ---------------- | --------------------- | ------------------------------------------------------------------------------------------------ |
+| Technical health | Healthy               | Keep `npm test`, `npm run lint`, `npm run ai:verify` green and plan Node 22 migration separately |
+| GitHub growth    | Under-monetized       | Improve README conversion and launch distribution campaigns                                      |
+| SEO              | Partially implemented | Fix language metadata and route coverage                                                         |
+| English content  | Incomplete            | Close 15 missing translations or classify non-course docs                                        |
+| AI-native layer  | Strong MVP            | Productize story and prepare paid-tool landing                                                   |
+| Monetization     | Passive only          | Create sponsor kit and sponsor outreach drafts                                                   |
+| Community        | Converting            | Keep accepted contributor PRs moving into recognition and backlog refresh                        |
+| Personal brand   | Underused             | Convert every shipment into public posts and distribution assets                                 |
 
 ## KPI Board
 
@@ -110,7 +110,8 @@ Update weekly.
 - [x] Correct Tailwind CSS v4 entrypoint so production builds emit full theme utilities and class-based dark mode styles.
 - [x] Add `sync-content` fallback coverage so English lessons do not ship broken local image references when the corresponding Chinese assets exist.
 - [x] Prepare PR build artifact comments for [#40](https://github.com/beihaili/Get-Started-with-Web3/issues/40) so contributors can download reviewed builds from the Actions run.
-- [ ] Keep Dependabot and contributor PRs under control; 3 open Dependabot PRs need triage as of 2026-05-19.
+- [x] Clear the 2026-05-19 Dependabot queue; merge Node-20-compatible updates and close Node-22-only majors with notes.
+- [ ] Plan Node 22 migration before accepting `@commitlint/cli` v21 or `lint-staged` v17.
 - [ ] Run `npm test`, `npm run lint`, and `npm run ai:verify` before claiming work is complete.
 - [x] Expose translation coverage checks through `npm run translation:check`.
 - [ ] Run `npm run build` before shipping SEO/prerender changes.
@@ -176,3 +177,4 @@ Daily report should include:
 | 2026-05-18 | Published first Layer 2 English translation and backfilled translation backlog                  | Merged [#174](https://github.com/beihaili/Get-Started-with-Web3/pull/174) for `en/L2CrossChain/01_WhyScaling/README.md`, reduced missing English translation warnings from 17 to 16, and opened follow-up starter issue [#175](https://github.com/beihaili/Get-Started-with-Web3/issues/175) for the remaining module 9 lessons                                                                                                                                                                                                      |
 | 2026-05-19 | Published second Layer 2 English translation                                                    | Merged [#184](https://github.com/beihaili/Get-Started-with-Web3/pull/184) for `en/L2CrossChain/02_RollupPrinciples/README.md`, regenerated AI artifacts to 108 lesson entries, reduced local translation coverage warnings from 16 to 15, confirmed main deploy [run 26069716949](https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26069716949), and updated [#175](https://github.com/beihaili/Get-Started-with-Web3/issues/175#issuecomment-4483580706)                                                              |
 | 2026-05-19 | Replenished starter backlog and synced glossary artifacts                                       | [#177](https://github.com/beihaili/Get-Started-with-Web3/pull/177) and [#178](https://github.com/beihaili/Get-Started-with-Web3/pull/178) landed, closing [#162](https://github.com/beihaili/Get-Started-with-Web3/issues/162) and [#158](https://github.com/beihaili/Get-Started-with-Web3/issues/158); opened growth starter issues [#186](https://github.com/beihaili/Get-Started-with-Web3/issues/186) and [#187](https://github.com/beihaili/Get-Started-with-Web3/issues/187); regenerated AI artifacts to 57 glossary entries |
+| 2026-05-19 | Cleared Dependabot queue                                                                        | Merged Node-20-compatible [#182](https://github.com/beihaili/Get-Started-with-Web3/pull/182) after local `npm run lint` and `npm test`; closed Node-22-only [#181](https://github.com/beihaili/Get-Started-with-Web3/pull/181) and [#183](https://github.com/beihaili/Get-Started-with-Web3/pull/183); added Dependabot ignore rules for those major lines until a planned Node 22 migration                                                                                                                                         |

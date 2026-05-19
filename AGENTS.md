@@ -33,6 +33,7 @@
 - `.github/ISSUE_TEMPLATE/`: Bug、feature、content/translation、growth/community 分流模板。
 - `.github/PULL_REQUEST_TEMPLATE.md`: PR 验证和内容安全检查清单。
 - `.github/workflows/deploy.yml`: PR 构建会上传 `dist` artifact，并用固定 marker 更新同一条 PR 评论，方便评审者从 Actions run 下载构建产物；合并到 `main` 后才部署 GitHub Pages。
+- `.github/dependabot.yml`: 每周检查 npm 依赖和每月检查 GitHub Actions；minor/patch 更新分组，major 更新单独处理；`@commitlint/cli` v21 和 `lint-staged` v17 当前被忽略，因为它们要求 Node 22，而项目 CI 仍使用 Node 20，需等计划内 Node 22 迁移后再解除。
 - GitHub Issue [#156](https://github.com/beihaili/Get-Started-with-Web3/issues/156): 已 pin 的公开 1000-star roadmap；维护 starter issue 队列、翻译、分发、AI-native 和赞助动作时同步参考。
 
 工作边界：
@@ -148,4 +149,5 @@ Agent 使用 MCP 工具回答时，应优先引用工具返回的 `citation.file
 - 英文课程 README 可以复用对应中文课程目录下的本地图片；`npm run sync-content` 会按 README 中的本地图片引用补齐缺失英文发布资产。若英文课程需要不同图片，直接放到 `en/` 对应目录，脚本不会覆盖已有英文图片。
 - 新增术语时，更新 `src/config/glossaryData.js` 和对应测试，保持 `GLOSSARY_CATEGORIES` 与测试允许分类一致，再运行 `npm run ai:index`。
 - MCP 工具必须保持只读，返回结果需包含可引用的 `citation.file` 或 URL。
+- 接受 Dependabot major 更新前，先检查包的 `engines.node` 与 `.github/workflows/*.yml` 中的 Node 版本；Node 22-only 工具链更新必须作为独立迁移处理。
 - 修改代码后至少运行相关 Vitest；完成前运行 `npm test` 和 `npm run lint`。
