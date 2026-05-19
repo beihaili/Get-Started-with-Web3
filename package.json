@@ -88,7 +88,7 @@
     "satori": "^0.26.0",
     "tailwindcss": "^4.3.0",
     "terser": "^5.47.1",
-    "vite": "^8.0.12",
+    "vite": "^8.0.13",
     "vitest": "^4.1.6"
   },
   "lint-staged": {
