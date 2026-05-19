@@ -2,7 +2,7 @@
 
 **Date:** 2026-05-19
 **Owner:** beihai + Codex
-**Reporting window:** 2026-05-19 10:03 CST snapshot; GitHub timestamps are UTC unless noted.
+**Reporting window:** 2026-05-19 10:25 CST snapshot; GitHub timestamps are UTC unless noted.
 
 ## KPI Snapshot
 
@@ -24,23 +24,24 @@
 - Community backlog: updated [#175](https://github.com/beihaili/Get-Started-with-Web3/issues/175#issuecomment-4483580706) so contributors can see that lesson 9-2 is complete and only lessons 9-3 to 9-5 remain in that issue.
 - Contributor loop: [#177](https://github.com/beihaili/Get-Started-with-Web3/pull/177) and [#178](https://github.com/beihaili/Get-Started-with-Web3/pull/178) merged, closing [#162](https://github.com/beihaili/Get-Started-with-Web3/issues/162) and [#158](https://github.com/beihaili/Get-Started-with-Web3/issues/158).
 - Community backlog: opened replacement growth starter issues [#186](https://github.com/beihaili/Get-Started-with-Web3/issues/186) and [#187](https://github.com/beihaili/Get-Started-with-Web3/issues/187), keeping the open good-first issue queue at 11.
-- GitHub triage: Dependabot PRs [#179](https://github.com/beihaili/Get-Started-with-Web3/pull/179), [#180](https://github.com/beihaili/Get-Started-with-Web3/pull/180), and [#182](https://github.com/beihaili/Get-Started-with-Web3/pull/182) landed; [#181](https://github.com/beihaili/Get-Started-with-Web3/pull/181) and [#183](https://github.com/beihaili/Get-Started-with-Web3/pull/183) were closed with Node 22 migration notes, leaving the open PR queue at 0.
-- Dependency hygiene: `.github/dependabot.yml` now ignores Node 22-only major updates for `@commitlint/cli` and `lint-staged` until the project intentionally migrates CI and local contributor docs from Node 20.
+- GitHub triage: Dependabot PRs [#179](https://github.com/beihaili/Get-Started-with-Web3/pull/179), [#180](https://github.com/beihaili/Get-Started-with-Web3/pull/180), [#182](https://github.com/beihaili/Get-Started-with-Web3/pull/182), and [#191](https://github.com/beihaili/Get-Started-with-Web3/pull/191) landed; Node 22-only PRs [#181](https://github.com/beihaili/Get-Started-with-Web3/pull/181), [#183](https://github.com/beihaili/Get-Started-with-Web3/pull/183), and [#192](https://github.com/beihaili/Get-Started-with-Web3/pull/192) were closed with migration notes.
+- Dependency hygiene: `.github/dependabot.yml` now ignores Node 22-only major updates for `@commitlint/cli`, `@commitlint/config-conventional`, and `lint-staged` until the project intentionally migrates CI and local contributor docs from Node 20.
+- CI tooling: `actions/upload-artifact` is moving to v7 together with the workflow regression test that verifies PR build artifact comments, superseding Dependabot PR [#190](https://github.com/beihaili/Get-Started-with-Web3/pull/190).
 
 ## Deploy And Verification
 
-| Surface                  | Status  | Evidence                                                                                      | Notes                                                                                                                            |
-| ------------------------ | ------- | --------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| Latest production deploy | Success | [Run 26071427382](https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26071427382) | Main deploy for [#182](https://github.com/beihaili/Get-Started-with-Web3/pull/182) completed successfully; latest head `7000aa4` |
-| Public lesson route      | Success | `curl -L .../en/learn/module-9/9-2`                                                           | HTTP 200 and prerendered HTML contains `Rollup Principles Explained`                                                             |
-| Translation coverage     | Success | `npm run translation:check`                                                                   | 15 missing-English warnings remain after adding lesson 9-2                                                                       |
-| AI index                 | Success | `npm run ai:index`, `npm run ai:publish`                                                      | 11 modules, 108 lesson entries, 57 glossary entries                                                                              |
-| AI entrypoints           | Success | `npm run ai:verify`                                                                           | Source/public artifacts, MCP tools, `llms.txt`, and x402 metadata pass                                                           |
-| Test suite               | Success | `npm test`                                                                                    | 40 test files and 217 tests passed                                                                                               |
-| Lint                     | Success | `npm run lint`                                                                                | ESLint completed with zero reported errors                                                                                       |
-| Production build         | Success | `npm run build`                                                                               | Vite build plus 131/131 prerendered routes passed, including `/en/learn/module-9/9-2`                                            |
-| Formatting               | Success | `npx prettier --check ...`                                                                    | Changed Markdown files use Prettier style                                                                                        |
-| Whitespace               | Success | `git diff --check`                                                                            | No whitespace errors                                                                                                             |
+| Surface                  | Status  | Evidence                                                                                      | Notes                                                                                                                                     |
+| ------------------------ | ------- | --------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| Latest production deploy | Success | [Run 26071964424](https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26071964424) | Main deploy for [#189](https://github.com/beihaili/Get-Started-with-Web3/pull/189) completed successfully; latest recorded head `5fadf34` |
+| Public lesson route      | Success | `curl -L .../en/learn/module-9/9-2`                                                           | HTTP 200 and prerendered HTML contains `Rollup Principles Explained`                                                                      |
+| Translation coverage     | Success | `npm run translation:check`                                                                   | 15 missing-English warnings remain after adding lesson 9-2                                                                                |
+| AI index                 | Success | `npm run ai:index`, `npm run ai:publish`                                                      | 11 modules, 108 lesson entries, 57 glossary entries                                                                                       |
+| AI entrypoints           | Success | `npm run ai:verify`                                                                           | Source/public artifacts, MCP tools, `llms.txt`, and x402 metadata pass                                                                    |
+| Test suite               | Success | `npm test`                                                                                    | 40 test files and 217 tests passed                                                                                                        |
+| Lint                     | Success | `npm run lint`                                                                                | ESLint completed with zero reported errors                                                                                                |
+| Production build         | Success | `npm run build`                                                                               | Vite build plus 131/131 prerendered routes passed, including `/en/learn/module-9/9-2`                                                     |
+| Formatting               | Success | `npx prettier --check ...`                                                                    | Changed Markdown files use Prettier style                                                                                                 |
+| Whitespace               | Success | `git diff --check`                                                                            | No whitespace errors                                                                                                                      |
 
 ## External Distribution
 
@@ -64,7 +65,7 @@
 ## Blockers And Risks
 
 - Growth remains flat at 614 stars; the next growth move needs actual public distribution, not only internal content shipping.
-- Dependabot queue is clear, but Node 22 migration remains a technical stewardship item before accepting `@commitlint/cli` v21 or `lint-staged` v17.
+- Dependabot queue is controlled, but Node 22 migration remains a technical stewardship item before accepting `@commitlint/cli` v21, `@commitlint/config-conventional` v21, or `lint-staged` v17.
 - Layer 2 English coverage improves, but three lessons still remain after this branch; broader DAO and non-core docs still need translation or classification.
 - Sponsor outreach remains drafted but unsent; actual external sending still needs a confirmed human channel or connector.
 - Hosted payment, x402 enforcement, affiliate expansion, wallet flows, and payment-address changes still require explicit user confirmation.
@@ -72,14 +73,14 @@
 ## Next Operating Block
 
 1. Continue the remaining Layer 2 English translations with `L2CrossChain/03_L2Ecosystem`, or leave it open for contributors if #175 gets picked up.
-2. Plan the Node 22 migration separately before accepting `@commitlint/cli` v21 or `lint-staged` v17.
+2. Plan the Node 22 migration separately before accepting `@commitlint/cli` v21, `@commitlint/config-conventional` v21, or `lint-staged` v17.
 3. Publish the ready X/Farcaster and Chinese community posts so the new content work feeds the 1000-star growth loop.
 
 ## Evidence Links
 
 - Repository: https://github.com/beihaili/Get-Started-with-Web3
 - Production site: https://beihaili.github.io/Get-Started-with-Web3/
-- Latest main deploy: https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26071427382
+- Latest recorded main deploy: https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26071964424
 - Remaining L2 translation starter issue: https://github.com/beihaili/Get-Started-with-Web3/issues/175
 - Remaining L2 translation issue update: https://github.com/beihaili/Get-Started-with-Web3/issues/175#issuecomment-4483580706
 - First L2 English translation PR: https://github.com/beihaili/Get-Started-with-Web3/pull/174
@@ -88,8 +89,11 @@
 - Quiz contributor PR: https://github.com/beihaili/Get-Started-with-Web3/pull/177
 - Glossary contributor PR: https://github.com/beihaili/Get-Started-with-Web3/pull/178
 - Dependabot eslint-config-prettier PR: https://github.com/beihaili/Get-Started-with-Web3/pull/182
+- Dependabot Zustand PR: https://github.com/beihaili/Get-Started-with-Web3/pull/191
+- Superseded upload-artifact PR: https://github.com/beihaili/Get-Started-with-Web3/pull/190
 - Closed Node 22-only commitlint PR: https://github.com/beihaili/Get-Started-with-Web3/pull/181
 - Closed Node 22-only lint-staged PR: https://github.com/beihaili/Get-Started-with-Web3/pull/183
+- Closed Node 22-only commitlint config PR: https://github.com/beihaili/Get-Started-with-Web3/pull/192
 - Replacement starter issue: https://github.com/beihaili/Get-Started-with-Web3/issues/186
 - Replacement starter issue: https://github.com/beihaili/Get-Started-with-Web3/issues/187
 - AI manifest: `ai/manifest.json`
