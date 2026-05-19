@@ -11,6 +11,7 @@ import MobileNav from '../components/MobileNav';
 import SeoHead from '../components/SeoHead';
 import ProgressExport from '../components/ProgressExport';
 import ProgressImport from '../components/ProgressImport';
+import { buildSiteUrl } from '../config/siteConfig';
 
 /**
  * 仪表板页面
@@ -24,9 +25,9 @@ const DashboardPage = () => {
 
   const progressCount = Object.keys(progress).length;
 
-  const canonicalUrl = `https://beihaili.github.io/Get-Started-with-Web3/${lang}/dashboard`;
+  const canonicalUrl = buildSiteUrl(`/${lang}/dashboard`);
   const altLang = lang === 'en' ? 'zh' : 'en';
-  const alternateUrl = `https://beihaili.github.io/Get-Started-with-Web3/${altLang}/dashboard`;
+  const alternateUrl = buildSiteUrl(`/${altLang}/dashboard`);
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950">

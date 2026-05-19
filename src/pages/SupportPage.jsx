@@ -5,6 +5,7 @@ import { DONATION_LINKS, CRYPTO_WALLETS, SPONSORS, AFFILIATE_LINKS } from '../co
 import SeoHead from '../components/SeoHead';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import { useClipboard } from '../utils/useClipboard';
+import { buildSiteUrl } from '../config/siteConfig';
 
 /**
  * 支持页面 — 展示捐赠渠道、加密货币钱包地址和赞助商信息
@@ -14,10 +15,9 @@ const SupportPage = () => {
   const { t } = useTranslation();
   const { copied, copy } = useClipboard();
 
-  const siteUrl = 'https://beihaili.github.io/Get-Started-with-Web3/';
-  const canonicalUrl = `${siteUrl}${lang}/support`;
+  const canonicalUrl = buildSiteUrl(`/${lang}/support`);
   const altLang = lang === 'en' ? 'zh' : 'en';
-  const alternateUrl = `${siteUrl}${altLang}/support`;
+  const alternateUrl = buildSiteUrl(`/${altLang}/support`);
 
   // 判断是否有任何赞助商
   const hasSponsors =

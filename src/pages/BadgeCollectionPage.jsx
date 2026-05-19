@@ -7,6 +7,7 @@ import { BadgeCard, ACHIEVEMENT_BADGES, SPECIAL_BADGES } from '../features/badge
 import ShareCard from '../components/ShareCard';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import SeoHead from '../components/SeoHead';
+import { buildSiteUrl } from '../config/siteConfig';
 
 /**
  * 徽章收藏页面
@@ -22,9 +23,9 @@ const BadgeCollectionPage = () => {
   const earnedBadgeCount = Object.keys(earnedBadges).length;
   const completionRate = ((earnedBadgeCount / totalBadges) * 100).toFixed(1);
 
-  const canonicalUrl = `https://beihaili.github.io/Get-Started-with-Web3/${lang}/badges`;
+  const canonicalUrl = buildSiteUrl(`/${lang}/badges`);
   const altLang = lang === 'en' ? 'zh' : 'en';
-  const alternateUrl = `https://beihaili.github.io/Get-Started-with-Web3/${altLang}/badges`;
+  const alternateUrl = buildSiteUrl(`/${altLang}/badges`);
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950">

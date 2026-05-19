@@ -73,6 +73,12 @@ npm run mcp:web3        # 启动本地 stdio MCP server
 
 修改课程结构、术语表或 Agent 工具元数据后，运行 `npm run ai:index && npm run ai:publish && npm run ai:verify`，并提交更新后的 `ai/` 与 `public/` artifacts。
 
+## 官网 URL、域名与统计
+
+- `src/config/siteConfig.js`: 统一管理默认官网 URL、base path、canonical/share URL 拼接；默认仍是 GitHub Pages `https://beihaili.github.io/Get-Started-with-Web3` 和 `/Get-Started-with-Web3/`。
+- 未来接入 `bhbtc.xyz` 时，构建可用 `VITE_SITE_BASE_URL=https://...` / `SITE_BASE_URL=https://...` 更新前端 canonical、sitemap、robots 和 AI artifacts；同时用 `VITE_BASE_PATH=/` 切到自定义域名根路径。不要在 DNS/GitHub Pages custom domain 未确认前提交 `public/CNAME`。
+- `index.html` 保留 GA4 和 Cloudflare Web Analytics 脚本；GA 自动初始 pageview 已关闭，由 `src/components/RouteAnalytics.jsx` + `src/utils/analytics.js` 在 SPA 路由切换时发送 `page_view`。
+
 ## 国际化与命名空间
 
 - UI 文案按页面/功能拆分在 `src/i18n/locales/{en,zh}/{section}.json`。保留 `t('section.key')` 调用方式，不要改成多 namespace 的 `t` 调用。
@@ -150,4 +156,5 @@ Agent 使用 MCP 工具回答时，应优先引用工具返回的 `citation.file
 - 新增术语时，更新 `src/config/glossaryData.js` 和对应测试，保持 `GLOSSARY_CATEGORIES` 与测试允许分类一致，再运行 `npm run ai:index`。
 - MCP 工具必须保持只读，返回结果需包含可引用的 `citation.file` 或 URL。
 - 接受 Dependabot major 更新前，先检查包的 `engines.node` 与 `.github/workflows/*.yml` 中的 Node 版本；Node 22-only 工具链更新必须作为独立迁移处理。
+- 修改官网 URL、Vite base、sitemap、robots、prerender、AI artifact public URL 或 analytics 逻辑后，优先跑 site/analytics 相关 Vitest、`npm run ai:index && npm run ai:publish && npm run ai:verify`、`npm run build`，并用浏览器 smoke 核对 canonical 与 route tracking 无控制台错误。
 - 修改代码后至少运行相关 Vitest；完成前运行 `npm test` 和 `npm run lint`。

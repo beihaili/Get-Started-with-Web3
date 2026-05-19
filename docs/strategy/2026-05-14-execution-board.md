@@ -6,16 +6,16 @@
 
 ## Current Snapshot
 
-| Area             | Status                | Next Action                                                                                      |
-| ---------------- | --------------------- | ------------------------------------------------------------------------------------------------ |
-| Technical health | Healthy               | Keep `npm test`, `npm run lint`, `npm run ai:verify` green and plan Node 22 migration separately |
-| GitHub growth    | Under-monetized       | Improve README conversion and launch distribution campaigns                                      |
-| SEO              | Partially implemented | Fix language metadata and route coverage                                                         |
-| English content  | Incomplete            | Close 15 missing translations or classify non-course docs                                        |
-| AI-native layer  | Strong MVP            | Productize story and prepare paid-tool landing                                                   |
-| Monetization     | Passive only          | Create sponsor kit and sponsor outreach drafts                                                   |
-| Community        | Converting            | Keep accepted contributor PRs moving into recognition and backlog refresh                        |
-| Personal brand   | Underused             | Convert every shipment into public posts and distribution assets                                 |
+| Area             | Status                | Next Action                                                                                            |
+| ---------------- | --------------------- | ------------------------------------------------------------------------------------------------------ |
+| Technical health | Healthy               | Ship analytics/domain-readiness safely, keep verification green, and plan Node 22 migration separately |
+| GitHub growth    | Under-monetized       | Improve README conversion and launch distribution campaigns                                            |
+| SEO              | Partially implemented | Fix language metadata and route coverage                                                               |
+| English content  | Incomplete            | Close 15 missing translations or classify non-course docs                                              |
+| AI-native layer  | Strong MVP            | Productize story and prepare paid-tool landing                                                         |
+| Monetization     | Passive only          | Create sponsor kit and sponsor outreach drafts                                                         |
+| Community        | Converting            | Keep accepted contributor PRs moving into recognition and backlog refresh                              |
+| Personal brand   | Underused             | Convert every shipment into public posts and distribution assets                                       |
 
 ## KPI Board
 
@@ -52,6 +52,7 @@ Update weekly.
 - [x] Fix `html lang`, `og:locale`, Twitter metadata, and JSON-LD language for `/en` pages.
 - [x] Ensure `/zh`, `/en`, `/glossary`, `/articles`, lesson pages, `llms.txt`, and AI artifact URLs are easy to discover.
 - [x] Add `glossary` routes to `scripts/generate-sitemap.mjs` and `scripts/prerender.mjs` if still missing.
+- [x] Add custom-domain-ready canonical, sitemap, robots, and AI artifact URL configuration without activating CNAME before DNS confirmation.
 - [ ] Check public prerendered HTML after build.
 - [x] Create `docs/strategy/awesome-list-submissions.md`.
 - [x] Draft submissions to Web3, Bitcoin, blockchain, open-source education, and AI-agent resource lists.
@@ -111,6 +112,7 @@ Update weekly.
 - [x] Add `sync-content` fallback coverage so English lessons do not ship broken local image references when the corresponding Chinese assets exist.
 - [x] Prepare PR build artifact comments for [#40](https://github.com/beihaili/Get-Started-with-Web3/issues/40) so contributors can download reviewed builds from the Actions run.
 - [x] Clear the 2026-05-19 Dependabot queue; merge Node-20-compatible updates, accept `actions/upload-artifact` v7 with a matching workflow test update, and close Node-22-only majors with notes.
+- [x] Add SPA route-level GA pageview tracking and centralized site URL/base-path config for future `bhbtc.xyz` activation.
 - [ ] Plan Node 22 migration before accepting `@commitlint/cli` v21, `@commitlint/config-conventional` v21, or `lint-staged` v17.
 - [ ] Run `npm test`, `npm run lint`, and `npm run ai:verify` before claiming work is complete.
 - [x] Expose translation coverage checks through `npm run translation:check`.
@@ -179,3 +181,4 @@ Daily report should include:
 | 2026-05-19 | Replenished starter backlog and synced glossary artifacts                                       | [#177](https://github.com/beihaili/Get-Started-with-Web3/pull/177) and [#178](https://github.com/beihaili/Get-Started-with-Web3/pull/178) landed, closing [#162](https://github.com/beihaili/Get-Started-with-Web3/issues/162) and [#158](https://github.com/beihaili/Get-Started-with-Web3/issues/158); opened growth starter issues [#186](https://github.com/beihaili/Get-Started-with-Web3/issues/186) and [#187](https://github.com/beihaili/Get-Started-with-Web3/issues/187); regenerated AI artifacts to 57 glossary entries |
 | 2026-05-19 | Cleared Dependabot queue                                                                        | Merged Node-20-compatible [#182](https://github.com/beihaili/Get-Started-with-Web3/pull/182) after local `npm run lint` and `npm test`; closed Node-22-only [#181](https://github.com/beihaili/Get-Started-with-Web3/pull/181) and [#183](https://github.com/beihaili/Get-Started-with-Web3/pull/183); added Dependabot ignore rules for those major lines until a planned Node 22 migration                                                                                                                                         |
 | 2026-05-19 | Completed second Dependabot follow-up                                                           | Merged Node-20-compatible [#191](https://github.com/beihaili/Get-Started-with-Web3/pull/191), closed Node-22-only [#192](https://github.com/beihaili/Get-Started-with-Web3/pull/192), and superseded failing [#190](https://github.com/beihaili/Get-Started-with-Web3/pull/190) by updating `actions/upload-artifact` and the matching workflow test together                                                                                                                                                                        |
+| 2026-05-19 | Prepared website analytics and `bhbtc.xyz` readiness                                            | Added centralized site URL/base-path config, route-level GA pageview tracking, env-driven sitemap/robots/AI artifact URL generation, and documented that CNAME/DNS activation still needs confirmation before changing GitHub Pages custom domain settings                                                                                                                                                                                                                                                                           |

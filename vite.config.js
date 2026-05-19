@@ -1,10 +1,14 @@
+/* global process */
+
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+
+const basePath = process.env.VITE_BASE_PATH || '/Get-Started-with-Web3/';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/Get-Started-with-Web3/', // 正确的GitHub仓库名
+  base: basePath, // 默认使用 GitHub Pages project path；自定义域名构建可设 VITE_BASE_PATH=/
   build: {
     // 避免CSP问题 - 不在生产环境使用eval
     sourcemap: false,

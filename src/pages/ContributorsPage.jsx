@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { ArrowLeft, ExternalLink, GitPullRequest, Share2, Users } from 'lucide-react';
 import SeoHead from '../components/SeoHead';
 import LanguageSwitcher from '../components/LanguageSwitcher';
+import { buildSiteUrl } from '../config/siteConfig';
 
 const CACHE_KEY = 'gh_contributors_cache';
 const API_URL = 'https://api.github.com/repos/beihaili/Get-Started-with-Web3/contributors';
@@ -65,10 +66,9 @@ const ContributorsPage = () => {
     };
   }, []);
 
-  const siteUrl = 'https://beihaili.github.io/Get-Started-with-Web3/';
-  const canonicalUrl = `${siteUrl}${lang}/contributors`;
+  const canonicalUrl = buildSiteUrl(`/${lang}/contributors`);
   const altLang = lang === 'en' ? 'zh' : 'en';
-  const alternateUrl = `${siteUrl}${altLang}/contributors`;
+  const alternateUrl = buildSiteUrl(`/${altLang}/contributors`);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">

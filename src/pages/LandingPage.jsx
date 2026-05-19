@@ -22,6 +22,7 @@ import DonationSection from '../components/DonationSection';
 import SponsorSection from '../components/SponsorSection';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import SeoHead from '../components/SeoHead';
+import { APP_BASE_PATH, SITE_BASE_URL, buildSiteUrl, joinBasePath } from '../config/siteConfig';
 
 /**
  * 着陆页（首页）
@@ -33,10 +34,12 @@ const LandingPage = () => {
   const totalLessons = COURSE_DATA.reduce((sum, m) => sum + m.lessons.length, 0);
   const completedCount = Object.keys(progress).length;
 
-  const siteUrl = 'https://beihaili.github.io/Get-Started-with-Web3/';
-  const canonicalUrl = `${siteUrl}${lang}`;
+  const siteUrl = `${SITE_BASE_URL}/`;
+  const canonicalUrl = buildSiteUrl(`/${lang}`);
   const altLang = lang === 'en' ? 'zh' : 'en';
-  const alternateUrl = `${siteUrl}${altLang}`;
+  const alternateUrl = buildSiteUrl(`/${altLang}`);
+  const llmsTxtUrl = joinBasePath(APP_BASE_PATH, '/llms.txt');
+  const aiManifestUrl = joinBasePath(APP_BASE_PATH, '/ai/manifest.json');
 
   useEffect(() => {
     let script = document.querySelector('script[data-platform-ld]');
@@ -57,7 +60,7 @@ const LandingPage = () => {
         url: 'https://github.com/beihaili/Get-Started-with-Web3',
       },
     });
-  }, []);
+  }, [siteUrl]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 relative overflow-hidden">
@@ -214,14 +217,14 @@ const LandingPage = () => {
                 <p className="text-slate-500 dark:text-slate-400 mb-5">{t('landing.agentDesc')}</p>
                 <div className="grid sm:grid-cols-3 gap-3">
                   <a
-                    href="/Get-Started-with-Web3/llms.txt"
+                    href={llmsTxtUrl}
                     className="flex items-center gap-2 px-4 py-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm text-slate-700 dark:text-slate-200 hover:border-cyan-500/40 transition-colors"
                   >
                     <BookOpen className="w-4 h-4 text-cyan-400" />
                     llms.txt
                   </a>
                   <a
-                    href="/Get-Started-with-Web3/ai/manifest.json"
+                    href={aiManifestUrl}
                     className="flex items-center gap-2 px-4 py-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm text-slate-700 dark:text-slate-200 hover:border-purple-500/40 transition-colors"
                   >
                     <FileJson className="w-4 h-4 text-purple-400" />
