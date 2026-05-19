@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2026-05-09",
-  "generatedAt": "2026-05-19T01:27:00.106Z",
+  "generatedAt": "2026-05-19T01:28:10.682Z",
   "repository": {
     "name": "Get-Started-with-Web3",
     "owner": "beihaili",
@@ -17828,6 +17828,28 @@
       "type": "glossary",
       "term": "Session Key",
       "definition": "由主账户授权的临时密钥，通常限制可调用合约、时间、金额和操作类型，用于降低频繁签名成本。",
+      "category": "账户抽象",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "智能账户 (Smart Account)",
+      "definition": "可编程的钱包账户类型，能内置批量交易、权限控制、社交恢复和 Gas 代付等能力，比传统 EOA 更灵活。",
+      "category": "账户抽象",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "恢复模块 (Recovery Module)",
+      "definition": "用于在设备丢失或密钥泄露后恢复智能账户控制权的机制，常见方式包括社交恢复、延迟恢复和多重验证。",
       "category": "账户抽象",
       "citation": {
         "file": "src/config/glossaryData.js",
