@@ -19,6 +19,7 @@ import ContentSkeleton from '../components/ContentSkeleton';
 import ScrollToTop from '../components/ScrollToTop';
 import { estimateReadingTime } from '../utils/readingTime';
 import { useSwipe } from '../hooks/useSwipe';
+import { buildSiteUrl } from '../config/siteConfig';
 
 function getFocusableElements(container) {
   if (!container) {
@@ -192,10 +193,10 @@ const ReaderPage = () => {
   const pageDescription = currentLesson
     ? `${currentLesson.title} - ${currentModule?.title} ${t('reader.pageDescSuffix')}`
     : 'Web3 Starter';
-  const canonicalUrl = `https://beihaili.github.io/Get-Started-with-Web3/${lang}/learn/${moduleId}/${lessonId}`;
+  const canonicalUrl = buildSiteUrl(`/${lang}/learn/${moduleId}/${lessonId}`);
 
   const altLang = lang === 'en' ? 'zh' : 'en';
-  const alternateUrl = `https://beihaili.github.io/Get-Started-with-Web3/${altLang}/learn/${moduleId}/${lessonId}`;
+  const alternateUrl = buildSiteUrl(`/${altLang}/learn/${moduleId}/${lessonId}`);
   const displayLoading = currentLesson ? loading : false;
   const displayError = currentLesson ? error : t('reader.courseNotFound');
 

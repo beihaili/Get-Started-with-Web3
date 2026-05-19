@@ -32,7 +32,7 @@
 - `CONTRIBUTING.md` / `CONTRIBUTING.en.md`: 双语贡献指南，维护贡献路径、验证矩阵和内容质量标准。
 - `.github/ISSUE_TEMPLATE/`: Bug、feature、content/translation、growth/community 分流模板。
 - `.github/PULL_REQUEST_TEMPLATE.md`: PR 验证和内容安全检查清单。
-- `.github/workflows/deploy.yml`: PR 构建会上传 `dist` artifact，并用固定 marker 更新同一条 PR 评论，方便评审者从 Actions run 下载构建产物；合并到 `main` 后才部署 GitHub Pages。
+- `.github/workflows/deploy.yml`: PR 构建会上传 `dist` artifact；同仓库 PR 会用固定 marker 更新同一条 PR 评论，fork PR 因 `GITHUB_TOKEN` 写权限受限会跳过评论但不应让构建失败；合并到 `main` 后才部署 GitHub Pages。
 - `.github/dependabot.yml`: 每周检查 npm 依赖和每月检查 GitHub Actions；minor/patch 更新分组，major 更新单独处理；`@commitlint/cli` v21、`@commitlint/config-conventional` v21 和 `lint-staged` v17 当前被忽略，因为它们要求 Node 22，而项目 CI 仍使用 Node 20，需等计划内 Node 22 迁移后再解除。
 - GitHub Issue [#156](https://github.com/beihaili/Get-Started-with-Web3/issues/156): 已 pin 的公开 1000-star roadmap；维护 starter issue 队列、翻译、分发、AI-native 和赞助动作时同步参考。
 
@@ -72,6 +72,12 @@ npm run mcp:web3        # 启动本地 stdio MCP server
 - `scripts/ai-content-core.mjs`: 搜索、读取课程、生成学习路径、组合上下文等纯函数。
 
 修改课程结构、术语表或 Agent 工具元数据后，运行 `npm run ai:index && npm run ai:publish && npm run ai:verify`，并提交更新后的 `ai/` 与 `public/` artifacts。
+
+## 官网 URL、域名与统计
+
+- `src/config/siteConfig.js`: 统一管理默认官网 URL、base path、canonical/share URL 拼接；默认仍是 GitHub Pages `https://beihaili.github.io/Get-Started-with-Web3` 和 `/Get-Started-with-Web3/`。
+- 未来接入 `bhbtc.xyz` 时，构建可用 `VITE_SITE_BASE_URL=https://...` / `SITE_BASE_URL=https://...` 更新前端 canonical、sitemap、robots 和 AI artifacts；同时用 `VITE_BASE_PATH=/` 切到自定义域名根路径。不要在 DNS/GitHub Pages custom domain 未确认前提交 `public/CNAME`。
+- `index.html` 保留 GA4 和 Cloudflare Web Analytics 脚本；GA 自动初始 pageview 已关闭，由 `src/components/RouteAnalytics.jsx` + `src/utils/analytics.js` 在 SPA 路由切换时发送 `page_view`。
 
 ## 国际化与命名空间
 
@@ -150,4 +156,5 @@ Agent 使用 MCP 工具回答时，应优先引用工具返回的 `citation.file
 - 新增术语时，更新 `src/config/glossaryData.js` 和对应测试，保持 `GLOSSARY_CATEGORIES` 与测试允许分类一致，再运行 `npm run ai:index`。
 - MCP 工具必须保持只读，返回结果需包含可引用的 `citation.file` 或 URL。
 - 接受 Dependabot major 更新前，先检查包的 `engines.node` 与 `.github/workflows/*.yml` 中的 Node 版本；Node 22-only 工具链更新必须作为独立迁移处理。
+- 修改官网 URL、Vite base、sitemap、robots、prerender、AI artifact public URL 或 analytics 逻辑后，优先跑 site/analytics 相关 Vitest、`npm run ai:index && npm run ai:publish && npm run ai:verify`、`npm run build`，并用浏览器 smoke 核对 canonical 与 route tracking 无控制台错误。
 - 修改代码后至少运行相关 Vitest；完成前运行 `npm test` 和 `npm run lint`。

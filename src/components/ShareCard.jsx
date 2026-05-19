@@ -4,6 +4,7 @@ import { Download, X, Share2 } from 'lucide-react';
 import html2canvas from 'html2canvas';
 import { useUserStore } from '../store/useUserStore';
 import { ACHIEVEMENT_BADGES } from '../features/badges';
+import { buildSiteUrl } from '../config/siteConfig';
 
 const ShareCard = ({ onClose }) => {
   const { t } = useTranslation();
@@ -51,7 +52,7 @@ const ShareCard = ({ onClose }) => {
       plural: earnedCount > 1 ? 's' : '',
       xp: totalExperience,
     });
-    const url = 'https://beihaili.github.io/Get-Started-with-Web3/';
+    const url = buildSiteUrl('/');
     window.open(
       `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`,
       '_blank'

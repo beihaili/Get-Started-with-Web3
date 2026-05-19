@@ -21,4 +21,12 @@ describe('deploy workflow PR feedback', () => {
     expect(workflow).toContain('github.rest.issues.updateComment');
     expect(workflow).toContain('github.rest.issues.createComment');
   });
+
+  it('does not let fork PR preview comments fail otherwise successful builds', async () => {
+    const workflow = await readFile(path.join(projectRoot, '.github/workflows/deploy.yml'), 'utf8');
+
+    expect(workflow).toContain(
+      'github.event.pull_request.head.repo.full_name == github.repository'
+    );
+  });
 });
