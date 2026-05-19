@@ -13,7 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 // Register service worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/Get-Started-with-Web3/sw.js').catch(() => {
+    navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`).catch(() => {
       // SW registration failed silently — app works without it
     });
   });

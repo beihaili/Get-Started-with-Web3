@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { APP_BASE_PATH } from '../config/siteConfig';
 
 /**
  * 内容管理状态
@@ -37,7 +38,7 @@ export const useContentStore = create((set, get) => ({
   fetchError: null,
 
   // 基础路径配置
-  basePath: '/Get-Started-with-Web3/',
+  basePath: APP_BASE_PATH,
 
   // Actions - 导航
   setActiveModule: (moduleId) =>

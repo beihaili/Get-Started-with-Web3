@@ -11,10 +11,11 @@ import { createServer } from 'http';
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { normalizeBasePath } from '../src/config/siteConfig.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DIST_DIR = join(__dirname, '..', 'dist');
-const BASE_PATH = '/Get-Started-with-Web3';
+const BASE_PATH = normalizeBasePath(process.env.VITE_BASE_PATH).replace(/\/$/, '');
 const PORT = 4173;
 
 // 从 courseData 动态生成路由列表（支持 i18n 语言前缀）
@@ -83,7 +84,7 @@ function createStaticServer() {
     let url = req.url;
 
     // 去掉 base path
-    if (url.startsWith(BASE_PATH)) {
+    if (BASE_PATH && url.startsWith(BASE_PATH)) {
       url = url.slice(BASE_PATH.length) || '/';
     }
 
@@ -144,9 +145,7 @@ async function prerender() {
 
       // 确定输出路径
       const outputPath =
-        route === '/'
-          ? join(DIST_DIR, 'index.html')
-          : join(DIST_DIR, route.slice(1), 'index.html');
+        route === '/' ? join(DIST_DIR, 'index.html') : join(DIST_DIR, route.slice(1), 'index.html');
 
       // 创建目录
       const outputDir = dirname(outputPath);
@@ -168,7 +167,9 @@ async function prerender() {
   await browser.close();
   server.close();
 
-  console.log(`\n[prerender] Done: ${success} succeeded, ${failed} failed out of ${routes.length} routes`);
+  console.log(
+    `\n[prerender] Done: ${success} succeeded, ${failed} failed out of ${routes.length} routes`
+  );
 
   if (failed > 0) {
     process.exit(1);

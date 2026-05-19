@@ -8,6 +8,8 @@ import { useThemeStore } from '../store/useThemeStore';
 import LanguageProvider from '../i18n/LanguageProvider';
 import { getRouteI18nSections } from '../i18n/namespaceLoaders';
 import { useI18nSections } from '../i18n/useI18nSections';
+import RouteAnalytics from '../components/RouteAnalytics';
+import { APP_BASE_PATH } from '../config/siteConfig';
 
 // Lazy load pages for code splitting
 const LandingPage = lazy(() => import('../pages/LandingPage'));
@@ -74,6 +76,7 @@ const RootLayout = () => {
 
   return (
     <>
+      <RouteAnalytics />
       <Outlet />
       <SearchDialog />
     </>
@@ -103,6 +106,8 @@ const LegacyRedirect = ({ to }) => {
   if (params.lessonId) path = path.replace(':lessonId', params.lessonId);
   return <Navigate to={path} replace />;
 };
+
+const ROUTER_BASENAME = APP_BASE_PATH === '/' ? '/' : APP_BASE_PATH.replace(/\/$/, '');
 
 /**
  * 应用路由配置
@@ -214,7 +219,7 @@ export const router = createBrowserRouter(
     },
   ],
   {
-    basename: '/Get-Started-with-Web3',
+    basename: ROUTER_BASENAME,
   }
 );
 

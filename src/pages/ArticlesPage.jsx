@@ -5,6 +5,7 @@ import { BookOpen, ArrowLeft, ExternalLink } from 'lucide-react';
 import { COURSE_DATA } from '../config/courseData';
 import SeoHead from '../components/SeoHead';
 import LanguageSwitcher from '../components/LanguageSwitcher';
+import { buildSiteUrl } from '../config/siteConfig';
 
 /**
  * SEO-friendly articles index page.
@@ -17,9 +18,9 @@ const ArticlesPage = () => {
 
   const totalLessons = COURSE_DATA.reduce((sum, mod) => sum + mod.lessons.length, 0);
 
-  const canonicalUrl = `https://beihaili.github.io/Get-Started-with-Web3/${lang}/articles`;
+  const canonicalUrl = buildSiteUrl(`/${lang}/articles`);
   const altLang = lang === 'en' ? 'zh' : 'en';
-  const alternateUrl = `https://beihaili.github.io/Get-Started-with-Web3/${altLang}/articles`;
+  const alternateUrl = buildSiteUrl(`/${altLang}/articles`);
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
