@@ -6,16 +6,16 @@
 
 ## Current Snapshot
 
-| Area             | Status                | Next Action                                                               |
-| ---------------- | --------------------- | ------------------------------------------------------------------------- |
-| Technical health | Healthy               | Keep `npm test`, `npm run lint`, `npm run ai:verify` green                |
-| GitHub growth    | Under-monetized       | Improve README conversion and launch distribution campaigns               |
-| SEO              | Partially implemented | Fix language metadata and route coverage                                  |
-| English content  | Incomplete            | Close 16 missing translations or classify non-course docs                 |
-| AI-native layer  | Strong MVP            | Productize story and prepare paid-tool landing                            |
-| Monetization     | Passive only          | Create sponsor kit and sponsor outreach drafts                            |
-| Community        | Converting            | Keep accepted contributor PRs moving into recognition and backlog refresh |
-| Personal brand   | Underused             | Convert every shipment into public posts and distribution assets          |
+| Area             | Status                 | Next Action                                                                      |
+| ---------------- | ---------------------- | -------------------------------------------------------------------------------- |
+| Technical health | Healthy, with PR queue | Keep `npm test`, `npm run lint`, `npm run ai:verify` green and triage 7 open PRs |
+| GitHub growth    | Under-monetized        | Improve README conversion and launch distribution campaigns                      |
+| SEO              | Partially implemented  | Fix language metadata and route coverage                                         |
+| English content  | Incomplete             | Close 15 missing translations or classify non-course docs                        |
+| AI-native layer  | Strong MVP             | Productize story and prepare paid-tool landing                                   |
+| Monetization     | Passive only           | Create sponsor kit and sponsor outreach drafts                                   |
+| Community        | Converting             | Keep accepted contributor PRs moving into recognition and backlog refresh        |
+| Personal brand   | Underused              | Convert every shipment into public posts and distribution assets                 |
 
 ## KPI Board
 
@@ -60,9 +60,10 @@ Update weekly.
 
 **Outcome:** The curriculum feels complete and current enough to recommend.
 
-- [ ] Finish or classify the 16 missing English translations.
+- [ ] Finish or classify the 15 missing English translations.
 - [ ] Prioritize English proofreading for the highest-intent pages: README, Web3 Quick Start, Bitcoin, DeFi, L2, AI-native entry.
 - [x] Start Layer 2 English coverage with `en/L2CrossChain/01_WhyScaling/README.md`.
+- [x] Add second Layer 2 English translation with `en/L2CrossChain/02_RollupPrinciples/README.md`.
 - [ ] Create a content calendar with one public content theme per week.
 - [ ] Turn newly added content modules into changelog/release notes.
 - [ ] Add "Last updated" or freshness signals where valuable.
@@ -109,7 +110,7 @@ Update weekly.
 - [x] Correct Tailwind CSS v4 entrypoint so production builds emit full theme utilities and class-based dark mode styles.
 - [x] Add `sync-content` fallback coverage so English lessons do not ship broken local image references when the corresponding Chinese assets exist.
 - [x] Prepare PR build artifact comments for [#40](https://github.com/beihaili/Get-Started-with-Web3/issues/40) so contributors can download reviewed builds from the Actions run.
-- [ ] Keep Dependabot PRs under control; evaluate Tailwind/ESLint major upgrades separately.
+- [ ] Keep Dependabot and contributor PRs under control; 7 open PRs need triage as of 2026-05-19.
 - [ ] Run `npm test`, `npm run lint`, and `npm run ai:verify` before claiming work is complete.
 - [x] Expose translation coverage checks through `npm run translation:check`.
 - [ ] Run `npm run build` before shipping SEO/prerender changes.
@@ -173,3 +174,4 @@ Daily report should include:
 | 2026-05-18 | Published first contributor spotlight artifact                                                  | Created `docs/community/spotlights/2026-05-first-contributor-spotlight.md` to recognize [#167](https://github.com/beihaili/Get-Started-with-Web3/pull/167) using public PR/issue evidence and no reward promises                                                                                                                                                                                                  |
 | 2026-05-18 | Updated pinned roadmap with first contributor spotlight loop                                    | Posted a public [#156 roadmap update](https://github.com/beihaili/Get-Started-with-Web3/issues/156#issuecomment-4474624411) linking accepted starter PR [#167](https://github.com/beihaili/Get-Started-with-Web3/pull/167), closed issue [#159](https://github.com/beihaili/Get-Started-with-Web3/issues/159), and replacement starter issue [#169](https://github.com/beihaili/Get-Started-with-Web3/issues/169) |
 | 2026-05-18 | Published first Layer 2 English translation and backfilled translation backlog                  | Merged [#174](https://github.com/beihaili/Get-Started-with-Web3/pull/174) for `en/L2CrossChain/01_WhyScaling/README.md`, reduced missing English translation warnings from 17 to 16, and opened follow-up starter issue [#175](https://github.com/beihaili/Get-Started-with-Web3/issues/175) for the remaining module 9 lessons                                                                                   |
+| 2026-05-19 | Prepared second Layer 2 English translation                                                     | Added `en/L2CrossChain/02_RollupPrinciples/README.md`, regenerated AI artifacts to 108 lesson entries, and reduced local translation coverage warnings from 16 to 15; PR, CI, merge, and deploy verification are next                                                                                                                                                                                             |

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2026-05-09",
-  "generatedAt": "2026-05-18T06:02:04.253Z",
+  "generatedAt": "2026-05-19T00:48:09.495Z",
   "repository": {
     "name": "Get-Started-with-Web3",
     "owner": "beihaili",
@@ -739,7 +739,7 @@
           "labUrl": null,
           "availability": {
             "zh": true,
-            "en": false
+            "en": true
           },
           "siteUrls": {
             "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-9/9-2",
@@ -15506,6 +15506,119 @@
       ],
       "codeBlockCount": 9,
       "characterCount": 7964
+    },
+    {
+      "id": "en/module-9/9-2",
+      "lang": "en",
+      "moduleId": "module-9",
+      "moduleTitle": "跨链与 Layer 2 深度解析",
+      "lessonId": "9-2",
+      "title": "Rollup 原理详解",
+      "path": "L2CrossChain/02_RollupPrinciples",
+      "labUrl": null,
+      "sourcePath": "en/L2CrossChain/02_RollupPrinciples/README.md",
+      "citation": {
+        "file": "en/L2CrossChain/02_RollupPrinciples/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/L2CrossChain/02_RollupPrinciples/README.md",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-9/9-2"
+      },
+      "excerpt": "Rollup Principles Explained Rollup is the core scaling technology in Ethereum's roadmap. This lesson explains how Optimistic Rollups and ZK Rollups work, compares their security models, performance, and EVM compatibility, and explores the key challenge of data availability. Follow me on Twitter: @bhbtc1337 Join the WeChat group: Form Link Articles are open sourced on GitHub: Get Started with Web3 Recommended exchange",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Rollup Principles Explained"
+        },
+        {
+          "level": 2,
+          "text": "Table of Contents"
+        },
+        {
+          "level": 2,
+          "text": "What Rollup Is"
+        },
+        {
+          "level": 2,
+          "text": "How Optimistic Rollups Work"
+        },
+        {
+          "level": 3,
+          "text": "Core Idea: Optimistic Assumption Plus Fraud Proofs"
+        },
+        {
+          "level": 3,
+          "text": "Detailed Workflow"
+        },
+        {
+          "level": 3,
+          "text": "The Fraud Proof Mechanism"
+        },
+        {
+          "level": 2,
+          "text": "How ZK Rollups Work"
+        },
+        {
+          "level": 3,
+          "text": "Core Idea: Zero-Knowledge Proofs Plus Validity Proofs"
+        },
+        {
+          "level": 3,
+          "text": "ZK Rollup Workflow"
+        },
+        {
+          "level": 3,
+          "text": "The Two Main ZK Proof Families"
+        },
+        {
+          "level": 2,
+          "text": "Optimistic vs ZK: Detailed Comparison"
+        },
+        {
+          "level": 3,
+          "text": "zkEVM Compatibility Levels"
+        },
+        {
+          "level": 2,
+          "text": "The Data Availability Problem"
+        },
+        {
+          "level": 3,
+          "text": "Why Data Availability Matters"
+        },
+        {
+          "level": 3,
+          "text": "Calldata vs Blob, EIP-4844"
+        },
+        {
+          "level": 3,
+          "text": "Measured Cost Impact"
+        },
+        {
+          "level": 2,
+          "text": "Validium and Volition Modes"
+        },
+        {
+          "level": 3,
+          "text": "Validium"
+        },
+        {
+          "level": 3,
+          "text": "Volition"
+        },
+        {
+          "level": 3,
+          "text": "Mode Comparison"
+        },
+        {
+          "level": 2,
+          "text": "Summary"
+        },
+        {
+          "level": 2,
+          "text": "Further Reading"
+        }
+      ],
+      "codeBlockCount": 9,
+      "characterCount": 17006
     },
     {
       "id": "zh/module-9/9-3",
