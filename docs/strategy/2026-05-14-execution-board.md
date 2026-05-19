@@ -11,7 +11,7 @@
 | Technical health | Healthy               | Ship analytics/domain-readiness safely, keep verification green, and plan Node 22 migration separately |
 | GitHub growth    | Under-monetized       | Improve README conversion and launch distribution campaigns                                            |
 | SEO              | Partially implemented | Fix language metadata and route coverage                                                               |
-| English content  | Incomplete            | Close 15 missing translations or classify non-course docs                                              |
+| English content  | Incomplete            | Close the remaining 12 missing translations or classify non-course docs                                |
 | AI-native layer  | Strong MVP            | Productize story and prepare paid-tool landing                                                         |
 | Monetization     | Passive only          | Create sponsor kit and sponsor outreach drafts                                                         |
 | Community        | Converting            | Keep accepted contributor PRs moving into recognition and backlog refresh                              |
@@ -61,10 +61,11 @@ Update weekly.
 
 **Outcome:** The curriculum feels complete and current enough to recommend.
 
-- [ ] Finish or classify the 15 missing English translations.
+- [ ] Finish or classify the remaining 12 missing English translations.
 - [ ] Prioritize English proofreading for the highest-intent pages: README, Web3 Quick Start, Bitcoin, DeFi, L2, AI-native entry.
 - [x] Start Layer 2 English coverage with `en/L2CrossChain/01_WhyScaling/README.md`.
 - [x] Add second Layer 2 English translation with `en/L2CrossChain/02_RollupPrinciples/README.md`.
+- [x] Complete Layer 2 English coverage with `en/L2CrossChain/03_L2Ecosystem/README.md`, `en/L2CrossChain/04_CrossChainBridges/README.md`, and `en/L2CrossChain/05_L2PracticalGuide/README.md`.
 - [x] Create a content calendar with one public content theme per week (`docs/strategy/2026-05-19-content-calendar.md`).
 - [ ] Turn newly added content modules into changelog/release notes.
 - [ ] Add "Last updated" or freshness signals where valuable.
@@ -182,3 +183,5 @@ Daily report should include:
 | 2026-05-19 | Cleared Dependabot queue                                                                        | Merged Node-20-compatible [#182](https://github.com/beihaili/Get-Started-with-Web3/pull/182) after local `npm run lint` and `npm test`; closed Node-22-only [#181](https://github.com/beihaili/Get-Started-with-Web3/pull/181) and [#183](https://github.com/beihaili/Get-Started-with-Web3/pull/183); added Dependabot ignore rules for those major lines until a planned Node 22 migration                                                                                                                                         |
 | 2026-05-19 | Completed second Dependabot follow-up                                                           | Merged Node-20-compatible [#191](https://github.com/beihaili/Get-Started-with-Web3/pull/191), closed Node-22-only [#192](https://github.com/beihaili/Get-Started-with-Web3/pull/192), and superseded failing [#190](https://github.com/beihaili/Get-Started-with-Web3/pull/190) by updating `actions/upload-artifact` and the matching workflow test together                                                                                                                                                                        |
 | 2026-05-19 | Prepared website analytics and `bhbtc.xyz` readiness                                            | Added centralized site URL/base-path config, route-level GA pageview tracking, env-driven sitemap/robots/AI artifact URL generation, and documented that CNAME/DNS activation still needs confirmation before changing GitHub Pages custom domain settings                                                                                                                                                                                                                                                                           |
+| 2026-05-19 | Fixed fork PR artifact-comment failures and merged growth calendar                              | Merged [#198](https://github.com/beihaili/Get-Started-with-Web3/pull/198) so fork PRs no longer fail when they cannot write preview comments; reran and merged [#194](https://github.com/beihaili/Get-Started-with-Web3/pull/194), adding `docs/strategy/2026-05-19-content-calendar.md`; closed [#195](https://github.com/beihaili/Get-Started-with-Web3/pull/195) as an empty duplicate after main already contained the glossary terms                                                                                            |
+| 2026-05-19 | Prepared final Layer 2 English translation integration                                          | Extracted the still-needed lessons 9-3 to 9-5 from dirty PR [#196](https://github.com/beihaili/Get-Started-with-Web3/pull/196) without taking its already-merged quiz and lesson 9-2 changes; regenerated AI artifacts to 111 lesson entries and reduced translation warnings to 12                                                                                                                                                                                                                                                  |

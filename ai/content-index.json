@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2026-05-09",
-  "generatedAt": "2026-05-19T07:20:59.655Z",
+  "generatedAt": "2026-05-19T10:57:56.815Z",
   "repository": {
     "name": "Get-Started-with-Web3",
     "owner": "beihaili",
@@ -753,7 +753,7 @@
           "labUrl": null,
           "availability": {
             "zh": true,
-            "en": false
+            "en": true
           },
           "siteUrls": {
             "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-9/9-3",
@@ -767,7 +767,7 @@
           "labUrl": null,
           "availability": {
             "zh": true,
-            "en": false
+            "en": true
           },
           "siteUrls": {
             "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-9/9-4",
@@ -781,7 +781,7 @@
           "labUrl": null,
           "availability": {
             "zh": true,
-            "en": false
+            "en": true
           },
           "siteUrls": {
             "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-9/9-5",
@@ -15794,6 +15794,179 @@
       "characterCount": 11411
     },
     {
+      "id": "en/module-9/9-3",
+      "lang": "en",
+      "moduleId": "module-9",
+      "moduleTitle": "跨链与 Layer 2 深度解析",
+      "lessonId": "9-3",
+      "title": "主流 L2 生态对比",
+      "path": "L2CrossChain/03_L2Ecosystem",
+      "labUrl": null,
+      "sourcePath": "en/L2CrossChain/03_L2Ecosystem/README.md",
+      "citation": {
+        "file": "en/L2CrossChain/03_L2Ecosystem/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/L2CrossChain/03_L2Ecosystem/README.md",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-9/9-3"
+      },
+      "excerpt": "The Major L2 Ecosystem Compared The Ethereum L2 ecosystem is thriving — each major Rollup has carved out its own niche in architecture, ecosystem building, and growth strategy. This lesson takes a deep look at five leading L2s: Arbitrum, Optimism, Base, zkSync, and StarkNet, so you can build a complete picture of the landscape. Follow me on Twitter: @bhbtc1337 Join the WeChat group: Form Link Articles are open source",
+      "headings": [
+        {
+          "level": 1,
+          "text": "The Major L2 Ecosystem Compared"
+        },
+        {
+          "level": 2,
+          "text": "Table of Contents"
+        },
+        {
+          "level": 2,
+          "text": "Arbitrum"
+        },
+        {
+          "level": 3,
+          "text": "Architecture"
+        },
+        {
+          "level": 3,
+          "text": "Arbitrum's Multi-Chain Strategy"
+        },
+        {
+          "level": 3,
+          "text": "Ecosystem Highlights"
+        },
+        {
+          "level": 3,
+          "text": "Governance: ARB Token"
+        },
+        {
+          "level": 2,
+          "text": "Optimism"
+        },
+        {
+          "level": 3,
+          "text": "Architecture"
+        },
+        {
+          "level": 3,
+          "text": "OP Stack and the Superchain Vision"
+        },
+        {
+          "level": 3,
+          "text": "OP Token and RetroPGF"
+        },
+        {
+          "level": 2,
+          "text": "Base"
+        },
+        {
+          "level": 3,
+          "text": "Coinbase's L2 Strategy"
+        },
+        {
+          "level": 3,
+          "text": "Base and OP Stack"
+        },
+        {
+          "level": 3,
+          "text": "Base Ecosystem"
+        },
+        {
+          "level": 2,
+          "text": "zkSync"
+        },
+        {
+          "level": 3,
+          "text": "The zkEVM Approach"
+        },
+        {
+          "level": 3,
+          "text": "Native Account Abstraction"
+        },
+        {
+          "level": 3,
+          "text": "ZK Token"
+        },
+        {
+          "level": 2,
+          "text": "StarkNet"
+        },
+        {
+          "level": 3,
+          "text": "StarkEx vs StarkNet"
+        },
+        {
+          "level": 3,
+          "text": "The Cairo Language"
+        },
+        {
+          "level": 3,
+          "text": "StarkNet's Technical Advantages"
+        },
+        {
+          "level": 3,
+          "text": "STRK Token"
+        },
+        {
+          "level": 2,
+          "text": "2026 Update: Blobs, PeerDAS, and L2 Risk Tiers"
+        },
+        {
+          "level": 3,
+          "text": "Blob Economics: Why L2s Became Cheap"
+        },
+        {
+          "level": 3,
+          "text": "PeerDAS: Scaling Without Sacrificing Node Accessibility"
+        },
+        {
+          "level": 3,
+          "text": "OP Superchain and the App-Chain Trend"
+        },
+        {
+          "level": 3,
+          "text": "Base: The Consumer L2"
+        },
+        {
+          "level": 3,
+          "text": "ZK Rollup: Strong Tech, but Ecosystem and Compatibility Still Challenges"
+        },
+        {
+          "level": 3,
+          "text": "Alt-DA, Validium, and the Difference from Rollup"
+        },
+        {
+          "level": 3,
+          "text": "A Risk Framework for Choosing an L2"
+        },
+        {
+          "level": 2,
+          "text": "Comprehensive L2 Comparison"
+        },
+        {
+          "level": 3,
+          "text": "Technical Comparison"
+        },
+        {
+          "level": 3,
+          "text": "Ecosystem Data (early 2025 reference)"
+        },
+        {
+          "level": 3,
+          "text": "How to Choose an L2?"
+        },
+        {
+          "level": 2,
+          "text": "Summary"
+        },
+        {
+          "level": 2,
+          "text": "Further Reading"
+        }
+      ],
+      "codeBlockCount": 7,
+      "characterCount": 22380
+    },
+    {
       "id": "zh/module-9/9-4",
       "lang": "zh",
       "moduleId": "module-9",
@@ -15945,6 +16118,159 @@
       ],
       "codeBlockCount": 15,
       "characterCount": 10015
+    },
+    {
+      "id": "en/module-9/9-4",
+      "lang": "en",
+      "moduleId": "module-9",
+      "moduleTitle": "跨链与 Layer 2 深度解析",
+      "lessonId": "9-4",
+      "title": "跨链桥与互操作性",
+      "path": "L2CrossChain/04_CrossChainBridges",
+      "labUrl": null,
+      "sourcePath": "en/L2CrossChain/04_CrossChainBridges/README.md",
+      "citation": {
+        "file": "en/L2CrossChain/04_CrossChainBridges/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/L2CrossChain/04_CrossChainBridges/README.md",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-9/9-4"
+      },
+      "excerpt": "Cross Chain Bridges and Interoperability In a multi chain ecosystem, cross chain bridges are critical infrastructure connecting different blockchains. This lesson explains how bridges work, their trust models, and the leading protocols — and walks through major security incidents to build your risk awareness for cross chain operations. Follow me on Twitter: @bhbtc1337 Join the WeChat group: Form Link Articles are ope",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Cross-Chain Bridges and Interoperability"
+        },
+        {
+          "level": 2,
+          "text": "Table of Contents"
+        },
+        {
+          "level": 2,
+          "text": "Why Cross-Chain Matters"
+        },
+        {
+          "level": 3,
+          "text": "The Multi-Chain Reality"
+        },
+        {
+          "level": 3,
+          "text": "The Core Challenge of Cross-Chain"
+        },
+        {
+          "level": 2,
+          "text": "How Cross-Chain Bridges Work"
+        },
+        {
+          "level": 3,
+          "text": "Mode 1: Lock-and-Mint"
+        },
+        {
+          "level": 3,
+          "text": "Mode 2: Burn-and-Mint"
+        },
+        {
+          "level": 3,
+          "text": "Mode 3: Atomic Swap"
+        },
+        {
+          "level": 2,
+          "text": "Bridge Trust Models"
+        },
+        {
+          "level": 3,
+          "text": "Tier 1: Native Bridge"
+        },
+        {
+          "level": 3,
+          "text": "Tier 2: Light-Client Verification Bridge"
+        },
+        {
+          "level": 3,
+          "text": "Tier 3: Optimistic Verification Bridge"
+        },
+        {
+          "level": 3,
+          "text": "Tier 4: External Validation Bridge"
+        },
+        {
+          "level": 3,
+          "text": "Trust Model Comparison"
+        },
+        {
+          "level": 2,
+          "text": "Leading Cross-Chain Protocols"
+        },
+        {
+          "level": 3,
+          "text": "LayerZero"
+        },
+        {
+          "level": 3,
+          "text": "Wormhole"
+        },
+        {
+          "level": 3,
+          "text": "Axelar"
+        },
+        {
+          "level": 3,
+          "text": "Connext (now Everclear)"
+        },
+        {
+          "level": 2,
+          "text": "Bridge Security Incidents"
+        },
+        {
+          "level": 3,
+          "text": "Ronin Bridge: $625M (March 2022)"
+        },
+        {
+          "level": 3,
+          "text": "Wormhole: $320M (February 2022)"
+        },
+        {
+          "level": 3,
+          "text": "Nomad: $190M (August 2022)"
+        },
+        {
+          "level": 3,
+          "text": "Attack Summary"
+        },
+        {
+          "level": 2,
+          "text": "Cross-Chain Security Best Practices"
+        },
+        {
+          "level": 3,
+          "text": "1. Prefer Official Bridges"
+        },
+        {
+          "level": 3,
+          "text": "2. Split Large Transfers"
+        },
+        {
+          "level": 3,
+          "text": "3. Check the Bridge's Security Status"
+        },
+        {
+          "level": 3,
+          "text": "4. Understand Wrapped Token Risk"
+        },
+        {
+          "level": 3,
+          "text": "5. Monitor Approvals and Interactions"
+        },
+        {
+          "level": 2,
+          "text": "Summary"
+        },
+        {
+          "level": 2,
+          "text": "Further Reading"
+        }
+      ],
+      "codeBlockCount": 15,
+      "characterCount": 19539
     },
     {
       "id": "zh/module-9/9-5",
@@ -16106,6 +16432,167 @@
       ],
       "codeBlockCount": 22,
       "characterCount": 8836
+    },
+    {
+      "id": "en/module-9/9-5",
+      "lang": "en",
+      "moduleId": "module-9",
+      "moduleTitle": "跨链与 Layer 2 深度解析",
+      "lessonId": "9-5",
+      "title": "L2 实操指南",
+      "path": "L2CrossChain/05_L2PracticalGuide",
+      "labUrl": null,
+      "sourcePath": "en/L2CrossChain/05_L2PracticalGuide/README.md",
+      "citation": {
+        "file": "en/L2CrossChain/05_L2PracticalGuide/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/L2CrossChain/05_L2PracticalGuide/README.md",
+        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-9/9-5"
+      },
+      "excerpt": "L2 Practical Guide Four lessons of theory — now it's time to act. This lesson walks you step by step through bridging assets to L2, configuring your wallet, using DeFi, and using real Gas fee data to help you make the best chain selection decisions. Follow me on Twitter: @bhbtc1337 Join the WeChat group: Form Link Articles are open sourced on GitHub: Get Started with Web3 Recommended exchange for buying BTC / ETH / U",
+      "headings": [
+        {
+          "level": 1,
+          "text": "L2 Practical Guide"
+        },
+        {
+          "level": 2,
+          "text": "Table of Contents"
+        },
+        {
+          "level": 2,
+          "text": "Bridging Assets from Ethereum to L2"
+        },
+        {
+          "level": 3,
+          "text": "Using the Arbitrum Official Bridge"
+        },
+        {
+          "level": 3,
+          "text": "Using Third-Party Bridges for Faster Withdrawals"
+        },
+        {
+          "level": 2,
+          "text": "Adding L2 Networks to MetaMask"
+        },
+        {
+          "level": 3,
+          "text": "Method 1: One-Click via ChainList"
+        },
+        {
+          "level": 3,
+          "text": "Method 2: Manual Configuration"
+        },
+        {
+          "level": 3,
+          "text": "Method 3: Auto-Add via DApp Prompt"
+        },
+        {
+          "level": 2,
+          "text": "Using DeFi on L2"
+        },
+        {
+          "level": 3,
+          "text": "Step 1: Ensure you have ETH for Gas"
+        },
+        {
+          "level": 3,
+          "text": "Step 2: Open Uniswap"
+        },
+        {
+          "level": 3,
+          "text": "Step 3: Execute the swap"
+        },
+        {
+          "level": 3,
+          "text": "Step 4: Verify the transaction"
+        },
+        {
+          "level": 3,
+          "text": "Other Common DeFi Operations"
+        },
+        {
+          "level": 2,
+          "text": "Gas Fee Comparison"
+        },
+        {
+          "level": 3,
+          "text": "ETH Transfer"
+        },
+        {
+          "level": 3,
+          "text": "Uniswap Swap"
+        },
+        {
+          "level": 3,
+          "text": "Key Takeaway"
+        },
+        {
+          "level": 2,
+          "text": "Chain Selection Strategy"
+        },
+        {
+          "level": 3,
+          "text": "Scenario 1: DeFi Trading (Large Amounts)"
+        },
+        {
+          "level": 3,
+          "text": "Scenario 2: DeFi Trading (Small Amounts / High Frequency)"
+        },
+        {
+          "level": 3,
+          "text": "Scenario 3: NFTs and Social Apps"
+        },
+        {
+          "level": 3,
+          "text": "Scenario 4: Developers Deploying a DApp"
+        },
+        {
+          "level": 3,
+          "text": "Scenario 5: Long-Term Asset Holding (Large Amounts)"
+        },
+        {
+          "level": 3,
+          "text": "Chain Selection Decision Tree"
+        },
+        {
+          "level": 2,
+          "text": "Common Pitfalls on L2"
+        },
+        {
+          "level": 3,
+          "text": "Pitfall 1: Wrapped Token Confusion"
+        },
+        {
+          "level": 3,
+          "text": "Pitfall 2: Running Out of Gas"
+        },
+        {
+          "level": 3,
+          "text": "Pitfall 3: Sequencer Single Point of Failure"
+        },
+        {
+          "level": 3,
+          "text": "Pitfall 4: Misjudging Cross-Chain Timing"
+        },
+        {
+          "level": 3,
+          "text": "Pitfall 5: Unstable RPC Nodes"
+        },
+        {
+          "level": 3,
+          "text": "Pitfall 6: Token Approval Management Across Chains"
+        },
+        {
+          "level": 2,
+          "text": "Summary"
+        },
+        {
+          "level": 2,
+          "text": "Further Reading"
+        }
+      ],
+      "codeBlockCount": 22,
+      "characterCount": 15951
     },
     {
       "id": "zh/module-10/10-1",
