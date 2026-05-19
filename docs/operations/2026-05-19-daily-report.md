@@ -12,17 +12,19 @@
 | Forks             |      58 |                  57 |       +1 | `gh repo view beihaili/Get-Started-with-Web3` |
 | Watchers          |       3 |                   3 |        0 | `gh repo view beihaili/Get-Started-with-Web3` |
 | Contributors      |      13 |                  13 |        0 | `gh api repos/.../contributors`               |
-| Open PRs          |       7 |                   0 |       +7 | `gh pr list --state open`                     |
+| Open PRs          |       3 |                   0 |       +3 | `gh pr list --state open`                     |
 | Open issues       |      12 |                  12 |        0 | `gh issue list --state open --limit 200`      |
 | Good first issues |      11 |                  11 |        0 | `gh issue list` label count                   |
 
 ## Completed
 
 - Content product: published the second English Layer 2 / cross-chain lesson translation via [#184](https://github.com/beihaili/Get-Started-with-Web3/pull/184), covering Rollup fundamentals, Optimistic Rollups, ZK Rollups, data availability, Validium, and Volition.
-- AI-native maintenance: regenerated `ai/` and `public/ai/` artifacts after the new English lesson; the AI-native index now contains 108 lesson entries, and module `9-2` has English availability set to `true`.
+- AI-native maintenance: regenerated `ai/` and `public/ai/` artifacts after the new English lesson and smart-account glossary merge; the AI-native index now contains 108 lesson entries, 57 glossary entries, and module `9-2` has English availability set to `true`.
 - Translation operations: reduced local translation coverage warnings from 16 to 15; the remaining Layer 2 gaps are `03_L2Ecosystem`, `04_CrossChainBridges`, and `05_L2PracticalGuide`.
 - Community backlog: updated [#175](https://github.com/beihaili/Get-Started-with-Web3/issues/175#issuecomment-4483580706) so contributors can see that lesson 9-2 is complete and only lessons 9-3 to 9-5 remain in that issue.
-- GitHub triage: detected a new 7-PR queue, including five Dependabot PRs and two content/community PRs, so dependency and contributor review need a separate triage pass after this content release.
+- Contributor loop: [#177](https://github.com/beihaili/Get-Started-with-Web3/pull/177) and [#178](https://github.com/beihaili/Get-Started-with-Web3/pull/178) merged, closing [#162](https://github.com/beihaili/Get-Started-with-Web3/issues/162) and [#158](https://github.com/beihaili/Get-Started-with-Web3/issues/158).
+- Community backlog: opened replacement growth starter issues [#186](https://github.com/beihaili/Get-Started-with-Web3/issues/186) and [#187](https://github.com/beihaili/Get-Started-with-Web3/issues/187), keeping the open good-first issue queue at 11.
+- GitHub triage: Dependabot PRs [#179](https://github.com/beihaili/Get-Started-with-Web3/pull/179) and [#180](https://github.com/beihaili/Get-Started-with-Web3/pull/180) landed; three Dependabot PRs remain open.
 
 ## Deploy And Verification
 
@@ -31,7 +33,7 @@
 | Latest production deploy | Success | [Run 26069716949](https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26069716949) | Main deploy for [#184](https://github.com/beihaili/Get-Started-with-Web3/pull/184) completed successfully |
 | Public lesson route      | Success | `curl -L .../en/learn/module-9/9-2`                                                           | HTTP 200 and prerendered HTML contains `Rollup Principles Explained`                                      |
 | Translation coverage     | Success | `npm run translation:check`                                                                   | 15 missing-English warnings remain after adding lesson 9-2                                                |
-| AI index                 | Success | `npm run ai:index`, `npm run ai:publish`                                                      | 11 modules, 108 lesson entries, 55 glossary entries                                                       |
+| AI index                 | Success | `npm run ai:index`, `npm run ai:publish`                                                      | 11 modules, 108 lesson entries, 57 glossary entries                                                       |
 | AI entrypoints           | Success | `npm run ai:verify`                                                                           | Source/public artifacts, MCP tools, `llms.txt`, and x402 metadata pass                                    |
 | Test suite               | Success | `npm test`                                                                                    | 40 test files and 217 tests passed                                                                        |
 | Lint                     | Success | `npm run lint`                                                                                | ESLint completed with zero reported errors                                                                |
@@ -41,13 +43,13 @@
 
 ## External Distribution
 
-| Target                       | Status       | Evidence                                                                                            | Next action                                                |
-| ---------------------------- | ------------ | --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| GitHub contributor backlog   | Updated      | [#175 update](https://github.com/beihaili/Get-Started-with-Web3/issues/175#issuecomment-4483580706) | Remaining L2 translation work is now lessons 9-3 to 9-5    |
-| GitHub PR queue              | Needs triage | `gh pr list --state open`                                                                           | Review #177/#178 first, then batch safe Dependabot updates |
-| Twitter/X and Farcaster post | Ready        | `docs/strategy/2026-05-15-public-post-drafts.md`                                                    | Publish Draft 3 from beihai account                        |
-| learnblockchain.cn/community | Ready        | `docs/strategy/2026-05-15-public-post-drafts.md`                                                    | Publish Chinese community post when convenient             |
-| TensorBlock awesome MCP      | Waiting      | [PR #544](https://github.com/TensorBlock/awesome-mcp-servers/pull/544)                              | Avoid repeat pings until reviewer responds                 |
+| Target                       | Status       | Evidence                                                                                            | Next action                                             |
+| ---------------------------- | ------------ | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| GitHub contributor backlog   | Updated      | [#175 update](https://github.com/beihaili/Get-Started-with-Web3/issues/175#issuecomment-4483580706) | Remaining L2 translation work is now lessons 9-3 to 9-5 |
+| GitHub PR queue              | Needs triage | `gh pr list --state open`                                                                           | Review remaining Dependabot PRs #181-#183               |
+| Twitter/X and Farcaster post | Ready        | `docs/strategy/2026-05-15-public-post-drafts.md`                                                    | Publish Draft 3 from beihai account                     |
+| learnblockchain.cn/community | Ready        | `docs/strategy/2026-05-15-public-post-drafts.md`                                                    | Publish Chinese community post when convenient          |
+| TensorBlock awesome MCP      | Waiting      | [PR #544](https://github.com/TensorBlock/awesome-mcp-servers/pull/544)                              | Avoid repeat pings until reviewer responds              |
 
 ## Sponsor And Revenue
 
@@ -61,7 +63,7 @@
 ## Blockers And Risks
 
 - Growth remains flat at 614 stars; the next growth move needs actual public distribution, not only internal content shipping.
-- Open PRs jumped from 0 to 7, mostly dependency automation plus two content/community PRs. This can become review debt if not triaged quickly.
+- Open PRs are down to 3 after #177, #178, #179, and #180 landed; the remaining Dependabot PRs still need controlled review.
 - Layer 2 English coverage improves, but three lessons still remain after this branch; broader DAO and non-core docs still need translation or classification.
 - Sponsor outreach remains drafted but unsent; actual external sending still needs a confirmed human channel or connector.
 - Hosted payment, x402 enforcement, affiliate expansion, wallet flows, and payment-address changes still require explicit user confirmation.
@@ -69,7 +71,7 @@
 ## Next Operating Block
 
 1. Continue the remaining Layer 2 English translations with `L2CrossChain/03_L2Ecosystem`, or leave it open for contributors if #175 gets picked up.
-2. Triage PRs [#177](https://github.com/beihaili/Get-Started-with-Web3/pull/177) and [#178](https://github.com/beihaili/Get-Started-with-Web3/pull/178), then batch low-risk Dependabot updates.
+2. Triage remaining Dependabot PRs [#181](https://github.com/beihaili/Get-Started-with-Web3/pull/181)-[#183](https://github.com/beihaili/Get-Started-with-Web3/pull/183) with full CI evidence before merging.
 3. Publish the ready X/Farcaster and Chinese community posts so the new content work feeds the 1000-star growth loop.
 
 ## Evidence Links
@@ -82,5 +84,9 @@
 - First L2 English translation PR: https://github.com/beihaili/Get-Started-with-Web3/pull/174
 - Second L2 English translation PR: https://github.com/beihaili/Get-Started-with-Web3/pull/184
 - Second L2 English translation: `en/L2CrossChain/02_RollupPrinciples/README.md`
+- Quiz contributor PR: https://github.com/beihaili/Get-Started-with-Web3/pull/177
+- Glossary contributor PR: https://github.com/beihaili/Get-Started-with-Web3/pull/178
+- Replacement starter issue: https://github.com/beihaili/Get-Started-with-Web3/issues/186
+- Replacement starter issue: https://github.com/beihaili/Get-Started-with-Web3/issues/187
 - AI manifest: `ai/manifest.json`
 - AI content index: `ai/content-index.json`
