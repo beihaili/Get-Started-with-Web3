@@ -2147,6 +2147,43 @@ export const QUIZ_BANK = {
       explanation:
         'DApp 通过浏览器注入的 window.ethereum 对象（由 MetaMask 等钱包提供）请求连接，用户在钱包中确认授权，私钥始终由钱包保管。',
     },
+    {
+      // 初学者常见错误
+      question: '初学者在开发 DApp 时，以下哪个错误最为常见？',
+      options: [
+        '不处理用户拒绝钱包连接的情况，导致应用程序崩溃',
+        '使用 wagmi 库进行合约读取',
+        '在交易确认后再更新 UI 状态',
+        '从合约编译产物中加载 ABI',
+      ],
+      correctAnswer: 0,
+      explanation:
+        '钱包连接请求可能被用户拒绝，如果代码中不捕获 rejected 状态，应用会抛出未处理的错误并崩溃。正确做法是始终用 try/catch 包裹连接调用，并给用户友好的提示。',
+    },
+    {
+      question: '在 wagmi 中，useReadContract 与 useWriteContract 的核心区别是什么？',
+      options: [
+        '两者功能相同，都可以读写合约',
+        'useReadContract 用于免费的只读调用；useWriteContract 发起需要签名和 Gas 的状态修改交易',
+        'useReadContract 需要 API 密钥；useWriteContract 是免费的',
+        'useReadContract 只支持 ERC-20；useWriteContract 支持所有合约类型',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'useReadContract 调用 view/pure 函数，不消耗 Gas 也不需要钱包签名；useWriteContract 调用状态修改函数，需要用户通过钱包签名并支付 Gas 费。两者语义不同，不能互换使用。',
+    },
+    {
+      question: '在发送交易前，为什么需要验证当前连接的 chainId？',
+      options: [
+        '不需要，交易会自动路由到正确的网络',
+        '防止用户在错误的网络上发送交易，避免资金损失或交易失败',
+        '只有 ERC-20 代币转账才需要验证 chainId',
+        '仅在使用测试网时才需要检查 chainId',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '若 DApp 目标合约部署在主网，但用户的钱包当前连接了 Sepolia 测试网（或反之），交易会发到错误的链，轻则失败，重则资金受损。正确做法是在发送交易前检测 chainId，不匹配时提示用户切换网络。',
+    },
   ],
   '7-3': [
     // 如何阅读区块浏览器

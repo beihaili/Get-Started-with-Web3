@@ -12,11 +12,14 @@ describe('Quiz data completeness', () => {
     }
   });
 
-  it('each lesson quiz has exactly 5 questions', () => {
+  it('each lesson quiz has at least 5 questions', () => {
     for (const lessonId of allLessonIds) {
       const quiz = QUIZ_BANK[lessonId];
       if (quiz) {
-        expect(quiz.length, `Lesson ${lessonId} should have 5 questions`).toBe(5);
+        expect(
+          quiz.length,
+          `Lesson ${lessonId} should have at least 5 questions`
+        ).toBeGreaterThanOrEqual(5);
       }
     }
   });
