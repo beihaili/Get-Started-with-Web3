@@ -12,7 +12,7 @@ describe('deploy workflow PR feedback', () => {
     const workflow = await readFile(path.join(projectRoot, '.github/workflows/deploy.yml'), 'utf8');
 
     expect(workflow).toContain("if: github.event_name == 'pull_request'");
-    expect(workflow).toContain('actions/upload-artifact@v4');
+    expect(workflow).toContain('actions/upload-artifact@v7');
     expect(workflow).toContain('path: ./dist');
     expect(workflow).toContain('GITHUB_RUN_ID');
     expect(workflow).toContain('/actions/runs/');

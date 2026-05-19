@@ -28,6 +28,9 @@ updates:
       - dependency-name: '@commitlint/cli'
         update-types:
           - 'version-update:semver-major'
+      - dependency-name: '@commitlint/config-conventional'
+        update-types:
+          - 'version-update:semver-major'
       - dependency-name: 'lint-staged'
         update-types:
           - 'version-update:semver-major'
