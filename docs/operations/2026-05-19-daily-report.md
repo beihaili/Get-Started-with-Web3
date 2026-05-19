@@ -22,6 +22,7 @@
 - AI-native maintenance: regenerated `ai/` and `public/ai/` artifacts after the new English lesson and smart-account glossary merge; the AI-native index now contains 108 lesson entries, 57 glossary entries, and module `9-2` has English availability set to `true`.
 - Translation operations: reduced local translation coverage warnings from 16 to 15; the remaining Layer 2 gaps are `03_L2Ecosystem`, `04_CrossChainBridges`, and `05_L2PracticalGuide`.
 - Community backlog: updated [#175](https://github.com/beihaili/Get-Started-with-Web3/issues/175#issuecomment-4483580706) so contributors can see that lesson 9-2 is complete and only lessons 9-3 to 9-5 remain in that issue.
+- Distribution planning: published `docs/strategy/2026-05-19-content-calendar.md`, defining an eight-week public content cadence and weekly theme-to-CTA mapping so shipped work consistently feeds stars/contributor growth.
 - Contributor loop: [#177](https://github.com/beihaili/Get-Started-with-Web3/pull/177) and [#178](https://github.com/beihaili/Get-Started-with-Web3/pull/178) merged, closing [#162](https://github.com/beihaili/Get-Started-with-Web3/issues/162) and [#158](https://github.com/beihaili/Get-Started-with-Web3/issues/158).
 - Community backlog: opened replacement growth starter issues [#186](https://github.com/beihaili/Get-Started-with-Web3/issues/186) and [#187](https://github.com/beihaili/Get-Started-with-Web3/issues/187), keeping the open good-first issue queue at 11; new community PRs [#194](https://github.com/beihaili/Get-Started-with-Web3/pull/194), [#195](https://github.com/beihaili/Get-Started-with-Web3/pull/195), and [#196](https://github.com/beihaili/Get-Started-with-Web3/pull/196) are pending review.
 - GitHub triage: Dependabot PRs [#179](https://github.com/beihaili/Get-Started-with-Web3/pull/179), [#180](https://github.com/beihaili/Get-Started-with-Web3/pull/180), [#182](https://github.com/beihaili/Get-Started-with-Web3/pull/182), and [#191](https://github.com/beihaili/Get-Started-with-Web3/pull/191) landed; Node 22-only PRs [#181](https://github.com/beihaili/Get-Started-with-Web3/pull/181), [#183](https://github.com/beihaili/Get-Started-with-Web3/pull/183), and [#192](https://github.com/beihaili/Get-Started-with-Web3/pull/192) were closed with migration notes.
@@ -110,3 +111,4 @@
 - Route analytics: `src/components/RouteAnalytics.jsx`
 - AI manifest: `ai/manifest.json`
 - AI content index: `ai/content-index.json`
+- Weekly content calendar: `docs/strategy/2026-05-19-content-calendar.md`
