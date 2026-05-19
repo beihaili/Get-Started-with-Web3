@@ -64,7 +64,7 @@ Update weekly.
 - [ ] Prioritize English proofreading for the highest-intent pages: README, Web3 Quick Start, Bitcoin, DeFi, L2, AI-native entry.
 - [x] Start Layer 2 English coverage with `en/L2CrossChain/01_WhyScaling/README.md`.
 - [x] Add second Layer 2 English translation with `en/L2CrossChain/02_RollupPrinciples/README.md`.
-- [ ] Create a content calendar with one public content theme per week.
+- [x] Create a content calendar with one public content theme per week (`docs/strategy/2026-05-19-content-calendar.md`).
 - [ ] Turn newly added content modules into changelog/release notes.
 - [ ] Add "Last updated" or freshness signals where valuable.
 
