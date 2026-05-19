@@ -32,7 +32,7 @@
 - `CONTRIBUTING.md` / `CONTRIBUTING.en.md`: 双语贡献指南，维护贡献路径、验证矩阵和内容质量标准。
 - `.github/ISSUE_TEMPLATE/`: Bug、feature、content/translation、growth/community 分流模板。
 - `.github/PULL_REQUEST_TEMPLATE.md`: PR 验证和内容安全检查清单。
-- `.github/workflows/deploy.yml`: PR 构建会上传 `dist` artifact，并用固定 marker 更新同一条 PR 评论，方便评审者从 Actions run 下载构建产物；合并到 `main` 后才部署 GitHub Pages。
+- `.github/workflows/deploy.yml`: PR 构建会上传 `dist` artifact；同仓库 PR 会用固定 marker 更新同一条 PR 评论，fork PR 因 `GITHUB_TOKEN` 写权限受限会跳过评论但不应让构建失败；合并到 `main` 后才部署 GitHub Pages。
 - `.github/dependabot.yml`: 每周检查 npm 依赖和每月检查 GitHub Actions；minor/patch 更新分组，major 更新单独处理；`@commitlint/cli` v21、`@commitlint/config-conventional` v21 和 `lint-staged` v17 当前被忽略，因为它们要求 Node 22，而项目 CI 仍使用 Node 20，需等计划内 Node 22 迁移后再解除。
 - GitHub Issue [#156](https://github.com/beihaili/Get-Started-with-Web3/issues/156): 已 pin 的公开 1000-star roadmap；维护 starter issue 队列、翻译、分发、AI-native 和赞助动作时同步参考。
 

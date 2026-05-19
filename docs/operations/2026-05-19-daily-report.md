@@ -28,6 +28,7 @@
 - Dependency hygiene: `.github/dependabot.yml` now ignores Node 22-only major updates for `@commitlint/cli`, `@commitlint/config-conventional`, and `lint-staged` until the project intentionally migrates CI and local contributor docs from Node 20.
 - CI tooling: `actions/upload-artifact` is moving to v7 together with the workflow regression test that verifies PR build artifact comments, superseding Dependabot PR [#190](https://github.com/beihaili/Get-Started-with-Web3/pull/190).
 - Website observability/domain readiness: added centralized site URL/base-path config, SPA route-level GA `page_view` tracking, env-driven sitemap/robots/AI artifact URLs, and custom-domain-safe build knobs (`VITE_SITE_BASE_URL` / `SITE_BASE_URL`, `VITE_BASE_PATH`) without enabling CNAME or DNS changes yet.
+- Community CI triage: identified that fork PRs [#194](https://github.com/beihaili/Get-Started-with-Web3/pull/194) and [#195](https://github.com/beihaili/Get-Started-with-Web3/pull/195) built successfully but failed when the workflow tried to write a PR artifact comment without token permission; prepared a workflow guard so fork PRs still upload artifacts without failing the build.
 
 ## Deploy And Verification
 
@@ -39,7 +40,8 @@
 | AI index                 | Success | `npm run ai:index`, `npm run ai:publish`                                                      | 11 modules, 108 lesson entries, 57 glossary entries                                                           |
 | AI entrypoints           | Success | `npm run ai:verify`                                                                           | Source/public artifacts, MCP tools, `llms.txt`, and x402 metadata pass                                        |
 | Site analytics/domain    | Success | Targeted Vitest + local preview browser smoke                                                 | Custom-domain URL helpers, route-level pageview tracking, canonical updates, sitemap, and robots pass locally |
-| Test suite               | Success | `npm test`                                                                                    | 43 test files and 226 tests passed                                                                            |
+| Fork PR artifact comment | Local   | `npx vitest run scripts/__tests__/deploy-workflow.test.js`                                    | Regression test added for skipping PR comments on fork branches while keeping artifact uploads                |
+| Test suite               | Success | `npm test`                                                                                    | 43 test files and 227 tests passed                                                                            |
 | Lint                     | Success | `npm run lint`                                                                                | ESLint completed with zero reported errors                                                                    |
 | Production build         | Success | `npm run build`                                                                               | Vite build plus 131/131 prerendered routes passed, including `/en/learn/module-9/9-2`                         |
 | Formatting               | Success | `npx prettier --check ...`                                                                    | Changed Markdown files use Prettier style                                                                     |
@@ -67,7 +69,7 @@
 ## Blockers And Risks
 
 - Growth remains flat at 614 stars; the next growth move needs actual public distribution, not only internal content shipping.
-- Community PR queue reopened with 3 external PRs; #196 overlaps the remaining Layer 2 translation work and is currently marked DIRTY, so review and conflict triage are needed before merging.
+- Community PR queue reopened with 3 external PRs; #194/#195 need rerun after the fork-PR workflow guard lands, and #196 overlaps the remaining Layer 2 translation work and is currently marked DIRTY.
 - Dependabot queue is controlled, but Node 22 migration remains a technical stewardship item before accepting `@commitlint/cli` v21, `@commitlint/config-conventional` v21, or `lint-staged` v17.
 - Layer 2 English coverage improves, but three lessons still remain after this branch; broader DAO and non-core docs still need translation or classification.
 - Sponsor outreach remains drafted but unsent; actual external sending still needs a confirmed human channel or connector.
