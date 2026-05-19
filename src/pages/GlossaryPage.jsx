@@ -6,6 +6,7 @@ import LanguageSwitcher from '../components/LanguageSwitcher';
 import ThemeToggle from '../components/ThemeToggle';
 import SeoHead from '../components/SeoHead';
 import { GLOSSARY_DATA, GLOSSARY_CATEGORIES } from '../config/glossaryData';
+import { buildSiteUrl } from '../config/siteConfig';
 
 /**
  * Category color mapping for pill buttons and term tags.
@@ -45,10 +46,9 @@ const GlossaryPage = () => {
     });
   }, [searchQuery, activeCategory]);
 
-  const siteUrl = 'https://beihaili.github.io/Get-Started-with-Web3/';
-  const canonicalUrl = `${siteUrl}${lang}/glossary`;
+  const canonicalUrl = buildSiteUrl(`/${lang}/glossary`);
   const altLang = lang === 'en' ? 'zh' : 'en';
-  const alternateUrl = `${siteUrl}${altLang}/glossary`;
+  const alternateUrl = buildSiteUrl(`/${altLang}/glossary`);
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950">

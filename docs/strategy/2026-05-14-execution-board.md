@@ -6,16 +6,16 @@
 
 ## Current Snapshot
 
-| Area             | Status                | Next Action                                                      |
-| ---------------- | --------------------- | ---------------------------------------------------------------- |
-| Technical health | Healthy               | Keep `npm test`, `npm run lint`, `npm run ai:verify` green       |
-| GitHub growth    | Under-monetized       | Improve README conversion and launch distribution campaigns      |
-| SEO              | Partially implemented | Fix language metadata and route coverage                         |
-| English content  | Incomplete            | Close 17 missing translations or classify non-course docs        |
-| AI-native layer  | Strong MVP            | Productize story and prepare paid-tool landing                   |
-| Monetization     | Passive only          | Create sponsor kit and sponsor outreach drafts                   |
-| Community        | Seeded                | Keep the pinned roadmap and 10+ starter issues current           |
-| Personal brand   | Underused             | Convert every shipment into public posts and distribution assets |
+| Area             | Status                | Next Action                                                                                            |
+| ---------------- | --------------------- | ------------------------------------------------------------------------------------------------------ |
+| Technical health | Healthy               | Ship analytics/domain-readiness safely, keep verification green, and plan Node 22 migration separately |
+| GitHub growth    | Under-monetized       | Improve README conversion and launch distribution campaigns                                            |
+| SEO              | Partially implemented | Fix language metadata and route coverage                                                               |
+| English content  | Incomplete            | Close 15 missing translations or classify non-course docs                                              |
+| AI-native layer  | Strong MVP            | Productize story and prepare paid-tool landing                                                         |
+| Monetization     | Passive only          | Create sponsor kit and sponsor outreach drafts                                                         |
+| Community        | Converting            | Keep accepted contributor PRs moving into recognition and backlog refresh                              |
+| Personal brand   | Underused             | Convert every shipment into public posts and distribution assets                                       |
 
 ## KPI Board
 
@@ -52,6 +52,7 @@ Update weekly.
 - [x] Fix `html lang`, `og:locale`, Twitter metadata, and JSON-LD language for `/en` pages.
 - [x] Ensure `/zh`, `/en`, `/glossary`, `/articles`, lesson pages, `llms.txt`, and AI artifact URLs are easy to discover.
 - [x] Add `glossary` routes to `scripts/generate-sitemap.mjs` and `scripts/prerender.mjs` if still missing.
+- [x] Add custom-domain-ready canonical, sitemap, robots, and AI artifact URL configuration without activating CNAME before DNS confirmation.
 - [ ] Check public prerendered HTML after build.
 - [x] Create `docs/strategy/awesome-list-submissions.md`.
 - [x] Draft submissions to Web3, Bitcoin, blockchain, open-source education, and AI-agent resource lists.
@@ -60,8 +61,10 @@ Update weekly.
 
 **Outcome:** The curriculum feels complete and current enough to recommend.
 
-- [ ] Finish or classify the 17 missing English translations.
+- [ ] Finish or classify the 15 missing English translations.
 - [ ] Prioritize English proofreading for the highest-intent pages: README, Web3 Quick Start, Bitcoin, DeFi, L2, AI-native entry.
+- [x] Start Layer 2 English coverage with `en/L2CrossChain/01_WhyScaling/README.md`.
+- [x] Add second Layer 2 English translation with `en/L2CrossChain/02_RollupPrinciples/README.md`.
 - [ ] Create a content calendar with one public content theme per week.
 - [ ] Turn newly added content modules into changelog/release notes.
 - [ ] Add "Last updated" or freshness signals where valuable.
@@ -85,7 +88,7 @@ Update weekly.
 - [x] Draft 3 sponsor outreach templates: wallet, infrastructure, exchange/affiliate.
 - [x] Draft sponsor acceptance policy.
 - [x] Track sponsor leads in a simple Markdown table until volume justifies a CRM: `docs/strategy/2026-05-15-sponsor-leads-tracker.md`.
-- [ ] Review donation and affiliate disclosures.
+- [x] Review donation and affiliate disclosures.
 
 ### 6. Contributor Community
 
@@ -93,10 +96,11 @@ Update weekly.
 
 - [x] Create public roadmap issue draft and pin it in GitHub: [#156](https://github.com/beihaili/Get-Started-with-Web3/issues/156).
 - [x] Improve issue templates with "expected files", "definition of done", and "good first issue candidate".
-- [x] Keep 10-20 good first issues active; 10 open as of 2026-05-18.
+- [x] Keep 10-20 good first issues active; 11 open as of 2026-05-18 after [#175](https://github.com/beihaili/Get-Started-with-Web3/issues/175) packaged the remaining L2 translation work.
 - [x] Add contributor ladder to CONTRIBUTING docs.
-- [ ] Draft monthly contributor spotlight template.
-- [ ] Ensure contributor page has a reason to share.
+- [x] Draft monthly contributor spotlight template.
+- [x] Publish first contributor spotlight and sync it to the pinned roadmap issue.
+- [x] Ensure contributor page has a reason to share.
 
 ### 7. Technical Stewardship
 
@@ -107,8 +111,11 @@ Update weekly.
 - [x] Correct Tailwind CSS v4 entrypoint so production builds emit full theme utilities and class-based dark mode styles.
 - [x] Add `sync-content` fallback coverage so English lessons do not ship broken local image references when the corresponding Chinese assets exist.
 - [x] Prepare PR build artifact comments for [#40](https://github.com/beihaili/Get-Started-with-Web3/issues/40) so contributors can download reviewed builds from the Actions run.
-- [ ] Keep Dependabot PRs under control; evaluate Tailwind/ESLint major upgrades separately.
+- [x] Clear the 2026-05-19 Dependabot queue; merge Node-20-compatible updates, accept `actions/upload-artifact` v7 with a matching workflow test update, and close Node-22-only majors with notes.
+- [x] Add SPA route-level GA pageview tracking and centralized site URL/base-path config for future `bhbtc.xyz` activation.
+- [ ] Plan Node 22 migration before accepting `@commitlint/cli` v21, `@commitlint/config-conventional` v21, or `lint-staged` v17.
 - [ ] Run `npm test`, `npm run lint`, and `npm run ai:verify` before claiming work is complete.
+- [x] Expose translation coverage checks through `npm run translation:check`.
 - [ ] Run `npm run build` before shipping SEO/prerender changes.
 - [ ] Update `AGENTS.md` when architecture, commands, or operating docs change.
 - [ ] Avoid adding heavy wallet or payment dependencies until a specific monetization experiment requires them.
@@ -162,7 +169,16 @@ Daily report should include:
 
 ## External Action Log
 
-| Date       | Action                                                                                          | Result                                                                                                                                                                                                                                                                                      |
-| ---------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2026-05-14 | Updated GitHub repo description, homepage, and topics for AI-native Web3 curriculum positioning | Completed via `gh repo edit`; topics now include `ai-native`, `mcp`, `llms-txt`, `web3-education`, `bitcoin-education`, `defi`, `layer2`, `dao`, `ethereum`, `learning-platform`                                                                                                            |
-| 2026-05-18 | Pinned public 1000-star roadmap issue and seeded contributor starter backlog                    | Created [#156](https://github.com/beihaili/Get-Started-with-Web3/issues/156) and six new good-first issues [#157](https://github.com/beihaili/Get-Started-with-Web3/issues/157)-[#162](https://github.com/beihaili/Get-Started-with-Web3/issues/162), bringing open good-first issues to 10 |
+| Date       | Action                                                                                          | Result                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ---------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 2026-05-14 | Updated GitHub repo description, homepage, and topics for AI-native Web3 curriculum positioning | Completed via `gh repo edit`; topics now include `ai-native`, `mcp`, `llms-txt`, `web3-education`, `bitcoin-education`, `defi`, `layer2`, `dao`, `ethereum`, `learning-platform`                                                                                                                                                                                                                                                                                                                                                     |
+| 2026-05-18 | Pinned public 1000-star roadmap issue and seeded contributor starter backlog                    | Created [#156](https://github.com/beihaili/Get-Started-with-Web3/issues/156) and six new good-first issues [#157](https://github.com/beihaili/Get-Started-with-Web3/issues/157)-[#162](https://github.com/beihaili/Get-Started-with-Web3/issues/162), bringing open good-first issues to 10                                                                                                                                                                                                                                          |
+| 2026-05-18 | Accepted first starter proofreading PR and backfilled contributor queue                         | Merged external contributor PR [#167](https://github.com/beihaili/Get-Started-with-Web3/pull/167), closed [#159](https://github.com/beihaili/Get-Started-with-Web3/issues/159), and opened replacement good-first issue [#169](https://github.com/beihaili/Get-Started-with-Web3/issues/169)                                                                                                                                                                                                                                         |
+| 2026-05-18 | Published first contributor spotlight artifact                                                  | Created `docs/community/spotlights/2026-05-first-contributor-spotlight.md` to recognize [#167](https://github.com/beihaili/Get-Started-with-Web3/pull/167) using public PR/issue evidence and no reward promises                                                                                                                                                                                                                                                                                                                     |
+| 2026-05-18 | Updated pinned roadmap with first contributor spotlight loop                                    | Posted a public [#156 roadmap update](https://github.com/beihaili/Get-Started-with-Web3/issues/156#issuecomment-4474624411) linking accepted starter PR [#167](https://github.com/beihaili/Get-Started-with-Web3/pull/167), closed issue [#159](https://github.com/beihaili/Get-Started-with-Web3/issues/159), and replacement starter issue [#169](https://github.com/beihaili/Get-Started-with-Web3/issues/169)                                                                                                                    |
+| 2026-05-18 | Published first Layer 2 English translation and backfilled translation backlog                  | Merged [#174](https://github.com/beihaili/Get-Started-with-Web3/pull/174) for `en/L2CrossChain/01_WhyScaling/README.md`, reduced missing English translation warnings from 17 to 16, and opened follow-up starter issue [#175](https://github.com/beihaili/Get-Started-with-Web3/issues/175) for the remaining module 9 lessons                                                                                                                                                                                                      |
+| 2026-05-19 | Published second Layer 2 English translation                                                    | Merged [#184](https://github.com/beihaili/Get-Started-with-Web3/pull/184) for `en/L2CrossChain/02_RollupPrinciples/README.md`, regenerated AI artifacts to 108 lesson entries, reduced local translation coverage warnings from 16 to 15, confirmed main deploy [run 26069716949](https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26069716949), and updated [#175](https://github.com/beihaili/Get-Started-with-Web3/issues/175#issuecomment-4483580706)                                                              |
+| 2026-05-19 | Replenished starter backlog and synced glossary artifacts                                       | [#177](https://github.com/beihaili/Get-Started-with-Web3/pull/177) and [#178](https://github.com/beihaili/Get-Started-with-Web3/pull/178) landed, closing [#162](https://github.com/beihaili/Get-Started-with-Web3/issues/162) and [#158](https://github.com/beihaili/Get-Started-with-Web3/issues/158); opened growth starter issues [#186](https://github.com/beihaili/Get-Started-with-Web3/issues/186) and [#187](https://github.com/beihaili/Get-Started-with-Web3/issues/187); regenerated AI artifacts to 57 glossary entries |
+| 2026-05-19 | Cleared Dependabot queue                                                                        | Merged Node-20-compatible [#182](https://github.com/beihaili/Get-Started-with-Web3/pull/182) after local `npm run lint` and `npm test`; closed Node-22-only [#181](https://github.com/beihaili/Get-Started-with-Web3/pull/181) and [#183](https://github.com/beihaili/Get-Started-with-Web3/pull/183); added Dependabot ignore rules for those major lines until a planned Node 22 migration                                                                                                                                         |
+| 2026-05-19 | Completed second Dependabot follow-up                                                           | Merged Node-20-compatible [#191](https://github.com/beihaili/Get-Started-with-Web3/pull/191), closed Node-22-only [#192](https://github.com/beihaili/Get-Started-with-Web3/pull/192), and superseded failing [#190](https://github.com/beihaili/Get-Started-with-Web3/pull/190) by updating `actions/upload-artifact` and the matching workflow test together                                                                                                                                                                        |
+| 2026-05-19 | Prepared website analytics and `bhbtc.xyz` readiness                                            | Added centralized site URL/base-path config, route-level GA pageview tracking, env-driven sitemap/robots/AI artifact URL generation, and documented that CNAME/DNS activation still needs confirmation before changing GitHub Pages custom domain settings                                                                                                                                                                                                                                                                           |

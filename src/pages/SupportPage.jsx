@@ -5,6 +5,7 @@ import { DONATION_LINKS, CRYPTO_WALLETS, SPONSORS, AFFILIATE_LINKS } from '../co
 import SeoHead from '../components/SeoHead';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import { useClipboard } from '../utils/useClipboard';
+import { buildSiteUrl } from '../config/siteConfig';
 
 /**
  * 支持页面 — 展示捐赠渠道、加密货币钱包地址和赞助商信息
@@ -14,10 +15,9 @@ const SupportPage = () => {
   const { t } = useTranslation();
   const { copied, copy } = useClipboard();
 
-  const siteUrl = 'https://beihaili.github.io/Get-Started-with-Web3/';
-  const canonicalUrl = `${siteUrl}${lang}/support`;
+  const canonicalUrl = buildSiteUrl(`/${lang}/support`);
   const altLang = lang === 'en' ? 'zh' : 'en';
-  const alternateUrl = `${siteUrl}${altLang}/support`;
+  const alternateUrl = buildSiteUrl(`/${altLang}/support`);
 
   // 判断是否有任何赞助商
   const hasSponsors =
@@ -62,12 +62,24 @@ const SupportPage = () => {
           </p>
         </div>
 
+        <section className="mb-10 border-l-4 border-cyan-400 py-1 pl-5">
+          <h2 className="text-lg font-bold text-slate-900 dark:text-white">
+            {t('support.disclosureTitle')}
+          </h2>
+          <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">
+            {t('support.disclosureBody')}
+          </p>
+        </section>
+
         {/* Section 1: Donation platforms */}
         <section className="mb-10">
           <h2 className="flex items-center gap-2 text-xl font-bold text-slate-900 dark:text-white mb-5">
             <Coffee className="w-5 h-5 text-pink-400" />
             {t('support.donationTitle')}
           </h2>
+          <p className="mb-4 text-sm leading-6 text-slate-500 dark:text-slate-400">
+            {t('support.donationDisclosure')}
+          </p>
           <div className="grid sm:grid-cols-2 gap-4">
             {DONATION_LINKS.map((link) => (
               <a
@@ -103,6 +115,9 @@ const SupportPage = () => {
             <Wallet className="w-5 h-5 text-cyan-400" />
             {t('support.cryptoTitle')}
           </h2>
+          <p className="mb-4 text-sm leading-6 text-slate-500 dark:text-slate-400">
+            {t('support.cryptoDisclosure')}
+          </p>
           <div className="space-y-3">
             {CRYPTO_WALLETS.map((wallet) => (
               <button
@@ -149,6 +164,9 @@ const SupportPage = () => {
               <ArrowUpRight className="w-5 h-5 text-yellow-400" />
               {t('support.affiliateTitle')}
             </h2>
+            <p className="mb-4 text-sm leading-6 text-slate-500 dark:text-slate-400">
+              {t('support.affiliateDisclosure')}
+            </p>
             <div className="grid sm:grid-cols-2 gap-4">
               {AFFILIATE_LINKS.map((link) => (
                 <a
@@ -185,6 +203,9 @@ const SupportPage = () => {
             <Star className="w-5 h-5 text-yellow-400" />
             {t('support.sponsorsTitle')}
           </h2>
+          <p className="mb-4 text-sm leading-6 text-slate-500 dark:text-slate-400">
+            {t('support.sponsorDisclosure')}
+          </p>
           {hasSponsors ? (
             <div className="space-y-6">
               {SPONSORS.gold.length > 0 && (

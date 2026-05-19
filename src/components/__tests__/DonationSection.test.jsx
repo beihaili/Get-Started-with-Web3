@@ -13,6 +13,8 @@ describe('DonationSection', () => {
   it('renders donation links with their URLs', () => {
     render(<DonationSection />);
 
+    expect(screen.getByText('donation.disclosure')).toBeInTheDocument();
+
     for (const link of DONATION_LINKS) {
       expect(screen.getByRole('link', { name: new RegExp(link.name, 'i') })).toHaveAttribute(
         'href',
@@ -29,6 +31,10 @@ describe('DonationSection', () => {
       expect(screen.getByRole('link', { name: new RegExp(link.name, 'i') })).toHaveAttribute(
         'href',
         link.url
+      );
+      expect(screen.getByRole('link', { name: new RegExp(link.name, 'i') })).toHaveAttribute(
+        'rel',
+        expect.stringContaining('sponsored')
       );
       expect(screen.getByText(link.descriptionZh)).toBeInTheDocument();
     }

@@ -14,6 +14,9 @@ const DonationSection = () => {
     <div className="max-w-3xl mx-auto mb-16">
       <h2 className="text-2xl font-bold text-white text-center mb-2">{t('donation.title')}</h2>
       <p className="text-slate-400 text-center text-sm mb-8">{t('donation.subtitle')}</p>
+      <p className="mx-auto mb-6 max-w-2xl text-center text-xs leading-5 text-slate-500">
+        {t('donation.disclosure')}
+      </p>
 
       {/* 捐赠渠道 */}
       <div className="grid sm:grid-cols-2 gap-4 mb-6">

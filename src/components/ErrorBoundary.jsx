@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { Translation } from 'react-i18next';
 import { AlertTriangle } from 'lucide-react';
+import { APP_BASE_PATH, joinBasePath } from '../config/siteConfig';
 
 class ErrorBoundary extends Component {
   constructor(props) {
@@ -35,7 +36,7 @@ class ErrorBoundary extends Component {
                     {t('error.reload')}
                   </button>
                   <a
-                    href="/Get-Started-with-Web3/"
+                    href={joinBasePath(APP_BASE_PATH, '/')}
                     aria-label={t('error.backHomeLabel')}
                     className="px-6 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-lg transition-colors"
                   >

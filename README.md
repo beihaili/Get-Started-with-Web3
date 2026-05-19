@@ -173,6 +173,8 @@ Start here:
 
 - [Contributing guide](CONTRIBUTING.en.md)
 - [Contributor ladder](docs/community/contributor-ladder.md)
+- [Contributor spotlight template](docs/community/contributor-spotlight-template.md)
+- [Contributor spotlights](docs/community/spotlights/README.md)
 - [Good first issues catalog](docs/community/good-first-issues.md)
 - [Open good first issues](https://github.com/beihaili/Get-Started-with-Web3/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
 - [All issues](https://github.com/beihaili/Get-Started-with-Web3/issues)
@@ -184,6 +186,7 @@ This project keeps learning content free. Support helps fund maintenance, transl
 - **GitHub Sponsors:** [github.com/sponsors/beihaili](https://github.com/sponsors/beihaili)
 - **Buy Me a Coffee:** [buymeacoffee.com/beihaili](https://buymeacoffee.com/beihaili)
 - **Sponsor kit:** [docs/strategy/2026-05-14-sponsor-kit.md](docs/strategy/2026-05-14-sponsor-kit.md)
+- **Disclosure review:** [docs/strategy/2026-05-18-donation-affiliate-disclosure-review.md](docs/strategy/2026-05-18-donation-affiliate-disclosure-review.md)
 - **ETH / EVM:** `0xb7Cd29C78B97cdf0A6e6FFC9268d43eDc3eCa649`
 - **BTC:** `1GihPqLkjJNK2fzCMSicc9mLapKeGy3Vv1`
 - **Binance:** [Register with referral link](https://www.bsmkweb.cc/register?ref=39797374) (20% fee rebate)

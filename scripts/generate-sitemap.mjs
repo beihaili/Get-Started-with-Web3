@@ -9,10 +9,11 @@
 import { readFileSync, writeFileSync, mkdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { buildSiteUrl, normalizeSiteBaseUrl } from '../src/config/siteConfig.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DIST_DIR = join(__dirname, '..', 'dist');
-const BASE_URL = 'https://beihaili.github.io/Get-Started-with-Web3';
+const BASE_URL = normalizeSiteBaseUrl(process.env.SITE_BASE_URL || process.env.VITE_SITE_BASE_URL);
 
 // 支持的语言前缀
 const LANGS = ['zh', 'en'];
@@ -79,6 +80,14 @@ ${urlEntries}
 `;
 }
 
+function buildRobotsTxt(baseUrl) {
+  return `User-agent: *
+Allow: /
+
+Sitemap: ${buildSiteUrl('/sitemap.xml', baseUrl)}
+`;
+}
+
 function generateSitemap() {
   const learnRoutes = getLearnRoutes();
   console.log(`[sitemap] Found ${learnRoutes.length} learn routes from courseData`);
@@ -88,12 +97,12 @@ function generateSitemap() {
   for (const lang of LANGS) {
     // 静态页面：/zh, /zh/dashboard, /zh/badges, …
     for (const page of STATIC_PAGES) {
-      allUrls.push(`${BASE_URL}/${lang}${page}`);
+      allUrls.push(buildSiteUrl(`/${lang}${page}`, BASE_URL));
     }
 
     // 课程详情页：/zh/learn/module-1/1-1, …
     for (const route of learnRoutes) {
-      allUrls.push(`${BASE_URL}/${lang}${route}`);
+      allUrls.push(buildSiteUrl(`/${lang}${route}`, BASE_URL));
     }
   }
 
@@ -107,6 +116,11 @@ function generateSitemap() {
   writeFileSync(outputPath, xml, 'utf-8');
 
   console.log(`[sitemap] Written to ${outputPath}`);
+
+  const robotsPath = join(DIST_DIR, 'robots.txt');
+  writeFileSync(robotsPath, buildRobotsTxt(BASE_URL), 'utf-8');
+
+  console.log(`[robots] Written to ${robotsPath}`);
 }
 
 generateSitemap();

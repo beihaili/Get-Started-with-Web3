@@ -8,15 +8,18 @@ import {
   GITHUB_REPO,
   GITHUB_USERNAME,
 } from '../src/config/courseData.js';
+import { buildSiteUrl, normalizeSiteBaseUrl } from '../src/config/siteConfig.js';
 
 export const AI_SCHEMA_VERSION = '2026-05-09';
 export const LANGUAGES = ['zh', 'en'];
-export const SITE_BASE_URL = 'https://beihaili.github.io/Get-Started-with-Web3';
+export const SITE_BASE_URL = normalizeSiteBaseUrl(
+  process.env.SITE_BASE_URL || process.env.VITE_SITE_BASE_URL
+);
 export const GITHUB_BASE_URL = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO}/blob/${GITHUB_BRANCH}`;
 export const PUBLIC_AI_ENTRYPOINTS = {
-  llmsTxt: `${SITE_BASE_URL}/llms.txt`,
-  manifest: `${SITE_BASE_URL}/ai/manifest.json`,
-  contentIndex: `${SITE_BASE_URL}/ai/content-index.json`,
+  llmsTxt: buildSiteUrl('/llms.txt', SITE_BASE_URL),
+  manifest: buildSiteUrl('/ai/manifest.json', SITE_BASE_URL),
+  contentIndex: buildSiteUrl('/ai/content-index.json', SITE_BASE_URL),
 };
 
 export const LOCAL_MCP_CLIENT_CONFIG = {
@@ -173,7 +176,7 @@ export async function buildAiIndex(options = {}) {
         siteUrls: Object.fromEntries(
           LANGUAGES.map((lang) => [
             lang,
-            `${SITE_BASE_URL}/${lang}/learn/${module.id}/${lesson.id}`,
+            buildSiteUrl(`/${lang}/learn/${module.id}/${lesson.id}`, SITE_BASE_URL),
           ])
         ),
       });
@@ -189,7 +192,7 @@ export async function buildAiIndex(options = {}) {
       name: GITHUB_REPO,
       owner: GITHUB_USERNAME,
       branch: GITHUB_BRANCH,
-      homepage: `${SITE_BASE_URL}/`,
+      homepage: buildSiteUrl('/', SITE_BASE_URL),
       sourceUrl: `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO}`,
     },
     languages: LANGUAGES,
@@ -203,7 +206,7 @@ export async function buildAiIndex(options = {}) {
       citation: {
         file: 'src/config/glossaryData.js',
         githubUrl: `${GITHUB_BASE_URL}/src/config/glossaryData.js`,
-        siteUrl: `${SITE_BASE_URL}/zh/glossary`,
+        siteUrl: buildSiteUrl('/zh/glossary', SITE_BASE_URL),
       },
     })),
     tools: TOOL_CATALOG,
@@ -466,7 +469,7 @@ function buildCitation(lang, moduleId, lessonId, relativePath) {
   return {
     file: normalized,
     githubUrl: `${GITHUB_BASE_URL}/${encodeURI(normalized).replace(/#/g, '%23')}`,
-    siteUrl: `${SITE_BASE_URL}/${lang}/learn/${moduleId}/${lessonId}`,
+    siteUrl: buildSiteUrl(`/${lang}/learn/${moduleId}/${lessonId}`, SITE_BASE_URL),
   };
 }
 

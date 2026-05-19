@@ -17,10 +17,13 @@
 - `docs/strategy/2026-05-14-sponsor-kit.md`: 赞助包草案，包含受众、价格、曝光权益、接受政策和月度汇报指标。
 - `docs/strategy/2026-05-14-sponsor-outreach-drafts.md`: 赞助外联话术草案；常规外联可自主执行，高风险赞助对象仍需单独确认。
 - `docs/strategy/2026-05-15-sponsor-leads-tracker.md`: 具名赞助/资助线索 tracker，记录公开来源、fit score、建议外联角度、渠道、状态和风险边界；发送外联后必须同步每日运营汇报。
+- `docs/strategy/2026-05-18-donation-affiliate-disclosure-review.md`: 捐赠、赞助、联盟链接和加密货币打赏的披露审查记录；新增或扩大 affiliate、payment、wallet、x402 相关入口前必须保持公开披露并确认风险边界。
 - `docs/strategy/2026-05-18-safe-reown-impact-memo.md`: 面向 Safe Ecosystem Foundation 和 Reown / WalletConnect 的资助/赞助 impact memo 草案，包含当前指标、官方来源、建议 ask、外联话术和发送前检查清单；尚未发送外联。
 - `docs/strategy/2026-05-18-paid-ai-tools-landing-copy.md`: 未来 hosted AI 工具 landing copy 草案，覆盖 `generate_personalized_web3_plan` 和 `audit_learning_answer` 的定位、CTA、边界文案、FAQ 和 launch checklist；不得描述为已上线付费能力。
 - `docs/strategy/2026-05-14-awesome-list-submissions.md`: awesome-list 和社区分发追踪，包含定位文案、目标列表、PR 模板和中文社区帖草案。
 - `docs/community/contributor-ladder.md`: 贡献者成长路径，定义 first-time contributor、repeat contributor、reviewer、module steward 和 community/sponsor ally。
+- `docs/community/contributor-spotlight-template.md`: 月度贡献者 spotlight 模板，用于把公开 PR、issue、社区分发和增长指标转化为 GitHub/社交更新；不能承诺代币奖励、付费曝光或金融背书。
+- `docs/community/spotlights/`: 已发布贡献者 spotlight 目录；只引用公开 GitHub username、PR、issue、公开指标和贡献影响，不写未经同意的个人信息。
 - `docs/community/good-first-issues.md`: 可复制到 GitHub Issues 的 starter issue 清单，包含标签、背景、验收标准和验证方式。
 - `docs/operations/`: 每日运营汇报目录；`README.md` 定义 cadence、数据源和风险边界，`templates/daily-report-template.md` 是每日汇报模板，按 `YYYY-MM-DD-daily-report.md` 记录实际进展、指标、部署、外部分发、赞助线索和下一步。
 
@@ -29,7 +32,8 @@
 - `CONTRIBUTING.md` / `CONTRIBUTING.en.md`: 双语贡献指南，维护贡献路径、验证矩阵和内容质量标准。
 - `.github/ISSUE_TEMPLATE/`: Bug、feature、content/translation、growth/community 分流模板。
 - `.github/PULL_REQUEST_TEMPLATE.md`: PR 验证和内容安全检查清单。
-- `.github/workflows/deploy.yml`: PR 构建会上传 `dist` artifact，并用固定 marker 更新同一条 PR 评论，方便评审者从 Actions run 下载构建产物；合并到 `main` 后才部署 GitHub Pages。
+- `.github/workflows/deploy.yml`: PR 构建会上传 `dist` artifact；同仓库 PR 会用固定 marker 更新同一条 PR 评论，fork PR 因 `GITHUB_TOKEN` 写权限受限会跳过评论但不应让构建失败；合并到 `main` 后才部署 GitHub Pages。
+- `.github/dependabot.yml`: 每周检查 npm 依赖和每月检查 GitHub Actions；minor/patch 更新分组，major 更新单独处理；`@commitlint/cli` v21、`@commitlint/config-conventional` v21 和 `lint-staged` v17 当前被忽略，因为它们要求 Node 22，而项目 CI 仍使用 Node 20，需等计划内 Node 22 迁移后再解除。
 - GitHub Issue [#156](https://github.com/beihaili/Get-Started-with-Web3/issues/156): 已 pin 的公开 1000-star roadmap；维护 starter issue 队列、翻译、分发、AI-native 和赞助动作时同步参考。
 
 工作边界：
@@ -48,6 +52,7 @@ npm run lint            # ESLint 检查
 npm run ai:index        # 生成 AI-native 内容索引
 npm run ai:publish      # 复制 AI artifacts 到 public/，供 GitHub Pages 发布
 npm run ai:verify       # 验证公开 AI 入口、MCP 工具清单和 x402 元数据
+npm run translation:check # 非阻塞检查 zh/ 中缺失的英文翻译
 npm run mcp:web3        # 启动本地 stdio MCP server
 ```
 
@@ -67,6 +72,12 @@ npm run mcp:web3        # 启动本地 stdio MCP server
 - `scripts/ai-content-core.mjs`: 搜索、读取课程、生成学习路径、组合上下文等纯函数。
 
 修改课程结构、术语表或 Agent 工具元数据后，运行 `npm run ai:index && npm run ai:publish && npm run ai:verify`，并提交更新后的 `ai/` 与 `public/` artifacts。
+
+## 官网 URL、域名与统计
+
+- `src/config/siteConfig.js`: 统一管理默认官网 URL、base path、canonical/share URL 拼接；默认仍是 GitHub Pages `https://beihaili.github.io/Get-Started-with-Web3` 和 `/Get-Started-with-Web3/`。
+- 未来接入 `bhbtc.xyz` 时，构建可用 `VITE_SITE_BASE_URL=https://...` / `SITE_BASE_URL=https://...` 更新前端 canonical、sitemap、robots 和 AI artifacts；同时用 `VITE_BASE_PATH=/` 切到自定义域名根路径。不要在 DNS/GitHub Pages custom domain 未确认前提交 `public/CNAME`。
+- `index.html` 保留 GA4 和 Cloudflare Web Analytics 脚本；GA 自动初始 pageview 已关闭，由 `src/components/RouteAnalytics.jsx` + `src/utils/analytics.js` 在 SPA 路由切换时发送 `page_view`。
 
 ## 国际化与命名空间
 
@@ -144,4 +155,6 @@ Agent 使用 MCP 工具回答时，应优先引用工具返回的 `citation.file
 - 英文课程 README 可以复用对应中文课程目录下的本地图片；`npm run sync-content` 会按 README 中的本地图片引用补齐缺失英文发布资产。若英文课程需要不同图片，直接放到 `en/` 对应目录，脚本不会覆盖已有英文图片。
 - 新增术语时，更新 `src/config/glossaryData.js` 和对应测试，保持 `GLOSSARY_CATEGORIES` 与测试允许分类一致，再运行 `npm run ai:index`。
 - MCP 工具必须保持只读，返回结果需包含可引用的 `citation.file` 或 URL。
+- 接受 Dependabot major 更新前，先检查包的 `engines.node` 与 `.github/workflows/*.yml` 中的 Node 版本；Node 22-only 工具链更新必须作为独立迁移处理。
+- 修改官网 URL、Vite base、sitemap、robots、prerender、AI artifact public URL 或 analytics 逻辑后，优先跑 site/analytics 相关 Vitest、`npm run ai:index && npm run ai:publish && npm run ai:verify`、`npm run build`，并用浏览器 smoke 核对 canonical 与 route tracking 无控制台错误。
 - 修改代码后至少运行相关 Vitest；完成前运行 `npm test` 和 `npm run lint`。

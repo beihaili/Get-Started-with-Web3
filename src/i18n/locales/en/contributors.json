@@ -1,7 +1,13 @@
 {
   "pageTitle": "Contributors",
-  "pageDesc": "Meet the people who built this platform",
+  "pageDesc": "Meet the people building this open Web3 learning platform",
   "heading": "Our Contributors",
+  "spotlightEyebrow": "Monthly contributor spotlight",
+  "spotlightHeading": "Your first useful PR can become a public project update",
+  "spotlightDesc": "Merged contributions are eligible for the monthly spotlight, roadmap updates, and community posts when they make the curriculum clearer, safer, more complete, or easier to share.",
+  "spotlightPrimaryCta": "Pick a starter issue",
+  "spotlightSecondaryCta": "Read the ladder",
+  "spotlightShareNote": "Recognition is tied to public work and learner impact. The project does not promise token rewards, paid placement, or financial endorsements for contributions.",
   "contributions": "contributions",
   "loading": "Loading contributors...",
   "error": "Failed to load contributors"
