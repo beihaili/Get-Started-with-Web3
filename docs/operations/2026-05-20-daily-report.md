@@ -21,6 +21,7 @@
 - Community backlog: created three replacement starter issues so the good-first queue recovered from 10 to 13: [#201](https://github.com/beihaili/Get-Started-with-Web3/issues/201) for mobile course readability, [#202](https://github.com/beihaili/Get-Started-with-Web3/issues/202) for sponsor-kit comparable project research, and [#203](https://github.com/beihaili/Get-Started-with-Web3/issues/203) for one lesson visual/diagram.
 - Content product: Layer 2 English coverage is complete after [#199](https://github.com/beihaili/Get-Started-with-Web3/pull/199) added lessons `9-3`, `9-4`, and `9-5`; [#175](https://github.com/beihaili/Get-Started-with-Web3/issues/175) is closed and [#196](https://github.com/beihaili/Get-Started-with-Web3/pull/196) is closed as superseded/integrated.
 - Community PR hygiene: PR queue remains clear after #194, #195, #196, #198, #199, and #200 were resolved.
+- External distribution: published a 2026-05-20 update in the pinned 1000-star roadmap issue [#156](https://github.com/beihaili/Get-Started-with-Web3/issues/156#issuecomment-4495275138), linking the completed Layer 2 English lessons, AI-native index progress, and starter issue queue.
 - Operations: [#200](https://github.com/beihaili/Get-Started-with-Web3/pull/200) finalized the 2026-05-19 operations report after the Layer 2 translations deployed.
 - AI-native maintenance: public AI index remains at 111 lesson entries and 57 glossary entries, with module 9 English availability set to `true` for lessons `9-2` through `9-5`.
 
@@ -40,6 +41,7 @@
 | Target                       | Status      | Evidence                                                                                                                                                                                                         | Next action                                    |
 | ---------------------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
 | GitHub contributor backlog   | Replenished | [#201](https://github.com/beihaili/Get-Started-with-Web3/issues/201), [#202](https://github.com/beihaili/Get-Started-with-Web3/issues/202), [#203](https://github.com/beihaili/Get-Started-with-Web3/issues/203) | Watch for first contributor pickup             |
+| GitHub roadmap update        | Published   | [#156 comment](https://github.com/beihaili/Get-Started-with-Web3/issues/156#issuecomment-4495275138)                                                                                                             | Reuse this update for social/community posts   |
 | Twitter/X and Farcaster post | Ready       | `docs/strategy/2026-05-15-public-post-drafts.md`                                                                                                                                                                 | Publish from beihai account                    |
 | learnblockchain.cn/community | Ready       | `docs/strategy/2026-05-15-public-post-drafts.md`                                                                                                                                                                 | Publish Chinese community post when convenient |
 | TensorBlock awesome MCP      | Waiting     | [PR #544](https://github.com/TensorBlock/awesome-mcp-servers/pull/544)                                                                                                                                           | Avoid repeat pings until reviewer responds     |
@@ -77,3 +79,4 @@
 - Starter issue: https://github.com/beihaili/Get-Started-with-Web3/issues/201
 - Starter issue: https://github.com/beihaili/Get-Started-with-Web3/issues/202
 - Starter issue: https://github.com/beihaili/Get-Started-with-Web3/issues/203
+- Public roadmap update: https://github.com/beihaili/Get-Started-with-Web3/issues/156#issuecomment-4495275138
