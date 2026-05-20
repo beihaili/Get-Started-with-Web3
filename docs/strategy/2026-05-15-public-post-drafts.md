@@ -2,7 +2,7 @@
 
 **Date:** 2026-05-15
 **Owner:** beihai + Codex
-**Status:** Ready for publishing; GitHub release published on 2026-05-18
+**Status:** Ready for social/community publishing; GitHub releases published on 2026-05-18 and 2026-05-20
 
 ## Publishing Rules
 
@@ -146,3 +146,4 @@ Site: https://beihaili.github.io/Get-Started-with-Web3/
 | ---------- | -------------------- | ---------------------------------------------------------------------------------------------- | --------- | ------------------------ | ----------------------------------------------------------------------------------------------------------- |
 | 2026-05-18 | GitHub Release       | https://github.com/beihaili/Get-Started-with-Web3/releases/tag/interactive-learning-2026-05-18 | Published | 614 stars at publication | Product update for Merkle Tree Builder and EIP-1559 Gas Fee Calculator.                                     |
 | 2026-05-20 | GitHub roadmap issue | https://github.com/beihaili/Get-Started-with-Web3/issues/156#issuecomment-4495275138           | Published | 614 stars at publication | Public update for completed Layer 2 English coverage, AI-native index progress, and 13 open starter issues. |
+| 2026-05-20 | GitHub Release       | https://github.com/beihaili/Get-Started-with-Web3/releases/tag/l2-english-ai-index-2026-05-20  | Published | 614 stars at publication | Release for completed Layer 2 English coverage, AI-native content index progress, and contribution paths.   |
