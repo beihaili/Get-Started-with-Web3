@@ -1,5 +1,5 @@
-import { beforeEach, describe, expect, it } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import SupportPage from '../SupportPage';
 import LanguageProvider from '../../i18n/LanguageProvider';
@@ -30,6 +30,13 @@ function renderSupportPage(initialEntry = '/en/support') {
 
 describe('SupportPage disclosures', () => {
   beforeEach(async () => {
+    vi.unstubAllGlobals();
+    Object.defineProperty(navigator, 'clipboard', {
+      value: {
+        writeText: vi.fn().mockResolvedValue(undefined),
+      },
+      configurable: true,
+    });
     await prepareSupportTranslations();
   });
 
@@ -53,5 +60,49 @@ describe('SupportPage disclosures', () => {
       'rel',
       expect.stringContaining('sponsored')
     );
+  });
+
+  it('tracks support page donation clicks', () => {
+    const gtag = vi.fn();
+    vi.stubGlobal('gtag', gtag);
+    renderSupportPage();
+
+    fireEvent.click(screen.getByRole('link', { name: /Buy Me a Coffee/i }));
+
+    expect(gtag).toHaveBeenCalledWith(
+      'event',
+      'support_link_click',
+      expect.objectContaining({
+        event_category: 'monetization',
+        support_type: 'donation',
+        link_name: 'Buy Me a Coffee',
+        placement: 'support_page',
+      })
+    );
+  });
+
+  it('tracks support page wallet copy intent without sending wallet addresses', async () => {
+    const gtag = vi.fn();
+    vi.stubGlobal('gtag', gtag);
+    renderSupportPage();
+
+    fireEvent.click(screen.getByRole('button', { name: /Ethereum \/ Base \/ Polygon/ }));
+
+    await waitFor(() =>
+      expect(gtag).toHaveBeenCalledWith(
+        'event',
+        'wallet_address_copy',
+        expect.objectContaining({
+          event_category: 'monetization',
+          wallet_chain: 'ETH',
+          wallet_network: 'Ethereum / Base / Polygon',
+          placement: 'support_page',
+        })
+      )
+    );
+
+    const walletPayload = gtag.mock.calls.find((call) => call[1] === 'wallet_address_copy')?.[2];
+    expect(walletPayload).not.toHaveProperty('wallet_address');
+    expect(walletPayload).not.toHaveProperty('address');
   });
 });

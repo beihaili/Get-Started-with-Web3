@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Heart, Wallet, ArrowUpRight, Copy, Check } from 'lucide-react';
 import { DONATION_LINKS, CRYPTO_WALLETS, AFFILIATE_LINKS } from '../config/sponsorData';
 import { useClipboard } from '../utils/useClipboard';
+import { trackAnalyticsEvent } from '../utils/analytics';
 
 /**
  * 捐赠区块（首页展示）
@@ -10,6 +11,27 @@ import { useClipboard } from '../utils/useClipboard';
 const DonationSection = () => {
   const { t } = useTranslation();
   const { copied, copy } = useClipboard();
+
+  const trackSupportLinkClick = (link, supportType) => {
+    trackAnalyticsEvent('support_link_click', {
+      event_category: 'monetization',
+      support_type: supportType,
+      link_name: link.name,
+      placement: 'landing_donation_section',
+      destination_hostname: new URL(link.url).hostname,
+    });
+  };
+
+  const handleWalletCopy = (wallet) => {
+    trackAnalyticsEvent('wallet_address_copy', {
+      event_category: 'monetization',
+      wallet_chain: wallet.chain,
+      wallet_network: wallet.network,
+      placement: 'landing_donation_section',
+    });
+    copy(wallet.address);
+  };
+
   return (
     <div className="max-w-3xl mx-auto mb-16">
       <h2 className="text-2xl font-bold text-white text-center mb-2">{t('donation.title')}</h2>
@@ -26,6 +48,7 @@ const DonationSection = () => {
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackSupportLinkClick(link, 'donation')}
             className="flex items-center gap-3 p-4 bg-slate-800 border border-slate-700
               hover:border-pink-500/40 rounded-xl transition-all hover:scale-105 group"
           >
@@ -54,6 +77,7 @@ const DonationSection = () => {
               href={link.url}
               target="_blank"
               rel="noopener sponsored noreferrer"
+              onClick={() => trackSupportLinkClick(link, 'affiliate')}
               className="flex items-center gap-3 p-4 bg-slate-800 border border-slate-700
                 hover:border-yellow-500/40 rounded-xl transition-all hover:scale-105 group"
             >
@@ -84,7 +108,7 @@ const DonationSection = () => {
           <button
             key={wallet.chain}
             type="button"
-            onClick={() => copy(wallet.address)}
+            onClick={() => handleWalletCopy(wallet)}
             title={t('donation.copyAddress')}
             className="w-full flex items-start gap-3 p-4 bg-slate-800 border border-slate-700 rounded-xl
               text-left cursor-pointer hover:border-cyan-500/40 transition-all group"

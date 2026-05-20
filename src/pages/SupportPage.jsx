@@ -6,6 +6,7 @@ import SeoHead from '../components/SeoHead';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import { useClipboard } from '../utils/useClipboard';
 import { buildSiteUrl } from '../config/siteConfig';
+import { trackAnalyticsEvent } from '../utils/analytics';
 
 /**
  * 支持页面 — 展示捐赠渠道、加密货币钱包地址和赞助商信息
@@ -22,6 +23,26 @@ const SupportPage = () => {
   // 判断是否有任何赞助商
   const hasSponsors =
     SPONSORS.gold.length > 0 || SPONSORS.silver.length > 0 || SPONSORS.bronze.length > 0;
+
+  const trackSupportLinkClick = (link, supportType) => {
+    trackAnalyticsEvent('support_link_click', {
+      event_category: 'monetization',
+      support_type: supportType,
+      link_name: link.name,
+      placement: 'support_page',
+      destination_hostname: new URL(link.url).hostname,
+    });
+  };
+
+  const handleWalletCopy = (wallet) => {
+    trackAnalyticsEvent('wallet_address_copy', {
+      event_category: 'monetization',
+      wallet_chain: wallet.chain,
+      wallet_network: wallet.network,
+      placement: 'support_page',
+    });
+    copy(wallet.address);
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
@@ -87,6 +108,7 @@ const SupportPage = () => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackSupportLinkClick(link, 'donation')}
                 className="flex items-center gap-4 p-5 bg-white/60 dark:bg-slate-900/60 border border-slate-200/50 dark:border-slate-700/50
                   hover:border-pink-500/40 rounded-xl transition-all hover:scale-[1.02] group"
               >
@@ -123,7 +145,7 @@ const SupportPage = () => {
               <button
                 key={wallet.chain}
                 type="button"
-                onClick={() => copy(wallet.address)}
+                onClick={() => handleWalletCopy(wallet)}
                 title={t('donation.copyAddress')}
                 className="w-full flex items-start gap-4 p-5 bg-white/60 dark:bg-slate-900/60 border border-slate-200/50 dark:border-slate-700/50 rounded-xl
                   text-left cursor-pointer hover:border-cyan-500/40 transition-all group"
@@ -174,6 +196,7 @@ const SupportPage = () => {
                   href={link.url}
                   target="_blank"
                   rel="noopener sponsored noreferrer"
+                  onClick={() => trackSupportLinkClick(link, 'affiliate')}
                   className="flex items-center gap-4 p-5 bg-white/60 dark:bg-slate-900/60 border border-slate-200/50 dark:border-slate-700/50
                     hover:border-yellow-500/40 rounded-xl transition-all hover:scale-[1.02] group"
                 >
