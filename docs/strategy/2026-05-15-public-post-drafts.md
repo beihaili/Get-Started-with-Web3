@@ -142,6 +142,7 @@ Site: https://beihaili.github.io/Get-Started-with-Web3/
 
 ## Publication Log
 
-| Date       | Channel        | Link                                                                                           | Status    | Visible Metrics          | Notes                                                                   |
-| ---------- | -------------- | ---------------------------------------------------------------------------------------------- | --------- | ------------------------ | ----------------------------------------------------------------------- |
-| 2026-05-18 | GitHub Release | https://github.com/beihaili/Get-Started-with-Web3/releases/tag/interactive-learning-2026-05-18 | Published | 614 stars at publication | Product update for Merkle Tree Builder and EIP-1559 Gas Fee Calculator. |
+| Date       | Channel              | Link                                                                                           | Status    | Visible Metrics          | Notes                                                                                                       |
+| ---------- | -------------------- | ---------------------------------------------------------------------------------------------- | --------- | ------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| 2026-05-18 | GitHub Release       | https://github.com/beihaili/Get-Started-with-Web3/releases/tag/interactive-learning-2026-05-18 | Published | 614 stars at publication | Product update for Merkle Tree Builder and EIP-1559 Gas Fee Calculator.                                     |
+| 2026-05-20 | GitHub roadmap issue | https://github.com/beihaili/Get-Started-with-Web3/issues/156#issuecomment-4495275138           | Published | 614 stars at publication | Public update for completed Layer 2 English coverage, AI-native index progress, and 13 open starter issues. |
