@@ -2,7 +2,7 @@
 
 **Date:** 2026-05-20
 **Owner:** beihai + Codex
-**Reporting window:** 2026-05-20 15:25 CST snapshot; GitHub timestamps are UTC unless noted.
+**Reporting window:** 2026-05-20 16:01 CST snapshot; GitHub timestamps are UTC unless noted.
 
 ## KPI Snapshot
 
@@ -24,7 +24,8 @@
 - External distribution: published a 2026-05-20 update in the pinned 1000-star roadmap issue [#156](https://github.com/beihaili/Get-Started-with-Web3/issues/156#issuecomment-4495275138), linking the completed Layer 2 English lessons, AI-native index progress, and starter issue queue.
 - External distribution: published a GitHub Release for Layer 2 English coverage and the AI-native index update: [l2-english-ai-index-2026-05-20](https://github.com/beihaili/Get-Started-with-Web3/releases/tag/l2-english-ai-index-2026-05-20).
 - External distribution: added a [roadmap follow-up](https://github.com/beihaili/Get-Started-with-Web3/issues/156#issuecomment-4495517571) pointing #156 readers to the new Layer 2 / AI-native GitHub Release.
-- Website analytics: added privacy-preserving GA4 custom events for landing-page CTAs, AI-native entrypoint clicks, search result selection, lesson completion, donation/support link clicks, and wallet-copy intent; events intentionally avoid raw search terms and wallet addresses.
+- Website analytics: [#208](https://github.com/beihaili/Get-Started-with-Web3/pull/208) added privacy-preserving GA4 custom events for landing-page CTAs, AI-native entrypoint clicks, search result selection, lesson completion, donation/support link clicks, and wallet-copy intent; events intentionally avoid raw search terms and wallet addresses.
+- External distribution: added a [roadmap analytics update](https://github.com/beihaili/Get-Started-with-Web3/issues/156#issuecomment-4495955406) to #156 linking #208, main deploy evidence, current metrics, and contributor-friendly next steps.
 - Operations: [#200](https://github.com/beihaili/Get-Started-with-Web3/pull/200) finalized the 2026-05-19 operations report after the Layer 2 translations deployed.
 - AI-native maintenance: public AI index remains at 111 lesson entries and 57 glossary entries, with module 9 English availability set to `true` for lessons `9-2` through `9-5`.
 
@@ -32,7 +33,7 @@
 
 | Surface                  | Status  | Evidence                                                                                                                                                                                                                                                                                                                                               | Notes                                                                                                            |
 | ------------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------- |
-| Latest production deploy | Success | [Run 26147325580](https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26147325580)                                                                                                                                                                                                                                                          | Latest main deploy completed successfully for head `ee539c5`, after #207 merged                                  |
+| Latest production deploy | Success | [Run 26148929938](https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26148929938)                                                                                                                                                                                                                                                          | Latest main deploy completed successfully for head `38c46c8`, after #208 merged                                  |
 | Public L2 routes         | Success | `curl -L .../en/learn/module-9/9-3`, `9-4`, `9-5`                                                                                                                                                                                                                                                                                                      | HTTP 200 and prerendered HTML contains each new English lesson title                                             |
 | AI index                 | Success | Public `ai/content-index.json`                                                                                                                                                                                                                                                                                                                         | Lessons `9-3`, `9-4`, and `9-5` have `availability.en: true`                                                     |
 | Starter issue queue      | Success | `gh issue list --state open`                                                                                                                                                                                                                                                                                                                           | 13 open good-first issues after #201, #202, and #203                                                             |
@@ -49,6 +50,7 @@
 | GitHub roadmap update        | Published   | [#156 comment](https://github.com/beihaili/Get-Started-with-Web3/issues/156#issuecomment-4495275138)                                                                                                             | Reuse this update for social/community posts   |
 | GitHub Release               | Published   | [l2-english-ai-index-2026-05-20](https://github.com/beihaili/Get-Started-with-Web3/releases/tag/l2-english-ai-index-2026-05-20)                                                                                  | Reuse release copy for social/community posts  |
 | GitHub roadmap follow-up     | Published   | [#156 release follow-up](https://github.com/beihaili/Get-Started-with-Web3/issues/156#issuecomment-4495517571)                                                                                                   | Use as canonical GitHub discussion link        |
+| GitHub analytics update      | Published   | [#156 analytics update](https://github.com/beihaili/Get-Started-with-Web3/issues/156#issuecomment-4495955406)                                                                                                    | Review GA4 event funnel after 24-48h traffic   |
 | Twitter/X and Farcaster post | Ready       | `docs/strategy/2026-05-15-public-post-drafts.md`                                                                                                                                                                 | Publish from beihai account                    |
 | learnblockchain.cn/community | Ready       | `docs/strategy/2026-05-15-public-post-drafts.md`                                                                                                                                                                 | Publish Chinese community post when convenient |
 | TensorBlock awesome MCP      | Waiting     | [PR #544](https://github.com/TensorBlock/awesome-mcp-servers/pull/544)                                                                                                                                           | Avoid repeat pings until reviewer responds     |
@@ -81,7 +83,7 @@
 
 - Repository: https://github.com/beihaili/Get-Started-with-Web3
 - Production site: https://beihaili.github.io/Get-Started-with-Web3/
-- Latest recorded main deploy: https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26147325580
+- Latest recorded main deploy: https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26148929938
 - Layer 2 final translation PR: https://github.com/beihaili/Get-Started-with-Web3/pull/199
 - Finalized 2026-05-19 operations report PR: https://github.com/beihaili/Get-Started-with-Web3/pull/200
 - Starter issue: https://github.com/beihaili/Get-Started-with-Web3/issues/201
@@ -90,3 +92,5 @@
 - Public roadmap update: https://github.com/beihaili/Get-Started-with-Web3/issues/156#issuecomment-4495275138
 - Layer 2 / AI-native release: https://github.com/beihaili/Get-Started-with-Web3/releases/tag/l2-english-ai-index-2026-05-20
 - Release roadmap follow-up: https://github.com/beihaili/Get-Started-with-Web3/issues/156#issuecomment-4495517571
+- Behavior analytics PR: https://github.com/beihaili/Get-Started-with-Web3/pull/208
+- Behavior analytics roadmap update: https://github.com/beihaili/Get-Started-with-Web3/issues/156#issuecomment-4495955406
