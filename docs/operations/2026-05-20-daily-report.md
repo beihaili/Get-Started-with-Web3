@@ -23,6 +23,7 @@
 - Community PR hygiene: PR queue remains clear after #194, #195, #196, #198, #199, and #200 were resolved.
 - External distribution: published a 2026-05-20 update in the pinned 1000-star roadmap issue [#156](https://github.com/beihaili/Get-Started-with-Web3/issues/156#issuecomment-4495275138), linking the completed Layer 2 English lessons, AI-native index progress, and starter issue queue.
 - External distribution: published a GitHub Release for Layer 2 English coverage and the AI-native index update: [l2-english-ai-index-2026-05-20](https://github.com/beihaili/Get-Started-with-Web3/releases/tag/l2-english-ai-index-2026-05-20).
+- External distribution: added a [roadmap follow-up](https://github.com/beihaili/Get-Started-with-Web3/issues/156#issuecomment-4495517571) pointing #156 readers to the new Layer 2 / AI-native GitHub Release.
 - Operations: [#200](https://github.com/beihaili/Get-Started-with-Web3/pull/200) finalized the 2026-05-19 operations report after the Layer 2 translations deployed.
 - AI-native maintenance: public AI index remains at 111 lesson entries and 57 glossary entries, with module 9 English availability set to `true` for lessons `9-2` through `9-5`.
 
@@ -45,6 +46,7 @@
 | GitHub contributor backlog   | Replenished | [#201](https://github.com/beihaili/Get-Started-with-Web3/issues/201), [#202](https://github.com/beihaili/Get-Started-with-Web3/issues/202), [#203](https://github.com/beihaili/Get-Started-with-Web3/issues/203) | Watch for first contributor pickup             |
 | GitHub roadmap update        | Published   | [#156 comment](https://github.com/beihaili/Get-Started-with-Web3/issues/156#issuecomment-4495275138)                                                                                                             | Reuse this update for social/community posts   |
 | GitHub Release               | Published   | [l2-english-ai-index-2026-05-20](https://github.com/beihaili/Get-Started-with-Web3/releases/tag/l2-english-ai-index-2026-05-20)                                                                                  | Reuse release copy for social/community posts  |
+| GitHub roadmap follow-up     | Published   | [#156 release follow-up](https://github.com/beihaili/Get-Started-with-Web3/issues/156#issuecomment-4495517571)                                                                                                   | Use as canonical GitHub discussion link        |
 | Twitter/X and Farcaster post | Ready       | `docs/strategy/2026-05-15-public-post-drafts.md`                                                                                                                                                                 | Publish from beihai account                    |
 | learnblockchain.cn/community | Ready       | `docs/strategy/2026-05-15-public-post-drafts.md`                                                                                                                                                                 | Publish Chinese community post when convenient |
 | TensorBlock awesome MCP      | Waiting     | [PR #544](https://github.com/TensorBlock/awesome-mcp-servers/pull/544)                                                                                                                                           | Avoid repeat pings until reviewer responds     |
@@ -84,3 +86,4 @@
 - Starter issue: https://github.com/beihaili/Get-Started-with-Web3/issues/203
 - Public roadmap update: https://github.com/beihaili/Get-Started-with-Web3/issues/156#issuecomment-4495275138
 - Layer 2 / AI-native release: https://github.com/beihaili/Get-Started-with-Web3/releases/tag/l2-english-ai-index-2026-05-20
+- Release roadmap follow-up: https://github.com/beihaili/Get-Started-with-Web3/issues/156#issuecomment-4495517571
