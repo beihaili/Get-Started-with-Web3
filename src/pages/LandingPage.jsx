@@ -23,6 +23,7 @@ import SponsorSection from '../components/SponsorSection';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import SeoHead from '../components/SeoHead';
 import { APP_BASE_PATH, SITE_BASE_URL, buildSiteUrl, joinBasePath } from '../config/siteConfig';
+import { trackAnalyticsEvent } from '../utils/analytics';
 
 /**
  * 着陆页（首页）
@@ -40,6 +41,26 @@ const LandingPage = () => {
   const alternateUrl = buildSiteUrl(`/${altLang}`);
   const llmsTxtUrl = joinBasePath(APP_BASE_PATH, '/llms.txt');
   const aiManifestUrl = joinBasePath(APP_BASE_PATH, '/ai/manifest.json');
+  const githubRepoUrl = 'https://github.com/beihaili/Get-Started-with-Web3';
+
+  const trackLandingCtaClick = (ctaId, placement, extra = {}) => {
+    trackAnalyticsEvent('cta_click', {
+      event_category: 'growth',
+      cta_id: ctaId,
+      placement,
+      language: lang,
+      ...extra,
+    });
+  };
+
+  const trackAiEntrypointClick = (entrypoint) => {
+    trackAnalyticsEvent('ai_entrypoint_click', {
+      event_category: 'ai_native',
+      entrypoint,
+      placement: 'landing_ai_agent_entry',
+      language: lang,
+    });
+  };
 
   useEffect(() => {
     let script = document.querySelector('script[data-platform-ld]');
@@ -106,14 +127,20 @@ const LandingPage = () => {
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
               to={`/${lang}/dashboard`}
+              onClick={() => trackLandingCtaClick('start_learning', 'landing_hero')}
               className="px-8 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold rounded-full transition-all hover:scale-105 shadow-lg shadow-cyan-500/20"
             >
               {t('landing.startLearning')}
             </Link>
             <a
-              href="https://github.com/beihaili/Get-Started-with-Web3"
+              href={githubRepoUrl}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() =>
+                trackLandingCtaClick('github_repo', 'landing_hero', {
+                  destination_hostname: new URL(githubRepoUrl).hostname,
+                })
+              }
               className="px-8 py-3 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-900 dark:text-white font-bold rounded-full transition-all hover:scale-105 border border-slate-200 dark:border-slate-700 flex items-center gap-2"
             >
               <GitBranch className="w-4 h-4" />
@@ -150,6 +177,7 @@ const LandingPage = () => {
         <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16">
           <Link
             to={`/${lang}/dashboard`}
+            onClick={() => trackLandingCtaClick('start_learning_card', 'landing_quick_actions')}
             className="group p-6 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-700/50 rounded-xl hover:border-cyan-500/40 transition-all hover:scale-105"
           >
             <div className="flex flex-col items-center text-center">
@@ -188,9 +216,14 @@ const LandingPage = () => {
           </Link>
 
           <a
-            href="https://github.com/beihaili/Get-Started-with-Web3"
+            href={githubRepoUrl}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() =>
+              trackLandingCtaClick('github_repo', 'landing_quick_actions', {
+                destination_hostname: new URL(githubRepoUrl).hostname,
+              })
+            }
             className="group p-6 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-700/50 rounded-xl hover:border-blue-500/40 transition-all hover:scale-105"
           >
             <div className="flex flex-col items-center text-center">
@@ -218,6 +251,7 @@ const LandingPage = () => {
                 <div className="grid sm:grid-cols-3 gap-3">
                   <a
                     href={llmsTxtUrl}
+                    onClick={() => trackAiEntrypointClick('llms.txt')}
                     className="flex items-center gap-2 px-4 py-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm text-slate-700 dark:text-slate-200 hover:border-cyan-500/40 transition-colors"
                   >
                     <BookOpen className="w-4 h-4 text-cyan-400" />
@@ -225,6 +259,7 @@ const LandingPage = () => {
                   </a>
                   <a
                     href={aiManifestUrl}
+                    onClick={() => trackAiEntrypointClick('manifest.json')}
                     className="flex items-center gap-2 px-4 py-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm text-slate-700 dark:text-slate-200 hover:border-purple-500/40 transition-colors"
                   >
                     <FileJson className="w-4 h-4 text-purple-400" />
@@ -303,15 +338,25 @@ const LandingPage = () => {
               href="https://twitter.com/bhbtc1337"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() =>
+                trackLandingCtaClick('twitter_profile', 'landing_community', {
+                  destination_hostname: 'twitter.com',
+                })
+              }
               className="flex items-center gap-2 px-5 py-2.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 rounded-full text-slate-900 dark:text-white text-sm transition-all hover:scale-105"
             >
               <Users className="w-4 h-4 text-cyan-400" />
               Twitter @bhbtc1337
             </a>
             <a
-              href="https://github.com/beihaili/Get-Started-with-Web3"
+              href={githubRepoUrl}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() =>
+                trackLandingCtaClick('github_star', 'landing_community', {
+                  destination_hostname: new URL(githubRepoUrl).hostname,
+                })
+              }
               className="flex items-center gap-2 px-5 py-2.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 rounded-full text-slate-900 dark:text-white text-sm transition-all hover:scale-105"
             >
               <Star className="w-4 h-4 text-yellow-400" />

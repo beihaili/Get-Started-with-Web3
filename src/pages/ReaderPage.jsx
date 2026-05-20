@@ -20,6 +20,7 @@ import ScrollToTop from '../components/ScrollToTop';
 import { estimateReadingTime } from '../utils/readingTime';
 import { useSwipe } from '../hooks/useSwipe';
 import { buildSiteUrl } from '../config/siteConfig';
+import { trackAnalyticsEvent } from '../utils/analytics';
 
 function getFocusableElements(container) {
   if (!container) {
@@ -105,6 +106,16 @@ const ReaderPage = () => {
   }, [lang, moduleId, lessonId, currentLesson, fetchLessonContent, publicBasePath, t]);
 
   const handleMarkComplete = (score, total) => {
+    trackAnalyticsEvent('lesson_complete', {
+      event_category: 'learning',
+      language: lang,
+      module_id: moduleId,
+      lesson_id: lessonId,
+      completion_source: score !== undefined && total !== undefined ? 'quiz' : 'manual',
+      quiz_score: score,
+      quiz_total: total,
+    });
+
     if (score !== undefined && total !== undefined) {
       recordQuizScore(lessonId, score, total);
     }

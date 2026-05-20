@@ -6,6 +6,7 @@ import { Search, X } from 'lucide-react';
 import { useSearchStore } from '../store/useSearchStore';
 import { COURSE_DATA } from '../config/courseData';
 import { useI18nSections } from '../i18n/useI18nSections';
+import { trackAnalyticsEvent } from '../utils/analytics';
 
 const SearchDialog = () => {
   const navigate = useNavigate();
@@ -53,12 +54,21 @@ const SearchDialog = () => {
   const activeIndex = flatResults.length > 0 ? Math.min(selectedIndex, flatResults.length - 1) : 0;
 
   const handleSelect = useCallback(
-    (item) => {
+    (item, index = selectedIndex) => {
+      trackAnalyticsEvent('search_result_select', {
+        event_category: 'content_discovery',
+        language: lang,
+        query_length: searchQuery.trim().length,
+        search_results_count: flatResults.length,
+        module_id: item.moduleId,
+        lesson_id: item.lessonId,
+        result_rank: index + 1,
+      });
       addToHistory(searchQuery);
       closeSearch();
       navigate(`/${lang}/learn/${item.moduleId}/${item.lessonId}`);
     },
-    [searchQuery, addToHistory, closeSearch, navigate, lang]
+    [addToHistory, closeSearch, flatResults.length, lang, navigate, searchQuery, selectedIndex]
   );
 
   const handleKeyDown = useCallback(
@@ -75,7 +85,7 @@ const SearchDialog = () => {
         );
       } else if (e.key === 'Enter' && flatResults.length > 0) {
         e.preventDefault();
-        handleSelect(flatResults[activeIndex]);
+        handleSelect(flatResults[activeIndex], activeIndex);
       }
     },
     [closeSearch, flatResults, activeIndex, handleSelect]
@@ -149,7 +159,7 @@ const SearchDialog = () => {
                     key={item.lessonId}
                     role="option"
                     aria-selected={idx === activeIndex}
-                    onClick={() => handleSelect(item)}
+                    onClick={() => handleSelect(item, idx)}
                     onMouseEnter={() => setSelectedIndex(idx)}
                     className={`w-full px-4 py-3 text-left transition-colors ${
                       idx === activeIndex

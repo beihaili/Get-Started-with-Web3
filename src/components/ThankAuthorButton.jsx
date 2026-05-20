@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Heart } from 'lucide-react';
 import { DONATION_LINKS } from '../config/sponsorData';
+import { trackAnalyticsEvent } from '../utils/analytics';
 
 /**
  * 感谢作者按钮
@@ -20,6 +21,15 @@ const ThankAuthorButton = () => {
         href={primaryLink.url}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() =>
+          trackAnalyticsEvent('support_link_click', {
+            event_category: 'monetization',
+            support_type: 'donation',
+            link_name: primaryLink.name,
+            placement: 'lesson_thank_author',
+            destination_hostname: new URL(primaryLink.url).hostname,
+          })
+        }
         className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-pink-500 to-orange-500
           hover:from-pink-400 hover:to-orange-400 text-white font-semibold rounded-full
           transition-all hover:scale-105 shadow-lg shadow-pink-500/20"

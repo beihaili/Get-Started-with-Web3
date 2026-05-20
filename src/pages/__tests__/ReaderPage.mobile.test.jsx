@@ -128,4 +128,26 @@ describe('ReaderPage mobile lesson drawer', () => {
 
     expect(await screen.findByRole('heading', { name: '体验第一笔交易' })).toBeInTheDocument();
   });
+
+  it('tracks lesson completion intent with lesson and module ids', async () => {
+    const gtag = vi.fn();
+    vi.stubGlobal('gtag', gtag);
+    renderReader();
+
+    expect(await screen.findByRole('heading', { name: '体验第一笔交易' })).toBeInTheDocument();
+
+    fireEvent.click(screen.getAllByRole('button', { name: 'Mark as Complete' })[0]);
+
+    expect(gtag).toHaveBeenCalledWith(
+      'event',
+      'lesson_complete',
+      expect.objectContaining({
+        event_category: 'learning',
+        language: 'en',
+        module_id: 'module-1',
+        lesson_id: '1-2',
+        completion_source: 'manual',
+      })
+    );
+  });
 });

@@ -2,7 +2,7 @@
 
 **Date:** 2026-05-20
 **Owner:** beihai + Codex
-**Reporting window:** 2026-05-20 14:15 CST snapshot; GitHub timestamps are UTC unless noted.
+**Reporting window:** 2026-05-20 15:25 CST snapshot; GitHub timestamps are UTC unless noted.
 
 ## KPI Snapshot
 
@@ -24,20 +24,22 @@
 - External distribution: published a 2026-05-20 update in the pinned 1000-star roadmap issue [#156](https://github.com/beihaili/Get-Started-with-Web3/issues/156#issuecomment-4495275138), linking the completed Layer 2 English lessons, AI-native index progress, and starter issue queue.
 - External distribution: published a GitHub Release for Layer 2 English coverage and the AI-native index update: [l2-english-ai-index-2026-05-20](https://github.com/beihaili/Get-Started-with-Web3/releases/tag/l2-english-ai-index-2026-05-20).
 - External distribution: added a [roadmap follow-up](https://github.com/beihaili/Get-Started-with-Web3/issues/156#issuecomment-4495517571) pointing #156 readers to the new Layer 2 / AI-native GitHub Release.
+- Website analytics: added privacy-preserving GA4 custom events for landing-page CTAs, AI-native entrypoint clicks, search result selection, lesson completion, donation/support link clicks, and wallet-copy intent; events intentionally avoid raw search terms and wallet addresses.
 - Operations: [#200](https://github.com/beihaili/Get-Started-with-Web3/pull/200) finalized the 2026-05-19 operations report after the Layer 2 translations deployed.
 - AI-native maintenance: public AI index remains at 111 lesson entries and 57 glossary entries, with module 9 English availability set to `true` for lessons `9-2` through `9-5`.
 
 ## Deploy And Verification
 
-| Surface                  | Status  | Evidence                                                                                                                        | Notes                                                                                         |
-| ------------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| Latest production deploy | Success | [Run 26094185540](https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26094185540)                                   | Latest main deploy completed successfully for head `2db6d20`, after #200 merged               |
-| Public L2 routes         | Success | `curl -L .../en/learn/module-9/9-3`, `9-4`, `9-5`                                                                               | HTTP 200 and prerendered HTML contains each new English lesson title                          |
-| AI index                 | Success | Public `ai/content-index.json`                                                                                                  | Lessons `9-3`, `9-4`, and `9-5` have `availability.en: true`                                  |
-| Starter issue queue      | Success | `gh issue list --state open`                                                                                                    | 13 open good-first issues after #201, #202, and #203                                          |
-| GitHub Release           | Success | [l2-english-ai-index-2026-05-20](https://github.com/beihaili/Get-Started-with-Web3/releases/tag/l2-english-ai-index-2026-05-20) | Release published with learner outcome, L2 lesson links, AI entrypoint, and contribution link |
-| Formatting               | Success | `npx prettier --check docs/operations/2026-05-20-daily-report.md docs/strategy/2026-05-14-execution-board.md`                   | Changed Markdown files use Prettier style                                                     |
-| Whitespace               | Success | `git diff --check`                                                                                                              | No whitespace errors                                                                          |
+| Surface                  | Status  | Evidence                                                                                                                                                                                                                                                                                                                                               | Notes                                                                                                            |
+| ------------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------- |
+| Latest production deploy | Success | [Run 26147325580](https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26147325580)                                                                                                                                                                                                                                                          | Latest main deploy completed successfully for head `ee539c5`, after #207 merged                                  |
+| Public L2 routes         | Success | `curl -L .../en/learn/module-9/9-3`, `9-4`, `9-5`                                                                                                                                                                                                                                                                                                      | HTTP 200 and prerendered HTML contains each new English lesson title                                             |
+| AI index                 | Success | Public `ai/content-index.json`                                                                                                                                                                                                                                                                                                                         | Lessons `9-3`, `9-4`, and `9-5` have `availability.en: true`                                                     |
+| Starter issue queue      | Success | `gh issue list --state open`                                                                                                                                                                                                                                                                                                                           | 13 open good-first issues after #201, #202, and #203                                                             |
+| GitHub Release           | Success | [l2-english-ai-index-2026-05-20](https://github.com/beihaili/Get-Started-with-Web3/releases/tag/l2-english-ai-index-2026-05-20)                                                                                                                                                                                                                        | Release published with learner outcome, L2 lesson links, AI entrypoint, and contribution link                    |
+| Behavior analytics       | Success | `npx vitest run src/utils/__tests__/analytics.test.js src/pages/__tests__/LandingPage.analytics.test.jsx src/components/__tests__/SearchDialog.test.jsx src/components/__tests__/DonationSection.test.jsx src/components/__tests__/ThankAuthorButton.test.jsx src/pages/__tests__/ReaderPage.mobile.test.jsx src/pages/__tests__/SupportPage.test.jsx` | Covers custom GA4 payloads, landing CTAs, AI entrypoints, search, learning completion, and support intent events |
+| Formatting               | Success | `npx prettier --check docs/operations/2026-05-20-daily-report.md docs/strategy/2026-05-14-execution-board.md`                                                                                                                                                                                                                                          | Changed Markdown files use Prettier style                                                                        |
+| Whitespace               | Success | `git diff --check`                                                                                                                                                                                                                                                                                                                                     | No whitespace errors                                                                                             |
 
 ## External Distribution
 
@@ -63,6 +65,7 @@
 ## Blockers And Risks
 
 - Growth is still flat at 614 stars; the next growth step must be public distribution, not more internal preparation.
+- Behavior events are now instrumented in code, but actionable GA4 analysis still depends on production deployment and at least 24-48 hours of traffic after public distribution.
 - The contributor queue is healthy again at 13 good-first issues, but needs active sharing to convert into PRs.
 - Sponsor outreach remains drafted but unsent because specific send channels/accounts still need confirmation.
 - `bhbtc.xyz` activation is code-ready but not live; DNS provider setup and GitHub Pages custom-domain confirmation are still external blockers.
@@ -78,7 +81,7 @@
 
 - Repository: https://github.com/beihaili/Get-Started-with-Web3
 - Production site: https://beihaili.github.io/Get-Started-with-Web3/
-- Latest recorded main deploy: https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26094185540
+- Latest recorded main deploy: https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26147325580
 - Layer 2 final translation PR: https://github.com/beihaili/Get-Started-with-Web3/pull/199
 - Finalized 2026-05-19 operations report PR: https://github.com/beihaili/Get-Started-with-Web3/pull/200
 - Starter issue: https://github.com/beihaili/Get-Started-with-Web3/issues/201
