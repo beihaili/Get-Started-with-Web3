@@ -118,7 +118,9 @@ describe('analytics utilities', () => {
       expect.objectContaining({
         event_category: 'conversion',
         cta_id: 'support_page',
-        page_path: '/Get-Started-with-Web3/en/support',
+        page_path: '/en/support',
+        page_location: 'https://bhbtc.xyz/en/support',
+        page_hostname: 'bhbtc.xyz',
       })
     );
   });

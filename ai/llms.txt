@@ -3,8 +3,8 @@
 This repository exposes bilingual Web3 learning content for AI agents.
 
 Source: https://github.com/beihaili/Get-Started-with-Web3
-Homepage: https://beihaili.github.io/Get-Started-with-Web3/
-Generated: 2026-05-19T10:57:56.815Z
+Homepage: https://bhbtc.xyz/
+Generated: 2026-05-21T02:13:09.304Z
 
 ## Artifacts
 - Manifest: ai/manifest.json
@@ -41,6 +41,6 @@ Generated: 2026-05-19T10:57:56.815Z
 - audit_learning_answer: Future paid remote tool that reviews a learner answer against repository lessons with cited corrections. (future x402 $0.1 on base)
 
 ## Public URLs
-- llms.txt: https://beihaili.github.io/Get-Started-with-Web3/llms.txt
-- Manifest: https://beihaili.github.io/Get-Started-with-Web3/ai/manifest.json
-- Content index: https://beihaili.github.io/Get-Started-with-Web3/ai/content-index.json
+- llms.txt: https://bhbtc.xyz/llms.txt
+- Manifest: https://bhbtc.xyz/ai/manifest.json
+- Content index: https://bhbtc.xyz/ai/content-index.json

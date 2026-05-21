@@ -1,9 +1,11 @@
-const CACHE_VERSION = 'web3-starter-v1';
+/* global self, caches, URL, fetch */
+
+const CACHE_VERSION = 'web3-starter-v2';
 const APP_SHELL = [
-  '/Get-Started-with-Web3/',
-  '/Get-Started-with-Web3/index.html',
-  '/Get-Started-with-Web3/favicon.svg',
-  '/Get-Started-with-Web3/logo-192.png',
+  '/',
+  '/index.html',
+  '/favicon.svg',
+  '/logo-192.png',
 ];
 
 // Install: pre-cache app shell

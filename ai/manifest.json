@@ -1,11 +1,11 @@
 {
   "schemaVersion": "2026-05-09",
-  "generatedAt": "2026-05-19T10:57:56.815Z",
+  "generatedAt": "2026-05-21T02:13:09.304Z",
   "repository": {
     "name": "Get-Started-with-Web3",
     "owner": "beihaili",
     "branch": "main",
-    "homepage": "https://beihaili.github.io/Get-Started-with-Web3/",
+    "homepage": "https://bhbtc.xyz/",
     "sourceUrl": "https://github.com/beihaili/Get-Started-with-Web3"
   },
   "languages": [
@@ -14,7 +14,7 @@
   ],
   "counts": {
     "modules": 11,
-    "lessons": 111,
+    "lessons": 116,
     "glossaryEntries": 57,
     "tools": 8,
     "futurePaidTools": 2
@@ -24,9 +24,9 @@
     "contentIndex": "ai/content-index.json",
     "llmsTxt": "ai/llms.txt",
     "public": {
-      "llmsTxt": "https://beihaili.github.io/Get-Started-with-Web3/llms.txt",
-      "manifest": "https://beihaili.github.io/Get-Started-with-Web3/ai/manifest.json",
-      "contentIndex": "https://beihaili.github.io/Get-Started-with-Web3/ai/content-index.json"
+      "llmsTxt": "https://bhbtc.xyz/llms.txt",
+      "manifest": "https://bhbtc.xyz/ai/manifest.json",
+      "contentIndex": "https://bhbtc.xyz/ai/content-index.json"
     }
   },
   "mcp": {

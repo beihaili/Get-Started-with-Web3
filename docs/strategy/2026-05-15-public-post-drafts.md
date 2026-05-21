@@ -2,7 +2,7 @@
 
 **Date:** 2026-05-15
 **Owner:** beihai + Codex
-**Status:** Ready for social/community publishing; GitHub releases published on 2026-05-18 and 2026-05-20
+**Status:** X publishing approved for `@bhbtc1337`; GitHub releases published on 2026-05-18 and 2026-05-20; custom-domain launch copy added on 2026-05-21.
 
 ## Publishing Rules
 
@@ -25,7 +25,7 @@
 
 你可以按路线完成一个具体目标：从创建第一个 Web3 身份、体验第一笔交易和第一个 DApp 开始，再继续学习 Bitcoin、Ethereum、DeFi、Layer 2、DAO、智能账户和 Builder 实战。项目也提供搜索、测验、徽章、AI Tutor、术语表、llms.txt、内容索引和本地只读 MCP server，方便人和 AI agent 都能引用课程内容。
 
-在线学习：https://beihaili.github.io/Get-Started-with-Web3/
+在线学习：https://bhbtc.xyz/
 
 如果你正在学 Web3，欢迎 star、提 issue、校对翻译或补充安全提示。项目会继续公开迭代，不做交易建议，也不推广任何 token。
 ```
@@ -57,7 +57,7 @@ Start from creating your first Web3 identity and using your first DApp, then fol
 This helps AI tutors and coding agents search and cite the curriculum instead of guessing.
 
 4/ Live site:
-https://beihaili.github.io/Get-Started-with-Web3/
+https://bhbtc.xyz/
 
 Repo:
 https://github.com/beihaili/Get-Started-with-Web3
@@ -90,14 +90,14 @@ Instead of only reading about the concepts, learners can manipulate them directl
 Type transaction-like values, hash leaves with SHA-256, duplicate odd nodes, combine pairs, and inspect the Merkle root step by step.
 
 Lesson:
-https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-2/2-1
+https://bhbtc.xyz/en/learn/module-2/2-1
 
 3/ Gas Fee Calculator:
 
 Change gas limit, priority tip, and max fee cap to see how EIP-1559 turns them into an effective gas price and total ETH/USD estimate.
 
 Lesson:
-https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-11/11-2
+https://bhbtc.xyz/en/learn/module-11/11-2
 
 4/ Both are bilingual, tested, and available in the open-source repo.
 
@@ -118,7 +118,7 @@ Get Started with Web3 今天更新了两个互动学习组件：
 这两个组件都已经嵌入中英文课程，并有测试覆盖。目标是让 Web3 学习从“读概念”继续往“能动手理解概念”推进。
 
 在线学习：
-https://beihaili.github.io/Get-Started-with-Web3/zh
+https://bhbtc.xyz/zh
 
 Release：
 https://github.com/beihaili/Get-Started-with-Web3/releases/tag/interactive-learning-2026-05-18
@@ -137,7 +137,31 @@ Get Started with Web3 now has two interactive lessons:
 The direction is simple: make Web3 concepts learnable by manipulating them, not only reading about them.
 
 Release: https://github.com/beihaili/Get-Started-with-Web3/releases/tag/interactive-learning-2026-05-18
-Site: https://beihaili.github.io/Get-Started-with-Web3/
+Site: https://bhbtc.xyz/
+```
+
+## Draft 4: X Custom Domain + AI-Native Update
+
+**Target channel:** Twitter/X via `@bhbtc1337`.
+**Audience:** Web3 learners, open-source contributors, and AI-agent developers.
+**Concrete learner outcome:** A learner or AI agent can use the shorter canonical domain for lessons, `llms.txt`, and contribution entrypoints.
+**Status:** Approved channel; pending actual X post from an authenticated session.
+
+```markdown
+Get Started with Web3 now has a cleaner home:
+
+https://bhbtc.xyz/
+
+It is an open-source bilingual Web3 curriculum covering wallets, Bitcoin, Ethereum, DeFi, L2, DAO, smart accounts, builder labs, quizzes, badges, and AI-native entrypoints.
+
+For AI agents:
+https://bhbtc.xyz/llms.txt
+https://bhbtc.xyz/ai/manifest.json
+
+Repo:
+https://github.com/beihaili/Get-Started-with-Web3
+
+Open to contributors for translations, examples, source links, beginner issue fixes, and safety notes. No trading advice, no token promotion.
 ```
 
 ## Publication Log

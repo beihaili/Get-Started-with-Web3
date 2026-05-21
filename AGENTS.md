@@ -61,9 +61,9 @@ npm run mcp:web3        # 启动本地 stdio MCP server
 - `ai/manifest.json`: 服务清单，包含仓库信息、artifact 路径、MCP 命令、可复制的 `mcpServers` client config 示例和未来 x402 工具元数据。
 - `ai/content-index.json`: 双语课程和术语表索引，供 Agent 搜索、引用和组合上下文。
 - `ai/llms.txt`: 面向 Agent/crawler 的文本入口。
-- `public/llms.txt`: GitHub Pages 根路径公开入口，部署后为 `https://beihaili.github.io/Get-Started-with-Web3/llms.txt`。
-- `public/ai/manifest.json`: 部署后为 `https://beihaili.github.io/Get-Started-with-Web3/ai/manifest.json`。
-- `public/ai/content-index.json`: 部署后为 `https://beihaili.github.io/Get-Started-with-Web3/ai/content-index.json`。
+- `public/llms.txt`: 自定义域名根路径公开入口，部署后为 `https://bhbtc.xyz/llms.txt`。
+- `public/ai/manifest.json`: 部署后为 `https://bhbtc.xyz/ai/manifest.json`。
+- `public/ai/content-index.json`: 部署后为 `https://bhbtc.xyz/ai/content-index.json`。
 - `scripts/generate-ai-index.mjs`: 生成上述 artifact。
 - `scripts/publish-ai-artifacts.mjs`: 将根目录 `ai/` artifacts 复制到 `public/`。
 - `scripts/verify-ai-entrypoints.mjs`: 检查 artifacts、公开 URL、MCP 工具清单、中英文覆盖和 x402 元数据。
@@ -75,8 +75,8 @@ npm run mcp:web3        # 启动本地 stdio MCP server
 
 ## 官网 URL、域名与统计
 
-- `src/config/siteConfig.js`: 统一管理默认官网 URL、base path、canonical/share URL 拼接；默认仍是 GitHub Pages `https://beihaili.github.io/Get-Started-with-Web3` 和 `/Get-Started-with-Web3/`。
-- 未来接入 `bhbtc.xyz` 时，构建可用 `VITE_SITE_BASE_URL=https://...` / `SITE_BASE_URL=https://...` 更新前端 canonical、sitemap、robots 和 AI artifacts；同时用 `VITE_BASE_PATH=/` 切到自定义域名根路径。不要在 DNS/GitHub Pages custom domain 未确认前提交 `public/CNAME`。
+- `src/config/siteConfig.js`: 统一管理默认官网 URL、base path、canonical/share URL 拼接；默认生产官网为 `https://bhbtc.xyz`，默认 base path 为 `/`。
+- GitHub Pages 自定义域名已开始切换：`public/CNAME` 为 `bhbtc.xyz`，CI 构建显式使用 `VITE_SITE_BASE_URL=https://bhbtc.xyz`、`SITE_BASE_URL=https://bhbtc.xyz` 和 `VITE_BASE_PATH=/`。如需临时回到仓库路径预览，可设 `VITE_BASE_PATH=/Get-Started-with-Web3/`。
 - `index.html` 保留 GA4 和 Cloudflare Web Analytics 脚本；GA 自动初始 pageview 已关闭，由 `src/components/RouteAnalytics.jsx` + `src/utils/analytics.js` 在 SPA 路由切换时发送 `page_view`。
 - `src/utils/analytics.js` 还提供 `trackAnalyticsEvent()`，用于 GA4 自定义行为事件。当前重点事件包括 `cta_click`、`ai_entrypoint_click`、`search_result_select`、`lesson_complete`、`support_link_click`、`wallet_address_copy`；事件应包含页面上下文和业务维度，但不要上报原始搜索词、钱包地址、金额、邮箱或其他敏感信息。
 

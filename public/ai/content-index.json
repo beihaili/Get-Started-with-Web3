@@ -1,11 +1,11 @@
 {
   "schemaVersion": "2026-05-09",
-  "generatedAt": "2026-05-19T10:57:56.815Z",
+  "generatedAt": "2026-05-21T02:13:09.304Z",
   "repository": {
     "name": "Get-Started-with-Web3",
     "owner": "beihaili",
     "branch": "main",
-    "homepage": "https://beihaili.github.io/Get-Started-with-Web3/",
+    "homepage": "https://bhbtc.xyz/",
     "sourceUrl": "https://github.com/beihaili/Get-Started-with-Web3"
   },
   "languages": [
@@ -28,8 +28,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-1/1-1",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-1/1-1"
+            "zh": "https://bhbtc.xyz/zh/learn/module-1/1-1",
+            "en": "https://bhbtc.xyz/en/learn/module-1/1-1"
           }
         },
         {
@@ -42,8 +42,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-1/1-2",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-1/1-2"
+            "zh": "https://bhbtc.xyz/zh/learn/module-1/1-2",
+            "en": "https://bhbtc.xyz/en/learn/module-1/1-2"
           }
         },
         {
@@ -56,8 +56,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-1/1-3",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-1/1-3"
+            "zh": "https://bhbtc.xyz/zh/learn/module-1/1-3",
+            "en": "https://bhbtc.xyz/en/learn/module-1/1-3"
           }
         },
         {
@@ -70,8 +70,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-1/1-4",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-1/1-4"
+            "zh": "https://bhbtc.xyz/zh/learn/module-1/1-4",
+            "en": "https://bhbtc.xyz/en/learn/module-1/1-4"
           }
         },
         {
@@ -84,8 +84,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-1/1-5",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-1/1-5"
+            "zh": "https://bhbtc.xyz/zh/learn/module-1/1-5",
+            "en": "https://bhbtc.xyz/en/learn/module-1/1-5"
           }
         },
         {
@@ -98,8 +98,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-1/1-6",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-1/1-6"
+            "zh": "https://bhbtc.xyz/zh/learn/module-1/1-6",
+            "en": "https://bhbtc.xyz/en/learn/module-1/1-6"
           }
         },
         {
@@ -112,8 +112,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-1/1-7",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-1/1-7"
+            "zh": "https://bhbtc.xyz/zh/learn/module-1/1-7",
+            "en": "https://bhbtc.xyz/en/learn/module-1/1-7"
           }
         }
       ]
@@ -133,8 +133,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-2/2-1",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-2/2-1"
+            "zh": "https://bhbtc.xyz/zh/learn/module-2/2-1",
+            "en": "https://bhbtc.xyz/en/learn/module-2/2-1"
           }
         },
         {
@@ -147,8 +147,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-2/2-2",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-2/2-2"
+            "zh": "https://bhbtc.xyz/zh/learn/module-2/2-2",
+            "en": "https://bhbtc.xyz/en/learn/module-2/2-2"
           }
         },
         {
@@ -161,8 +161,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-2/2-3",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-2/2-3"
+            "zh": "https://bhbtc.xyz/zh/learn/module-2/2-3",
+            "en": "https://bhbtc.xyz/en/learn/module-2/2-3"
           }
         },
         {
@@ -175,8 +175,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-2/2-4",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-2/2-4"
+            "zh": "https://bhbtc.xyz/zh/learn/module-2/2-4",
+            "en": "https://bhbtc.xyz/en/learn/module-2/2-4"
           }
         },
         {
@@ -189,8 +189,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-2/2-5",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-2/2-5"
+            "zh": "https://bhbtc.xyz/zh/learn/module-2/2-5",
+            "en": "https://bhbtc.xyz/en/learn/module-2/2-5"
           }
         },
         {
@@ -203,8 +203,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-2/2-6",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-2/2-6"
+            "zh": "https://bhbtc.xyz/zh/learn/module-2/2-6",
+            "en": "https://bhbtc.xyz/en/learn/module-2/2-6"
           }
         },
         {
@@ -217,8 +217,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-2/2-7",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-2/2-7"
+            "zh": "https://bhbtc.xyz/zh/learn/module-2/2-7",
+            "en": "https://bhbtc.xyz/en/learn/module-2/2-7"
           }
         },
         {
@@ -231,8 +231,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-2/2-8",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-2/2-8"
+            "zh": "https://bhbtc.xyz/zh/learn/module-2/2-8",
+            "en": "https://bhbtc.xyz/en/learn/module-2/2-8"
           }
         }
       ]
@@ -252,8 +252,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-3/3-1",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-3/3-1"
+            "zh": "https://bhbtc.xyz/zh/learn/module-3/3-1",
+            "en": "https://bhbtc.xyz/en/learn/module-3/3-1"
           }
         },
         {
@@ -266,8 +266,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-3/3-2",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-3/3-2"
+            "zh": "https://bhbtc.xyz/zh/learn/module-3/3-2",
+            "en": "https://bhbtc.xyz/en/learn/module-3/3-2"
           }
         },
         {
@@ -280,8 +280,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-3/3-3",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-3/3-3"
+            "zh": "https://bhbtc.xyz/zh/learn/module-3/3-3",
+            "en": "https://bhbtc.xyz/en/learn/module-3/3-3"
           }
         },
         {
@@ -294,8 +294,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-3/3-4",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-3/3-4"
+            "zh": "https://bhbtc.xyz/zh/learn/module-3/3-4",
+            "en": "https://bhbtc.xyz/en/learn/module-3/3-4"
           }
         },
         {
@@ -308,8 +308,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-3/3-5",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-3/3-5"
+            "zh": "https://bhbtc.xyz/zh/learn/module-3/3-5",
+            "en": "https://bhbtc.xyz/en/learn/module-3/3-5"
           }
         },
         {
@@ -322,8 +322,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-3/3-6",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-3/3-6"
+            "zh": "https://bhbtc.xyz/zh/learn/module-3/3-6",
+            "en": "https://bhbtc.xyz/en/learn/module-3/3-6"
           }
         }
       ]
@@ -343,8 +343,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-4/4-1",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-4/4-1"
+            "zh": "https://bhbtc.xyz/zh/learn/module-4/4-1",
+            "en": "https://bhbtc.xyz/en/learn/module-4/4-1"
           }
         },
         {
@@ -357,8 +357,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-4/4-2",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-4/4-2"
+            "zh": "https://bhbtc.xyz/zh/learn/module-4/4-2",
+            "en": "https://bhbtc.xyz/en/learn/module-4/4-2"
           }
         },
         {
@@ -371,8 +371,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-4/4-3",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-4/4-3"
+            "zh": "https://bhbtc.xyz/zh/learn/module-4/4-3",
+            "en": "https://bhbtc.xyz/en/learn/module-4/4-3"
           }
         },
         {
@@ -385,8 +385,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-4/4-4",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-4/4-4"
+            "zh": "https://bhbtc.xyz/zh/learn/module-4/4-4",
+            "en": "https://bhbtc.xyz/en/learn/module-4/4-4"
           }
         },
         {
@@ -399,8 +399,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-4/4-5",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-4/4-5"
+            "zh": "https://bhbtc.xyz/zh/learn/module-4/4-5",
+            "en": "https://bhbtc.xyz/en/learn/module-4/4-5"
           }
         },
         {
@@ -413,8 +413,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-4/4-6",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-4/4-6"
+            "zh": "https://bhbtc.xyz/zh/learn/module-4/4-6",
+            "en": "https://bhbtc.xyz/en/learn/module-4/4-6"
           }
         },
         {
@@ -427,8 +427,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-4/4-7",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-4/4-7"
+            "zh": "https://bhbtc.xyz/zh/learn/module-4/4-7",
+            "en": "https://bhbtc.xyz/en/learn/module-4/4-7"
           }
         }
       ]
@@ -448,8 +448,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-5/5-1",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-5/5-1"
+            "zh": "https://bhbtc.xyz/zh/learn/module-5/5-1",
+            "en": "https://bhbtc.xyz/en/learn/module-5/5-1"
           }
         },
         {
@@ -462,8 +462,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-5/5-2",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-5/5-2"
+            "zh": "https://bhbtc.xyz/zh/learn/module-5/5-2",
+            "en": "https://bhbtc.xyz/en/learn/module-5/5-2"
           }
         },
         {
@@ -476,8 +476,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-5/5-3",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-5/5-3"
+            "zh": "https://bhbtc.xyz/zh/learn/module-5/5-3",
+            "en": "https://bhbtc.xyz/en/learn/module-5/5-3"
           }
         }
       ]
@@ -497,8 +497,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-6/6-1",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-6/6-1"
+            "zh": "https://bhbtc.xyz/zh/learn/module-6/6-1",
+            "en": "https://bhbtc.xyz/en/learn/module-6/6-1"
           }
         },
         {
@@ -511,8 +511,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-6/6-2",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-6/6-2"
+            "zh": "https://bhbtc.xyz/zh/learn/module-6/6-2",
+            "en": "https://bhbtc.xyz/en/learn/module-6/6-2"
           }
         },
         {
@@ -525,8 +525,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-6/6-3",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-6/6-3"
+            "zh": "https://bhbtc.xyz/zh/learn/module-6/6-3",
+            "en": "https://bhbtc.xyz/en/learn/module-6/6-3"
           }
         },
         {
@@ -539,8 +539,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-6/6-4",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-6/6-4"
+            "zh": "https://bhbtc.xyz/zh/learn/module-6/6-4",
+            "en": "https://bhbtc.xyz/en/learn/module-6/6-4"
           }
         },
         {
@@ -553,8 +553,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-6/6-5",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-6/6-5"
+            "zh": "https://bhbtc.xyz/zh/learn/module-6/6-5",
+            "en": "https://bhbtc.xyz/en/learn/module-6/6-5"
           }
         },
         {
@@ -567,8 +567,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-6/6-6",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-6/6-6"
+            "zh": "https://bhbtc.xyz/zh/learn/module-6/6-6",
+            "en": "https://bhbtc.xyz/en/learn/module-6/6-6"
           }
         }
       ]
@@ -588,8 +588,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-7/7-1",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-7/7-1"
+            "zh": "https://bhbtc.xyz/zh/learn/module-7/7-1",
+            "en": "https://bhbtc.xyz/en/learn/module-7/7-1"
           }
         },
         {
@@ -602,8 +602,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-7/7-2",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-7/7-2"
+            "zh": "https://bhbtc.xyz/zh/learn/module-7/7-2",
+            "en": "https://bhbtc.xyz/en/learn/module-7/7-2"
           }
         },
         {
@@ -616,8 +616,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-7/7-3",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-7/7-3"
+            "zh": "https://bhbtc.xyz/zh/learn/module-7/7-3",
+            "en": "https://bhbtc.xyz/en/learn/module-7/7-3"
           }
         },
         {
@@ -630,8 +630,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-7/7-4",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-7/7-4"
+            "zh": "https://bhbtc.xyz/zh/learn/module-7/7-4",
+            "en": "https://bhbtc.xyz/en/learn/module-7/7-4"
           }
         }
       ]
@@ -651,8 +651,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-8/8-1",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-8/8-1"
+            "zh": "https://bhbtc.xyz/zh/learn/module-8/8-1",
+            "en": "https://bhbtc.xyz/en/learn/module-8/8-1"
           }
         },
         {
@@ -665,8 +665,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-8/8-2",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-8/8-2"
+            "zh": "https://bhbtc.xyz/zh/learn/module-8/8-2",
+            "en": "https://bhbtc.xyz/en/learn/module-8/8-2"
           }
         },
         {
@@ -679,8 +679,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-8/8-3",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-8/8-3"
+            "zh": "https://bhbtc.xyz/zh/learn/module-8/8-3",
+            "en": "https://bhbtc.xyz/en/learn/module-8/8-3"
           }
         },
         {
@@ -693,8 +693,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-8/8-4",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-8/8-4"
+            "zh": "https://bhbtc.xyz/zh/learn/module-8/8-4",
+            "en": "https://bhbtc.xyz/en/learn/module-8/8-4"
           }
         },
         {
@@ -707,8 +707,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-8/8-5",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-8/8-5"
+            "zh": "https://bhbtc.xyz/zh/learn/module-8/8-5",
+            "en": "https://bhbtc.xyz/en/learn/module-8/8-5"
           }
         }
       ]
@@ -728,8 +728,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-9/9-1",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-9/9-1"
+            "zh": "https://bhbtc.xyz/zh/learn/module-9/9-1",
+            "en": "https://bhbtc.xyz/en/learn/module-9/9-1"
           }
         },
         {
@@ -742,8 +742,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-9/9-2",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-9/9-2"
+            "zh": "https://bhbtc.xyz/zh/learn/module-9/9-2",
+            "en": "https://bhbtc.xyz/en/learn/module-9/9-2"
           }
         },
         {
@@ -756,8 +756,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-9/9-3",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-9/9-3"
+            "zh": "https://bhbtc.xyz/zh/learn/module-9/9-3",
+            "en": "https://bhbtc.xyz/en/learn/module-9/9-3"
           }
         },
         {
@@ -770,8 +770,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-9/9-4",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-9/9-4"
+            "zh": "https://bhbtc.xyz/zh/learn/module-9/9-4",
+            "en": "https://bhbtc.xyz/en/learn/module-9/9-4"
           }
         },
         {
@@ -784,8 +784,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-9/9-5",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-9/9-5"
+            "zh": "https://bhbtc.xyz/zh/learn/module-9/9-5",
+            "en": "https://bhbtc.xyz/en/learn/module-9/9-5"
           }
         }
       ]
@@ -802,11 +802,11 @@
           "labUrl": null,
           "availability": {
             "zh": true,
-            "en": false
+            "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-10/10-1",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-10/10-1"
+            "zh": "https://bhbtc.xyz/zh/learn/module-10/10-1",
+            "en": "https://bhbtc.xyz/en/learn/module-10/10-1"
           }
         },
         {
@@ -816,11 +816,11 @@
           "labUrl": null,
           "availability": {
             "zh": true,
-            "en": false
+            "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-10/10-2",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-10/10-2"
+            "zh": "https://bhbtc.xyz/zh/learn/module-10/10-2",
+            "en": "https://bhbtc.xyz/en/learn/module-10/10-2"
           }
         },
         {
@@ -830,11 +830,11 @@
           "labUrl": null,
           "availability": {
             "zh": true,
-            "en": false
+            "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-10/10-3",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-10/10-3"
+            "zh": "https://bhbtc.xyz/zh/learn/module-10/10-3",
+            "en": "https://bhbtc.xyz/en/learn/module-10/10-3"
           }
         },
         {
@@ -844,11 +844,11 @@
           "labUrl": null,
           "availability": {
             "zh": true,
-            "en": false
+            "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-10/10-4",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-10/10-4"
+            "zh": "https://bhbtc.xyz/zh/learn/module-10/10-4",
+            "en": "https://bhbtc.xyz/en/learn/module-10/10-4"
           }
         },
         {
@@ -858,11 +858,11 @@
           "labUrl": null,
           "availability": {
             "zh": true,
-            "en": false
+            "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-10/10-5",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-10/10-5"
+            "zh": "https://bhbtc.xyz/zh/learn/module-10/10-5",
+            "en": "https://bhbtc.xyz/en/learn/module-10/10-5"
           }
         }
       ]
@@ -882,8 +882,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-11/11-1",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-11/11-1"
+            "zh": "https://bhbtc.xyz/zh/learn/module-11/11-1",
+            "en": "https://bhbtc.xyz/en/learn/module-11/11-1"
           }
         },
         {
@@ -896,8 +896,8 @@
             "en": true
           },
           "siteUrls": {
-            "zh": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-11/11-2",
-            "en": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-11/11-2"
+            "zh": "https://bhbtc.xyz/zh/learn/module-11/11-2",
+            "en": "https://bhbtc.xyz/en/learn/module-11/11-2"
           }
         }
       ]
@@ -917,7 +917,7 @@
       "citation": {
         "file": "zh/Web3QuickStart/01_FirstWeb3Identity/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3QuickStart/01_FirstWeb3Identity/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-1/1-1"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-1/1-1"
       },
       "excerpt": "创建你的第一个 Web3 身份 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言 Web3 简述 小狐狸钱包 MetaMask 简述 使用 MetaMask 创建第一个 Web3 身份 常见问题 总结 前言 还记得第一次接触互联网时的那种兴奋和好奇吗？今天，我们站在了另一个技术革命的起点 —— Web3。这个全新的网络世界不再由科技巨头控制，而是由每一个参与者共同拥有。作为一名 Web3 新人，我深知迈出第一步的重要性和挑战。希望通过这篇文章，能让你轻松",
       "headings": [
@@ -1098,7 +1098,7 @@
       "citation": {
         "file": "en/Web3QuickStart/01_FirstWeb3Identity/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/Web3QuickStart/01_FirstWeb3Identity/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-1/1-1"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-1/1-1"
       },
       "excerpt": "Create Your First Web3 Identity 💡 Teaching yourself Web3 isn't easy. As someone who recently got started with Web3, I've put together the simplest and most straightforward beginner's tutorial. By integrating quality open source community resources, I hope to guide everyone from beginner to expert in Web3. Updated 1 3 lessons per week. Follow me on Twitter: @bhbtc1337 Join our WeChat group: Form Link Articles are ope",
       "headings": [
@@ -1279,7 +1279,7 @@
       "citation": {
         "file": "zh/Web3QuickStart/02_FirstWeb3Transaction/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3QuickStart/02_FirstWeb3Transaction/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-1/1-2"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-1/1-2"
       },
       "excerpt": "发送第一笔 Web3 交易 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言 交易是什么 0 成本在测试网上发出第一笔交易 2026 更新：交易生命周期与安全检查 （选做）在主网上发出第一笔交易 常见问题 总结 前言 还记得第一次用手机转账给朋友的经历吗？那种成功完成操作的成就感是始终让人难忘的。今天，我们将在 Web3 世界中体验更加有意义的一步 —— 第一笔区块链交易。 与传统银行交易不同，Web3 交易不需要任何中间人，不需要等待周末或者节假日，更",
       "headings": [
@@ -1388,7 +1388,7 @@
       "citation": {
         "file": "en/Web3QuickStart/02_FirstWeb3Transaction/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/Web3QuickStart/02_FirstWeb3Transaction/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-1/1-2"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-1/1-2"
       },
       "excerpt": "Send Your First Web3 Transaction 💡 Teaching yourself Web3 isn't easy. As someone who recently got started with Web3, I've put together the simplest and most straightforward beginner's tutorial. By integrating quality open source community resources, I hope to guide everyone from beginner to expert in Web3. Updated 1 3 lessons per week. Follow me on Twitter: @bhbtc1337 Join our WeChat group: Form Link Articles are op",
       "headings": [
@@ -1473,7 +1473,7 @@
       "citation": {
         "file": "zh/Web3QuickStart/03_FirstWeb3Dapp/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3QuickStart/03_FirstWeb3Dapp/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-1/1-3"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-1/1-3"
       },
       "excerpt": "使用 Web3 的第一个 DApp 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言 DApp 是什么 运行 DApp 的流程 使用 Web3 的第一个 DApp 常见问题 总结 前言 还记得第一次使用手机应用时的惊喜和喜悦吗？每一个新应用都代表着一个新世界的打开。在 Web3 世界中，这些应用被称为「DApps」（去中心化应用），它们有着异曲同工的力量 —— 能够彻底改变金融、社交和其他领域的运作方式。 今天，我们将一起探索如何使用您的第一个 Web3",
       "headings": [
@@ -1638,7 +1638,7 @@
       "citation": {
         "file": "en/Web3QuickStart/03_FirstWeb3Dapp/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/Web3QuickStart/03_FirstWeb3Dapp/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-1/1-3"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-1/1-3"
       },
       "excerpt": "Use Your First Web3 DApp 💡 Teaching yourself Web3 isn't easy. As someone who recently got started with Web3, I've put together the simplest and most straightforward beginner's tutorial. By integrating quality open source community resources, I hope to guide everyone from beginner to expert in Web3. Updated 1 3 lessons per week. Follow me on Twitter: @bhbtc1337 Join our WeChat group: Form Link Articles are open sourc",
       "headings": [
@@ -1803,7 +1803,7 @@
       "citation": {
         "file": "zh/Web3QuickStart/04_UsefulWeb3Sites/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3QuickStart/04_UsefulWeb3Sites/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-1/1-4"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-1/1-4"
       },
       "excerpt": "新手常用的 Web3 工具类网站 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言 区块链浏览器 数字资产行情网站 DeFi 工具 靠谱的交易所网站 2026 Web3 工具地图 常见问题 总结 前言 初次进入 Web3 世界的感觉，就像正在斩草开路的探险家 —— 周围是陌生而神秘的热带雨林，充满了未知与机遇。没有指南，每一步都可能迷失方向；没有工具，即使最简单的探索也变得困难。 我们所有人都经历过这样的迷茫，我也是如此。正因为这些经历，我特意整理了这份",
       "headings": [
@@ -1892,7 +1892,7 @@
       "citation": {
         "file": "en/Web3QuickStart/04_UsefulWeb3Sites/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/Web3QuickStart/04_UsefulWeb3Sites/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-1/1-4"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-1/1-4"
       },
       "excerpt": "Useful Web3 Websites for Beginners 💡 Teaching yourself Web3 isn't easy. As someone who recently got started with Web3, I've put together the simplest and most straightforward beginner's tutorial. By integrating quality open source community resources, I hope to guide everyone from beginner to expert in Web3. Updated 1 3 lessons per week. Follow me on Twitter: @bhbtc1337 Join our WeChat group: Form Link Articles are ",
       "headings": [
@@ -1997,7 +1997,7 @@
       "citation": {
         "file": "zh/Web3QuickStart/05_LaunchYourFirstToken/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3QuickStart/05_LaunchYourFirstToken/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-1/1-5"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-1/1-5"
       },
       "excerpt": "如何在 Pump.fun 上发行你的第一个 Meme 币 💡 本教程将指导您如何在 Solana 链上通过 Pump.fun 平台快速发行自己的第一个 Meme 币，无需编写任何代码。整个过程只需几分钟即可完成，是 Web3 新手入门的绝佳实践。 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 背景介绍 准备工作 创建代币步骤 管理和推广您的代币 常见问题解答 总结 背景介绍 什么是 Pump.fun？ 🚀 Pump.fun 是基于 Solana 链的一个一站式发币和交易平台，让任何人都能以极低的成本和门槛发行自己的代币。这些代币通常被称为「模因币」(Meme coins) 或「社区币」，可以反映特定主题、事件或社区。 Pump.fun 平台的独特之处在于： 特点 描述 : : : 极低成本 仅需 0.02 SOL 即可完成代币发行 用户友好 无需编程知识，点击几下即可完成 自动流动性 自动在 R",
       "headings": [
@@ -2126,7 +2126,7 @@
       "citation": {
         "file": "en/Web3QuickStart/05_LaunchYourFirstToken/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/Web3QuickStart/05_LaunchYourFirstToken/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-1/1-5"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-1/1-5"
       },
       "excerpt": "How to Launch Your First Meme Coin on Pump.fun 💡 This tutorial will guide you through quickly launching your first meme coin on the Solana blockchain via the Pump.fun platform — no coding required. The entire process takes just a few minutes, making it an excellent hands on exercise for Web3 beginners. Recommended exchange for buying BTC / ETH / USDT: Binance Registration Link Table of Contents Background Prerequisi",
       "headings": [
@@ -2255,7 +2255,7 @@
       "citation": {
         "file": "zh/Web3QuickStart/06_Web3Security/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3QuickStart/06_Web3Security/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-1/1-6"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-1/1-6"
       },
       "excerpt": "Web3 安全防护与防骗指南 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 📖 前言 「在 Web3 的世界里，你就是自己的银行。银行的安全完全由你来负责。」 欢迎来到 Web3 最重要的一课 —— 安全防护！如果你已经学完了前面几讲，相信你已经： 创建了自己的 Web3 身份（钱包） 进行了第一笔 Web3 交易 体验了 DApp 的魅力 但在深入 Web3 世界之前，你 必须 掌握基本的安全知识。在传统世界里，如果你的银行卡被盗刷，银行可能会帮你追回损失；但在 Web3 世界里， 一旦私钥泄露或资产被盗，几乎无法找回 。 🚨 重要提醒 ：Web3 世界充",
       "headings": [
@@ -2436,7 +2436,7 @@
       "citation": {
         "file": "en/Web3QuickStart/06_Web3Security/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/Web3QuickStart/06_Web3Security/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-1/1-6"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-1/1-6"
       },
       "excerpt": "Web3 Security & Scam Prevention Guide 💡 Teaching yourself Web3 isn't easy. As someone who recently got started with Web3, I've put together the simplest and most straightforward beginner's tutorial. By integrating quality open source community resources, I hope to guide everyone from beginner to expert in Web3. Updated 1 3 lessons per week. Follow me on Twitter: @bhbtc1337 Recommended exchange for buying BTC / ETH /",
       "headings": [
@@ -2617,7 +2617,7 @@
       "citation": {
         "file": "zh/Web3QuickStart/07_Web3CEX/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3QuickStart/07_Web3CEX/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-1/1-7"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-1/1-7"
       },
       "excerpt": "Web3 交易所入门 — 中心化交易所 (CEX) 全面指南 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 📖 前言 「中心化交易所是大多数人进入加密世界的第一站，也是连接法币与加密货币之间最重要的桥梁。」 欢迎来到 Web3 入门系列的第七讲 —— 中心化交易所 (CEX) 全面指南！ 如果你已经学习了前面的课程，你已经了解了钱包、链上交易、DApp 和安全知识。但在实际操作中，绝大多数用户接触加密货币的 第一步 就是通过中心化交易所。无论是将法币兑换为加密货币，还是进行日常交易，CEX 都扮演着不可或缺的角色。 在 Web3 世界中，虽然去中心化是核心理念",
       "headings": [
@@ -2798,7 +2798,7 @@
       "citation": {
         "file": "en/Web3QuickStart/07_Web3CEX/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/Web3QuickStart/07_Web3CEX/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-1/1-7"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-1/1-7"
       },
       "excerpt": "Web3 Exchange Guide — Centralized Exchange (CEX) Comprehensive Guide 💡 Teaching yourself Web3 isn't easy. As someone who recently got started with Web3, I've put together the simplest and most straightforward beginner's tutorial. By integrating quality open source community resources, I hope to guide everyone from beginner to expert in Web3. Updated 1 3 lessons per week. Follow me on Twitter: @bhbtc1337 Recommended ",
       "headings": [
@@ -2979,7 +2979,7 @@
       "citation": {
         "file": "zh/GetStartedWithBitcoin/01_Cryptography/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/01_Cryptography/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-2/2-1"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-2/2-1"
       },
       "excerpt": "第 01 讲：比特币密码学基础 💡 想象一下，如果你有一种魔法能让任何人都无法伪造你的签名，任何数据都无法被悄悄篡改，这就是密码学的力量。比特币正是建立在这些「数学魔法」之上，让数字世界拥有了现实世界的安全性。 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言：为什么比特币需要密码学？ 哈希函数：数字世界的指纹 数字签名：证明你就是你 椭圆曲线加密：数学的神奇魔法 比特币地址：从私钥到收款码 HD 钱包：一个助记词管理所有资产 安全实践：如何保护你的密钥 常见问题 结语 前言：为什么比特币需要密码学？ 想象一下，如果我给你一张纸条，上面写着「张三欠李四 100 元」，你会相信吗？可能不会，因为： 你不知道这是不是张三亲自写的 李四可能会把「100」改成「1000」 其他人也可以伪造同样的欠条 这就是传统数字世界面临的三大难题： 身份认证、防篡改、防伪造 。 比特币作为数字货币，必须解决这些问题。",
       "headings": [
@@ -3160,7 +3160,7 @@
       "citation": {
         "file": "en/GetStartedWithBitcoin/01_Cryptography/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/GetStartedWithBitcoin/01_Cryptography/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-2/2-1"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-2/2-1"
       },
       "excerpt": "Lesson 01: Bitcoin Cryptography Fundamentals Imagine having a kind of magic that prevents anyone from forging your signature or secretly tampering with any data. That is the power of cryptography. Bitcoin is built on these \"mathematical spells,\" bringing real world security to the digital world. Recommended exchange for buying BTC / ETH / USDT: Binance Registration Link Table of Contents Introduction: Why Does Bitcoi",
       "headings": [
@@ -3341,7 +3341,7 @@
       "citation": {
         "file": "zh/GetStartedWithBitcoin/02_Overview/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/02_Overview/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-2/2-2"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-2/2-2"
       },
       "excerpt": "第 02 讲：比特币概述 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC/ETH/USDT 等加密货币推荐 币安注册链接 目录 前言 比特币是什么 比特币有什么价值 比特币系统是如何运作的 常见问题 结语 前言 当你第一次听到比特币的时候，你可能会感到好奇、困惑或者说怀疑。这很正常！每一个改变世界的革命性创新在初期都会面临这些挑战。就像互联网萌芽的早期，很少有人能预见它将如何重塑我们的世界。 比特币是区块链最成功的应用，没有之一。在这篇入门文章中，我们将一同探索比特币的基本概念，它的价值来源，以及它如何改变我们对货币和",
       "headings": [
@@ -3510,7 +3510,7 @@
       "citation": {
         "file": "en/GetStartedWithBitcoin/02_Overview/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/GetStartedWithBitcoin/02_Overview/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-2/2-2"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-2/2-2"
       },
       "excerpt": "Lesson 02: Bitcoin Overview Getting started with Web3 on your own is no easy task. As someone who recently entered the Web3 space, I've put together the simplest and most intuitive Web3 beginner's guide. By integrating quality resources from the open source community, I aim to guide everyone from beginner to expert in Web3. Updated 1 3 lessons per week. Follow me on Twitter: @bhbtc1337 Join the discussion group: Form",
       "headings": [
@@ -3679,7 +3679,7 @@
       "citation": {
         "file": "zh/GetStartedWithBitcoin/03_BitcoinTx/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/03_BitcoinTx/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-2/2-3"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-2/2-3"
       },
       "excerpt": "第 03 讲：比特币交易基础 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC/ETH/USDT 等加密货币推荐 币安注册链接 目录 前言：为什么银行的记账方式不适合比特币？ UTXO 模型：现金 vs 银行账户的哲学 交易结构：数字化的现金流转 输入与输出：钱从哪里来到哪里去 交易验证：数学如何保证安全 实际操作：手把手创建交易 常见问题 结语 前言：为什么银行的记账方式不适合比特币？ 想象你在管理一个完全没有信任的环境中的资金流转 —— 比如一群互不认识的人之间要记录借贷关系，但没有任何中央机构来监督。 传统银行方式",
       "headings": [
@@ -3860,7 +3860,7 @@
       "citation": {
         "file": "en/GetStartedWithBitcoin/03_BitcoinTx/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/GetStartedWithBitcoin/03_BitcoinTx/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-2/2-3"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-2/2-3"
       },
       "excerpt": "Lesson 03: Bitcoin Transaction Fundamentals Getting started with Web3 on your own is no easy task. As someone who recently entered the Web3 space, I've put together the simplest and most intuitive Web3 beginner's guide. By integrating quality resources from the open source community, I aim to guide everyone from beginner to expert in Web3. Updated 1 3 lessons per week. Follow me on Twitter: @bhbtc1337 Join the discus",
       "headings": [
@@ -4041,7 +4041,7 @@
       "citation": {
         "file": "zh/GetStartedWithBitcoin/04_MultiSig/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/04_MultiSig/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-2/2-4"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-2/2-4"
       },
       "excerpt": "第 04 讲：多重签名交易 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言 多重签名基础概念 多重签名技术原理 P2SH 多重签名 企业级应用场景 实战演练：创建多签钱包 常见问题 结语 前言 在前一章《比特币交易基础》中，我们学习了比特币交易的基本组成、UTXO 模型和 P2PKH 交易。现在，我们将深入探讨比特币交易系统的一个重要功能：多重签名 (MultiSig)。 多重签名是比特币技术发展的重要里程碑，它不仅增强了安全性，还为企业和机构提供了更",
       "headings": [
@@ -4202,7 +4202,7 @@
       "citation": {
         "file": "en/GetStartedWithBitcoin/04_MultiSig/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/GetStartedWithBitcoin/04_MultiSig/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-2/2-4"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-2/2-4"
       },
       "excerpt": "Lesson 04: Multisignature Transactions Getting started with Web3 on your own is no easy task. As someone who recently entered the Web3 space, I've put together the simplest and most intuitive Web3 beginner's guide. By integrating quality resources from the open source community, I aim to guide everyone from beginner to expert in Web3. Updated 1 3 lessons per week. Follow me on Twitter: @bhbtc1337 Join the discussion ",
       "headings": [
@@ -4363,7 +4363,7 @@
       "citation": {
         "file": "zh/GetStartedWithBitcoin/05_SegWit/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/05_SegWit/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-2/2-5"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-2/2-5"
       },
       "excerpt": "第 05 讲：隔离见证 (SegWit) 技术 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言：比特币为什么需要「减肥」？ 交易延展性：快递包裹被恶意篡改的烦恼 隔离见证：巧妙的包装分离术 权重系统：重新定义区块「大小」 费用优化：为什么 SegWit 更便宜 技术实现：深入 SegWit 机制 向后兼容：软分叉的智慧 常见问题 结语 前言：比特币为什么需要「减肥」？ 想象你经营一家快递公司，每天要处理数万个包裹，但运输车辆的载重有限。随着业务增长，你",
       "headings": [
@@ -4544,7 +4544,7 @@
       "citation": {
         "file": "en/GetStartedWithBitcoin/05_SegWit/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/GetStartedWithBitcoin/05_SegWit/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-2/2-5"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-2/2-5"
       },
       "excerpt": "Lesson 05: Segregated Witness (SegWit) Technology Getting started with Web3 on your own is no easy task. As someone who recently entered the Web3 space, I've put together the simplest and most intuitive Web3 beginner's guide. By integrating quality resources from the open source community, I aim to guide everyone from beginner to expert in Web3. Updated 1 3 lessons per week. Follow me on Twitter: @bhbtc1337 Join the ",
       "headings": [
@@ -4725,7 +4725,7 @@
       "citation": {
         "file": "zh/GetStartedWithBitcoin/06_Taproot/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/06_Taproot/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-2/2-6"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-2/2-6"
       },
       "excerpt": "第 06 讲：Taproot 升级详解 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言 Taproot 基础概念 Schnorr 签名算法 MAST 技术详解 隐私性提升 效率优化 智能合约增强 实战演练：Taproot 交易 常见问题 结语 前言 在前一章《隔离见证 (SegWit) 技术》中，我们学习了 SegWit 如何通过数据重组解决交易延展性问题并提升网络效率。现在，我们将探索比特币技术发展的最新里程碑：Taproot 升级。 Taproot",
       "headings": [
@@ -4906,7 +4906,7 @@
       "citation": {
         "file": "en/GetStartedWithBitcoin/06_Taproot/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/GetStartedWithBitcoin/06_Taproot/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-2/2-6"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-2/2-6"
       },
       "excerpt": "Lesson 06: Taproot Upgrade Explained Getting started with Web3 on your own is no easy task. As someone who recently entered the Web3 space, I've put together the simplest and most intuitive Web3 beginner's guide. By integrating quality resources from the open source community, I aim to guide everyone from beginner to expert in Web3. Updated 1 3 lessons per week. Follow me on Twitter: @bhbtc1337 Join the discussion gr",
       "headings": [
@@ -5087,7 +5087,7 @@
       "citation": {
         "file": "zh/GetStartedWithBitcoin/07_AdvancedTransactions/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/07_AdvancedTransactions/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-2/2-7"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-2/2-7"
       },
       "excerpt": "第 07 讲：高级交易应用 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言 复杂交易类型分析 地址格式演进 高级交易应用 实战演练：高级交易 常见问题 结语 前言 在前面的章节中，我们学习了多重签名、SegWit、Taproot 和 Ordinals 等核心技术。现在，我们将深入探讨比特币的高级交易应用，包括复杂交易类型、地址格式演进和各种高级交易场景。 本章将涵盖比特币交易系统的进阶功能，这些技术为比特币生态系统提供了强大的扩展性和灵活性，为 Lay",
       "headings": [
@@ -5268,7 +5268,7 @@
       "citation": {
         "file": "en/GetStartedWithBitcoin/07_AdvancedTransactions/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/GetStartedWithBitcoin/07_AdvancedTransactions/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-2/2-7"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-2/2-7"
       },
       "excerpt": "Lesson 07: Advanced Transaction Applications Getting started with Web3 on your own is no easy task. As someone who recently entered the Web3 space, I've put together the simplest and most intuitive Web3 beginner's guide. By integrating quality resources from the open source community, I aim to guide everyone from beginner to expert in Web3. Updated 1 3 lessons per week. Follow me on Twitter: @bhbtc1337 Join the discu",
       "headings": [
@@ -5449,7 +5449,7 @@
       "citation": {
         "file": "zh/GetStartedWithBitcoin/08_DataStructure/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/08_DataStructure/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-2/2-8"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-2/2-8"
       },
       "excerpt": "第 08 讲：区块链数据结构 —— 从链表到默克尔树 💡 本章我们将深入探讨比特币中两个最基础且最重要的数据结构：区块链和默克尔树。这些看似简单的结构，通过密码学的加持，成为了比特币安全性的重要保障。 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言：比特币如何给数据结构加上防篡改能力 哈希指针：数据结构的守护者 区块链：防篡改的链表 默克尔树：高效的数据验证 实际应用：SPV 和轻节点 常见问题 结语 前言：比特币如何给数据结构加上防篡改能力 比特币的天才之处在于：它没有发明全新的数据结构，而是 在普通数据结构的基础上，巧妙地加入了密码学元素 。 核心洞察 ： 链表 + 哈希指针 = 区块链（防篡改的链表） 二叉树 + 哈希指针 = 默克尔树（可验证的二叉树） 在传统的中心化系统中，数据的完整性由可信的中央机构保证。但在比特币这样的去中心化系统中，我们需要一种方法让每个参与者都能： 独立验证数",
       "headings": [
@@ -5630,7 +5630,7 @@
       "citation": {
         "file": "en/GetStartedWithBitcoin/08_DataStructure/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/GetStartedWithBitcoin/08_DataStructure/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-2/2-8"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-2/2-8"
       },
       "excerpt": "Lesson 08: Blockchain Data Structures — From Linked Lists to Merkle Trees In this chapter, we'll dive deep into the two most fundamental and important data structures in Bitcoin: the blockchain and the Merkle tree. These seemingly simple structures, empowered by cryptography, become a crucial pillar of Bitcoin's security. Recommended exchange for buying BTC / ETH / USDT: Binance Registration Link Table of Contents In",
       "headings": [
@@ -5811,7 +5811,7 @@
       "citation": {
         "file": "zh/GetStartedWithBitcoin/09_BitcoinCore/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/09_BitcoinCore/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-3/3-1"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-3/3-1"
       },
       "excerpt": "第 09 讲：比特币核心节点 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言 比特币节点是什么 运行比特币节点的意义 如何搭建比特币节点 常见问题 结语 前言 2009 年 1 月 3 日，一个平凡到不能再平凡的周六，芬兰赫尔辛基的一个小型服务器上，匿名开发者中本聪运行了一个名为比特币节点的程序，挖出了比特币的创世区块。当时的人们并不知道，一个全新的时代已经缓缓拉开帷幕。 我们无从得知中本聪是谁，但是我们能够清楚地看到比特币节点的源码，从而清晰地看到中",
       "headings": [
@@ -5992,7 +5992,7 @@
       "citation": {
         "file": "en/GetStartedWithBitcoin/09_BitcoinCore/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/GetStartedWithBitcoin/09_BitcoinCore/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-3/3-1"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-3/3-1"
       },
       "excerpt": "Lesson 09: Bitcoin Core Node 💡 Self learning Web3 is no easy task. As a newcomer to Web3, I'm putting together the simplest and most intuitive tutorials for beginners. I've integrated high quality resources from the open source community to guide you from beginner to expert in Web3. I'll update 1 3 lessons per week. Follow me on Twitter: @bhbtc1337 Join the discussion group: Form Link Open sourced on GitHub: Get Sta",
       "headings": [
@@ -6173,7 +6173,7 @@
       "citation": {
         "file": "zh/GetStartedWithBitcoin/10_P2PProtocol/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/10_P2PProtocol/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-3/3-2"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-3/3-2"
       },
       "excerpt": "第 10 讲：P2P 网络协议 💡 比特币 P2P 网络是去中心化的核心，让全世界的节点能够在没有中心服务器的情况下协同工作。本章将用最直观的方式解释这个「没有中心的网络」是如何运行的。 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言：为什么比特币不能用微信的方式？ P2P 网络：像村庄传话游戏 节点发现：新人如何融入村庄 连接管理：维持村庄和谐 消息传播：消息如何传遍全村 安全升级：给传话加密 动手实践：连接比特币网络 常见问题解答 前言：为什么比特币不能用微信的方式？ 想象一下，如果微信没有腾讯公司的服务器会怎样？ 微信的现实： 你发消息 → 腾讯服务器 → 朋友收到消息。 如果 腾讯服务器宕机 → 全世界微信都不能用。 如果 政府关闭腾讯 → 微信彻底消失。 但比特币做到了不可能的事情： 全球 13,000 个节点，没有总部，没有 CEO 。 24 小时不间断处理交易，从未停机。 任何政",
       "headings": [
@@ -6354,7 +6354,7 @@
       "citation": {
         "file": "en/GetStartedWithBitcoin/10_P2PProtocol/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/GetStartedWithBitcoin/10_P2PProtocol/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-3/3-2"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-3/3-2"
       },
       "excerpt": "Lesson 10: P2P Network Protocol 💡 The Bitcoin peer to peer(P2P) network is the core of decentralization, enabling nodes around the world to work together without a central server. This chapter will explain in the most intuitive way how this \"centralized network\" operates. Recommended exchange for buying BTC / ETH / USDT: Binance Registration Link Table of Contents Introduction: Why Can't Bitcoin Work Like WeChat? P2",
       "headings": [
@@ -6535,7 +6535,7 @@
       "citation": {
         "file": "zh/GetStartedWithBitcoin/11_NetworkSecurity/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/11_NetworkSecurity/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-3/3-3"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-3/3-3"
       },
       "excerpt": "第 11 讲：网络安全与攻击防护 💡 想象一个村庄里的金库，没有银行、没有警察、没有政府保护，却能安全存放几千亿美元的财富。这听起来很疯狂？但比特币做到了。本章用最简单的方式解释这个「无人看守的金库」如何抵御全世界的小偷。 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言：为什么一个无人看守的金库能如此安全？ 安全哲学：村庄的防护智慧 常见攻击：小偷们的套路 防护机制：村庄的安全系统 钱包安全：保护你的私人保险箱 节点安全：当一个负责任的村民 实际案例：从血的教训中学习 未来挑战：新时代的威胁 常见问题解答 前言：为什么一个无人看守的金库能如此安全？ 想象一下这样一个场景： 有个村庄的金库里存放着价值几千亿美元的财富。 金库没有保安，没有围墙， 24 小时开放。 全世界的小偷都知道这个金库的位置。 但是 16 年来，没有一个小偷能成功偷走哪怕一分钱。 这听起来像天方夜谭？但这就是比特币网络的真实",
       "headings": [
@@ -6716,7 +6716,7 @@
       "citation": {
         "file": "en/GetStartedWithBitcoin/11_NetworkSecurity/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/GetStartedWithBitcoin/11_NetworkSecurity/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-3/3-3"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-3/3-3"
       },
       "excerpt": "Chapter 11: Network Security and Attack Defense 💡 Imagine a village vault with no banks, no police, no government protection, yet safely storing hundreds of billions of dollars worth of wealth. This sounds crazy? But Bitcoin has done exactly that. This chapter explains in the simplest way how this \"unguarded vault\" defends against thieves from around the world. Recommended exchange for buying BTC / ETH / USDT: Binan",
       "headings": [
@@ -6885,7 +6885,7 @@
       "citation": {
         "file": "zh/GetStartedWithBitcoin/12_ProofOfWork/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/12_ProofOfWork/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-3/3-4"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-3/3-4"
       },
       "excerpt": "第 12 讲：工作量证明与挖矿 💡 想象一个村庄，村民们都在找金子，但金子被埋在地下，需要不停挖掘才能找到。每当有人找到金子，整个村庄都会为他鼓掌，因为这证明了他确实付出了劳动。这就是比特币挖矿的真实写照。 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言：为什么要挖矿？ 挖矿原理：数字世界的淘金游戏 挖矿设备：从铁锹到挖掘机的进化 矿池合作：抱团取暖的智慧 能耗争议：到底值不值得？ 动手实践：模拟挖矿过程 常见问题解答 总结 前言：为什么要挖矿？ 你有没有想过这样一个问题：在网络世界里，如何防止有人印假钞？ 在现实中，政府控制印钞机，谁敢私自印钞就抓谁。但比特币没有政府、没有银行、没有中央机构，那谁来防止作弊呢？ 中本聪想出了一个绝妙的办法： 让大家比赛挖矿 ！ 💡 思考一下 在学习挖矿之前，先想想： 如果你们班要选班长，但没有老师监督，如何保证选举公平？ 如果村庄要决定一件事，但没有村长，",
       "headings": [
@@ -7050,7 +7050,7 @@
       "citation": {
         "file": "en/GetStartedWithBitcoin/12_ProofOfWork/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/GetStartedWithBitcoin/12_ProofOfWork/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-3/3-4"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-3/3-4"
       },
       "excerpt": "Lesson 12: Proof of Work and Mining 💡 Imagine a village where everyone is searching for gold, but the gold is buried underground and requires constant digging to find. Whenever someone finds gold, the whole village applauds, because it proves they truly put in the work. This is the real picture of Bitcoin mining. Recommended exchange for buying BTC / ETH / USDT: Binance Registration Link Table of Contents Introducti",
       "headings": [
@@ -7215,7 +7215,7 @@
       "citation": {
         "file": "zh/GetStartedWithBitcoin/13_DifficultyAdjustment/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/13_DifficultyAdjustment/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-3/3-5"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-3/3-5"
       },
       "excerpt": "第 13 讲：难度调整 —— 比特币的智能时钟 💡 想象一个神奇的时钟，无论房间里的人多还是少，它都能精确地每 10 分钟响一次铃。人多时，铃铛变得更难敲响；人少时，铃铛变得更容易敲响。这就是比特币难度调整的奥秘。 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言：为什么需要一个智能时钟？ 难度调整：自动平衡的艺术 算法原理：简单而精妙的数学 历史回顾：15 年的考验 实际影响：矿工的生活 动手实践：模拟难度调整 常见问题解答 总结 前言：为什么需要一个智能时钟？ 你有没有想过这个问题：为什么比特币总是能大约每 10 分钟产生一个区块？ 现实场景对比： 公交车发车： 早高峰人多，公交公司增加班次， 5 分钟一班。 深夜人少，公交减少班次， 20 分钟一班。 需要调度员根据客流量手动调整。 比特币出块： 矿工多时，竞争激烈，可能 5 分钟就有人挖到。 矿工少时，竞争缓和，可能 20 分钟才有人挖到",
       "headings": [
@@ -7348,7 +7348,7 @@
       "citation": {
         "file": "en/GetStartedWithBitcoin/13_DifficultyAdjustment/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/GetStartedWithBitcoin/13_DifficultyAdjustment/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-3/3-5"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-3/3-5"
       },
       "excerpt": "Lesson 13: Difficulty Adjustment — Bitcoin's Smart Clock 💡 Imagine a magical clock that rings precisely every 10 minutes, no matter how many people are in the room. When there are more people, the bell becomes harder to ring; when there are fewer, it becomes easier. This is the secret of Bitcoin's difficulty adjustment. Recommended exchange for buying BTC / ETH / USDT: Binance Registration Link Table of Contents Int",
       "headings": [
@@ -7481,7 +7481,7 @@
       "citation": {
         "file": "zh/GetStartedWithBitcoin/14_ForksBIPs/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/14_ForksBIPs/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-3/3-6"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-3/3-6"
       },
       "excerpt": "第 14 讲：分叉机制与 BIP 流程 💡 想象一个神奇的村庄，没有村长，但村民们能够通过「全民公投」的方式来决定修改村规。有时候改动很小，老村民不用学新规就能适应；有时候改动很大，需要所有人都同意才能执行。这就是比特币的分叉和升级机制。 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言：为什么村庄需要修改规则？ 分叉类型：软改革 vs 硬改革 BIP 提案：民主决策的流程 经典案例：村庄改革的历史 激活机制：如何确保改革成功 动手实践：分析分叉影响 常见问题解答 前言：为什么村庄需要修改规则？ 你有没有想过这样一个问题：比特币运行了 16 年，但它的功能却在不断进化，这是怎么做到的？ 传统系统的升级方式： 微信升级 ：腾讯发布新版本，用户下载更新。 银行系统 ：总行决定新政策，分行执行。 政府政策 ：政府制定，民众执行。 比特币的难题： 没有 CEO 决定升级什么。 没有总部推送更新。 没有政",
       "headings": [
@@ -7594,7 +7594,7 @@
       "citation": {
         "file": "en/GetStartedWithBitcoin/14_ForksBIPs/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/GetStartedWithBitcoin/14_ForksBIPs/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-3/3-6"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-3/3-6"
       },
       "excerpt": "Lesson 14: Fork Mechanisms and the BIP Process 💡 Imagine a magical village with no chief, where villagers can modify village rules through \"referendums.\" Sometimes the changes are minor, and old villagers can adapt without learning new rules. Sometimes the changes are big, so everyone must agree before they take effect. This is Bitcoin's fork and upgrade mechanism. Recommended exchange for buying BTC / ETH / USDT: B",
       "headings": [
@@ -7703,7 +7703,7 @@
       "citation": {
         "file": "zh/GetStartedWithBitcoin/15_BitcoinWallet/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/15_BitcoinWallet/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-4/4-1"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-4/4-1"
       },
       "excerpt": "第 15 讲：比特币钱包 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言 比特币钱包基本概念 创建自己的比特币钱包 常见问题 结语 前言 当进入加密货币世界时，拥有一个安全可靠的比特币钱包是你的第一道门槛。就像你不会把现金随意放在街头一样，你的加密资产同样需要一个安全的「容器」来存储和管理。 区块链的世界被形容为一片黑暗森林，每个参与者都需要学会保护自己的财产安全，因为这里没有人会为你负责。和《三体》中的黑暗森林法则类似，区块链世界里，保护好自己的私钥",
       "headings": [
@@ -7884,7 +7884,7 @@
       "citation": {
         "file": "en/GetStartedWithBitcoin/15_BitcoinWallet/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/GetStartedWithBitcoin/15_BitcoinWallet/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-4/4-1"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-4/4-1"
       },
       "excerpt": "Lesson 15: Bitcoin Wallets 💡 Self learning Web3 is no easy task. As a newcomer to Web3, I'm putting together the simplest and most intuitive beginner tutorials. Aggregating quality open source community resources to guide everyone from beginner to expert in Web3. Updated 1 3 lessons per week. Follow me on Twitter: @bhbtc1337 Join the discussion group: Form Link Open sourced on GitHub: Get Started with Web3 Recommend",
       "headings": [
@@ -8065,7 +8065,7 @@
       "citation": {
         "file": "zh/GetStartedWithBitcoin/16_BitcoinRPC/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/16_BitcoinRPC/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-4/4-2"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-4/4-2"
       },
       "excerpt": "第 16 讲：比特币 RPC 应用开发指南 🔥 本教程将带领您通过 RPC 接口与比特币区块链交互，从基础概念到实用应用开发，让您接触比特币编程的真实力量。 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言：为什么程序员需要「遥控」比特币？ RPC 是什么：给比特币节点打电话 配置你的「专线电话」 学会「对话」：基本 RPC 命令 用代码连接比特币世界 构建实用应用 第三方 RPC 服务：云端的比特币节点 高级技巧与最佳实践 故障排除：当电话打不通的时候 常见问题 结语 前言：为什么程序员需要「遥控」比特币？ 想象一下，你有一台超级计算机，它连接着全球最安全的金融网络，存储着价值万亿美元的交易记录。但是，你只能通过图形界面一个按钮一个按钮地操作它。 作为程序员，你肯定想： 「我想批量查询 100 个地址的余额」 「我想自动监控某个地址的交易」 「我想建一个属于自己的区块链浏览器」 「我想让程序自",
       "headings": [
@@ -8246,7 +8246,7 @@
       "citation": {
         "file": "en/GetStartedWithBitcoin/16_BitcoinRPC/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/GetStartedWithBitcoin/16_BitcoinRPC/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-4/4-2"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-4/4-2"
       },
       "excerpt": "Lesson 16: Bitcoin RPC Application Development Guide 🔥 This tutorial will guide you through interacting with the Bitcoin blockchain via RPC interfaces, from basic concepts to practical application development, giving you access to the real power of Bitcoin programming. Recommended exchange for buying BTC / ETH / USDT: Binance Registration Link Table of Contents Introduction: Why Do Programmers Need to \"Remote Contro",
       "headings": [
@@ -8427,7 +8427,7 @@
       "citation": {
         "file": "zh/GetStartedWithBitcoin/17_BitcoinLowFeeBroadcast/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/17_BitcoinLowFeeBroadcast/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-4/4-3"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-4/4-3"
       },
       "excerpt": "第 17 讲：比特币开发工具 💡 比特币网络手续费时常波动，当费率处于低谷时，是整理钱包中「粉尘」 UTXO 、甚至发送一些「时间胶囊」交易的绝佳时机。本教程将带你构建一个可以通过自己全节点广播 任意低费率 交易的强大工具。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言：为何要发送低费率交易？ 准备工作 核心原理：通过配置本地节点实现 步骤 1：修改 bitcoin.conf 步骤 2：编写 low fee broadcaster.py 脚本 步骤 3：运行脚本与成果展示 多节点广播与低费率交易实战经验 安全注意事项 总结 2026 更新：Bitcoin Core 31.0 后的费率与 mempool 常见问题 前言：为何要发送低费率交易？ 你是否曾发",
       "headings": [
@@ -8608,7 +8608,7 @@
       "citation": {
         "file": "en/GetStartedWithBitcoin/17_BitcoinLowFeeBroadcast/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/GetStartedWithBitcoin/17_BitcoinLowFeeBroadcast/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-4/4-3"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-4/4-3"
       },
       "excerpt": "Lesson 17: Bitcoin Development Tools 💡 Bitcoin network fees constantly fluctuate. When fee rates are at their lowest, it's the perfect time to consolidate \"dust\" UTXOs in your wallet or even send some \"time capsule\" transactions. This tutorial will guide you through building a powerful tool that can broadcast arbitrarily low fee rate transactions through your own full node. Follow me on Twitter: @bhbtc1337 Join the ",
       "headings": [
@@ -8789,7 +8789,7 @@
       "citation": {
         "file": "zh/GetStartedWithBitcoin/18_BitcoinScript/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/18_BitcoinScript/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-4/4-4"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-4/4-4"
       },
       "excerpt": "第 18 讲：Bitcoin Script 脚本系统 💡 想象比特币是一台自动贩卖机，你不仅可以投币买东西，还可以设置各种条件：「只有两个人同时插钥匙才能打开」、「只有在特定时间才能使用」、「必须输入正确密码」。这就是比特币脚本的魅力 —— 让数字货币变得可编程。 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言：比特币的可编程货币基因 Script 语言设计哲学 操作码系统详解 常见脚本模式 高级脚本应用 脚本安全性分析 实战演练：编写 Bitcoin 脚本 常见问题 结语 前言：比特币的可编程货币基因 很多人认为比特币只是「数字现金」，但实际上比特币从诞生之初就具备了可编程性。 Bitcoin Script 是比特币内置的脚本语言，它让比特币不仅仅是转账工具，更是可编程的数字合约平台。 现实世界的类比： 支票 ：可以设置收款人、金额、有效期。 信托 ：可以设置复杂的资金释放条件。 保险箱 ：",
       "headings": [
@@ -8926,7 +8926,7 @@
       "citation": {
         "file": "en/GetStartedWithBitcoin/18_BitcoinScript/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/GetStartedWithBitcoin/18_BitcoinScript/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-4/4-4"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-4/4-4"
       },
       "excerpt": "Lesson 18: Bitcoin Script System 💡 Imagine Bitcoin is a vending machine — you can not only insert coins to buy things but also set various conditions: \"only two people turning keys simultaneously can open it,\" \"only usable at a specific time,\" \"must enter the correct password.\" This is the power of Bitcoin Script — making digital currency programmable. Recommended exchange for buying BTC / ETH / USDT: Binance Regist",
       "headings": [
@@ -9059,7 +9059,7 @@
       "citation": {
         "file": "zh/GetStartedWithBitcoin/19_BitcoinGovernance/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/19_BitcoinGovernance/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-4/4-5"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-4/4-5"
       },
       "excerpt": "第 19 讲：比特币扩容与治理 💡 自学入门 Web3 不是一件容易的事，作为一个刚刚入门 Web3 的新人，梳理一下最简单直观的 Web3 小白入门教程。整合开源社区优质资源，为大家从入门到精通 Web3 指路。每周更新 1 3 讲。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言 比特币扩容之争 (2015 2017) 软分叉 vs 硬分叉：技术机制详解 SegWit 激活的政治过程 比特币分裂： BTC vs BCH 比特币治理机制 升级激活机制演进 社区共识的形成 历史教训与未来展望 实战：参与比特币治理 常见问题 结语 前言 比特币作为去中心化系统，没有中央权威来决定技术升级。那么，比特币是如何进行升级的？当社区对技术路线产生分歧时，争议如何解",
       "headings": [
@@ -9240,7 +9240,7 @@
       "citation": {
         "file": "en/GetStartedWithBitcoin/19_BitcoinGovernance/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/GetStartedWithBitcoin/19_BitcoinGovernance/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-4/4-5"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-4/4-5"
       },
       "excerpt": "Lesson 19: Bitcoin Scaling and Governance 💡 Self learning Web3 is no easy task. As a newcomer to Web3, I'm putting together the simplest and most intuitive beginner tutorials. Aggregating quality open source community resources to guide everyone from beginner to expert in Web3. Updated 1 3 lessons per week. Follow me on Twitter: @bhbtc1337 Join the discussion group: Form Link Open sourced on GitHub: Get Started with",
       "headings": [
@@ -9405,7 +9405,7 @@
       "citation": {
         "file": "zh/GetStartedWithBitcoin/20_Ordinals/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/20_Ordinals/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-4/4-6"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-4/4-6"
       },
       "excerpt": "第 20 讲：Ordinals 与生态创新 💡 想象一下，如果每一粒沙子都能刻上独特的标记，成为独一无二的艺术品。比特币 Ordinals 协议就是这样的魔法，它让比特币网络中的每一聪都能承载数据，变成数字世界的「收藏品」。 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言：为什么要在聪上刻字？ Ordinals 协议基础 Inscriptions 技术详解 Taproot 脚本路径存储 数字资产应用 BRC 20 代币标准 实战演练：创建 Inscription 常见问题 结语 前言：为什么要在聪上刻字？ 你有没有收藏过硬币？每枚硬币背后都有年份、图案、甚至特殊的纪念意义。有些古币因为历史价值变得非常珍贵。 现在想象一下：如果你能在每一聪（比特币的最小单位）上「刻字」，让它承载图片、文字、甚至小游戏，这些聪是不是也会变得特别？ 这就是 Ordinals 协议的精髓： 🎨 让聪变成画布 ：在聪",
       "headings": [
@@ -9586,7 +9586,7 @@
       "citation": {
         "file": "en/GetStartedWithBitcoin/20_Ordinals/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/GetStartedWithBitcoin/20_Ordinals/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-4/4-6"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-4/4-6"
       },
       "excerpt": "Lesson 20: Ordinals and Ecosystem Innovation 💡 Imagine if every grain of sand could be engraved with a unique mark, turning it into a one of a kind artwork. The Bitcoin Ordinals protocol is that kind of magic — it lets every satoshi in the Bitcoin network carry data, becoming a digital \"collectible.\" Recommended exchange for buying BTC / ETH / USDT: Binance Registration Link Table of Contents Introduction: Why Engra",
       "headings": [
@@ -9767,7 +9767,7 @@
       "citation": {
         "file": "zh/GetStartedWithBitcoin/21_DeFiCrossChain/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/GetStartedWithBitcoin/21_DeFiCrossChain/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-4/4-7"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-4/4-7"
       },
       "excerpt": "第 21 讲：比特币 DeFi 与跨链技术 💡 想象你有一块黄金，但它只能放在保险箱里看着，不能用来投资、借贷或产生任何收益。现在有了神奇的技术，让这块黄金可以「分身」到其他地方工作赚钱，原来的黄金还在保险箱里安全无恙。这就是比特币 DeFi 的魅力。 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言：为什么比特币需要 DeFi？ Lightning Network：比特币的支付高速公路 RGB 协议：比特币上的智能合约 原子交换：无需信任的跨链交易 比特币 DeFi 生态：从理论到实践 跨链桥接：连接多链世界 风险管理：DeFi 中的安全考量 常见问题 结语 前言：为什么比特币需要 DeFi？ 想象一下，你拥有数字黄金（比特币），但除了储存和转账，它几乎无法产生收益。这就像把黄金埋在地下，永远无法发挥其金融价值。 传统金融的启示： 银行存款 ：可以获得利息收入。 股票投资 ：可以获得分红和增值",
       "headings": [
@@ -9948,7 +9948,7 @@
       "citation": {
         "file": "en/GetStartedWithBitcoin/21_DeFiCrossChain/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/GetStartedWithBitcoin/21_DeFiCrossChain/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-4/4-7"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-4/4-7"
       },
       "excerpt": "Lesson 21: Bitcoin DeFi and Cross Chain Technology 💡 Imagine you have a gold bar, but it can only sit in a safe — you can't invest it, lend it, or generate any yield. Now there's magical technology that lets this gold \"clone\" itself to work and earn money elsewhere, while the original gold bar remains safe in the vault. This is the allure of Bitcoin DeFi. Recommended exchange for buying BTC / ETH / USDT: Binance Reg",
       "headings": [
@@ -10109,7 +10109,7 @@
       "citation": {
         "file": "zh/Web3Thoughts/01_Principles/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3Thoughts/01_Principles/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-5/5-1"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-5/5-1"
       },
       "excerpt": "Web3 原则：区块链世界的生存指南 🧭 在 Web3 的海洋中航行需要一套可靠的原则作为指南针。这些是我根据个人经验总结的核心原则，希望能帮助你在这个新兴世界中安全且成功地航行。 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 🌟 前言：原则的重要性 在 Web3 世界中，遵循一些基本原则至关重要。正如 Ray Dalio 写了他的《原则》，CZ 写了他的原则，我也想分享我在 Web3 领域的指导原则。 这些原则不是公理而是我个人的理解与思考，没有绝对的对错，只是一种经验分享。希望能为 Web3 新手提供一些实用指南，在这个充满机遇与风险的世界中少走弯路。 💰 投资原则：稳健与长远 1. 📊 使用比特币本位思维 原则 说明 实践建议 : : : : : : BTC 本位计价 用比特币作为投资的本位货币 评估其他资产时，考虑其相对于 BTC 的价值变化 保持币本位不缩水 确保你的投资组合比特币价值稳",
       "headings": [
@@ -10206,7 +10206,7 @@
       "citation": {
         "file": "en/Web3Thoughts/01_Principles/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/Web3Thoughts/01_Principles/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-5/5-1"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-5/5-1"
       },
       "excerpt": "Web3 Principles: A Survival Guide for the Blockchain World Navigating the Web3 ocean requires a reliable set of principles as your compass. These are the core principles I have distilled from personal experience, and I hope they help you navigate this emerging world safely and successfully. Recommended exchange for buying BTC / ETH / USDT: Binance Registration Link Preface: Why Principles Matter In the Web3 world, fo",
       "headings": [
@@ -10303,7 +10303,7 @@
       "citation": {
         "file": "zh/Web3Thoughts/02_WhyBlockchainIsNecessary/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3Thoughts/02_WhyBlockchainIsNecessary/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-5/5-2"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-5/5-2"
       },
       "excerpt": "为什么区块链是必须的？《主权个人》读书笔记 📚 《主权个人》(The Sovereign Individual) 是由詹姆斯・戴尔・戴维森 (James Dale Davidson) 和威廉・里斯 莫格 (William Rees Mogg) 在 1997 年共同撰写的一本著作，被认为是预见比特币和区块链时代到来的预言之书。 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 🔮 《主权个人》的核心预见 《主权个人》这本书在 1997 年出版，却惊人地预见了包括互联网、加密货币和区块链在内的众多技术变革及其社会影响。本文将结合这本「预言之书」的洞见，探讨为什么区块链技术是必然且必须的技术发展方向。 💫 历史视角：工业革命到信息革命 时代变迁 核心特征 权力结构 代表技术 : : : : : : : : 农业社会 土地为核心生产资料 封建制度 灌溉、畜牧 工业社会 机器为核心生产资料 民族国家 蒸汽机、电力",
       "headings": [
@@ -10376,7 +10376,7 @@
       "citation": {
         "file": "en/Web3Thoughts/02_WhyBlockchainIsNecessary/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/Web3Thoughts/02_WhyBlockchainIsNecessary/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-5/5-2"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-5/5-2"
       },
       "excerpt": "Why Is Blockchain Necessary? Reading Notes on The Sovereign Individual The Sovereign Individual is a work co authored by James Dale Davidson and William Rees Mogg in 1997. It is widely considered a prophetic book that foresaw the arrival of the Bitcoin and blockchain era. Recommended exchange for buying BTC / ETH / USDT: Binance Registration Link Core Predictions of The Sovereign Individual Published in 1997, The Sov",
       "headings": [
@@ -10449,7 +10449,7 @@
       "citation": {
         "file": "zh/Web3Thoughts/03_TheCoolestTransactionOnBitcoin/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3Thoughts/03_TheCoolestTransactionOnBitcoin/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-5/5-3"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-5/5-3"
       },
       "excerpt": "区块链彩蛋解读指南：b10c...eb5d 玩了哪些「梗」？ 🧭 在比特币世界里，有些交易不只是交易，而是技术、历史与文化的多重彩蛋。这篇文章带你看懂 b10c...eb5d 这笔神级彩蛋交易背后的所有隐藏细节。 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 🌟 前言：当交易也成为艺术 区块链上的每笔交易，通常只是简单的资金流转。但在比特币生态内，偶尔也会出现一些极具匠心的「彩蛋交易」 —— 它们借助协议细节、历史事件、技术趣味与文化梗，打造出属于比特币原教旨主义者的艺术品。 b10c...eb5d 这笔交易，就是这样的神作。 💎 核心彩蛋一览 彩蛋类型 示例 说明 : : : : : : 区块高度梗 850000 对应 Mt.Gox 失窃金额 85 万枚 BTC 时间戳梗 1231006505 创世区块时间戳 TXID 靓号 b10c0000...eb5d 向开发者 b10c 致敬 Witness",
       "headings": [
@@ -10526,7 +10526,7 @@
       "citation": {
         "file": "en/Web3Thoughts/03_TheCoolestTransactionOnBitcoin/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/Web3Thoughts/03_TheCoolestTransactionOnBitcoin/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-5/5-3"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-5/5-3"
       },
       "excerpt": "A Guide to Blockchain Easter Eggs: What \"Memes\" Did b10c...eb5d Play? In the Bitcoin world, some transactions are more than just transfers of funds—they are multi layered Easter eggs packed with technology, history, and culture. This article walks you through all the hidden details behind the legendary Easter egg transaction: b10c...eb5d. Recommended exchange for buying BTC / ETH / USDT: Binance Registration Link Pre",
       "headings": [
@@ -10603,7 +10603,7 @@
       "citation": {
         "file": "zh/其它学习资源整理/DeFi/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/%E5%85%B6%E5%AE%83%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/DeFi/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-6/6-1"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-6/6-1"
       },
       "excerpt": "DeFi (去中心化金融) 学习指南 💡 DeFi (Decentralized Finance) 是区块链技术最重要的应用之一。本指南从基础概念到高级应用，帮助你系统掌握去中心化金融的核心知识与实践技能。无论你是 DeFi 新手还是想要深入了解协议机制的开发者，这里都有适合你的学习路径。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 📚 目录 什么是 DeFi？ DeFi 核心概念 学习路径 🌱 入门阶段 🚀 进阶阶段 🏆 高级阶段 DeFi 协议分类详解 实战项目 必备工具与网站 安全指南 社区与资源 常见问题 FAQ 什么是 DeFi？ DeFi (Decentralized Finance，去中心化金融) 是基于区块链技术构建的金融系统，旨在重建传",
       "headings": [
@@ -10784,7 +10784,7 @@
       "citation": {
         "file": "en/其它学习资源整理/DeFi/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/%E5%85%B6%E5%AE%83%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/DeFi/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-6/6-1"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-6/6-1"
       },
       "excerpt": "DeFi (Decentralized Finance) Learning Guide DeFi (Decentralized Finance) is one of the most important applications of blockchain technology. This guide takes you from foundational concepts to advanced applications, helping you systematically master the core knowledge and practical skills of decentralized finance. Whether you're a DeFi beginner or a developer looking to deeply understand protocol mechanics, there's a ",
       "headings": [
@@ -10965,7 +10965,7 @@
       "citation": {
         "file": "zh/其它学习资源整理/Etherum/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/%E5%85%B6%E5%AE%83%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/Etherum/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-6/6-2"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-6/6-2"
       },
       "excerpt": "以太坊 (Ethereum) 学习指南 💡 以太坊是区块链技术的第二代代表，不仅是一种加密货币，更是全球去中心化应用的基础平台。本指南将带你从基础概念到深度开发，全面掌握以太坊生态系统的核心知识与实践技能。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 📚 目录 以太坊基础概念 什么是以太坊？ 以太坊 vs 比特币 核心价值与应用 技术架构深度解析 以太坊虚拟机 (EVM) 智能合约 账户系统 Gas 机制 以太坊 2.0 与共识机制 学习路径 🌱 入门阶段 🚀 进阶阶段 🏆 高级阶段 开发环境搭建 智能合约开发 DApp 开发实战 必备工具与框架 生态系统概览 安全最佳实践 学习资源汇总 常见问题 FAQ 以太坊基础概念 什么是以太坊？ 以太坊 (Eth",
       "headings": [
@@ -11146,7 +11146,7 @@
       "citation": {
         "file": "en/其它学习资源整理/Etherum/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/%E5%85%B6%E5%AE%83%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/Etherum/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-6/6-2"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-6/6-2"
       },
       "excerpt": "Ethereum Learning Guide Ethereum is the second generation representative of blockchain technology not just a cryptocurrency, but the foundational platform for global decentralized applications. This guide takes you from basic concepts to in depth development, comprehensively mastering the core knowledge and practical skills of the Ethereum ecosystem. Follow me on Twitter: @bhbtc1337 Join our WeChat group: Form Link O",
       "headings": [
@@ -11327,7 +11327,7 @@
       "citation": {
         "file": "zh/其它学习资源整理/Layer2/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/%E5%85%B6%E5%AE%83%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/Layer2/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-6/6-3"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-6/6-3"
       },
       "excerpt": "Layer 2 扩容技术学习指南 (2025 版) 💡 Layer 2 技术是以太坊扩容的核心解决方案，也是 Web3 基础设施的重要组成部分。本指南汇集 2025 年最新的 Layer 2 技术发展趋势、主要项目分析和实用开发资源，帮助开发者和投资者深入了解这个快速发展的生态系统。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 📚 目录 什么是 Layer 2？ 技术原理对比 2025 年市场格局 主要项目深度分析 开发者指南 投资与风险分析 未来发展趋势 学习资源汇总 常见问题 FAQ 什么是 Layer 2？ Layer 2 (L2) 是建立在以太坊主网 (Layer 1) 之上的扩容解决方案，旨在提高交易吞吐量、降低交易费用，同时保持以太坊主网的安全性和",
       "headings": [
@@ -11504,7 +11504,7 @@
       "citation": {
         "file": "en/其它学习资源整理/Layer2/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/%E5%85%B6%E5%AE%83%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/Layer2/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-6/6-3"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-6/6-3"
       },
       "excerpt": "Layer 2 Scaling Technology Learning Guide (2025 Edition) Layer 2 technology is the core scaling solution for Ethereum and an important component of Web3 infrastructure. This guide compiles the latest Layer 2 technology trends in 2025, major project analyses, and practical development resources to help developers and investors gain deep understanding of this rapidly evolving ecosystem. Follow me on Twitter: @bhbtc1337",
       "headings": [
@@ -11681,7 +11681,7 @@
       "citation": {
         "file": "zh/其它学习资源整理/新兴公链生态/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/%E5%85%B6%E5%AE%83%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/%E6%96%B0%E5%85%B4%E5%85%AC%E9%93%BE%E7%94%9F%E6%80%81/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-6/6-4"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-6/6-4"
       },
       "excerpt": "新兴区块链生态学习指南 (2025 版) 💡 区块链技术正在快速演进，新的公链生态系统不断涌现。本指南深入分析 2025 年最具潜力的新兴区块链平台，包括 Solana, Sui, Aptos 等 Move 语言生态，以及它们在性能、开发者体验和应用场景方面的创新突破。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 📚 目录 新兴公链概述 高性能公链分析 Solana 生态深度解析 Move 语言生态系统 Cosmos 生态网络 技术创新对比 开发者生态建设 应用场景与案例 投资与风险分析 开发入门指南 生态资源汇总 未来发展趋势 常见问题 FAQ 新兴公链概述 🚀 为什么需要新兴公链？ 以太坊虽然是智能合约平台的先驱，但面临诸多挑战： 性能瓶颈 ： TPS ",
       "headings": [
@@ -11862,7 +11862,7 @@
       "citation": {
         "file": "en/其它学习资源整理/新兴公链生态/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/%E5%85%B6%E5%AE%83%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/%E6%96%B0%E5%85%B4%E5%85%AC%E9%93%BE%E7%94%9F%E6%80%81/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-6/6-4"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-6/6-4"
       },
       "excerpt": "Emerging Blockchain Ecosystem Learning Guide (2025 Edition) Blockchain technology is evolving rapidly, with new public chain ecosystems constantly emerging. This guide provides an in depth analysis of the most promising emerging blockchain platforms in 2025, including Solana, Sui, Aptos, and other Move language ecosystems, as well as their innovations in performance, developer experience, and use cases. Follow me on ",
       "headings": [
@@ -12043,7 +12043,7 @@
       "citation": {
         "file": "zh/其它学习资源整理/AI_Web3/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/%E5%85%B6%E5%AE%83%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/AI_Web3/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-6/6-5"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-6/6-5"
       },
       "excerpt": "AI + Web3 融合技术学习指南 (2025 版) 💡 AI 与 Web3 的结合正在开启去中心化智能应用的新时代。本指南汇集 2025 年最新的 AI + Web3 融合趋势、关键技术如 zkML（零知识机器学习）、AI Agent 应用，以及实用的开发框架和投资机会分析。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 📚 目录 AI + Web3 融合概述 核心技术详解 AI Agent 在 Web3 中的应用 zkML 零知识机器学习 去中心化 AI 基础设施 主要项目生态分析 开发者实战指南 投资机会与风险 未来发展趋势 学习资源汇总 常见问题 FAQ AI + Web3 融合概述 🌟 为什么是 AI + Web3？ 传统 AI 面临的核心问题： ",
       "headings": [
@@ -12224,7 +12224,7 @@
       "citation": {
         "file": "en/其它学习资源整理/AI_Web3/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/%E5%85%B6%E5%AE%83%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/AI_Web3/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-6/6-5"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-6/6-5"
       },
       "excerpt": "AI + Web3 Convergence Technology Learning Guide (2025 Edition) The convergence of AI and Web3 is ushering in a new era of decentralized intelligent applications. This guide compiles the latest AI + Web3 convergence trends for 2025, key technologies such as zkML (Zero Knowledge Machine Learning), AI Agent applications, practical development frameworks, and investment opportunity analysis. Follow me on Twitter: @bhbtc1",
       "headings": [
@@ -12405,7 +12405,7 @@
       "citation": {
         "file": "zh/其它学习资源整理/实用工具/README.MD",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/%E5%85%B6%E5%AE%83%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/README.MD",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-6/6-6"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-6/6-6"
       },
       "excerpt": "Web3 实用工具与资源汇总 (2025 版) 💡 工欲善其事，必先利其器。本指南汇集 2025 年最实用的 Web3 开发工具、分析平台、交易工具和学习资源，帮助开发者、交易者和研究者快速找到适合的工具，提升工作效率。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 📚 目录 开发者工具 数据分析平台 交易与 DeFi 工具 安全审计工具 多链基础设施 NFT 与元宇宙工具 学习与研究资源 社区与媒体 API 与数据服务 移动端应用 开发者工具 🛠️ 智能合约开发框架 Hardhat ⭐⭐⭐⭐⭐ 用途 ：以太坊开发环境。 特色 ：强大的调试功能、丰富的插件生态。 支持链 ：以太坊、 Polygon, BSC, Arbitrum 等。 官网 ： hardhat.",
       "headings": [
@@ -12586,7 +12586,7 @@
       "citation": {
         "file": "en/其它学习资源整理/实用工具/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/%E5%85%B6%E5%AE%83%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-6/6-6"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-6/6-6"
       },
       "excerpt": "Web3 Practical Tools and Resources (2025 Edition) The right tools make all the difference. This guide compiles the most practical Web3 development tools, analytics platforms, trading tools, and learning resources for 2025, helping developers, traders, and researchers quickly find the right tools and boost their productivity. Follow me on Twitter: @bhbtc1337 Join our WeChat group: Form Link Open sourced on GitHub: Get",
       "headings": [
@@ -12767,7 +12767,7 @@
       "citation": {
         "file": "zh/Web3BuilderLab/01_DeployERC20/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3BuilderLab/01_DeployERC20/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-7/7-1"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-7/7-1"
       },
       "excerpt": "从零部署 ERC 20 代币 💡 ERC 20 是以太坊上最基础、最广泛的代币标准，从 USDT 到 UNI，从 LINK 到 SHIB，几乎所有你在交易所见过的代币都遵循这个标准。本课将带你从零开始，用 Foundry 工具链编写、测试并部署一个属于你自己的 ERC 20 代币。这不仅是学习智能合约开发的最佳起点，也是理解 DeFi 世界运转逻辑的钥匙。 <div align=\"center\" <a href=\"https://twitter.com/bhbtc1337\" 🐦 关注作者 Twitter</a <a href=\"https://forms.gle/QMBwL6LwZyQew1tX8\" 💬 加入微信交流群 </a <a href=\"https://github.com/beihaili/Get Started with Web3\" ⭐ GitHub 仓库 </a </div 购买 BTC / ETH / US",
       "headings": [
@@ -12948,7 +12948,7 @@
       "citation": {
         "file": "en/Web3BuilderLab/01_DeployERC20/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/Web3BuilderLab/01_DeployERC20/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-7/7-1"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-7/7-1"
       },
       "excerpt": "Deploy an ERC 20 Token From Scratch This lab walks you through building, testing, deploying, and verifying a simple ERC 20 token with Foundry and OpenZeppelin. The goal is not to encourage launching meaningless tokens. The goal is to understand the token standard that powers much of Web3. Table of Contents What ERC 20 Is What You Will Build Development Environment Create the Token Contract Write Tests Deploy to Sepol",
       "headings": [
@@ -13021,7 +13021,7 @@
       "citation": {
         "file": "zh/Web3BuilderLab/02_BuildFirstDApp/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3BuilderLab/02_BuildFirstDApp/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-7/7-2"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-7/7-2"
       },
       "excerpt": "构建你的第一个 DApp 💡 DApp（去中心化应用）是 Web3 世界的核心载体。与传统 Web 应用不同，DApp 的后端逻辑运行在区块链上，用户通过钱包与智能合约直接交互，无需信任中间人。本课将带你从零开始，用 React + wagmi 构建一个能连接钱包、读取链上数据的完整 DApp。 <div align=\"center\" <a href=\"https://twitter.com/bhbtc1337\" 🐦 Twitter</a <a href=\"https://forms.gle/QMBwL6LwZyQew1tX8\" 💬 微信交流群 </a <a href=\"https://github.com/beihaili/Get Started with Web3\" ⭐ GitHub</a </div 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言 DApp 架构概述 创建项目 配置 ",
       "headings": [
@@ -13202,7 +13202,7 @@
       "citation": {
         "file": "en/Web3BuilderLab/02_BuildFirstDApp/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/Web3BuilderLab/02_BuildFirstDApp/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-7/7-2"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-7/7-2"
       },
       "excerpt": "Build Your First DApp This lab builds a minimal React DApp that connects a wallet and reads contract data. The goal is to understand the frontend architecture behind most EVM applications: wallet connection, chain configuration, contract ABI, reads, writes, and user state. Table of Contents What a DApp Is Architecture Overview Create the Project Configure wagmi Wrap the App With Providers Implement Wallet Connection ",
       "headings": [
@@ -13291,7 +13291,7 @@
       "citation": {
         "file": "zh/Web3BuilderLab/03_ReadBlockExplorer/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3BuilderLab/03_ReadBlockExplorer/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-7/7-3"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-7/7-3"
       },
       "excerpt": "如何阅读区块浏览器 💡 区块浏览器是每个 Web3 用户的必备工具 —— 它就像区块链世界的 \"搜索引擎\"，让你能够查看、验证链上发生的一切。本文将手把手教你如何读懂 Etherscan 和 Mempool.space 上的每一个字段，从此不再对链上数据感到陌生。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言 什么是区块浏览器 实战一：在 Etherscan 上阅读一笔 ETH 交易 实战二：在 Mempool.space 上阅读一笔比特币交易 查看智能合约 追踪钱包和鲸鱼 常见问题 总结 延伸阅读 前言 在 Web2 的世界里，你在淘宝买了东西，可以在「我的订单」里查看物流信息；你在银行转了账，可以在手机 App 里看到交易记录。那么在 Web3 的",
       "headings": [
@@ -13472,7 +13472,7 @@
       "citation": {
         "file": "en/Web3BuilderLab/03_ReadBlockExplorer/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/Web3BuilderLab/03_ReadBlockExplorer/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-7/7-3"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-7/7-3"
       },
       "excerpt": "How to Read a Block Explorer A block explorer is the most important debugging tool in Web3. It tells you what actually happened on chain, not what a website claimed happened. This lab teaches you how to read Ethereum transactions, Bitcoin transactions, smart contracts, approvals, and wallet activity. Table of Contents What a Block Explorer Is Read an Ethereum Transaction Read a Bitcoin Transaction Inspect a Smart Con",
       "headings": [
@@ -13585,7 +13585,7 @@
       "citation": {
         "file": "zh/Web3BuilderLab/04_SmartContractSecurity/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3BuilderLab/04_SmartContractSecurity/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-7/7-4"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-7/7-4"
       },
       "excerpt": "智能合约安全实战 💡 智能合约一旦部署就无法修改，而它管理的往往是真金白银。一个小小的漏洞可能导致数百万美元的损失。本课将带你深入了解真实世界中最常见的智能合约漏洞，学会如何编写安全的 Solidity 代码，并掌握基本的审计方法与工具。欢迎关注作者 Twitter、加入 交流群、或在 GitHub 上贡献内容。 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 前言 常见漏洞类型 重入攻击 (Reentrancy) 整数溢出与下溢 (Integer Overflow/Underflow) 权限控制漏洞 其他常见漏洞 安全开发最佳实践 自动化审计工具 如何阅读审计报告 总结 延伸阅读 前言 为什么智能合约安全如此重要？ 传统软件出了 bug 可以打补丁、发新版本。但智能合约不同 —— 它部署在区块链上之后，代码就永远无法更改。更关键的是，智能合约直接掌管着用户的资金，攻击者不需要入侵服务器、不需要社会",
       "headings": [
@@ -13766,7 +13766,7 @@
       "citation": {
         "file": "en/Web3BuilderLab/04_SmartContractSecurity/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/Web3BuilderLab/04_SmartContractSecurity/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-7/7-4"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-7/7-4"
       },
       "excerpt": "Smart Contract Security in Practice Smart contracts often protect real funds. A small logic bug can become a complete loss in one transaction. This lab teaches the most common Solidity vulnerabilities, secure coding habits, automated audit tools, and how to read an audit report. Table of Contents Why Security Matters Common Vulnerabilities Secure Development Practices Automated Audit Tools How to Read an Audit Report",
       "headings": [
@@ -13887,7 +13887,7 @@
       "citation": {
         "file": "zh/DeFiDeepDive/01_CoreConcepts/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/DeFiDeepDive/01_CoreConcepts/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-8/8-1"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-8/8-1"
       },
       "excerpt": "DeFi 核心概念与架构 💡 本课将带你深入理解 DeFi（去中心化金融）的核心概念和架构设计。你将了解 DeFi 如何用智能合约重塑传统金融，以及为什么 \"可组合性\" 被称为 DeFi 最强大的超能力。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 什么是 DeFi 传统金融 vs DeFi 对比 智能合约即金融协议 可组合性：Money Legos TVL：衡量 DeFi 的标尺 DeFi 的核心优势 DeFi 的技术栈架构 DeFi 的发展简史 总结 延伸阅读 什么是 DeFi DeFi 是 Decentralized Finance （去中心化金融）的缩写，指的是构建在公共区块链上的一整套金融服务和应用。与传统金融机构（银行、证券交易所、保险公司）不",
       "headings": [
@@ -14008,7 +14008,7 @@
       "citation": {
         "file": "en/DeFiDeepDive/01_CoreConcepts/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/DeFiDeepDive/01_CoreConcepts/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-8/8-1"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-8/8-1"
       },
       "excerpt": "DeFi Core Concepts and Architecture DeFi replaces financial intermediaries with smart contracts. This lesson explains what DeFi is, how it differs from traditional finance, why composability matters, how TVL should be interpreted, and how the DeFi stack is organized. Table of Contents What DeFi Is Traditional Finance vs DeFi Smart Contracts as Financial Protocols Composability: Money Legos TVL: A Useful but Limited M",
       "headings": [
@@ -14101,7 +14101,7 @@
       "citation": {
         "file": "zh/DeFiDeepDive/02_AMMAndDEX/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/DeFiDeepDive/02_AMMAndDEX/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-8/8-2"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-8/8-2"
       },
       "excerpt": "AMM 与去中心化交易所 💡 本课将深入解析去中心化交易所（DEX）的核心机制 —— 自动做市商（AMM）。你将理解 Uniswap 的恒定乘积公式、流动性提供的完整流程，以及无常损失这个每个 LP 必须面对的概念。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 交易的两种模式：订单簿 vs AMM 恒定乘积公式 x y = k 流动性池与 LP Token 滑点与价格影响 无常损失详解 Uniswap V2 vs V3：集中流动性革命 主流 DEX 全景 总结 延伸阅读 交易的两种模式：订单簿 vs AMM 在理解 DEX 之前，我们需要先理解交易所的两种基本运作模式。 订单簿模式（Order Book） 传统交易所（如股票交易所、币安、Coinbase）",
       "headings": [
@@ -14230,7 +14230,7 @@
       "citation": {
         "file": "en/DeFiDeepDive/02_AMMAndDEX/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/DeFiDeepDive/02_AMMAndDEX/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-8/8-2"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-8/8-2"
       },
       "excerpt": "AMMs and Decentralized Exchanges Automated market makers made on chain trading practical. This lesson explains order books, AMMs, the constant product formula, liquidity pools, LP tokens, slippage, impermanent loss, and the difference between Uniswap V2 and V3. Table of Contents Order Books vs AMMs The Constant Product Formula Liquidity Pools and LP Tokens Slippage and Price Impact Impermanent Loss Uniswap V2 vs V3 M",
       "headings": [
@@ -14335,7 +14335,7 @@
       "citation": {
         "file": "zh/DeFiDeepDive/03_LendingProtocols/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/DeFiDeepDive/03_LendingProtocols/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-8/8-3"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-8/8-3"
       },
       "excerpt": "借贷协议原理 💡 本课将带你理解 DeFi 借贷协议的工作原理。从 Aave 和 Compound 的核心机制，到超额抵押、清算和利率模型，再到 \"闪电贷\" 这个只有在区块链上才可能存在的魔法 —— 全面掌握 DeFi 借贷的知识体系。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 DeFi 借贷 vs 传统银行借贷 Aave 和 Compound 的工作原理 超额抵押机制与健康因子 清算机制详解 利率模型：利用率曲线 闪电贷：无抵押借贷的魔法 DeFi 借贷的实际应用场景 总结 延伸阅读 DeFi 借贷 vs 传统银行借贷 借贷是金融体系中最基本的功能之一。DeFi 把这件事从银行柜台搬到了智能合约中，带来了根本性的改变： 维度 传统银行借贷 DeFi 借",
       "headings": [
@@ -14472,7 +14472,7 @@
       "citation": {
         "file": "en/DeFiDeepDive/03_LendingProtocols/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/DeFiDeepDive/03_LendingProtocols/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-8/8-3"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-8/8-3"
       },
       "excerpt": "How DeFi Lending Protocols Work Lending is one of the core primitives of DeFi. This lesson explains how Aave and Compound work, why DeFi lending is overcollateralized, how health factors and liquidations protect the system, how interest rates are calculated, and why flash loans are possible. Table of Contents DeFi Lending vs Bank Lending How Aave and Compound Work Overcollateralization and Health Factor Liquidations ",
       "headings": [
@@ -14581,7 +14581,7 @@
       "citation": {
         "file": "zh/DeFiDeepDive/04_Stablecoins/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/DeFiDeepDive/04_Stablecoins/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-8/8-4"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-8/8-4"
       },
       "excerpt": "稳定币全景 💡 稳定币是 DeFi 的基石和血液，也是链上支付、跨境结算和 RWA 的核心入口。本课将全面解析主要稳定币模式，并通过 UST/LUNA 崩盘、USDC 脱锚、监管落地和合成美元案例揭示其中的风险。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 为什么需要稳定币 稳定币的三种模式 法币抵押稳定币：USDT 和 USDC 加密资产抵押稳定币：DAI 算法稳定币：机制与挑战 UST/LUNA 崩盘：史上最大的稳定币灾难 2026 更新：监管、RWA 与链上支付 稳定币监管趋势 如何选择和使用稳定币 总结 延伸阅读 为什么需要稳定币 在加密世界中，比特币和以太坊的价格波动可以在一天内超过 10 20%。这种波动性对投资者来说是机会，但对日常使用来说是",
       "headings": [
@@ -14762,7 +14762,7 @@
       "citation": {
         "file": "en/DeFiDeepDive/04_Stablecoins/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/DeFiDeepDive/04_Stablecoins/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-8/8-4"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-8/8-4"
       },
       "excerpt": "Stablecoins: Models, Risks, Regulation, and Payments Stablecoins are the base currency of DeFi and one of the most important bridges between crypto and the real economy. This lesson explains fiat backed, crypto backed, algorithmic, and synthetic stablecoins, then covers UST/LUNA, USDC depeg risk, regulation, RWA reserves, and stablecoin payments. Table of Contents Why Stablecoins Exist Three Stablecoin Models Fiat Ba",
       "headings": [
@@ -14895,7 +14895,7 @@
       "citation": {
         "file": "zh/DeFiDeepDive/05_DeFiRisks/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/DeFiDeepDive/05_DeFiRisks/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-8/8-5"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-8/8-5"
       },
       "excerpt": "DeFi 风险与安全 💡 DeFi 给你前所未有的金融自由，同时也把安全责任完全交到了你手上。本课将系统性地梳理 DeFi 领域的主要风险类型，结合真实攻击案例，帮助你建立完整的风险认知框架和个人安全实践体系。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 DeFi 风险全景图 智能合约风险 闪电贷攻击案例 预言机操纵攻击 跑路风险：Rug Pull 其他常见风险 如何评估 DeFi 协议安全性 个人安全实践清单 总结 延伸阅读 DeFi 风险全景图 根据 Chainalysis 和 DeFi Llama 的数据，2021 2024 年 DeFi 领域因黑客攻击和欺诈造成的损失超过 $100 亿 。 下面我们逐一深入分析最重要的几类风险。 智能合约风险 智能",
       "headings": [
@@ -15048,7 +15048,7 @@
       "citation": {
         "file": "en/DeFiDeepDive/05_DeFiRisks/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/DeFiDeepDive/05_DeFiRisks/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-8/8-5"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-8/8-5"
       },
       "excerpt": "DeFi Risks and Security DeFi gives users direct access to financial protocols, but it also gives users direct responsibility for risk. This lesson builds a practical risk framework covering smart contract bugs, flash loan attacks, oracle manipulation, rug pulls, MEV, bridge risk, governance attacks, protocol due diligence, and personal security habits. Table of Contents The DeFi Risk Map Smart Contract Risk Flash Loa",
       "headings": [
@@ -15229,7 +15229,7 @@
       "citation": {
         "file": "zh/L2CrossChain/01_WhyScaling/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/L2CrossChain/01_WhyScaling/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-9/9-1"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-9/9-1"
       },
       "excerpt": "为什么需要扩容 💡 区块链面临 \"不可能三角\" 的根本挑战 —— 去中心化、安全性和可扩展性无法兼得。本课深入分析以太坊的拥堵历史、扩容路线之争，以及为什么 Rollup 成为最终答案。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 区块链不可能三角 以太坊的 Gas 战争历史 链上拥堵的真实体验和代价 扩容路线之争 以太坊以 Rollup 为中心的路线图 总结 延伸阅读 区块链不可能三角 2017 年，以太坊创始人 Vitalik Buterin 提出了一个至今仍深刻影响区块链设计的概念 —— 区块链不可能三角 （Blockchain Trilemma）。它指出一个区块链系统无法同时完美实现三个特性： 去中心化（Decentralization） ：网络由",
       "headings": [
@@ -15318,7 +15318,7 @@
       "citation": {
         "file": "en/L2CrossChain/01_WhyScaling/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/L2CrossChain/01_WhyScaling/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-9/9-1"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-9/9-1"
       },
       "excerpt": "Why Scaling Is Needed The blockchain trilemma is one of the core challenges of public chain design: decentralization, security, and scalability cannot all be maximized at the same time. This lesson reviews Ethereum's congestion history, the competing scaling paths, and why Rollups became the center of Ethereum's scaling roadmap. Follow me on Twitter: @bhbtc1337 Join the WeChat group: Form Link Articles are open sourc",
       "headings": [
@@ -15407,7 +15407,7 @@
       "citation": {
         "file": "zh/L2CrossChain/02_RollupPrinciples/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/L2CrossChain/02_RollupPrinciples/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-9/9-2"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-9/9-2"
       },
       "excerpt": "Rollup 原理详解 💡 Rollup 是以太坊扩容的核心技术方案。本课深入解析 Optimistic Rollup 和 ZK Rollup 两大流派的工作原理，对比它们在安全模型、性能和 EVM 兼容性上的差异，并探讨数据可用性的关键挑战。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 什么是 Rollup Optimistic Rollup 原理 ZK Rollup 原理 Optimistic vs ZK 详细对比 数据可用性问题 Validium 和 Volition 模式 总结 延伸阅读 什么是 Rollup Rollup（卷叠）是一种 Layer 2 扩容方案，核心思想用一句话概括： 把计算搬到链下，把数据留在链上 。 想象一个类比：你在公司做项",
       "headings": [
@@ -15520,7 +15520,7 @@
       "citation": {
         "file": "en/L2CrossChain/02_RollupPrinciples/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/L2CrossChain/02_RollupPrinciples/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-9/9-2"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-9/9-2"
       },
       "excerpt": "Rollup Principles Explained Rollup is the core scaling technology in Ethereum's roadmap. This lesson explains how Optimistic Rollups and ZK Rollups work, compares their security models, performance, and EVM compatibility, and explores the key challenge of data availability. Follow me on Twitter: @bhbtc1337 Join the WeChat group: Form Link Articles are open sourced on GitHub: Get Started with Web3 Recommended exchange",
       "headings": [
@@ -15633,7 +15633,7 @@
       "citation": {
         "file": "zh/L2CrossChain/03_L2Ecosystem/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/L2CrossChain/03_L2Ecosystem/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-9/9-3"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-9/9-3"
       },
       "excerpt": "主流 L2 生态对比 💡 当前以太坊 L2 生态百花齐放，各大 Rollup 在技术架构、生态建设和发展策略上各有千秋。本课深入对比 Arbitrum、Optimism、Base、zkSync 和 StarkNet 五大主流 L2，帮你建立全面的生态认知。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 Arbitrum Optimism Base zkSync StarkNet 2026 更新：Blob、PeerDAS 与 L2 风险分层 各 L2 综合对比 总结 延伸阅读 Arbitrum 技术架构 Arbitrum 由 Offchain Labs 团队开发，是目前 TVL 最高的以太坊 L2，采用 Optimistic Rollup 技术。 核心技术栈 ",
       "headings": [
@@ -15806,7 +15806,7 @@
       "citation": {
         "file": "en/L2CrossChain/03_L2Ecosystem/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/L2CrossChain/03_L2Ecosystem/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-9/9-3"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-9/9-3"
       },
       "excerpt": "The Major L2 Ecosystem Compared The Ethereum L2 ecosystem is thriving — each major Rollup has carved out its own niche in architecture, ecosystem building, and growth strategy. This lesson takes a deep look at five leading L2s: Arbitrum, Optimism, Base, zkSync, and StarkNet, so you can build a complete picture of the landscape. Follow me on Twitter: @bhbtc1337 Join the WeChat group: Form Link Articles are open source",
       "headings": [
@@ -15979,7 +15979,7 @@
       "citation": {
         "file": "zh/L2CrossChain/04_CrossChainBridges/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/L2CrossChain/04_CrossChainBridges/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-9/9-4"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-9/9-4"
       },
       "excerpt": "跨链桥与互操作性 💡 多链生态中，跨链桥是连接不同区块链的关键基础设施。本课讲解跨链桥的工作原理、信任模型和主流方案，并通过安全事件回顾帮你建立跨链操作的风险意识。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 为什么需要跨链 跨链桥工作原理 桥的信任模型 主流跨链方案 跨链桥安全事件回顾 跨链安全最佳实践 总结 延伸阅读 为什么需要跨链 多链生态的现实 2020 年以前，以太坊几乎是唯一有活跃 DeFi 生态的区块链。但现在的格局完全不同： 流动性和用户分散在数十条链上，导致了几个核心问题： 1. 流动性碎片化 ：同一个代币在不同链上的流动性各不相同。Uniswap 在以太坊上有最深的 ETH/USDC 流动性，但在 Arbitrum 上较浅 2. 用户体",
       "headings": [
@@ -16132,7 +16132,7 @@
       "citation": {
         "file": "en/L2CrossChain/04_CrossChainBridges/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/L2CrossChain/04_CrossChainBridges/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-9/9-4"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-9/9-4"
       },
       "excerpt": "Cross Chain Bridges and Interoperability In a multi chain ecosystem, cross chain bridges are critical infrastructure connecting different blockchains. This lesson explains how bridges work, their trust models, and the leading protocols — and walks through major security incidents to build your risk awareness for cross chain operations. Follow me on Twitter: @bhbtc1337 Join the WeChat group: Form Link Articles are ope",
       "headings": [
@@ -16285,7 +16285,7 @@
       "citation": {
         "file": "zh/L2CrossChain/05_L2PracticalGuide/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/L2CrossChain/05_L2PracticalGuide/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-9/9-5"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-9/9-5"
       },
       "excerpt": "L2 实操指南 💡 学了前面四课的理论，现在该动手实操了。本课手把手教你如何把资产桥接到 L2、配置网络、使用 DeFi，并通过真实的 Gas 费对比帮你做出最优的选链决策。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 将资产从以太坊桥接到 L2 MetaMask 添加 L2 网络配置 在 L2 上使用 DeFi Gas 费对比实测 选链策略 L2 上的常见坑和注意事项 总结 延伸阅读 将资产从以太坊桥接到 L2 我们以 Arbitrum 官方桥为例，演示如何将 ETH 从以太坊主网桥接到 Arbitrum One。 使用 Arbitrum 官方桥 步骤 1：访问官方桥 打开 bridge.arbitrum.io，连接你的 MetaMask 钱包。 ⚠️ ",
       "headings": [
@@ -16446,7 +16446,7 @@
       "citation": {
         "file": "en/L2CrossChain/05_L2PracticalGuide/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/L2CrossChain/05_L2PracticalGuide/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-9/9-5"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-9/9-5"
       },
       "excerpt": "L2 Practical Guide Four lessons of theory — now it's time to act. This lesson walks you step by step through bridging assets to L2, configuring your wallet, using DeFi, and using real Gas fee data to help you make the best chain selection decisions. Follow me on Twitter: @bhbtc1337 Join the WeChat group: Form Link Articles are open sourced on GitHub: Get Started with Web3 Recommended exchange for buying BTC / ETH / U",
       "headings": [
@@ -16607,7 +16607,7 @@
       "citation": {
         "file": "zh/DAOGovernance/01_WhatIsDAO/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/DAOGovernance/01_WhatIsDAO/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-10/10-1"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-10/10-1"
       },
       "excerpt": "DAO 是什么 💡 本课将带你深入理解 DAO（去中心化自治组织）的本质 —— 它是如何用代码取代层级管理，用透明规则取代黑箱决策的。你将了解 DAO 的起源、核心特征和主要分类，为后续的治理机制学习打下坚实基础。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 什么是 DAO DAO 与传统组织的对比 DAO 的简史 DAO 的核心特征 DAO 的分类 DAO 的现状与数据 总结 延伸阅读 什么是 DAO DAO 是 Decentralized Autonomous Organization 的缩写，中文翻译为「去中心化自治组织」。简单来说，DAO 是一种由智能合约驱动、由社区成员共同治理的新型组织形式。 想象一下：如果有一家公司，没有 CEO，没有董事会，",
       "headings": [
@@ -16736,6 +16736,147 @@
       "characterCount": 6459
     },
     {
+      "id": "en/module-10/10-1",
+      "lang": "en",
+      "moduleId": "module-10",
+      "moduleTitle": "DAO 与去中心化治理",
+      "lessonId": "10-1",
+      "title": "DAO 是什么",
+      "path": "DAOGovernance/01_WhatIsDAO",
+      "labUrl": null,
+      "sourcePath": "en/DAOGovernance/01_WhatIsDAO/README.md",
+      "citation": {
+        "file": "en/DAOGovernance/01_WhatIsDAO/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/DAOGovernance/01_WhatIsDAO/README.md",
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-10/10-1"
+      },
+      "excerpt": "What Is a DAO? A DAO replaces hierarchical management with code and opaque decision making with transparent rules. This lesson explains what a DAO is, how it differs from traditional organizations, the key events that shaped the ecosystem, and how DAOs are classified today. Follow me on Twitter: @bhbtc1337 Join the WeChat group: Form Link Articles are open sourced on GitHub: Get Started with Web3 Recommended exchange",
+      "headings": [
+        {
+          "level": 1,
+          "text": "What Is a DAO?"
+        },
+        {
+          "level": 2,
+          "text": "Table of Contents"
+        },
+        {
+          "level": 2,
+          "text": "What a DAO Is"
+        },
+        {
+          "level": 3,
+          "text": "The Three Keywords"
+        },
+        {
+          "level": 3,
+          "text": "How a DAO Operates"
+        },
+        {
+          "level": 2,
+          "text": "DAOs vs Traditional Organizations"
+        },
+        {
+          "level": 3,
+          "text": "Advantages of DAOs"
+        },
+        {
+          "level": 3,
+          "text": "Disadvantages of DAOs"
+        },
+        {
+          "level": 2,
+          "text": "A Brief History of DAOs"
+        },
+        {
+          "level": 3,
+          "text": "Early Concepts"
+        },
+        {
+          "level": 3,
+          "text": "The DAO Incident (2016)"
+        },
+        {
+          "level": 3,
+          "text": "The Ethereum Hard Fork"
+        },
+        {
+          "level": 3,
+          "text": "The DAO Renaissance (2020–present)"
+        },
+        {
+          "level": 2,
+          "text": "Core Characteristics of DAOs"
+        },
+        {
+          "level": 3,
+          "text": "1. Transparency"
+        },
+        {
+          "level": 3,
+          "text": "2. Permissionless Participation"
+        },
+        {
+          "level": 3,
+          "text": "3. Code Is Law"
+        },
+        {
+          "level": 3,
+          "text": "4. Token Governance"
+        },
+        {
+          "level": 3,
+          "text": "5. Censorship Resistance"
+        },
+        {
+          "level": 2,
+          "text": "Types of DAOs"
+        },
+        {
+          "level": 3,
+          "text": "1. Protocol DAOs"
+        },
+        {
+          "level": 3,
+          "text": "2. Investment DAOs"
+        },
+        {
+          "level": 3,
+          "text": "3. Social DAOs"
+        },
+        {
+          "level": 3,
+          "text": "4. Service DAOs"
+        },
+        {
+          "level": 3,
+          "text": "5. Media DAOs"
+        },
+        {
+          "level": 3,
+          "text": "6. Collector DAOs"
+        },
+        {
+          "level": 3,
+          "text": "7. Public Goods DAOs"
+        },
+        {
+          "level": 2,
+          "text": "The Current State of the DAO Ecosystem"
+        },
+        {
+          "level": 2,
+          "text": "Summary"
+        },
+        {
+          "level": 2,
+          "text": "Further Reading"
+        }
+      ],
+      "codeBlockCount": 1,
+      "characterCount": 12970
+    },
+    {
       "id": "zh/module-10/10-2",
       "lang": "zh",
       "moduleId": "module-10",
@@ -16748,7 +16889,7 @@
       "citation": {
         "file": "zh/DAOGovernance/02_GovernanceMechanisms/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/DAOGovernance/02_GovernanceMechanisms/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-10/10-2"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-10/10-2"
       },
       "excerpt": "治理机制设计 💡 本课将深入探讨 DAO 治理机制的设计与实现。从最基础的代币投票到高级的二次方投票，从链上治理到链下信号，你将了解各种治理模式的优缺点，以及一个治理提案从构思到执行的完整生命周期。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 Token 投票机制 委托治理 时间锁机制 链上治理 vs 链下治理 Snapshot：链下投票工具 Tally：链上治理界面 治理提案的生命周期 二次方投票 其他投票机制 总结 延伸阅读 Token 投票机制 Token 投票是目前最常见的 DAO 治理机制，核心逻辑很简单： 一币一票 （One Token, One Vote）。 基本原理 每个持有治理代币的地址，其投票权重等于其持有的代币数量。例如： Alice",
       "headings": [
@@ -16917,6 +17058,187 @@
       "characterCount": 9613
     },
     {
+      "id": "en/module-10/10-2",
+      "lang": "en",
+      "moduleId": "module-10",
+      "moduleTitle": "DAO 与去中心化治理",
+      "lessonId": "10-2",
+      "title": "治理机制设计",
+      "path": "DAOGovernance/02_GovernanceMechanisms",
+      "labUrl": null,
+      "sourcePath": "en/DAOGovernance/02_GovernanceMechanisms/README.md",
+      "citation": {
+        "file": "en/DAOGovernance/02_GovernanceMechanisms/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/DAOGovernance/02_GovernanceMechanisms/README.md",
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-10/10-2"
+      },
+      "excerpt": "Governance Mechanism Design This lesson dives deep into the design and implementation of DAO governance mechanisms. From basic token voting to advanced quadratic voting, from on chain governance to off chain signals, you will understand the trade offs of each approach and trace a governance proposal through its complete lifecycle. Follow me on Twitter: @bhbtc1337 Join the WeChat group: Form Link Articles are open sou",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Governance Mechanism Design"
+        },
+        {
+          "level": 2,
+          "text": "Table of Contents"
+        },
+        {
+          "level": 2,
+          "text": "Token Voting"
+        },
+        {
+          "level": 3,
+          "text": "How It Works"
+        },
+        {
+          "level": 3,
+          "text": "Voting Thresholds"
+        },
+        {
+          "level": 3,
+          "text": "Advantages of 1T1V"
+        },
+        {
+          "level": 3,
+          "text": "Disadvantages of 1T1V"
+        },
+        {
+          "level": 3,
+          "text": "Vote Snapshots"
+        },
+        {
+          "level": 2,
+          "text": "Delegated Voting"
+        },
+        {
+          "level": 3,
+          "text": "What It Is"
+        },
+        {
+          "level": 3,
+          "text": "Key Properties"
+        },
+        {
+          "level": 3,
+          "text": "Advantages"
+        },
+        {
+          "level": 3,
+          "text": "Notable Delegates"
+        },
+        {
+          "level": 3,
+          "text": "Delegating in Practice"
+        },
+        {
+          "level": 2,
+          "text": "Timelocks"
+        },
+        {
+          "level": 3,
+          "text": "Why Timelocks Matter"
+        },
+        {
+          "level": 3,
+          "text": "Timelock Workflow"
+        },
+        {
+          "level": 3,
+          "text": "Typical Timelock Configurations"
+        },
+        {
+          "level": 3,
+          "text": "OpenZeppelin TimelockController Example"
+        },
+        {
+          "level": 3,
+          "text": "Emergency Actions"
+        },
+        {
+          "level": 2,
+          "text": "On-Chain vs Off-Chain Governance"
+        },
+        {
+          "level": 3,
+          "text": "On-Chain Governance"
+        },
+        {
+          "level": 3,
+          "text": "Off-Chain Governance"
+        },
+        {
+          "level": 3,
+          "text": "Hybrid Mode (Recommended Practice)"
+        },
+        {
+          "level": 2,
+          "text": "Snapshot: Off-Chain Voting Tool"
+        },
+        {
+          "level": 3,
+          "text": "How Snapshot Works"
+        },
+        {
+          "level": 3,
+          "text": "Core Features"
+        },
+        {
+          "level": 3,
+          "text": "Voting Strategy Example"
+        },
+        {
+          "level": 3,
+          "text": "Limitations"
+        },
+        {
+          "level": 2,
+          "text": "Tally: On-Chain Governance Interface"
+        },
+        {
+          "level": 3,
+          "text": "Main Features"
+        },
+        {
+          "level": 3,
+          "text": "Tally vs Snapshot"
+        },
+        {
+          "level": 3,
+          "text": "Steps to Participate on Tally"
+        },
+        {
+          "level": 2,
+          "text": "The Proposal Lifecycle"
+        },
+        {
+          "level": 3,
+          "text": "Stage 1: Discussion"
+        },
+        {
+          "level": 3,
+          "text": "Stage 2: Temperature Check"
+        },
+        {
+          "level": 3,
+          "text": "Stage 3: Formal Proposal"
+        },
+        {
+          "level": 3,
+          "text": "Stage 4: Voting"
+        },
+        {
+          "level": 3,
+          "text": "Stage 5: Timelock"
+        },
+        {
+          "level": 3,
+          "text": "Stage 6: Execution"
+        }
+      ],
+      "codeBlockCount": 8,
+      "characterCount": 18924
+    },
+    {
       "id": "zh/module-10/10-3",
       "lang": "zh",
       "moduleId": "module-10",
@@ -16929,7 +17251,7 @@
       "citation": {
         "file": "zh/DAOGovernance/03_DAOTools/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/DAOGovernance/03_DAOTools/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-10/10-3"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-10/10-3"
       },
       "excerpt": "DAO 工具生态 💡 本课将全面介绍 DAO 工具生态中的核心产品。从多签钱包到一键建 DAO 平台，从治理合约框架到贡献追踪工具，你将掌握运营一个 DAO 所需要的完整工具箱，并学会如何根据实际需求进行工具选型。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 Safe（Gnosis Safe）：多签钱包 Aragon：一键创建 DAO OpenZeppelin Governor：治理合约框架 Nouns Builder：Nouns 模式 DAO 创建工具 国库管理工具 贡献追踪工具 工具选型指南 总结 延伸阅读 Safe（Gnosis Safe）：多签钱包 Safe（原名 Gnosis Safe）是 Web3 世界中最重要的基础设施之一，也是绝大多数 DA",
       "headings": [
@@ -17098,6 +17420,187 @@
       "characterCount": 9731
     },
     {
+      "id": "en/module-10/10-3",
+      "lang": "en",
+      "moduleId": "module-10",
+      "moduleTitle": "DAO 与去中心化治理",
+      "lessonId": "10-3",
+      "title": "DAO 工具生态",
+      "path": "DAOGovernance/03_DAOTools",
+      "labUrl": null,
+      "sourcePath": "en/DAOGovernance/03_DAOTools/README.md",
+      "citation": {
+        "file": "en/DAOGovernance/03_DAOTools/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/DAOGovernance/03_DAOTools/README.md",
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-10/10-3"
+      },
+      "excerpt": "The DAO Tooling Ecosystem This lesson provides a comprehensive tour of the core products in the DAO tooling ecosystem. From multisig wallets to no code DAO creation platforms, from governance contract frameworks to contribution tracking tools, you will build a complete picture of the toolkit needed to run a DAO — and learn how to choose the right tools for your situation. Follow me on Twitter: @bhbtc1337 Join the WeC",
+      "headings": [
+        {
+          "level": 1,
+          "text": "The DAO Tooling Ecosystem"
+        },
+        {
+          "level": 2,
+          "text": "Table of Contents"
+        },
+        {
+          "level": 2,
+          "text": "Safe (Gnosis Safe): Multisig Wallet"
+        },
+        {
+          "level": 3,
+          "text": "What Is a Multisig Wallet"
+        },
+        {
+          "level": 3,
+          "text": "Core Features"
+        },
+        {
+          "level": 3,
+          "text": "Usage at Scale"
+        },
+        {
+          "level": 3,
+          "text": "Creating a Safe: Basic Steps"
+        },
+        {
+          "level": 3,
+          "text": "Safe's Role in DAO Governance"
+        },
+        {
+          "level": 3,
+          "text": "Security Best Practices"
+        },
+        {
+          "level": 2,
+          "text": "Aragon: No-Code DAO Creation"
+        },
+        {
+          "level": 3,
+          "text": "Core Products"
+        },
+        {
+          "level": 4,
+          "text": "Aragon App"
+        },
+        {
+          "level": 4,
+          "text": "Aragon OSx"
+        },
+        {
+          "level": 3,
+          "text": "Creating a DAO with Aragon"
+        },
+        {
+          "level": 3,
+          "text": "Advantages and Limitations"
+        },
+        {
+          "level": 2,
+          "text": "OpenZeppelin Governor: Governance Contract Framework"
+        },
+        {
+          "level": 3,
+          "text": "Governor Contract Architecture"
+        },
+        {
+          "level": 3,
+          "text": "Deploying a Basic Governor Contract"
+        },
+        {
+          "level": 3,
+          "text": "Key Governor Parameters"
+        },
+        {
+          "level": 3,
+          "text": "Projects Using Governor"
+        },
+        {
+          "level": 2,
+          "text": "Nouns Builder: Nouns-Style DAO Creation Tool"
+        },
+        {
+          "level": 3,
+          "text": "What Is the Nouns Model"
+        },
+        {
+          "level": 3,
+          "text": "Nouns Builder Features"
+        },
+        {
+          "level": 3,
+          "text": "Best Fit For"
+        },
+        {
+          "level": 2,
+          "text": "Treasury Management Tools"
+        },
+        {
+          "level": 3,
+          "text": "Parcel"
+        },
+        {
+          "level": 3,
+          "text": "Utopia Labs"
+        },
+        {
+          "level": 3,
+          "text": "Llama"
+        },
+        {
+          "level": 3,
+          "text": "Hedgey Finance"
+        },
+        {
+          "level": 2,
+          "text": "Contribution Tracking Tools"
+        },
+        {
+          "level": 3,
+          "text": "Coordinape"
+        },
+        {
+          "level": 3,
+          "text": "SourceCred"
+        },
+        {
+          "level": 3,
+          "text": "Guild.xyz"
+        },
+        {
+          "level": 2,
+          "text": "Tool Selection Guide"
+        },
+        {
+          "level": 3,
+          "text": "Small DAO (< 50 members, < $1M treasury)"
+        },
+        {
+          "level": 3,
+          "text": "Mid-Size DAO (50–500 members, $1M–$100M treasury)"
+        },
+        {
+          "level": 3,
+          "text": "Large DAO (> 500 members, > $100M treasury)"
+        },
+        {
+          "level": 3,
+          "text": "Core Selection Principles"
+        },
+        {
+          "level": 2,
+          "text": "Summary"
+        },
+        {
+          "level": 2,
+          "text": "Further Reading"
+        }
+      ],
+      "codeBlockCount": 5,
+      "characterCount": 17548
+    },
+    {
       "id": "zh/module-10/10-4",
       "lang": "zh",
       "moduleId": "module-10",
@@ -17110,7 +17613,7 @@
       "citation": {
         "file": "zh/DAOGovernance/04_DAOCaseStudies/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/DAOGovernance/04_DAOCaseStudies/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-10/10-4"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-10/10-4"
       },
       "excerpt": "知名 DAO 案例分析 💡 理论需要案例来验证。本课将深入分析五个最具代表性的 DAO 案例 ——MakerDAO、Uniswap DAO、ConstitutionDAO、Nouns DAO 和 Lido DAO，从它们的成功经验和失败教训中提炼出实用的治理智慧。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 MakerDAO：DeFi 治理的典范 Uniswap DAO：最大 DeFi 协议的治理实践 ConstitutionDAO：众筹买宪法的社会实验 Nouns DAO：每日拍卖与 CC0 文化 Lido DAO：质押协议的去中心化挑战 从案例中学到的治理经验 总结 延伸阅读 MakerDAO：DeFi 治理的典范 项目背景 MakerDAO 是以太坊",
       "headings": [
@@ -17279,6 +17782,187 @@
       "characterCount": 9246
     },
     {
+      "id": "en/module-10/10-4",
+      "lang": "en",
+      "moduleId": "module-10",
+      "moduleTitle": "DAO 与去中心化治理",
+      "lessonId": "10-4",
+      "title": "知名 DAO 案例分析",
+      "path": "DAOGovernance/04_DAOCaseStudies",
+      "labUrl": null,
+      "sourcePath": "en/DAOGovernance/04_DAOCaseStudies/README.md",
+      "citation": {
+        "file": "en/DAOGovernance/04_DAOCaseStudies/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/DAOGovernance/04_DAOCaseStudies/README.md",
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-10/10-4"
+      },
+      "excerpt": "Notable DAO Case Studies Theory needs cases to validate it. This lesson analyzes five of the most representative DAOs — MakerDAO, Uniswap DAO, ConstitutionDAO, Nouns DAO, and Lido DAO — distilling practical governance wisdom from their successes and failures. Follow me on Twitter: @bhbtc1337 Join the WeChat group: Form Link Articles are open sourced on GitHub: Get Started with Web3 Recommended exchange for buying BTC",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Notable DAO Case Studies"
+        },
+        {
+          "level": 2,
+          "text": "Table of Contents"
+        },
+        {
+          "level": 2,
+          "text": "MakerDAO: A Model for DeFi Governance"
+        },
+        {
+          "level": 3,
+          "text": "Background"
+        },
+        {
+          "level": 3,
+          "text": "Governance Mechanism"
+        },
+        {
+          "level": 4,
+          "text": "Dual Voting System"
+        },
+        {
+          "level": 4,
+          "text": "Emergency Shutdown"
+        },
+        {
+          "level": 4,
+          "text": "Scope of Governance Decisions"
+        },
+        {
+          "level": 3,
+          "text": "MakerDAO's Governance Experience"
+        },
+        {
+          "level": 2,
+          "text": "Uniswap DAO: Governance of the Largest DeFi Protocol"
+        },
+        {
+          "level": 3,
+          "text": "Background"
+        },
+        {
+          "level": 3,
+          "text": "The Historic Airdrop"
+        },
+        {
+          "level": 3,
+          "text": "Governance Architecture"
+        },
+        {
+          "level": 3,
+          "text": "Notable Governance Proposals"
+        },
+        {
+          "level": 4,
+          "text": "1. DeFi Education Fund"
+        },
+        {
+          "level": 4,
+          "text": "2. The Fee Switch"
+        },
+        {
+          "level": 4,
+          "text": "3. Multi-Chain Deployments"
+        },
+        {
+          "level": 3,
+          "text": "Uniswap's Governance Experience"
+        },
+        {
+          "level": 2,
+          "text": "ConstitutionDAO: A Social Experiment in Crowdfunding"
+        },
+        {
+          "level": 3,
+          "text": "What Happened"
+        },
+        {
+          "level": 3,
+          "text": "Participation Scale"
+        },
+        {
+          "level": 3,
+          "text": "Successes and Failures"
+        },
+        {
+          "level": 3,
+          "text": "The PEOPLE Token Aftermath"
+        },
+        {
+          "level": 2,
+          "text": "Nouns DAO: Daily Auctions and CC0 Culture"
+        },
+        {
+          "level": 3,
+          "text": "Background"
+        },
+        {
+          "level": 3,
+          "text": "Core Mechanism"
+        },
+        {
+          "level": 4,
+          "text": "Daily Auction"
+        },
+        {
+          "level": 4,
+          "text": "Governance Rights"
+        },
+        {
+          "level": 4,
+          "text": "Nounder Allocation"
+        },
+        {
+          "level": 3,
+          "text": "Treasury Scale and Uses"
+        },
+        {
+          "level": 3,
+          "text": "CC0 Culture"
+        },
+        {
+          "level": 3,
+          "text": "Governance Controversy"
+        },
+        {
+          "level": 3,
+          "text": "Nouns DAO's Experience"
+        },
+        {
+          "level": 2,
+          "text": "Lido DAO: The Decentralization Challenge of a Staking Protocol"
+        },
+        {
+          "level": 3,
+          "text": "Background"
+        },
+        {
+          "level": 3,
+          "text": "Governance Mechanism"
+        },
+        {
+          "level": 3,
+          "text": "The Decentralization Dilemma"
+        },
+        {
+          "level": 4,
+          "text": "The Problem"
+        },
+        {
+          "level": 4,
+          "text": "Lido's Response"
+        },
+        {
+          "level": 4,
+          "text": "Community Debate"
+        }
+      ],
+      "codeBlockCount": 3,
+      "characterCount": 19895
+    },
+    {
       "id": "zh/module-10/10-5",
       "lang": "zh",
       "moduleId": "module-10",
@@ -17291,7 +17975,7 @@
       "citation": {
         "file": "zh/DAOGovernance/05_DAOChallenges/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/DAOGovernance/05_DAOChallenges/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-10/10-5"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-10/10-5"
       },
       "excerpt": "DAO 的挑战与未来 💡 本课将直面 DAO 治理中的核心挑战 —— 从令人头疼的低投票率到防不胜防的治理攻击，从法律的灰色地带到效率与去中心化的两难抉择。同时，我们也将展望 DAO 的未来方向，包括 AI 与 DAO 的融合、子 DAO 架构和声誉系统等前沿探索。 欢迎关注我的推特：@bhbtc1337 进入微信交流群请填表：表格链接 文章开源在 GitHub：Get Started with Web3 购买 BTC / ETH / USDT 等加密货币推荐 币安注册链接 目录 低投票率问题 治理攻击 法律地位不明确 渐进去中心化策略 DAO 的效率问题 未来方向 总结 延伸阅读 低投票率问题 低投票率是几乎所有 DAO 都面临的首要治理挑战。大多数 DAO 的投票参与率长期低于 10%，有些甚至不到 5%。 投票率数据 以下是一些知名 DAO 的投票参与率情况： DAO 典型投票参与率 代币持有者数 Uniswap 2 5",
       "headings": [
@@ -17460,6 +18144,187 @@
       "characterCount": 10838
     },
     {
+      "id": "en/module-10/10-5",
+      "lang": "en",
+      "moduleId": "module-10",
+      "moduleTitle": "DAO 与去中心化治理",
+      "lessonId": "10-5",
+      "title": "DAO 的挑战与未来",
+      "path": "DAOGovernance/05_DAOChallenges",
+      "labUrl": null,
+      "sourcePath": "en/DAOGovernance/05_DAOChallenges/README.md",
+      "citation": {
+        "file": "en/DAOGovernance/05_DAOChallenges/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/DAOGovernance/05_DAOChallenges/README.md",
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-10/10-5"
+      },
+      "excerpt": "DAO Challenges and the Road Ahead This lesson confronts the core challenges in DAO governance head on — from the persistent headache of low voter turnout to governance attacks, from legal gray areas to the tension between efficiency and decentralization. It also looks ahead at where DAOs are going, including AI integration, SubDAO architectures, and reputation systems. Follow me on Twitter: @bhbtc1337 Join the WeChat",
+      "headings": [
+        {
+          "level": 1,
+          "text": "DAO Challenges and the Road Ahead"
+        },
+        {
+          "level": 2,
+          "text": "Table of Contents"
+        },
+        {
+          "level": 2,
+          "text": "Low Voter Turnout"
+        },
+        {
+          "level": 3,
+          "text": "Participation Data"
+        },
+        {
+          "level": 3,
+          "text": "Root Causes"
+        },
+        {
+          "level": 4,
+          "text": "1. Rational Apathy"
+        },
+        {
+          "level": 4,
+          "text": "2. Information Overload"
+        },
+        {
+          "level": 4,
+          "text": "3. Gas Barriers"
+        },
+        {
+          "level": 4,
+          "text": "4. Poor User Experience"
+        },
+        {
+          "level": 4,
+          "text": "5. Free-Rider Mentality"
+        },
+        {
+          "level": 3,
+          "text": "Solutions"
+        },
+        {
+          "level": 4,
+          "text": "Delegated Voting"
+        },
+        {
+          "level": 4,
+          "text": "Incentivized Voting"
+        },
+        {
+          "level": 4,
+          "text": "Lowering Participation Cost"
+        },
+        {
+          "level": 4,
+          "text": "Governance Simplification"
+        },
+        {
+          "level": 2,
+          "text": "Governance Attacks"
+        },
+        {
+          "level": 3,
+          "text": "Flash Loan Governance Attack"
+        },
+        {
+          "level": 3,
+          "text": "Bribery Attack"
+        },
+        {
+          "level": 3,
+          "text": "Governance Takeover Attack"
+        },
+        {
+          "level": 3,
+          "text": "Comprehensive Security Framework"
+        },
+        {
+          "level": 2,
+          "text": "Legal Uncertainty"
+        },
+        {
+          "level": 3,
+          "text": "Core Legal Questions"
+        },
+        {
+          "level": 4,
+          "text": "1. What Legal Entity Is a DAO?"
+        },
+        {
+          "level": 4,
+          "text": "2. Member Liability"
+        },
+        {
+          "level": 3,
+          "text": "Legislative Progress by Jurisdiction"
+        },
+        {
+          "level": 4,
+          "text": "Wyoming DAO Act (United States)"
+        },
+        {
+          "level": 4,
+          "text": "Marshall Islands"
+        },
+        {
+          "level": 4,
+          "text": "Switzerland"
+        },
+        {
+          "level": 4,
+          "text": "Cayman Islands"
+        },
+        {
+          "level": 3,
+          "text": "Legal Wrapper Strategy"
+        },
+        {
+          "level": 3,
+          "text": "Tax Complications"
+        },
+        {
+          "level": 2,
+          "text": "Progressive Decentralization"
+        },
+        {
+          "level": 3,
+          "text": "Core Idea"
+        },
+        {
+          "level": 3,
+          "text": "Why Progressive Decentralization Is Necessary"
+        },
+        {
+          "level": 4,
+          "text": "1. Product-Market Fit"
+        },
+        {
+          "level": 4,
+          "text": "2. Security"
+        },
+        {
+          "level": 4,
+          "text": "3. Preventing Governance Capture"
+        },
+        {
+          "level": 4,
+          "text": "4. Community Maturity"
+        },
+        {
+          "level": 3,
+          "text": "Progressive Decentralization in Practice"
+        },
+        {
+          "level": 4,
+          "text": "Uniswap"
+        }
+      ],
+      "codeBlockCount": 13,
+      "characterCount": 24423
+    },
+    {
       "id": "zh/module-11/11-1",
       "lang": "zh",
       "moduleId": "module-11",
@@ -17472,7 +18337,7 @@
       "citation": {
         "file": "zh/EthereumSmartAccounts/01_EthereumAfterPectra/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/EthereumSmartAccounts/01_EthereumAfterPectra/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-11/11-1"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-11/11-1"
       },
       "excerpt": "Pectra 与 Fusaka 后的以太坊 以太坊已经不再只是“一条智能合约公链”。它正在变成一个以 L1 为安全和结算层、以 Rollup 为主要执行层、以智能账户改善用户体验的模块化网络。本课从 Pectra 和 Fusaka 两次升级出发，解释 2026 年学习以太坊时必须重新建立的技术地图。 目录 为什么以太坊仍在升级 从 Dencun 到 Pectra 再到 Fusaka Pectra 改变了什么 Fusaka 改变了什么 对普通用户的影响 对开发者的影响 对 L2 和 Rollup 的影响 学习检查清单 总结 延伸阅读 为什么以太坊仍在升级 如果你只把以太坊理解成“能部署智能合约的链”，会很难解释为什么它还要持续升级。更准确的理解是： 以太坊 L1 负责最小化、可信中立、抗审查的结算和数据可用性；大量用户操作逐步迁移到 L2、钱包和应用层。 这意味着以太坊升级的重点不再只是“让 L1 每秒处理更多普通交易”，而是同时",
       "headings": [
@@ -17593,7 +18458,7 @@
       "citation": {
         "file": "en/EthereumSmartAccounts/01_EthereumAfterPectra/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/EthereumSmartAccounts/01_EthereumAfterPectra/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-11/11-1"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-11/11-1"
       },
       "excerpt": "Ethereum After Pectra and Fusaka Ethereum is no longer just “a smart contract chain.” It is becoming a modular network where L1 provides security, settlement, and data availability; Rollups handle most execution; and smart accounts improve user experience. This lesson uses the Pectra and Fusaka upgrades to rebuild the Ethereum mental model for 2026. Table of Contents Why Ethereum Is Still Upgrading From Dencun to Pec",
       "headings": [
@@ -17714,7 +18579,7 @@
       "citation": {
         "file": "zh/EthereumSmartAccounts/02_AccountAbstractionAndSmartWallets/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/EthereumSmartAccounts/02_AccountAbstractionAndSmartWallets/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/learn/module-11/11-2"
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-11/11-2"
       },
       "excerpt": "账户抽象与智能钱包 Web3 最大的用户体验问题，不是“没有足够多的 DApp”，而是普通账户太难用：助记词难保管、Gas 难理解、授权难判断、交易步骤太多。账户抽象试图把钱包从“私钥签名工具”升级为“可编程账户系统”。 目录 为什么普通钱包体验不好 EOA、合约账户和智能账户 ERC 4337 的工作流 EIP 7702 带来的变化 Paymaster、Bundler 和 Session Key Passkey 与社交恢复 智能账户的新风险 新手实践路线 学习检查清单 总结 延伸阅读 为什么普通钱包体验不好 传统 EOA 钱包的设计非常纯粹： 这种模型安全、简单、可验证，但对普通用户很不友好： 问题 用户感受 典型后果 助记词备份困难 12 或 24 个英文单词像天书 截图、云盘保存、被盗 必须持有原生 Gas 想用 USDC 却还要先买 ETH 新用户第一步就卡住 操作步骤多 授权一次、交易一次、再确认一次 用户误签或中途放",
       "headings": [
@@ -17875,7 +18740,7 @@
       "citation": {
         "file": "en/EthereumSmartAccounts/02_AccountAbstractionAndSmartWallets/README.md",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/EthereumSmartAccounts/02_AccountAbstractionAndSmartWallets/README.md",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-11/11-2"
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-11/11-2"
       },
       "excerpt": "Account Abstraction and Smart Wallets Web3’s biggest user experience problem is not a lack of DApps. It is that raw accounts are hard to use: seed phrases are hard to protect, gas is confusing, approvals are dangerous, and every workflow takes too many signatures. Account abstraction aims to upgrade wallets from “private key signing tools” into programmable account systems. Table of Contents Why Normal Wallets Feel B",
       "headings": [
@@ -18033,7 +18898,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18044,7 +18909,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18055,7 +18920,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18066,7 +18931,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18077,7 +18942,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18088,7 +18953,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18099,7 +18964,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18110,7 +18975,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18121,7 +18986,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18132,7 +18997,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18143,7 +19008,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18154,7 +19019,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18165,7 +19030,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18176,7 +19041,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18187,7 +19052,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18198,7 +19063,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18209,7 +19074,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18220,7 +19085,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18231,7 +19096,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18242,7 +19107,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18253,7 +19118,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18264,7 +19129,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18275,7 +19140,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18286,7 +19151,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18297,7 +19162,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18308,7 +19173,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18319,7 +19184,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18330,7 +19195,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18341,7 +19206,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18352,7 +19217,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18363,7 +19228,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18374,7 +19239,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18385,7 +19250,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18396,7 +19261,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18407,7 +19272,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18418,7 +19283,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18429,7 +19294,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18440,7 +19305,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18451,7 +19316,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18462,7 +19327,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18473,7 +19338,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18484,7 +19349,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18495,7 +19360,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18506,7 +19371,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18517,7 +19382,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18528,7 +19393,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18539,7 +19404,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18550,7 +19415,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18561,7 +19426,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18572,7 +19437,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18583,7 +19448,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18594,7 +19459,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18605,7 +19470,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18616,7 +19481,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18627,7 +19492,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18638,7 +19503,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     },
     {
@@ -18649,7 +19514,7 @@
       "citation": {
         "file": "src/config/glossaryData.js",
         "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
-        "siteUrl": "https://beihaili.github.io/Get-Started-with-Web3/zh/glossary"
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
       }
     }
   ],
@@ -18730,9 +19595,9 @@
     "contentIndex": "ai/content-index.json",
     "llmsTxt": "ai/llms.txt",
     "public": {
-      "llmsTxt": "https://beihaili.github.io/Get-Started-with-Web3/llms.txt",
-      "manifest": "https://beihaili.github.io/Get-Started-with-Web3/ai/manifest.json",
-      "contentIndex": "https://beihaili.github.io/Get-Started-with-Web3/ai/content-index.json"
+      "llmsTxt": "https://bhbtc.xyz/llms.txt",
+      "manifest": "https://bhbtc.xyz/ai/manifest.json",
+      "contentIndex": "https://bhbtc.xyz/ai/content-index.json"
     }
   }
 }

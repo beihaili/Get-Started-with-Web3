@@ -243,7 +243,7 @@ forge verify-contract <你的合约地址> src/MyToken.sol:MyToken \
 - 编写和运行 Foundry 测试
 - 部署合约到测试网并进行 Etherscan 验证
 
-返回课程继续学习：[Get Started with Web3](https://beihaili.github.io/Get-Started-with-Web3/)
+返回课程继续学习：[Get Started with Web3](https://bhbtc.xyz/)
 
 ---
 
