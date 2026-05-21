@@ -23,4 +23,10 @@ describe('siteConfig', () => {
     );
     expect(joinBasePath('/', '/en/glossary')).toBe('/en/glossary');
   });
+
+  it('defaults production URLs and paths to the bhbtc.xyz custom domain', () => {
+    expect(normalizeSiteBaseUrl()).toBe('https://bhbtc.xyz');
+    expect(normalizeBasePath()).toBe('/');
+    expect(buildSiteUrl('/ai/manifest.json')).toBe('https://bhbtc.xyz/ai/manifest.json');
+  });
 });

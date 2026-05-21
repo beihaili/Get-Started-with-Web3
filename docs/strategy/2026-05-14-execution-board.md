@@ -8,14 +8,14 @@
 
 | Area             | Status                | Next Action                                                                                            |
 | ---------------- | --------------------- | ------------------------------------------------------------------------------------------------------ |
-| Technical health | Healthy               | Ship analytics/domain-readiness safely, keep verification green, and plan Node 22 migration separately |
+| Technical health | Healthy               | Ship `bhbtc.xyz` activation safely, keep verification green, and plan Node 22 migration separately     |
 | GitHub growth    | Under-monetized       | Improve README conversion and launch distribution campaigns                                            |
 | SEO              | Partially implemented | Fix language metadata and route coverage                                                               |
 | English content  | Incomplete            | Close the remaining 12 missing translations or classify non-course docs                                |
 | AI-native layer  | Strong MVP            | Productize story and prepare paid-tool landing                                                         |
 | Monetization     | Passive only          | Create sponsor kit and sponsor outreach drafts                                                         |
 | Community        | Converting            | Keep accepted contributor PRs moving into recognition and backlog refresh                              |
-| Personal brand   | Underused             | Convert every shipment into public posts and distribution assets                                       |
+| Personal brand   | Active channel chosen | Use X `@bhbtc1337` for public updates and record links in operations docs                              |
 
 ## KPI Board
 
@@ -53,6 +53,7 @@ Update weekly.
 - [x] Ensure `/zh`, `/en`, `/glossary`, `/articles`, lesson pages, `llms.txt`, and AI artifact URLs are easy to discover.
 - [x] Add `glossary` routes to `scripts/generate-sitemap.mjs` and `scripts/prerender.mjs` if still missing.
 - [x] Add custom-domain-ready canonical, sitemap, robots, and AI artifact URL configuration without activating CNAME before DNS confirmation.
+- [x] Start `bhbtc.xyz` activation with root-path build defaults, `public/CNAME`, and GitHub Pages CI config after user confirmation.
 - [ ] Check public prerendered HTML after build.
 - [x] Create `docs/strategy/awesome-list-submissions.md`.
 - [x] Draft submissions to Web3, Bitcoin, blockchain, open-source education, and AI-agent resource lists.
@@ -90,6 +91,8 @@ Update weekly.
 - [x] Draft sponsor acceptance policy.
 - [x] Track sponsor leads in a simple Markdown table until volume justifies a CRM: `docs/strategy/2026-05-15-sponsor-leads-tracker.md`.
 - [x] Review donation and affiliate disclosures.
+- [x] Receive approval to begin low-risk sponsor outreach to Safe and Reown / WalletConnect.
+- [ ] Send first sponsor outreach once an authenticated channel and sender email are available.
 
 ### 6. Contributor Community
 
@@ -150,8 +153,8 @@ Detailed tracker: `docs/strategy/2026-05-15-sponsor-leads-tracker.md`.
 
 | Sponsor                   | Category                       | Fit                                                        | Status      | Next Action                                          |
 | ------------------------- | ------------------------------ | ---------------------------------------------------------- | ----------- | ---------------------------------------------------- |
-| Safe Ecosystem Foundation | Smart accounts / grants        | Account abstraction, wallet recovery, security education   | Queued      | Prepare grant-style impact memo                      |
-| Reown / WalletConnect     | Wallet UX / connectivity infra | Wallet connection safety and onboarding UX                 | Queued      | Personalize wallet sponsor outreach                  |
+| Safe Ecosystem Foundation | Smart accounts / grants        | Account abstraction, wallet recovery, security education   | Approved    | Submit grant-style outreach via authenticated channel |
+| Reown / WalletConnect     | Wallet UX / connectivity infra | Wallet connection safety and onboarding UX                 | Approved    | Submit partnership outreach via authenticated channel |
 | QuickNode                 | RPC / infrastructure           | Builder labs, RPC lessons, developer onboarding            | Queued      | Personalize infrastructure sponsor outreach          |
 | Blockaid or Blowfish      | Security tooling               | Scam, approval, signing, and transaction-warning education | Queued      | Pick one first security outreach                     |
 | Ethereum Foundation ESP   | Public goods / grants          | AI-native open-source Ethereum learning resources          | Researching | Package public-goods impact memo                     |
@@ -190,3 +193,4 @@ Daily report should include:
 | 2026-05-20 | Published Layer 2 / AI-native GitHub Release                                                    | Published [l2-english-ai-index-2026-05-20](https://github.com/beihaili/Get-Started-with-Web3/releases/tag/l2-english-ai-index-2026-05-20), promoting completed Layer 2 English coverage, the 111-entry AI content index, `llms.txt`, and the refreshed good-first issue queue                                                                                                                                                                                                                                                        |
 | 2026-05-20 | Added website behavior analytics events                                                         | Added privacy-preserving GA4 custom events for landing-page CTAs, AI-native entrypoint clicks, search result selection, lesson completion, donation/support link clicks, and wallet-copy intent, giving the operating loop conversion signals beyond route-level pageviews without sending raw search terms or wallet addresses                                                                                                                                                                                                      |
 | 2026-05-20 | Published behavior analytics roadmap update                                                     | Added [#156 roadmap update](https://github.com/beihaili/Get-Started-with-Web3/issues/156#issuecomment-4495955406) linking PR [#208](https://github.com/beihaili/Get-Started-with-Web3/pull/208), main deploy [26148929938](https://github.com/beihaili/Get-Started-with-Web3/actions/runs/26148929938), current metrics, and contributor-friendly next steps                                                                                                                                                                         |
+| 2026-05-21 | Received external action approvals                                                              | User approved using X `@bhbtc1337` for public project updates, starting Safe/Reown sponsor outreach, and beginning the `bhbtc.xyz` GitHub Pages custom-domain switch                                                                                                                                                                                                                                                                                                  |

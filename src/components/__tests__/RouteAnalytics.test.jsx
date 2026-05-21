@@ -33,7 +33,7 @@ describe('RouteAnalytics', () => {
       'event',
       'page_view',
       expect.objectContaining({
-        page_path: '/Get-Started-with-Web3/en',
+        page_path: '/en',
       })
     );
 
@@ -44,7 +44,7 @@ describe('RouteAnalytics', () => {
       'event',
       'page_view',
       expect.objectContaining({
-        page_path: '/Get-Started-with-Web3/en/dashboard?source=test',
+        page_path: '/en/dashboard?source=test',
       })
     );
   });

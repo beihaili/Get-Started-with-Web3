@@ -34,6 +34,9 @@ jobs:
       - name: Build
         run: npm run build
         env:
+          VITE_SITE_BASE_URL: https://bhbtc.xyz
+          SITE_BASE_URL: https://bhbtc.xyz
+          VITE_BASE_PATH: /
           VITE_GITHUB_USERNAME: beihaili
           VITE_GITHUB_REPO: Get-Started-with-Web3
           VITE_GITHUB_BRANCH: main

@@ -1,5 +1,5 @@
-export const DEFAULT_SITE_BASE_URL = 'https://beihaili.github.io/Get-Started-with-Web3';
-export const DEFAULT_BASE_PATH = '/Get-Started-with-Web3/';
+export const DEFAULT_SITE_BASE_URL = 'https://bhbtc.xyz';
+export const DEFAULT_BASE_PATH = '/';
 
 export function normalizeSiteBaseUrl(value, fallback = DEFAULT_SITE_BASE_URL) {
   const raw = String(value || fallback).trim();

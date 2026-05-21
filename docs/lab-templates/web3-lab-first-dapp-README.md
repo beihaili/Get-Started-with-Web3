@@ -306,7 +306,7 @@ npm run dev
 - 使用 React Hooks 实现钱包连接和余额查询
 - 理解 DApp 的基本架构（前端 + 钱包 + 区块链）
 
-返回课程继续学习：[Get Started with Web3](https://beihaili.github.io/Get-Started-with-Web3/)
+返回课程继续学习：[Get Started with Web3](https://bhbtc.xyz/)
 
 ---
 

@@ -69,7 +69,7 @@ describe('fetchLessonContent', () => {
     expect(content).toBe('# Local Uppercase Markdown');
     expect(fetch).toHaveBeenNthCalledWith(
       2,
-      '/Get-Started-with-Web3/content/zh/GetStartedWithBitcoin/03_BitcoinTx/README.MD'
+      '/content/zh/GetStartedWithBitcoin/03_BitcoinTx/README.MD'
     );
   });
 });

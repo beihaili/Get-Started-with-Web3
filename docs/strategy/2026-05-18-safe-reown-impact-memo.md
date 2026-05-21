@@ -2,7 +2,7 @@
 
 **Date:** 2026-05-18
 **Owner:** beihai + Codex
-**Status:** Drafted for review and human-channel sending. No outreach has been sent from this memo.
+**Status:** Approved for outreach on 2026-05-21. No message has been confirmed as sent until an authenticated channel and sender email are available.
 
 ## Purpose
 
@@ -20,12 +20,12 @@ This memo is intentionally conservative. It asks for support for open-source edu
 | Evidence             | Current state                                                                                                                 |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | Repository           | https://github.com/beihaili/Get-Started-with-Web3                                                                             |
-| Public site          | https://beihaili.github.io/Get-Started-with-Web3/                                                                             |
-| GitHub stars         | 614 as of 2026-05-18                                                                                                          |
-| Forks                | 55                                                                                                                            |
+| Public site          | https://bhbtc.xyz/                                                                                                            |
+| GitHub stars         | 614 as of 2026-05-21                                                                                                          |
+| Forks                | 58                                                                                                                            |
 | Contributors         | 12 from GitHub contributors API                                                                                               |
-| Indexed lessons      | 106                                                                                                                           |
-| Glossary entries     | 55                                                                                                                            |
+| Indexed lessons      | 116                                                                                                                           |
+| Glossary entries     | 57                                                                                                                            |
 | GitHub 14-day views  | 147 views / 72 unique visitors                                                                                                |
 | GitHub 14-day clones | 4569 clones / 551 unique cloners                                                                                              |
 | AI-native surfaces   | `llms.txt`, AI manifest, content index, local read-only MCP server                                                            |
@@ -33,18 +33,19 @@ This memo is intentionally conservative. It asks for support for open-source edu
 
 Recent shipped learning components:
 
-- [Merkle Tree Builder](https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-2/2-1): lets learners type transaction-like values, inspect SHA-256 leaves, duplicate odd nodes, and follow the Merkle root construction.
-- [EIP-1559 Gas Fee Calculator](https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-11/11-2): lets learners change gas limit, priority tip, and max fee cap, then refresh live base-fee and ETH/USD estimates.
+- [Merkle Tree Builder](https://bhbtc.xyz/en/learn/module-2/2-1): lets learners type transaction-like values, inspect SHA-256 leaves, duplicate odd nodes, and follow the Merkle root construction.
+- [EIP-1559 Gas Fee Calculator](https://bhbtc.xyz/en/learn/module-11/11-2): lets learners change gas limit, priority tip, and max fee cap, then refresh live base-fee and ETH/USD estimates.
 
 ## Why Safe Fits
 
-Official source checked on 2026-05-18: https://safefoundation.org/grants
+Official source checked on 2026-05-18 and rechecked on 2026-05-21: https://safefoundation.org/grants
 
 Fit:
 
 - Safe funds work that strengthens smart-account utility, security, adoption, developer tooling, research, and ecosystem growth.
 - The grants page explicitly includes educational content, documentation, community growth, and adoption campaigns.
-- The page says unsolicited grant proposals are accepted on a rolling basis and asks for a clear project description, scope, milestones, budget, team background, and expected impact.
+- The page says unsolicited grant proposals are accepted on a rolling basis and asks for a clear project description, scope, milestones, budget breakdown, team background, and expected impact.
+- The page lists the proposal channel as `grants@safefoundation.org`.
 - Get Started with Web3 already contains smart-account and account-abstraction lessons, including a new EIP-1559 gas-fee interactive embedded in the smart-account module.
 
 Recommended ask:
@@ -100,11 +101,11 @@ Message:
 ```text
 Hi Safe Ecosystem Foundation team,
 
-I maintain Get Started with Web3, an open-source bilingual Web3 learning platform with 614 GitHub stars, 106 indexed lessons, 55 glossary entries, and AI-native entrypoints including llms.txt, a content index, and a local read-only MCP server.
+I maintain Get Started with Web3, an open-source bilingual Web3 learning platform with 614 GitHub stars, 116 indexed lessons, 57 glossary entries, and AI-native entrypoints including llms.txt, a content index, and a local read-only MCP server.
 
 I am preparing a small education grant proposal around smart accounts and beginner-safe account abstraction. The project already includes a smart-account module, and we recently shipped an interactive EIP-1559 Gas Fee Calculator inside the Account Abstraction lesson:
 
-https://beihaili.github.io/Get-Started-with-Web3/en/learn/module-11/11-2
+https://bhbtc.xyz/en/learn/module-11/11-2
 
 The proposed grant would fund a focused 4-6 week open-source package:
 
@@ -137,7 +138,7 @@ Message:
 ```text
 Hi Reown team,
 
-I maintain Get Started with Web3, an open-source bilingual Web3 learning platform with 614 GitHub stars, 106 indexed lessons, 55 glossary entries, and AI-native entrypoints for tutors and agents.
+I maintain Get Started with Web3, an open-source bilingual Web3 learning platform with 614 GitHub stars, 116 indexed lessons, 57 glossary entries, and AI-native entrypoints for tutors and agents.
 
 The curriculum teaches first wallet identity, first transactions, DApp interaction, wallet safety, smart accounts, DeFi, L2, DAO, and builder content. We recently shipped two interactive lessons, including an EIP-1559 Gas Fee Calculator inside the account-abstraction module:
 
@@ -154,7 +155,7 @@ This would not be a hidden placement or token promotion. Sponsor support would b
 Would a short sponsor or education-partnership conversation make sense?
 
 Project: https://github.com/beihaili/Get-Started-with-Web3
-Site: https://beihaili.github.io/Get-Started-with-Web3/
+Site: https://bhbtc.xyz/
 
 Best,
 beihai
@@ -164,7 +165,9 @@ beihai
 
 Before sending either message:
 
-- [ ] Confirm the exact sending account and channel.
+- [x] Confirm the public social account for project updates: X `@bhbtc1337`.
+- [x] Confirm Safe proposal channel from the official grants page: `grants@safefoundation.org`.
+- [ ] Confirm or discover a sender email for grant/contact forms that require email identity.
 - [ ] Replace the greeting if a named contact is available.
 - [ ] Decide whether the first ask is a grant, sponsor slot, or educational collaboration.
 - [ ] For Safe, prepare a separate milestone and budget table if the Foundation asks for the full proposal.
