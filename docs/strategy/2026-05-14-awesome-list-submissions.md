@@ -38,7 +38,7 @@ Do not submit to spammy lists, paid-only lists, or repositories with no recent m
 | awesome-web3                 | Web3              | Broad Web3 learning resource              | Closed      | Closed by maintainer without comment        |
 | awesome-blockchain           | Blockchain        | General blockchain education              | Not started | Find maintained repo and contribution rules |
 | awesome-bitcoin              | Bitcoin           | Bitcoin modules and RPC lessons           | Not started | Find best-fit section                       |
-| awesome-ethereum             | Ethereum          | Ethereum and smart account lessons        | Not started | Find best-fit section                       |
+| awesome-ethereum             | Ethereum          | Ethereum and smart account lessons        | Submitted   | Track ttumiel/Awesome-Ethereum#123          |
 | awesome-defi                 | DeFi              | DeFi deep dive and risk lessons           | Not started | Find maintained repo                        |
 | awesome-layer-2              | L2                | Rollup and cross-chain lessons            | Not started | Find maintained repo                        |
 | awesome-dao                  | DAO               | DAO governance module                     | Not started | Find maintained repo                        |
@@ -92,3 +92,4 @@ GitHub: https://github.com/beihaili/Get-Started-with-Web3
 | 2026-05-14 | useWeb3/awesome-web3            | https://github.com/useWeb3/awesome-web3/pull/6                                                 | Closed    | Added Get Started with Web3 to Courses. Closed by maintainer without comment. Repo stars at submission: 614.    |
 | 2026-05-14 | TensorBlock/awesome-mcp-servers | https://github.com/TensorBlock/awesome-mcp-servers/pull/544                                    | Submitted | Added the read-only Web3 curriculum MCP server to Knowledge Management & Memory. Repo stars at submission: 614. |
 | 2026-05-18 | GitHub Release                  | https://github.com/beihaili/Get-Started-with-Web3/releases/tag/interactive-learning-2026-05-18 | Published | Released Merkle Tree Builder and EIP-1559 Gas Fee Calculator product update. Repo stars at publication: 614.    |
+| 2026-05-23 | ttumiel/Awesome-Ethereum        | https://github.com/ttumiel/Awesome-Ethereum/pull/123                                           | Submitted | Added Get Started with Web3 to Learning and MOOCs.                                                              |
