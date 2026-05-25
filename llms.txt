@@ -4,7 +4,7 @@ This repository exposes bilingual Web3 learning content for AI agents.
 
 Source: https://github.com/beihaili/Get-Started-with-Web3
 Homepage: https://bhbtc.xyz/
-Generated: 2026-05-21T02:32:23.518Z
+Generated: 2026-05-25T01:15:56.915Z
 
 ## Artifacts
 - Manifest: ai/manifest.json
