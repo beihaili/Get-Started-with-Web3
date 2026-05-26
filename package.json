@@ -83,13 +83,13 @@
     "lint-staged": "^15.2.0",
     "pangu": "^7.2.1",
     "playwright": "^1.60.0",
-    "postcss": "^8.5.14",
+    "postcss": "^8.5.15",
     "prettier": "^3.8.3",
     "satori": "^0.26.0",
     "tailwindcss": "^4.3.0",
-    "terser": "^5.47.1",
-    "vite": "^8.0.13",
-    "vitest": "^4.1.6"
+    "terser": "^5.48.0",
+    "vite": "^8.0.14",
+    "vitest": "^4.1.7"
   },
   "lint-staged": {
     "*.{js,jsx}": [
