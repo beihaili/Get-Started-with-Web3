@@ -20,6 +20,7 @@ const ArticlesPage = lazy(() => import('../pages/ArticlesPage'));
 const SupportPage = lazy(() => import('../pages/SupportPage'));
 const ContributorsPage = lazy(() => import('../pages/ContributorsPage'));
 const GlossaryPage = lazy(() => import('../pages/GlossaryPage'));
+const WalletLabPage = lazy(() => import('../pages/WalletLabPage'));
 
 // Loading component
 const PageLoader = () => {
@@ -134,6 +135,10 @@ export const router = createBrowserRouter(
       path: '/learn/:moduleId/:lessonId',
       element: <LegacyRedirect to="/zh/learn/:moduleId/:lessonId" />,
     },
+    {
+      path: '/labs/wallet',
+      element: <LegacyRedirect to="/zh/labs/wallet" />,
+    },
     // Main i18n routes
     {
       path: '/:lang',
@@ -208,6 +213,14 @@ export const router = createBrowserRouter(
           element: (
             <SuspenseWrapper>
               <GlossaryPage />
+            </SuspenseWrapper>
+          ),
+        },
+        {
+          path: 'labs/wallet',
+          element: (
+            <SuspenseWrapper>
+              <WalletLabPage />
             </SuspenseWrapper>
           ),
         },

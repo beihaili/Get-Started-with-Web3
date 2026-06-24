@@ -25,6 +25,7 @@ export const I18N_SECTIONS = [
   'error',
   'markdown',
   'glossary',
+  'walletLab',
 ];
 
 export const eagerI18nResources = {
@@ -142,6 +143,10 @@ export function getRouteI18nSections(pathname) {
 
   if (langAwareRoute === 'glossary') {
     return ['glossary'];
+  }
+
+  if (langAwareRoute === 'labs') {
+    return ['walletLab'];
   }
 
   return [];
