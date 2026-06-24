@@ -104,10 +104,15 @@ const ROLE_PATHS = {
   builder: [
     'module-1:1-1',
     'module-1:1-3',
+    'module-1:1-5',
     'module-7:7-1',
     'module-7:7-2',
     'module-7:7-3',
+    'module-11:11-1',
+    'module-11:11-2',
+    'module-8:8-4',
     'module-7:7-4',
+    'module-8:8-5',
     'module-4:4-2',
   ],
   researcher: [
@@ -115,11 +120,24 @@ const ROLE_PATHS = {
     'module-2:2-3',
     'module-3:3-2',
     'module-4:4-4',
+    'module-11:11-1',
+    'module-11:11-2',
+    'module-8:8-4',
     'module-8:8-5',
     'module-9:9-4',
     'module-10:10-5',
   ],
-  investor: ['module-1:1-4', 'module-1:1-7', 'module-6:6-1', 'module-8:8-1', 'module-8:8-5'],
+  investor: [
+    'module-1:1-4',
+    'module-1:1-7',
+    'module-1:1-6',
+    'module-6:6-1',
+    'module-8:8-1',
+    'module-8:8-4',
+    'module-8:8-5',
+    'module-11:11-1',
+    'module-11:11-2',
+  ],
 };
 
 export async function buildAiIndex(options = {}) {
@@ -544,9 +562,10 @@ function clampNumber(value, fallback, min, max) {
 function roleDescription(role) {
   const descriptions = {
     beginner: '从钱包、交易和基础安全开始建立 Web3 操作直觉。',
-    builder: '面向开发者，从身份、DApp、代币、区块浏览器和安全实践建立实战路径。',
-    researcher: '面向技术研究者，覆盖比特币底层、脚本、DeFi 风险、跨链和 DAO 治理。',
-    investor: '面向生态观察和投资研究，强调工具、DeFi、交易所和风险识别。',
+    builder: '面向开发者，从身份、DApp、代币、智能账户、稳定币、区块浏览器和安全实践建立实战路径。',
+    researcher:
+      '面向技术研究者，覆盖比特币底层、以太坊升级、账户抽象、稳定币、DeFi 风险、跨链和 DAO 治理。',
+    investor: '面向生态观察和投资研究，强调工具、交易所、稳定币、DeFi 风险和智能账户安全边界。',
   };
   return descriptions[role] || descriptions.beginner;
 }

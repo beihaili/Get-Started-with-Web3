@@ -19,8 +19,12 @@ describe('web3 MCP dogfood', () => {
     expect(report.checks.map((check) => check.name)).toEqual(
       expect.arrayContaining([
         'search smart contract security',
+        'search stablecoin risk lesson',
         'compose bitcoin rpc context',
         'builder learning path',
+        'researcher learning path',
+        'investor learning path',
+        'read smart account lesson',
         'monetizable metadata',
       ])
     );

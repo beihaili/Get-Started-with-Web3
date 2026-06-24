@@ -15,6 +15,10 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const projectRoot = path.resolve(__dirname, '../..');
 
+function lessonKeys(pathResult) {
+  return pathResult.lessons.map((lesson) => `${lesson.moduleId}:${lesson.lessonId}`);
+}
+
 describe('ai-content-core', () => {
   it('builds a machine-readable index with citations and x402-ready metadata', async () => {
     const index = await buildAiIndex({ projectRoot, generatedAt: '2026-05-09T00:00:00.000Z' });
@@ -113,7 +117,22 @@ describe('ai-content-core', () => {
 
     const builderPath = getLearningPath(index, { role: 'builder', lang: 'zh' });
     expect(builderPath.role).toBe('builder');
-    expect(builderPath.lessons.some((lesson) => lesson.moduleId === 'module-7')).toBe(true);
+    expect(lessonKeys(builderPath)).toEqual(
+      expect.arrayContaining(['module-7:7-4', 'module-11:11-2', 'module-8:8-4', 'module-8:8-5'])
+    );
+    expect(builderPath.description).toContain('智能账户');
+
+    const researcherPath = getLearningPath(index, { role: 'researcher', lang: 'zh' });
+    expect(lessonKeys(researcherPath)).toEqual(
+      expect.arrayContaining(['module-11:11-1', 'module-11:11-2', 'module-8:8-4', 'module-8:8-5'])
+    );
+    expect(researcherPath.description).toContain('账户抽象');
+
+    const investorPath = getLearningPath(index, { role: 'investor', lang: 'zh' });
+    expect(lessonKeys(investorPath)).toEqual(
+      expect.arrayContaining(['module-1:1-6', 'module-8:8-4', 'module-8:8-5', 'module-11:11-2'])
+    );
+    expect(investorPath.description).toContain('稳定币');
 
     const glossary = lookupGlossary(index, { query: 'Gas', limit: 3 });
     expect(glossary.results[0].term).toContain('Gas');
