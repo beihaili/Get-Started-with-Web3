@@ -19,6 +19,20 @@ describe('SEO route coverage', () => {
     expect(prerenderScript).toContain('`/${lang}/glossary`');
   });
 
+  it('includes wallet lab pages in sitemap and prerender route lists', async () => {
+    const sitemapScript = await readFile(
+      path.join(process.cwd(), 'scripts/generate-sitemap.mjs'),
+      'utf8'
+    );
+    const prerenderScript = await readFile(
+      path.join(process.cwd(), 'scripts/prerender.mjs'),
+      'utf8'
+    );
+
+    expect(sitemapScript).toContain("'/labs/wallet'");
+    expect(prerenderScript).toContain('`/${lang}/labs/wallet`');
+  });
+
   it('keeps robots.txt sitemap URLs aligned with the configured public site base', async () => {
     const sitemapScript = await readFile(
       path.join(process.cwd(), 'scripts/generate-sitemap.mjs'),

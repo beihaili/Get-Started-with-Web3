@@ -43,6 +43,12 @@ If this repo helps you learn or teach Web3, please [star the project](https://gi
 | **AI agents**   | Search, read, cite, and compose course context through `llms.txt`, JSON artifacts, and a local MCP server. |
 | **Sponsors**    | Support open-source Web3 education and reach learners before they choose their default tools.              |
 
+## Project Boundaries
+
+This repository is a curriculum and AI-readable knowledge layer first. It will add focused labs for modern Web3 concepts, but those labs are educational examples, not a production dApp starter kit.
+
+This project is not investment advice, token promotion, exchange onboarding, or a virtual-currency business service. Wallet, SIWE, x402, certificate, sponsor, and paid-tool materials must be clearly labeled as demos, metadata, drafts, or future plans until the relevant production systems are actually live and verified.
+
 ## What Is Inside
 
 | Area            | Current status                                                                |

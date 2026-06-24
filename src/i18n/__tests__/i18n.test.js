@@ -84,6 +84,7 @@ describe('i18n', () => {
       'sponsor',
     ]);
     expect(getRouteI18nSections('/zh/support')).toEqual(['support', 'donation']);
+    expect(getRouteI18nSections('/en/labs/wallet')).toEqual(['walletLab']);
   });
 
   it('should warn instead of silently ignoring namespace load failures', async () => {
