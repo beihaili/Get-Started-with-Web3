@@ -36,6 +36,17 @@ By the end of this roadmap, the project should have:
 - Updated AI artifacts, tests, docs, and public roadmap notes for every shipped capability.
 - Continued contribution and distribution loops that support the 1000-star goal.
 
+## Execution Log
+
+| Date       | Roadmap package      | Status      | Evidence                                                                                                                                                                                                                                                                          |
+| ---------- | -------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2026-06-24 | Roadmap alignment    | Completed   | Strategy doc, public roadmap issue update, Phase 1 issue drafts, and GitHub labels.                                                                                                                                                                                               |
+| 2026-06-24 | README boundary      | Completed   | English and Chinese README boundary sections.                                                                                                                                                                                                                                     |
+| 2026-06-24 | Gap analysis         | Completed   | `docs/strategy/2026-06-24-modern-web3-gap-analysis.md`.                                                                                                                                                                                                                           |
+| 2026-06-24 | Runtime baseline     | Completed   | Node `>=20`, `npm run audit`, and audit baseline recorded in `docs/strategy/2026-06-24-runtime-baseline.md`.                                                                                                                                                                      |
+| 2026-06-24 | Wallet lab design    | Completed   | `docs/strategy/2026-06-24-wallet-lab-architecture.md`.                                                                                                                                                                                                                            |
+| 2026-06-24 | Wallet lab MVP slice | In progress | Dependency-free EIP-6963 / EIP-1193 lab implemented under `src/features/wallet-lab/`; unit, integration, lint, test, and build verification passed; real browser smoke remains pending because Playwright launch needed elevated permissions that were not available in this run. |
+
 ## Non-Goals
 
 - Do not build a full dApp starter kit.
