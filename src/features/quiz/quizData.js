@@ -1,6 +1,6 @@
 /**
  * 测验题库数据
- * 覆盖全部 41 课 × 5 题 = 205 题 + 5 默认题 = 210 题
+ * 覆盖课程题库结构：每课至少 5 题 + 5 道默认题
  */
 
 export const QUIZ_BANK = {
@@ -2309,6 +2309,134 @@ export const QUIZ_BANK = {
       correctAnswer: 1,
       explanation:
         '敏感操作（如铸币、暂停合约、提取资金）必须通过链上访问控制保护。OpenZeppelin 的 Ownable 和 AccessControl 提供了成熟的权限管理方案，前端验证可以被绕过，不能作为安全保障。',
+    },
+  ],
+  '7-5': [
+    // 钱包互操作与签名实验
+    {
+      question: 'EIP-6963 主要解决了什么问题？',
+      options: [
+        '降低链上交易 Gas 费',
+        '让页面可以发现多个注入式钱包 provider，减少 window.ethereum 冲突',
+        '把私钥托管到 DApp 服务器',
+        '自动验证所有钱包的真实身份',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'EIP-6963 通过 window events 让多个注入式钱包 announce 自己，DApp 可以展示钱包选择，而不是依赖单一且可能被覆盖的 window.ethereum。',
+      translations: {
+        en: {
+          question: 'What problem does EIP-6963 mainly solve?',
+          options: [
+            'Reducing on-chain gas fees',
+            'Letting pages discover multiple injected wallet providers and reducing window.ethereum conflicts',
+            'Custodying private keys on the DApp server',
+            'Automatically verifying every wallet identity',
+          ],
+          explanation:
+            'EIP-6963 uses window events so multiple injected wallets can announce themselves. A DApp can show wallet choices instead of relying on one mutable window.ethereum provider.',
+        },
+      },
+    },
+    {
+      question: 'EIP-1193 provider 中最核心的前端调用形式是什么？',
+      options: [
+        'provider.request({ method, params })',
+        'provider.privateKey()',
+        'provider.transferAll()',
+        'provider.loginWithPassword()',
+      ],
+      correctAnswer: 0,
+      explanation:
+        'EIP-1193 定义了 Ethereum Provider JavaScript API，DApp 通过 provider.request() 调用钱包能力，例如请求账户、读取 chain ID 或请求签名。',
+      translations: {
+        en: {
+          question: 'What is the core frontend call shape of an EIP-1193 provider?',
+          options: [
+            'provider.request({ method, params })',
+            'provider.privateKey()',
+            'provider.transferAll()',
+            'provider.loginWithPassword()',
+          ],
+          explanation:
+            'EIP-1193 defines the Ethereum Provider JavaScript API. DApps call wallet capabilities through provider.request(), such as requesting accounts, reading chain ID, or asking for a signature.',
+        },
+      },
+    },
+    {
+      question: '连接钱包之后，以下哪项说法是正确的？',
+      options: [
+        '用户已经完成生产级登录',
+        '页面可以无限期代表用户发送交易',
+        '页面通常拿到了用户授权暴露的账户地址，但这不等于登录会话',
+        '钱包会自动把签名上传到服务器',
+      ],
+      correctAnswer: 2,
+      explanation:
+        '连接钱包通常只是获得账户地址和有限钱包权限。生产级 SIWE 登录仍需要服务器 nonce、签名验证、防重放和 session 管理。',
+      translations: {
+        en: {
+          question: 'After a wallet is connected, which statement is correct?',
+          options: [
+            'The user has completed production authentication',
+            'The page can send transactions for the user forever',
+            'The page usually has an authorized account address, but that is not a login session',
+            'The wallet automatically uploads signatures to the server',
+          ],
+          explanation:
+            'Connecting usually exposes an account address and limited wallet permissions. Production SIWE still needs server-issued nonces, signature verification, replay protection, and session management.',
+        },
+      },
+    },
+    {
+      question: 'Wallet Lab 中的教学消息签名不会做什么？',
+      options: [
+        '展示钱包签名弹窗',
+        '返回本地签名结果',
+        '发送交易或移动资产',
+        '帮助理解签名消息格式',
+      ],
+      correctAnswer: 2,
+      explanation:
+        '教学消息签名只用于观察签名流程，不会发送交易、移动资产、授权代币或创建生产登录会话。',
+      translations: {
+        en: {
+          question: 'What does the Wallet Lab educational message signature not do?',
+          options: [
+            'Show the wallet signing prompt',
+            'Return a local signature result',
+            'Send a transaction or move assets',
+            'Help explain message-signing format',
+          ],
+          explanation:
+            'The educational signature is only for observing the signing flow. It does not send transactions, move assets, approve tokens, or create a production login session.',
+        },
+      },
+    },
+    {
+      question: '为什么 Wallet Lab 的切链目标要使用 allowlist？',
+      options: [
+        '因为 allowlist 可以保证所有链都没有风险',
+        '为了避免随意要求用户切到未知网络或自动添加不可信 RPC',
+        '为了让用户无法使用测试网',
+        '因为 EIP-6963 要求只能支持一条链',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '切链会影响资产所在网络、RPC 可信度、合约地址和费用。学习实验应限制在明确批准的网络内，不应自动添加未知 RPC。',
+      translations: {
+        en: {
+          question: 'Why should Wallet Lab chain switching use an allowlist?',
+          options: [
+            'Because an allowlist guarantees every chain is risk-free',
+            'To avoid asking users to switch to unknown networks or auto-adding untrusted RPC settings',
+            'To prevent users from using testnets',
+            'Because EIP-6963 requires supporting only one chain',
+          ],
+          explanation:
+            'Chain switching affects where assets live, RPC trust, contract addresses, and fees. A learning lab should stay within approved networks and should not auto-add unknown RPC settings.',
+        },
+      },
     },
   ],
   // Module 8: DeFi 深度解析

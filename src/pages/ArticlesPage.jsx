@@ -9,7 +9,7 @@ import { buildSiteUrl } from '../config/siteConfig';
 
 /**
  * SEO-friendly articles index page.
- * Lists all 37 lessons grouped by module with colored module headers.
+ * Lists all configured lessons grouped by module with colored module headers.
  * Each lesson links to the reader page via /:lang/learn/:moduleId/:lessonId.
  */
 const ArticlesPage = () => {

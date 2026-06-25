@@ -31,11 +31,11 @@ describe('courseData', () => {
     });
   });
 
-  it('lessons with labUrl should have valid GitHub URLs', () => {
+  it('lessons with labUrl should point to GitHub labs or internal lab routes', () => {
     const lessonsWithLab = COURSE_DATA.flatMap((m) => m.lessons).filter((l) => l.labUrl);
     expect(lessonsWithLab.length).toBeGreaterThanOrEqual(2);
     lessonsWithLab.forEach((lesson) => {
-      expect(lesson.labUrl).toMatch(/^https:\/\/github\.com\/beihaili\//);
+      expect(lesson.labUrl).toMatch(/^(https:\/\/github\.com\/beihaili\/|\/labs\/)/);
     });
   });
 

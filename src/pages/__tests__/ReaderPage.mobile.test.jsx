@@ -129,6 +129,19 @@ describe('ReaderPage mobile lesson drawer', () => {
     expect(await screen.findByRole('heading', { name: '体验第一笔交易' })).toBeInTheDocument();
   });
 
+  it('links internal labs inside the localized site instead of treating them as external repos', async () => {
+    renderReader('/en/learn/module-7/7-5');
+
+    expect(
+      await screen.findByRole('heading', { name: '钱包互操作与签名实验' })
+    ).toBeInTheDocument();
+
+    const labLink = screen.getByRole('link', { name: /Start Lab/ });
+    expect(labLink).toHaveAttribute('href', '/en/labs/wallet');
+    expect(labLink).not.toHaveAttribute('target');
+    expect(labLink).not.toHaveAttribute('rel');
+  });
+
   it('tracks lesson completion intent with lesson and module ids', async () => {
     const gtag = vi.fn();
     vi.stubGlobal('gtag', gtag);
