@@ -3327,6 +3327,135 @@ export const QUIZ_BANK = {
         'EIP-7702 授权可能让 EOA 委托给指定智能账户逻辑，因此用户必须确认委托目标、代码可信度、链 ID 和撤销方式。',
     },
   ],
+  '11-3': [
+    // UserOperation 模拟器与账户抽象实践
+    {
+      question: 'UserOperation 与普通以太坊交易最关键的区别是什么？',
+      options: [
+        'UserOperation 是给智能账户和 Bundler 处理的用户意图对象',
+        'UserOperation 一定不需要签名',
+        'UserOperation 只能用于发行代币',
+        'UserOperation 会自动绕过 EntryPoint',
+      ],
+      correctAnswer: 0,
+      explanation:
+        'UserOperation 描述用户希望智能账户执行的操作，由 Bundler 模拟和打包，再提交给 EntryPoint；它不是普通 EOA 直接发送的交易。',
+      translations: {
+        en: {
+          question:
+            'What is the most important difference between a UserOperation and a normal Ethereum transaction?',
+          options: [
+            'A UserOperation is a user-intent object handled by smart accounts and bundlers',
+            'A UserOperation never needs a signature',
+            'A UserOperation can only be used to issue tokens',
+            'A UserOperation automatically bypasses EntryPoint',
+          ],
+          explanation:
+            'A UserOperation describes what the user wants a smart account to execute. A bundler simulates and packages it before submitting it to EntryPoint.',
+        },
+      },
+    },
+    {
+      question: 'Bundler 接受 UserOperation 之前为什么要模拟？',
+      options: [
+        '为了预测币价',
+        '因为验证失败会让 Bundler 承担未付费计算和提交失败风险',
+        '为了生成新的私钥',
+        '因为所有 UserOperation 都必须先上传到中心化数据库',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'Bundler 需要确认账户验证、Paymaster 策略和费用支付路径可行，避免被无效操作消耗资源。',
+      translations: {
+        en: {
+          question: 'Why should a bundler simulate a UserOperation before accepting it?',
+          options: [
+            'To predict token prices',
+            'Because failed validation creates unpaid-computation and failed-submission risk',
+            'To generate a new private key',
+            'Because every UserOperation must first be uploaded to a centralized database',
+          ],
+          explanation:
+            'The bundler needs to check account validation, paymaster policy, and fee payment before spending resources on the operation.',
+        },
+      },
+    },
+    {
+      question: 'Paymaster 赞助 Gas 时，最应该同时说明什么？',
+      options: [
+        'Gas 从此永久免费且没有任何条件',
+        '谁付费、额度限制、防滥用策略和失败时用户会看到什么',
+        '用户可以删除助记词',
+        'Paymaster 会替用户保管所有资产',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'Gas 赞助是策略和预算问题。生产系统必须说明赞助来源、额度、防滥用、allowlist 和失败兜底。',
+      translations: {
+        en: {
+          question: 'What should be explained when a paymaster sponsors gas?',
+          options: [
+            'Gas is now permanently free with no conditions',
+            'Who pays, quota limits, abuse controls, and the user-facing failure state',
+            'Users can delete their seed phrases',
+            'The paymaster custodies all user assets',
+          ],
+          explanation:
+            'Gas sponsorship is a policy and budget decision. Production systems need clear funding, quotas, abuse controls, allowlists, and fallback UX.',
+        },
+      },
+    },
+    {
+      question: 'EIP-7702 委托 EOA 模式最敏感的风险是什么？',
+      options: [
+        '它会改变比特币出块时间',
+        '不可信 delegate 可能改变 EOA 后续执行行为',
+        '它只能显示静态图片',
+        '它会让所有 Bundler 自动失效',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'EIP-7702 让 EOA 可以委托给合约逻辑，因此 delegate 合约可信度、链 ID、撤销方式和钓鱼防护都很关键。',
+      translations: {
+        en: {
+          question: 'What is the most sensitive risk in an EIP-7702 delegated EOA flow?',
+          options: [
+            'It changes Bitcoin block times',
+            'An untrusted delegate can change how the EOA behaves later',
+            'It can only display static images',
+            'It makes every bundler stop working automatically',
+          ],
+          explanation:
+            'EIP-7702 lets an EOA delegate execution to contract logic, so delegate trust, chain ID, revocation, and phishing protection are critical.',
+        },
+      },
+    },
+    {
+      question: 'Session Key 最适合怎样设计？',
+      options: [
+        '权限越大越好，不需要过期',
+        '只限制 UI 颜色，不限制链上操作',
+        '限制可用时间、目标合约、函数、金额，并允许撤销',
+        '公开给任何网站复用',
+      ],
+      correctAnswer: 2,
+      explanation:
+        'Session Key 的价值在于受限临时权限。它应该明确限制时间、合约、函数、金额，并能被主账户撤销。',
+      translations: {
+        en: {
+          question: 'How should a session key usually be designed?',
+          options: [
+            'Make it as powerful as possible with no expiry',
+            'Only restrict UI color, not on-chain actions',
+            'Limit time, target contract, function, value, and allow revocation',
+            'Publish it for every website to reuse',
+          ],
+          explanation:
+            'A session key is useful because it is temporary and scoped. It should limit time, target, function, value, and remain revocable.',
+        },
+      },
+    },
+  ],
 
   // 默认通用题目
   default: [

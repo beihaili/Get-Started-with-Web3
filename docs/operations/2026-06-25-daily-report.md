@@ -24,6 +24,9 @@
   - Added the bilingual SIWE learning identity lesson at `Web3BuilderLab/06_SIWEAndLearningIdentity`.
   - Added the SIWE hosted-auth decision note at `docs/strategy/2026-06-25-siwe-learning-identity-decision.md`.
   - Updated README, course map, quiz bank entry `7-6`, and public growth copy to 60 lessons / 120 AI-indexed bilingual lesson entries.
+  - Added the bilingual account abstraction practice lesson at `EthereumSmartAccounts/03_UserOperationSimulator`.
+  - Added quiz bank entry `11-3`, expanded the Ethereum smart-account badge requirement to 3 lessons, and updated public counts to 61 lessons / 122 AI-indexed bilingual lesson entries / 60 glossary entries.
+  - Added `EntryPoint`, `Factory`, and `ERC-7562` glossary terms for the account abstraction simulator.
 - Platform:
   - Confirmed PR #220 GitHub checks passed after the Wallet Lab MVP commit: `build-and-deploy` and `lighthouse`.
   - Ran desktop Playwright smoke against `/en/labs/wallet` and `/zh/labs/wallet` on Vite dev server.
@@ -31,13 +34,16 @@
   - Verified mock injected wallet flow: provider detection, connect, account preview, Sepolia switch, message signing, signature preview, and no raw address/signature in UI.
   - Updated the Reader Lab CTA so internal labs resolve to localized site routes such as `/en/labs/wallet`.
   - Added static `/en/labs/siwe` and `/zh/labs/siwe` routes with local SIWE message composition, wallet signing, and local field inspection.
+  - Added static `/en/labs/account-abstraction` and `/zh/labs/account-abstraction` routes with a local-only UserOperation simulator, Paymaster toggle, EIP-7702 delegated EOA path, gas estimate, and local checks.
 - Community:
+  - Added seed good-first issue drafts for a UserOperation flow diagram, account abstraction glossary proofreading, and English lesson polish.
   - No new GitHub issues or public comments were opened today.
 - External distribution:
   - No external social post was published.
 - AI-native:
   - Added the new lesson to the Builder role path and regenerated `ai/` plus `public/ai/` artifacts.
   - Regenerated AI artifacts after the SIWE lesson; current index covers 11 modules and 120 bilingual lesson entries.
+  - Regenerated AI artifacts after the account abstraction module; current index covers 11 modules, 122 bilingual lesson entries, and 60 glossary entries.
 - Monetization:
   - No sponsor outreach was sent.
 
@@ -52,6 +58,7 @@
 | Prior tests       | Passed  | `npx vitest run src/features/wallet-lab/__tests__/walletLabUtils.test.js src/features/wallet-lab/__tests__/walletProviders.test.js src/pages/__tests__/WalletLabPage.test.jsx src/i18n/__tests__/i18n.test.js scripts/__tests__/seo-route-coverage.test.js`; `npm run lint`; `npm test`; `npm run build` | Recorded in 2026-06-24 report                                                                             |
 | Explainer tests   | Passed  | `npx vitest run src/config/__tests__/courseData.test.js src/features/quiz/__tests__/quizData.test.js src/i18n/__tests__/i18n.test.js src/pages/__tests__/ReaderPage.mobile.test.jsx scripts/__tests__/ai-content-core.test.js scripts/__tests__/generate-ai-index.test.js`; `npm run ai:index && npm run ai:publish && npm run ai:verify`; `npm run lint`; `npm test`; `npm run build` | Full local validation passed; `npm test` still logs known sandbox DNS noise for external support links |
 | SIWE tests        | Passed  | `npx vitest run src/features/siwe-lab/__tests__/siweUtils.test.js src/pages/__tests__/SiweLabPage.test.jsx src/config/__tests__/courseData.test.js src/features/quiz/__tests__/quizData.test.js src/i18n/__tests__/i18n.test.js scripts/__tests__/seo-route-coverage.test.js scripts/__tests__/ai-content-core.test.js scripts/__tests__/generate-ai-index.test.js`; `npm run ai:index && npm run ai:publish && npm run ai:verify`; `npm run lint`; `npm test`; `npm run build` | Full local validation passed; `npm test` still logs known sandbox DNS noise for external support links |
+| AA simulator tests | Passed | `npx vitest run src/features/account-abstraction-lab/__tests__/userOperationSimulator.test.js src/pages/__tests__/AccountAbstractionLabPage.test.jsx src/config/__tests__/courseData.test.js src/config/__tests__/glossaryData.test.js src/features/quiz/__tests__/quizData.test.js src/i18n/__tests__/i18n.test.js scripts/__tests__/seo-route-coverage.test.js`; `npm run ai:index`; `npm run ai:publish`; `npm run ai:verify`; `npm run lint`; `npm test`; `npm run build`; final `npm run ai:verify` | Full local validation passed; `npm test` still logs known sandbox DNS noise for external support links; prerender succeeded for 143/143 routes including `/en/labs/account-abstraction`, `/zh/labs/account-abstraction`, and `module-11/11-3` |
 
 ## External Distribution
 
@@ -70,14 +77,14 @@
 
 - PR #220 is still a draft and has not landed on `main`.
 - Wallet Lab has passed mock-wallet browser smoke, but a manual smoke with a real wallet extension is still useful before public launch messaging.
-- Phase 3 has a static SIWE learning demo and lesson; CI still needs to run for the latest SIWE commit after push.
+- Account abstraction currently ships as a simulator only; live bundler, real paymaster sponsorship, and EIP-7702 signing remain intentionally out of scope until a separate hosted/testnet decision is made.
 - Local Cloudflare Web Analytics still emits CORS/network console noise on localhost; this is known existing behavior and not specific to Wallet Lab.
 
 ## Next Operating Block
 
-1. Push the SIWE commit and wait for PR #220 CI.
+1. Push the account abstraction simulator commit and wait for PR #220 CI.
 2. Decide whether PR #220 should remain one roadmap kickoff PR or be split before merge.
-3. Start Phase 4 account-abstraction practical module design once SIWE CI is green.
+3. Start Phase 5 L2/cross-chain risk or identity/credential lab design once AA CI is green.
 
 ## Evidence Links
 
@@ -85,3 +92,4 @@
 - Roadmap doc: `docs/strategy/2026-06-24-modern-web3-roadmap-goal.md`
 - Wallet lab architecture: `docs/strategy/2026-06-24-wallet-lab-architecture.md`
 - SIWE decision note: `docs/strategy/2026-06-25-siwe-learning-identity-decision.md`
+- Account abstraction simulator: `/en/labs/account-abstraction` and `/zh/labs/account-abstraction`

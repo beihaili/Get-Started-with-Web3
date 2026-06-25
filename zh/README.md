@@ -6,7 +6,7 @@
 [![GitHub license](https://img.shields.io/github/license/beihaili/Get-Started-with-Web3)](https://github.com/beihaili/Get-Started-with-Web3/blob/main/LICENSE)
 [![Contributors](https://img.shields.io/github/contributors/beihaili/Get-Started-with-Web3)](https://github.com/beihaili/Get-Started-with-Web3/graphs/contributors)
 
-** 中文世界最系统的比特币与 Web3 开源学习平台。** 11 个模块、60 讲体系化教程，覆盖从 Web3 入门、以太坊智能账户、比特币底层原理到 DeFi、L2、DAO 和 Builder 实战的完整知识体系。
+** 中文世界最系统的比特币与 Web3 开源学习平台。** 11 个模块、61 讲体系化教程，覆盖从 Web3 入门、以太坊智能账户、比特币底层原理到 DeFi、L2、DAO 和 Builder 实战的完整知识体系。
 
 ** 在线学习平台（推荐）：** https://beihaili.github.io/Get-Started-with-Web3/
 
@@ -36,7 +36,7 @@
 
 ---
 
-## 2. 以太坊与智能账户（2 讲）
+## 2. 以太坊与智能账户（3 讲）
 
 理解 Pectra、Fusaka 后的以太坊路线，以及账户抽象如何改变钱包和 DApp 体验。
 
@@ -44,6 +44,7 @@
 |------|------|----------|
 | 01 | [Pectra 与 Fusaka 后的以太坊](EthereumSmartAccounts/01_EthereumAfterPectra/README.md) | EIP-7702、Blob、PeerDAS、L2 扩容路线 |
 | 02 | [账户抽象与智能钱包](EthereumSmartAccounts/02_AccountAbstractionAndSmartWallets/README.md) | ERC-4337、Bundler、Paymaster、Session Key |
+| 03 | [UserOperation 模拟器与账户抽象实践](EthereumSmartAccounts/03_UserOperationSimulator/README.md) | UserOperation、EntryPoint、Paymaster、EIP-7702 委托 |
 
 ---
 

@@ -186,3 +186,48 @@ Use these labels consistently:
 - Do not fabricate traffic, conversion, or audience data.
 
 **Verification:** Link to the public source.
+
+### 13. Add A UserOperation Flow Diagram
+
+**Labels:** `good first issue`, `content`
+
+**Context:** The account abstraction simulator explains the ERC-4337 flow in text, but a simple diagram can help first-time learners see where UserOperation, Bundler, EntryPoint, Paymaster, and Smart Account fit.
+
+**Acceptance criteria:**
+
+- Add one diagram to `en/EthereumSmartAccounts/03_UserOperationSimulator/README.md` or `zh/EthereumSmartAccounts/03_UserOperationSimulator/README.md`.
+- Show at least User, App, Bundler, EntryPoint, Smart Account, and optional Paymaster.
+- Include alt text or a Mermaid-compatible text source.
+- Avoid implying that the simulator sends real transactions.
+
+**Verification:** Markdown/app preview and `npm run ai:index && npm run ai:publish && npm run ai:verify`.
+
+### 14. Proofread Account Abstraction Glossary Terms
+
+**Labels:** `good first issue`, `content`
+
+**Context:** New account abstraction glossary entries should stay concise, searchable, and beginner-friendly.
+
+**Acceptance criteria:**
+
+- Review `EntryPoint`, `Factory`, `ERC-7562`, `UserOperation`, `Bundler`, and `Paymaster` in `src/config/glossaryData.js`.
+- Improve wording without changing technical meaning.
+- Keep the category as `账户抽象`.
+- Mention any terminology tradeoff in the PR description.
+
+**Verification:** `npm test -- src/config/__tests__/glossaryData.test.js`.
+
+### 15. Polish The English UserOperation Simulator Lesson
+
+**Labels:** `good first issue`, `content`
+
+**Context:** The English account abstraction lesson should be natural for global builders while preserving the Chinese-first source direction.
+
+**Acceptance criteria:**
+
+- Edit `en/EthereumSmartAccounts/03_UserOperationSimulator/README.md`.
+- Keep all safety boundaries: simulator-only, no live bundler, placeholder signatures, no production sponsorship.
+- Preserve the Further Reading links.
+- Do not add investment, token, trading, or sponsor claims.
+
+**Verification:** Markdown/app preview and `npm run ai:index && npm run ai:publish && npm run ai:verify`.

@@ -12,7 +12,7 @@
 
 <div align="center">
   <strong>面向新手、开发者和 AI Agent 的开源双语 Web3 学习体系。</strong><br/>
-  <em>11 个模块、60 讲课程、AI Tutor、徽章系统、SEO 预渲染、llms.txt 和只读 MCP server。</em>
+  <em>11 个模块、61 讲课程、AI Tutor、徽章系统、SEO 预渲染、llms.txt 和只读 MCP server。</em>
 </div>
 
 <br/>
@@ -54,9 +54,9 @@ Web3 的学习资料长期分散在钱包教程、协议文档、安全提醒、
 | 项目           | 当前状态                                               |
 | -------------- | ------------------------------------------------------ |
 | 课程模块       | 11 个                                                  |
-| React 课程地图 | 60 讲                                                  |
-| AI-native 索引 | 120 条双语课程索引记录                                 |
-| 术语表         | 57 个 Web3 术语                                        |
+| React 课程地图 | 61 讲                                                  |
+| AI-native 索引 | 122 条双语课程索引记录                                 |
+| 术语表         | 60 个 Web3 术语                                        |
 | 语言           | 中文优先，英文持续补齐                                 |
 | App 功能       | AI Tutor、搜索、测验、徽章、XP、深浅色模式、PWA/离线   |
 | Agent 入口     | `llms.txt`、AI manifest、内容索引、本地只读 MCP server |
@@ -88,7 +88,7 @@ Web3 的学习资料长期分散在钱包教程、协议文档、安全提醒、
 | DeFi 深度解析              |      5 | DeFi 架构、AMM、借贷、稳定币、风险                               |
 | 跨链与 Layer 2             |      5 | 扩容、Rollup、L2 生态、跨链桥、L2 实操                           |
 | DAO 与去中心化治理         |      5 | DAO 基础、治理机制、DAO 工具、案例、挑战                         |
-| 以太坊与智能账户           |      2 | Pectra/Fusaka 后的以太坊、账户抽象、智能钱包                     |
+| 以太坊与智能账户           |      3 | Pectra/Fusaka 后的以太坊、账户抽象、UserOperation 模拟器、智能钱包 |
 
 ## 快速开始
 
