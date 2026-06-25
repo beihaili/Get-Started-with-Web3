@@ -9,6 +9,7 @@
 
 - 2026-06-24: Dependency-free route scaffold shipped for `/en/labs/wallet` and `/zh/labs/wallet`, with i18n, sitemap, prerender, and static rendering tests.
 - 2026-06-24: Dependency-free EIP-6963 / EIP-1193 MVP implemented in `src/features/wallet-lab/`, covering provider discovery, connect, local disconnect, account display, chain display, allowlisted network switching, and educational message signing.
+- 2026-06-25: GitHub CI passed on PR #220, and desktop plus mobile Playwright smoke passed for no-wallet state and mock-wallet connect-switch-sign flow. Local Cloudflare analytics CORS errors were classified as known non-wallet noise.
 
 ## Goal
 
