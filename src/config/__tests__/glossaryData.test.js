@@ -54,6 +54,8 @@ const plannedExpansionTerms = [
   },
 ];
 
+const accountAbstractionPracticalTerms = ['EntryPoint', 'Factory', 'ERC-7562'];
+
 const findByQuery = (query) => {
   const normalizedQuery = query.toLowerCase();
   return GLOSSARY_DATA.filter(
@@ -114,6 +116,14 @@ describe('glossaryData', () => {
     plannedExpansionTerms.forEach(({ term, englishQuery, chineseQuery }) => {
       expect(findByQuery(englishQuery).some((item) => item.term.includes(term))).toBe(true);
       expect(findByQuery(chineseQuery).some((item) => item.term.includes(term))).toBe(true);
+    });
+  });
+
+  it('includes practical account abstraction simulator terms', () => {
+    accountAbstractionPracticalTerms.forEach((term) => {
+      const glossaryTerm = GLOSSARY_DATA.find((item) => item.term.includes(term));
+      expect(glossaryTerm).toBeDefined();
+      expect(glossaryTerm.category).toBe('账户抽象');
     });
   });
 });

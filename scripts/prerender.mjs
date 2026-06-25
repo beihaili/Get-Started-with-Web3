@@ -56,6 +56,7 @@ function getRoutes() {
     routes.push(`/${lang}/glossary`);
     routes.push(`/${lang}/labs/wallet`);
     routes.push(`/${lang}/labs/siwe`);
+    routes.push(`/${lang}/labs/account-abstraction`);
 
     for (const { moduleId, lessonId } of lessonPairs) {
       routes.push(`/${lang}/learn/${moduleId}/${lessonId}`);

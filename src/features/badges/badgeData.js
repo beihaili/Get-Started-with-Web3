@@ -235,11 +235,11 @@ export const ACHIEVEMENT_BADGES = {
     glowColor: 'shadow-sky-500/50',
     borderColor: 'border-sky-500',
     bgColor: 'bg-sky-500/10',
-    requirement: '完成以太坊与智能账户的所有 2 个课程',
+    requirement: '完成以太坊与智能账户的所有 3 个课程',
     rewards: {
       title: '💳 智能账户建设者',
       experience: 250,
-      unlockedFeatures: ['智能账户学习路径', '钱包安全检查清单'],
+      unlockedFeatures: ['智能账户学习路径', 'UserOperation 模拟器', '钱包安全检查清单'],
       nextBadgeHint: '继续把账户抽象知识应用到真实 DApp 和钱包体验设计中',
     },
   },

@@ -132,8 +132,26 @@ export const GLOSSARY_DATA = [
     category: '账户抽象',
   },
   {
+    term: 'EntryPoint',
+    definition:
+      'ERC-4337 中的共享入口合约，负责调用智能账户和 Paymaster 的验证逻辑，并调度 UserOperation 执行。',
+    category: '账户抽象',
+  },
+  {
     term: 'Paymaster',
     definition: 'ERC-4337 中可代用户支付 Gas 或允许用户用其他代币付费的合约或服务。',
+    category: '账户抽象',
+  },
+  {
+    term: 'Factory',
+    definition:
+      '账户抽象中用于首次部署智能账户的合约，常在 UserOperation 的 factory 或 initCode 路径中出现。',
+    category: '账户抽象',
+  },
+  {
+    term: 'ERC-7562',
+    definition:
+      '账户抽象验证范围规则，限制验证阶段可执行的 EVM 行为，降低 Bundler 遭受未付费计算攻击的风险。',
     category: '账户抽象',
   },
   {

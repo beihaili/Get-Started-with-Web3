@@ -476,6 +476,13 @@ export const COURSE_DATA = [
         path: 'EthereumSmartAccounts/02_AccountAbstractionAndSmartWallets',
         fallbackContent: FALLBACK,
       },
+      {
+        id: '11-3',
+        title: 'UserOperation 模拟器与账户抽象实践',
+        path: 'EthereumSmartAccounts/03_UserOperationSimulator',
+        labUrl: '/labs/account-abstraction',
+        fallbackContent: FALLBACK,
+      },
     ],
   },
 ];
