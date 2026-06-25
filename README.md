@@ -12,7 +12,7 @@
 
 <div align="center">
   <strong>An open-source, bilingual, AI-native Web3 curriculum for beginners, builders, and agents.</strong><br/>
-  <em>11 modules, 61 lessons, AI Tutor, badges, SEO prerendering, llms.txt, and a read-only MCP server.</em>
+  <em>11 modules, 62 lessons, AI Tutor, badges, SEO prerendering, llms.txt, and a read-only MCP server.</em>
 </div>
 
 <br/>
@@ -54,9 +54,9 @@ This project is not investment advice, token promotion, exchange onboarding, or 
 | Area            | Current status                                                                |
 | --------------- | ----------------------------------------------------------------------------- |
 | Course modules  | 11 modules                                                                    |
-| Lessons         | 61 lessons in the React course map                                            |
-| AI-native index | 122 indexed bilingual lesson entries                                          |
-| Glossary        | 60 Web3 terms                                                                 |
+| Lessons         | 62 lessons in the React course map                                            |
+| AI-native index | 124 indexed bilingual lesson entries                                          |
+| Glossary        | 63 Web3 terms                                                                 |
 | Languages       | Chinese first, English in progress                                            |
 | App features    | AI Tutor, search, quizzes, badges, XP, dark/light mode, PWA/offline support   |
 | Agent surfaces  | `llms.txt`, AI manifest, content index, local read-only MCP server            |
@@ -86,7 +86,7 @@ Public AI entrypoints:
 | Web3 Ecosystem and Tools             |       6 | DeFi, Ethereum, Layer 2, emerging chains, AI x Web3, practical tools                                |
 | Web3 Builder Lab                     |       6 | ERC-20 deployment, first DApp, block explorer reading, contract security, wallet and SIWE labs      |
 | DeFi Deep Dive                       |       5 | DeFi architecture, AMMs, lending, stablecoins, risks                                                |
-| Cross-Chain and Layer 2              |       5 | Scaling, rollups, L2 ecosystems, bridges, practical L2 usage                                        |
+| Cross-Chain and Layer 2              |       6 | Scaling, rollups, L2 ecosystems, bridges, risk simulation, practical L2 usage                       |
 | DAO and Decentralized Governance     |       5 | DAO basics, governance design, DAO tooling, case studies, challenges                                |
 | Ethereum and Smart Accounts          |       3 | Post-Pectra/Fusaka Ethereum, account abstraction, UserOperation simulator, smart wallets             |
 

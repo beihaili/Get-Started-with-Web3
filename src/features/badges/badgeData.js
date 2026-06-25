@@ -197,11 +197,11 @@ export const ACHIEVEMENT_BADGES = {
     glowColor: 'shadow-pink-500/50',
     borderColor: 'border-pink-500',
     bgColor: 'bg-pink-500/10',
-    requirement: '完成跨链与 Layer 2 深度解析的所有 5 个课程',
+    requirement: '完成跨链与 Layer 2 深度解析的所有 6 个课程',
     rewards: {
       title: '🌉 跨链桥梁大师',
       experience: 300,
-      unlockedFeatures: ['L2 Gas 费对比工具', '跨链桥安全评估'],
+      unlockedFeatures: ['L2 Gas 费对比工具', '跨链桥风险模拟器', '跨链桥安全评估'],
       nextBadgeHint: '继续学习 DAO 与去中心化治理',
     },
   },

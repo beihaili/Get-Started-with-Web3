@@ -2,6 +2,13 @@
 
 本项目遵循 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/) 格式。
 
+## [Unreleased]
+
+### Added
+- 新增 L2 / 跨链桥风险模拟器 `/labs/l2-risk`，用于本地比较 finality、桥信任假设、消息传递、sequencer 状态和嵌入式桥接 UX 风险。
+- 新增双语课程 `L2CrossChain/06_BridgeRiskSimulator`、对应 quiz、术语表条目和 AI-native 索引路径。
+- 新增 credential architecture tradeoff note，将现有 ERC-721 certificate 明确为学习证书设计方案之一，而非默认生产证书系统。
+
 ## [1.0.0] - 2026-02-09
 
 ### Added

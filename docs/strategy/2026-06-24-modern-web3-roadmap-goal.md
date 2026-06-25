@@ -49,6 +49,7 @@ By the end of this roadmap, the project should have:
 | 2026-06-25 | Wallet lab explainer | Completed | Bilingual lesson `Web3BuilderLab/05_WalletInteroperabilityLab`, quiz bank entry `7-5`, internal Reader lab CTA, Builder role path, README counts, and regenerated AI/public artifacts.                                                                                        |
 | 2026-06-25 | SIWE learning demo   | Completed | Static `/labs/siwe` demo, SIWE helpers and tests, bilingual lesson `Web3BuilderLab/06_SIWEAndLearningIdentity`, quiz bank entry `7-6`, hosted-auth decision note, sitemap/prerender/i18n route coverage, and regenerated AI/public artifacts.                                |
 | 2026-06-25 | AA practical module  | Completed | Static `/labs/account-abstraction` UserOperation simulator, helper/page tests, bilingual lesson `EthereumSmartAccounts/03_UserOperationSimulator`, quiz bank entry `11-3`, glossary terms, good-first issue seeds, sitemap/prerender/i18n route coverage, and regenerated AI/public artifacts. |
+| 2026-06-25 | L2 / credential lab  | Completed | Static `/labs/l2-risk` bridge-risk simulator, helper/page tests, bilingual lesson `L2CrossChain/06_BridgeRiskSimulator`, quiz bank entry `9-6`, L2 glossary terms, credential architecture tradeoff note, certificate-contract boundary update, good-first issue seeds, sitemap/prerender/i18n route coverage, and regenerated AI/public artifacts. |
 
 ## Non-Goals
 
