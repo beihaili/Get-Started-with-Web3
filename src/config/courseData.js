@@ -335,6 +335,13 @@ export const COURSE_DATA = [
         labUrl: '/labs/wallet',
         fallbackContent: FALLBACK,
       },
+      {
+        id: '7-6',
+        title: 'SIWE 与学习身份实验',
+        path: 'Web3BuilderLab/06_SIWEAndLearningIdentity',
+        labUrl: '/labs/siwe',
+        fallbackContent: FALLBACK,
+      },
     ],
   },
   {
