@@ -55,6 +55,7 @@ function getRoutes() {
     routes.push(`/${lang}/contributors`);
     routes.push(`/${lang}/glossary`);
     routes.push(`/${lang}/labs/wallet`);
+    routes.push(`/${lang}/labs/siwe`);
 
     for (const { moduleId, lessonId } of lessonPairs) {
       routes.push(`/${lang}/learn/${moduleId}/${lessonId}`);

@@ -2439,6 +2439,135 @@ export const QUIZ_BANK = {
       },
     },
   ],
+  '7-6': [
+    // SIWE 与学习身份实验
+    {
+      question: 'SIWE / ERC-4361 主要标准化了什么？',
+      options: [
+        '链上代币转账流程',
+        '以太坊账户用于链下登录的结构化签名消息格式',
+        '智能合约部署脚本',
+        '跨链桥验证人集合',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'ERC-4361 定义了 Sign-In with Ethereum 的链下认证消息格式，让钱包、用户和 relying party 能围绕 domain、address、nonce、expiration 等字段达成一致。',
+      translations: {
+        en: {
+          question: 'What does SIWE / ERC-4361 mainly standardize?',
+          options: [
+            'On-chain token transfer flows',
+            'A structured signed-message format for Ethereum-account authentication to off-chain services',
+            'Smart contract deployment scripts',
+            'Cross-chain bridge validator sets',
+          ],
+          explanation:
+            'ERC-4361 defines the Sign-In with Ethereum off-chain authentication message format so wallets, users, and relying parties can agree on fields such as domain, address, nonce, and expiration.',
+        },
+      },
+    },
+    {
+      question: '生产级 SIWE 中 nonce 的核心作用是什么？',
+      options: [
+        '让签名消息看起来更长',
+        '防止旧签名被重复使用，降低 replay risk',
+        '自动支付 Gas 费',
+        '隐藏用户钱包地址',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'Nonce 应由可信服务器生成并一次性使用。服务端验证签名后消耗 nonce，避免同一条旧签名被攻击者再次提交。',
+      translations: {
+        en: {
+          question: 'What is the core role of a nonce in production SIWE?',
+          options: [
+            'Making the signed message longer',
+            'Preventing old signatures from being reused and reducing replay risk',
+            'Automatically paying gas fees',
+            'Hiding the wallet address',
+          ],
+          explanation:
+            'A nonce should be issued by a trusted server and used once. After verifying the signature, the server consumes the nonce so the same old signature cannot be replayed.',
+        },
+      },
+    },
+    {
+      question: '为什么静态 GitHub Pages 不能单独提供生产级 SIWE 登录？',
+      options: [
+        '因为 SIWE 必须发送链上交易',
+        '因为生产登录需要可信服务端签发 nonce、验证签名、防重放并管理 session',
+        '因为浏览器钱包无法签名文本消息',
+        '因为 ERC-4361 只能在移动端使用',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '静态站点可以构造和签名消息，但没有可信后端来存储 nonce、验证签名、创建/失效化 session，也无法完整处理合约钱包验证。',
+      translations: {
+        en: {
+          question:
+            'Why can a static GitHub Pages site not provide production SIWE login by itself?',
+          options: [
+            'Because SIWE must send an on-chain transaction',
+            'Because production login needs a trusted server to issue nonces, verify signatures, prevent replay, and manage sessions',
+            'Because browser wallets cannot sign text messages',
+            'Because ERC-4361 only works on mobile',
+          ],
+          explanation:
+            'A static site can compose and sign messages, but it lacks a trusted backend for nonce storage, signature verification, session creation/invalidation, and full contract-wallet validation.',
+        },
+      },
+    },
+    {
+      question: 'SIWE 消息中的 domain 和 URI 主要帮助用户判断什么？',
+      options: [
+        '签名请求是否绑定到正确的网站和资源，降低钓鱼风险',
+        '当前钱包是否持有足够 ETH',
+        '当前交易是否会成功上链',
+        '当前 NFT 是否可转让',
+      ],
+      correctAnswer: 0,
+      explanation:
+        'Domain 和 URI 把签名请求绑定到具体来源。钱包和 relying party 可以把消息字段与真实 origin 对比，帮助识别钓鱼或 origin 不匹配。',
+      translations: {
+        en: {
+          question: 'What do the domain and URI in a SIWE message mainly help users judge?',
+          options: [
+            'Whether the signing request is bound to the correct site and resource, reducing phishing risk',
+            'Whether the wallet has enough ETH',
+            'Whether the transaction will succeed on-chain',
+            'Whether the NFT is transferable',
+          ],
+          explanation:
+            'Domain and URI bind the signing request to a specific origin. Wallets and relying parties can compare those fields with the real origin to detect phishing or mismatches.',
+        },
+      },
+    },
+    {
+      question: '把 SIWE 用于学习身份时，最准确的边界是什么？',
+      options: [
+        '签名一次就自动获得永久课程账户',
+        '学习者可以在特定目的和时间窗口内证明自己控制某个钱包，但真实凭证系统还需要单独设计',
+        '钱包地址等同于真实姓名和 KYC 身份',
+        'SIWE 会自动发行 NFT 证书',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'SIWE 可以证明钱包控制权，但徽章、证书、verifiable credential、隐私和撤销机制都需要额外架构，不能把 demo 描述成已上线账户系统。',
+      translations: {
+        en: {
+          question: 'What is the most accurate boundary when using SIWE for learning identity?',
+          options: [
+            'One signature automatically creates a permanent course account',
+            'A learner can prove wallet control for a specific purpose and time window, but a real credential system still needs separate design',
+            'A wallet address is the same as a real name and KYC identity',
+            'SIWE automatically issues NFT certificates',
+          ],
+          explanation:
+            'SIWE can prove wallet control, but badges, certificates, verifiable credentials, privacy, and revocation all need additional architecture. A demo must not be described as a live account system.',
+        },
+      },
+    },
+  ],
   // Module 8: DeFi 深度解析
   '8-1': [
     {

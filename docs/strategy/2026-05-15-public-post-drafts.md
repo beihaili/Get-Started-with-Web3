@@ -34,7 +34,7 @@
 
 **Target channel:** Twitter/X and Farcaster.
 **Audience:** English-speaking Web3 learners, builders, and AI-agent developers.
-**Concrete learner outcome:** A learner or agent can follow a cited path through 59 lessons and retrieve curriculum context through `llms.txt` or the read-only MCP server.
+**Concrete learner outcome:** A learner or agent can follow a cited path through 60 lessons and retrieve curriculum context through `llms.txt` or the read-only MCP server.
 **Status:** Backup draft, not published.
 
 ```markdown

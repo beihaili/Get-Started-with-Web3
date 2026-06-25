@@ -21,6 +21,7 @@ const SupportPage = lazy(() => import('../pages/SupportPage'));
 const ContributorsPage = lazy(() => import('../pages/ContributorsPage'));
 const GlossaryPage = lazy(() => import('../pages/GlossaryPage'));
 const WalletLabPage = lazy(() => import('../pages/WalletLabPage'));
+const SiweLabPage = lazy(() => import('../pages/SiweLabPage'));
 
 // Loading component
 const PageLoader = () => {
@@ -139,6 +140,10 @@ export const router = createBrowserRouter(
       path: '/labs/wallet',
       element: <LegacyRedirect to="/zh/labs/wallet" />,
     },
+    {
+      path: '/labs/siwe',
+      element: <LegacyRedirect to="/zh/labs/siwe" />,
+    },
     // Main i18n routes
     {
       path: '/:lang',
@@ -221,6 +226,14 @@ export const router = createBrowserRouter(
           element: (
             <SuspenseWrapper>
               <WalletLabPage />
+            </SuspenseWrapper>
+          ),
+        },
+        {
+          path: 'labs/siwe',
+          element: (
+            <SuspenseWrapper>
+              <SiweLabPage />
             </SuspenseWrapper>
           ),
         },

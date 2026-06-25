@@ -109,6 +109,7 @@ const ROLE_PATHS = {
     'module-7:7-3',
     'module-7:7-4',
     'module-7:7-5',
+    'module-7:7-6',
     'module-4:4-2',
   ],
   researcher: [

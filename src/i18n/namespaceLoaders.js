@@ -26,6 +26,7 @@ export const I18N_SECTIONS = [
   'markdown',
   'glossary',
   'walletLab',
+  'siweLab',
 ];
 
 export const eagerI18nResources = {
@@ -143,6 +144,10 @@ export function getRouteI18nSections(pathname) {
 
   if (langAwareRoute === 'glossary') {
     return ['glossary'];
+  }
+
+  if (langAwareRoute === 'labs' && normalizedPath.includes('/labs/siwe')) {
+    return ['siweLab'];
   }
 
   if (langAwareRoute === 'labs') {
