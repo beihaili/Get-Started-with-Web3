@@ -2033,6 +2033,136 @@ export const QUIZ_BANK = {
         'L2 的交易完全可以在对应的区块浏览器上查看（如 Arbiscan、Basescan 等）。常见的坑包括代币混淆、Gas 储备不足和排序器风险。',
     },
   ],
+  '9-6': [
+    // L2 与跨链桥风险模拟器
+    {
+      question: '为什么跨链桥 UI 显示“已到账”不一定等于最终安全？',
+      options: [
+        '因为 UI 只能显示美元价格',
+        '因为完整 finality 可能还依赖挑战期、证明、结算或目标链执行',
+        '因为所有桥都必须等待一年',
+        '因为区块链没有交易确认概念',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '跨链 UI 的提交或到账状态不等于完整安全状态。不同路径可能仍需挑战期、证明生成、Relayer 投递、流动性结算或目标链执行。',
+      translations: {
+        en: {
+          question: 'Why does a bridge UI showing "received" not always mean final safety?',
+          options: [
+            'Because the UI can only show USD prices',
+            'Because full finality may still depend on a challenge window, proof, settlement, or destination execution',
+            'Because every bridge must wait one year',
+            'Because blockchains have no confirmation concept',
+          ],
+          explanation:
+            'Bridge UI status is not the same as full security finality. A route may still need challenges, proof generation, relayer delivery, liquidity settlement, or destination execution.',
+        },
+      },
+    },
+    {
+      question: '外部验证桥相比 Rollup 原生桥通常多了哪类信任假设？',
+      options: [
+        '必须信任外部验证者、预言机、多签或 Guardian 集合',
+        '必须信任比特币矿池',
+        '不需要任何合约',
+        '只需要相信浏览器缓存',
+      ],
+      correctAnswer: 0,
+      explanation:
+        '外部验证桥通常把安全性部分转移给外部验证者集合、预言机、多签或 Guardian，而不完全依赖 Rollup 规范合约。',
+      translations: {
+        en: {
+          question:
+            'What extra trust assumption do external-validator bridges often add compared with native rollup bridges?',
+          options: [
+            'Trust in an external validator, oracle, multisig, or guardian set',
+            'Trust in Bitcoin mining pools',
+            'No contracts are needed',
+            'Only browser cache must be trusted',
+          ],
+          explanation:
+            'External-validator bridges often shift part of security to an external verifier set, oracle, multisig, or guardian system instead of relying only on canonical rollup contracts.',
+        },
+      },
+    },
+    {
+      question: '通用跨链消息传递中，应用最应该检查什么？',
+      options: [
+        'Chain ID、endpoint、trusted remote 和防重放逻辑',
+        '用户的社交媒体粉丝数',
+        '目标链 Logo 是否好看',
+        '是否能自动发行 Meme 币',
+      ],
+      correctAnswer: 0,
+      explanation:
+        '跨链消息可能携带任意应用指令，因此 chain ID、endpoint、trusted remote、防重放和目标应用权限都必须正确配置。',
+      translations: {
+        en: {
+          question: 'What should an app check in a general cross-chain messaging route?',
+          options: [
+            'Chain ID, endpoint, trusted remote, and replay protection',
+            "The user's social media follower count",
+            'Whether the destination chain logo looks good',
+            'Whether it can automatically issue meme coins',
+          ],
+          explanation:
+            'Cross-chain messages can carry arbitrary app instructions, so chain IDs, endpoints, trusted remotes, replay protection, and destination permissions must be configured correctly.',
+        },
+      },
+    },
+    {
+      question: '排序器降级或停机会带来什么用户可见风险？',
+      options: [
+        '只会改变网页字体',
+        '可能延迟交易打包、提款、证明生成或消息投递',
+        '会让所有资产自动翻倍',
+        '会让 L1 永久停止出块',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '很多 L2 仍依赖排序器提供可用性。排序器降级可能影响打包、提款、证明生成和跨链消息时序。',
+      translations: {
+        en: {
+          question: 'What user-facing risk can sequencer degradation or outage create?',
+          options: [
+            'It only changes the web font',
+            'It can delay inclusion, withdrawals, proof generation, or message delivery',
+            'It automatically doubles every asset',
+            'It permanently stops L1 block production',
+          ],
+          explanation:
+            'Many L2s still depend on sequencer liveness. Degradation can affect inclusion, withdrawals, proof generation, and cross-chain message timing.',
+        },
+      },
+    },
+    {
+      question: '为什么学习凭证不能默认等同于“发一个 NFT 证书”？',
+      options: [
+        '因为 NFT 无法显示图片',
+        '因为 ERC-721、ERC-1155、Soulbound、链下证明、DID/VC 和 attestation 在隐私、撤销、成本和可移植性上取舍不同',
+        '因为所有凭证都必须是交易所账户',
+        '因为 SIWE 会自动完成所有凭证架构',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '学习凭证需要根据用途选择架构。NFT 证书只是一个选项，隐私、撤销、恢复、可移植性和发行方信任都要单独设计。',
+      translations: {
+        en: {
+          question:
+            'Why should a learning credential not default to "just mint an NFT certificate"?',
+          options: [
+            'Because NFTs cannot display images',
+            'Because ERC-721, ERC-1155, soulbound, offchain proof, DID/VC, and attestations have different privacy, revocation, cost, and portability tradeoffs',
+            'Because every credential must be an exchange account',
+            'Because SIWE automatically solves every credential architecture question',
+          ],
+          explanation:
+            'Credential architecture depends on purpose. An NFT certificate is one option, but privacy, revocation, recovery, portability, and issuer trust require separate design.',
+        },
+      },
+    },
+  ],
   '7-1': [
     // 从零部署 ERC-20 代币
     {

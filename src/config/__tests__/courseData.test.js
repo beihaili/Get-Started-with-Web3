@@ -51,4 +51,15 @@ describe('courseData', () => {
       expect(lesson.path).toMatch(/^EthereumSmartAccounts\//);
     });
   });
+
+  it('module-9 should include the L2 risk simulator lab', () => {
+    const mod9 = COURSE_DATA.find((m) => m.id === 'module-9');
+    expect(mod9).toBeDefined();
+    expect(mod9.lessons).toHaveLength(6);
+    expect(mod9.lessons.at(-1)).toMatchObject({
+      id: '9-6',
+      path: 'L2CrossChain/06_BridgeRiskSimulator',
+      labUrl: '/labs/l2-risk',
+    });
+  });
 });

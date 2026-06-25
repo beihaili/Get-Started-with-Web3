@@ -55,6 +55,7 @@ const plannedExpansionTerms = [
 ];
 
 const accountAbstractionPracticalTerms = ['EntryPoint', 'Factory', 'ERC-7562'];
+const l2RiskPracticalTerms = ['Finality', 'Canonical Bridge', 'Cross-chain Messaging'];
 
 const findByQuery = (query) => {
   const normalizedQuery = query.toLowerCase();
@@ -124,6 +125,14 @@ describe('glossaryData', () => {
       const glossaryTerm = GLOSSARY_DATA.find((item) => item.term.includes(term));
       expect(glossaryTerm).toBeDefined();
       expect(glossaryTerm.category).toBe('账户抽象');
+    });
+  });
+
+  it('includes practical L2 risk simulator terms', () => {
+    l2RiskPracticalTerms.forEach((term) => {
+      const glossaryTerm = GLOSSARY_DATA.find((item) => item.term.includes(term));
+      expect(glossaryTerm).toBeDefined();
+      expect(glossaryTerm.category).toBe('Layer 2');
     });
   });
 });

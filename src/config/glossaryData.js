@@ -323,6 +323,24 @@ export const GLOSSARY_DATA = [
     category: 'Layer 2',
   },
   {
+    term: '最终性 (Finality)',
+    definition:
+      '交易或消息达到足够安全、难以被回滚或挑战的状态；跨链场景中 UI 确认不一定等于最终性。',
+    category: 'Layer 2',
+  },
+  {
+    term: '规范桥 (Canonical Bridge)',
+    definition:
+      '由 Rollup 或链自身协议维护的官方桥接路径，通常以 L1/L2 核心合约作为信任锚，但仍需关注升级和退出风险。',
+    category: 'Layer 2',
+  },
+  {
+    term: '跨链消息传递 (Cross-chain Messaging)',
+    definition:
+      '在不同链或 L2 之间传递任意应用消息的机制，需要明确验证者、Relayer、Endpoint 和防重放设计。',
+    category: 'Layer 2',
+  },
+  {
     term: '预言机 (Oracle)',
     definition:
       '把链下价格、事件或随机数等外部数据提供给智能合约的系统，解决合约无法直接读取链外信息的问题。',

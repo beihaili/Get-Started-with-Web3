@@ -30,6 +30,7 @@ const STATIC_PAGES = [
   '/labs/wallet',
   '/labs/siwe',
   '/labs/account-abstraction',
+  '/labs/l2-risk',
 ];
 
 /**

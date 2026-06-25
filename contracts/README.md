@@ -2,7 +2,9 @@
 
 ## CertificateNFT
 
-ERC-721 completion certificate deployed on Base.
+ERC-721 completion certificate contract intended as one possible learning credential option.
+
+This contract is not the only supported credential design and should not be described as a live production credential system by default. Before changing or deploying credential flows, review `docs/strategy/2026-06-25-credential-architecture-tradeoff.md` for the ERC-721, ERC-1155, soulbound, offchain proof, DID/VC, and attestation tradeoffs.
 
 ### Prerequisites
 - [Foundry](https://book.getfoundry.sh/getting-started/installation)
