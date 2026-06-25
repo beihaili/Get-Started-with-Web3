@@ -6,7 +6,7 @@
 [![GitHub license](https://img.shields.io/github/license/beihaili/Get-Started-with-Web3)](https://github.com/beihaili/Get-Started-with-Web3/blob/main/LICENSE)
 [![Contributors](https://img.shields.io/github/contributors/beihaili/Get-Started-with-Web3)](https://github.com/beihaili/Get-Started-with-Web3/graphs/contributors)
 
-** 中文世界最系统的比特币与 Web3 开源学习平台。** 11 个模块、58 讲体系化教程，覆盖从 Web3 入门、以太坊智能账户、比特币底层原理到 DeFi、L2、DAO 和 Builder 实战的完整知识体系。
+** 中文世界最系统的比特币与 Web3 开源学习平台。** 11 个模块、59 讲体系化教程，覆盖从 Web3 入门、以太坊智能账户、比特币底层原理到 DeFi、L2、DAO 和 Builder 实战的完整知识体系。
 
 ** 在线学习平台（推荐）：** https://beihaili.github.io/Get-Started-with-Web3/
 
@@ -113,7 +113,7 @@
 
 | 主题 | 简介 |
 |------|------|
-| [Web3 Builder 实战](Web3BuilderLab/01_DeployERC20/README.md) | 从部署代币、构建 DApp 到合约安全实战 |
+| [Web3 Builder 实战](Web3BuilderLab/01_DeployERC20/README.md) | 从部署代币、构建 DApp、钱包互操作到合约安全实战 |
 | [DeFi 深度解析](DeFiDeepDive/01_CoreConcepts/README.md) | AMM、借贷、稳定币和 DeFi 风险 |
 | [跨链与 Layer 2 深度解析](L2CrossChain/01_WhyScaling/README.md) | Rollup、L2 生态、跨链桥和实操指南 |
 | [DAO 与去中心化治理](DAOGovernance/01_WhatIsDAO/README.md) | DAO 机制、工具、案例和治理挑战 |

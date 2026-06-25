@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2026-05-09",
-  "generatedAt": "2026-05-21T02:13:09.304Z",
+  "generatedAt": "2026-06-25T02:06:13.065Z",
   "repository": {
     "name": "Get-Started-with-Web3",
     "owner": "beihaili",
@@ -576,7 +576,7 @@
     {
       "id": "module-7",
       "title": "Web3 Builder 实战",
-      "lessonCount": 4,
+      "lessonCount": 5,
       "lessons": [
         {
           "id": "7-1",
@@ -632,6 +632,20 @@
           "siteUrls": {
             "zh": "https://bhbtc.xyz/zh/learn/module-7/7-4",
             "en": "https://bhbtc.xyz/en/learn/module-7/7-4"
+          }
+        },
+        {
+          "id": "7-5",
+          "title": "钱包互操作与签名实验",
+          "path": "Web3BuilderLab/05_WalletInteroperabilityLab",
+          "labUrl": "/labs/wallet",
+          "availability": {
+            "zh": true,
+            "en": true
+          },
+          "siteUrls": {
+            "zh": "https://bhbtc.xyz/zh/learn/module-7/7-5",
+            "en": "https://bhbtc.xyz/en/learn/module-7/7-5"
           }
         }
       ]
@@ -13873,6 +13887,152 @@
       ],
       "codeBlockCount": 18,
       "characterCount": 18294
+    },
+    {
+      "id": "zh/module-7/7-5",
+      "lang": "zh",
+      "moduleId": "module-7",
+      "moduleTitle": "Web3 Builder 实战",
+      "lessonId": "7-5",
+      "title": "钱包互操作与签名实验",
+      "path": "Web3BuilderLab/05_WalletInteroperabilityLab",
+      "labUrl": "/labs/wallet",
+      "sourcePath": "zh/Web3BuilderLab/05_WalletInteroperabilityLab/README.md",
+      "citation": {
+        "file": "zh/Web3BuilderLab/05_WalletInteroperabilityLab/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3BuilderLab/05_WalletInteroperabilityLab/README.md",
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-7/7-5"
+      },
+      "excerpt": "钱包互操作与签名实验 钱包连接不是一个按钮那么简单。现代 DApp 需要处理多钱包发现、网络上下文、切链、消息签名和隐私边界。本课配套 /labs/wallet 实验页，帮你把这些机制拆开看清楚。 Last reviewed: 2026 06 25 目录 为什么要单独学习钱包互操作 实验页能做什么 EIP 6963 解决了什么问题 EIP 1193 provider 是什么 连接钱包不等于登录 消息签名不等于交易 切链为什么需要 allowlist 隐私和 analytics 边界 动手实验 学习检查清单 延伸阅读 为什么要单独学习钱包互操作 很多入门教程会把钱包连接简化成： 真实产品里更复杂： 用户可能同时安装多个钱包扩展。 钱包可能注入不同的 provider。 页面需要知道当前 chain ID。 用户可能需要切换到应用支持的网络。 签名消息、签名交易和发送交易是不同动作。 地址、签名和 provider 对象都不应该随便",
+      "headings": [
+        {
+          "level": 1,
+          "text": "钱包互操作与签名实验"
+        },
+        {
+          "level": 2,
+          "text": "目录"
+        },
+        {
+          "level": 2,
+          "text": "为什么要单独学习钱包互操作"
+        },
+        {
+          "level": 2,
+          "text": "实验页能做什么"
+        },
+        {
+          "level": 2,
+          "text": "EIP-6963 解决了什么问题"
+        },
+        {
+          "level": 2,
+          "text": "EIP-1193 provider 是什么"
+        },
+        {
+          "level": 2,
+          "text": "连接钱包不等于登录"
+        },
+        {
+          "level": 2,
+          "text": "消息签名不等于交易"
+        },
+        {
+          "level": 2,
+          "text": "切链为什么需要 allowlist"
+        },
+        {
+          "level": 2,
+          "text": "隐私和 analytics 边界"
+        },
+        {
+          "level": 2,
+          "text": "动手实验"
+        },
+        {
+          "level": 2,
+          "text": "学习检查清单"
+        },
+        {
+          "level": 2,
+          "text": "延伸阅读"
+        }
+      ],
+      "codeBlockCount": 5,
+      "characterCount": 5541
+    },
+    {
+      "id": "en/module-7/7-5",
+      "lang": "en",
+      "moduleId": "module-7",
+      "moduleTitle": "Web3 Builder 实战",
+      "lessonId": "7-5",
+      "title": "钱包互操作与签名实验",
+      "path": "Web3BuilderLab/05_WalletInteroperabilityLab",
+      "labUrl": "/labs/wallet",
+      "sourcePath": "en/Web3BuilderLab/05_WalletInteroperabilityLab/README.md",
+      "citation": {
+        "file": "en/Web3BuilderLab/05_WalletInteroperabilityLab/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/Web3BuilderLab/05_WalletInteroperabilityLab/README.md",
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-7/7-5"
+      },
+      "excerpt": "Wallet Interoperability and Signing Lab Wallet connection is more than one button. A modern DApp needs to handle multi wallet discovery, network context, chain switching, message signing, and privacy boundaries. This lesson explains the /labs/wallet experience piece by piece. Last reviewed: 2026 06 25 Table of Contents Why Wallet Interoperability Matters What the Lab Does What EIP 6963 Solves What an EIP 1193 Provide",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Wallet Interoperability and Signing Lab"
+        },
+        {
+          "level": 2,
+          "text": "Table of Contents"
+        },
+        {
+          "level": 2,
+          "text": "Why Wallet Interoperability Matters"
+        },
+        {
+          "level": 2,
+          "text": "What the Lab Does"
+        },
+        {
+          "level": 2,
+          "text": "What EIP-6963 Solves"
+        },
+        {
+          "level": 2,
+          "text": "What an EIP-1193 Provider Is"
+        },
+        {
+          "level": 2,
+          "text": "Connecting Is Not Logging In"
+        },
+        {
+          "level": 2,
+          "text": "Message Signing Is Not a Transaction"
+        },
+        {
+          "level": 2,
+          "text": "Why Chain Switching Needs an Allowlist"
+        },
+        {
+          "level": 2,
+          "text": "Privacy and Analytics Boundaries"
+        },
+        {
+          "level": 2,
+          "text": "Try the Lab"
+        },
+        {
+          "level": 2,
+          "text": "Learning Checklist"
+        },
+        {
+          "level": 2,
+          "text": "Further Reading"
+        }
+      ],
+      "codeBlockCount": 5,
+      "characterCount": 9728
     },
     {
       "id": "zh/module-8/8-1",

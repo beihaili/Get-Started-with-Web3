@@ -12,7 +12,7 @@
 
 <div align="center">
   <strong>An open-source, bilingual, AI-native Web3 curriculum for beginners, builders, and agents.</strong><br/>
-  <em>11 modules, 58 lessons, AI Tutor, badges, SEO prerendering, llms.txt, and a read-only MCP server.</em>
+  <em>11 modules, 59 lessons, AI Tutor, badges, SEO prerendering, llms.txt, and a read-only MCP server.</em>
 </div>
 
 <br/>
@@ -54,9 +54,9 @@ This project is not investment advice, token promotion, exchange onboarding, or 
 | Area            | Current status                                                                |
 | --------------- | ----------------------------------------------------------------------------- |
 | Course modules  | 11 modules                                                                    |
-| Lessons         | 58 lessons in the React course map                                            |
-| AI-native index | 106 indexed bilingual lesson entries                                          |
-| Glossary        | 55 Web3 terms                                                                 |
+| Lessons         | 59 lessons in the React course map                                            |
+| AI-native index | 118 indexed bilingual lesson entries                                          |
+| Glossary        | 57 Web3 terms                                                                 |
 | Languages       | Chinese first, English in progress                                            |
 | App features    | AI Tutor, search, quizzes, badges, XP, dark/light mode, PWA/offline support   |
 | Agent surfaces  | `llms.txt`, AI manifest, content index, local read-only MCP server            |
@@ -84,7 +84,7 @@ Public AI entrypoints:
 | Bitcoin: Application Layer           |       7 | Wallets, RPC development, low-fee broadcast, Bitcoin Script, governance, Ordinals, cross-chain DeFi |
 | Web3 Deep Thinking                   |       3 | Principles, sovereignty, blockchain necessity, Bitcoin cultural references                          |
 | Web3 Ecosystem and Tools             |       6 | DeFi, Ethereum, Layer 2, emerging chains, AI x Web3, practical tools                                |
-| Web3 Builder Lab                     |       4 | ERC-20 deployment, first DApp, block explorer reading, smart contract security                      |
+| Web3 Builder Lab                     |       5 | ERC-20 deployment, first DApp, block explorer reading, contract security, wallet interoperability   |
 | DeFi Deep Dive                       |       5 | DeFi architecture, AMMs, lending, stablecoins, risks                                                |
 | Cross-Chain and Layer 2              |       5 | Scaling, rollups, L2 ecosystems, bridges, practical L2 usage                                        |
 | DAO and Decentralized Governance     |       5 | DAO basics, governance design, DAO tooling, case studies, challenges                                |

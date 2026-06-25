@@ -328,6 +328,13 @@ export const COURSE_DATA = [
         path: 'Web3BuilderLab/04_SmartContractSecurity',
         fallbackContent: FALLBACK,
       },
+      {
+        id: '7-5',
+        title: '钱包互操作与签名实验',
+        path: 'Web3BuilderLab/05_WalletInteroperabilityLab',
+        labUrl: '/labs/wallet',
+        fallbackContent: FALLBACK,
+      },
     ],
   },
   {
