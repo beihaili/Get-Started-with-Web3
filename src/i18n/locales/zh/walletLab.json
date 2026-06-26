@@ -1,0 +1,20 @@
+{
+  "pageTitle": "钱包实验室 | Get Started with Web3",
+  "pageDesc": "面向学习者的钱包互操作实验脚手架，用于后续讲解 EIP-6963、切链和消息签名。",
+  "backHome": "返回首页",
+  "eyebrow": "Modern Web3 实验",
+  "heading": "钱包互操作实验室",
+  "subheading": "一个聚焦钱包发现、网络上下文和消息签名的实验入口。第一阶段保持静态，等钱包技术栈评审后再接入依赖。",
+  "statusTitle": "当前状态",
+  "statusBody": "脚手架已就绪。当前页面尚未安装钱包依赖，因此不会执行钱包连接、签名、交易或认证流程。",
+  "scopeTitle": "MVP 范围",
+  "scopeConnect": "连接和断开钱包",
+  "scopeNetwork": "展示账户、链名称和 chain ID",
+  "scopeSwitch": "在批准的网络集合中切换",
+  "scopeSign": "签名一条教学消息，并在本地查看结果",
+  "privacyTitle": "隐私边界",
+  "privacyBody": "实验室不得把原始钱包地址、签名、已签消息、provider 对象或交易 payload 发送到 analytics。",
+  "nextTitle": "下一步实现切片",
+  "nextBody": "先补路由测试，并保持页面无依赖。wagmi、viem、RainbowKit 或 Reown AppKit 只在后续实现 PR 中安装。",
+  "architectureLink": "钱包实验室架构说明"
+}

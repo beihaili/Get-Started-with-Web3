@@ -1,0 +1,20 @@
+{
+  "pageTitle": "Wallet Lab | Get Started with Web3",
+  "pageDesc": "A learner-safe wallet interoperability lab scaffold for EIP-6963, network switching, and message signing.",
+  "backHome": "Back to home",
+  "eyebrow": "Modern Web3 Lab",
+  "heading": "Wallet Interoperability Lab",
+  "subheading": "A focused lab surface for wallet discovery, network context, and message signing. The first slice is intentionally static while the wallet stack is reviewed.",
+  "statusTitle": "Current status",
+  "statusBody": "Scaffold ready. Wallet dependencies are not installed yet, so no wallet connection, signing, transaction, or authentication flow runs on this page today.",
+  "scopeTitle": "MVP scope",
+  "scopeConnect": "Connect and disconnect wallet",
+  "scopeNetwork": "Show account, chain name, and chain ID",
+  "scopeSwitch": "Switch between an approved set of networks",
+  "scopeSign": "Sign one educational message and inspect the result locally",
+  "privacyTitle": "Privacy boundary",
+  "privacyBody": "The lab must never send raw wallet addresses, signatures, signed messages, provider objects, or transaction payloads to analytics.",
+  "nextTitle": "Next implementation slice",
+  "nextBody": "Add route tests and keep the page dependency-free. Install wagmi, viem, RainbowKit, or Reown AppKit only in the follow-up implementation PR.",
+  "architectureLink": "Wallet lab architecture note"
+}
