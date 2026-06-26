@@ -43,7 +43,7 @@ describe('courseData', () => {
     const mod11 = COURSE_DATA.find((m) => m.id === 'module-11');
     expect(mod11).toBeDefined();
     expect(mod11.title).toBe('以太坊与智能账户');
-    expect(mod11.lessons).toHaveLength(2);
+    expect(mod11.lessons).toHaveLength(3);
     mod11.lessons.forEach((lesson) => {
       expect(lesson).toHaveProperty('id');
       expect(lesson).toHaveProperty('title');

@@ -110,6 +110,7 @@ const ROLE_PATHS = {
     'module-7:7-4',
     'module-7:7-5',
     'module-7:7-6',
+    'module-11:11-3',
     'module-4:4-2',
   ],
   researcher: [
@@ -546,7 +547,8 @@ function clampNumber(value, fallback, min, max) {
 function roleDescription(role) {
   const descriptions = {
     beginner: '从钱包、交易和基础安全开始建立 Web3 操作直觉。',
-    builder: '面向开发者，从身份、DApp、代币、区块浏览器和安全实践建立实战路径。',
+    builder:
+      '面向开发者，从身份、DApp、代币、区块浏览器、账户抽象和安全实践建立实战路径。',
     researcher: '面向技术研究者，覆盖比特币底层、脚本、DeFi 风险、跨链和 DAO 治理。',
     investor: '面向生态观察和投资研究，强调工具、DeFi、交易所和风险识别。',
   };

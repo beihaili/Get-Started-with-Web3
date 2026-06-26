@@ -48,6 +48,7 @@ By the end of this roadmap, the project should have:
 | 2026-06-24 | Wallet lab MVP slice | Completed | Dependency-free EIP-6963 / EIP-1193 lab implemented under `src/features/wallet-lab/`; unit, integration, lint, test, build, GitHub CI, and desktop/mobile Playwright smoke passed. Known local-only Cloudflare analytics CORS noise remains unrelated to Wallet Lab behavior. |
 | 2026-06-25 | Wallet lab explainer | Completed | Bilingual lesson `Web3BuilderLab/05_WalletInteroperabilityLab`, quiz bank entry `7-5`, internal Reader lab CTA, Builder role path, README counts, and regenerated AI/public artifacts.                                                                                        |
 | 2026-06-25 | SIWE learning demo   | Completed | Static `/labs/siwe` demo, SIWE helpers and tests, bilingual lesson `Web3BuilderLab/06_SIWEAndLearningIdentity`, quiz bank entry `7-6`, hosted-auth decision note, sitemap/prerender/i18n route coverage, and regenerated AI/public artifacts.                                |
+| 2026-06-25 | AA practical module  | Completed | Static `/labs/account-abstraction` UserOperation simulator, helper/page tests, bilingual lesson `EthereumSmartAccounts/03_UserOperationSimulator`, quiz bank entry `11-3`, glossary terms, good-first issue seeds, sitemap/prerender/i18n route coverage, and regenerated AI/public artifacts. |
 
 ## Non-Goals
 

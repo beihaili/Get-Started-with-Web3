@@ -22,6 +22,7 @@ const ContributorsPage = lazy(() => import('../pages/ContributorsPage'));
 const GlossaryPage = lazy(() => import('../pages/GlossaryPage'));
 const WalletLabPage = lazy(() => import('../pages/WalletLabPage'));
 const SiweLabPage = lazy(() => import('../pages/SiweLabPage'));
+const AccountAbstractionLabPage = lazy(() => import('../pages/AccountAbstractionLabPage'));
 
 // Loading component
 const PageLoader = () => {
@@ -144,6 +145,10 @@ export const router = createBrowserRouter(
       path: '/labs/siwe',
       element: <LegacyRedirect to="/zh/labs/siwe" />,
     },
+    {
+      path: '/labs/account-abstraction',
+      element: <LegacyRedirect to="/zh/labs/account-abstraction" />,
+    },
     // Main i18n routes
     {
       path: '/:lang',
@@ -234,6 +239,14 @@ export const router = createBrowserRouter(
           element: (
             <SuspenseWrapper>
               <SiweLabPage />
+            </SuspenseWrapper>
+          ),
+        },
+        {
+          path: 'labs/account-abstraction',
+          element: (
+            <SuspenseWrapper>
+              <AccountAbstractionLabPage />
             </SuspenseWrapper>
           ),
         },

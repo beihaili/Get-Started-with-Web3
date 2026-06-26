@@ -67,8 +67,8 @@ describe('i18n', () => {
     await loadI18nSections(testI18n, ['articles'], 'en');
     await loadI18nSections(testI18n, ['articles'], 'zh');
 
-    expect(testI18n.t('articles.pageDesc', { lng: 'en' })).toContain('60 lessons');
-    expect(testI18n.t('articles.pageDesc', { lng: 'zh' })).toContain('60 讲');
+    expect(testI18n.t('articles.pageDesc', { lng: 'en' })).toContain('61 lessons');
+    expect(testI18n.t('articles.pageDesc', { lng: 'zh' })).toContain('61 讲');
   });
 
   it('should map routes to the sections needed before rendering', () => {
@@ -86,6 +86,7 @@ describe('i18n', () => {
     expect(getRouteI18nSections('/zh/support')).toEqual(['support', 'donation']);
     expect(getRouteI18nSections('/en/labs/wallet')).toEqual(['walletLab']);
     expect(getRouteI18nSections('/zh/labs/siwe')).toEqual(['siweLab']);
+    expect(getRouteI18nSections('/zh/labs/account-abstraction')).toEqual(['accountAbstractionLab']);
   });
 
   it('should warn instead of silently ignoring namespace load failures', async () => {
