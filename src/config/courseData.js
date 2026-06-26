@@ -418,6 +418,13 @@ export const COURSE_DATA = [
         path: 'L2CrossChain/05_L2PracticalGuide',
         fallbackContent: FALLBACK,
       },
+      {
+        id: '9-6',
+        title: 'L2 与跨链桥风险模拟器',
+        path: 'L2CrossChain/06_BridgeRiskSimulator',
+        labUrl: '/labs/l2-risk',
+        fallbackContent: FALLBACK,
+      },
     ],
   },
   {

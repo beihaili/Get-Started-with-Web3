@@ -9,7 +9,7 @@
 One-line description:
 
 ```text
-Open-source, bilingual, AI-native Web3 curriculum with 11 modules, 61 lessons, llms.txt, and a read-only MCP server.
+Open-source, bilingual, AI-native Web3 curriculum with 11 modules, 62 lessons, llms.txt, and a read-only MCP server.
 ```
 
 Short description:
@@ -67,7 +67,7 @@ Site: https://beihaili.github.io/Get-Started-with-Web3/
 
 现在它已经从早期教程仓库升级成了一个双语、AI-native 的 Web3 学习平台：
 
-- 11 个模块，61 讲课程
+- 11 个模块，62 讲课程
 - 覆盖钱包、交易、Bitcoin、Ethereum、DeFi、L2、DAO、智能账户和 Builder 实战
 - React 学习平台，带 AI Tutor、搜索、测验、徽章和 PWA
 - 面向 AI Agent 的 llms.txt、AI manifest、内容索引和本地只读 MCP server

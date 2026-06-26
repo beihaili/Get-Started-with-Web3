@@ -13,6 +13,8 @@ Use these labels consistently:
 - `content`: lesson, translation, quiz, glossary, or source quality.
 - `ai-native`: `llms.txt`, manifest, content index, MCP, or agent citation work.
 - `growth`: distribution, community, SEO, sponsorship, or public positioning.
+- `l2-cross-chain`: L2, bridge risk, message passing, finality, or cross-chain UX work.
+- `identity`: learning identity, certificates, DID/VC, attestations, or credential design work.
 
 ## Seed Issues
 
@@ -231,3 +233,48 @@ Use these labels consistently:
 - Do not add investment, token, trading, or sponsor claims.
 
 **Verification:** Markdown/app preview and `npm run ai:index && npm run ai:publish && npm run ai:verify`.
+
+### 16. Add A Bridge Risk Flow Diagram
+
+**Labels:** `good first issue`, `content`, `l2-cross-chain`
+
+**Context:** The L2 bridge risk simulator compares finality, trust assumptions, and message passing. A small diagram can help learners see where source chain confirmation, bridge contracts, relayers or validators, and destination execution fit.
+
+**Acceptance criteria:**
+
+- Add one diagram to `en/L2CrossChain/06_BridgeRiskSimulator/README.md` or `zh/L2CrossChain/06_BridgeRiskSimulator/README.md`.
+- Show at least Source Chain, Bridge Contract, Relayer / Validator / Proof System, Destination Chain, and User.
+- Include alt text or a Mermaid-compatible text source.
+- Keep the simulator boundary clear: no real asset movement, no bridge ranking, no investment advice.
+
+**Verification:** Markdown/app preview and `npm run ai:index && npm run ai:publish && npm run ai:verify`.
+
+### 17. Proofread L2 Bridge Risk Glossary Terms
+
+**Labels:** `good first issue`, `content`, `l2-cross-chain`
+
+**Context:** New L2 terms should stay concise and beginner-friendly while preserving the distinction between finality, canonical bridges, and cross-chain messaging.
+
+**Acceptance criteria:**
+
+- Review `最终性 (Finality)`, `规范桥 (Canonical Bridge)`, and `跨链消息传递 (Cross-chain Messaging)` in `src/config/glossaryData.js`.
+- Improve wording without changing technical meaning.
+- Keep the category as `Layer 2`.
+- Mention any wording tradeoff in the PR description.
+
+**Verification:** `npm test -- src/config/__tests__/glossaryData.test.js`.
+
+### 18. Polish The Credential Architecture Tradeoff Note
+
+**Labels:** `good first issue`, `content`, `identity`
+
+**Context:** The credential architecture note explains why the existing ERC-721 certificate contract is only one option among ERC-721, ERC-1155, soulbound, offchain proof, DID/VC, and attestations.
+
+**Acceptance criteria:**
+
+- Edit `docs/strategy/2026-06-25-credential-architecture-tradeoff.md`.
+- Improve clarity for non-specialist contributors.
+- Preserve the boundary that no production credential system, minting flow, wallet signature, payment, or contract change is live in Phase 5.
+- Do not add token value, resale, investment, or sponsor claims.
+
+**Verification:** Maintainer review.

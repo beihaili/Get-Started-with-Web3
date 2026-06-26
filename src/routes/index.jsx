@@ -23,6 +23,7 @@ const GlossaryPage = lazy(() => import('../pages/GlossaryPage'));
 const WalletLabPage = lazy(() => import('../pages/WalletLabPage'));
 const SiweLabPage = lazy(() => import('../pages/SiweLabPage'));
 const AccountAbstractionLabPage = lazy(() => import('../pages/AccountAbstractionLabPage'));
+const L2RiskLabPage = lazy(() => import('../pages/L2RiskLabPage'));
 
 // Loading component
 const PageLoader = () => {
@@ -149,6 +150,10 @@ export const router = createBrowserRouter(
       path: '/labs/account-abstraction',
       element: <LegacyRedirect to="/zh/labs/account-abstraction" />,
     },
+    {
+      path: '/labs/l2-risk',
+      element: <LegacyRedirect to="/zh/labs/l2-risk" />,
+    },
     // Main i18n routes
     {
       path: '/:lang',
@@ -247,6 +252,14 @@ export const router = createBrowserRouter(
           element: (
             <SuspenseWrapper>
               <AccountAbstractionLabPage />
+            </SuspenseWrapper>
+          ),
+        },
+        {
+          path: 'labs/l2-risk',
+          element: (
+            <SuspenseWrapper>
+              <L2RiskLabPage />
             </SuspenseWrapper>
           ),
         },

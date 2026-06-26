@@ -28,6 +28,7 @@ export const I18N_SECTIONS = [
   'walletLab',
   'siweLab',
   'accountAbstractionLab',
+  'l2RiskLab',
 ];
 
 export const eagerI18nResources = {
@@ -149,6 +150,10 @@ export function getRouteI18nSections(pathname) {
 
   if (langAwareRoute === 'labs' && normalizedPath.includes('/labs/account-abstraction')) {
     return ['accountAbstractionLab'];
+  }
+
+  if (langAwareRoute === 'labs' && normalizedPath.includes('/labs/l2-risk')) {
+    return ['l2RiskLab'];
   }
 
   if (langAwareRoute === 'labs' && normalizedPath.includes('/labs/siwe')) {

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2026-05-09",
-  "generatedAt": "2026-06-25T03:01:36.834Z",
+  "generatedAt": "2026-06-25T06:15:17.140Z",
   "repository": {
     "name": "Get-Started-with-Web3",
     "owner": "beihaili",
@@ -744,7 +744,7 @@
     {
       "id": "module-9",
       "title": "跨链与 Layer 2 深度解析",
-      "lessonCount": 5,
+      "lessonCount": 6,
       "lessons": [
         {
           "id": "9-1",
@@ -814,6 +814,20 @@
           "siteUrls": {
             "zh": "https://bhbtc.xyz/zh/learn/module-9/9-5",
             "en": "https://bhbtc.xyz/en/learn/module-9/9-5"
+          }
+        },
+        {
+          "id": "9-6",
+          "title": "L2 与跨链桥风险模拟器",
+          "path": "L2CrossChain/06_BridgeRiskSimulator",
+          "labUrl": "/labs/l2-risk",
+          "availability": {
+            "zh": true,
+            "en": true
+          },
+          "siteUrls": {
+            "zh": "https://bhbtc.xyz/zh/learn/module-9/9-6",
+            "en": "https://bhbtc.xyz/en/learn/module-9/9-6"
           }
         }
       ]
@@ -16921,6 +16935,136 @@
       "characterCount": 15951
     },
     {
+      "id": "zh/module-9/9-6",
+      "lang": "zh",
+      "moduleId": "module-9",
+      "moduleTitle": "跨链与 Layer 2 深度解析",
+      "lessonId": "9-6",
+      "title": "L2 与跨链桥风险模拟器",
+      "path": "L2CrossChain/06_BridgeRiskSimulator",
+      "labUrl": "/labs/l2-risk",
+      "sourcePath": "zh/L2CrossChain/06_BridgeRiskSimulator/README.md",
+      "citation": {
+        "file": "zh/L2CrossChain/06_BridgeRiskSimulator/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/L2CrossChain/06_BridgeRiskSimulator/README.md",
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-9/9-6"
+      },
+      "excerpt": "L2 与跨链桥风险模拟器 跨链桥不是一个简单的“转账按钮”。它背后是一组 finality 假设、合约、验证者、Relayer、流动性提供者、消息格式和失败路径。本实验帮助你在移动真实价值前先比较这些假设。 Last reviewed: 2026 06 25 目录 为什么桥风险需要模拟器 四个核心问题 跨链路径类型 Finality 不等于 UI 确认 消息传递与失败模式 动手实验 凭证边界 检查清单 延伸阅读 为什么桥风险需要模拟器 很多学习者比较跨链桥时，首先看速度和费用。这有用，但远远不够。 一条跨链路径还隐藏着这些问题： 哪条链或哪个合约是信任锚？ 谁能验证源链事件真实发生？ 这条路径多久之后才算 final？ 如果排序器、Relayer、验证者、流动性提供者或桥合约失败，会发生什么？ 应用只是跳转到桥，还是把桥接流程嵌入自己的产品，并解释跨链消息？ /labs/l2 risk 模拟器把这些问题变成一个小型风险模型。它不",
+      "headings": [
+        {
+          "level": 1,
+          "text": "L2 与跨链桥风险模拟器"
+        },
+        {
+          "level": 2,
+          "text": "目录"
+        },
+        {
+          "level": 2,
+          "text": "为什么桥风险需要模拟器"
+        },
+        {
+          "level": 2,
+          "text": "四个核心问题"
+        },
+        {
+          "level": 2,
+          "text": "跨链路径类型"
+        },
+        {
+          "level": 2,
+          "text": "Finality 不等于 UI 确认"
+        },
+        {
+          "level": 2,
+          "text": "消息传递与失败模式"
+        },
+        {
+          "level": 2,
+          "text": "动手实验"
+        },
+        {
+          "level": 2,
+          "text": "凭证边界"
+        },
+        {
+          "level": 2,
+          "text": "检查清单"
+        },
+        {
+          "level": 2,
+          "text": "延伸阅读"
+        }
+      ],
+      "codeBlockCount": 0,
+      "characterCount": 3058
+    },
+    {
+      "id": "en/module-9/9-6",
+      "lang": "en",
+      "moduleId": "module-9",
+      "moduleTitle": "跨链与 Layer 2 深度解析",
+      "lessonId": "9-6",
+      "title": "L2 与跨链桥风险模拟器",
+      "path": "L2CrossChain/06_BridgeRiskSimulator",
+      "labUrl": "/labs/l2-risk",
+      "sourcePath": "en/L2CrossChain/06_BridgeRiskSimulator/README.md",
+      "citation": {
+        "file": "en/L2CrossChain/06_BridgeRiskSimulator/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/L2CrossChain/06_BridgeRiskSimulator/README.md",
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-9/9-6"
+      },
+      "excerpt": "L2 and Bridge Risk Simulator A bridge is not just a transfer button. It is a bundle of finality assumptions, contracts, validators, relayers, liquidity providers, message formats, and failure paths. This lab helps you compare those assumptions before moving real value. Last reviewed: 2026 06 25 Table of Contents Why Bridge Risk Needs A Simulator The Four Questions Bridge Route Types Finality Is Not The Same As UI Con",
+      "headings": [
+        {
+          "level": 1,
+          "text": "L2 and Bridge Risk Simulator"
+        },
+        {
+          "level": 2,
+          "text": "Table of Contents"
+        },
+        {
+          "level": 2,
+          "text": "Why Bridge Risk Needs A Simulator"
+        },
+        {
+          "level": 2,
+          "text": "The Four Questions"
+        },
+        {
+          "level": 2,
+          "text": "Bridge Route Types"
+        },
+        {
+          "level": 2,
+          "text": "Finality Is Not The Same As UI Confirmation"
+        },
+        {
+          "level": 2,
+          "text": "Message Passing And Failure Modes"
+        },
+        {
+          "level": 2,
+          "text": "Hands-On Lab"
+        },
+        {
+          "level": 2,
+          "text": "Credential Boundary"
+        },
+        {
+          "level": 2,
+          "text": "Checklist"
+        },
+        {
+          "level": 2,
+          "text": "Further Reading"
+        }
+      ],
+      "codeBlockCount": 0,
+      "characterCount": 6568
+    },
+    {
       "id": "zh/module-10/10-1",
       "lang": "zh",
       "moduleId": "module-10",
@@ -19996,6 +20140,39 @@
       "type": "glossary",
       "term": "跨链桥 (Bridge)",
       "definition": "连接不同区块链或 L2 的协议，用于转移资产或消息；桥的信任模型差异很大，是常见安全风险点。",
+      "category": "Layer 2",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "最终性 (Finality)",
+      "definition": "交易或消息达到足够安全、难以被回滚或挑战的状态；跨链场景中 UI 确认不一定等于最终性。",
+      "category": "Layer 2",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "规范桥 (Canonical Bridge)",
+      "definition": "由 Rollup 或链自身协议维护的官方桥接路径，通常以 L1/L2 核心合约作为信任锚，但仍需关注升级和退出风险。",
+      "category": "Layer 2",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "跨链消息传递 (Cross-chain Messaging)",
+      "definition": "在不同链或 L2 之间传递任意应用消息的机制，需要明确验证者、Relayer、Endpoint 和防重放设计。",
       "category": "Layer 2",
       "citation": {
         "file": "src/config/glossaryData.js",

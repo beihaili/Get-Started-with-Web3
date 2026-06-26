@@ -120,6 +120,7 @@ const ROLE_PATHS = {
     'module-4:4-4',
     'module-8:8-5',
     'module-9:9-4',
+    'module-9:9-6',
     'module-10:10-5',
   ],
   investor: ['module-1:1-4', 'module-1:1-7', 'module-6:6-1', 'module-8:8-1', 'module-8:8-5'],

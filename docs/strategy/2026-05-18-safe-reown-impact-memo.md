@@ -101,7 +101,7 @@ Message:
 ```text
 Hi Safe Ecosystem Foundation team,
 
-I maintain Get Started with Web3, an open-source bilingual Web3 learning platform with 614 GitHub stars, 122 indexed lessons, 60 glossary entries, and AI-native entrypoints including llms.txt, a content index, and a local read-only MCP server.
+I maintain Get Started with Web3, an open-source bilingual Web3 learning platform with 614 GitHub stars, 124 indexed lessons, 63 glossary entries, and AI-native entrypoints including llms.txt, a content index, and a local read-only MCP server.
 
 I am preparing a small education grant proposal around smart accounts and beginner-safe account abstraction. The project already includes a smart-account module, and we recently shipped an interactive EIP-1559 Gas Fee Calculator inside the Account Abstraction lesson:
 
@@ -138,7 +138,7 @@ Message:
 ```text
 Hi Reown team,
 
-I maintain Get Started with Web3, an open-source bilingual Web3 learning platform with 614 GitHub stars, 122 indexed lessons, 60 glossary entries, and AI-native entrypoints for tutors and agents.
+I maintain Get Started with Web3, an open-source bilingual Web3 learning platform with 614 GitHub stars, 124 indexed lessons, 63 glossary entries, and AI-native entrypoints for tutors and agents.
 
 The curriculum teaches first wallet identity, first transactions, DApp interaction, wallet safety, smart accounts, DeFi, L2, DAO, and builder content. We recently shipped two interactive lessons, including an EIP-1559 Gas Fee Calculator inside the account-abstraction module:
 
