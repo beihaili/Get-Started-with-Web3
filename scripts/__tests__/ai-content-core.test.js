@@ -4,6 +4,7 @@ import { describe, expect, it } from 'vitest';
 import {
   buildAiIndex,
   composeContext,
+  createManifest,
   getLearningPath,
   listMonetizableTools,
   lookupGlossary,
@@ -20,6 +21,20 @@ describe('ai-content-core', () => {
     const index = await buildAiIndex({ projectRoot, generatedAt: '2026-05-09T00:00:00.000Z' });
 
     expect(index.schemaVersion).toBe('2026-05-09');
+    expect(index.artifactContract).toMatchObject({
+      version: '1.0.0',
+      status: 'stable',
+      localMcpPolicy: {
+        free: true,
+        readOnly: true,
+        paymentEnforcement: false,
+        chainOperations: false,
+      },
+      monetizationPolicy: {
+        futurePaidMetadataOnly: true,
+        x402EnforcementLive: false,
+      },
+    });
     expect(index.repository.name).toBe('Get-Started-with-Web3');
     expect(index.languages).toEqual(['zh', 'en']);
     expect(index.modules).toHaveLength(11);
@@ -53,11 +68,17 @@ describe('ai-content-core', () => {
     const futurePaidTool = index.tools.find(
       (tool) => tool.name === 'generate_personalized_web3_plan'
     );
+    expect(futurePaidTool.availability).toBe('future-hosted-metadata');
+    expect(futurePaidTool.localMcp.exposed).toBe(false);
     expect(futurePaidTool.x402).toMatchObject({
       enabled: true,
       network: 'base',
       priceUsd: expect.any(Number),
     });
+
+    const manifest = createManifest(index);
+    expect(manifest.artifactContract.version).toBe('1.0.0');
+    expect(manifest.mcp.readOnly).toBe(true);
   });
 
   it('searches lessons and glossary entries with stable citations', async () => {
@@ -121,5 +142,9 @@ describe('ai-content-core', () => {
     const monetizableTools = listMonetizableTools(index);
     expect(monetizableTools.some((tool) => tool.x402.enabled)).toBe(true);
     expect(monetizableTools.every((tool) => tool.x402.route.startsWith('/mcp/tools/'))).toBe(true);
+    expect(monetizableTools.every((tool) => tool.availability === 'future-hosted-metadata')).toBe(
+      true
+    );
+    expect(monetizableTools.every((tool) => tool.localMcp.exposed === false)).toBe(true);
   });
 });
