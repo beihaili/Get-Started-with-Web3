@@ -11,6 +11,38 @@ import {
 import { buildSiteUrl, normalizeSiteBaseUrl } from '../src/config/siteConfig.js';
 
 export const AI_SCHEMA_VERSION = '2026-05-09';
+export const AI_ARTIFACT_CONTRACT = {
+  version: '1.0.0',
+  status: 'stable',
+  effectiveDate: '2026-06-26',
+  publicSurfaces: [
+    'ai/manifest.json',
+    'ai/content-index.json',
+    'ai/llms.txt',
+    'public/llms.txt',
+    'public/ai/manifest.json',
+    'public/ai/content-index.json',
+    'web3://manifest',
+    'web3://content-index',
+  ],
+  compatibilityPolicy: [
+    'Additive fields may be introduced without changing artifactContract.version.',
+    'Removing or renaming top-level fields requires a major artifactContract.version change.',
+    'schemaVersion records the generated content schema date and may change independently.',
+  ],
+  localMcpPolicy: {
+    free: true,
+    readOnly: true,
+    paymentEnforcement: false,
+    chainOperations: false,
+    repositoryWrites: false,
+  },
+  monetizationPolicy: {
+    futurePaidMetadataOnly: true,
+    x402EnforcementLive: false,
+    preferredFirstPath: 'manual sponsorship or GitHub Sponsors-supported access before x402 or Stripe',
+  },
+};
 export const LANGUAGES = ['zh', 'en'];
 export const SITE_BASE_URL = normalizeSiteBaseUrl(
   process.env.SITE_BASE_URL || process.env.VITE_SITE_BASE_URL
@@ -40,12 +72,16 @@ const TOOL_CATALOG = [
     name: 'search_web3_content',
     title: 'Search Web3 Course Content',
     description: 'Search lesson titles, headings, excerpts, and glossary definitions.',
+    availability: 'local-read-only',
+    localMcp: { exposed: true, readOnly: true, free: true },
     x402: { enabled: false },
   },
   {
     name: 'read_web3_lesson',
     title: 'Read Web3 Lesson',
     description: 'Read a full lesson by language and lesson identifier.',
+    availability: 'local-read-only',
+    localMcp: { exposed: true, readOnly: true, free: true },
     x402: { enabled: false },
   },
   {
@@ -53,24 +89,32 @@ const TOOL_CATALOG = [
     title: 'Get Learning Path',
     description:
       'Return role-based learning paths for beginners, builders, researchers, and investors.',
+    availability: 'local-read-only',
+    localMcp: { exposed: true, readOnly: true, free: true },
     x402: { enabled: false },
   },
   {
     name: 'lookup_web3_glossary',
     title: 'Lookup Web3 Glossary',
     description: 'Search concise glossary entries for Web3 concepts.',
+    availability: 'local-read-only',
+    localMcp: { exposed: true, readOnly: true, free: true },
     x402: { enabled: false },
   },
   {
     name: 'compose_web3_context',
     title: 'Compose Web3 Context',
     description: 'Build a bounded context pack with citations for a topic.',
+    availability: 'local-read-only',
+    localMcp: { exposed: true, readOnly: true, free: true },
     x402: { enabled: false },
   },
   {
     name: 'list_monetizable_tools',
     title: 'List Monetizable Tools',
     description: 'List future x402-ready paid tool metadata. Local MCP does not enforce payment.',
+    availability: 'local-read-only',
+    localMcp: { exposed: true, readOnly: true, free: true },
     x402: { enabled: false },
   },
   {
@@ -78,6 +122,8 @@ const TOOL_CATALOG = [
     title: 'Generate Personalized Web3 Plan',
     description:
       'Future paid remote tool that turns learner goals and background into a tailored Web3 study plan.',
+    availability: 'future-hosted-metadata',
+    localMcp: { exposed: false, readOnly: false, free: false },
     x402: {
       enabled: true,
       priceUsd: 0.25,
@@ -90,6 +136,8 @@ const TOOL_CATALOG = [
     title: 'Audit Learning Answer',
     description:
       'Future paid remote tool that reviews a learner answer against repository lessons with cited corrections.',
+    availability: 'future-hosted-metadata',
+    localMcp: { exposed: false, readOnly: false, free: false },
     x402: {
       enabled: true,
       priceUsd: 0.1,
@@ -191,6 +239,7 @@ export async function buildAiIndex(options = {}) {
 
   return {
     schemaVersion: AI_SCHEMA_VERSION,
+    artifactContract: AI_ARTIFACT_CONTRACT,
     generatedAt,
     repository: {
       name: GITHUB_REPO,
@@ -381,6 +430,7 @@ export function listMonetizableTools(index) {
 export function createManifest(index) {
   return {
     schemaVersion: index.schemaVersion,
+    artifactContract: index.artifactContract,
     generatedAt: index.generatedAt,
     repository: index.repository,
     languages: index.languages,
@@ -416,6 +466,7 @@ export function createLlmsTxt(index) {
     `Generated: ${index.generatedAt}`,
     '',
     '## Artifacts',
+    `- Artifact contract: v${manifest.artifactContract.version} (${manifest.artifactContract.status})`,
     `- Manifest: ${manifest.artifacts.manifest}`,
     `- Content index: ${manifest.artifacts.contentIndex}`,
     '',
@@ -423,6 +474,7 @@ export function createLlmsTxt(index) {
     '- Command: npm run mcp:web3',
     '- Transport: stdio',
     '- Mode: read-only',
+    '- Policy: free local use, no payment enforcement, no chain operations, no repository writes.',
     '- Client config: replace cwd before use.',
     '```json',
     JSON.stringify(LOCAL_MCP_CLIENT_CONFIG, null, 2),
@@ -433,7 +485,7 @@ export function createLlmsTxt(index) {
       const price = tool.x402.enabled
         ? `future x402 $${tool.x402.priceUsd} on ${tool.x402.network}`
         : 'free';
-      return `- ${tool.name}: ${tool.description} (${price})`;
+      return `- ${tool.name}: ${tool.description} (${tool.availability}; ${price})`;
     }),
     '',
     '## Public URLs',

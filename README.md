@@ -152,6 +152,8 @@ Then connect an MCP client and use:
 
 Local MCP tools are read-only. They do not enforce payment, sign transactions, or perform chain operations. x402 fields are reserved metadata for future hosted paid tools.
 
+AI artifacts are maintained as a stable v1 public surface through `artifactContract.version`; see [AI-native v1 stability and monetization decision](docs/strategy/2026-06-26-ai-native-v1-stability-and-monetization.md).
+
 ## Tech Stack
 
 - **Frontend:** React 19 + Vite + Tailwind CSS

@@ -8,6 +8,7 @@
 - 新增 L2 / 跨链桥风险模拟器 `/labs/l2-risk`，用于本地比较 finality、桥信任假设、消息传递、sequencer 状态和嵌入式桥接 UX 风险。
 - 新增双语课程 `L2CrossChain/06_BridgeRiskSimulator`、对应 quiz、术语表条目和 AI-native 索引路径。
 - 新增 credential architecture tradeoff note，将现有 ERC-721 certificate 明确为学习证书设计方案之一，而非默认生产证书系统。
+- 新增 AI-native v1 artifact contract、稳定层验证和变现决策文档，明确本地 MCP 继续保持免费、只读、不执行支付或链上操作。
 
 ## [1.0.0] - 2026-02-09
 

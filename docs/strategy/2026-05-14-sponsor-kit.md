@@ -22,28 +22,31 @@ The audience is especially valuable for:
 
 ## Current Project Snapshot
 
-As of 2026-05-18:
+As of 2026-06-26:
 
 | Metric                        |                                                       Value |
 | ----------------------------- | ----------------------------------------------------------: |
 | GitHub stars                  |                                                         614 |
-| Forks                         |                                                          55 |
-| Total contributors            |                                                          12 |
-| Indexed lesson entries        |                                                         106 |
-| Glossary entries              |                                                          55 |
-| GitHub 14-day views           |                                                         147 |
-| GitHub 14-day unique visitors |                                                          72 |
-| GitHub 14-day clones          |                                                        4569 |
-| GitHub 14-day unique cloners  |                                                         551 |
+| Forks                         |                                                          56 |
+| Public contributors           |                                                          16 |
+| Indexed lesson entries        |                                                         124 |
+| Glossary entries              |                                                          63 |
+| GitHub 14-day repo views      |                                                         104 |
+| GitHub 14-day unique visitors |                                                          29 |
+| GitHub 14-day clones          |                                                         510 |
+| GitHub 14-day unique cloners  |                                                         159 |
 | Languages                     |                                         Chinese and English |
 | AI-native surfaces            | `llms.txt`, AI manifest, content index, local read-only MCP |
+| Shipped modern Web3 labs      |       Wallet, SIWE, account abstraction, L2 bridge risk lab |
 
 Notes:
 
 - Clone counts may include automated traffic and should not be treated as unique learners.
+- GitHub traffic covers the 14-day UTC window returned by GitHub traffic API, ending 2026-06-24.
 - Public site analytics should be added to this kit once Cloudflare/GA data is reviewed.
-- Sponsor conversations should use the 2026-05-18 interactive learning release as the current proof point.
+- Sponsor conversations should use the 2026-06-26 AI-native v1 and modern labs roadmap as the current proof point.
 - Future hosted AI tool copy is drafted in `docs/strategy/2026-05-18-paid-ai-tools-landing-copy.md`; it is not a live paid product and should be framed as a productization roadmap only.
+- AI-native v1 stability and monetization decision is recorded in `docs/strategy/2026-06-26-ai-native-v1-stability-and-monetization.md`; x402 remains metadata only.
 - Named sponsor leads and outreach status are tracked in `docs/strategy/2026-05-15-sponsor-leads-tracker.md`.
 
 ## Sponsorship Tiers
