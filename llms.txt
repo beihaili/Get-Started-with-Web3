@@ -4,9 +4,10 @@ This repository exposes bilingual Web3 learning content for AI agents.
 
 Source: https://github.com/beihaili/Get-Started-with-Web3
 Homepage: https://bhbtc.xyz/
-Generated: 2026-06-26T07:29:15.834Z
+Generated: 2026-06-26T07:37:28.745Z
 
 ## Artifacts
+- Artifact contract: v1.0.0 (stable)
 - Manifest: ai/manifest.json
 - Content index: ai/content-index.json
 
@@ -14,6 +15,7 @@ Generated: 2026-06-26T07:29:15.834Z
 - Command: npm run mcp:web3
 - Transport: stdio
 - Mode: read-only
+- Policy: free local use, no payment enforcement, no chain operations, no repository writes.
 - Client config: replace cwd before use.
 ```json
 {
@@ -31,14 +33,14 @@ Generated: 2026-06-26T07:29:15.834Z
 ```
 
 ## Tools
-- search_web3_content: Search lesson titles, headings, excerpts, and glossary definitions. (free)
-- read_web3_lesson: Read a full lesson by language and lesson identifier. (free)
-- get_learning_path: Return role-based learning paths for beginners, builders, researchers, and investors. (free)
-- lookup_web3_glossary: Search concise glossary entries for Web3 concepts. (free)
-- compose_web3_context: Build a bounded context pack with citations for a topic. (free)
-- list_monetizable_tools: List future x402-ready paid tool metadata. Local MCP does not enforce payment. (free)
-- generate_personalized_web3_plan: Future paid remote tool that turns learner goals and background into a tailored Web3 study plan. (future x402 $0.25 on base)
-- audit_learning_answer: Future paid remote tool that reviews a learner answer against repository lessons with cited corrections. (future x402 $0.1 on base)
+- search_web3_content: Search lesson titles, headings, excerpts, and glossary definitions. (local-read-only; free)
+- read_web3_lesson: Read a full lesson by language and lesson identifier. (local-read-only; free)
+- get_learning_path: Return role-based learning paths for beginners, builders, researchers, and investors. (local-read-only; free)
+- lookup_web3_glossary: Search concise glossary entries for Web3 concepts. (local-read-only; free)
+- compose_web3_context: Build a bounded context pack with citations for a topic. (local-read-only; free)
+- list_monetizable_tools: List future x402-ready paid tool metadata. Local MCP does not enforce payment. (local-read-only; free)
+- generate_personalized_web3_plan: Future paid remote tool that turns learner goals and background into a tailored Web3 study plan. (future-hosted-metadata; future x402 $0.25 on base)
+- audit_learning_answer: Future paid remote tool that reviews a learner answer against repository lessons with cited corrections. (future-hosted-metadata; future x402 $0.1 on base)
 
 ## Public URLs
 - llms.txt: https://bhbtc.xyz/llms.txt
