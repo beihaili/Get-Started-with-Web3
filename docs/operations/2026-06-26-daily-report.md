@@ -50,14 +50,14 @@ GitHub traffic window from the API covers 2026-06-11 through 2026-06-24 UTC. Clo
 | MCP dogfood | Passed | `npm run mcp:dogfood` | Search, compose context, builder path, and monetizable metadata all passed through the real stdio MCP server |
 | Targeted tests | Passed | `npx vitest run scripts/__tests__/ai-content-core.test.js scripts/__tests__/generate-ai-index.test.js` | 2 files / 6 tests passed |
 | Full local validation | Passed | `npm run lint`; `npm test`; `npm run build`; final `npm run ai:verify` | `npm test` still logs known sandbox DNS noise for GitHub / BuyMeACoffee fetches; Vitest passed 55 files / 294 tests; prerender passed 147/147 routes |
-| GitHub CI | Pending | PR #220 checks after the Phase 6 commit | To observe after push |
+| GitHub CI | Passed | PR #220 `build-and-deploy` and `lighthouse` checks after commit `1528821` | `build-and-deploy` passed in 6m42s; `lighthouse` passed in 6m13s |
 
 ## External Distribution
 
 | Target        | Status      | Evidence                                                   | Next action |
 | ------------- | ----------- | ---------------------------------------------------------- | ----------- |
-| Draft PR #220 | CI pending for Phase 6 | https://github.com/beihaili/Get-Started-with-Web3/pull/220 | Push Phase 6 commit and wait for checks |
-| Roadmap #156  | Pending update | https://github.com/beihaili/Get-Started-with-Web3/issues/156 | Add a concise comment after local validation and push |
+| Draft PR #220 | CI green for Phase 6 | https://github.com/beihaili/Get-Started-with-Web3/pull/220 | Review scope, then prepare for merge |
+| Roadmap #156  | Updated | https://github.com/beihaili/Get-Started-with-Web3/issues/156#issuecomment-4805626600 | Use as the public roadmap status link |
 
 ## Sponsor And Revenue
 
@@ -75,14 +75,14 @@ GitHub traffic window from the API covers 2026-06-11 through 2026-06-24 UTC. Clo
 
 ## Next Operating Block
 
-1. Run full local validation for Phase 6.
-2. Push the Phase 6 commit and wait for PR #220 CI.
-3. Update public roadmap issue #156 with the true Phase 0-6 status and PR link.
-4. If all roadmap packages are verified, mark the `/goal` complete.
+1. Review PR #220 scope and decide whether to merge as one roadmap package or split before merge.
+2. After merge, publish or queue the AI-native v1 / modern labs distribution posts from the Phase 6 decision note.
+3. Keep future paid tools as metadata only until hosted runtime, privacy, abuse, support, and payment decisions are explicitly approved.
 
 ## Evidence Links
 
 - Draft PR: https://github.com/beihaili/Get-Started-with-Web3/pull/220
+- Public roadmap update: https://github.com/beihaili/Get-Started-with-Web3/issues/156#issuecomment-4805626600
 - Roadmap doc: `docs/strategy/2026-06-24-modern-web3-roadmap-goal.md`
 - AI-native v1 decision: `docs/strategy/2026-06-26-ai-native-v1-stability-and-monetization.md`
 - Sponsor kit: `docs/strategy/2026-05-14-sponsor-kit.md`
