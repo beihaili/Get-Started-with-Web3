@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2026-05-09",
-  "generatedAt": "2026-06-26T07:13:41.704Z",
+  "generatedAt": "2026-06-26T07:21:33.773Z",
   "repository": {
     "name": "Get-Started-with-Web3",
     "owner": "beihaili",
@@ -14,8 +14,8 @@
   ],
   "counts": {
     "modules": 11,
-    "lessons": 120,
-    "glossaryEntries": 57,
+    "lessons": 122,
+    "glossaryEntries": 60,
     "tools": 8,
     "futurePaidTools": 2
   },

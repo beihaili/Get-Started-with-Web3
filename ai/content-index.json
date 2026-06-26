@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2026-05-09",
-  "generatedAt": "2026-06-26T07:13:41.704Z",
+  "generatedAt": "2026-06-26T07:21:33.773Z",
   "repository": {
     "name": "Get-Started-with-Web3",
     "owner": "beihaili",
@@ -898,7 +898,7 @@
     {
       "id": "module-11",
       "title": "以太坊与智能账户",
-      "lessonCount": 2,
+      "lessonCount": 3,
       "lessons": [
         {
           "id": "11-1",
@@ -926,6 +926,20 @@
           "siteUrls": {
             "zh": "https://bhbtc.xyz/zh/learn/module-11/11-2",
             "en": "https://bhbtc.xyz/en/learn/module-11/11-2"
+          }
+        },
+        {
+          "id": "11-3",
+          "title": "UserOperation 模拟器与账户抽象实践",
+          "path": "EthereumSmartAccounts/03_UserOperationSimulator",
+          "labUrl": "/labs/account-abstraction",
+          "availability": {
+            "zh": true,
+            "en": true
+          },
+          "siteUrls": {
+            "zh": "https://bhbtc.xyz/zh/learn/module-11/11-3",
+            "en": "https://bhbtc.xyz/en/learn/module-11/11-3"
           }
         }
       ]
@@ -19199,6 +19213,144 @@
       ],
       "codeBlockCount": 4,
       "characterCount": 16029
+    },
+    {
+      "id": "zh/module-11/11-3",
+      "lang": "zh",
+      "moduleId": "module-11",
+      "moduleTitle": "以太坊与智能账户",
+      "lessonId": "11-3",
+      "title": "UserOperation 模拟器与账户抽象实践",
+      "path": "EthereumSmartAccounts/03_UserOperationSimulator",
+      "labUrl": "/labs/account-abstraction",
+      "sourcePath": "zh/EthereumSmartAccounts/03_UserOperationSimulator/README.md",
+      "citation": {
+        "file": "zh/EthereumSmartAccounts/03_UserOperationSimulator/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/EthereumSmartAccounts/03_UserOperationSimulator/README.md",
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-11/11-3"
+      },
+      "excerpt": "UserOperation 模拟器与账户抽象实践 账户抽象真正变清楚，往往是从看见系统里流动的那个对象开始。ERC 4337 不是让用户直接发一笔普通以太坊交易，而是让应用准备 UserOperation ，交给 Bundler，再由 Bundler 提交给 EntryPoint 。 Last reviewed: 2026 06 25 目录 为什么需要这个实验 ERC 4337 心智模型 UserOperation 字段拆解 Bundler、EntryPoint 与 Paymaster 智能账户与恢复 EIP 7702 委托 EOA 安全与赞助风险 动手实验 检查清单 延伸阅读 为什么需要这个实验 上一讲解释了智能账户和账户抽象概念。这一讲把它们变成一个可操作对象。 目标不是连接真实 Bundler，也不是申请真实 Gas 赞助。目标是回答： 现代 UserOperation 里有哪些字段？ 哪个角色负责验证账户？ Paymas",
+      "headings": [
+        {
+          "level": 1,
+          "text": "UserOperation 模拟器与账户抽象实践"
+        },
+        {
+          "level": 2,
+          "text": "目录"
+        },
+        {
+          "level": 2,
+          "text": "为什么需要这个实验"
+        },
+        {
+          "level": 2,
+          "text": "ERC-4337 心智模型"
+        },
+        {
+          "level": 2,
+          "text": "UserOperation 字段拆解"
+        },
+        {
+          "level": 2,
+          "text": "Bundler、EntryPoint 与 Paymaster"
+        },
+        {
+          "level": 2,
+          "text": "智能账户与恢复"
+        },
+        {
+          "level": 2,
+          "text": "EIP-7702 委托 EOA"
+        },
+        {
+          "level": 2,
+          "text": "安全与赞助风险"
+        },
+        {
+          "level": 2,
+          "text": "动手实验"
+        },
+        {
+          "level": 2,
+          "text": "检查清单"
+        },
+        {
+          "level": 2,
+          "text": "延伸阅读"
+        }
+      ],
+      "codeBlockCount": 0,
+      "characterCount": 4041
+    },
+    {
+      "id": "en/module-11/11-3",
+      "lang": "en",
+      "moduleId": "module-11",
+      "moduleTitle": "以太坊与智能账户",
+      "lessonId": "11-3",
+      "title": "UserOperation 模拟器与账户抽象实践",
+      "path": "EthereumSmartAccounts/03_UserOperationSimulator",
+      "labUrl": "/labs/account-abstraction",
+      "sourcePath": "en/EthereumSmartAccounts/03_UserOperationSimulator/README.md",
+      "citation": {
+        "file": "en/EthereumSmartAccounts/03_UserOperationSimulator/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/EthereumSmartAccounts/03_UserOperationSimulator/README.md",
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-11/11-3"
+      },
+      "excerpt": "UserOperation Simulator and Account Abstraction Practice Account abstraction becomes easier to understand once you can see the object that moves through the system. ERC 4337 does not send a normal Ethereum transaction from the user. It sends a UserOperation to a bundler, and the bundler submits it to EntryPoint . Last reviewed: 2026 06 25 Table of Contents Why This Lab Exists The ERC 4337 Mental Model UserOperation A",
+      "headings": [
+        {
+          "level": 1,
+          "text": "UserOperation Simulator and Account Abstraction Practice"
+        },
+        {
+          "level": 2,
+          "text": "Table of Contents"
+        },
+        {
+          "level": 2,
+          "text": "Why This Lab Exists"
+        },
+        {
+          "level": 2,
+          "text": "The ERC-4337 Mental Model"
+        },
+        {
+          "level": 2,
+          "text": "UserOperation Anatomy"
+        },
+        {
+          "level": 2,
+          "text": "Bundlers, EntryPoint, and Paymasters"
+        },
+        {
+          "level": 2,
+          "text": "Smart Accounts and Recovery"
+        },
+        {
+          "level": 2,
+          "text": "EIP-7702 Delegated EOAs"
+        },
+        {
+          "level": 2,
+          "text": "Safety and Sponsorship Risks"
+        },
+        {
+          "level": 2,
+          "text": "Hands-On Lab"
+        },
+        {
+          "level": 2,
+          "text": "Checklist"
+        },
+        {
+          "level": 2,
+          "text": "Further Reading"
+        }
+      ],
+      "codeBlockCount": 0,
+      "characterCount": 7850
     }
   ],
   "glossary": [
@@ -19479,8 +19631,41 @@
     },
     {
       "type": "glossary",
+      "term": "EntryPoint",
+      "definition": "ERC-4337 中的共享入口合约，负责调用智能账户和 Paymaster 的验证逻辑，并调度 UserOperation 执行。",
+      "category": "账户抽象",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
       "term": "Paymaster",
       "definition": "ERC-4337 中可代用户支付 Gas 或允许用户用其他代币付费的合约或服务。",
+      "category": "账户抽象",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "Factory",
+      "definition": "账户抽象中用于首次部署智能账户的合约，常在 UserOperation 的 factory 或 initCode 路径中出现。",
+      "category": "账户抽象",
+      "citation": {
+        "file": "src/config/glossaryData.js",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/src/config/glossaryData.js",
+        "siteUrl": "https://bhbtc.xyz/zh/glossary"
+      }
+    },
+    {
+      "type": "glossary",
+      "term": "ERC-7562",
+      "definition": "账户抽象验证范围规则，限制验证阶段可执行的 EVM 行为，降低 Bundler 遭受未付费计算攻击的风险。",
       "category": "账户抽象",
       "citation": {
         "file": "src/config/glossaryData.js",
