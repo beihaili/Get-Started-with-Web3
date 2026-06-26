@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2026-05-09",
-  "generatedAt": "2026-06-26T07:06:06.993Z",
+  "generatedAt": "2026-06-26T07:13:41.704Z",
   "repository": {
     "name": "Get-Started-with-Web3",
     "owner": "beihaili",
@@ -576,7 +576,7 @@
     {
       "id": "module-7",
       "title": "Web3 Builder 实战",
-      "lessonCount": 5,
+      "lessonCount": 6,
       "lessons": [
         {
           "id": "7-1",
@@ -646,6 +646,20 @@
           "siteUrls": {
             "zh": "https://bhbtc.xyz/zh/learn/module-7/7-5",
             "en": "https://bhbtc.xyz/en/learn/module-7/7-5"
+          }
+        },
+        {
+          "id": "7-6",
+          "title": "SIWE 与学习身份实验",
+          "path": "Web3BuilderLab/06_SIWEAndLearningIdentity",
+          "labUrl": "/labs/siwe",
+          "availability": {
+            "zh": true,
+            "en": true
+          },
+          "siteUrls": {
+            "zh": "https://bhbtc.xyz/zh/learn/module-7/7-6",
+            "en": "https://bhbtc.xyz/en/learn/module-7/7-6"
           }
         }
       ]
@@ -14033,6 +14047,144 @@
       ],
       "codeBlockCount": 5,
       "characterCount": 9728
+    },
+    {
+      "id": "zh/module-7/7-6",
+      "lang": "zh",
+      "moduleId": "module-7",
+      "moduleTitle": "Web3 Builder 实战",
+      "lessonId": "7-6",
+      "title": "SIWE 与学习身份实验",
+      "path": "Web3BuilderLab/06_SIWEAndLearningIdentity",
+      "labUrl": "/labs/siwe",
+      "sourcePath": "zh/Web3BuilderLab/06_SIWEAndLearningIdentity/README.md",
+      "citation": {
+        "file": "zh/Web3BuilderLab/06_SIWEAndLearningIdentity/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/zh/Web3BuilderLab/06_SIWEAndLearningIdentity/README.md",
+        "siteUrl": "https://bhbtc.xyz/zh/learn/module-7/7-6"
+      },
+      "excerpt": "SIWE 与学习身份实验 Sign In with Ethereum 不是“随便签一段消息”。ERC 4361 规范化了钱包登录消息应该包含什么，让用户、钱包和 relying party 可以围绕 domain、nonce、expiration 和 replay risk 做出判断。 Last reviewed: 2026 06 25 目录 为什么学习平台需要 SIWE ERC 4361 标准化了什么 消息字段 Nonce 与重放风险 Domain、URI 与钓鱼风险 为什么静态站点不是生产级认证 动手实验 学习身份与凭证 学习检查清单 延伸阅读 为什么学习平台需要 SIWE 钱包地址可以代表一个学习者，但连接钱包仍然不是登录会话。 SIWE 回答的是一个更窄的问题： 这个钱包是否为这个 relying party、这个时间窗口、这条认证消息完成了签名？ 这对学习身份很重要。未来的课程平台可能希望学习者在领取徽章、证书或 ve",
+      "headings": [
+        {
+          "level": 1,
+          "text": "SIWE 与学习身份实验"
+        },
+        {
+          "level": 2,
+          "text": "目录"
+        },
+        {
+          "level": 2,
+          "text": "为什么学习平台需要 SIWE"
+        },
+        {
+          "level": 2,
+          "text": "ERC-4361 标准化了什么"
+        },
+        {
+          "level": 2,
+          "text": "消息字段"
+        },
+        {
+          "level": 2,
+          "text": "Nonce 与重放风险"
+        },
+        {
+          "level": 2,
+          "text": "Domain、URI 与钓鱼风险"
+        },
+        {
+          "level": 2,
+          "text": "为什么静态站点不是生产级认证"
+        },
+        {
+          "level": 2,
+          "text": "动手实验"
+        },
+        {
+          "level": 2,
+          "text": "学习身份与凭证"
+        },
+        {
+          "level": 2,
+          "text": "学习检查清单"
+        },
+        {
+          "level": 2,
+          "text": "延伸阅读"
+        }
+      ],
+      "codeBlockCount": 0,
+      "characterCount": 3676
+    },
+    {
+      "id": "en/module-7/7-6",
+      "lang": "en",
+      "moduleId": "module-7",
+      "moduleTitle": "Web3 Builder 实战",
+      "lessonId": "7-6",
+      "title": "SIWE 与学习身份实验",
+      "path": "Web3BuilderLab/06_SIWEAndLearningIdentity",
+      "labUrl": "/labs/siwe",
+      "sourcePath": "en/Web3BuilderLab/06_SIWEAndLearningIdentity/README.md",
+      "citation": {
+        "file": "en/Web3BuilderLab/06_SIWEAndLearningIdentity/README.md",
+        "githubUrl": "https://github.com/beihaili/Get-Started-with-Web3/blob/main/en/Web3BuilderLab/06_SIWEAndLearningIdentity/README.md",
+        "siteUrl": "https://bhbtc.xyz/en/learn/module-7/7-6"
+      },
+      "excerpt": "SIWE and Learning Identity Lab Sign In with Ethereum is not just \"sign any message.\" ERC 4361 standardizes what a wallet sign in message should contain, so users, wallets, and relying parties can reason about domain, nonce, expiration, and replay risk. Last reviewed: 2026 06 25 Table of Contents Why SIWE Belongs in a Learning Platform What ERC 4361 Standardizes The Message Fields Nonce and Replay Risk Domain, URI, an",
+      "headings": [
+        {
+          "level": 1,
+          "text": "SIWE and Learning Identity Lab"
+        },
+        {
+          "level": 2,
+          "text": "Table of Contents"
+        },
+        {
+          "level": 2,
+          "text": "Why SIWE Belongs in a Learning Platform"
+        },
+        {
+          "level": 2,
+          "text": "What ERC-4361 Standardizes"
+        },
+        {
+          "level": 2,
+          "text": "The Message Fields"
+        },
+        {
+          "level": 2,
+          "text": "Nonce and Replay Risk"
+        },
+        {
+          "level": 2,
+          "text": "Domain, URI, and Phishing"
+        },
+        {
+          "level": 2,
+          "text": "Why a Static Site Is Not Production Auth"
+        },
+        {
+          "level": 2,
+          "text": "Hands-On Lab"
+        },
+        {
+          "level": 2,
+          "text": "Learning Identity and Credentials"
+        },
+        {
+          "level": 2,
+          "text": "Checklist"
+        },
+        {
+          "level": 2,
+          "text": "Further Reading"
+        }
+      ],
+      "codeBlockCount": 0,
+      "characterCount": 7015
     },
     {
       "id": "zh/module-8/8-1",

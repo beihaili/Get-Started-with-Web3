@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="en" class="dark"><head>
+    <meta charset="UTF-8">
+    <script>
+      // Sync theme from localStorage before first paint to prevent FOUC
+      try {
+        const stored = JSON.parse(localStorage.getItem('web3-theme-store'));
+        if (!stored || stored.state.theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {
+        document.documentElement.classList.add('dark');
+      }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIWE Lab | Get Started with Web3</title>
+
+    <!-- SEO基础标签 -->
+    <meta name="description" content="A static Sign-In with Ethereum learning identity demo for ERC-4361 message fields, nonce, expiration, and replay boundaries.">
+    <meta name="keywords" content="Web3, 区块链, 比特币, 教程, 入门, blockchain, bitcoin, tutorial, 加密货币, cryptocurrency, 以太坊, ethereum">
+    <meta name="author" content="Bei Hai">
+    <link rel="canonical" href="https://bhbtc.xyz/en/labs/siwe">
+
+    <!-- Open Graph (社交分享) -->
+    <meta property="og:title" content="SIWE Lab | Get Started with Web3">
+    <meta property="og:description" content="A static Sign-In with Ethereum learning identity demo for ERC-4361 message fields, nonce, expiration, and replay boundaries.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bhbtc.xyz/en/labs/siwe">
+    <meta property="og:site_name" content="Get Started With Web3">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://bhbtc.xyz/logo.png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@bhbtc1337">
+    <meta name="twitter:title" content="SIWE Lab | Get Started with Web3">
+    <meta name="twitter:description" content="A static Sign-In with Ethereum learning identity demo for ERC-4361 message fields, nonce, expiration, and replay boundaries.">
+    <meta name="twitter:image" content="https://bhbtc.xyz/logo.png">
+
+    <!-- Google Analytics 4 -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-91JXFFZKRV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-91JXFFZKRV', { send_page_view: false });
+    </script>
+
+    <!-- Cloudflare Web Analytics -->
+    <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;e9421c23377646fd87f949f35958cbf6&quot;}"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <!-- PWA相关 -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/logo.png">
+    <script type="module" crossorigin="" src="/assets/index-B3nz8b7A.js"></script>
+    <link rel="modulepreload" crossorigin="" href="/assets/rolldown-runtime-NMqb_1LM.js">
+    <link rel="modulepreload" crossorigin="" href="/assets/markdown-CDffcUNc.js">
+    <link rel="modulepreload" crossorigin="" href="/assets/react-vendor-T9ErgOfk.js">
+    <link rel="modulepreload" crossorigin="" href="/assets/ui-B8fQQkkP.js">
+    <link rel="modulepreload" crossorigin="" href="/assets/store-C-1owRdD.js">
+    <link rel="stylesheet" crossorigin="" href="/assets/index-0orAH5lr.css">
+  <link rel="modulepreload" as="script" crossorigin="" href="http://localhost:4173/assets/LandingPage-CGFKBTTC.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:4173/assets/LanguageSwitcher-p02-tkKx.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:4173/assets/useUserStore-BxLpByDU.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:4173/assets/interactive-m4_77KHD.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:4173/assets/sponsorData-BxGlDKDb.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:4173/assets/useClipboard-CKKvsxPM.js"><link rel="alternate" hreflang="zh" href="https://bhbtc.xyz/zh/labs/siwe"><script type="application/ld+json" data-seo-head="true">{"@context":"https://schema.org","@type":"WebPage","name":"SIWE Lab | Get Started with Web3","description":"A static Sign-In with Ethereum learning identity demo for ERC-4361 message fields, nonce, expiration, and replay boundaries.","url":"https://bhbtc.xyz/en/labs/siwe","inLanguage":"en"}</script><script type="application/ld+json" data-platform-ld="true">{"@context":"https://schema.org","@type":"WebSite","name":"Get Started with Web3","url":"https://bhbtc.xyz/","publisher":{"@type":"Organization","name":"Get Started with Web3","url":"https://github.com/beihaili/Get-Started-with-Web3"}}</script><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:4173/assets/SiweLabPage-D1cQQ1Qf.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:4173/assets/walletLabUtils-B5ReLcyz.js"></head>
+  <body>
+    <!-- SPA路由恢复脚本 -->
+    <script>
+      (function () {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+
+    <div id="root"><div class="app"><div class="min-h-screen bg-slate-50 dark:bg-slate-950"><div class="sticky top-0 z-10 border-b border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-md"><div class="container mx-auto px-4 py-4 flex items-center justify-between"><a class="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-cyan-500 dark:hover:text-cyan-300 transition-colors" href="/en" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left w-5 h-5" aria-hidden="true"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg><span>Back to home</span></a><div role="group" aria-label="Language" class="inline-flex items-center gap-1 rounded-lg border border-slate-700/70 bg-slate-900/40 p-1 text-sm text-slate-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe h-4 w-4" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg><button type="button" aria-label="English" aria-pressed="true" class="rounded-md px-2 py-0.5 transition-colors bg-cyan-500/15 text-cyan-200 ring-1 ring-cyan-400/30">EN</button><button type="button" aria-label="中文" aria-pressed="false" class="rounded-md px-2 py-0.5 transition-colors hover:bg-slate-800 hover:text-white">中文</button></div></div></div><main class="container mx-auto px-4 py-12 max-w-6xl"><section class="mb-10"><div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-700 dark:text-emerald-300 text-sm font-semibold mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-check w-4 h-4" aria-hidden="true"><path d="m16 11 2 2 4-4"></path><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>Learning Identity Lab</div><h1 class="text-4xl md:text-5xl font-black text-slate-950 dark:text-white mb-4">SIWE Learning Identity Lab</h1><p class="text-lg leading-8 text-slate-600 dark:text-slate-300 max-w-3xl">Compose and sign an ERC-4361-style message, then inspect the local result without creating a production login session.</p></section><section class="grid lg:grid-cols-[1.15fr_0.85fr] gap-6 mb-8"><div class="rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6"><div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6"><div><div class="inline-flex items-center gap-2 text-sm font-semibold text-amber-600 dark:text-amber-300 mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-alert w-4 h-4" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="M12 8v4"></path><path d="M12 16h.01"></path></svg>Educational demo only</div><h2 class="text-2xl font-bold text-slate-950 dark:text-white">Compose a SIWE message</h2></div><div class="flex items-center gap-3"><span class="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Ready</span><button type="button" class="inline-flex items-center gap-2 rounded-md border border-slate-200 dark:border-slate-700 px-3 py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:border-emerald-500 hover:text-emerald-600 dark:hover:text-emerald-300 disabled:opacity-60 disabled:cursor-not-allowed transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-refresh-ccw w-4 h-4" aria-hidden="true"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"></path><path d="M16 16h5v5"></path></svg>Refresh wallets</button></div></div><div class="mb-5 flex items-start gap-3 rounded-md border border-amber-200 dark:border-amber-900 bg-amber-50 dark:bg-amber-950/40 p-4 text-sm text-amber-800 dark:text-amber-200"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-alert w-5 h-5 shrink-0" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg><p>No injected wallet provider was detected in this browser.</p></div><div class="border-t border-slate-200 dark:border-slate-800 pt-5"><div class="flex items-center justify-between gap-3 mb-4"><h3 class="text-lg font-bold text-slate-950 dark:text-white">Detected wallets</h3><span class="text-sm text-slate-500 dark:text-slate-400">0 detected</span></div><div class="py-8 text-center border border-dashed border-slate-300 dark:border-slate-700 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wallet w-10 h-10 mx-auto mb-3 text-slate-400" aria-hidden="true"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"></path><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"></path></svg><p class="font-semibold text-slate-800 dark:text-slate-100">No injected wallet detected</p><p class="mt-2 px-4 text-sm leading-6 text-slate-500 dark:text-slate-400">Open this lab in a browser with an EVM wallet extension to compose and sign a SIWE message.</p></div></div><div class="border-t border-slate-200 dark:border-slate-800 mt-6 pt-6"><button type="button" disabled="" class="inline-flex w-full md:w-auto items-center justify-center gap-2 rounded-md bg-emerald-600 px-5 py-3 text-sm font-bold text-white hover:bg-emerald-500 disabled:opacity-60 disabled:cursor-not-allowed transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wallet w-4 h-4" aria-hidden="true"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"></path><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"></path></svg>Connect wallet</button></div></div><div class="space-y-6"><div class="rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6"><h2 class="text-xl font-bold text-slate-950 dark:text-white mb-4">What this lab teaches</h2><div class="space-y-4"><div class="flex gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-refresh-ccw w-5 h-5 text-emerald-500 dark:text-emerald-300 shrink-0 mt-0.5" aria-hidden="true"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"></path><path d="M16 16h5v5"></path></svg><p class="text-sm leading-6 text-slate-600 dark:text-slate-300">A nonce must be generated by a trusted relying party and used once so an old signature cannot be replayed later.</p></div><div class="flex gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check w-5 h-5 text-emerald-500 dark:text-emerald-300 shrink-0 mt-0.5" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg><p class="text-sm leading-6 text-slate-600 dark:text-slate-300">The domain and URI bind the message to the site requesting the signature, helping wallets and users detect phishing.</p></div><div class="flex gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock w-5 h-5 text-emerald-500 dark:text-emerald-300 shrink-0 mt-0.5" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg><p class="text-sm leading-6 text-slate-600 dark:text-slate-300">Issued-at and expiration timestamps narrow the valid time window for a signed authentication message.</p></div><div class="flex gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-alert w-5 h-5 text-emerald-500 dark:text-emerald-300 shrink-0 mt-0.5" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="M12 8v4"></path><path d="M12 16h.01"></path></svg><p class="text-sm leading-6 text-slate-600 dark:text-slate-300">A signature is not a session. Production SIWE needs a server to verify the signature and create, rotate, and invalidate sessions.</p></div></div></div><div class="rounded-lg border border-amber-200 dark:border-amber-900 bg-amber-50 dark:bg-amber-950/30 p-6"><div class="flex items-center gap-2 text-amber-800 dark:text-amber-200 mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-pen-line w-5 h-5" aria-hidden="true"><path d="M14.364 13.634a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506l4.013-4.009a1 1 0 0 0-3.004-3.004z"></path><path d="M14.487 7.858A1 1 0 0 1 14 7V2"></path><path d="M20 19.645V20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l2.516 2.516"></path><path d="M8 18h1"></path></svg><h2 class="text-xl font-bold">Not production authentication</h2></div><p class="text-sm leading-6 text-amber-900 dark:text-amber-100">This static GitHub Pages demo does not issue trusted nonces, store sessions, or verify ERC-1271 contract-wallet signatures. It is a learning surface for SIWE message anatomy.</p></div><div class="rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6"><h2 class="text-xl font-bold text-slate-950 dark:text-white mb-3">Learning identity connection</h2><p class="text-sm leading-6 text-slate-600 dark:text-slate-300">The same pattern can later help a learner prove wallet control before receiving a badge, certificate, or verifiable credential. This project does not claim that account system yet.</p></div></div></section></main></div></div></div>
+  
+
+</body></html>

@@ -41,6 +41,11 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://bhbtc.xyz/zh/labs/siwe</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://bhbtc.xyz/zh/learn/module-1/1-1</loc>
     <lastmod>2026-06-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -251,6 +256,11 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://bhbtc.xyz/zh/learn/module-7/7-6</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://bhbtc.xyz/zh/learn/module-8/8-1</loc>
     <lastmod>2026-06-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -372,6 +382,11 @@
   </url>
   <url>
     <loc>https://bhbtc.xyz/en/labs/wallet</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://bhbtc.xyz/en/labs/siwe</loc>
     <lastmod>2026-06-26</lastmod>
     <changefreq>weekly</changefreq>
   </url>
@@ -582,6 +597,11 @@
   </url>
   <url>
     <loc>https://bhbtc.xyz/en/learn/module-7/7-5</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://bhbtc.xyz/en/learn/module-7/7-6</loc>
     <lastmod>2026-06-26</lastmod>
     <changefreq>weekly</changefreq>
   </url>
