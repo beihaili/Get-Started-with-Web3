@@ -64,6 +64,12 @@ const ReaderPage = () => {
   // 查找当前课程信息
   const currentModule = COURSE_DATA.find((m) => m.id === moduleId);
   const currentLesson = currentModule?.lessons.find((l) => l.id === lessonId);
+  const isExternalLab = currentLesson?.labUrl?.startsWith('http');
+  const labHref = currentLesson?.labUrl
+    ? isExternalLab
+      ? `${currentLesson.labUrl}/generate`
+      : `/${lang}${currentLesson.labUrl}`
+    : '';
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -400,9 +406,9 @@ const ReaderPage = () => {
               {currentLesson?.labUrl && (
                 <div className="mb-8">
                   <a
-                    href={`${currentLesson.labUrl}/generate`}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={labHref}
+                    target={isExternalLab ? '_blank' : undefined}
+                    rel={isExternalLab ? 'noopener noreferrer' : undefined}
                     aria-label={t('reader.startLab')}
                     className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-rose-500 to-orange-500 hover:from-rose-600 hover:to-orange-600 text-white rounded-lg font-medium transition-all"
                   >

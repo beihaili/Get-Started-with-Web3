@@ -67,8 +67,8 @@ describe('i18n', () => {
     await loadI18nSections(testI18n, ['articles'], 'en');
     await loadI18nSections(testI18n, ['articles'], 'zh');
 
-    expect(testI18n.t('articles.pageDesc', { lng: 'en' })).toContain('58 lessons');
-    expect(testI18n.t('articles.pageDesc', { lng: 'zh' })).toContain('58 讲');
+    expect(testI18n.t('articles.pageDesc', { lng: 'en' })).toContain('59 lessons');
+    expect(testI18n.t('articles.pageDesc', { lng: 'zh' })).toContain('59 讲');
   });
 
   it('should map routes to the sections needed before rendering', () => {

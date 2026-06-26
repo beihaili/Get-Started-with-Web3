@@ -2,12 +2,15 @@
 
 **Date:** 2026-06-24  
 **Owner:** beihai + Codex  
-**Status:** Pre-dependency design note  
+**Status:** MVP implementation active
 **Roadmap package:** Wallet lab design
 
 ## Progress
 
 - 2026-06-24: Dependency-free route scaffold shipped for `/en/labs/wallet` and `/zh/labs/wallet`, with i18n, sitemap, prerender, and static rendering tests.
+- 2026-06-24: Dependency-free EIP-6963 / EIP-1193 MVP implemented in `src/features/wallet-lab/`, covering provider discovery, connect, local disconnect, account display, chain display, allowlisted network switching, and educational message signing.
+- 2026-06-25: GitHub CI passed on PR #220, and desktop plus mobile Playwright smoke passed for no-wallet state and mock-wallet connect-switch-sign flow. Local Cloudflare analytics CORS errors were classified as known non-wallet noise.
+- 2026-06-25: Bilingual Wallet Lab explainer lesson added under `Web3BuilderLab/05_WalletInteroperabilityLab`, with quiz coverage, internal Reader CTA, Builder AI role-path coverage, and regenerated AI/public artifacts.
 
 ## Goal
 
@@ -51,7 +54,16 @@ src/features/wallet-lab/__tests__/
 
 ## Stack Decision
 
-Default recommendation: **wagmi + viem + RainbowKit**.
+Current implementation choice: **dependency-free EIP-6963 / EIP-1193 first slice**.
+
+Why this changed from the initial default:
+
+- The first educational goal is to make provider discovery, wallet requests, chain IDs, and message signing visible to learners.
+- Native browser wallet APIs are enough for that first lab and avoid turning the main static curriculum into a heavier wallet-app surface.
+- The implementation remains isolated under `src/features/wallet-lab/`, so a future library integration can replace the hook without changing the main course reader.
+- No RPC URL, private key, wallet address, signature, or transaction payload is sent to analytics.
+
+Future default if the lab grows: **wagmi + viem + RainbowKit**.
 
 Why:
 
@@ -64,18 +76,18 @@ Alternative: **Reown AppKit**.
 
 Use Reown AppKit instead if a concrete Reown / WalletConnect collaboration becomes active, or if the educational goal shifts toward WalletConnect sessions and multi-wallet infrastructure.
 
-Do not install either stack until the implementation PR is ready to include tests and a browser smoke path.
+Do not install either stack until a follow-up lab needs those abstractions and is ready to include tests plus a browser smoke path.
 
 ## MVP Behavior
 
-The first runnable wallet lab should support:
+The first runnable wallet lab supports:
 
 - Connect wallet.
-- Disconnect wallet.
+- Disconnect wallet locally.
 - Display connected status.
 - Display shortened account address.
 - Display current chain name and chain ID.
-- Switch between a small allowlist of safe networks, such as Ethereum mainnet read-only context and Sepolia.
+- Switch between a small allowlist of safe networks: Ethereum mainnet learning context and Sepolia.
 - Sign a plain educational message.
 - Show the signed message result locally with a warning that signing is not the same as logging in.
 
@@ -152,3 +164,13 @@ The next implementation PR should:
 2. Add a feature flag or placeholder state for "wallet stack not installed yet."
 3. Add tests for static route rendering.
 4. Only then install the chosen wallet stack in a follow-up PR.
+
+## Second Implementation Slice
+
+Implemented in the active Modern Web3 roadmap branch:
+
+1. Add `src/features/wallet-lab/walletProviders.js` for EIP-6963 provider announcements and `window.ethereum` fallback detection.
+2. Add `src/features/wallet-lab/walletLabUtils.js` for allowlisted chain labels, address shortening, signature preview, and educational signing messages.
+3. Add `src/features/wallet-lab/useWalletLab.js` for connect, local disconnect, chain switch, and message signing state.
+4. Replace the static wallet lab scaffold with an interactive lab page that remains safe when no wallet extension exists.
+5. Add Vitest coverage for utilities, provider discovery, empty state, and a mock wallet connect-switch-sign flow.

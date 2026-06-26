@@ -25,6 +25,7 @@
   - Added `docs/strategy/2026-06-24-runtime-baseline.md`, declared `package.json` Node runtime as `>=20`, and added `npm run audit`.
   - Ran `npm audit fix` to bring the dependency audit baseline from 6 reported vulnerabilities to 0.
   - Added a dependency-free wallet lab scaffold at `/en/labs/wallet` and `/zh/labs/wallet`.
+  - Advanced the wallet lab from static scaffold to a dependency-free EIP-6963 / EIP-1193 MVP with injected provider discovery, connect, local disconnect, account display, chain display, allowlisted network switching, and educational message signing.
   - Added `walletLab` i18n namespace, route loading, sitemap coverage, prerender coverage, and static route tests.
 - Community:
   - Updated public roadmap issue #156 with the Modern Web3 direction.
@@ -39,16 +40,17 @@
 
 ## Deploy And Verification
 
-| Surface           | Status             | Evidence                                                                                                                                 | Notes                                                                                                                                                       |
-| ----------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Production deploy | Not run            | N/A                                                                                                                                      | Local roadmap/runtime slice only                                                                                                                            |
-| Targeted tests    | Passed             | `npx vitest run src/pages/__tests__/WalletLabPage.test.jsx src/i18n/__tests__/i18n.test.js scripts/__tests__/seo-route-coverage.test.js` | 3 files / 12 tests passed                                                                                                                                   |
-| Tests             | Passed             | `npm test`                                                                                                                               | 47 files / 244 tests passed; happy-dom logged DNS errors for external links, but the suite exited 0                                                         |
-| Lint              | Passed             | `npm run lint`                                                                                                                           | ESLint exited 0                                                                                                                                             |
-| Build             | Passed             | `npm run build`                                                                                                                          | Vite build passed; OG images generated; sitemap/robots generated; prerender succeeded for 133/133 routes, including `/en/labs/wallet` and `/zh/labs/wallet` |
-| Audit             | Passed             | `npm run audit`                                                                                                                          | Initial audit found 6 vulnerabilities; after `npm audit fix`, audit reports 0 vulnerabilities                                                               |
-| AI entrypoints    | Not run separately | Covered by `npm run build` prebuild                                                                                                      | `prebuild` ran `sync-content`, `ai:index`, and `ai:publish`; timestamp-only artifact churn was reverted after inspection                                    |
-| Formatting        | Passed             | `npx prettier --check ...`                                                                                                               | All matched changed files use Prettier style                                                                                                                |
+| Surface           | Status             | Evidence                                                                                                                                                                                                                                                    | Notes                                                                                                                                                       |
+| ----------------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Production deploy | Not run            | N/A                                                                                                                                                                                                                                                         | Local roadmap/runtime slice only                                                                                                                            |
+| Targeted tests    | Passed             | `npx vitest run src/features/wallet-lab/__tests__/walletLabUtils.test.js src/features/wallet-lab/__tests__/walletProviders.test.js src/pages/__tests__/WalletLabPage.test.jsx src/i18n/__tests__/i18n.test.js scripts/__tests__/seo-route-coverage.test.js` | 5 files / 19 tests passed                                                                                                                                   |
+| Tests             | Passed             | `npm test`                                                                                                                                                                                                                                                  | 49 files / 251 tests passed; happy-dom logged DNS errors for external links, but the suite exited 0                                                         |
+| Lint              | Passed             | `npm run lint`                                                                                                                                                                                                                                              | ESLint exited 0                                                                                                                                             |
+| Build             | Passed             | `npm run build`                                                                                                                                                                                                                                             | Vite build passed; OG images generated; sitemap/robots generated; prerender succeeded for 133/133 routes, including `/en/labs/wallet` and `/zh/labs/wallet` |
+| Audit             | Passed             | `npm run audit`                                                                                                                                                                                                                                             | Initial audit found 6 vulnerabilities; after `npm audit fix`, audit reports 0 vulnerabilities                                                               |
+| AI entrypoints    | Not run separately | Covered by `npm run build` prebuild                                                                                                                                                                                                                         | `prebuild` ran `sync-content`, `ai:index`, and `ai:publish`; timestamp-only artifact churn was reverted after inspection                                    |
+| Formatting        | Passed             | `npx prettier --check ...`                                                                                                                                                                                                                                  | All matched changed files use Prettier style                                                                                                                |
+| Browser smoke     | Partial            | `npm run build` Playwright prerender + `rg` over `dist/en/labs/wallet` and `dist/zh/labs/wallet`                                                                                                                                                            | Direct headless Chromium smoke against Vite was blocked by macOS sandbox; the required elevated retry was rejected by the Codex usage-limit gate            |
 
 ## External Distribution
 
@@ -67,14 +69,15 @@
 
 - Strategy docs are published in draft PR #220 but not merged yet.
 - Public roadmap issue currently describes the direction; after PR #220 lands, link the merged strategy docs from the roadmap issue.
-- Wallet lab implementation is intentionally deferred until the architecture note is reviewed and dependency scope is confirmed.
+- Wallet lab now has a dependency-free MVP; live browser smoke with and without a real wallet extension is still required before treating Phase 2 as fully shipped.
+- Direct Playwright smoke against the Vite dev server could not run in this turn because Chromium launch needed elevated permissions and the approval retry was rejected by the Codex usage-limit gate.
 - Coverage is documented but not enabled; adding `@vitest/coverage-v8` and thresholds is deferred to a follow-up runtime-quality PR.
 
 ## Next Operating Block
 
 1. Watch PR #220 CI and address review feedback if any.
 2. Open selected Phase 1 issues from `docs/strategy/2026-06-24-modern-web3-phase-1-issues.md`.
-3. Implement the next wallet lab slice: choose whether to add a placeholder feature module or install the reviewed wallet stack in a follow-up PR.
+3. Run browser smoke on the wallet lab route once elevated browser execution is available, then continue with SIWE design/lesson work.
 
 ## Evidence Links
 
