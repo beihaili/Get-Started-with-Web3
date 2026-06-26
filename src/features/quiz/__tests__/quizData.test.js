@@ -82,6 +82,44 @@ describe('Quiz data structure', () => {
   });
 });
 
+describe('Updated Web3 QuickStart quiz coverage', () => {
+  it.each(['1-2', '1-4', '1-6'])('lesson "%s" keeps exactly 5 questions', (lessonId) => {
+    expect(QUIZ_BANK[lessonId]).toHaveLength(5);
+  });
+
+  it('first transaction quiz covers nonce ordering, gas, L2 networks, and simulation', () => {
+    const allCopy = JSON.stringify(QUIZ_BANK['1-2']);
+
+    expect(allCopy).toMatch(/nonce/i);
+    expect(allCopy).toMatch(/gas limit|max fee|priority fee/i);
+    expect(allCopy).toMatch(/Reverted|执行 Gas/i);
+    expect(allCopy).toMatch(/L2|Arbitrum|Base|Optimism/i);
+    expect(allCopy).toMatch(/仿真|模拟/);
+  });
+
+  it('useful sites quiz covers the 2026 Web3 tool map', () => {
+    const allCopy = JSON.stringify(QUIZ_BANK['1-4']);
+
+    expect(allCopy).toMatch(/Rabby/);
+    expect(allCopy).toMatch(/Tenderly/);
+    expect(allCopy).toMatch(/Revoke\.cash/);
+    expect(allCopy).toMatch(/DeBank/);
+    expect(allCopy).toMatch(/L2BEAT/);
+    expect(allCopy).toMatch(/Foundry|Hardhat|OpenZeppelin/);
+  });
+
+  it('security quiz covers Permit2, blind signing, EIP-7702 phishing, and simulation limits', () => {
+    const allCopy = JSON.stringify(QUIZ_BANK['1-6']);
+
+    expect(allCopy).toMatch(/Permit2/);
+    expect(allCopy).toMatch(/blind signing|盲签/i);
+    expect(allCopy).toMatch(/EIP-7702/);
+    expect(allCopy).toMatch(/钓鱼|空投|Gas 补贴/);
+    expect(allCopy).toMatch(/交易模拟|Rabby|Tenderly/);
+    expect(allCopy).toMatch(/地址投毒|剪贴板/);
+  });
+});
+
 describe('Quiz data uniqueness', () => {
   it('has no duplicate questions within a lesson', () => {
     for (const [lessonId, questions] of Object.entries(QUIZ_BANK)) {

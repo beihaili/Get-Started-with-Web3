@@ -52,41 +52,64 @@ export const QUIZ_BANK = {
   '1-2': [
     // 体验第一笔交易
     {
-      question: '在进行Web3交易时，Gas费的作用是什么？',
-      options: ['交易手续费', '钱包维护费', '网络会员费', '身份验证费'],
-      correctAnswer: 0,
-      explanation: 'Gas费是支付给矿工/验证者的交易手续费，用于激励他们处理和确认交易。',
-    },
-    {
-      question: '什么情况下Web3交易可能会失败？',
-      options: ['Gas费设置过低', '网络拥堵', '智能合约执行失败', '以上都有可能'],
-      correctAnswer: 3,
-      explanation: 'Gas费不足、网络拥堵、合约错误等都可能导致交易失败，这是区块链的特性。',
-    },
-    {
-      question: '交易确认通常需要多长时间？',
-      options: ['立即完成', '几分钟到几小时不等', '总是24小时', '1秒钟'],
-      correctAnswer: 1,
-      explanation: '交易确认时间取决于网络拥堵程度和Gas费设置，通常从几分钟到几小时不等。',
-    },
-    {
-      question: '以太坊交易中的 Nonce 值代表什么？',
-      options: ['交易金额', '该地址发送交易的序号', 'Gas 费上限', '区块编号'],
-      correctAnswer: 1,
-      explanation:
-        'Nonce 是该地址发送交易的计数器，从 0 开始递增，用于防止重放攻击并确保交易按顺序执行。',
-    },
-    {
-      question: '区块链交易一旦被确认后，以下哪项描述是正确的？',
+      question: '如果 nonce 10 的交易一直卡住，nonce 11 和 12 的交易通常会怎样？',
       options: [
-        '可以联系客服撤销',
-        '只要支付额外费用就能取消',
-        '无法被撤销或修改',
-        '等待 24 小时后可以回滚',
+        '自动跳过 nonce 10 先确认',
+        '一起排队等待 nonce 10 被确认或替换',
+        '被钱包自动删除',
+        '不需要支付 Gas 直接完成',
       ],
-      correctAnswer: 2,
+      correctAnswer: 1,
       explanation:
-        '区块链交易一旦被确认就不可逆转，这是区块链不可篡改性的体现，因此发送前务必仔细核实地址和金额。',
+        '同一账户的交易按 nonce 顺序执行，前一个 nonce 卡住时，后续 nonce 交易通常也会排队。可以用同一个 nonce 加速或取消。',
+    },
+    {
+      question: '关于 gas limit、max fee 和 priority fee，下列说法哪项正确？',
+      options: [
+        'gas limit 是最多愿意消耗的 Gas 数量，不等于最终费用',
+        'max fee 越高，交易一定会花光全部费用',
+        'priority fee 是转给收款人的额外小费',
+        'gas limit 越低，合约调用越安全',
+      ],
+      correctAnswer: 0,
+      explanation:
+        'gas limit 是执行交易愿意消耗的 Gas 上限；max fee 是最高 Gas 单价，priority fee 是给验证者的小费，实际费用取决于链上执行情况。',
+    },
+    {
+      question: '区块浏览器显示交易 Reverted 时，最可能意味着什么？',
+      options: [
+        '用户在钱包里拒绝签名，因此不消耗 Gas',
+        '交易上链执行过但被合约拒绝，通常已消耗执行 Gas',
+        '交易还在 mempool 中等待打包',
+        '钱包密码输入错误，需要重新登录',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'Reverted 表示交易已经上链执行，但合约条件不满足或执行失败。主资产通常不会完成转移，但执行 Gas 已经消耗。',
+    },
+    {
+      question: '在 Arbitrum、Base、Optimism 等 L2 上交易前，最应该确认什么？',
+      options: [
+        '当前钱包网络、目标链和提币/跨链网络是否一致',
+        '只要地址一样，任何网络都可以互通',
+        'L2 交易完全不需要 Gas',
+        'L2 失败交易一定不会产生费用',
+      ],
+      correctAnswer: 0,
+      explanation:
+        'L2 交易仍有执行费、L1 数据费和排序器相关费用；从交易所提币或跨链时选错网络，可能导致资产找回困难。',
+    },
+    {
+      question: '发送主网交易前使用交易仿真/模拟工具的主要目的是什么？',
+      options: [
+        '保证交易永远不会失败',
+        '在签名前预估资产变化，发现异常转出或风险提示',
+        '绕过钱包签名流程',
+        '让 Gas 费用变成 0',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '交易仿真/模拟可以帮助你在签名前查看可能发生的资产变化，但仍需要检查地址来源、授权范围、滑点和网站可信度。',
     },
   ],
   '1-3': [
@@ -137,41 +160,59 @@ export const QUIZ_BANK = {
   '1-4': [
     // 常用 Web3 网站
     {
-      question: '区块链浏览器的主要功能是什么？',
-      options: ['浏览网页', '查看链上交易、地址和区块信息', '下载区块链软件', '购买加密货币'],
-      correctAnswer: 1,
-      explanation: '区块链浏览器是查看链上数据的工具，可以查询交易记录、地址余额和区块详情。',
-    },
-    {
-      question: '为什么建议同时使用多个加密货币行情网站？',
-      options: ['价格更便宜', '交叉验证数据准确性', '可以获得空投', '注册有优惠'],
-      correctAnswer: 1,
-      explanation: '不同网站的数据来源和更新速度不同，交叉验证能获得更准确的市场信息。',
-    },
-    {
-      question: 'DefiLlama 主要提供什么类型的数据？',
-      options: ['社交媒体分析', 'DeFi 协议的 TVL（总锁仓量）数据', 'NFT 交易记录', '矿池算力分布'],
-      correctAnswer: 1,
-      explanation: 'DefiLlama 是 DeFi 领域的重要数据平台，主要提供各协议的 TVL 和收益信息。',
-    },
-    {
-      question: 'Etherscan 是哪条区块链的浏览器？',
-      options: ['比特币', '以太坊', 'Solana', 'Cosmos'],
+      question: '遇到交易、地址或合约问题时，区块链浏览器最适合用来做什么？',
+      options: ['联系客服退款', '查询链上记录和交易详情', '生成助记词', '自动撤销所有授权'],
       correctAnswer: 1,
       explanation:
-        'Etherscan 是以太坊上最常用的区块链浏览器，可以查看交易详情、合约代码和地址余额等信息。',
+        '区块链浏览器是 Web3 世界的基础查询工具，可查看交易状态、From/To、Value、Input Data 和 Token Transfers 等链上记录。',
     },
     {
-      question: 'CoinMarketCap 和 CoinGecko 网站的主要用途是什么？',
+      question: '在 2026 Web3 工具地图中，Rabby、Tenderly 和钱包内置模拟主要解决什么问题？',
       options: [
-        '发行新代币',
-        '查看加密货币市值、价格和交易量等市场数据',
-        '管理私钥',
-        '运行挖矿程序',
+        '签名前查看交易可能带来的资产变化',
+        '查询中心化交易所法币汇率',
+        '部署 Solidity 编译器',
+        '保存助记词备份',
       ],
-      correctAnswer: 1,
+      correctAnswer: 0,
       explanation:
-        'CoinMarketCap 和 CoinGecko 是最流行的加密市场数据网站，提供各种加密货币的实时价格、市值排名和交易量数据。',
+        'Rabby、Tenderly 和部分钱包内置模拟适合在签名前预览交易结果，帮助发现异常资产转出或危险调用。',
+    },
+    {
+      question: '如果想定期检查并撤销代币授权，应该优先使用哪类工具？',
+      options: [
+        'Revoke.cash 或 DeBank',
+        'TradingView 或 CoinMarketCap',
+        'Foundry 或 Hardhat',
+        'Snapshot 或 Tally',
+      ],
+      correctAnswer: 0,
+      explanation:
+        'Revoke.cash 和 DeBank 可用于查看地址授权并撤销不需要的授权，适合放在钱包与安全类工具栏中。',
+    },
+    {
+      question: 'L2BEAT 在 L2 与跨链工具中主要用于查看什么？',
+      options: [
+        'Rollup 阶段、桥、排序器和数据可用性风险',
+        'NFT 地板价和稀有度排名',
+        '交易所充值到账时间',
+        'Solidity 单元测试覆盖率',
+      ],
+      correctAnswer: 0,
+      explanation:
+        'L2BEAT 适合对比 L2 的 TVL、Rollup 阶段、桥、排序器、数据可用性等风险，不只是看费用高低。',
+    },
+    {
+      question: '下列哪组工具最符合“开发与合约”类别？',
+      options: [
+        'Foundry、Hardhat、Remix、OpenZeppelin Contracts',
+        'CoinGecko、TradingView、Artemis、Token Terminal',
+        'Ledger、Trezor、Keystone、Revoke.cash',
+        'Jumper、Bungee、Across、Base Bridge',
+      ],
+      correctAnswer: 0,
+      explanation:
+        'Foundry、Hardhat、Remix 用于合约开发测试，OpenZeppelin Contracts 提供成熟合约组件，属于开发与合约工具。',
     },
   ],
   '1-5': [
@@ -222,47 +263,65 @@ export const QUIZ_BANK = {
   '1-6': [
     // Web3 安全基础
     {
-      question: 'Web3 安全与传统互联网安全的最大区别是什么？',
-      options: ['Web3 更安全', '交易不可逆且没有中央机构保护', '不需要密码', '黑客更少'],
+      question: 'Permit / Permit2 签名钓鱼最危险的地方是什么？',
+      options: [
+        '签名一定会立刻显示一笔转账交易',
+        '看起来只是签名，但攻击者可能之后提交授权并转走代币',
+        '只能影响测试网资产',
+        '只会提高 Gas 费用，不会影响资产',
+      ],
       correctAnswer: 1,
       explanation:
-        'Web3 交易一旦确认无法撤销，且没有银行等中央机构帮你追回损失，安全完全由自己负责。',
+        'Permit 允许通过签名授权代币花费，不需要先发 approve 交易。陌生网站上的 Permit2 或 Spend Limit 签名可能被攻击者拿去链上执行。',
     },
     {
-      question: '以下哪个工具可以用来检查和撤销代币授权？',
-      options: ['MetaMask', 'Revoke.cash', 'Etherscan', 'CoinMarketCap'],
+      question:
+        '看到“升级钱包领取空投”“开启智能账户获得 Gas 补贴”这类 EIP-7702 签名请求时，应该怎么做？',
+      options: [
+        '只要网站界面好看就签名',
+        '看不懂委托目标、权限范围、链 ID 和撤销方式时不要签',
+        '先把钱包里所有资产授权给该网站',
+        '切换到主网后风险就会消失',
+      ],
       correctAnswer: 1,
-      explanation: 'Revoke.cash 是专门用于查看和撤销代币授权的安全工具，建议定期检查。',
+      explanation:
+        'EIP-7702 让 EOA 可以设置代码委托，授权比普通消息签名更敏感。安全钱包应清楚展示委托目标、权限、链 ID、撤销方式和风险说明。',
     },
     {
-      question: '钱包分级管理策略中，大额资产应该存放在哪里？',
-      options: ['交易所账户', '浏览器插件钱包', '冷钱包（离线存储）', '手机热钱包'],
+      question: 'Web3 中的 blind signing（盲签）指的是什么风险行为？',
+      options: [
+        '在完全理解交易内容后签名',
+        '没有看懂或无法验证签名内容和权限就点击确认',
+        '用硬件钱包核对完整地址',
+        '只在测试网签署交易',
+      ],
+      correctAnswer: 1,
+      explanation:
+        '盲签是指用户不理解或无法验证签名内容、授权对象和资产影响就确认签名，这是 Permit、Permit2 和复杂合约交互中的高风险行为。',
+    },
+    {
+      question: '为什么交易模拟不能被当成绝对安全保证？',
+      options: [
+        '模拟工具无法显示任何资产变化',
+        '合约路径、MEV、私有 mempool 或离线授权未来提交都可能改变结果',
+        '模拟只适用于中心化交易所账户',
+        '模拟会自动撤销所有危险授权',
+      ],
+      correctAnswer: 1,
+      explanation:
+        'Rabby、Tenderly 等模拟能发现很多明显风险，但不能替代网站来源验证、授权对象判断和资产隔离策略。',
+    },
+    {
+      question: '地址投毒和剪贴板攻击的正确防范方式是什么？',
+      options: [
+        '从最近交易历史里复制地址更方便',
+        '只核对地址前 2 位即可',
+        '使用地址簿/提现白名单，并核对前 6 位、中间 4 位、后 6 位',
+        '只要金额很大，钱包会自动拦截错误地址',
+      ],
       correctAnswer: 2,
-      explanation: '大额资产应使用冷钱包离线存储，安全等级最高，避免网络攻击风险。',
-    },
-    {
-      question: '以下哪种是常见的 Web3 钓鱼攻击方式？',
-      options: [
-        '通过电话推销加密货币',
-        '伪造知名项目官网诱骗用户签署恶意交易',
-        '在交易所内部攻击',
-        '破解区块链网络',
-      ],
-      correctAnswer: 1,
       explanation:
-        '钓鱼攻击通常伪造与知名项目极其相似的网站，诱骗用户连接钱包并签署恶意交易，从而转走用户资产。',
-    },
-    {
-      question: '在签署区块链交易前，最重要的安全习惯是什么？',
-      options: [
-        '检查网络是否畅通',
-        '仔细阅读交易内容，确认授权范围和目标地址',
-        '确保 Gas 费最低',
-        '使用 VPN 连接',
-      ],
-      correctAnswer: 1,
-      explanation:
-        '签署交易前务必仔细核对交易内容和授权范围，盲目签名是 Web3 中最常见的资产丢失原因之一。',
+        '攻击者会制造首尾相似地址污染交易历史。大额转账不要从历史记录复制地址，应使用地址簿/白名单并核对更完整的地址片段。',
     },
   ],
   '1-7': [
