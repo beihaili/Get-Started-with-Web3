@@ -55,9 +55,49 @@ export async function verifyAiEntrypoints(options = {}) {
 
   const toolNames = manifest?.tools?.map((tool) => tool.name) || [];
   checks.push({
+    name: 'artifact contract is stable v1',
+    ok:
+      manifest?.artifactContract?.version === '1.0.0' &&
+      manifest.artifactContract.status === 'stable' &&
+      manifest.artifactContract.publicSurfaces?.includes('public/ai/manifest.json') &&
+      manifest.artifactContract.publicSurfaces?.includes('web3://manifest'),
+    details: manifest?.artifactContract,
+  });
+
+  checks.push({
     name: 'manifest contains local MCP tools',
     ok: REQUIRED_LOCAL_MCP_TOOLS.every((tool) => toolNames.includes(tool)),
     details: REQUIRED_LOCAL_MCP_TOOLS,
+  });
+
+  const localMcpTools =
+    manifest?.tools?.filter((tool) => REQUIRED_LOCAL_MCP_TOOLS.includes(tool.name)) || [];
+  checks.push({
+    name: 'local MCP remains free and read-only',
+    ok:
+      manifest?.mcp?.readOnly === true &&
+      manifest?.artifactContract?.localMcpPolicy?.free === true &&
+      manifest?.artifactContract?.localMcpPolicy?.readOnly === true &&
+      manifest?.artifactContract?.localMcpPolicy?.paymentEnforcement === false &&
+      manifest?.artifactContract?.localMcpPolicy?.chainOperations === false &&
+      localMcpTools.every(
+        (tool) =>
+          tool.availability === 'local-read-only' &&
+          tool.localMcp?.exposed === true &&
+          tool.localMcp?.readOnly === true &&
+          tool.localMcp?.free === true &&
+          tool.x402?.enabled === false
+      ),
+    details: {
+      mcp: manifest?.mcp,
+      localMcpPolicy: manifest?.artifactContract?.localMcpPolicy,
+      tools: localMcpTools.map((tool) => ({
+        name: tool.name,
+        availability: tool.availability,
+        localMcp: tool.localMcp,
+        x402: tool.x402,
+      })),
+    },
   });
 
   const llmsText = `${llmsTxt}\n${publicLlmsTxt}`;
@@ -90,6 +130,29 @@ export async function verifyAiEntrypoints(options = {}) {
     name: 'x402 metadata is complete',
     ok: paidToolsComplete,
     details: paidTools.map((tool) => ({ name: tool.name, x402: tool.x402 })),
+  });
+
+  checks.push({
+    name: 'future paid tools are not described as live local tools',
+    ok:
+      paidTools.length > 0 &&
+      paidTools.every(
+        (tool) =>
+          tool.availability === 'future-hosted-metadata' &&
+          tool.localMcp?.exposed === false &&
+          tool.description.startsWith('Future paid remote tool')
+      ) &&
+      manifest?.artifactContract?.monetizationPolicy?.futurePaidMetadataOnly === true &&
+      manifest?.artifactContract?.monetizationPolicy?.x402EnforcementLive === false,
+    details: {
+      monetizationPolicy: manifest?.artifactContract?.monetizationPolicy,
+      tools: paidTools.map((tool) => ({
+        name: tool.name,
+        availability: tool.availability,
+        localMcp: tool.localMcp,
+        description: tool.description,
+      })),
+    },
   });
 
   const ok = checks.every((check) => check.ok);

@@ -3,10 +3,11 @@
 **Date:** 2026-05-18
 **Owner:** beihai + Codex
 **Status:** Approved for outreach on 2026-05-21. No message has been confirmed as sent until an authenticated channel and sender email are available.
+**Updated:** 2026-06-26 with AI-native v1 and modern Web3 lab metrics.
 
 ## Purpose
 
-Use the new interactive learning release as a credible proof point for the first low-risk sponsor or grant conversations.
+Use the AI-native v1 stability layer and modern Web3 labs as credible proof points for the first low-risk sponsor or grant conversations.
 
 Primary targets:
 
@@ -21,20 +22,23 @@ This memo is intentionally conservative. It asks for support for open-source edu
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | Repository           | https://github.com/beihaili/Get-Started-with-Web3                                                                             |
 | Public site          | https://bhbtc.xyz/                                                                                                            |
-| GitHub stars         | 614 as of 2026-05-21                                                                                                          |
-| Forks                | 58                                                                                                                            |
-| Contributors         | 12 from GitHub contributors API                                                                                               |
-| Indexed lessons      | 116                                                                                                                           |
-| Glossary entries     | 57                                                                                                                            |
-| GitHub 14-day views  | 147 views / 72 unique visitors                                                                                                |
-| GitHub 14-day clones | 4569 clones / 551 unique cloners                                                                                              |
-| AI-native surfaces   | `llms.txt`, AI manifest, content index, local read-only MCP server                                                            |
-| Recent product proof | [Interactive Learning Update](https://github.com/beihaili/Get-Started-with-Web3/releases/tag/interactive-learning-2026-05-18) |
+| GitHub stars         | 614 as of 2026-06-26                                                                                                          |
+| Forks                | 56                                                                                                                            |
+| Contributors         | 16 from GitHub contributors API, including Dependabot                                                                         |
+| Indexed lessons      | 124 bilingual lesson entries                                                                                                  |
+| Glossary entries     | 63                                                                                                                            |
+| GitHub 14-day views  | 104 views / 29 unique visitors for 2026-06-11 through 2026-06-24 UTC                                                          |
+| GitHub 14-day clones | 510 clones / 159 unique cloners for 2026-06-11 through 2026-06-24 UTC                                                         |
+| AI-native surfaces   | Stable v1 `llms.txt`, AI manifest, content index, local read-only MCP server, and `artifactContract.version = "1.0.0"`        |
+| Recent product proof | Draft PR #220 modern Web3 roadmap package with wallet, SIWE, account abstraction, L2 risk, and AI-native v1 surfaces          |
 
-Recent shipped learning components:
+Recent shipped learning components and labs:
 
-- [Merkle Tree Builder](https://bhbtc.xyz/en/learn/module-2/2-1): lets learners type transaction-like values, inspect SHA-256 leaves, duplicate odd nodes, and follow the Merkle root construction.
-- [EIP-1559 Gas Fee Calculator](https://bhbtc.xyz/en/learn/module-11/11-2): lets learners change gas limit, priority tip, and max fee cap, then refresh live base-fee and ETH/USD estimates.
+- Wallet interoperability lab: `/en/labs/wallet` and `/zh/labs/wallet`.
+- SIWE learning identity demo: `/en/labs/siwe` and `/zh/labs/siwe`.
+- Account abstraction UserOperation simulator: `/en/labs/account-abstraction` and `/zh/labs/account-abstraction`.
+- L2 bridge risk simulator: `/en/labs/l2-risk` and `/zh/labs/l2-risk`.
+- AI-native v1: stable `llms.txt`, manifest, content index, and local read-only MCP server.
 
 ## Why Safe Fits
 
@@ -46,13 +50,13 @@ Fit:
 - The grants page explicitly includes educational content, documentation, community growth, and adoption campaigns.
 - The page says unsolicited grant proposals are accepted on a rolling basis and asks for a clear project description, scope, milestones, budget breakdown, team background, and expected impact.
 - The page lists the proposal channel as `grants@safefoundation.org`.
-- Get Started with Web3 already contains smart-account and account-abstraction lessons, including a new EIP-1559 gas-fee interactive embedded in the smart-account module.
+- Get Started with Web3 already contains smart-account and account-abstraction lessons, including a local-only UserOperation simulator and paymaster / EIP-7702 learning path.
 
 Recommended ask:
 
 - A small education grant for a 4-6 week open-source package:
   - improve the smart-account/account-abstraction module;
-  - add one more interactive learner exercise around recovery, session keys, paymasters, or user operations;
+  - improve the UserOperation simulator and add one more learner-safe exercise around recovery, session keys, or account safety;
   - expand bilingual glossary entries around Safe, account abstraction, ERC-4337, paymasters, bundlers, and smart-account security;
   - publish an AI-native context pack so agents can cite the module reliably.
 
@@ -101,16 +105,16 @@ Message:
 ```text
 Hi Safe Ecosystem Foundation team,
 
-I maintain Get Started with Web3, an open-source bilingual Web3 learning platform with 614 GitHub stars, 124 indexed lessons, 63 glossary entries, and AI-native entrypoints including llms.txt, a content index, and a local read-only MCP server.
+I maintain Get Started with Web3, an open-source bilingual Web3 learning platform with 614 GitHub stars, 124 indexed bilingual lesson entries, 63 glossary entries, and stable AI-native v1 entrypoints including llms.txt, a content index, and a local read-only MCP server.
 
-I am preparing a small education grant proposal around smart accounts and beginner-safe account abstraction. The project already includes a smart-account module, and we recently shipped an interactive EIP-1559 Gas Fee Calculator inside the Account Abstraction lesson:
+I am preparing a small education grant proposal around smart accounts and beginner-safe account abstraction. The project already includes a smart-account module and a local-only UserOperation simulator covering ERC-4337, paymasters, bundlers, and EIP-7702:
 
-https://bhbtc.xyz/en/learn/module-11/11-2
+https://bhbtc.xyz/en/labs/account-abstraction
 
 The proposed grant would fund a focused 4-6 week open-source package:
 
 - improve the bilingual smart-account/account-abstraction module;
-- add one more interactive learning exercise around recovery, session keys, paymasters, user operations, or wallet safety;
+- improve the UserOperation simulator and add one more learner-safe exercise around recovery, session keys, or account safety;
 - expand glossary and AI-native context for Safe/account-abstraction concepts;
 - publish all outputs openly so learners and AI tutors can cite the material.
 
@@ -119,7 +123,7 @@ This would be neutral education, not a product endorsement or paid trading campa
 Would this fit Safe’s spontaneous grant process? If so, I can send a scoped proposal with milestones, budget, team background, and expected impact.
 
 Project: https://github.com/beihaili/Get-Started-with-Web3
-Recent release: https://github.com/beihaili/Get-Started-with-Web3/releases/tag/interactive-learning-2026-05-18
+Roadmap PR: https://github.com/beihaili/Get-Started-with-Web3/pull/220
 
 Best,
 beihai
@@ -138,11 +142,11 @@ Message:
 ```text
 Hi Reown team,
 
-I maintain Get Started with Web3, an open-source bilingual Web3 learning platform with 614 GitHub stars, 124 indexed lessons, 63 glossary entries, and AI-native entrypoints for tutors and agents.
+I maintain Get Started with Web3, an open-source bilingual Web3 learning platform with 614 GitHub stars, 124 indexed bilingual lesson entries, 63 glossary entries, and stable AI-native v1 entrypoints for tutors and agents.
 
-The curriculum teaches first wallet identity, first transactions, DApp interaction, wallet safety, smart accounts, DeFi, L2, DAO, and builder content. We recently shipped two interactive lessons, including an EIP-1559 Gas Fee Calculator inside the account-abstraction module:
+The curriculum teaches first wallet identity, first transactions, DApp interaction, wallet safety, smart accounts, DeFi, L2, DAO, and builder content. We recently shipped focused modern Web3 labs for wallet interoperability, SIWE learning identity, account abstraction, and L2 bridge risk:
 
-https://github.com/beihaili/Get-Started-with-Web3/releases/tag/interactive-learning-2026-05-18
+https://github.com/beihaili/Get-Started-with-Web3/pull/220
 
 Reown / WalletConnect seems like a strong fit for a disclosed education collaboration around wallet UX and connection safety. A first collaboration could support:
 

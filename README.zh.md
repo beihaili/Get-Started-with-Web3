@@ -152,6 +152,8 @@ npm run mcp:web3
 
 本地 MCP 工具保持只读，不执行支付验证、链上签名或链上操作。x402 字段只是为未来远程付费工具预留的元数据。
 
+AI artifacts 通过 `artifactContract.version` 作为稳定 v1 公开接口维护；详见 [AI-native v1 稳定层与变现决策](docs/strategy/2026-06-26-ai-native-v1-stability-and-monetization.md)。
+
 ## 技术栈
 
 - **Frontend:** React 19 + Vite + Tailwind CSS

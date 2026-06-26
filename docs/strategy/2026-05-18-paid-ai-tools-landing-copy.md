@@ -127,8 +127,8 @@ Secondary CTA:
 
 - Open-source curriculum.
 - Bilingual content.
-- 106 indexed lesson entries.
-- 55 glossary entries.
+- 124 indexed lesson entries.
+- 63 glossary entries.
 - Local MCP is free and read-only.
 - No investment advice or wallet signing.
 
@@ -179,3 +179,16 @@ Small paid utilities can fund maintenance, translation, and new lessons without 
 ## Recommendation
 
 Phase 1 should not enable payment immediately. The safer next step is to publish waitlist or interest-copy, collect 5-10 qualified user signals, and only then choose the payment mechanism. This keeps the project aligned with open education while preserving the option to test x402 or another hosted payment path later.
+
+## 2026-06-26 Phase 6 Decision Update
+
+The AI-native layer is now treated as a stable v1 public surface through `artifactContract.version = "1.0.0"` in the generated manifest and content index.
+
+The current monetization decision is:
+
+- Keep lessons, public AI artifacts, and local MCP free.
+- Keep future paid tools as metadata only.
+- Prefer manual sponsorship or GitHub Sponsors-supported access review before x402 or Stripe.
+- Do not enable hosted paid-tool access, payment enforcement, checkout, or wallet payment without explicit approval and a privacy / abuse / refund plan.
+
+See `docs/strategy/2026-06-26-ai-native-v1-stability-and-monetization.md`.

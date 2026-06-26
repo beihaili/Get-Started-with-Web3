@@ -41,6 +41,15 @@ describe('generate-ai-index', () => {
     const llmsTxt = await readFile(path.join(tempDir, 'llms.txt'), 'utf8');
 
     expect(manifest.counts.modules).toBe(11);
+    expect(manifest.artifactContract).toMatchObject({
+      version: '1.0.0',
+      status: 'stable',
+      localMcpPolicy: {
+        free: true,
+        readOnly: true,
+        paymentEnforcement: false,
+      },
+    });
     expect(manifest.mcp.command).toBe('npm run mcp:web3');
     expect(manifest.mcp.clientConfig.mcpServers['get-started-with-web3']).toMatchObject({
       command: 'npm',
@@ -48,7 +57,10 @@ describe('generate-ai-index', () => {
       cwd: '/absolute/path/to/Get-Started-with-Web3',
     });
     expect(contentIndex.lessons.length).toBeGreaterThan(40);
+    expect(contentIndex.artifactContract.version).toBe('1.0.0');
     expect(llmsTxt).toContain('Get Started With Web3 AI Index');
+    expect(llmsTxt).toContain('Artifact contract: v1.0.0 (stable)');
+    expect(llmsTxt).toContain('no payment enforcement');
     expect(llmsTxt).toContain('"get-started-with-web3"');
     expect(llmsTxt).not.toMatch(/TBD|TODO|placeholder/i);
   });
