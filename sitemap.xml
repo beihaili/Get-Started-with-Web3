@@ -51,6 +51,11 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://bhbtc.xyz/zh/labs/l2-risk</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://bhbtc.xyz/zh/learn/module-1/1-1</loc>
     <lastmod>2026-06-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -316,6 +321,11 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://bhbtc.xyz/zh/learn/module-9/9-6</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://bhbtc.xyz/zh/learn/module-10/10-1</loc>
     <lastmod>2026-06-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -402,6 +412,11 @@
   </url>
   <url>
     <loc>https://bhbtc.xyz/en/labs/account-abstraction</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://bhbtc.xyz/en/labs/l2-risk</loc>
     <lastmod>2026-06-26</lastmod>
     <changefreq>weekly</changefreq>
   </url>
@@ -667,6 +682,11 @@
   </url>
   <url>
     <loc>https://bhbtc.xyz/en/learn/module-9/9-5</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://bhbtc.xyz/en/learn/module-9/9-6</loc>
     <lastmod>2026-06-26</lastmod>
     <changefreq>weekly</changefreq>
   </url>

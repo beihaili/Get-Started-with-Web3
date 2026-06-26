@@ -1,0 +1,234 @@
+<!DOCTYPE html><html lang="zh-CN" class="dark"><head>
+    <meta charset="UTF-8">
+    <script>
+      // Sync theme from localStorage before first paint to prevent FOUC
+      try {
+        const stored = JSON.parse(localStorage.getItem('web3-theme-store'));
+        if (!stored || stored.state.theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {
+        document.documentElement.classList.add('dark');
+      }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L2 与跨链桥风险模拟器 | 跨链与 Layer 2 深度解析 | Web3 Starter</title>
+
+    <!-- SEO基础标签 -->
+    <meta name="description" content="L2 与跨链桥风险模拟器 - 跨链与 Layer 2 深度解析 教程">
+    <meta name="keywords" content="Web3, 区块链, 比特币, 教程, 入门, blockchain, bitcoin, tutorial, 加密货币, cryptocurrency, 以太坊, ethereum">
+    <meta name="author" content="Bei Hai">
+    <link rel="canonical" href="https://bhbtc.xyz/zh/learn/module-9/9-6">
+
+    <!-- Open Graph (社交分享) -->
+    <meta property="og:title" content="L2 与跨链桥风险模拟器 | 跨链与 Layer 2 深度解析 | Web3 Starter">
+    <meta property="og:description" content="L2 与跨链桥风险模拟器 - 跨链与 Layer 2 深度解析 教程">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://bhbtc.xyz/zh/learn/module-9/9-6">
+    <meta property="og:site_name" content="Get Started With Web3">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:image" content="https://bhbtc.xyz/logo.png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@bhbtc1337">
+    <meta name="twitter:title" content="L2 与跨链桥风险模拟器 | 跨链与 Layer 2 深度解析 | Web3 Starter">
+    <meta name="twitter:description" content="L2 与跨链桥风险模拟器 - 跨链与 Layer 2 深度解析 教程">
+    <meta name="twitter:image" content="https://bhbtc.xyz/logo.png">
+
+    <!-- Google Analytics 4 -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-91JXFFZKRV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-91JXFFZKRV', { send_page_view: false });
+    </script>
+
+    <!-- Cloudflare Web Analytics -->
+    <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;e9421c23377646fd87f949f35958cbf6&quot;}"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <!-- PWA相关 -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/logo.png">
+    <script type="module" crossorigin="" src="/assets/index-BayEpxjB.js"></script>
+    <link rel="modulepreload" crossorigin="" href="/assets/rolldown-runtime-NMqb_1LM.js">
+    <link rel="modulepreload" crossorigin="" href="/assets/markdown-CDffcUNc.js">
+    <link rel="modulepreload" crossorigin="" href="/assets/react-vendor-T9ErgOfk.js">
+    <link rel="modulepreload" crossorigin="" href="/assets/ui-CQZTMGfn.js">
+    <link rel="modulepreload" crossorigin="" href="/assets/store-C-1owRdD.js">
+    <link rel="stylesheet" crossorigin="" href="/assets/index-DwZ_b9Kk.css">
+  <link rel="modulepreload" as="script" crossorigin="" href="http://localhost:4173/assets/LandingPage-Wc8AqkRW.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:4173/assets/LanguageSwitcher-5oMs_aqX.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:4173/assets/useUserStore-CEqMwhu3.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:4173/assets/interactive-ChOR4Tlt.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:4173/assets/sponsorData-BxGlDKDb.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:4173/assets/useClipboard-CKKvsxPM.js"><link rel="alternate" hreflang="zh" href="https://bhbtc.xyz/zh"><script type="application/ld+json" data-seo-head="true">{"@context":"https://schema.org","@type":"Article","name":"L2 与跨链桥风险模拟器 | 跨链与 Layer 2 深度解析 | Web3 Starter","description":"L2 与跨链桥风险模拟器 - 跨链与 Layer 2 深度解析 教程","url":"https://bhbtc.xyz/zh/learn/module-9/9-6","inLanguage":"zh-CN","isPartOf":{"@type":"Course","name":"跨链与 Layer 2 深度解析"}}</script><script type="application/ld+json" data-platform-ld="true">{"@context":"https://schema.org","@type":"WebSite","name":"Get Started with Web3","url":"https://bhbtc.xyz/","publisher":{"@type":"Organization","name":"Get Started with Web3","url":"https://github.com/beihaili/Get-Started-with-Web3"}}</script><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:4173/assets/ReaderPage-m_-l3T35.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:4173/assets/ShareCard-CKkczv9M.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:4173/assets/ThemeToggle-DXTFVzNx.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:4173/assets/MobileNav-BiLn0XJT.js"><link rel="alternate" hreflang="en" href="https://bhbtc.xyz/en/learn/module-9/9-6"></head>
+  <body>
+    <!-- SPA路由恢复脚本 -->
+    <script>
+      (function () {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+
+    <div id="root"><div class="app"><div class="min-h-screen bg-slate-50 dark:bg-slate-950"><nav aria-label="课程导航" class="sticky top-0 z-10 border-b border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-md"><div class="container mx-auto px-4 py-4 flex items-center justify-between"><a class="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-cyan-400 transition-colors" href="/zh/dashboard" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left w-5 h-5" aria-hidden="true"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg><span>返回课程</span></a><div class="flex items-center gap-4"><div class="hidden md:flex items-center gap-4"><span class="text-slate-500 dark:text-slate-400 text-sm">跨链与 Layer 2 深度解析</span><button class="px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors text-sm font-medium">标记为已完成</button><button aria-label="Switch to light mode" class="p-2 rounded-lg text-slate-400 hover:text-cyan-400 hover:bg-slate-800/50 dark:hover:bg-slate-800/50 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun w-5 h-5" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg></button><div role="group" aria-label="Language" class="inline-flex items-center gap-1 rounded-lg border border-slate-700/70 bg-slate-900/40 p-1 text-sm text-slate-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe h-4 w-4" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg><button type="button" aria-label="English" aria-pressed="false" class="rounded-md px-2 py-0.5 transition-colors hover:bg-slate-800 hover:text-white">EN</button><button type="button" aria-label="中文" aria-pressed="true" class="rounded-md px-2 py-0.5 transition-colors bg-cyan-500/15 text-cyan-200 ring-1 ring-cyan-400/30">中文</button></div></div><div class="flex md:hidden items-center gap-2"><button class="px-3 py-1.5 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors text-sm font-medium">标记为已完成</button><button aria-label="打开课程列表" class="p-2 rounded-lg border border-slate-200 bg-white/80 text-slate-600 transition-colors hover:text-cyan-500 dark:border-slate-700 dark:bg-slate-900/80 dark:text-slate-300 dark:hover:text-cyan-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list w-5 h-5" aria-hidden="true"><path d="M3 5h.01"></path><path d="M3 12h.01"></path><path d="M3 19h.01"></path><path d="M8 5h13"></path><path d="M8 12h13"></path><path d="M8 19h13"></path></svg></button><button aria-label="Open menu" class="sm:hidden p-2 text-slate-500 dark:text-slate-400 hover:text-cyan-500 dark:hover:text-cyan-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu w-5 h-5" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg></button></div></div></div></nav><main class="container mx-auto px-4 py-8 max-w-4xl"><div class="p-8 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-700/50 rounded-xl"><div class="mb-8"><div class="inline-block px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-full mb-4"><span class="text-cyan-400 text-sm font-medium">跨链与 Layer 2 深度解析</span></div><span class="text-slate-500 dark:text-slate-400 text-sm">预计阅读 4 分钟</span><h1 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">L2 与跨链桥风险模拟器</h1></div><div class="mb-8"><a href="/zh/labs/l2-risk" aria-label="开始实战 →" class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-rose-500 to-orange-500 hover:from-rose-600 hover:to-orange-600 text-white rounded-lg font-medium transition-all"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wrench w-4 h-4" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z"></path></svg>开始实战 →</a></div><div class="prose dark:prose-invert max-w-none"><div class="font-sans text-base markdown-content"><h1 class="text-3xl md:text-4xl font-black text-white mt-12 mb-8 border-b border-slate-800 pb-4">L2 与跨链桥风险模拟器</h1>
+<blockquote class="border-l-4 border-cyan-500/30 bg-slate-900/50 p-4 text-slate-400 rounded-r-lg my-4 text-base italic">
+<p class="mb-4 text-slate-300 leading-7">跨链桥不是一个简单的“转账按钮”。它背后是一组 finality 假设、合约、验证者、Relayer、流动性提供者、消息格式和失败路径。本实验帮助你在移动真实价值前先比较这些假设。</p>
+</blockquote>
+<p class="mb-4 text-slate-300 leading-7">Last reviewed: 2026-06-25</p>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">目录</h2>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%A1%A5%E9%A3%8E%E9%99%A9%E9%9C%80%E8%A6%81%E6%A8%A1%E6%8B%9F%E5%99%A8" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">为什么桥风险需要模拟器 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="#%E5%9B%9B%E4%B8%AA%E6%A0%B8%E5%BF%83%E9%97%AE%E9%A2%98" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">四个核心问题 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="#%E8%B7%A8%E9%93%BE%E8%B7%AF%E5%BE%84%E7%B1%BB%E5%9E%8B" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">跨链路径类型 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="#finality-%E4%B8%8D%E7%AD%89%E4%BA%8E-ui-%E7%A1%AE%E8%AE%A4" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Finality 不等于 UI 确认 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="#%E6%B6%88%E6%81%AF%E4%BC%A0%E9%80%92%E4%B8%8E%E5%A4%B1%E8%B4%A5%E6%A8%A1%E5%BC%8F" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">消息传递与失败模式 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="#%E5%8A%A8%E6%89%8B%E5%AE%9E%E9%AA%8C" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">动手实验 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="#%E5%87%AD%E8%AF%81%E8%BE%B9%E7%95%8C" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">凭证边界 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="#%E6%A3%80%E6%9F%A5%E6%B8%85%E5%8D%95" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">检查清单 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="#%E5%BB%B6%E4%BC%B8%E9%98%85%E8%AF%BB" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">延伸阅读 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+</ul>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">为什么桥风险需要模拟器</h2>
+<p class="mb-4 text-slate-300 leading-7">很多学习者比较跨链桥时，首先看速度和费用。这有用，但远远不够。</p>
+<p class="mb-4 text-slate-300 leading-7">一条跨链路径还隐藏着这些问题：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">哪条链或哪个合约是信任锚？</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">谁能验证源链事件真实发生？</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">这条路径多久之后才算 final？</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">如果排序器、Relayer、验证者、流动性提供者或桥合约失败，会发生什么？</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">应用只是跳转到桥，还是把桥接流程嵌入自己的产品，并解释跨链消息？</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">/labs/l2-risk</code> 模拟器把这些问题变成一个小型风险模型。它不会连接钱包、提交跨链交易、给桥排名，也不会建议你移动资产。</p>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">四个核心问题</h2>
+<p class="mb-4 text-slate-300 leading-7">使用任何跨链桥或跨链消息路径前，先问四个问题：</p>
+<ol class="ml-2 mb-4 space-y-1 counter-reset-list">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Finality：</strong> 源链事件什么时候才足够安全，可以被目标链执行？</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Trust：</strong> 哪些合约、验证者、委员会、Prover、Relayer 或治理密钥必须正确运行？</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Message：</strong> 这是资产转移、包装资产、流动性快速填充，还是任意应用 calldata？</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><strong class="text-white font-bold">Failure：</strong> 如果路径出错，谁能重试、退款、挑战、暂停或救援？</div></li>
+</ol>
+<p class="mb-4 text-slate-300 leading-7">最安全的用户流程往往很朴素：读文档、小额测试、理解提款等待期，大额优先考虑规范路径。</p>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">跨链路径类型</h2>
+<p class="mb-4 text-slate-300 leading-7"><a href="https://ethereum.org/en/developers/docs/bridges/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">ethereum.org 的桥文档 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> 将桥分为多种类别，包括原生桥、外部验证桥、消息传递和流动性网络。模拟器采用类似的教学分类。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="my-6 overflow-x-auto rounded-lg border border-slate-700"><table class="w-full text-sm"><thead><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">路径类型</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">常见好处</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">主要风险视角</th></tr></thead><tbody><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Optimistic Rollup 原生桥</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">L1 锚定较强</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">挑战期、watcher 可用性、升级密钥</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">ZK Rollup 原生桥</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">基于有效性证明退出</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Prover 可用性、Verifier 漏洞、升级密钥</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">外部验证桥</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">快速、支持多链</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">验证者被攻破、包装资产记账</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">通用消息传递</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">支持应用级跨链动作</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Endpoint 配置、防重放、Relayer 延迟</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">流动性网络 / 快速桥</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">用户快速到账</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">流动性深度、Solver 结算、规范路径兜底</td></tr></tbody></table></div>
+<p class="mb-4 text-slate-300 leading-7">这不是排名。同一条路径可能适合一种场景，也可能不适合另一种场景。</p>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">Finality 不等于 UI 确认</h2>
+<p class="mb-4 text-slate-300 leading-7">桥的 UI 可能显示“已提交”或“已到账”，但完整安全模型还没有结束。</p>
+<p class="mb-4 text-slate-300 leading-7">例子：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Optimistic Rollup 提款可能已经显示在界面上，但仍要等待挑战期。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">ZK Rollup 提款可能需要等待证明生成和验证。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">快速桥可能让用户先到账，但流动性提供者稍后才结算。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">通用消息可能在源链有效，但仍需要 Relayer 投递和目标应用执行。</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">Finality 是安全状态，不只是进度条。</p>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">消息传递与失败模式</h2>
+<p class="mb-4 text-slate-300 leading-7">跨链风险不只发生在资产桥。</p>
+<p class="mb-4 text-slate-300 leading-7">当应用发送跨链消息时，漏洞可能出现在多个层次：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Chain ID 或 endpoint 地址配置错误。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">缺少防重放。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">目标应用接受了来自不可信发送方的消息。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Relayer 或 Executor 停止投递消息。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">治理升级改变了消息验证方式。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">排序器停机延迟打包或证明生成。</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">这就是为什么“内嵌桥接流程”会让应用本身变成风险面。如果应用替用户选择路径，应用也应该解释失败状态。</p>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">动手实验</h2>
+<p class="mb-4 text-slate-300 leading-7">打开：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">English: <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">/en/labs/l2-risk</code></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">中文: <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">/zh/labs/l2-risk</code></div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">建议按这个顺序操作：</p>
+<ol class="ml-2 mb-4 space-y-1 counter-reset-list">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">从默认的 Optimistic Rollup 原生桥提款场景开始。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">切换到 ZK Rollup 原生桥，对比 finality 步骤。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">切换到外部验证桥，并把金额区间改为“大额”。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">切换排序器降级，观察可用性警告。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">将应用集成方式从跳转改为内嵌，观察应用如何进入风险面。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">在想象真实路径前，阅读检查清单。</div></li>
+</ol>
+<p class="mb-4 text-slate-300 leading-7">风险分只是教学辅助，不是实时安全评级。</p>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">凭证边界</h2>
+<p class="mb-4 text-slate-300 leading-7">Phase 5 还要求项目连接学习身份和凭证，但不能过度承诺。</p>
+<p class="mb-4 text-slate-300 leading-7">本仓库已经在 <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">contracts/</code> 下有一个 ERC-721 证书合约。这个合约只是一个可能设计，不是唯一凭证架构。</p>
+<p class="mb-4 text-slate-300 leading-7">学习凭证可以有多种表示方式：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">ERC-721 证书。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">ERC-1155 多证书。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">不可转让或 soulbound token。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">链下签名证明。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">DID / Verifiable Credential。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Attestation registry。</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">每种选择在隐私、撤销、成本、可移植性和信任模型上都不同。在改变任何合约前，凭证架构取舍需要先单独记录。</p>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">检查清单</h2>
+<p class="mb-4 text-slate-300 leading-7">学完这一讲后，你应该能解释：</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">为什么桥风险不只是费用和速度问题。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Optimistic、ZK、外部验证、消息传递和流动性路径的 finality 差异。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">为什么排序器停机可能变成用户可见风险。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">为什么任意消息传递需要应用级防重放和 endpoint 检查。</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">为什么学习凭证不能默认等同于“发 NFT 证书”。</div></li>
+</ul>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">延伸阅读</h2>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="https://ethereum.org/en/developers/docs/bridges/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">ethereum.org: Bridges <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="https://ethereum.org/en/layer-2/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">ethereum.org: Layer 2 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="https://l2beat.com/scaling/risk" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">L2BEAT Risk Framework <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="https://www.w3.org/TR/did-core/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">W3C DID Core <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="https://www.w3.org/TR/vc-data-model-2.0/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">W3C Verifiable Credentials Data Model 2.0 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="https://github.com/beihaili/Get-Started-with-Web3/blob/main/docs/strategy/2026-06-25-credential-architecture-tradeoff.md" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Credential architecture tradeoff note <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+</ul></div></div><div class="mt-8 pt-8 border-t border-slate-200 dark:border-slate-700"><div class="space-y-4"><div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 text-center"><div class="flex items-center justify-center gap-2 mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-circuit w-6 h-6 text-purple-400" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M9 13a4.5 4.5 0 0 0 3-4"></path><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path d="M6 18a4 4 0 0 1-1.967-.516"></path><path d="M12 13h4"></path><path d="M12 18h6a2 2 0 0 1 2 2v1"></path><path d="M12 8h8"></path><path d="M16 8V5a2 2 0 0 1 2-2"></path><circle cx="16" cy="13" r=".5"></circle><circle cx="18" cy="3" r=".5"></circle><circle cx="20" cy="21" r=".5"></circle><circle cx="20" cy="8" r=".5"></circle></svg><h4 class="text-white font-bold">闯关测验</h4></div><p class="text-slate-300 mb-6">完成 <strong>5 道题目</strong>，需要<strong> 全部答对 </strong>才能通关下一章节</p><button class="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-bold py-3 px-8 rounded-lg transition-all transform hover:scale-105 shadow-lg shadow-purple-500/20">🚀 开始挑战</button></div></div></div><div class="flex gap-4 mt-8 pt-8 border-t border-slate-200 dark:border-slate-700"><a class="px-4 sm:px-6 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-900 dark:text-white rounded-lg transition-colors text-sm sm:text-base" href="/zh/learn/module-9/9-5" data-discover="true">← <span class="hidden sm:inline">上一讲</span><span class="sm:hidden">上一</span></a><div class="px-4 sm:px-6 py-2 bg-slate-100/50 dark:bg-slate-800/50 text-slate-600 rounded-lg cursor-not-allowed ml-auto text-sm sm:text-base"><span class="hidden sm:inline">下一讲</span><span class="sm:hidden">下一</span> →</div></div><div class="mt-8 pt-8 border-t border-slate-700 flex flex-col items-center gap-3"><p class="text-slate-400 text-sm">如果这节课对你有帮助，欢迎支持作者继续创作 ☕</p><a href="https://buymeacoffee.com/beihai" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-pink-500 to-orange-500
+          hover:from-pink-400 hover:to-orange-400 text-white font-semibold rounded-full
+          transition-all hover:scale-105 shadow-lg shadow-pink-500/20"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart w-4 h-4" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg>感谢作者 · Buy Me a Coffee</a></div></div></main><div class="fixed bottom-6 right-6 z-50"><button aria-label="AI 助教" class="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white p-4 rounded-full shadow-2xl shadow-purple-500/20 transition-all transform hover:scale-105"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-circuit w-6 h-6" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M9 13a4.5 4.5 0 0 0 3-4"></path><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path d="M6 18a4 4 0 0 1-1.967-.516"></path><path d="M12 13h4"></path><path d="M12 18h6a2 2 0 0 1 2 2v1"></path><path d="M12 8h8"></path><path d="M16 8V5a2 2 0 0 1 2-2"></path><circle cx="16" cy="13" r=".5"></circle><circle cx="18" cy="3" r=".5"></circle><circle cx="20" cy="21" r=".5"></circle><circle cx="20" cy="8" r=".5"></circle></svg></button></div></div></div></div>
+  
+
+</body></html>
