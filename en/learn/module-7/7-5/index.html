@@ -1,0 +1,349 @@
+<!DOCTYPE html><html lang="en" class="dark"><head>
+    <meta charset="UTF-8">
+    <script>
+      // Sync theme from localStorage before first paint to prevent FOUC
+      try {
+        const stored = JSON.parse(localStorage.getItem('web3-theme-store'));
+        if (!stored || stored.state.theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {
+        document.documentElement.classList.add('dark');
+      }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>钱包互操作与签名实验 | Web3 Builder 实战 | Web3 Starter</title>
+
+    <!-- SEO基础标签 -->
+    <meta name="description" content="钱包互操作与签名实验 - Web3 Builder 实战 tutorial">
+    <meta name="keywords" content="Web3, 区块链, 比特币, 教程, 入门, blockchain, bitcoin, tutorial, 加密货币, cryptocurrency, 以太坊, ethereum">
+    <meta name="author" content="Bei Hai">
+    <link rel="canonical" href="https://bhbtc.xyz/en/learn/module-7/7-5">
+
+    <!-- Open Graph (社交分享) -->
+    <meta property="og:title" content="钱包互操作与签名实验 | Web3 Builder 实战 | Web3 Starter">
+    <meta property="og:description" content="钱包互操作与签名实验 - Web3 Builder 实战 tutorial">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://bhbtc.xyz/en/learn/module-7/7-5">
+    <meta property="og:site_name" content="Get Started With Web3">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://bhbtc.xyz/logo.png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@bhbtc1337">
+    <meta name="twitter:title" content="钱包互操作与签名实验 | Web3 Builder 实战 | Web3 Starter">
+    <meta name="twitter:description" content="钱包互操作与签名实验 - Web3 Builder 实战 tutorial">
+    <meta name="twitter:image" content="https://bhbtc.xyz/logo.png">
+
+    <!-- Google Analytics 4 -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-91JXFFZKRV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-91JXFFZKRV', { send_page_view: false });
+    </script>
+
+    <!-- Cloudflare Web Analytics -->
+    <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;e9421c23377646fd87f949f35958cbf6&quot;}"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <!-- PWA相关 -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/logo.png">
+    <script type="module" crossorigin="" src="/assets/index-D_1uyk9l.js"></script>
+    <link rel="modulepreload" crossorigin="" href="/assets/rolldown-runtime-NMqb_1LM.js">
+    <link rel="modulepreload" crossorigin="" href="/assets/markdown-CDffcUNc.js">
+    <link rel="modulepreload" crossorigin="" href="/assets/react-vendor-T9ErgOfk.js">
+    <link rel="modulepreload" crossorigin="" href="/assets/ui-DFjLkEAh.js">
+    <link rel="modulepreload" crossorigin="" href="/assets/store-C-1owRdD.js">
+    <link rel="stylesheet" crossorigin="" href="/assets/index-pXsb9D2N.css">
+  <link rel="modulepreload" as="script" crossorigin="" href="http://localhost:4173/assets/LandingPage-C3giNsxs.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:4173/assets/LanguageSwitcher-BIiXBVMI.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:4173/assets/useUserStore-CIqzScUa.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:4173/assets/interactive-Yj2u7Uds.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:4173/assets/sponsorData-BxGlDKDb.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:4173/assets/useClipboard-CKKvsxPM.js"><link rel="alternate" hreflang="zh" href="https://bhbtc.xyz/zh/learn/module-7/7-5"><script type="application/ld+json" data-seo-head="true">{"@context":"https://schema.org","@type":"Article","name":"钱包互操作与签名实验 | Web3 Builder 实战 | Web3 Starter","description":"钱包互操作与签名实验 - Web3 Builder 实战 tutorial","url":"https://bhbtc.xyz/en/learn/module-7/7-5","inLanguage":"en","isPartOf":{"@type":"Course","name":"Web3 Builder 实战"}}</script><script type="application/ld+json" data-platform-ld="true">{"@context":"https://schema.org","@type":"WebSite","name":"Get Started with Web3","url":"https://bhbtc.xyz/","publisher":{"@type":"Organization","name":"Get Started with Web3","url":"https://github.com/beihaili/Get-Started-with-Web3"}}</script><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:4173/assets/ReaderPage-Cnyz15bJ.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:4173/assets/ShareCard-TlszfGcd.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:4173/assets/ThemeToggle-Dr25amX_.js"><link rel="modulepreload" as="script" crossorigin="" href="http://localhost:4173/assets/MobileNav-Cyd7009s.js"></head>
+  <body>
+    <!-- SPA路由恢复脚本 -->
+    <script>
+      (function () {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+
+    <div id="root"><div class="app"><div class="min-h-screen bg-slate-50 dark:bg-slate-950"><nav aria-label="Course navigation" class="sticky top-0 z-10 border-b border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-md"><div class="container mx-auto px-4 py-4 flex items-center justify-between"><a class="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-cyan-400 transition-colors" href="/en/dashboard" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left w-5 h-5" aria-hidden="true"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg><span>Back to Courses</span></a><div class="flex items-center gap-4"><div class="hidden md:flex items-center gap-4"><span class="text-slate-500 dark:text-slate-400 text-sm">Web3 Builder 实战</span><button class="px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors text-sm font-medium">Mark as Complete</button><button aria-label="Switch to light mode" class="p-2 rounded-lg text-slate-400 hover:text-cyan-400 hover:bg-slate-800/50 dark:hover:bg-slate-800/50 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun w-5 h-5" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg></button><div role="group" aria-label="Language" class="inline-flex items-center gap-1 rounded-lg border border-slate-700/70 bg-slate-900/40 p-1 text-sm text-slate-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe h-4 w-4" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg><button type="button" aria-label="English" aria-pressed="true" class="rounded-md px-2 py-0.5 transition-colors bg-cyan-500/15 text-cyan-200 ring-1 ring-cyan-400/30">EN</button><button type="button" aria-label="中文" aria-pressed="false" class="rounded-md px-2 py-0.5 transition-colors hover:bg-slate-800 hover:text-white">中文</button></div></div><div class="flex md:hidden items-center gap-2"><button class="px-3 py-1.5 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors text-sm font-medium">Mark as Complete</button><button aria-label="Open lesson list" class="p-2 rounded-lg border border-slate-200 bg-white/80 text-slate-600 transition-colors hover:text-cyan-500 dark:border-slate-700 dark:bg-slate-900/80 dark:text-slate-300 dark:hover:text-cyan-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list w-5 h-5" aria-hidden="true"><path d="M3 5h.01"></path><path d="M3 12h.01"></path><path d="M3 19h.01"></path><path d="M8 5h13"></path><path d="M8 12h13"></path><path d="M8 19h13"></path></svg></button><button aria-label="Open menu" class="sm:hidden p-2 text-slate-500 dark:text-slate-400 hover:text-cyan-500 dark:hover:text-cyan-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu w-5 h-5" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg></button></div></div></div></nav><main class="container mx-auto px-4 py-8 max-w-4xl"><div class="p-8 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-700/50 rounded-xl"><div class="mb-8"><div class="inline-block px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-full mb-4"><span class="text-cyan-400 text-sm font-medium">Web3 Builder 实战</span></div><span class="text-slate-500 dark:text-slate-400 text-sm">6 min read</span><h1 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">钱包互操作与签名实验</h1></div><div class="mb-8"><a href="/en/labs/wallet" aria-label="Start Lab →" class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-rose-500 to-orange-500 hover:from-rose-600 hover:to-orange-600 text-white rounded-lg font-medium transition-all"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wrench w-4 h-4" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z"></path></svg>Start Lab →</a></div><div class="prose dark:prose-invert max-w-none"><div class="font-sans text-base markdown-content"><h1 class="text-3xl md:text-4xl font-black text-white mt-12 mb-8 border-b border-slate-800 pb-4">Wallet Interoperability and Signing Lab</h1>
+<div class="flex flex-wrap justify-center gap-2 my-6"><span class="inline-flex m-1 align-middle"><img alt="status" loading="lazy" decoding="async" class="rounded-lg max-w-full h-auto shadow-lg" src="https://img.shields.io/badge/status-completed-success" style="max-height: 500px;"></span>
+<span class="inline-flex m-1 align-middle"><img alt="author" loading="lazy" decoding="async" class="rounded-lg max-w-full h-auto shadow-lg" src="https://img.shields.io/badge/author-beihaili-blue" style="max-height: 500px;"></span>
+<span class="inline-flex m-1 align-middle"><img alt="date" loading="lazy" decoding="async" class="rounded-lg max-w-full h-auto shadow-lg" src="https://img.shields.io/badge/date-2026--06-orange" style="max-height: 500px;"></span>
+<span class="inline-flex m-1 align-middle"><img alt="difficulty" loading="lazy" decoding="async" class="rounded-lg max-w-full h-auto shadow-lg" src="https://img.shields.io/badge/difficulty-intermediate-yellow" style="max-height: 500px;"></span></div>
+<blockquote class="border-l-4 border-cyan-500/30 bg-slate-900/50 p-4 text-slate-400 rounded-r-lg my-4 text-base italic">
+<p class="mb-4 text-slate-300 leading-7">Wallet connection is more than one button. A modern DApp needs to handle multi-wallet discovery, network context, chain switching, message signing, and privacy boundaries. This lesson explains the <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">/labs/wallet</code> experience piece by piece.</p>
+</blockquote>
+<p class="mb-4 text-slate-300 leading-7">Last reviewed: 2026-06-25</p>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">Table of Contents</h2>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="#why-wallet-interoperability-matters" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Why Wallet Interoperability Matters <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="#what-the-lab-does" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">What the Lab Does <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="#what-eip-6963-solves" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">What EIP-6963 Solves <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="#what-an-eip-1193-provider-is" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">What an EIP-1193 Provider Is <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="#connecting-is-not-logging-in" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Connecting Is Not Logging In <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="#message-signing-is-not-a-transaction" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Message Signing Is Not a Transaction <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="#why-chain-switching-needs-an-allowlist" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Why Chain Switching Needs an Allowlist <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="#privacy-and-analytics-boundaries" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Privacy and Analytics Boundaries <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="#try-the-lab" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Try the Lab <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="#learning-checklist" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Learning Checklist <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="#further-reading" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Further Reading <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+</ul>
+<hr class="my-8 border-slate-800">
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">Why Wallet Interoperability Matters</h2>
+<p class="mb-4 text-slate-300 leading-7">Many tutorials compress wallet UX into:</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">text</div><button aria-label="Copy code" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="Copy code"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">text</div><button aria-label="Copy code" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="Copy code"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>Click Connect Wallet -&gt; get an address -&gt; use the DApp</code></pre></div></pre></div>
+<p class="mb-4 text-slate-300 leading-7">Real products have more moving parts:</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">A user may install multiple wallet extensions.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Different wallets may inject different providers.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">The page needs to know the current chain ID.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">The user may need to switch to a supported network.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Message signing, transaction signing, and transaction sending are separate actions.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Addresses, signatures, and provider objects should not be sent to analytics casually.</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">The Get Started with Web3 Wallet Lab is not a production wallet framework. It is a small educational surface that makes those moving parts observable.</p>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">What the Lab Does</h2>
+<p class="mb-4 text-slate-300 leading-7">Open the lab:</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">English: <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">/en/labs/wallet</code></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Chinese: <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">/zh/labs/wallet</code></div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">The current MVP supports:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="my-6 overflow-x-auto rounded-lg border border-slate-700"><table class="w-full text-sm"><thead><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Capability</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Learning goal</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Risk boundary</th></tr></thead><tbody><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Discover injected wallets</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">See which EVM wallet providers exist in the browser</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Do not collect wallet fingerprints</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Connect wallet</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Understand that <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">eth_requestAccounts</code> returns accounts</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Do not send raw addresses to analytics</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Show network</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Understand chain ID and chain name</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Do not auto-add unknown RPC settings</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Switch network</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Try allowlisted <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">wallet_switchEthereumChain</code></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Do not guide bridging or asset movement</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Sign message</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Distinguish message signing from transactions</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Do not create sessions or upload signatures</td></tr></tbody></table></div>
+<p class="mb-4 text-slate-300 leading-7">If the browser has no wallet extension, the page shows a safe empty state. That is part of the lesson: a good DApp should explain what is missing instead of crashing or failing silently.</p>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">What EIP-6963 Solves</h2>
+<p class="mb-4 text-slate-300 leading-7">Older browser wallets usually exposed their provider through <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">window.ethereum</code>. If a user installed multiple wallets, each wallet competed for the same global slot:</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">text</div><button aria-label="Copy code" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="Copy code"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">text</div><button aria-label="Copy code" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="Copy code"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>Wallet A injects window.ethereum
+Wallet B also injects window.ethereum
+The last wallet to load wins</code></pre></div></pre></div>
+<p class="mb-4 text-slate-300 leading-7">That means the page may not know which wallet the user intended to use.</p>
+<p class="mb-4 text-slate-300 leading-7"><a href="https://eips.ethereum.org/EIPS/eip-6963" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">EIP-6963 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> is a Final Interface standard for discovering multiple injected wallet providers through window events. It defines two key events:</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">text</div><button aria-label="Copy code" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="Copy code"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">text</div><button aria-label="Copy code" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="Copy code"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>eip6963:requestProvider
+eip6963:announceProvider</code></pre></div></pre></div>
+<p class="mb-4 text-slate-300 leading-7">The page listens for <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">announceProvider</code>, then dispatches <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">requestProvider</code>. Wallets respond by announcing themselves. The DApp can then show wallet choices instead of blindly using one global <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">window.ethereum</code>.</p>
+<p class="mb-4 text-slate-300 leading-7">Provider info commonly includes:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="my-6 overflow-x-auto rounded-lg border border-slate-700"><table class="w-full text-sm"><thead><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Field</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Meaning</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Caution</th></tr></thead><tbody><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">uuid</code></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">A unique provider ID for the current page lifetime</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Not a user identity</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">name</code></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Human-readable wallet name</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Can still be imitated</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">icon</code></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Wallet icon URI</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">SVG icons must not execute scripts</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">rdns</code></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Reverse-DNS wallet identifier</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Self-attested; not strong verification</td></tr></tbody></table></div>
+<p class="mb-4 text-slate-300 leading-7">The lab first listens for EIP-6963 announcements. If none are available, it falls back to <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">window.ethereum</code>.</p>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">What an EIP-1193 Provider Is</h2>
+<p class="mb-4 text-slate-300 leading-7"><a href="https://eips.ethereum.org/EIPS/eip-1193" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">EIP-1193 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a> is a Final Ethereum Provider JavaScript API standard. It defines how a DApp talks to a wallet provider. For frontend developers, the central operation is:</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">js</div><button aria-label="Copy code" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="Copy code"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">js</div><button aria-label="Copy code" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="Copy code"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>await provider.request({
+  method: 'eth_requestAccounts',
+});</code></pre></div></pre></div>
+<p class="mb-4 text-slate-300 leading-7">Common methods:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="my-6 overflow-x-auto rounded-lg border border-slate-700"><table class="w-full text-sm"><thead><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Method</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Purpose</th><th class="px-4 py-3 text-left text-slate-200 font-bold border-b border-slate-700">Used by this lab</th></tr></thead><tbody><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">eth_requestAccounts</code></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Ask the user to expose accounts</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Yes</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">eth_chainId</code></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Read current network chain ID</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Yes</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">wallet_switchEthereumChain</code></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Ask the wallet to switch networks</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Yes</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">personal_sign</code></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Ask the user to sign a message</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Yes</td></tr><tr class="even:bg-slate-900/40 odd:bg-slate-900/20"><td class="px-4 py-3 text-slate-300 border-b border-slate-800"><code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">eth_sendTransaction</code></td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">Send a transaction</td><td class="px-4 py-3 text-slate-300 border-b border-slate-800">No</td></tr></tbody></table></div>
+<p class="mb-4 text-slate-300 leading-7">This is why the lab can stay dependency-free: it teaches the provider API directly before adding wagmi, RainbowKit, Reown AppKit, or another abstraction.</p>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">Connecting Is Not Logging In</h2>
+<p class="mb-4 text-slate-300 leading-7">Connecting a wallet only exposes an account address and gives the current page permission to call some wallet capabilities. It does not automatically mean:</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">The user has completed production authentication.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">A server has verified a nonce.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">A long-lived session exists.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">The user approved any transaction or token allowance.</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">Production Sign-In with Ethereum requires server-issued nonces, signature verification, replay protection, and session management. A static GitHub Pages app cannot complete that trust loop by itself.</p>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">Message Signing Is Not a Transaction</h2>
+<p class="mb-4 text-slate-300 leading-7">The lab signs an educational message like this:</p>
+<div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">text</div><button aria-label="Copy code" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="Copy code"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><div class="relative my-6 group"><div class="absolute top-0 left-0 px-3 py-1 bg-slate-700 text-slate-400 text-xs font-mono rounded-tl-lg rounded-br-lg z-10">text</div><button aria-label="Copy code" class="absolute top-3 right-3 p-1.5 rounded bg-slate-700 hover:bg-slate-600 text-slate-400 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="Copy code"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy w-4 h-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button><pre class="bg-slate-950 p-4 pt-8 rounded-lg font-mono text-sm border border-slate-800 text-green-400 overflow-x-auto shadow-inner"><code>Get Started with Web3 Wallet Lab
+Domain: bhbtc.xyz
+Purpose: Learn wallet message signing. No transaction, payment, or login session is created.
+Issued At: ...</code></pre></div></pre></div>
+<p class="mb-4 text-slate-300 leading-7">The goal is to observe the wallet prompt and the returned signature.</p>
+<p class="mb-4 text-slate-300 leading-7">It does not:</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Send a transaction.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Move assets.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Approve tokens.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Create a production login session.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Upload the signature to a server.</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">Still read every signing prompt carefully. Real phishing pages often exploit users who sign without reading the message.</p>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">Why Chain Switching Needs an Allowlist</h2>
+<p class="mb-4 text-slate-300 leading-7">The lab only switches between a small set of networks:</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Ethereum Mainnet learning context.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Sepolia Testnet learning context.</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">That restraint matters. A DApp should not ask users to switch to arbitrary networks, and it should not silently add unknown RPC settings. Network choice affects:</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Where assets live.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Transaction fees.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Whether contract addresses are correct.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">RPC and block explorer trust.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Whether the user may confuse testnet and mainnet.</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">For an educational lab, an allowlist is safer than "support every chain."</p>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">Privacy and Analytics Boundaries</h2>
+<p class="mb-4 text-slate-300 leading-7">Wallet Lab allows coarse events such as:</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Opening the lab.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Clicking connect.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Clicking switch network.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Clicking sign message.</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">It must not send:</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Raw wallet addresses.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">ENS names.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Signatures.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Full signed messages.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Provider objects.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Transaction payloads.</div></li>
+</ul>
+<p class="mb-4 text-slate-300 leading-7">If the project ever needs connection context, it should send a coarse boolean such as <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">connected: true</code>, not an address.</p>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">Try the Lab</h2>
+<ol class="ml-2 mb-4 space-y-1 counter-reset-list">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Open <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">/en/labs/wallet</code>.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">If you have no wallet extension, read the empty state.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">If you have an EVM wallet, connect it.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Check the wallet name, shortened account, and network label.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Switch to Sepolia.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Sign the learning message.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Confirm that the page shows only a signature preview, not the full signature.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Disconnect locally and observe the cleared state.</div></li>
+</ol>
+<p class="mb-4 text-slate-300 leading-7">Questions to ask:</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">If multiple wallets are installed, can the page list more than one option?</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Does the wallet prompt clearly say that no login session is created?</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">If the wallet rejects a network switch, what should the page explain?</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Why is local disconnect different from revoking permissions inside the wallet UI?</div></li>
+</ul>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">Learning Checklist</h2>
+<p class="mb-4 text-slate-300 leading-7">After this lesson, you should be able to explain:</p>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Why EIP-6963 is better than relying on a single <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">window.ethereum</code> in multi-wallet browsers.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">What the EIP-1193 provider <code class="bg-slate-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm font-mono border border-slate-700">request()</code> method does.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">The difference between connecting, message signing, transaction signing, and sending a transaction.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Why chain switching should use an allowlist.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Why raw addresses and signatures should not enter analytics.</div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1">Why a static site should not claim production authentication.</div></li>
+</ul>
+<h2 class="text-2xl md:text-3xl font-bold text-white mt-10 mb-6">Further Reading</h2>
+<ul class="ml-2 mb-4 space-y-1">
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="https://eips.ethereum.org/EIPS/eip-6963" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">EIP-6963: Multi Injected Provider Discovery <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="https://eips.ethereum.org/EIPS/eip-1193" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">EIP-1193: Ethereum Provider JavaScript API <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="https://github.com/beihaili/Get-Started-with-Web3/blob/main/docs/strategy/2026-06-24-wallet-lab-architecture.md" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Wallet Lab architecture note <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+<li class="ml-4 flex items-start gap-3 mb-1"><div class="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2.5 shrink-0"></div><div class="flex-1"><a href="https://eips.ethereum.org/EIPS/eip-4361" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 transition-colors inline-flex items-center gap-1">Sign-In with Ethereum / ERC-4361 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link w-3 h-3" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg></a></div></li>
+</ul></div></div><div class="mt-8 pt-8 border-t border-slate-200 dark:border-slate-700"><div class="space-y-4"><div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 text-center"><div class="flex items-center justify-center gap-2 mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-circuit w-6 h-6 text-purple-400" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M9 13a4.5 4.5 0 0 0 3-4"></path><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path d="M6 18a4 4 0 0 1-1.967-.516"></path><path d="M12 13h4"></path><path d="M12 18h6a2 2 0 0 1 2 2v1"></path><path d="M12 8h8"></path><path d="M16 8V5a2 2 0 0 1 2-2"></path><circle cx="16" cy="13" r=".5"></circle><circle cx="18" cy="3" r=".5"></circle><circle cx="20" cy="21" r=".5"></circle><circle cx="20" cy="8" r=".5"></circle></svg><h4 class="text-white font-bold">Challenge Quiz</h4></div><p class="text-slate-300 mb-6">Complete <strong>5 questions</strong>, you need to get <strong>all correct</strong> to unlock the next chapter</p><button class="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-bold py-3 px-8 rounded-lg transition-all transform hover:scale-105 shadow-lg shadow-purple-500/20">🚀 Start Challenge</button></div></div></div><div class="flex gap-4 mt-8 pt-8 border-t border-slate-200 dark:border-slate-700"><a class="px-4 sm:px-6 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-900 dark:text-white rounded-lg transition-colors text-sm sm:text-base" href="/en/learn/module-7/7-4" data-discover="true">← <span class="hidden sm:inline">Previous Lesson</span><span class="sm:hidden">Previous</span></a><div class="px-4 sm:px-6 py-2 bg-slate-100/50 dark:bg-slate-800/50 text-slate-600 rounded-lg cursor-not-allowed ml-auto text-sm sm:text-base"><span class="hidden sm:inline">Next Lesson</span><span class="sm:hidden">Next</span> →</div></div><div class="mt-8 pt-8 border-t border-slate-700 flex flex-col items-center gap-3"><p class="text-slate-400 text-sm">If this lesson was helpful, please consider supporting the author ☕</p><a href="https://buymeacoffee.com/beihai" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-pink-500 to-orange-500
+          hover:from-pink-400 hover:to-orange-400 text-white font-semibold rounded-full
+          transition-all hover:scale-105 shadow-lg shadow-pink-500/20"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart w-4 h-4" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg>Support Author · Buy Me a Coffee</a></div></div></main><div class="fixed bottom-6 right-6 z-50"><button aria-label="AI Tutor" class="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white p-4 rounded-full shadow-2xl shadow-purple-500/20 transition-all transform hover:scale-105"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-circuit w-6 h-6" aria-hidden="true"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M9 13a4.5 4.5 0 0 0 3-4"></path><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path d="M6 18a4 4 0 0 1-1.967-.516"></path><path d="M12 13h4"></path><path d="M12 18h6a2 2 0 0 1 2 2v1"></path><path d="M12 8h8"></path><path d="M16 8V5a2 2 0 0 1 2-2"></path><circle cx="16" cy="13" r=".5"></circle><circle cx="18" cy="3" r=".5"></circle><circle cx="20" cy="21" r=".5"></circle><circle cx="20" cy="8" r=".5"></circle></svg></button></div></div></div></div>
+  
+
+</body></html>

@@ -1,0 +1,1 @@
+var e="所有课程文章 | Web3 Starter",t="浏览 Web3 与比特币全部 59 讲课程，系统掌握区块链核心技术",a="所有课程文章",n="按模块浏览全部课程，点击直达课程内容",o="共 {{count}} 讲课程",u="{{count}} 讲",s={pageTitle:e,pageDesc:t,heading:a,subheading:n,lessonCount:o,moduleCount:u};export{s as default,a as heading,o as lessonCount,u as moduleCount,t as pageDesc,e as pageTitle,n as subheading};
