@@ -5,6 +5,19 @@
 ![date](https://img.shields.io/badge/Date-2025--06-orange)
 ![difficulty](https://img.shields.io/badge/Difficulty-Beginner-brightgreen)
 
+```mermaid
+flowchart TD
+    A[💻 Install Wallet & Get Test ETH] --> B[🔌 Connect to RPC Endpoint]
+    B --> C[📝 Create Transaction Object]
+    C --> D[🔑 Sign with Private Key]
+    D --> E[📡 Broadcast to Network]
+    E --> F[⛓️ Wait for Confirmation]
+    F --> G[✅ Transaction Complete!]
+    
+    style A fill:#1a1a2e,stroke:#e94560,color:#eee
+    style G fill:#1a1a2e,stroke:#00ff88,color:#eee
+```
+
 > 💡 Teaching yourself `Web3` isn't easy. As someone who recently got started with Web3, I've put together the simplest and most straightforward beginner's tutorial. By integrating quality open-source community resources, I hope to guide everyone from beginner to expert in Web3. Updated 1-3 lessons per week.
 >
 > Follow me on Twitter: [@bhbtc1337](https://twitter.com/bhbtc1337)
