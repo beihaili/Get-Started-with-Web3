@@ -400,6 +400,9 @@ SBT (Soulbound Token) is a non-transferable NFT used to represent identity, qual
 
 > 💡 **Tip**: The core idea behind Web3 identity is "Self-Sovereign Identity" — you fully own and control your identity data without depending on any centralized institution. This stands in stark contrast to the Web2 model where platforms control user data.
 
+
+> ⚠️ **Security Warning — Fake Wallet Extensions:** Only install MetaMask from the [official website](https://metamask.io/). Fake wallet extensions on the Chrome Web Store can steal your funds. Always verify the developer is "MetaMask" and the extension has millions of users.
+
 ## FAQ
 
 #### ❓ My seed phrase is lost. What should I do?
@@ -422,6 +425,9 @@ and more
 #### ❓ Does using MetaMask cost money?
 
 MetaMask itself is free, but making transactions on the blockchain requires paying network "gas fees." These fees don't go to MetaMask — they're paid to the network's validators.
+
+
+> ⚠️ **Security Warning — Phishing & Suspicious DApps:** As a beginner, be cautious with unknown websites asking you to "connect wallet." Legitimate services will never ask for your seed phrase or private key. When approving transactions, carefully check the recipient address and amount. Consider using a separate "burner wallet" with small amounts for testing new dApps.
 
 ## Summary
 
