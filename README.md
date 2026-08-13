@@ -219,4 +219,4 @@ Some outbound links may be affiliate or sponsor links and are disclosed where us
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=beihaili/Get-Started-with-Web3&type=Date)](https://star-history.com/#beihaili/Get-Started-with-Web3&Date)
+[![Star History Chart](https://star-history.dera.page/svg?repos=beihaili/Get-Started-with-Web3&type=Date)](https://star-history.dera.page/#beihaili/Get-Started-with-Web3&Date)

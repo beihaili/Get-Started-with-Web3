@@ -194,7 +194,7 @@ Web3 的世界需要你的声音和智慧。无论你是区块链专家还是刚
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=beihaili/Get-Started-with-Web3&type=Date)](https://star-history.com/#beihaili/Get-Started-with-Web3&Date)
+[![Star History Chart](https://star-history.dera.page/svg?repos=beihaili/Get-Started-with-Web3&type=Date)](https://star-history.dera.page/#beihaili/Get-Started-with-Web3&Date)
 
 ---
 

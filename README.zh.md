@@ -219,4 +219,4 @@ AI artifacts 通过 `artifactContract.version` 作为稳定 v1 公开接口维�
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=beihaili/Get-Started-with-Web3&type=Date)](https://star-history.com/#beihaili/Get-Started-with-Web3&Date)
+[![Star History Chart](https://star-history.dera.page/svg?repos=beihaili/Get-Started-with-Web3&type=Date)](https://star-history.dera.page/#beihaili/Get-Started-with-Web3&Date)
