@@ -103,5 +103,8 @@
     "zh/**/*.{md,MD}": [
       "node scripts/format-markdown.mjs"
     ]
+  },
+  "overrides": {
+    "fast-uri": "4.1.2"
   }
 }
