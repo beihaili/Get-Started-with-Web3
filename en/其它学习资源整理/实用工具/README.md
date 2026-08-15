@@ -194,6 +194,12 @@ ORDER BY 1 DESC
 - **Services**: Institutional-grade data, alpha discovery.
 - **Website**: [nansen.ai](https://www.nansen.ai/)
 
+**OpenChainBench** (Rating: 5/5)
+- **Purpose**: Independent open-source benchmarks for crypto infrastructure (RPC providers, gas oracles, L2 finality, bridges, prediction markets, RWA yield accuracy).
+- **Features**: 76 continuous benchmarks across 22 chains, three-region probing, CC BY 4.0 data, Prometheus-based open-source harnesses on GitHub.
+- **Coverage**: Ethereum, Arbitrum, Base, Optimism, Polygon, BNB, Avalanche, Solana, and 14 more chains.
+- **Website**: [openchainbench.com](https://openchainbench.com/)
+
 ### Block Explorers
 
 **Multi-Chain Explorer Comparison**:
