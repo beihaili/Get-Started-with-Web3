@@ -349,10 +349,16 @@ export function lookupGlossary(index, options = {}) {
   const query = String(options.query || '').trim();
   const limit = clampNumber(options.limit, 5, 1, 20);
   const results = index.glossary
-    .map((entry) => ({
-      ...entry,
-      score: query ? scoreText(query, `${entry.term}\n${entry.definition}\n${entry.category}`) : 1,
-    }))
+    .map((entry) => {
+      let score = 1;
+      if (query) {
+        const termScore = scoreText(query, entry.term);
+        const bodyScore = scoreText(query, `${entry.definition}\n${entry.category}`);
+        // 术语名命中应显著高于正文命中，避免“定义里提了一嘴”的条目挤掉术语本身。
+        score = termScore ? termScore * 10 + bodyScore : bodyScore;
+      }
+      return { ...entry, score };
+    })
     .filter((entry) => entry.score > 0)
     .sort((a, b) => b.score - a.score || a.term.localeCompare(b.term))
     .slice(0, limit);
