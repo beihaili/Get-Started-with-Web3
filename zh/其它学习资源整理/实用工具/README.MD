@@ -194,6 +194,12 @@ ORDER BY 1 DESC
 - ** 服务 **：机构级数据、 Alpha 发现。
 - ** 官网 **： [nansen.ai](https://www.nansen.ai/)
 
+**OpenChainBench** ⭐⭐⭐⭐⭐
+- ** 用途 **：加密基础设施的独立开源基准测试（RPC 服务商、Gas 预言机、L2 最终性、跨链桥、预测市场、RWA 收益率精度）。
+- ** 特色 **：覆盖 22 条链的 76 项持续基准测试、三地区探测、CC BY 4.0 数据、基于 Prometheus 的开源测试框架（GitHub 开源）。
+- ** 对象 **：以太坊、Arbitrum、Base、Optimism、Polygon、BNB、Avalanche、Solana 等 22 条链。
+- ** 官网 **： [openchainbench.com](https://openchainbench.com/)
+
 ### 🔍 区块链浏览器
 
 ** 多链浏览器对比 **：
