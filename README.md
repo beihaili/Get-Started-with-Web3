@@ -72,8 +72,8 @@ Use the hosted learning platform:
 Public AI entrypoints:
 
 - [REST API documentation](docs/api.md)
-- [REST API deployment target](https://bhbtc.xyz/api/v1)
-- [OpenAPI 3.1 deployment target](https://bhbtc.xyz/api/v1/openapi.json)
+- [REST API deployment target](https://get-started-with-web3.vercel.app/api/v1)
+- [OpenAPI 3.1 deployment target](https://get-started-with-web3.vercel.app/api/v1/openapi.json)
 - [llms.txt](https://beihaili.github.io/Get-Started-with-Web3/llms.txt)
 - [AI manifest](https://beihaili.github.io/Get-Started-with-Web3/ai/manifest.json)
 - [AI content index](https://beihaili.github.io/Get-Started-with-Web3/ai/content-index.json)
@@ -157,7 +157,7 @@ Then connect an MCP client and use:
 
 Local MCP tools are read-only. They do not enforce payment, sign transactions, or perform chain operations. x402 fields are reserved metadata for future hosted paid tools.
 
-The REST API implementation exposes the same generated content index over versioned, cacheable JSON endpoints with no authentication. The production URLs become live after the Vercel Functions deployment is connected. See the [API documentation](docs/api.md) or the [OpenAPI deployment target](https://bhbtc.xyz/api/v1/openapi.json).
+The REST API implementation exposes the same generated content index over versioned, cacheable JSON endpoints with no authentication. The production URLs become live after the Vercel Functions deployment is connected. See the [API documentation](docs/api.md) or the [OpenAPI deployment target](https://get-started-with-web3.vercel.app/api/v1/openapi.json).
 
 AI artifacts are maintained as a stable v1 public surface through `artifactContract.version`; see [AI-native v1 stability and monetization decision](docs/strategy/2026-06-26-ai-native-v1-stability-and-monetization.md).
 

@@ -65,8 +65,8 @@ describe('Web3 REST API', () => {
       version: 'v1',
       authentication: 'none',
       readOnly: true,
-      baseUrl: 'https://bhbtc.xyz/api/v1',
-      openapiUrl: 'https://bhbtc.xyz/api/v1/openapi.json',
+      baseUrl: 'https://get-started-with-web3.vercel.app/api/v1',
+      openapiUrl: 'https://get-started-with-web3.vercel.app/api/v1/openapi.json',
     });
   });
 

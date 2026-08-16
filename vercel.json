@@ -1,5 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "vite build",
   "functions": {
     "api/v1/**/*.js": {
       "includeFiles": "ai/content-index.json"

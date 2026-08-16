@@ -30,7 +30,7 @@ export const OPENAPI_DOCUMENT = {
       identifier: 'MIT',
     },
   },
-  servers: [{ url: 'https://bhbtc.xyz' }],
+  servers: [{ url: 'https://get-started-with-web3.vercel.app' }],
   paths: {
     '/api/v1': {
       get: {

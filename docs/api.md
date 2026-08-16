@@ -9,7 +9,7 @@ The API implementation is ready for Vercel Functions. The production URL below i
 ## Base URL
 
 ```text
-https://bhbtc.xyz/api/v1
+https://get-started-with-web3.vercel.app/api/v1
 ```
 
 Local development:
@@ -49,31 +49,31 @@ The local API starts at `http://127.0.0.1:3001/api/v1` by default. Set `PORT` to
 Search Chinese content:
 
 ```bash
-curl "https://bhbtc.xyz/api/v1/search?q=Bitcoin%20RPC&lang=zh&limit=5"
+curl "https://get-started-with-web3.vercel.app/api/v1/search?q=Bitcoin%20RPC&lang=zh&limit=5"
 ```
 
 List English lessons in the first module:
 
 ```bash
-curl "https://bhbtc.xyz/api/v1/lessons?lang=en&moduleId=module-1&limit=10"
+curl "https://get-started-with-web3.vercel.app/api/v1/lessons?lang=en&moduleId=module-1&limit=10"
 ```
 
 Read stable lesson metadata:
 
 ```bash
-curl "https://bhbtc.xyz/api/v1/lessons/en/module-1/1-1"
+curl "https://get-started-with-web3.vercel.app/api/v1/lessons/en/module-1/1-1"
 ```
 
 Look up a glossary term:
 
 ```bash
-curl "https://bhbtc.xyz/api/v1/glossary?q=Gas&limit=5"
+curl "https://get-started-with-web3.vercel.app/api/v1/glossary?q=Gas&limit=5"
 ```
 
 Build a learner path:
 
 ```bash
-curl "https://bhbtc.xyz/api/v1/learning-path?role=builder&lang=zh"
+curl "https://get-started-with-web3.vercel.app/api/v1/learning-path?role=builder&lang=zh"
 ```
 
 Supported languages are `zh` and `en`. Supported roles are `beginner`, `builder`, `researcher`, and `investor`.
