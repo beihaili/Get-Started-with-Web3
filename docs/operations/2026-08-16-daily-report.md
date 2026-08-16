@@ -19,6 +19,7 @@
 - Platform:
   - Merged PR #246 and released the public, read-only REST API as Vercel Functions.
   - Published API v1, OpenAPI 3.1 documentation, bilingual lesson access, glossary search, and role-based learning paths at `https://get-started-with-web3.vercel.app/api/v1`.
+  - Confirmed the dedicated Vercel hostname as the production API base; `bhbtc.xyz` remains the website host and its `/api/v1` path is not an API endpoint.
 - External distribution:
   - Forked `public-apis/public-apis`, added one alphabetized Blockchain entry, and opened upstream PR #6891.
   - Linked the API documentation rather than the product landing page and verified the link, HTTPS, no-auth, and CORS claims against production.
@@ -53,6 +54,7 @@
 
 - Upstream PR #6891 still requires `public-apis` maintainer review and merge.
 - The upstream repository's current full-file format validator reports pre-existing baseline errors; the submitted row was checked separately and adds no new error.
+- API clients must use `get-started-with-web3.vercel.app`; moving the API behind the `bhbtc.xyz` website domain would require a separate routing or domain migration decision.
 - The API is read-only and public, so future write endpoints, authentication, rate-limit products, or payment enforcement require separate design and review.
 
 ## Next Operating Block

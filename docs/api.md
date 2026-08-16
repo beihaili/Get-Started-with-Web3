@@ -4,7 +4,7 @@ The Get Started with Web3 API provides free, read-only access to the project's b
 
 ## Deployment status
 
-The API implementation is ready for Vercel Functions. The production URL below is the deployment target and must return `application/json` before the API is submitted to a public directory.
+The API is live on Vercel Functions at the production URL below and returns `application/json`. The project website remains at `https://bhbtc.xyz`; its `/api/v1` path is not an API endpoint, so API clients should use the Vercel base URL.
 
 ## Base URL
 
