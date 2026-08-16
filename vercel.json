@@ -1,0 +1,15 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "vite build",
+  "rewrites": [
+    {
+      "source": "/api/v1/:path*",
+      "destination": "/api/v1/[...path]"
+    }
+  ],
+  "functions": {
+    "api/v1/**/*.js": {
+      "includeFiles": "ai/content-index.json"
+    }
+  }
+}
