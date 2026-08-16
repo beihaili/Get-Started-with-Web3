@@ -12,7 +12,7 @@
 
 <div align="center">
   <strong>An open-source, bilingual, AI-native Web3 curriculum for beginners, builders, and agents.</strong><br/>
-  <em>11 modules, 62 lessons, AI Tutor, badges, SEO prerendering, llms.txt, and a read-only MCP server.</em>
+  <em>11 modules, 62 lessons, AI Tutor, badges, SEO prerendering, a versioned REST API, llms.txt, and a read-only MCP server.</em>
 </div>
 
 <br/>
@@ -20,6 +20,7 @@
 <div align="center">
   <a href="https://beihaili.github.io/Get-Started-with-Web3/">Live Site</a> &nbsp;|&nbsp;
   <a href="https://beihaili.github.io/Get-Started-with-Web3/en/articles">All Articles</a> &nbsp;|&nbsp;
+  <a href="docs/api.md">API</a> &nbsp;|&nbsp;
   <a href="https://beihaili.github.io/Get-Started-with-Web3/llms.txt">llms.txt</a> &nbsp;|&nbsp;
   <a href="README.zh.md">中文说明</a> &nbsp;|&nbsp;
   <a href="https://twitter.com/bhbtc1337">Twitter</a>
@@ -35,13 +36,13 @@ If this repo helps you learn or teach Web3, please [star the project](https://gi
 
 ## Who This Is For
 
-| Audience        | Use this project to                                                                                        |
-| --------------- | ---------------------------------------------------------------------------------------------------------- |
-| **Beginners**   | Create a wallet, make a first transaction, avoid common scams, and understand the core Web3 workflow.      |
-| **Builders**    | Move from concepts to DApps, smart contracts, block explorers, Bitcoin RPC, DeFi, L2, and DAO tooling.     |
-| **Researchers** | Review Bitcoin, Ethereum, DeFi, L2, DAO, bridge, and stablecoin concepts in one curriculum.                |
-| **AI agents**   | Search, read, cite, and compose course context through `llms.txt`, JSON artifacts, and a local MCP server. |
-| **Sponsors**    | Support open-source Web3 education and reach learners before they choose their default tools.              |
+| Audience        | Use this project to                                                                                       |
+| --------------- | --------------------------------------------------------------------------------------------------------- |
+| **Beginners**   | Create a wallet, make a first transaction, avoid common scams, and understand the core Web3 workflow.     |
+| **Builders**    | Move from concepts to DApps, smart contracts, block explorers, Bitcoin RPC, DeFi, L2, and DAO tooling.    |
+| **Researchers** | Review Bitcoin, Ethereum, DeFi, L2, DAO, bridge, and stablecoin concepts in one curriculum.               |
+| **AI agents**   | Search, read, cite, and compose course context through the REST API, `llms.txt`, JSON artifacts, and MCP. |
+| **Sponsors**    | Support open-source Web3 education and reach learners before they choose their default tools.             |
 
 ## Project Boundaries
 
@@ -59,7 +60,7 @@ This project is not investment advice, token promotion, exchange onboarding, or 
 | Glossary        | 63 Web3 terms                                                                 |
 | Languages       | Chinese first, English in progress                                            |
 | App features    | AI Tutor, search, quizzes, badges, XP, dark/light mode, PWA/offline support   |
-| Agent surfaces  | `llms.txt`, AI manifest, content index, local read-only MCP server            |
+| Agent surfaces  | Public REST API, `llms.txt`, AI manifest, content index, read-only MCP server |
 | Monetization    | Donations, affiliate disclosure, sponsor kit, future x402-ready tool metadata |
 
 ## Live Site
@@ -70,6 +71,9 @@ Use the hosted learning platform:
 
 Public AI entrypoints:
 
+- [REST API documentation](docs/api.md)
+- [REST API deployment target](https://bhbtc.xyz/api/v1)
+- [OpenAPI 3.1 deployment target](https://bhbtc.xyz/api/v1/openapi.json)
 - [llms.txt](https://beihaili.github.io/Get-Started-with-Web3/llms.txt)
 - [AI manifest](https://beihaili.github.io/Get-Started-with-Web3/ai/manifest.json)
 - [AI content index](https://beihaili.github.io/Get-Started-with-Web3/ai/content-index.json)
@@ -88,7 +92,7 @@ Public AI entrypoints:
 | DeFi Deep Dive                       |       5 | DeFi architecture, AMMs, lending, stablecoins, risks                                                |
 | Cross-Chain and Layer 2              |       6 | Scaling, rollups, L2 ecosystems, bridges, risk simulation, practical L2 usage                       |
 | DAO and Decentralized Governance     |       5 | DAO basics, governance design, DAO tooling, case studies, challenges                                |
-| Ethereum and Smart Accounts          |       3 | Post-Pectra/Fusaka Ethereum, account abstraction, UserOperation simulator, smart wallets             |
+| Ethereum and Smart Accounts          |       3 | Post-Pectra/Fusaka Ethereum, account abstraction, UserOperation simulator, smart wallets            |
 
 ## Quick Start
 
@@ -118,6 +122,7 @@ This repository exposes a machine-readable content layer for AI agents:
 npm run ai:index   # regenerate ai/manifest.json, ai/content-index.json, ai/llms.txt
 npm run ai:publish # copy AI artifacts into public/
 npm run ai:verify  # verify public AI entrypoints and x402 metadata
+npm run api:dev    # start the local read-only REST API on port 3001
 npm run mcp:web3   # start the local read-only stdio MCP server
 ```
 
@@ -152,6 +157,8 @@ Then connect an MCP client and use:
 
 Local MCP tools are read-only. They do not enforce payment, sign transactions, or perform chain operations. x402 fields are reserved metadata for future hosted paid tools.
 
+The REST API implementation exposes the same generated content index over versioned, cacheable JSON endpoints with no authentication. The production URLs become live after the Vercel Functions deployment is connected. See the [API documentation](docs/api.md) or the [OpenAPI deployment target](https://bhbtc.xyz/api/v1/openapi.json).
+
 AI artifacts are maintained as a stable v1 public surface through `artifactContract.version`; see [AI-native v1 stability and monetization decision](docs/strategy/2026-06-26-ai-native-v1-stability-and-monetization.md).
 
 ## Tech Stack
@@ -162,7 +169,7 @@ AI artifacts are maintained as a stable v1 public surface through `artifactContr
 - **Content:** Markdown in `zh/` and `en/`
 - **Rendering:** react-markdown + remark-gfm + rehype-raw
 - **AI Tutor:** Gemini with user-provided API key
-- **Agent layer:** `@modelcontextprotocol/sdk`, generated JSON artifacts, `llms.txt`
+- **Agent layer:** versioned REST API, `@modelcontextprotocol/sdk`, generated JSON artifacts, `llms.txt`
 - **SEO:** sitemap generation, OG image generation, prerendering
 - **Testing:** Vitest + happy-dom + Testing Library
 - **CI/CD:** GitHub Actions to GitHub Pages

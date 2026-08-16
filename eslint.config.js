@@ -10,6 +10,16 @@ export default [
   },
   js.configs.recommended,
   {
+    files: ['api/**/*.js', 'server/**/*.{js,mjs}', 'scripts/serve-web3-api.mjs'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      globals: {
+        ...globals.node,
+      },
+    },
+  },
+  {
     files: ['src/**/*.{js,jsx}'],
     languageOptions: {
       ecmaVersion: 'latest',
