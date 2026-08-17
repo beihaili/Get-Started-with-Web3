@@ -86,7 +86,7 @@
     "happy-dom": "^20.11.0",
     "husky": "^9.0.10",
     "lint-staged": "^15.2.0",
-    "pangu": "^7.2.1",
+    "pangu": "^9.1.0",
     "playwright": "^1.61.1",
     "postcss": "^8.5.15",
     "prettier": "^3.9.5",
